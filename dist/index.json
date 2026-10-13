@@ -4,25 +4,25 @@
   "courses": [
     {
       "id": "it",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "title": {
         "en": "Italian",
         "nl": "Italiaans"
       },
-      "sha256": "cfa2659fb0937259871987075c6cf8a4d4d0c790e8eb8866b7a1698d4d5919ad",
-      "size": 5459968,
+      "sha256": "b414b40352975997900ac09baaec3252cd3a05e135c642605fa147cd363ee223",
+      "size": 14086144,
       "schema_version": 1,
       "url": "it.sqlite"
     },
     {
       "id": "nl",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "title": {
         "en": "Dutch",
         "nl": "Nederlands"
       },
-      "sha256": "6b07322993522cfe7cdaa23ffcbb0cd91c7e28907f426399ba49a345f3643044",
-      "size": 4968448,
+      "sha256": "427a73890934abcfd6d44e055ecd1c459af227378d596acba4627209bdba5501",
+      "size": 12013568,
       "schema_version": 1,
       "url": "nl.sqlite"
     }
