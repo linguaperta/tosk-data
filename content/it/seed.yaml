@@ -4,7 +4,7 @@
 # Wiktionary. Entries without tags only add/override glosses for automatically selected items.
 # Words never taken into the automatic frequency pool (Wiktionary homographs and inflected
 # forms that inherit a misleading frequency): lemma or lemma/pos.
-exclude: [coso, sulla/noun, fossa, ti/noun, mi/noun, di/noun, si/noun, la/noun, neo, serva/noun, andata/noun, volto/adj, para/noun, stia/noun, sola/noun, unica/noun, fatta/noun, piccola/noun, nuova/noun, sicura/noun, bella/noun, tuoi/noun, miei/noun, suoi/noun, giorni/noun, mani/noun, dimmi, ha/intj, essere/noun, avere/noun, dire/noun, credo/noun, era/noun, fata/noun, visto/noun]
+exclude: [coso, bastardo, troia, scopare, puttana, alla/prep, prestare, liberare, voltare, scorrere, sulla/noun, fossa, ti/noun, mi/noun, di/noun, si/noun, la/noun, neo, serva/noun, andata/noun, volto/adj, para/noun, stia/noun, sola/noun, unica/noun, fatta/noun, piccola/noun, nuova/noun, sicura/noun, bella/noun, tuoi/noun, miei/noun, suoi/noun, giorni/noun, mani/noun, dimmi, ha/intj, essere/noun, avere/noun, dire/noun, credo/noun, era/noun, fata/noun, visto/noun]
 items:
   # --- greetings
   - {lemma: ciao, pos: intj, tags: [greetings], en: [hi, bye], nl: [hoi, doei, dag]}
@@ -284,3 +284,593 @@ items:
   - {lemma: inseguire, pos: verb, nl: [achtervolgen]}
   - {lemma: reagire, pos: verb, nl: [reageren]}
   - {lemma: agire, pos: verb, nl: [handelen]}
+  # ======================================================================== v1.1 expansion
+  # --- little words (u1)
+  - {lemma: e, pos: conj, tags: [little], en: [and], nl: [en]}
+  - {lemma: o, pos: conj, tags: [little], en: [or], nl: [of]}
+  - {lemma: ma, pos: conj, tags: [little], en: [but], nl: [maar]}
+  - {lemma: non, pos: adv, tags: [little], en: [not, "don't"], nl: [niet]}
+  - {lemma: che, pos: conj, tags: [little], en: [that, what, than], nl: [dat, wat, dan]}
+  - {lemma: anche, pos: adv, tags: [little], en: [also, too, even], nl: [ook, zelfs]}
+  - {lemma: molto, pos: pron, tags: [little], en: [very, much, a lot], nl: [heel, erg, veel]}
+  - {lemma: qui, pos: adv, tags: [little], en: [here], nl: [hier]}
+  - {lemma: lì, pos: adv, tags: [little], en: [there], nl: [daar]}
+  - {lemma: ecco, pos: adv, tags: [little], en: [here is, there is, here you are], nl: [hier is, ziehier, alsjeblieft]}
+  - {lemma: il, pos: det, tags: [little], en: [the], nl: [de, het], inflections: [i]}
+  - {lemma: la, pos: det, tags: [little], en: [the], nl: [de, het]}
+  - {lemma: lo, pos: pron, tags: [little], en: [the, him, it], nl: [de, het, hem]}
+  - {lemma: gli, pos: pron, tags: [little], en: [the, to him, them], nl: [de, hem, ze]}
+  - {lemma: le, pos: pron, tags: [little], en: [the, them, to her], nl: [de, ze, haar]}
+  - {lemma: uno, pos: det, tags: [little, numbers], en: [a, an, one], nl: [een, één], inflections: [un, una, "un'"]}
+  - {lemma: di, pos: prep, tags: [little], en: [of, from, than], nl: [van, uit, dan]}
+  - {lemma: a, pos: prep, tags: [little], en: [to, at, in], nl: [naar, in, om]}
+  - {lemma: in, pos: prep, tags: [little], en: [in, into, to], nl: [in, naar]}
+  - {lemma: con, pos: prep, tags: [little], en: [with], nl: [met]}
+  - {lemma: per, pos: prep, tags: [little], en: [for, to, through], nl: [voor, om te, door]}
+  - {lemma: da, pos: prep, tags: [little], en: [from, since, at (someone's)], nl: [van, vanaf, sinds, bij]}
+  - {lemma: questo, pos: pron, tags: [little], en: [this, this one], nl: [dit, deze]}
+  - {lemma: quello, pos: pron, tags: [little], en: [that, that one], nl: [dat, die]}
+  - {lemma: chi, pos: pron, tags: [little], en: [who], nl: [wie]}
+  - {lemma: cosa, pos: noun, tags: [little], en: [thing, what], nl: [ding, wat]}
+  - {lemma: dove, pos: conj, tags: [little], en: [where], nl: [waar]}
+  - {lemma: quando, pos: conj, tags: [little], en: [when], nl: [wanneer, als, toen]}
+  - {lemma: perché, pos: conj, tags: [little], en: [why, because], nl: [waarom, omdat]}
+  - {lemma: quanto, pos: pron, tags: [little], en: [how much, how many], nl: [hoeveel]}
+  - {lemma: quale, pos: det, tags: [little], en: [which, what], nl: [welk, welke]}
+  # --- food (more)
+  - {lemma: pollo, pos: noun, tags: [food], en: [chicken], nl: [kip]}
+  - {lemma: insalata, pos: noun, tags: [food], gender: f, en: [salad], nl: [salade, sla]}
+  - {lemma: gelato, pos: noun, tags: [food], gender: m, en: [ice cream], nl: [ijs, ijsje]}
+  - {lemma: torta, pos: noun, tags: [food], en: [cake, pie], nl: [taart]}
+  - {lemma: pomodoro, pos: noun, tags: [food], gender: m, en: [tomato], nl: [tomaat]}
+  - {lemma: patata, pos: noun, tags: [food], gender: f, en: [potato], nl: [aardappel]}
+  # --- numbers (u2)
+  - {lemma: zero, pos: num, tags: [numbers], en: [zero], nl: [nul]}
+  - {lemma: due, pos: num, tags: [numbers], en: [two], nl: [twee]}
+  - {lemma: tre, pos: num, tags: [numbers], en: [three], nl: [drie]}
+  - {lemma: quattro, pos: num, tags: [numbers], en: [four], nl: [vier]}
+  - {lemma: cinque, pos: num, tags: [numbers], en: [five], nl: [vijf]}
+  - {lemma: sei, pos: num, tags: [numbers], en: [six], nl: [zes]}
+  - {lemma: sette, pos: num, tags: [numbers], en: [seven], nl: [zeven]}
+  - {lemma: otto, pos: num, tags: [numbers], en: [eight], nl: [acht]}
+  - {lemma: nove, pos: num, tags: [numbers], en: [nine], nl: [negen]}
+  - {lemma: dieci, pos: num, tags: [numbers], en: [ten], nl: [tien]}
+  - {lemma: undici, pos: num, tags: [numbers], en: [eleven], nl: [elf]}
+  - {lemma: dodici, pos: num, tags: [numbers], en: [twelve], nl: [twaalf]}
+  - {lemma: quindici, pos: num, tags: [numbers], en: [fifteen], nl: [vijftien]}
+  - {lemma: venti, pos: num, tags: [numbers], en: [twenty], nl: [twintig]}
+  - {lemma: trenta, pos: num, tags: [numbers], en: [thirty], nl: [dertig]}
+  - {lemma: quaranta, pos: num, tags: [numbers], en: [forty], nl: [veertig]}
+  - {lemma: cinquanta, pos: num, tags: [numbers], en: [fifty], nl: [vijftig]}
+  - {lemma: cento, pos: num, tags: [numbers], en: [hundred, a hundred], nl: [honderd]}
+  - {lemma: mille, pos: num, tags: [numbers], en: [thousand, a thousand], nl: [duizend]}
+  - {lemma: primo, pos: adj, tags: [numbers], en: [first], nl: [eerste]}
+  - {lemma: numero, pos: noun, tags: [numbers], en: [number], nl: [nummer, getal]}
+  - {lemma: metà, pos: noun, tags: [numbers], en: [half], nl: [helft]}
+  # --- time (more)
+  - {lemma: pomeriggio, pos: noun, tags: [time], en: [afternoon], nl: [middag]}
+  - {lemma: stasera, pos: adv, tags: [time], en: [this evening, tonight], nl: [vanavond]}
+  - {lemma: presto, pos: adv, tags: [time], en: [early, soon], nl: [vroeg, gauw]}
+  - {lemma: tardi, pos: adv, tags: [time], en: [late], nl: [laat]}
+  - {lemma: poi, pos: adv, tags: [time], en: [then, afterwards], nl: [dan, daarna]}
+  - {lemma: prima, pos: adv, tags: [time], en: [before, first, earlier], nl: [eerst, eerder, vroeger]}
+  - {lemma: dopo, pos: prep, tags: [time], en: [after, later], nl: [na, later]}
+  # --- home (u3)
+  - {lemma: casa, pos: noun, tags: [home], en: [house, home], nl: [huis, thuis]}
+  - {lemma: camera, pos: noun, tags: [home], en: [room, bedroom], nl: [kamer, slaapkamer]}
+  - {lemma: stanza, pos: noun, tags: [home], en: [room], nl: [kamer]}
+  - {lemma: cucina, pos: noun, tags: [home], gender: f, en: [kitchen, cooking], nl: [keuken]}
+  - {lemma: bagno, pos: noun, tags: [home], en: [bathroom, bath], nl: [badkamer, bad, wc]}
+  - {lemma: letto, pos: noun, tags: [home], en: [bed], nl: [bed]}
+  - {lemma: tavolo, pos: noun, tags: [home], en: [table], nl: [tafel]}
+  - {lemma: sedia, pos: noun, tags: [home], en: [chair], nl: [stoel]}
+  - {lemma: porta, pos: noun, tags: [home], en: [door], nl: [deur]}
+  - {lemma: finestra, pos: noun, tags: [home], en: [window], nl: [raam]}
+  - {lemma: chiave, pos: noun, tags: [home], en: [key], nl: [sleutel]}
+  - {lemma: telefono, pos: noun, tags: [home], en: [telephone, phone], nl: [telefoon]}
+  - {lemma: computer, pos: noun, tags: [home], en: [computer], nl: [computer]}
+  - {lemma: giardino, pos: noun, tags: [home], en: [garden], nl: [tuin]}
+  - {lemma: appartamento, pos: noun, tags: [home], en: [apartment, flat], nl: [appartement, flat]}
+  - {lemma: scala, pos: noun, tags: [home], en: [stairs, ladder], nl: [trap, ladder]}
+  - {lemma: muro, pos: noun, tags: [home], en: [wall], nl: [muur]}
+  - {lemma: tetto, pos: noun, tags: [home], en: [roof], nl: [dak]}
+  - {lemma: armadio, pos: noun, tags: [home], en: [wardrobe, cupboard], nl: [kast, kledingkast]}
+  - {lemma: divano, pos: noun, tags: [home], en: [sofa, couch], nl: [bank, sofa]}
+  - {lemma: specchio, pos: noun, tags: [home], en: [mirror], nl: [spiegel]}
+  - {lemma: bicchiere, pos: noun, tags: [home], en: [glass], nl: [glas]}
+  - {lemma: piatto, pos: noun, tags: [home], en: [plate, dish], nl: [bord, gerecht]}
+  - {lemma: tazza, pos: noun, tags: [home], en: [cup, mug], nl: [kopje, kop, mok]}
+  - {lemma: coltello, pos: noun, tags: [home], en: [knife], nl: [mes]}
+  - {lemma: televisione, pos: noun, tags: [home], en: [television], nl: [televisie]}
+  - {lemma: libro, pos: noun, tags: [home], en: [book], nl: [boek]}
+  - {lemma: scrivania, pos: noun, tags: [home], en: [desk], nl: [bureau]}
+  - {lemma: lampada, pos: noun, tags: [home], en: [lamp], nl: [lamp]}
+  # --- everyday verbs (u3, vocabulary)
+  - {lemma: studiare, pos: verb, tags: [verbs1], en: [to study], nl: [studeren]}
+  - {lemma: abitare, pos: verb, tags: [verbs1], en: [to live, to reside], nl: [wonen]}
+  - {lemma: comprare, pos: verb, tags: [verbs1], en: [to buy], nl: [kopen]}
+  - {lemma: pagare, pos: verb, tags: [verbs1], en: [to pay, to pay for], nl: [betalen]}
+  - {lemma: imparare, pos: verb, tags: [verbs1], en: [to learn], nl: [leren]}
+  - {lemma: insegnare, pos: verb, tags: [verbs1], en: [to teach], nl: [lesgeven, onderwijzen, leren]}
+  - {lemma: cucinare, pos: verb, tags: [verbs1], en: [to cook], nl: [koken]}
+  - {lemma: camminare, pos: verb, tags: [verbs1], en: [to walk], nl: [lopen, wandelen]}
+  - {lemma: viaggiare, pos: verb, tags: [verbs1], en: [to travel], nl: [reizen]}
+  - {lemma: giocare, pos: verb, tags: [verbs1], en: [to play], nl: [spelen]}
+  - {lemma: ballare, pos: verb, tags: [verbs1], en: [to dance], nl: [dansen]}
+  - {lemma: cantare, pos: verb, tags: [verbs1], en: [to sing], nl: [zingen]}
+  - {lemma: aiutare, pos: verb, tags: [verbs1], en: [to help], nl: [helpen]}
+  - {lemma: portare, pos: verb, tags: [verbs1], en: [to bring, to carry, to wear], nl: [brengen, dragen]}
+  - {lemma: leggere, pos: verb, tags: [verbs1], en: [to read], nl: [lezen]}
+  - {lemma: vendere, pos: verb, tags: [verbs1], en: [to sell], nl: [verkopen]}
+  - {lemma: cominciare, pos: verb, tags: [verbs1], en: [to begin, to start], nl: [beginnen]}
+  - {lemma: ricordare, pos: verb, tags: [verbs1], en: [to remember, to remind], nl: [herinneren, onthouden]}
+  - {lemma: dimenticare, pos: verb, tags: [verbs1], en: [to forget], nl: [vergeten]}
+  - {lemma: spiegare, pos: verb, tags: [verbs1], en: [to explain], nl: [uitleggen]}
+  - {lemma: preparare, pos: verb, tags: [verbs1], en: [to prepare], nl: [voorbereiden, klaarmaken]}
+  - {lemma: pulire, pos: verb, tags: [verbs1], en: [to clean], nl: [schoonmaken]}
+  - {lemma: lavare, pos: verb, tags: [verbs1], en: [to wash], nl: [wassen]}
+  - {lemma: guidare, pos: verb, tags: [verbs1], en: [to drive, to guide], nl: [rijden, besturen, leiden]}
+  - {lemma: telefonare, pos: verb, tags: [verbs1], en: [to phone, to call], nl: [bellen, telefoneren]}
+  - {lemma: amare, pos: verb, tags: [verbs1], en: [to love], nl: [houden van, liefhebben]}
+  - {lemma: scendere, pos: verb, tags: [verbs1], en: [to go down, to get off], nl: [naar beneden gaan, uitstappen]}
+  - {lemma: nuotare, pos: verb, tags: [verbs1], en: [to swim], nl: [zwemmen]}
+  # --- object pronouns (u3)
+  - {lemma: mi, pos: pron, tags: [pronouns], en: [me, to me, myself], nl: [me, mij, mezelf]}
+  - {lemma: ti, pos: pron, tags: [pronouns], en: [you, to you, yourself], nl: [je, jou, jezelf]}
+  - {lemma: ci, pos: pron, tags: [pronouns], en: [us, to us, there], nl: [ons, er]}
+  - {lemma: vi, pos: pron, tags: [pronouns], en: [you (plural), to you], nl: [jullie, je]}
+  - {lemma: si, pos: pron, tags: [pronouns], en: [oneself, himself, herself, themselves], nl: [zich, zichzelf]}
+  - {lemma: li, pos: pron, tags: [pronouns], en: [them], nl: [ze, hen]}
+  - {lemma: ne, pos: pron, tags: [pronouns], en: [of it, of them, some], nl: [ervan, er, daarvan]}
+  - {lemma: me, pos: pron, tags: [pronouns], en: [me], nl: [mij, me]}
+  - {lemma: te, pos: pron, tags: [pronouns], en: [you], nl: [jou, je]}
+  # --- adjectives (u4)
+  - {lemma: grande, pos: adj, tags: [adjectives], en: [big, large, great], nl: [groot]}
+  - {lemma: piccolo, pos: adj, tags: [adjectives], en: [small, little], nl: [klein]}
+  - {lemma: bello, pos: adj, tags: [adjectives], en: [beautiful, nice, handsome], nl: [mooi, knap]}
+  - {lemma: brutto, pos: adj, tags: [adjectives], en: [ugly, bad], nl: [lelijk, slecht]}
+  - {lemma: nuovo, pos: adj, tags: [adjectives], en: [new], nl: [nieuw]}
+  - {lemma: vecchio, pos: adj, tags: [adjectives], en: [old], nl: [oud]}
+  - {lemma: giovane, pos: adj, tags: [adjectives], en: [young], nl: [jong]}
+  - {lemma: alto, pos: adj, tags: [adjectives], en: [tall, high], nl: [lang, hoog]}
+  - {lemma: basso, pos: adj, tags: [adjectives], en: [short, low], nl: [klein, laag]}
+  - {lemma: lungo, pos: adj, tags: [adjectives], en: [long], nl: [lang]}
+  - {lemma: facile, pos: adj, tags: [adjectives], en: [easy], nl: [makkelijk, gemakkelijk]}
+  - {lemma: difficile, pos: adj, tags: [adjectives], en: [difficult, hard], nl: [moeilijk]}
+  - {lemma: importante, pos: adj, tags: [adjectives], en: [important], nl: [belangrijk]}
+  - {lemma: felice, pos: adj, tags: [adjectives], en: [happy], nl: [gelukkig, blij]}
+  - {lemma: triste, pos: adj, tags: [adjectives], en: [sad], nl: [verdrietig, droevig]}
+  - {lemma: stanco, pos: adj, tags: [adjectives], en: [tired], nl: [moe]}
+  - {lemma: contento, pos: adj, tags: [adjectives], en: [glad, pleased, happy], nl: [blij, tevreden]}
+  - {lemma: caldo, pos: adj, tags: [adjectives], en: [hot, warm], nl: [warm, heet]}
+  - {lemma: freddo, pos: adj, tags: [adjectives], en: [cold], nl: [koud]}
+  - {lemma: pieno, pos: adj, tags: [adjectives], en: [full], nl: [vol]}
+  - {lemma: vuoto, pos: adj, tags: [adjectives], en: [empty], nl: [leeg]}
+  - {lemma: ricco, pos: adj, tags: [adjectives], en: [rich], nl: [rijk]}
+  - {lemma: povero, pos: adj, tags: [adjectives], en: [poor], nl: [arm]}
+  - {lemma: forte, pos: adj, tags: [adjectives], en: [strong, loud], nl: [sterk, hard]}
+  - {lemma: veloce, pos: adj, tags: [adjectives], en: [fast, quick], nl: [snel]}
+  - {lemma: lento, pos: adj, tags: [adjectives], en: [slow], nl: [langzaam, traag]}
+  - {lemma: caro, pos: adj, tags: [adjectives], en: [dear, expensive], nl: [lief, dierbaar, duur]}
+  - {lemma: gentile, pos: adj, tags: [adjectives], en: [kind, nice, polite], nl: [aardig, vriendelijk]}
+  - {lemma: bravo, pos: adj, tags: [adjectives], en: [good, clever, well done], nl: [goed, knap, braaf]}
+  - {lemma: pronto, pos: adj, tags: [adjectives], en: [ready], nl: [klaar]}
+  - {lemma: vero, pos: adj, tags: [adjectives], en: ["true", real], nl: [waar, echt]}
+  # --- colours (u4)
+  - {lemma: colore, pos: noun, tags: [colours], en: [colour, color], nl: [kleur]}
+  - {lemma: rosso, pos: adj, tags: [colours], en: [red], nl: [rood]}
+  - {lemma: blu, pos: adj, tags: [colours], en: [blue, dark blue], nl: [blauw, donkerblauw]}
+  - {lemma: verde, pos: adj, tags: [colours], en: [green], nl: [groen]}
+  - {lemma: giallo, pos: adj, tags: [colours], en: [yellow], nl: [geel]}
+  - {lemma: bianco, pos: adj, tags: [colours], en: [white], nl: [wit]}
+  - {lemma: nero, pos: adj, tags: [colours], en: [black], nl: [zwart]}
+  - {lemma: grigio, pos: adj, tags: [colours], en: [grey, gray], nl: [grijs]}
+  - {lemma: marrone, pos: adj, tags: [colours], en: [brown], nl: [bruin]}
+  - {lemma: rosa, pos: adj, tags: [colours], en: [pink], nl: [roze]}
+  - {lemma: arancione, pos: adj, tags: [colours], en: [orange], nl: [oranje]}
+  - {lemma: azzurro, pos: adj, tags: [colours], en: [light blue, sky blue], nl: [lichtblauw, hemelsblauw]}
+  - {lemma: viola, pos: adj, tags: [colours], en: [purple, violet], nl: [paars]}
+  # --- possessives (u4)
+  - {lemma: mio, pos: det, tags: [possessives], en: [my, mine], nl: [mijn]}
+  - {lemma: tuo, pos: det, tags: [possessives], en: [your, yours], nl: [jouw, je]}
+  - {lemma: suo, pos: det, tags: [possessives], en: [his, her, its, your (formal)], nl: [zijn, haar, uw]}
+  - {lemma: nostro, pos: det, tags: [possessives], en: [our, ours], nl: [ons, onze]}
+  - {lemma: vostro, pos: det, tags: [possessives], en: [your (plural), yours], nl: [jullie]}
+  # --- body and health (u4)
+  - {lemma: corpo, pos: noun, tags: [body], en: [body], nl: [lichaam]}
+  - {lemma: testa, pos: noun, tags: [body], en: [head], nl: [hoofd]}
+  - {lemma: occhio, pos: noun, tags: [body], en: [eye], nl: [oog]}
+  - {lemma: mano, pos: noun, tags: [body], en: [hand], nl: [hand]}
+  - {lemma: piede, pos: noun, tags: [body], en: [foot], nl: [voet]}
+  - {lemma: braccio, pos: noun, tags: [body], en: [arm], nl: [arm]}
+  - {lemma: gamba, pos: noun, tags: [body], en: [leg], nl: [been]}
+  - {lemma: bocca, pos: noun, tags: [body], en: [mouth], nl: [mond]}
+  - {lemma: naso, pos: noun, tags: [body], en: [nose], nl: [neus]}
+  - {lemma: orecchio, pos: noun, tags: [body], en: [ear], nl: [oor]}
+  - {lemma: capello, pos: noun, tags: [body], en: [hair, a hair], nl: [haar]}
+  - {lemma: faccia, pos: noun, tags: [body], en: [face], nl: [gezicht]}
+  - {lemma: cuore, pos: noun, tags: [body], en: [heart], nl: [hart]}
+  - {lemma: dente, pos: noun, tags: [body], en: [tooth], nl: [tand]}
+  - {lemma: collo, pos: noun, tags: [body], gender: m, en: [neck], nl: [nek, hals]}
+  - {lemma: schiena, pos: noun, tags: [body], en: [back], nl: [rug]}
+  - {lemma: pancia, pos: noun, tags: [body], en: [belly, tummy], nl: [buik]}
+  - {lemma: dito, pos: noun, tags: [body], en: [finger, toe], nl: [vinger, teen]}
+  - {lemma: spalla, pos: noun, tags: [body], en: [shoulder], nl: [schouder]}
+  - {lemma: sangue, pos: noun, tags: [body], en: [blood], nl: [bloed]}
+  - {lemma: pelle, pos: noun, tags: [body], en: [skin], nl: [huid]}
+  - {lemma: ginocchio, pos: noun, tags: [body], en: [knee], nl: [knie]}
+  - {lemma: stomaco, pos: noun, tags: [body], en: [stomach], nl: [maag]}
+  - {lemma: voce, pos: noun, tags: [body], en: [voice], nl: [stem]}
+  - {lemma: salute, pos: noun, tags: [body], gender: f, en: [health], nl: [gezondheid]}
+  - {lemma: febbre, pos: noun, tags: [body], gender: f, en: [fever, temperature], nl: [koorts]}
+  - {lemma: medicina, pos: noun, tags: [body], gender: f, en: [medicine], nl: [medicijn, geneeskunde]}
+  - {lemma: malato, pos: adj, tags: [body], en: [ill, sick], nl: [ziek]}
+  # --- adverbs (u4)
+  - {lemma: spesso, pos: adv, tags: [adverbs], en: [often], nl: [vaak]}
+  - {lemma: già, pos: adv, tags: [adverbs], en: [already], nl: [al]}
+  - {lemma: ancora, pos: adv, tags: [adverbs], en: [still, again, yet], nl: [nog, nog steeds, opnieuw]}
+  - {lemma: subito, pos: adv, tags: [adverbs], en: [immediately, right away], nl: [meteen, direct]}
+  - {lemma: insieme, pos: adv, tags: [adverbs], en: [together], nl: [samen]}
+  - {lemma: forse, pos: adv, tags: [adverbs], en: [maybe, perhaps], nl: [misschien]}
+  - {lemma: davvero, pos: adv, tags: [adverbs], en: [really, truly], nl: [echt, werkelijk]}
+  - {lemma: quasi, pos: adv, tags: [adverbs], en: [almost, nearly], nl: [bijna]}
+  - {lemma: solo, pos: adv, tags: [adverbs], en: [only, just], nl: [alleen, maar, pas]}
+  - {lemma: abbastanza, pos: adv, tags: [adverbs], en: [enough, quite], nl: [genoeg, nogal, vrij]}
+  - {lemma: troppo, pos: adv, tags: [adverbs], en: [too, too much], nl: [te, te veel]}
+  - {lemma: finalmente, pos: adv, tags: [adverbs], en: [finally, at last], nl: [eindelijk]}
+  - {lemma: veramente, pos: adv, tags: [adverbs], en: [really, actually], nl: [echt, eigenlijk]}
+  - {lemma: probabilmente, pos: adv, tags: [adverbs], en: [probably], nl: [waarschijnlijk]}
+  - {lemma: purtroppo, pos: adv, tags: [adverbs], en: [unfortunately], nl: [helaas, jammer genoeg]}
+  - {lemma: così, pos: adv, tags: [adverbs], en: [so, like this, like that], nl: [zo, zodanig]}
+  - {lemma: allora, pos: adv, tags: [adverbs], en: [then, so, well], nl: [dan, toen, dus]}
+  - {lemma: soltanto, pos: adv, tags: [adverbs], en: [only], nl: [alleen, slechts]}
+  # --- city (u5)
+  - {lemma: città, pos: noun, tags: [city], en: [city, town], nl: [stad]}
+  - {lemma: strada, pos: noun, tags: [city], en: [road, street, way], nl: [weg, straat]}
+  - {lemma: via, pos: noun, tags: [city], en: [street, way], nl: [straat, weg]}
+  - {lemma: piazza, pos: noun, tags: [city], gender: f, en: [square, piazza], nl: [plein]}
+  - {lemma: negozio, pos: noun, tags: [city], en: [shop, store], nl: [winkel]}
+  - {lemma: mercato, pos: noun, tags: [city], en: [market], nl: [markt]}
+  - {lemma: banca, pos: noun, tags: [city], en: [bank], nl: [bank]}
+  - {lemma: ospedale, pos: noun, tags: [city], en: [hospital], nl: [ziekenhuis]}
+  - {lemma: scuola, pos: noun, tags: [city], en: [school], nl: [school]}
+  - {lemma: chiesa, pos: noun, tags: [city], en: [church], nl: [kerk]}
+  - {lemma: museo, pos: noun, tags: [city], en: [museum], nl: [museum]}
+  - {lemma: parco, pos: noun, tags: [city], gender: m, en: [park], nl: [park]}
+  - {lemma: stazione, pos: noun, tags: [city], gender: f, en: [station], nl: [station]}
+  - {lemma: ufficio, pos: noun, tags: [city], en: [office], nl: [kantoor]}
+  - {lemma: albergo, pos: noun, tags: [city], en: [hotel], nl: [hotel]}
+  - {lemma: ponte, pos: noun, tags: [city], en: [bridge], nl: [brug]}
+  - {lemma: bar, pos: noun, tags: [city], en: [bar, café], nl: [bar, café]}
+  - {lemma: biblioteca, pos: noun, tags: [city], en: [library], nl: [bibliotheek]}
+  - {lemma: cinema, pos: noun, tags: [city], en: [cinema, movie theater], nl: [bioscoop]}
+  - {lemma: teatro, pos: noun, tags: [city], en: [theatre, theater], nl: [theater, schouwburg]}
+  - {lemma: farmacia, pos: noun, tags: [city], gender: f, en: [pharmacy, chemist's], nl: [apotheek]}
+  - {lemma: posta, pos: noun, tags: [city], gender: f, en: [post, mail, post office], nl: [post, postkantoor]}
+  - {lemma: centro, pos: noun, tags: [city], en: [centre, center, city centre], nl: [centrum]}
+  - {lemma: paese, pos: noun, tags: [city], en: [country, village], nl: [land, dorp]}
+  - {lemma: mondo, pos: noun, tags: [city], en: [world], nl: [wereld]}
+  - {lemma: edificio, pos: noun, tags: [city], en: [building], nl: [gebouw]}
+  - {lemma: angolo, pos: noun, tags: [city], en: [corner, angle], nl: [hoek]}
+  - {lemma: polizia, pos: noun, tags: [city], en: [police], nl: [politie]}
+  # --- travel (u5)
+  - {lemma: treno, pos: noun, tags: [travel], en: [train], nl: [trein]}
+  - {lemma: autobus, pos: noun, tags: [travel], en: [bus], nl: [bus]}
+  - {lemma: macchina, pos: noun, tags: [travel], en: [car, machine], nl: [auto, machine]}
+  - {lemma: bicicletta, pos: noun, tags: [travel], en: [bicycle, bike], nl: [fiets]}
+  - {lemma: aereo, pos: noun, tags: [travel], gender: m, en: [plane, aeroplane, airplane], nl: [vliegtuig]}
+  - {lemma: nave, pos: noun, tags: [travel], en: [ship], nl: [schip]}
+  - {lemma: barca, pos: noun, tags: [travel], en: [boat], nl: [boot]}
+  - {lemma: viaggio, pos: noun, tags: [travel], en: [journey, trip], nl: [reis]}
+  - {lemma: biglietto, pos: noun, tags: [travel], en: [ticket, note], nl: [kaartje, biljet]}
+  - {lemma: valigia, pos: noun, tags: [travel], en: [suitcase], nl: [koffer]}
+  - {lemma: vacanza, pos: noun, tags: [travel], en: [holiday, vacation], nl: [vakantie]}
+  - {lemma: aeroporto, pos: noun, tags: [travel], en: [airport], nl: [vliegveld, luchthaven]}
+  - {lemma: mare, pos: noun, tags: [travel], en: [sea, seaside], nl: [zee]}
+  - {lemma: montagna, pos: noun, tags: [travel], en: [mountain, mountains], nl: [berg, bergen]}
+  - {lemma: spiaggia, pos: noun, tags: [travel], en: [beach], nl: [strand]}
+  - {lemma: lago, pos: noun, tags: [travel], en: [lake], nl: [meer]}
+  - {lemma: isola, pos: noun, tags: [travel], en: [island], nl: [eiland]}
+  - {lemma: mappa, pos: noun, tags: [travel], gender: f, en: [map], nl: [kaart, plattegrond]}
+  - {lemma: passaporto, pos: noun, tags: [travel], en: [passport], nl: [paspoort]}
+  - {lemma: taxi, pos: noun, tags: [travel], en: [taxi], nl: [taxi]}
+  - {lemma: turista, pos: noun, tags: [travel], gender: m, en: [tourist], nl: [toerist]}
+  - {lemma: sud, pos: noun, tags: [travel], gender: m, en: [south], nl: [zuiden]}
+  - {lemma: nord, pos: noun, tags: [travel], gender: m, en: [north], nl: [noorden]}
+  # --- prepositions (u5): articulated prepositions are introduced here (prep:articulated)
+  - {lemma: del, pos: prep, tags: [prepositions], en: [of the, some], nl: [van de, wat], inflections: [dello, della, "dell'", dei, degli, delle]}
+  - {lemma: al, pos: prep, tags: [prepositions], en: [to the, at the], nl: [naar de, aan de, bij de], inflections: [allo, alla, "all'", ai, agli, alle]}
+  - {lemma: dal, pos: prep, tags: [prepositions], en: [from the, at (someone's)], nl: [van de, vanaf de, bij], inflections: [dallo, dalla, "dall'", dai, dagli, dalle]}
+  - {lemma: nel, pos: prep, tags: [prepositions], en: [in the], nl: [in de, in het], inflections: [nello, nella, "nell'", nei, negli, nelle]}
+  - {lemma: sul, pos: prep, tags: [prepositions], en: [on the, about the], nl: [op de, over de], inflections: [sullo, sulla, "sull'", sui, sugli, sulle]}
+  - {lemma: su, pos: prep, tags: [prepositions], en: ["on", about, up], nl: [op, over]}
+  - {lemma: tra, pos: prep, tags: [prepositions], en: [between, among, in (time)], nl: [tussen, over]}
+  - {lemma: sotto, pos: prep, tags: [prepositions], en: [under, below], nl: [onder]}
+  - {lemma: sopra, pos: prep, tags: [prepositions], en: [above, "on", over], nl: [boven, op]}
+  - {lemma: davanti, pos: adv, tags: [prepositions], en: [in front, opposite], nl: [voor, tegenover]}
+  - {lemma: dietro, pos: prep, tags: [prepositions], en: [behind], nl: [achter]}
+  - {lemma: lontano, pos: adv, tags: [prepositions], en: [far, far away], nl: [ver, ver weg]}
+  - {lemma: accanto, pos: prep, tags: [prepositions], en: [next to, beside], nl: [naast]}
+  - {lemma: dentro, pos: prep, tags: [prepositions], en: [inside, in], nl: [binnen, in]}
+  - {lemma: fuori, pos: adv, tags: [prepositions], en: [outside, out], nl: [buiten]}
+  - {lemma: senza, pos: prep, tags: [prepositions], en: [without], nl: [zonder]}
+  - {lemma: contro, pos: prep, tags: [prepositions], en: [against], nl: [tegen]}
+  - {lemma: durante, pos: prep, tags: [prepositions], en: [during], nl: [tijdens]}
+  - {lemma: fino, pos: prep, tags: [prepositions], en: [until, up to, as far as], nl: [tot]}
+  # --- work and school (u6)
+  - {lemma: lavoro, pos: noun, tags: [work], en: [work, job], nl: [werk, baan]}
+  - {lemma: professore, pos: noun, tags: [work], en: [teacher, professor], nl: [leraar, docent, professor]}
+  - {lemma: classe, pos: noun, tags: [work], en: [class, classroom], nl: [klas, klaslokaal]}
+  - {lemma: lezione, pos: noun, tags: [work], en: [lesson, class], nl: [les]}
+  - {lemma: esame, pos: noun, tags: [work], en: [exam, examination], nl: [examen, tentamen]}
+  - {lemma: compito, pos: noun, tags: [work], en: [homework, task], nl: [huiswerk, taak]}
+  - {lemma: penna, pos: noun, tags: [work], en: [pen], nl: [pen]}
+  - {lemma: matita, pos: noun, tags: [work], gender: f, en: [pencil], nl: [potlood]}
+  - {lemma: quaderno, pos: noun, tags: [work], gender: m, en: [notebook, exercise book], nl: [schrift]}
+  - {lemma: foglio, pos: noun, tags: [work], en: [sheet, sheet of paper], nl: [blad, vel]}
+  - {lemma: carta, pos: noun, tags: [work], en: [paper, card, map], nl: [papier, kaart]}
+  - {lemma: domanda, pos: noun, tags: [work], en: [question, request], nl: [vraag, aanvraag]}
+  - {lemma: risposta, pos: noun, tags: [work], en: [answer, reply], nl: [antwoord]}
+  - {lemma: università, pos: noun, tags: [work], en: [university], nl: [universiteit]}
+  - {lemma: collega, pos: noun, tags: [work], en: [colleague], nl: [collega]}
+  - {lemma: capo, pos: noun, tags: [work], en: [boss, head, chief], nl: [baas, chef, hoofd]}
+  - {lemma: riunione, pos: noun, tags: [work], en: [meeting], nl: [vergadering, bijeenkomst]}
+  - {lemma: progetto, pos: noun, tags: [work], en: [plan, project], nl: [plan, project]}
+  - {lemma: soldi, pos: noun, tags: [work], en: [money], nl: [geld]}
+  - {lemma: stipendio, pos: noun, tags: [work], en: [salary, pay], nl: [salaris, loon]}
+  - {lemma: medico, pos: noun, tags: [work], gender: m, en: [doctor, physician], nl: [arts, dokter]}
+  - {lemma: dottore, pos: noun, tags: [work], en: [doctor], nl: [dokter, arts]}
+  - {lemma: avvocato, pos: noun, tags: [work], en: [lawyer], nl: [advocaat]}
+  - {lemma: cuoco, pos: noun, tags: [work], en: [cook, chef], nl: [kok]}
+  - {lemma: poliziotto, pos: noun, tags: [work], en: [police officer, policeman], nl: [politieagent, agent]}
+  - {lemma: cameriere, pos: noun, tags: [work], gender: m, en: [waiter], nl: [ober, kelner]}
+  - {lemma: ingegnere, pos: noun, tags: [work], en: [engineer], nl: [ingenieur]}
+  - {lemma: azienda, pos: noun, tags: [work], en: [company, firm, business], nl: [bedrijf, firma]}
+  # --- feelings (u6)
+  - {lemma: amore, pos: noun, tags: [feelings], en: [love], nl: [liefde]}
+  - {lemma: paura, pos: noun, tags: [feelings], en: [fear], nl: [angst, schrik]}
+  - {lemma: gioia, pos: noun, tags: [feelings], en: [joy], nl: [vreugde, blijdschap]}
+  - {lemma: rabbia, pos: noun, tags: [feelings], en: [anger, rage], nl: [woede, boosheid]}
+  - {lemma: felicità, pos: noun, tags: [feelings], en: [happiness], nl: [geluk, blijdschap]}
+  - {lemma: tristezza, pos: noun, tags: [feelings], en: [sadness], nl: [verdriet, droefheid]}
+  - {lemma: arrabbiato, pos: adj, tags: [feelings], en: [angry], nl: [boos, kwaad]}
+  - {lemma: preoccupato, pos: adj, tags: [feelings], en: [worried], nl: [bezorgd, ongerust]}
+  - {lemma: nervoso, pos: adj, tags: [feelings], en: [nervous, irritable], nl: [nerveus, zenuwachtig, geïrriteerd]}
+  - {lemma: geloso, pos: adj, tags: [feelings], en: [jealous], nl: [jaloers]}
+  - {lemma: deluso, pos: adj, tags: [feelings], en: [disappointed], nl: [teleurgesteld]}
+  - {lemma: sorpreso, pos: adj, tags: [feelings], en: [surprised], nl: [verrast, verbaasd]}
+  - {lemma: annoiato, pos: adj, tags: [feelings], en: [bored], nl: [verveeld]}
+  - {lemma: orgoglioso, pos: adj, tags: [feelings], en: [proud], nl: [trots]}
+  - {lemma: fortunato, pos: adj, tags: [feelings], en: [lucky], nl: [gelukkig, fortuinlijk]}
+  - {lemma: sicuro, pos: adj, tags: [feelings], en: [sure, safe], nl: [zeker, veilig]}
+  - {lemma: calmo, pos: adj, tags: [feelings], en: [calm], nl: [kalm, rustig]}
+  - {lemma: tranquillo, pos: adj, tags: [feelings], en: [calm, quiet, peaceful], nl: [rustig, kalm]}
+  - {lemma: sorriso, pos: noun, tags: [feelings], gender: m, en: [smile], nl: [glimlach]}
+  - {lemma: lacrima, pos: noun, tags: [feelings], en: [tear], nl: [traan]}
+  - {lemma: speranza, pos: noun, tags: [feelings], en: [hope], nl: [hoop]}
+  - {lemma: dolore, pos: noun, tags: [feelings], en: [pain, sorrow], nl: [pijn, verdriet]}
+  - {lemma: emozione, pos: noun, tags: [feelings], gender: f, en: [emotion, excitement], nl: [emotie, ontroering]}
+  # --- weather and nature (u7)
+  - {lemma: sole, pos: noun, tags: [weather], en: [sun], nl: [zon]}
+  - {lemma: pioggia, pos: noun, tags: [weather], en: [rain], nl: [regen]}
+  - {lemma: neve, pos: noun, tags: [weather], en: [snow], nl: [sneeuw]}
+  - {lemma: vento, pos: noun, tags: [weather], en: [wind], nl: [wind]}
+  - {lemma: cielo, pos: noun, tags: [weather], en: [sky, heaven], nl: [lucht, hemel]}
+  - {lemma: nuvola, pos: noun, tags: [weather], en: [cloud], nl: [wolk]}
+  - {lemma: fiume, pos: noun, tags: [weather], en: [river], nl: [rivier]}
+  - {lemma: albero, pos: noun, tags: [weather], en: [tree], nl: [boom]}
+  - {lemma: fiore, pos: noun, tags: [weather], en: [flower], nl: [bloem]}
+  - {lemma: erba, pos: noun, tags: [weather], en: [grass, herb], nl: [gras, kruid]}
+  - {lemma: bosco, pos: noun, tags: [weather], en: [wood, woods, forest], nl: [bos]}
+  - {lemma: terra, pos: noun, tags: [weather], en: [earth, ground, land], nl: [aarde, grond, land]}
+  - {lemma: aria, pos: noun, tags: [weather], en: [air], nl: [lucht]}
+  - {lemma: stella, pos: noun, tags: [weather], en: [star], nl: [ster]}
+  - {lemma: luna, pos: noun, tags: [weather], en: [moon], nl: [maan]}
+  - {lemma: stagione, pos: noun, tags: [weather], en: [season], nl: [seizoen]}
+  - {lemma: estate, pos: noun, tags: [weather], en: [summer], nl: [zomer]}
+  - {lemma: inverno, pos: noun, tags: [weather], en: [winter], nl: [winter]}
+  - {lemma: primavera, pos: noun, tags: [weather], en: [spring], nl: [lente, voorjaar]}
+  - {lemma: autunno, pos: noun, tags: [weather], gender: m, en: [autumn, fall], nl: [herfst]}
+  - {lemma: natura, pos: noun, tags: [weather], en: [nature], nl: [natuur]}
+  - {lemma: temperatura, pos: noun, tags: [weather], en: [temperature], nl: [temperatuur]}
+  - {lemma: nebbia, pos: noun, tags: [weather], gender: f, en: [fog, mist], nl: [mist]}
+  - {lemma: tempesta, pos: noun, tags: [weather], en: [storm], nl: [storm]}
+  - {lemma: piovere, pos: verb, tags: [weather], en: [to rain], nl: [regenen]}
+  - {lemma: nevicare, pos: verb, tags: [weather], en: [to snow], nl: [sneeuwen]}
+  # --- animals (u7)
+  - {lemma: animale, pos: noun, tags: [animals], en: [animal], nl: [dier]}
+  - {lemma: cane, pos: noun, tags: [animals], en: [dog], nl: [hond]}
+  - {lemma: gatto, pos: noun, tags: [animals], en: [cat], nl: [kat, poes]}
+  - {lemma: cavallo, pos: noun, tags: [animals], en: [horse], nl: [paard]}
+  - {lemma: uccello, pos: noun, tags: [animals], en: [bird], nl: [vogel]}
+  - {lemma: mucca, pos: noun, tags: [animals], en: [cow], nl: [koe]}
+  - {lemma: maiale, pos: noun, tags: [animals], en: [pig, pork], nl: [varken, varkensvlees]}
+  - {lemma: pecora, pos: noun, tags: [animals], en: [sheep], nl: [schaap]}
+  - {lemma: topo, pos: noun, tags: [animals], en: [mouse, rat], nl: [muis, rat]}
+  - {lemma: leone, pos: noun, tags: [animals], en: [lion], nl: [leeuw]}
+  - {lemma: orso, pos: noun, tags: [animals], en: [bear], nl: [beer]}
+  - {lemma: lupo, pos: noun, tags: [animals], en: [wolf], nl: [wolf]}
+  - {lemma: coniglio, pos: noun, tags: [animals], en: [rabbit], nl: [konijn]}
+  - {lemma: gallina, pos: noun, tags: [animals], gender: f, en: [hen, chicken], nl: [kip]}
+  - {lemma: elefante, pos: noun, tags: [animals], en: [elephant], nl: [olifant]}
+  - {lemma: scimmia, pos: noun, tags: [animals], en: [monkey, ape], nl: [aap]}
+  - {lemma: serpente, pos: noun, tags: [animals], en: [snake], nl: [slang]}
+  - {lemma: ape, pos: noun, tags: [animals], en: [bee], nl: [bij]}
+  - {lemma: farfalla, pos: noun, tags: [animals], gender: f, en: [butterfly], nl: [vlinder]}
+  - {lemma: tigre, pos: noun, tags: [animals], en: [tiger], nl: [tijger]}
+  - {lemma: volpe, pos: noun, tags: [animals], gender: f, en: [fox], nl: [vos]}
+  # --- clothes (u7)
+  - {lemma: vestito, pos: noun, tags: [clothes], en: [dress, suit, clothes], nl: [jurk, pak, kleren]}
+  - {lemma: scarpa, pos: noun, tags: [clothes], en: [shoe], nl: [schoen]}
+  - {lemma: cappello, pos: noun, tags: [clothes], en: [hat], nl: [hoed]}
+  - {lemma: camicia, pos: noun, tags: [clothes], en: [shirt], nl: [overhemd, blouse]}
+  - {lemma: maglietta, pos: noun, tags: [clothes], en: [T-shirt], nl: [T-shirt, shirtje]}
+  - {lemma: pantaloni, pos: noun, tags: [clothes], article: i, en: [trousers, pants], nl: [broek]}
+  - {lemma: gonna, pos: noun, tags: [clothes], en: [skirt], nl: [rok]}
+  - {lemma: giacca, pos: noun, tags: [clothes], en: [jacket], nl: [jasje, colbert, jas]}
+  - {lemma: cappotto, pos: noun, tags: [clothes], en: [coat, overcoat], nl: [jas, mantel]}
+  - {lemma: borsa, pos: noun, tags: [clothes], en: [bag, handbag], nl: [tas, handtas]}
+  - {lemma: occhiali, pos: noun, tags: [clothes], en: [glasses], nl: [bril]}
+  - {lemma: calza, pos: noun, tags: [clothes], gender: f, en: [sock, stocking], nl: [sok, kous]}
+  - {lemma: cravatta, pos: noun, tags: [clothes], en: [tie], nl: [stropdas, das]}
+  - {lemma: maglione, pos: noun, tags: [clothes], gender: m, en: [sweater, jumper], nl: [trui]}
+  - {lemma: orologio, pos: noun, tags: [clothes], en: [watch, clock], nl: [horloge, klok]}
+  - {lemma: guanto, pos: noun, tags: [clothes], en: [glove], nl: [handschoen]}
+  - {lemma: tasca, pos: noun, tags: [clothes], en: [pocket], nl: [zak]}
+  - {lemma: anello, pos: noun, tags: [clothes], en: [ring], nl: [ring]}
+  - {lemma: cintura, pos: noun, tags: [clothes], en: [belt], nl: [riem, gordel]}
+  - {lemma: stivale, pos: noun, tags: [clothes], gender: m, en: [boot], nl: [laars]}
+  - {lemma: ombrello, pos: noun, tags: [clothes], gender: m, en: [umbrella], nl: [paraplu]}
+  - {lemma: indossare, pos: verb, tags: [clothes], en: [to wear, to put on], nl: [dragen, aantrekken]}
+  # --- free time (u8)
+  - {lemma: musica, pos: noun, tags: [leisure], en: [music], nl: [muziek]}
+  - {lemma: canzone, pos: noun, tags: [leisure], en: [song], nl: [lied, liedje]}
+  - {lemma: film, pos: noun, tags: [leisure], en: [film, movie], nl: [film]}
+  - {lemma: gioco, pos: noun, tags: [leisure], en: [game, play], nl: [spel, spelletje]}
+  - {lemma: partita, pos: noun, tags: [leisure], en: [match, game], nl: [wedstrijd, potje]}
+  - {lemma: sport, pos: noun, tags: [leisure], en: [sport, sports], nl: [sport]}
+  - {lemma: calcio, pos: noun, tags: [leisure], en: [football, soccer, kick], nl: [voetbal, trap]}
+  - {lemma: festa, pos: noun, tags: [leisure], en: [party, holiday, celebration], nl: [feest, feestdag]}
+  - {lemma: concerto, pos: noun, tags: [leisure], en: [concert], nl: [concert]}
+  - {lemma: foto, pos: noun, tags: [leisure], en: [photo, picture], nl: [foto]}
+  - {lemma: chitarra, pos: noun, tags: [leisure], en: [guitar], nl: [gitaar]}
+  - {lemma: pianoforte, pos: noun, tags: [leisure], gender: m, en: [piano], nl: [piano]}
+  - {lemma: ballo, pos: noun, tags: [leisure], en: [dance, dancing, ball], nl: [dans, bal]}
+  - {lemma: radio, pos: noun, tags: [leisure], gender: f, en: [radio], nl: [radio]}
+  - {lemma: giornale, pos: noun, tags: [leisure], en: [newspaper], nl: [krant]}
+  - {lemma: rivista, pos: noun, tags: [leisure], en: [magazine], nl: [tijdschrift]}
+  - {lemma: romanzo, pos: noun, tags: [leisure], en: [novel], nl: [roman]}
+  - {lemma: squadra, pos: noun, tags: [leisure], en: [team], nl: [team, ploeg]}
+  - {lemma: disegno, pos: noun, tags: [leisure], en: [drawing, design], nl: [tekening, ontwerp]}
+  - {lemma: spettacolo, pos: noun, tags: [leisure], gender: m, en: [show, performance], nl: [voorstelling, show]}
+  - {lemma: palla, pos: noun, tags: [leisure], en: [ball], nl: [bal]}
+  - {lemma: hobby, pos: noun, tags: [leisure], gender: m, en: [hobby], nl: [hobby]}
+  - {lemma: tennis, pos: noun, tags: [leisure], gender: m, en: [tennis], nl: [tennis]}
+  # --- shopping (u8)
+  - {lemma: prezzo, pos: noun, tags: [shopping], en: [price], nl: [prijs]}
+  - {lemma: euro, pos: noun, tags: [shopping], en: [euro], nl: [euro]}
+  - {lemma: dollaro, pos: noun, tags: [shopping], en: [dollar], nl: [dollar]}
+  - {lemma: resto, pos: noun, tags: [shopping], en: [rest, change], nl: [rest, wisselgeld]}
+  - {lemma: conto, pos: noun, tags: [shopping], en: [bill, check, account], nl: [rekening]}
+  - {lemma: scontrino, pos: noun, tags: [shopping], gender: m, en: [receipt], nl: [bonnetje, kassabon]}
+  - {lemma: supermercato, pos: noun, tags: [shopping], en: [supermarket], nl: [supermarkt]}
+  - {lemma: cassa, pos: noun, tags: [shopping], en: [checkout, till, box], nl: [kassa, kist]}
+  - {lemma: cliente, pos: noun, tags: [shopping], en: [customer, client], nl: [klant]}
+  - {lemma: commesso, pos: noun, tags: [shopping], gender: m, en: [shop assistant], nl: [verkoper, winkelbediende]}
+  - {lemma: sconto, pos: noun, tags: [shopping], gender: m, en: [discount], nl: [korting]}
+  - {lemma: regalo, pos: noun, tags: [shopping], en: [present, gift], nl: [cadeau, geschenk]}
+  - {lemma: costoso, pos: adj, tags: [shopping], en: [expensive, costly], nl: [duur, kostbaar]}
+  - {lemma: economico, pos: adj, tags: [shopping], en: [cheap, economical], nl: [goedkoop, voordelig]}
+  - {lemma: gratis, pos: adv, tags: [shopping], en: [free, for free], nl: [gratis]}
+  - {lemma: pacco, pos: noun, tags: [shopping], en: [parcel, package], nl: [pakket, pakje]}
+  - {lemma: taglia, pos: noun, tags: [shopping], gender: f, en: [size], nl: [maat]}
+  - {lemma: moneta, pos: noun, tags: [shopping], gender: f, en: [coin, currency], nl: [munt, geldstuk]}
+  - {lemma: denaro, pos: noun, tags: [shopping], en: [money], nl: [geld]}
+  - {lemma: spesa, pos: noun, tags: [shopping], gender: f, en: [shopping, groceries, expense], nl: [boodschappen, uitgave]}
+  # --- more verbs (u9, vocabulary)
+  - {lemma: cadere, pos: verb, tags: [verbs2], en: [to fall], nl: [vallen]}
+  - {lemma: ridere, pos: verb, tags: [verbs2], en: [to laugh], nl: [lachen]}
+  - {lemma: decidere, pos: verb, tags: [verbs2], en: [to decide], nl: [beslissen, besluiten]}
+  - {lemma: piangere, pos: verb, tags: [verbs2], en: [to cry, to weep], nl: [huilen]}
+  - {lemma: nascondere, pos: verb, tags: [verbs2], en: [to hide], nl: [verbergen, verstoppen]}
+  - {lemma: promettere, pos: verb, tags: [verbs2], en: [to promise], nl: [beloven]}
+  - {lemma: mandare, pos: verb, tags: [verbs2], en: [to send], nl: [sturen, versturen]}
+  - {lemma: incontrare, pos: verb, tags: [verbs2], en: [to meet], nl: [ontmoeten, tegenkomen]}
+  - {lemma: cambiare, pos: verb, tags: [verbs2], en: [to change], nl: [veranderen, wisselen]}
+  - {lemma: provare, pos: verb, tags: [verbs2], en: [to try, to try on, to feel], nl: [proberen, passen, voelen]}
+  - {lemma: mostrare, pos: verb, tags: [verbs2], en: [to show], nl: [laten zien, tonen]}
+  - {lemma: accettare, pos: verb, tags: [verbs2], en: [to accept], nl: [accepteren, aannemen]}
+  - {lemma: ringraziare, pos: verb, tags: [verbs2], en: [to thank], nl: [bedanken]}
+  - {lemma: raccontare, pos: verb, tags: [verbs2], en: [to tell, to narrate], nl: [vertellen]}
+  - {lemma: evitare, pos: verb, tags: [verbs2], en: [to avoid], nl: [vermijden]}
+  - {lemma: sposare, pos: verb, tags: [verbs2], en: [to marry], nl: [trouwen met]}
+  - {lemma: scegliere, pos: verb, tags: [verbs2], en: [to choose], nl: [kiezen]}
+  - {lemma: spendere, pos: verb, tags: [verbs2], en: [to spend], nl: [uitgeven]}
+  - {lemma: riposare, pos: verb, tags: [verbs2], en: [to rest], nl: [rusten, uitrusten]}
+  - {lemma: fumare, pos: verb, tags: [verbs2], en: [to smoke], nl: [roken]}
+  - {lemma: firmare, pos: verb, tags: [verbs2], en: [to sign], nl: [ondertekenen, tekenen]}
+  - {lemma: salutare, pos: verb, tags: [verbs2], en: [to greet, to say goodbye], nl: [groeten, gedag zeggen]}
+  - {lemma: sorridere, pos: verb, tags: [verbs2], en: [to smile], nl: [glimlachen]}
+  - {lemma: nascere, pos: verb, tags: [verbs2], en: [to be born], nl: [geboren worden]}
+  - {lemma: spingere, pos: verb, tags: [verbs2], en: [to push], nl: [duwen]}
+  - {lemma: tirare, pos: verb, tags: [verbs2], en: [to pull, to throw], nl: [trekken, gooien]}
+  - {lemma: volare, pos: verb, tags: [verbs2], en: [to fly], nl: [vliegen]}
+  - {lemma: rubare, pos: verb, tags: [verbs2], en: [to steal], nl: [stelen]}
+  - {lemma: sognare, pos: verb, tags: [verbs2], en: [to dream], nl: [dromen]}
+  - {lemma: bruciare, pos: verb, tags: [verbs2], en: [to burn], nl: [branden, verbranden]}
+  # --- ideas and opinions (u9)
+  - {lemma: idea, pos: noun, tags: [ideas], en: [idea], nl: [idee]}
+  - {lemma: problema, pos: noun, tags: [ideas], en: [problem], nl: [probleem]}
+  - {lemma: verità, pos: noun, tags: [ideas], en: [truth], nl: [waarheid]}
+  - {lemma: motivo, pos: noun, tags: [ideas], gender: m, en: [reason, motive], nl: [reden, motief]}
+  - {lemma: ragione, pos: noun, tags: [ideas], en: [reason, right], nl: [reden, gelijk, verstand]}
+  - {lemma: storia, pos: noun, tags: [ideas], en: [story, history], nl: [verhaal, geschiedenis]}
+  - {lemma: vita, pos: noun, tags: [ideas], en: [life], nl: [leven]}
+  - {lemma: morte, pos: noun, tags: [ideas], en: [death], nl: [dood]}
+  - {lemma: guerra, pos: noun, tags: [ideas], en: [war], nl: [oorlog]}
+  - {lemma: pace, pos: noun, tags: [ideas], gender: f, en: [peace], nl: [vrede, rust]}
+  - {lemma: opinione, pos: noun, tags: [ideas], en: [opinion], nl: [mening]}
+  - {lemma: errore, pos: noun, tags: [ideas], en: [mistake, error], nl: [fout, vergissing]}
+  - {lemma: parola, pos: noun, tags: [ideas], en: [word], nl: [woord]}
+  - {lemma: lingua, pos: noun, tags: [ideas], en: [language, tongue], nl: [taal, tong]}
+  - {lemma: frase, pos: noun, tags: [ideas], en: [sentence, phrase], nl: [zin]}
+  - {lemma: consiglio, pos: noun, tags: [ideas], en: [advice, council], nl: [advies, raad]}
+  - {lemma: decisione, pos: noun, tags: [ideas], en: [decision], nl: [beslissing, besluit]}
+  - {lemma: scelta, pos: noun, tags: [ideas], en: [choice], nl: [keuze]}
+  - {lemma: possibile, pos: adj, tags: [ideas], en: [possible], nl: [mogelijk]}
+  - {lemma: impossibile, pos: adj, tags: [ideas], en: [impossible], nl: [onmogelijk]}
+  - {lemma: giusto, pos: adj, tags: [ideas], en: [right, fair, correct], nl: [juist, goed, eerlijk]}
+  - {lemma: sbagliato, pos: adj, tags: [ideas], en: [wrong, mistaken], nl: [fout, verkeerd]}
+  - {lemma: strano, pos: adj, tags: [ideas], en: [strange, odd], nl: [vreemd, raar]}
+  - {lemma: interessante, pos: adj, tags: [ideas], en: [interesting], nl: [interessant]}
+  - {lemma: necessario, pos: adj, tags: [ideas], en: [necessary], nl: [nodig, noodzakelijk]}
+  - {lemma: esempio, pos: noun, tags: [ideas], gender: m, en: [example], nl: [voorbeeld]}
+  - {lemma: modo, pos: noun, tags: [ideas], en: [way, manner], nl: [manier]}
+  - {lemma: tipo, pos: noun, tags: [ideas], en: [type, kind, guy], nl: [soort, type, kerel]}
+  # --- family (u3)
+  - {lemma: nonno, pos: noun, tags: [family], gender: m, en: [grandfather, grandpa], nl: [opa, grootvader]}
+  - {lemma: nonna, pos: noun, tags: [family], gender: f, en: [grandmother, grandma], nl: [oma, grootmoeder]}
+  - {lemma: nipote, pos: noun, tags: [family], gender: m, en: [grandchild, nephew, niece], nl: [kleinkind, neef, nicht]}
+  - {lemma: cugino, pos: noun, tags: [family], gender: m, en: [cousin], nl: [neef]}
+  - {lemma: cugina, pos: noun, tags: [family], gender: f, en: [cousin (female)], nl: [nicht]}
+  - {lemma: genitore, pos: noun, tags: [family], gender: m, en: [parent], nl: [ouder]}
+  - {lemma: mamma, pos: noun, tags: [family], gender: f, en: [mum, mom], nl: [mama, mam]}
+  - {lemma: papà, pos: noun, tags: [family], gender: m, en: [dad], nl: [papa, pap]}
+  - {lemma: fidanzato, pos: noun, tags: [family], gender: m, en: [boyfriend, fiancé], nl: [vriend, verloofde]}
+  - {lemma: fidanzata, pos: noun, tags: [family], gender: f, en: [girlfriend, fiancée], nl: [vriendin, verloofde]}
+  - {lemma: parente, pos: noun, tags: [family], gender: m, en: [relative], nl: [familielid]}
+  - {lemma: gemello, pos: noun, tags: [family], gender: m, en: [twin], nl: [tweeling, tweelingbroer]}
+  - {lemma: sposato, pos: adj, tags: [family], en: [married], nl: [getrouwd]}
+  - {lemma: nascita, pos: noun, tags: [family], gender: f, en: [birth], nl: [geboorte]}
+  - {lemma: compleanno, pos: noun, tags: [family], gender: m, en: [birthday], nl: [verjaardag]}
+  - {lemma: matrimonio, pos: noun, tags: [family], gender: m, en: [wedding, marriage], nl: [bruiloft, huwelijk]}
+  # --- in the kitchen (u5)
+  - {lemma: riso, pos: noun, tags: [kitchen], gender: m, en: [rice], nl: [rijst]}
+  - {lemma: zuppa, pos: noun, tags: [kitchen], gender: f, en: [soup], nl: [soep]}
+  - {lemma: bistecca, pos: noun, tags: [kitchen], gender: f, en: [steak], nl: [biefstuk, steak]}
+  - {lemma: prosciutto, pos: noun, tags: [kitchen], gender: m, en: [ham], nl: [ham]}
+  - {lemma: burro, pos: noun, tags: [kitchen], gender: m, en: [butter], nl: [boter]}
+  - {lemma: olio, pos: noun, tags: [kitchen], gender: m, en: [oil], nl: [olie]}
+  - {lemma: pepe, pos: noun, tags: [kitchen], gender: m, en: [pepper], nl: [peper]}
+  - {lemma: uva, pos: noun, tags: [kitchen], gender: f, en: [grapes], nl: [druiven]}
+  - {lemma: banana, pos: noun, tags: [kitchen], gender: f, en: [banana], nl: [banaan]}
+  - {lemma: arancia, pos: noun, tags: [kitchen], gender: f, en: [orange], nl: [sinaasappel]}
+  - {lemma: limone, pos: noun, tags: [kitchen], gender: m, en: [lemon], nl: [citroen]}
+  - {lemma: fragola, pos: noun, tags: [kitchen], gender: f, en: [strawberry], nl: [aardbei]}
+  - {lemma: cipolla, pos: noun, tags: [kitchen], gender: f, en: [onion], nl: [ui]}
+  - {lemma: aglio, pos: noun, tags: [kitchen], gender: m, en: [garlic], nl: [knoflook]}
+  - {lemma: carota, pos: noun, tags: [kitchen], gender: f, en: [carrot], nl: [wortel]}
+  - {lemma: biscotto, pos: noun, tags: [kitchen], gender: m, en: [biscuit, cookie], nl: [koekje]}
+  - {lemma: cioccolato, pos: noun, tags: [kitchen], gender: m, en: [chocolate], nl: [chocolade]}
+  - {lemma: dolce, pos: adj, tags: [kitchen], en: [sweet, dessert], nl: [zoet, toetje]}
+  - {lemma: panino, pos: noun, tags: [kitchen], gender: m, en: [sandwich, bread roll], nl: [broodje]}
+  - {lemma: succo, pos: noun, tags: [kitchen], gender: m, en: [juice], nl: [sap]}
+  - {lemma: bottiglia, pos: noun, tags: [kitchen], gender: f, en: [bottle], nl: [fles]}
+  - {lemma: cucchiaio, pos: noun, tags: [kitchen], gender: m, en: [spoon], nl: [lepel]}
+  - {lemma: forchetta, pos: noun, tags: [kitchen], gender: f, en: [fork], nl: [vork]}
+  - {lemma: ricetta, pos: noun, tags: [kitchen], gender: f, en: [recipe, prescription], nl: [recept]}
+  - {lemma: forno, pos: noun, tags: [kitchen], gender: m, en: [oven, bakery], nl: [oven, bakkerij]}
+  - {lemma: pentola, pos: noun, tags: [kitchen], gender: f, en: [pot, saucepan], nl: [pan, kookpan]}
+  - {lemma: sugo, pos: noun, tags: [kitchen], gender: m, en: [sauce], nl: [saus]}
+  - {lemma: fame, pos: noun, tags: [kitchen], gender: f, en: [hunger], nl: [honger]}
+  - {lemma: sete, pos: noun, tags: [kitchen], gender: f, en: [thirst], nl: [dorst]}

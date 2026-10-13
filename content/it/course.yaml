@@ -1,8 +1,14 @@
 # Italian course for English and Dutch speakers.
 # Skills select their items with queries (see duelingo/pipeline/pipeline/query.py); the
 # compiler resolves them into skill_items/skill_facets, so the app never reads these queries.
+#
+# Grammar gating (duelingo/docs/ARCHITECTURE.md, "Grammar gating"; pipeline/pipeline/features.py):
+# a learner never meets a grammar construct before the skill that introduces it. The present tense
+# is allowed from the start; every other feature below is introduced by one skill (a verbs skill
+# introduces tense:{T} automatically). Each unit's skills require the previous unit's grammar, so
+# every later skill allows everything taught before it.
 id: it
-version: 1.0.0
+version: 1.1.0
 title: {en: Italian, nl: Italiaans}
 description:
   en: Italian from the basics, with a strong focus on verbs and conjugation.
@@ -22,6 +28,24 @@ tense_labels:
   passato_prossimo: {en: present perfect (passato prossimo), nl: voltooid tegenwoordige tijd (passato prossimo)}
 articles: [il, lo, la, "l'"]
 
+base_features: ["tense:presente"]
+feature_detectors:
+  # passato prossimo with essere (sono andato): introduced after the avere-perfect
+  "aux:essere": {type: compound_aux, aux: essere}
+  # potere/dovere/volere/sapere + infinitive (posso venire, devo farlo)
+  modal:
+    type: modal_infinitive
+    verbs: [potere, dovere, volere, sapere]
+    infinitive_pattern: "[a-zàèéìòù]+((are|ere|ire|rre)|(ar|er|ir|r)(mi|ti|ci|vi|si|lo|la|li|le|gli|ne|glielo|gliela|melo|mela|telo|tela|celo|cela|velo|vela|sene))"
+  # preposition + article (del, nella, all'...)
+  "prep:articulated":
+    type: words
+    words: [del, dello, della, "dell'", dei, degli, delle, al, allo, alla, "all'", ai, agli, alle,
+            dal, dallo, dalla, "dall'", dai, dagli, dalle, nel, nello, nella, "nell'", nei, negli, nelle,
+            sul, sullo, sulla, "sull'", sui, sugli, sulle, col, coi]
+  # irregular future stems (sarò, avrò, andrò, farò, potrò, verrò, ...)
+  "irregular:futuro": {type: irregular_tense, tense: futuro}
+
 units:
   - id: u1
     title: {en: Basics, nl: Basis}
@@ -31,6 +55,12 @@ units:
         title: {en: Greetings, nl: Begroetingen}
         icon: wave
         items: {tags: [greetings]}
+      - id: little-words
+        kind: vocab
+        title: {en: Little words, nl: Kleine woorden}
+        icon: chat
+        requires: [greetings]
+        items: {tags: [little]}
       - id: people
         kind: vocab
         title: {en: People, nl: Mensen}
@@ -41,7 +71,7 @@ units:
         kind: grammar
         title: {en: Essere and avere, nl: Essere en avere}
         icon: key
-        requires: [greetings]
+        requires: [little-words, people]
         verbs: {lemmas: [essere, avere], tense: presente}
         exercises: [conj_grid, cloze, spot_error, transform, multiple_choice]
 
@@ -52,15 +82,14 @@ units:
         kind: vocab
         title: {en: Food and drink, nl: Eten en drinken}
         icon: food
-        requires: [people]
+        requires: [essere-avere]
         items: {tags: [food]}
-      - id: articles
-        kind: grammar
-        title: {en: The article, nl: Het lidwoord}
-        icon: article
-        requires: [food]
-        facet: article
-        items: {pos: noun, tags: [people, food]}
+      - id: numbers
+        kind: vocab
+        title: {en: Numbers, nl: Getallen}
+        icon: numbers
+        requires: [essere-avere]
+        items: {tags: [numbers]}
       - id: present-are
         kind: grammar
         title: {en: Present tense of -are verbs, nl: Tegenwoordige tijd van -are-werkwoorden}
@@ -68,6 +97,13 @@ units:
         requires: [essere-avere]
         verbs: {class: are, regular: true, tense: presente, top: 20}
         exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+      - id: articles
+        kind: grammar
+        title: {en: The article, nl: Het lidwoord}
+        icon: article
+        requires: [food]
+        facet: article
+        items: {pos: noun, tags: [people, food]}
       - id: present-ere
         kind: grammar
         title: {en: Present tense of -ere verbs, nl: Tegenwoordige tijd van -ere-werkwoorden}
@@ -84,25 +120,221 @@ units:
         exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
 
   - id: u3
-    title: {en: Everyday verbs and the past, nl: Alledaagse werkwoorden en het verleden}
+    title: {en: Everyday life, nl: Het dagelijks leven}
     skills:
       - id: time
         kind: vocab
         title: {en: Time and days, nl: Tijd en dagen}
         icon: clock
-        requires: [food]
+        requires: [present-ire]
         items: {tags: [time]}
+      - id: home
+        kind: vocab
+        title: {en: At home, nl: Thuis}
+        icon: home
+        requires: [present-ire]
+        items: {tags: [home]}
+      - id: family
+        kind: vocab
+        title: {en: Family, nl: Familie}
+        icon: family
+        requires: [time]
+        items: {tags: [family]}
+      - id: everyday-verbs
+        kind: vocab
+        title: {en: Everyday verbs, nl: Alledaagse werkwoorden}
+        icon: verb
+        requires: [home]
+        items: {tags: [verbs1]}
       - id: irregular-present
         kind: grammar
         title: {en: Irregular verbs in the present, nl: Onregelmatige werkwoorden in de tegenwoordige tijd}
         icon: bolt
         requires: [present-ire]
-        verbs: {regular: false, tense: presente, top: 16, exclude: [essere, avere, piacere, dispiacere]}
+        verbs: {regular: false, tense: presente, top: 14,
+                exclude: [essere, avere, piacere, dispiacere, potere, dovere, volere, sapere, parere, supporre]}
         exercises: [conj_grid, cloze, spot_error, transform]
+      - id: pronouns
+        kind: grammar
+        title: {en: Object pronouns, nl: Voornaamwoorden als lijdend en meewerkend voorwerp}
+        icon: person
+        requires: [irregular-present]
+        items: {tags: [pronouns]}
+      - id: modal-verbs
+        kind: grammar
+        title: {en: "Can, must, want: modal verbs", nl: "Kunnen, moeten, willen: modale werkwoorden"}
+        icon: key
+        requires: [irregular-present]
+        introduces: [modal]
+        verbs: {tense: presente, lemmas: [potere, dovere, volere, sapere]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+
+  - id: u4
+    title: {en: Describing things, nl: Dingen beschrijven}
+    skills:
+      - id: adjectives
+        kind: grammar
+        title: {en: Adjectives, nl: Bijvoeglijke naamwoorden}
+        icon: grammar
+        requires: [pronouns, modal-verbs]
+        items: {tags: [adjectives]}
+      - id: body
+        kind: vocab
+        title: {en: Body and health, nl: Lichaam en gezondheid}
+        icon: body
+        requires: [pronouns, modal-verbs]
+        items: {tags: [body]}
+      - id: adverbs
+        kind: vocab
+        title: {en: Useful adverbs, nl: Handige bijwoorden}
+        icon: star
+        requires: [pronouns, modal-verbs]
+        items: {tags: [adverbs]}
+      - id: colours
+        kind: vocab
+        title: {en: Colours, nl: Kleuren}
+        icon: colors
+        requires: [adjectives]
+        items: {tags: [colours]}
+      - id: possessives
+        kind: grammar
+        title: {en: "My, your, his: possessives", nl: "Mijn, jouw, zijn: bezittelijke voornaamwoorden"}
+        icon: person
+        requires: [adjectives]
+        items: {tags: [possessives]}
+
+  - id: u5
+    title: {en: Around town, nl: In de stad}
+    skills:
+      - id: city
+        kind: vocab
+        title: {en: In the city, nl: In de stad}
+        icon: city
+        requires: [colours, possessives]
+        items: {tags: [city]}
+      - id: travel
+        kind: vocab
+        title: {en: Travel, nl: Op reis}
+        icon: travel
+        requires: [colours, possessives]
+        items: {tags: [travel]}
+      - id: kitchen
+        kind: vocab
+        title: {en: In the kitchen, nl: In de keuken}
+        icon: food
+        requires: [colours, possessives]
+        items: {tags: [kitchen]}
+      - id: prepositions
+        kind: grammar
+        title: {en: "Prepositions: nel, al, del...", nl: "Voorzetsels: nel, al, del..."}
+        icon: grammar
+        requires: [city, travel]
+        introduces: ["prep:articulated"]
+        items: {tags: [prepositions]}
+
+  - id: u6
+    title: {en: The past, nl: Het verleden}
+    skills:
+      - id: work
+        kind: vocab
+        title: {en: Work and school, nl: Werk en school}
+        icon: work
+        requires: [prepositions]
+        items: {tags: [work]}
+      - id: feelings
+        kind: vocab
+        title: {en: Feelings, nl: Gevoelens}
+        icon: person
+        requires: [prepositions]
+        items: {tags: [feelings]}
       - id: passato-prossimo
         kind: grammar
-        title: {en: The passato prossimo, nl: De passato prossimo}
-        icon: history
-        requires: [irregular-present, time]
-        verbs: {tense: passato_prossimo, top: 20, exclude: [stare]}
+        title: {en: The passato prossimo with avere, nl: De passato prossimo met avere}
+        icon: past
+        requires: [prepositions]
+        verbs: {tense: passato_prossimo, aux: avere, top: 20}
         exercises: [conj_grid, cloze, spot_error, transform]
+      - id: passato-prossimo-essere
+        kind: grammar
+        title: {en: The passato prossimo with essere, nl: De passato prossimo met essere}
+        icon: past
+        requires: [passato-prossimo]
+        introduces: ["aux:essere"]
+        verbs: {tense: passato_prossimo, aux: essere, top: 16, exclude: [stare, dispiacere, parere, importare]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+
+  - id: u7
+    title: {en: Memories, nl: Herinneringen}
+    skills:
+      - id: weather
+        kind: vocab
+        title: {en: Weather and nature, nl: Weer en natuur}
+        icon: weather
+        requires: [passato-prossimo-essere]
+        items: {tags: [weather]}
+      - id: animals
+        kind: vocab
+        title: {en: Animals, nl: Dieren}
+        icon: animals
+        requires: [passato-prossimo-essere]
+        items: {tags: [animals]}
+      - id: clothes
+        kind: vocab
+        title: {en: Clothes, nl: Kleding}
+        icon: clothes
+        requires: [passato-prossimo-essere]
+        items: {tags: [clothes]}
+      - id: imperfetto
+        kind: grammar
+        title: {en: The imperfetto, nl: De imperfetto}
+        icon: past
+        requires: [passato-prossimo-essere]
+        verbs: {tense: imperfetto, top: 20}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+
+  - id: u8
+    title: {en: Plans for the future, nl: Plannen voor de toekomst}
+    skills:
+      - id: leisure
+        kind: vocab
+        title: {en: Free time, nl: Vrije tijd}
+        icon: star
+        requires: [imperfetto]
+        items: {tags: [leisure]}
+      - id: shopping
+        kind: vocab
+        title: {en: Shopping, nl: Winkelen}
+        icon: shopping
+        requires: [imperfetto]
+        items: {tags: [shopping]}
+      - id: futuro
+        kind: grammar
+        title: {en: The future tense, nl: De toekomende tijd}
+        icon: future
+        requires: [imperfetto]
+        verbs: {tense: futuro, regular: true, top: 18, exclude: [dispiacere]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+      - id: futuro-irregular
+        kind: grammar
+        title: {en: Irregular futures, nl: Onregelmatige toekomende tijd}
+        icon: future
+        requires: [futuro]
+        introduces: ["irregular:futuro"]
+        verbs: {tense: futuro, regular: false, top: 16, exclude: [dispiacere, parere, supporre, piacere]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+
+  - id: u9
+    title: {en: Talking about life, nl: Praten over het leven}
+    skills:
+      - id: more-verbs
+        kind: vocab
+        title: {en: More verbs, nl: Meer werkwoorden}
+        icon: verb
+        requires: [futuro-irregular]
+        items: {tags: [verbs2]}
+      - id: ideas
+        kind: vocab
+        title: {en: Ideas and opinions, nl: Ideeën en meningen}
+        icon: chat
+        requires: [futuro-irregular]
+        items: {tags: [ideas]}

@@ -11,16 +11,16 @@ Veel van de meest gebruikte werkwoorden zijn onregelmatig in de tegenwoordige ti
 | voi | fate | andate | venite | state | date |
 | loro | fanno | vanno | vengono | stanno | danno |
 
-| | volere (willen) | potere (kunnen) | dovere (moeten) | sapere (weten) | dire (zeggen) | uscire (uitgaan) |
-|---|---|---|---|---|---|---|
-| io | voglio | posso | devo | so | dico | esco |
-| tu | vuoi | puoi | devi | sai | dici | esci |
-| lui/lei | vuole | può | deve | sa | dice | esce |
-| noi | vogliamo | possiamo | dobbiamo | sappiamo | diciamo | usciamo |
-| voi | volete | potete | dovete | sapete | dite | uscite |
-| loro | vogliono | possono | devono | sanno | dicono | escono |
+| | dire (zeggen) | uscire (uitgaan) | bere (drinken) | tenere (houden) | rimanere (blijven) |
+|---|---|---|---|---|---|
+| io | dico | esco | bevo | tengo | rimango |
+| tu | dici | esci | bevi | tieni | rimani |
+| lui/lei | dice | esce | beve | tiene | rimane |
+| noi | diciamo | usciamo | beviamo | teniamo | rimaniamo |
+| voi | dite | uscite | bevete | tenete | rimanete |
+| loro | dicono | escono | bevono | tengono | rimangono |
 
 - De *noi*- en *voi*-vormen zijn vaak regelmatig (*andiamo, andate*; *veniamo, venite*; *uscite*); de onregelmatige stam zit in de andere personen.
-- Na *volere, potere, dovere* volgt een infinitief: *Voglio mangiare.* *Posso entrare?* *Devo andare.*
+- Veel van deze werkwoorden krijgen een *-g-* in de *io*- en *loro*-vorm: *vengo, vengono; tengo, tengono; rimango, rimangono*.
 - *Stare* gebruik je voor hoe het met je gaat en voor "bezig zijn met": *Come stai?* *Sto mangiando.*
-- *Sapere* = iets weten of kunnen (*So nuotare* = ik kan zwemmen); *conoscere* = iemand of een plaats kennen.
+- *Fare* zit in veel uitdrukkingen: *fare colazione* (ontbijten), *fa freddo* (het is koud), *fare una domanda* (een vraag stellen).
