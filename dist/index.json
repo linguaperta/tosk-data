@@ -9,7 +9,7 @@
         "en": "Italian",
         "nl": "Italiaans"
       },
-      "sha256": "a0fb7e1f4f63195e38e48dc9e0fc91e8465308cf60eb7366d9d15213bcdb5436",
+      "sha256": "cfa2659fb0937259871987075c6cf8a4d4d0c790e8eb8866b7a1698d4d5919ad",
       "size": 5459968,
       "schema_version": 1,
       "url": "it.sqlite"
@@ -21,8 +21,8 @@
         "en": "Dutch",
         "nl": "Nederlands"
       },
-      "sha256": "635a19ed744f830ac32385b11844ab292aa8f233a25f3f0b6e2ad2acf7969e00",
-      "size": 5001216,
+      "sha256": "6b07322993522cfe7cdaa23ffcbb0cd91c7e28907f426399ba49a345f3643044",
+      "size": 4968448,
       "schema_version": 1,
       "url": "nl.sqlite"
     }
