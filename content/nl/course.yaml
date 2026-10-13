@@ -1,8 +1,14 @@
 # Dutch course for English speakers.
 # Skills select their items with queries (see duelingo/pipeline/pipeline/query.py); the
 # compiler resolves them into skill_items/skill_facets, so the app never reads these queries.
+#
+# Grammar gating (duelingo/docs/ARCHITECTURE.md, "Grammar gating"; pipeline/pipeline/features.py):
+# a learner never meets a grammar construct before the skill that introduces it. The present tense
+# is allowed from the start; every other feature below is introduced by one skill (a verbs skill
+# introduces tense:{T} automatically). Each unit's skills require the previous unit's grammar, so
+# every later skill allows everything taught before it.
 id: nl
-version: 1.0.0
+version: 1.1.0
 title: {en: Dutch, nl: Nederlands}
 description:
   en: Dutch from the basics, with a strong focus on verbs, the perfect tense and de/het.
@@ -24,6 +30,21 @@ tense_labels:
   perfectum: {en: present perfect, nl: voltooid tegenwoordige tijd}
 articles: [de, het]
 
+base_features: ["tense:tegenwoordige_tijd"]
+feature_detectors:
+  # perfect with zijn (ik ben gegaan): introduced after the hebben-perfect
+  "aux:zijn": {type: compound_aux, aux: zijn}
+  # modal verb + infinitive (ik wil slapen, je moet gaan, we zullen zien)
+  modal: {type: modal_infinitive, verbs: [kunnen, moeten, willen, mogen, zullen, hoeven]}
+  # separable verbs, split (hij komt morgen terug) or whole (opstaan, teruggekomen)
+  separable:
+    type: separable
+    particles: [aan, af, achter, bij, binnen, buiten, door, in, langs, los, mee, mis, na, neer, om, onder,
+                op, open, dicht, over, rond, samen, tegen, terecht, terug, thuis, toe, uit, vast, voor,
+                voorbij, weg]
+  # strong and irregular simple past (ging, kwam, was, had, zei)
+  "irregular:verleden_tijd": {type: irregular_tense, tense: verleden_tijd}
+
 units:
   - id: u1
     title: {en: Basics, nl: Basis}
@@ -33,6 +54,12 @@ units:
         title: {en: Greetings, nl: Begroetingen}
         icon: wave
         items: {tags: [greetings]}
+      - id: little-words
+        kind: vocab
+        title: {en: Little words, nl: Kleine woorden}
+        icon: chat
+        requires: [greetings]
+        items: {tags: [little]}
       - id: people
         kind: vocab
         title: {en: People, nl: Mensen}
@@ -43,7 +70,7 @@ units:
         kind: grammar
         title: {en: The present tense, nl: De tegenwoordige tijd}
         icon: verb
-        requires: [greetings]
+        requires: [little-words, people]
         verbs: {tense: tegenwoordige_tijd, regular: true, top: 20,
                 exclude: [gaan, doen, staan, zien, slaan, komen, weten, zeggen, moeten, worden]}
         exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
@@ -55,8 +82,24 @@ units:
         kind: vocab
         title: {en: Food and drink, nl: Eten en drinken}
         icon: food
-        requires: [people]
+        requires: [present-regular]
         items: {tags: [food]}
+      - id: numbers
+        kind: vocab
+        title: {en: Numbers, nl: Getallen}
+        icon: numbers
+        requires: [present-regular]
+        items: {tags: [numbers]}
+      - id: present-irregular
+        kind: grammar
+        title: {en: "Key verbs: zijn, hebben and modals", nl: "Kernwerkwoorden: zijn, hebben en modale werkwoorden"}
+        icon: key
+        requires: [present-regular]
+        introduces: [modal]
+        verbs: {tense: tegenwoordige_tijd,
+                lemmas: [zijn, hebben, kunnen, willen, mogen, moeten, zullen, gaan, doen, komen,
+                         staan, zien, weten, zeggen, worden]}
+        exercises: [conj_grid, cloze, spot_error, transform]
       - id: home
         kind: vocab
         title: {en: At home, nl: Thuis}
@@ -70,36 +113,190 @@ units:
         requires: [home]
         facet: article
         items: {pos: noun, tags: [people, food, home]}
-      - id: present-irregular
-        kind: grammar
-        title: {en: "Key verbs: zijn, hebben and modals", nl: "Kernwerkwoorden: zijn, hebben en modale werkwoorden"}
-        icon: key
-        requires: [present-regular]
-        verbs: {tense: tegenwoordige_tijd,
-                lemmas: [zijn, hebben, kunnen, willen, mogen, moeten, zullen, gaan, doen, komen,
-                         staan, zien, weten, zeggen, worden]}
-        exercises: [conj_grid, cloze, spot_error, transform]
 
   - id: u3
-    title: {en: The past, nl: Het verleden}
+    title: {en: Everyday life, nl: Het dagelijks leven}
     skills:
       - id: time
         kind: vocab
         title: {en: Time and days, nl: Tijd en dagen}
         icon: clock
-        requires: [home]
+        requires: [present-irregular, de-het]
         items: {tags: [time]}
+      - id: family
+        kind: vocab
+        title: {en: Family, nl: Familie}
+        icon: family
+        requires: [present-irregular, de-het]
+        items: {tags: [family]}
+      - id: everyday-verbs
+        kind: vocab
+        title: {en: Everyday verbs, nl: Alledaagse werkwoorden}
+        icon: verb
+        requires: [present-irregular, de-het]
+        items: {tags: [verbs1]}
+      - id: pronouns
+        kind: grammar
+        title: {en: "Me, you, him: object pronouns", nl: "Mij, jou, hem: voornaamwoorden als voorwerp"}
+        icon: person
+        requires: [present-irregular, de-het]
+        items: {tags: [pronouns]}
+      - id: separable
+        kind: grammar
+        title: {en: Separable verbs, nl: Scheidbare werkwoorden}
+        icon: verb
+        requires: [everyday-verbs]
+        introduces: [separable]
+        items: {tags: [separable]}
+
+  - id: u4
+    title: {en: The perfect tense, nl: De voltooide tijd}
+    skills:
+      - id: work
+        kind: vocab
+        title: {en: Work and school, nl: Werk en school}
+        icon: work
+        requires: [separable, pronouns, time]
+        items: {tags: [work]}
+      - id: feelings
+        kind: vocab
+        title: {en: Feelings, nl: Gevoelens}
+        icon: person
+        requires: [separable, pronouns, time]
+        items: {tags: [feelings]}
       - id: perfectum-hebben
         kind: grammar
         title: {en: "Perfect tense with hebben", nl: "Perfectum met hebben"}
-        icon: history
-        requires: [present-irregular, time]
+        icon: past
+        requires: [separable, pronouns, time]
         verbs: {tense: perfectum, aux: hebben, top: 20, exclude: [moeten]}
         exercises: [conj_grid, cloze, spot_error, transform]
       - id: perfectum-zijn
         kind: grammar
         title: {en: "Perfect tense with zijn", nl: "Perfectum met zijn"}
-        icon: history
+        icon: past
         requires: [perfectum-hebben]
+        introduces: ["aux:zijn"]
         verbs: {tense: perfectum, aux: zijn, top: 16, exclude: [oplossen]}
         exercises: [conj_grid, cloze, spot_error, transform]
+
+  - id: u5
+    title: {en: Describing things, nl: Dingen beschrijven}
+    skills:
+      - id: adjectives
+        kind: grammar
+        title: {en: Adjectives, nl: Bijvoeglijke naamwoorden}
+        icon: grammar
+        requires: [perfectum-zijn]
+        items: {tags: [adjectives]}
+      - id: body
+        kind: vocab
+        title: {en: Body and health, nl: Lichaam en gezondheid}
+        icon: body
+        requires: [perfectum-zijn]
+        items: {tags: [body]}
+      - id: adverbs
+        kind: vocab
+        title: {en: Useful adverbs, nl: Handige bijwoorden}
+        icon: star
+        requires: [perfectum-zijn]
+        items: {tags: [adverbs]}
+      - id: colours
+        kind: vocab
+        title: {en: Colours, nl: Kleuren}
+        icon: colors
+        requires: [adjectives]
+        items: {tags: [colours]}
+      - id: possessives
+        kind: grammar
+        title: {en: "My, your, his: possessives", nl: "Mijn, jouw, zijn: bezittelijke voornaamwoorden"}
+        icon: person
+        requires: [adjectives]
+        items: {tags: [possessives]}
+
+  - id: u6
+    title: {en: Around town, nl: In de stad}
+    skills:
+      - id: city
+        kind: vocab
+        title: {en: In the city, nl: In de stad}
+        icon: city
+        requires: [colours, possessives]
+        items: {tags: [city]}
+      - id: travel
+        kind: vocab
+        title: {en: Travel, nl: Op reis}
+        icon: travel
+        requires: [colours, possessives]
+        items: {tags: [travel]}
+      - id: kitchen
+        kind: vocab
+        title: {en: In the kitchen, nl: In de keuken}
+        icon: food
+        requires: [colours, possessives]
+        items: {tags: [kitchen]}
+      - id: shopping
+        kind: vocab
+        title: {en: Shopping, nl: Winkelen}
+        icon: shopping
+        requires: [city]
+        items: {tags: [shopping]}
+
+  - id: u7
+    title: {en: The simple past, nl: De verleden tijd}
+    skills:
+      - id: weather
+        kind: vocab
+        title: {en: Weather and nature, nl: Weer en natuur}
+        icon: weather
+        requires: [shopping, travel]
+        items: {tags: [weather]}
+      - id: animals
+        kind: vocab
+        title: {en: Animals, nl: Dieren}
+        icon: animals
+        requires: [shopping, travel]
+        items: {tags: [animals]}
+      - id: clothes
+        kind: vocab
+        title: {en: Clothes, nl: Kleding}
+        icon: clothes
+        requires: [shopping, travel]
+        items: {tags: [clothes]}
+      - id: verleden-tijd-weak
+        kind: grammar
+        title: {en: "Simple past: weak verbs", nl: "Verleden tijd: zwakke werkwoorden"}
+        icon: past
+        requires: [shopping, travel]
+        verbs: {tense: verleden_tijd, class: weak, regular: true, top: 20, exclude: [jongen, vermoorden]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+      - id: verleden-tijd-strong
+        kind: grammar
+        title: {en: "Simple past: strong and irregular verbs", nl: "Verleden tijd: sterke en onregelmatige werkwoorden"}
+        icon: past
+        requires: [verleden-tijd-weak]
+        introduces: ["irregular:verleden_tijd"]
+        verbs: {tense: verleden_tijd, regular: false, top: 20, exclude: [zullen]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+
+  - id: u8
+    title: {en: Free time and ideas, nl: Vrije tijd en ideeën}
+    skills:
+      - id: leisure
+        kind: vocab
+        title: {en: Free time, nl: Vrije tijd}
+        icon: star
+        requires: [verleden-tijd-strong]
+        items: {tags: [leisure]}
+      - id: more-verbs
+        kind: vocab
+        title: {en: More verbs, nl: Meer werkwoorden}
+        icon: verb
+        requires: [verleden-tijd-strong]
+        items: {tags: [verbs2]}
+      - id: ideas
+        kind: vocab
+        title: {en: Ideas and opinions, nl: Ideeën en meningen}
+        icon: chat
+        requires: [verleden-tijd-strong]
+        items: {tags: [ideas]}

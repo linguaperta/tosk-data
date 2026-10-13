@@ -3,7 +3,7 @@
 # (tr_src: claude); items without en take their gloss from Wiktionary.
 # Words never taken into the automatic frequency pool (Wiktionary homographs and inflected
 # forms that inherit a misleading frequency): lemma or lemma/pos.
-exclude: [reet, beuren, dagen/verb, manen/verb, ogen/verb, dingen/verb, weet/noun, kan/noun, wil/noun, was/noun, kom/noun, want/noun, hen/noun, ie/pron, vrouwe, wilde/noun, goede/noun, mijn/noun, waren/verb, lo/noun, a/noun]
+exclude: [reet, shit, fuck, neuken, teef, klote, bastaard, geef/noun, hou/adj, kijk/noun, luister/noun, wacht/noun, zit/noun, stop/noun, bel/noun, zeg/intj, beuren, dagen/verb, manen/verb, ogen/verb, dingen/verb, weet/noun, kan/noun, wil/noun, was/noun, kom/noun, want/noun, hen/noun, ie/pron, vrouwe, wilde/noun, goede/noun, mijn/noun, waren/verb, lo/noun, a/noun]
 items:
   # --- greetings
   - {lemma: hallo, pos: intj, tags: [greetings], en: [hello, hi]}
@@ -223,3 +223,582 @@ items:
   - {lemma: zingen, pos: verb, en: [to sing]}
   - {lemma: fietsen, pos: verb, en: [to cycle]}
   - {lemma: wandelen, pos: verb, en: [to walk, to hike]}
+  # ======================================================================== v1.1 expansion
+  # --- subject pronouns that are in nearly every sentence (people, u1)
+  - {lemma: je, pos: pron, tags: [people], en: [you, your]}
+  - {lemma: we, pos: pron, tags: [people], en: [we]}
+  - {lemma: ze, pos: pron, tags: [people], en: [she, they, her, them]}
+  - {lemma: u, pos: pron, tags: [people], en: [you (formal)]}
+  # --- little words (u1)
+  - {lemma: de, pos: det, tags: [little], en: [the]}
+  - {lemma: het, pos: pron, tags: [little], en: [the, it]}
+  - {lemma: een, pos: det, tags: [little, numbers], en: [a, an, one]}
+  - {lemma: en, pos: conj, tags: [little], en: [and]}
+  - {lemma: maar, pos: conj, tags: [little], en: [but, only, just]}
+  - {lemma: of, pos: conj, tags: [little], en: [or, whether, if]}
+  - {lemma: niet, pos: adv, tags: [little], en: [not]}
+  - {lemma: geen, pos: det, tags: [little], en: ["no", not a, not any]}
+  - {lemma: ook, pos: adv, tags: [little], en: [also, too, either]}
+  - {lemma: wel, pos: adv, tags: [little], en: [indeed, well, (affirmative)]}
+  - {lemma: nog, pos: adv, tags: [little], en: [still, yet, more, another]}
+  - {lemma: er, pos: adv, tags: [little], en: [there, (dummy subject)]}
+  - {lemma: hier, pos: adv, tags: [little], en: [here]}
+  - {lemma: daar, pos: adv, tags: [little], en: [there]}
+  - {lemma: dit, pos: pron, tags: [little], en: [this]}
+  - {lemma: dat, pos: pron, tags: [little], en: [that]}
+  - {lemma: deze, pos: pron, tags: [little], en: [this, these]}
+  - {lemma: die, pos: pron, tags: [little], en: [that, those, who, which]}
+  - {lemma: wat, pos: pron, tags: [little], en: [what, something]}
+  - {lemma: wie, pos: pron, tags: [little], en: [who]}
+  - {lemma: waar, pos: adv, tags: [little], en: [where]}
+  - {lemma: waarom, pos: adv, tags: [little], en: [why]}
+  - {lemma: wanneer, pos: conj, tags: [little], en: [when]}
+  - {lemma: in, pos: prep, tags: [little], en: [in, into]}
+  - {lemma: op, pos: prep, tags: [little], en: ["on", at, onto]}
+  - {lemma: met, pos: prep, tags: [little], en: [with]}
+  - {lemma: van, pos: prep, tags: [little], en: [of, from]}
+  - {lemma: voor, pos: prep, tags: [little], en: [for, in front of, before]}
+  - {lemma: naar, pos: prep, tags: [little], en: [to, towards]}
+  - {lemma: aan, pos: prep, tags: [little], en: ["on", at, to]}
+  - {lemma: bij, pos: prep, tags: [little], en: [at, near, with, at (someone's)]}
+  - {lemma: om, pos: prep, tags: [little], en: [at (time), around, in order to]}
+  - {lemma: uit, pos: prep, tags: [little], en: [out of, from]}
+  - {lemma: te, pos: prep, tags: [little], en: [to, too]}
+  - {lemma: over, pos: prep, tags: [little], en: [about, over, in (time)]}
+  - {lemma: dan, pos: adv, tags: [little], en: [then, than]}
+  - {lemma: als, pos: conj, tags: [little], en: [if, when, as, like]}
+  - {lemma: zo, pos: adv, tags: [little], en: [so, like this, like that]}
+  - {lemma: heel, pos: adj, tags: [little], en: [very, whole]}
+  # --- numbers (u2)
+  - {lemma: nul, pos: num, tags: [numbers], en: [zero]}
+  - {lemma: twee, pos: num, tags: [numbers], en: [two]}
+  - {lemma: drie, pos: num, tags: [numbers], en: [three]}
+  - {lemma: vier, pos: num, tags: [numbers], en: [four]}
+  - {lemma: vijf, pos: num, tags: [numbers], en: [five]}
+  - {lemma: zes, pos: num, tags: [numbers], en: [six]}
+  - {lemma: zeven, pos: num, tags: [numbers], en: [seven]}
+  - {lemma: acht, pos: num, tags: [numbers], en: [eight]}
+  - {lemma: negen, pos: num, tags: [numbers], en: [nine]}
+  - {lemma: tien, pos: num, tags: [numbers], en: [ten]}
+  - {lemma: elf, pos: num, tags: [numbers], en: [eleven]}
+  - {lemma: twaalf, pos: num, tags: [numbers], en: [twelve]}
+  - {lemma: vijftien, pos: num, tags: [numbers], en: [fifteen]}
+  - {lemma: twintig, pos: num, tags: [numbers], en: [twenty]}
+  - {lemma: dertig, pos: num, tags: [numbers], en: [thirty]}
+  - {lemma: veertig, pos: num, tags: [numbers], en: [forty]}
+  - {lemma: vijftig, pos: num, tags: [numbers], en: [fifty]}
+  - {lemma: honderd, pos: num, tags: [numbers], en: [hundred, a hundred]}
+  - {lemma: duizend, pos: num, tags: [numbers], en: [thousand, a thousand]}
+  - {lemma: eerste, pos: adj, tags: [numbers], en: [first]}
+  - {lemma: tweede, pos: adj, tags: [numbers], en: [second]}
+  - {lemma: nummer, pos: noun, tags: [numbers], en: [number]}
+  - {lemma: half, pos: adj, tags: [numbers], en: [half]}
+  - {lemma: helft, pos: noun, tags: [numbers], en: [half]}
+  # --- home (more)
+  - {lemma: kast, pos: noun, tags: [home], en: [cupboard, wardrobe, closet]}
+  - {lemma: trap, pos: noun, tags: [home], gender: m, en: [stairs, staircase]}
+  - {lemma: glas, pos: noun, tags: [home], en: [glass]}
+  - {lemma: bord, pos: noun, tags: [home], en: [plate, board]}
+  - {lemma: mes, pos: noun, tags: [home], en: [knife]}
+  - {lemma: koelkast, pos: noun, tags: [home], en: [fridge, refrigerator]}
+  - {lemma: televisie, pos: noun, tags: [home], en: [television]}
+  - {lemma: telefoon, pos: noun, tags: [home], en: [telephone, phone]}
+  - {lemma: computer, pos: noun, tags: [home], en: [computer]}
+  - {lemma: spiegel, pos: noun, tags: [home], en: [mirror]}
+  # --- time (more)
+  - {lemma: vanavond, pos: adv, tags: [time], en: [tonight, this evening]}
+  - {lemma: vroeg, pos: adj, tags: [time], en: [early]}
+  - {lemma: laat, pos: adj, tags: [time], en: [late]}
+  - {lemma: straks, pos: adv, tags: [time], en: [later, soon, in a moment]}
+  - {lemma: eerst, pos: adv, tags: [time], en: [first, at first]}
+  - {lemma: later, pos: adv, tags: [time], en: [later]}
+  - {lemma: soms, pos: adv, tags: [time], en: [sometimes]}
+  - {lemma: vaak, pos: adv, tags: [time], en: [often]}
+  # --- everyday verbs (u3, vocabulary)
+  - {lemma: werken, pos: verb, tags: [verbs1], en: [to work]}
+  - {lemma: wonen, pos: verb, tags: [verbs1], en: [to live, to reside]}
+  - {lemma: kopen, pos: verb, tags: [verbs1], en: [to buy]}
+  - {lemma: betalen, pos: verb, tags: [verbs1], en: [to pay]}
+  - {lemma: leren, pos: verb, tags: [verbs1], en: [to learn, to teach]}
+  - {lemma: studeren, pos: verb, tags: [verbs1], en: [to study]}
+  - {lemma: koken, pos: verb, tags: [verbs1], en: [to cook, to boil]}
+  - {lemma: reizen, pos: verb, tags: [verbs1], en: [to travel]}
+  - {lemma: spelen, pos: verb, tags: [verbs1], en: [to play]}
+  - {lemma: dansen, pos: verb, tags: [verbs1], en: [to dance]}
+  - {lemma: zingen, pos: verb, tags: [verbs1], en: [to sing]}
+  - {lemma: lezen, pos: verb, tags: [verbs1], en: [to read]}
+  - {lemma: schrijven, pos: verb, tags: [verbs1], en: [to write]}
+  - {lemma: verkopen, pos: verb, tags: [verbs1], en: [to sell]}
+  - {lemma: drinken, pos: verb, tags: [verbs1], en: [to drink]}
+  - {lemma: slapen, pos: verb, tags: [verbs1], en: [to sleep]}
+  - {lemma: eten, pos: verb, tags: [verbs1], en: [to eat]}
+  - {lemma: fietsen, pos: verb, tags: [verbs1], en: [to cycle, to ride a bike]}
+  - {lemma: wandelen, pos: verb, tags: [verbs1], en: [to walk, to hike]}
+  - {lemma: zwemmen, pos: verb, tags: [verbs1], en: [to swim]}
+  - {lemma: vergeten, pos: verb, tags: [verbs1], en: [to forget]}
+  - {lemma: wassen, pos: verb, tags: [verbs1], en: [to wash]}
+  - {lemma: bellen, pos: verb, tags: [verbs1], en: [to call, to phone, to ring]}
+  - {lemma: luisteren, pos: verb, tags: [verbs1], en: [to listen]}
+  - {lemma: kijken, pos: verb, tags: [verbs1], en: [to look, to watch]}
+  - {lemma: zoeken, pos: verb, tags: [verbs1], en: [to look for, to search]}
+  - {lemma: vragen, pos: verb, tags: [verbs1], en: [to ask]}
+  - {lemma: antwoorden, pos: verb, tags: [verbs1], en: [to answer]}
+  - {lemma: openen, pos: verb, tags: [verbs1], en: [to open]}
+  - {lemma: rijden, pos: verb, tags: [verbs1], en: [to drive, to ride]}
+  # --- object pronouns (u3)
+  - {lemma: me, pos: pron, tags: [pronouns], en: [me, myself]}
+  - {lemma: mij, pos: pron, tags: [pronouns], en: [me]}
+  - {lemma: jou, pos: pron, tags: [pronouns], en: [you]}
+  - {lemma: hem, pos: pron, tags: [pronouns], en: [him, it]}
+  - {lemma: haar, pos: pron, tags: [pronouns, possessives], en: [her]}
+  - {lemma: ons, pos: pron, tags: [pronouns, possessives], en: [us, our], inflections: [onze]}
+  - {lemma: hen, pos: pron, tags: [pronouns], en: [them]}
+  - {lemma: hun, pos: det, tags: [pronouns, possessives], en: [their, them]}
+  - {lemma: zich, pos: pron, tags: [pronouns], en: [himself, herself, itself, themselves]}
+  - {lemma: elkaar, pos: pron, tags: [pronouns], en: [each other, one another]}
+  - {lemma: mezelf, pos: pron, tags: [pronouns], en: [myself]}
+  - {lemma: jezelf, pos: pron, tags: [pronouns], en: [yourself]}
+  # --- separable verbs (u3)
+  - {lemma: opstaan, pos: verb, tags: [separable], en: [to get up, to stand up]}
+  - {lemma: meenemen, pos: verb, tags: [separable], en: [to take along, to bring along]}
+  - {lemma: weggaan, pos: verb, tags: [separable], en: [to go away, to leave]}
+  - {lemma: terugkomen, pos: verb, tags: [separable], en: [to come back]}
+  - {lemma: binnenkomen, pos: verb, tags: [separable], en: [to come in, to enter]}
+  - {lemma: uitgaan, pos: verb, tags: [separable], en: [to go out]}
+  - {lemma: aankomen, pos: verb, tags: [separable], en: [to arrive]}
+  - {lemma: afmaken, pos: verb, tags: [separable], en: [to finish]}
+  - {lemma: ophalen, pos: verb, tags: [separable], en: [to pick up, to collect]}
+  - {lemma: uitleggen, pos: verb, tags: [separable], en: [to explain]}
+  - {lemma: opletten, pos: verb, tags: [separable], en: [to pay attention]}
+  - {lemma: meegaan, pos: verb, tags: [separable], en: [to go along, to come along]}
+  - {lemma: opruimen, pos: verb, tags: [separable], en: [to tidy up, to clean up]}
+  - {lemma: uitnodigen, pos: verb, tags: [separable], en: [to invite]}
+  - {lemma: opnemen, pos: verb, tags: [separable], en: [to pick up, to answer (the phone), to record]}
+  - {lemma: voorstellen, pos: verb, tags: [separable], en: [to introduce, to propose, to imagine]}
+  - {lemma: nadenken, pos: verb, tags: [separable], en: [to think about, to reflect]}
+  - {lemma: ophouden, pos: verb, tags: [separable], en: [to stop, to quit]}
+  - {lemma: opbellen, pos: verb, tags: [separable], en: [to call up, to phone]}
+  - {lemma: uitkijken, pos: verb, tags: [separable], en: [to watch out, to look out]}
+  - {lemma: thuiskomen, pos: verb, tags: [separable], en: [to come home]}
+  # --- adjectives (u5)
+  - {lemma: groot, pos: adj, tags: [adjectives], en: [big, large, tall]}
+  - {lemma: klein, pos: adj, tags: [adjectives], en: [small, little]}
+  - {lemma: mooi, pos: adj, tags: [adjectives], en: [beautiful, pretty, nice]}
+  - {lemma: lelijk, pos: adj, tags: [adjectives], en: [ugly]}
+  - {lemma: nieuw, pos: adj, tags: [adjectives], en: [new]}
+  - {lemma: oud, pos: adj, tags: [adjectives], en: [old]}
+  - {lemma: jong, pos: adj, tags: [adjectives], en: [young]}
+  - {lemma: lang, pos: adj, tags: [adjectives], en: [long, tall]}
+  - {lemma: kort, pos: adj, tags: [adjectives], en: [short]}
+  - {lemma: makkelijk, pos: adj, tags: [adjectives], en: [easy]}
+  - {lemma: moeilijk, pos: adj, tags: [adjectives], en: [difficult, hard]}
+  - {lemma: belangrijk, pos: adj, tags: [adjectives], en: [important]}
+  - {lemma: gelukkig, pos: adj, tags: [adjectives], en: [happy, fortunately]}
+  - {lemma: blij, pos: adj, tags: [adjectives], en: [glad, happy]}
+  - {lemma: verdrietig, pos: adj, tags: [adjectives], en: [sad]}
+  - {lemma: moe, pos: adj, tags: [adjectives], en: [tired]}
+  - {lemma: warm, pos: adj, tags: [adjectives], en: [warm, hot]}
+  - {lemma: koud, pos: adj, tags: [adjectives], en: [cold]}
+  - {lemma: vol, pos: adj, tags: [adjectives], en: [full]}
+  - {lemma: leeg, pos: adj, tags: [adjectives], en: [empty]}
+  - {lemma: rijk, pos: adj, tags: [adjectives], en: [rich]}
+  - {lemma: arm, pos: adj, tags: [adjectives], en: [poor]}
+  - {lemma: sterk, pos: adj, tags: [adjectives], en: [strong]}
+  - {lemma: zwak, pos: adj, tags: [adjectives], en: [weak]}
+  - {lemma: snel, pos: adj, tags: [adjectives], en: [fast, quick]}
+  - {lemma: langzaam, pos: adj, tags: [adjectives], en: [slow, slowly]}
+  - {lemma: aardig, pos: adj, tags: [adjectives], en: [nice, kind]}
+  - {lemma: lief, pos: adj, tags: [adjectives], en: [sweet, dear, kind]}
+  - {lemma: slim, pos: adj, tags: [adjectives], en: [smart, clever]}
+  - {lemma: leuk, pos: adj, tags: [adjectives], en: [nice, fun, pleasant]}
+  - {lemma: druk, pos: adj, tags: [adjectives], en: [busy, crowded]}
+  # --- colours (u5)
+  - {lemma: kleur, pos: noun, tags: [colours], gender: f, en: [colour, color]}
+  - {lemma: rood, pos: adj, tags: [colours], en: [red]}
+  - {lemma: blauw, pos: adj, tags: [colours], en: [blue]}
+  - {lemma: groen, pos: adj, tags: [colours], en: [green]}
+  - {lemma: geel, pos: adj, tags: [colours], en: [yellow]}
+  - {lemma: wit, pos: adj, tags: [colours], en: [white]}
+  - {lemma: zwart, pos: adj, tags: [colours], en: [black]}
+  - {lemma: grijs, pos: adj, tags: [colours], en: [grey, gray]}
+  - {lemma: bruin, pos: adj, tags: [colours], en: [brown]}
+  - {lemma: roze, pos: adj, tags: [colours], en: [pink]}
+  - {lemma: oranje, pos: adj, tags: [colours], en: [orange]}
+  - {lemma: paars, pos: adj, tags: [colours], en: [purple]}
+  # --- possessives (u5); haar/ons/hun are in the pronoun list above
+  - {lemma: mijn, pos: det, tags: [possessives], en: [my]}
+  - {lemma: jouw, pos: det, tags: [possessives], en: [your]}
+  - {lemma: zijn, pos: det, tags: [possessives], en: [his, its]}
+  - {lemma: uw, pos: det, tags: [possessives], en: [your (formal)]}
+  # --- body and health (u5)
+  - {lemma: lichaam, pos: noun, tags: [body], en: [body]}
+  - {lemma: hoofd, pos: noun, tags: [body], en: [head]}
+  - {lemma: oog, pos: noun, tags: [body], gender: n, en: [eye]}
+  - {lemma: hand, pos: noun, tags: [body], en: [hand]}
+  - {lemma: voet, pos: noun, tags: [body], en: [foot]}
+  - {lemma: arm, pos: noun, tags: [body], en: [arm]}
+  - {lemma: been, pos: noun, tags: [body], gender: n, en: [leg, bone]}
+  - {lemma: mond, pos: noun, tags: [body], en: [mouth]}
+  - {lemma: neus, pos: noun, tags: [body], gender: m, en: [nose]}
+  - {lemma: oor, pos: noun, tags: [body], en: [ear]}
+  - {lemma: gezicht, pos: noun, tags: [body], en: [face, sight]}
+  - {lemma: hart, pos: noun, tags: [body], en: [heart]}
+  - {lemma: tand, pos: noun, tags: [body], en: [tooth]}
+  - {lemma: nek, pos: noun, tags: [body], gender: m, en: [neck]}
+  - {lemma: rug, pos: noun, tags: [body], en: [back]}
+  - {lemma: buik, pos: noun, tags: [body], en: [belly, stomach]}
+  - {lemma: vinger, pos: noun, tags: [body], en: [finger]}
+  - {lemma: schouder, pos: noun, tags: [body], en: [shoulder]}
+  - {lemma: bloed, pos: noun, tags: [body], en: [blood]}
+  - {lemma: huid, pos: noun, tags: [body], gender: f, en: [skin]}
+  - {lemma: knie, pos: noun, tags: [body], en: [knee]}
+  - {lemma: stem, pos: noun, tags: [body], gender: f, en: [voice, vote]}
+  - {lemma: gezondheid, pos: noun, tags: [body], en: [health]}
+  - {lemma: koorts, pos: noun, tags: [body], en: [fever]}
+  - {lemma: medicijn, pos: noun, tags: [body], en: [medicine]}
+  - {lemma: ziek, pos: adj, tags: [body], en: [ill, sick]}
+  - {lemma: pijn, pos: noun, tags: [body], en: [pain, ache]}
+  # --- adverbs (u5)
+  - {lemma: al, pos: adv, tags: [adverbs], en: [already, yet]}
+  - {lemma: steeds, pos: adv, tags: [adverbs], en: [always, still, more and more]}
+  - {lemma: meteen, pos: adv, tags: [adverbs], en: [immediately, right away]}
+  - {lemma: samen, pos: adv, tags: [adverbs], en: [together]}
+  - {lemma: misschien, pos: adv, tags: [adverbs], en: [maybe, perhaps]}
+  - {lemma: echt, pos: adv, tags: [adverbs], en: [really, real]}
+  - {lemma: bijna, pos: adv, tags: [adverbs], en: [almost, nearly]}
+  - {lemma: alleen, pos: adv, tags: [adverbs], en: [only, alone]}
+  - {lemma: genoeg, pos: det, tags: [adverbs], en: [enough]}
+  - {lemma: eindelijk, pos: adv, tags: [adverbs], en: [finally, at last]}
+  - {lemma: waarschijnlijk, pos: adv, tags: [adverbs], en: [probably]}
+  - {lemma: helaas, pos: adv, tags: [adverbs], en: [unfortunately]}
+  - {lemma: dus, pos: adv, tags: [adverbs], en: [so, therefore]}
+  - {lemma: toch, pos: adv, tags: [adverbs], en: [still, anyway, after all]}
+  - {lemma: eigenlijk, pos: adv, tags: [adverbs], en: [actually, really]}
+  - {lemma: zelfs, pos: adv, tags: [adverbs], en: [even]}
+  - {lemma: opnieuw, pos: adv, tags: [adverbs], en: [again]}
+  - {lemma: graag, pos: adv, tags: [adverbs], en: [gladly, (to like to)]}
+  - {lemma: liever, pos: adv, tags: [adverbs], en: [rather, preferably]}
+  - {lemma: ongeveer, pos: adv, tags: [adverbs], en: [about, approximately]}
+  - {lemma: erg, pos: adv, tags: [adverbs], en: [very, badly]}
+  # --- city (u6)
+  - {lemma: stad, pos: noun, tags: [city], en: [city, town]}
+  - {lemma: straat, pos: noun, tags: [city], en: [street]}
+  - {lemma: plein, pos: noun, tags: [city], gender: n, en: [square]}
+  - {lemma: winkel, pos: noun, tags: [city], en: [shop, store]}
+  - {lemma: markt, pos: noun, tags: [city], en: [market]}
+  - {lemma: ziekenhuis, pos: noun, tags: [city], en: [hospital]}
+  - {lemma: school, pos: noun, tags: [city], en: [school]}
+  - {lemma: kerk, pos: noun, tags: [city], en: [church]}
+  - {lemma: museum, pos: noun, tags: [city], en: [museum]}
+  - {lemma: park, pos: noun, tags: [city], en: [park]}
+  - {lemma: station, pos: noun, tags: [city], en: [station]}
+  - {lemma: kantoor, pos: noun, tags: [city], en: [office]}
+  - {lemma: hotel, pos: noun, tags: [city], en: [hotel]}
+  - {lemma: brug, pos: noun, tags: [city], en: [bridge]}
+  - {lemma: café, pos: noun, tags: [city], en: [café, pub, bar]}
+  - {lemma: bibliotheek, pos: noun, tags: [city], en: [library]}
+  - {lemma: bioscoop, pos: noun, tags: [city], gender: m, en: [cinema, movie theater]}
+  - {lemma: theater, pos: noun, tags: [city], en: [theatre, theater]}
+  - {lemma: apotheek, pos: noun, tags: [city], gender: f, en: [pharmacy, chemist's]}
+  - {lemma: centrum, pos: noun, tags: [city], en: [centre, center, city centre]}
+  - {lemma: dorp, pos: noun, tags: [city], en: [village]}
+  - {lemma: land, pos: noun, tags: [city], en: [country, land]}
+  - {lemma: wereld, pos: noun, tags: [city], en: [world]}
+  - {lemma: gebouw, pos: noun, tags: [city], en: [building]}
+  - {lemma: hoek, pos: noun, tags: [city], en: [corner]}
+  - {lemma: politie, pos: noun, tags: [city], en: [police]}
+  # --- travel (u6)
+  - {lemma: trein, pos: noun, tags: [travel], gender: m, en: [train]}
+  - {lemma: bus, pos: noun, tags: [travel], gender: m, en: [bus]}
+  - {lemma: auto, pos: noun, tags: [travel], en: [car]}
+  - {lemma: fiets, pos: noun, tags: [travel], gender: f, en: [bicycle, bike]}
+  - {lemma: vliegtuig, pos: noun, tags: [travel], en: [plane, aeroplane, airplane]}
+  - {lemma: schip, pos: noun, tags: [travel], en: [ship]}
+  - {lemma: boot, pos: noun, tags: [travel], gender: m, en: [boat]}
+  - {lemma: reis, pos: noun, tags: [travel], gender: f, en: [journey, trip]}
+  - {lemma: kaartje, pos: noun, tags: [travel], en: [ticket, card]}
+  - {lemma: koffer, pos: noun, tags: [travel], en: [suitcase]}
+  - {lemma: vakantie, pos: noun, tags: [travel], en: [holiday, vacation]}
+  - {lemma: vliegveld, pos: noun, tags: [travel], en: [airport]}
+  - {lemma: zee, pos: noun, tags: [travel], en: [sea]}
+  - {lemma: berg, pos: noun, tags: [travel], gender: m, en: [mountain]}
+  - {lemma: strand, pos: noun, tags: [travel], gender: n, en: [beach]}
+  - {lemma: eiland, pos: noun, tags: [travel], en: [island]}
+  - {lemma: kaart, pos: noun, tags: [travel], gender: f, en: [map, card, ticket]}
+  - {lemma: paspoort, pos: noun, tags: [travel], en: [passport]}
+  - {lemma: taxi, pos: noun, tags: [travel], en: [taxi]}
+  - {lemma: toerist, pos: noun, tags: [travel], gender: m, en: [tourist]}
+  - {lemma: zuiden, pos: noun, tags: [travel], en: [south]}
+  - {lemma: noorden, pos: noun, tags: [travel], en: [north]}
+  # --- shopping (u6)
+  - {lemma: prijs, pos: noun, tags: [shopping], gender: m, en: [price, prize]}
+  - {lemma: euro, pos: noun, tags: [shopping], en: [euro]}
+  - {lemma: dollar, pos: noun, tags: [shopping], en: [dollar]}
+  - {lemma: rekening, pos: noun, tags: [shopping], en: [bill, account]}
+  - {lemma: supermarkt, pos: noun, tags: [shopping], gender: f, en: [supermarket]}
+  - {lemma: kassa, pos: noun, tags: [shopping], gender: f, en: [checkout, till]}
+  - {lemma: klant, pos: noun, tags: [shopping], en: [customer, client]}
+  - {lemma: verkoper, pos: noun, tags: [shopping], gender: m, en: [salesman, seller, shop assistant]}
+  - {lemma: korting, pos: noun, tags: [shopping], gender: f, en: [discount]}
+  - {lemma: cadeau, pos: noun, tags: [shopping], en: [present, gift]}
+  - {lemma: duur, pos: adj, tags: [shopping], en: [expensive]}
+  - {lemma: goedkoop, pos: adj, tags: [shopping], en: [cheap]}
+  - {lemma: gratis, pos: adj, tags: [shopping], en: [free, for free]}
+  - {lemma: pakje, pos: noun, tags: [shopping], en: [parcel, package, packet]}
+  - {lemma: maat, pos: noun, tags: [shopping], en: [size, measure]}
+  - {lemma: geld, pos: noun, tags: [shopping], en: [money]}
+  - {lemma: boodschappen, pos: noun, tags: [shopping], gender: f, en: [shopping, groceries]}
+  - {lemma: tas, pos: noun, tags: [shopping], en: [bag]}
+  # --- work and school (u4)
+  - {lemma: werk, pos: noun, tags: [work], en: [work, job]}
+  - {lemma: baan, pos: noun, tags: [work], en: [job, track, lane]}
+  - {lemma: leraar, pos: noun, tags: [work], en: [teacher]}
+  - {lemma: klas, pos: noun, tags: [work], en: [class, classroom]}
+  - {lemma: les, pos: noun, tags: [work], gender: f, en: [lesson, class]}
+  - {lemma: examen, pos: noun, tags: [work], en: [exam, examination]}
+  - {lemma: huiswerk, pos: noun, tags: [work], en: [homework]}
+  - {lemma: pen, pos: noun, tags: [work], en: [pen]}
+  - {lemma: potlood, pos: noun, tags: [work], gender: n, en: [pencil]}
+  - {lemma: papier, pos: noun, tags: [work], en: [paper]}
+  - {lemma: vraag, pos: noun, tags: [work], en: [question]}
+  - {lemma: antwoord, pos: noun, tags: [work], en: [answer]}
+  - {lemma: universiteit, pos: noun, tags: [work], en: [university]}
+  - {lemma: collega, pos: noun, tags: [work], en: [colleague]}
+  - {lemma: baas, pos: noun, tags: [work], gender: m, en: [boss]}
+  - {lemma: vergadering, pos: noun, tags: [work], en: [meeting]}
+  - {lemma: plan, pos: noun, tags: [work], en: [plan]}
+  - {lemma: salaris, pos: noun, tags: [work], en: [salary]}
+  - {lemma: dokter, pos: noun, tags: [work], en: [doctor]}
+  - {lemma: arts, pos: noun, tags: [work], en: [doctor, physician]}
+  - {lemma: advocaat, pos: noun, tags: [work], en: [lawyer]}
+  - {lemma: kok, pos: noun, tags: [work], gender: m, en: [cook, chef]}
+  - {lemma: politieagent, pos: noun, tags: [work], en: [police officer]}
+  - {lemma: ober, pos: noun, tags: [work], gender: m, en: [waiter]}
+  - {lemma: bedrijf, pos: noun, tags: [work], gender: n, en: [company, business]}
+  - {lemma: student, pos: noun, tags: [work], gender: m, en: [student]}
+  - {lemma: leerling, pos: noun, tags: [work], en: [pupil, student]}
+  # --- feelings (u4)
+  - {lemma: liefde, pos: noun, tags: [feelings], en: [love]}
+  - {lemma: angst, pos: noun, tags: [feelings], en: [fear, anxiety]}
+  - {lemma: vreugde, pos: noun, tags: [feelings], en: [joy]}
+  - {lemma: woede, pos: noun, tags: [feelings], en: [anger, rage]}
+  - {lemma: geluk, pos: noun, tags: [feelings], en: [happiness, luck]}
+  - {lemma: verdriet, pos: noun, tags: [feelings], en: [sorrow, grief, sadness]}
+  - {lemma: boos, pos: adj, tags: [feelings], en: [angry]}
+  - {lemma: bezorgd, pos: adj, tags: [feelings], en: [worried, concerned]}
+  - {lemma: zenuwachtig, pos: adj, tags: [feelings], en: [nervous]}
+  - {lemma: jaloers, pos: adj, tags: [feelings], en: [jealous]}
+  - {lemma: teleurgesteld, pos: adj, tags: [feelings], en: [disappointed]}
+  - {lemma: verbaasd, pos: adj, tags: [feelings], en: [surprised, amazed]}
+  - {lemma: trots, pos: adj, tags: [feelings], en: [proud]}
+  - {lemma: bang, pos: adj, tags: [feelings], en: [afraid, scared]}
+  - {lemma: zeker, pos: adv, tags: [feelings], en: [sure, certainly]}
+  - {lemma: rustig, pos: adj, tags: [feelings], en: [calm, quiet, calmly]}
+  - {lemma: glimlach, pos: noun, tags: [feelings], gender: m, en: [smile]}
+  - {lemma: traan, pos: noun, tags: [feelings], gender: m, en: [tear]}
+  - {lemma: hoop, pos: noun, tags: [feelings], en: [hope]}
+  - {lemma: gevoel, pos: noun, tags: [feelings], en: [feeling]}
+  - {lemma: eenzaam, pos: adj, tags: [feelings], en: [lonely]}
+  - {lemma: tevreden, pos: adj, tags: [feelings], en: [satisfied, content]}
+  # --- weather and nature (u7)
+  - {lemma: zon, pos: noun, tags: [weather], gender: f, en: [sun]}
+  - {lemma: regen, pos: noun, tags: [weather], gender: m, en: [rain]}
+  - {lemma: sneeuw, pos: noun, tags: [weather], gender: f, en: [snow]}
+  - {lemma: wind, pos: noun, tags: [weather], gender: m, en: [wind]}
+  - {lemma: lucht, pos: noun, tags: [weather], en: [air, sky]}
+  - {lemma: wolk, pos: noun, tags: [weather], en: [cloud]}
+  - {lemma: rivier, pos: noun, tags: [weather], en: [river]}
+  - {lemma: boom, pos: noun, tags: [weather], gender: m, en: [tree]}
+  - {lemma: bloem, pos: noun, tags: [weather], en: [flower]}
+  - {lemma: gras, pos: noun, tags: [weather], en: [grass]}
+  - {lemma: bos, pos: noun, tags: [weather], gender: n, en: [forest, wood]}
+  - {lemma: aarde, pos: noun, tags: [weather], en: [earth, soil]}
+  - {lemma: ster, pos: noun, tags: [weather], en: [star]}
+  - {lemma: maan, pos: noun, tags: [weather], gender: f, en: [moon]}
+  - {lemma: seizoen, pos: noun, tags: [weather], en: [season]}
+  - {lemma: zomer, pos: noun, tags: [weather], en: [summer]}
+  - {lemma: winter, pos: noun, tags: [weather], en: [winter]}
+  - {lemma: lente, pos: noun, tags: [weather], en: [spring]}
+  - {lemma: herfst, pos: noun, tags: [weather], gender: m, en: [autumn, fall]}
+  - {lemma: natuur, pos: noun, tags: [weather], en: [nature]}
+  - {lemma: temperatuur, pos: noun, tags: [weather], gender: f, en: [temperature]}
+  - {lemma: mist, pos: noun, tags: [weather], gender: m, en: [fog, mist]}
+  - {lemma: storm, pos: noun, tags: [weather], gender: m, en: [storm]}
+  - {lemma: regenen, pos: verb, tags: [weather], en: [to rain]}
+  - {lemma: sneeuwen, pos: verb, tags: [weather], en: [to snow]}
+  # --- animals (u7)
+  - {lemma: dier, pos: noun, tags: [animals], en: [animal]}
+  - {lemma: hond, pos: noun, tags: [animals], en: [dog]}
+  - {lemma: kat, pos: noun, tags: [animals], gender: f, en: [cat]}
+  - {lemma: paard, pos: noun, tags: [animals], en: [horse]}
+  - {lemma: vogel, pos: noun, tags: [animals], en: [bird]}
+  - {lemma: koe, pos: noun, tags: [animals], en: [cow]}
+  - {lemma: varken, pos: noun, tags: [animals], en: [pig]}
+  - {lemma: schaap, pos: noun, tags: [animals], en: [sheep]}
+  - {lemma: muis, pos: noun, tags: [animals], en: [mouse]}
+  - {lemma: leeuw, pos: noun, tags: [animals], gender: m, en: [lion]}
+  - {lemma: beer, pos: noun, tags: [animals], en: [bear]}
+  - {lemma: wolf, pos: noun, tags: [animals], en: [wolf]}
+  - {lemma: konijn, pos: noun, tags: [animals], en: [rabbit]}
+  - {lemma: kip, pos: noun, tags: [animals], en: [chicken, hen]}
+  - {lemma: olifant, pos: noun, tags: [animals], en: [elephant]}
+  - {lemma: aap, pos: noun, tags: [animals], en: [monkey, ape]}
+  - {lemma: slang, pos: noun, tags: [animals], en: [snake]}
+  - {lemma: vlinder, pos: noun, tags: [animals], gender: m, en: [butterfly]}
+  - {lemma: tijger, pos: noun, tags: [animals], gender: m, en: [tiger]}
+  - {lemma: vos, pos: noun, tags: [animals], gender: m, en: [fox]}
+  - {lemma: eend, pos: noun, tags: [animals], en: [duck]}
+  # --- clothes (u7)
+  - {lemma: kleren, pos: noun, tags: [clothes], en: [clothes]}
+  - {lemma: jurk, pos: noun, tags: [clothes], en: [dress]}
+  - {lemma: schoen, pos: noun, tags: [clothes], en: [shoe]}
+  - {lemma: hoed, pos: noun, tags: [clothes], gender: m, en: [hat]}
+  - {lemma: overhemd, pos: noun, tags: [clothes], gender: n, en: [shirt]}
+  - {lemma: shirt, pos: noun, tags: [clothes], gender: n, en: [shirt, T-shirt]}
+  - {lemma: broek, pos: noun, tags: [clothes], en: [trousers, pants]}
+  - {lemma: rok, pos: noun, tags: [clothes], gender: m, en: [skirt]}
+  - {lemma: jas, pos: noun, tags: [clothes], gender: m, en: [coat, jacket]}
+  - {lemma: trui, pos: noun, tags: [clothes], en: [sweater, jumper]}
+  - {lemma: bril, pos: noun, tags: [clothes], en: [glasses]}
+  - {lemma: sok, pos: noun, tags: [clothes], en: [sock]}
+  - {lemma: das, pos: noun, tags: [clothes], en: [tie, scarf]}
+  - {lemma: horloge, pos: noun, tags: [clothes], en: [watch]}
+  - {lemma: handschoen, pos: noun, tags: [clothes], en: [glove]}
+  - {lemma: zak, pos: noun, tags: [clothes], gender: m, en: [pocket, bag]}
+  - {lemma: ring, pos: noun, tags: [clothes], en: [ring]}
+  - {lemma: riem, pos: noun, tags: [clothes], en: [belt]}
+  - {lemma: laars, pos: noun, tags: [clothes], gender: f, en: [boot]}
+  - {lemma: paraplu, pos: noun, tags: [clothes], gender: m, en: [umbrella]}
+  - {lemma: pak, pos: noun, tags: [clothes], en: [suit, package]}
+  - {lemma: dragen, pos: verb, tags: [clothes], en: [to wear, to carry]}
+  # --- free time (u8)
+  - {lemma: muziek, pos: noun, tags: [leisure], en: [music]}
+  - {lemma: lied, pos: noun, tags: [leisure], en: [song]}
+  - {lemma: film, pos: noun, tags: [leisure], en: [film, movie]}
+  - {lemma: spel, pos: noun, tags: [leisure], en: [game]}
+  - {lemma: wedstrijd, pos: noun, tags: [leisure], en: [match, game, competition]}
+  - {lemma: sport, pos: noun, tags: [leisure], gender: f, en: [sport, sports]}
+  - {lemma: voetbal, pos: noun, tags: [leisure], gender: n, en: [football, soccer]}
+  - {lemma: feest, pos: noun, tags: [leisure], gender: n, en: [party, celebration]}
+  - {lemma: concert, pos: noun, tags: [leisure], en: [concert]}
+  - {lemma: foto, pos: noun, tags: [leisure], en: [photo, picture]}
+  - {lemma: gitaar, pos: noun, tags: [leisure], en: [guitar]}
+  - {lemma: piano, pos: noun, tags: [leisure], en: [piano]}
+  - {lemma: dans, pos: noun, tags: [leisure], gender: m, en: [dance]}
+  - {lemma: radio, pos: noun, tags: [leisure], en: [radio]}
+  - {lemma: krant, pos: noun, tags: [leisure], en: [newspaper]}
+  - {lemma: tijdschrift, pos: noun, tags: [leisure], en: [magazine]}
+  - {lemma: roman, pos: noun, tags: [leisure], en: [novel]}
+  - {lemma: team, pos: noun, tags: [leisure], en: [team]}
+  - {lemma: tekening, pos: noun, tags: [leisure], en: [drawing]}
+  - {lemma: bal, pos: noun, tags: [leisure], gender: m, en: [ball]}
+  - {lemma: hobby, pos: noun, tags: [leisure], en: [hobby]}
+  - {lemma: tennis, pos: noun, tags: [leisure], gender: n, en: [tennis]}
+  # --- more verbs (u8, vocabulary)
+  - {lemma: geloven, pos: verb, tags: [verbs2], en: [to believe]}
+  - {lemma: zetten, pos: verb, tags: [verbs2], en: [to put, to set]}
+  - {lemma: leggen, pos: verb, tags: [verbs2], en: [to lay, to put]}
+  - {lemma: verliezen, pos: verb, tags: [verbs2], en: [to lose]}
+  - {lemma: ontvangen, pos: verb, tags: [verbs2], en: [to receive]}
+  - {lemma: rennen, pos: verb, tags: [verbs2], en: [to run]}
+  - {lemma: lachen, pos: verb, tags: [verbs2], en: [to laugh]}
+  - {lemma: beslissen, pos: verb, tags: [verbs2], en: [to decide]}
+  - {lemma: huilen, pos: verb, tags: [verbs2], en: [to cry]}
+  - {lemma: winnen, pos: verb, tags: [verbs2], en: [to win]}
+  - {lemma: verbergen, pos: verb, tags: [verbs2], en: [to hide]}
+  - {lemma: beloven, pos: verb, tags: [verbs2], en: [to promise]}
+  - {lemma: sturen, pos: verb, tags: [verbs2], en: [to send, to steer]}
+  - {lemma: ontmoeten, pos: verb, tags: [verbs2], en: [to meet]}
+  - {lemma: veranderen, pos: verb, tags: [verbs2], en: [to change]}
+  - {lemma: tonen, pos: verb, tags: [verbs2], en: [to show]}
+  - {lemma: accepteren, pos: verb, tags: [verbs2], en: [to accept]}
+  - {lemma: bedanken, pos: verb, tags: [verbs2], en: [to thank]}
+  - {lemma: vermijden, pos: verb, tags: [verbs2], en: [to avoid]}
+  - {lemma: trouwen, pos: verb, tags: [verbs2], en: [to marry, to get married]}
+  - {lemma: kiezen, pos: verb, tags: [verbs2], en: [to choose]}
+  - {lemma: uitgeven, pos: verb, tags: [verbs2], en: [to spend, to publish]}
+  - {lemma: rusten, pos: verb, tags: [verbs2], en: [to rest]}
+  - {lemma: roken, pos: verb, tags: [verbs2], en: [to smoke]}
+  - {lemma: tekenen, pos: verb, tags: [verbs2], en: [to draw, to sign]}
+  - {lemma: groeten, pos: verb, tags: [verbs2], en: [to greet]}
+  - {lemma: duwen, pos: verb, tags: [verbs2], en: [to push]}
+  - {lemma: trekken, pos: verb, tags: [verbs2], en: [to pull]}
+  - {lemma: vliegen, pos: verb, tags: [verbs2], en: [to fly]}
+  - {lemma: stelen, pos: verb, tags: [verbs2], en: [to steal]}
+  - {lemma: dromen, pos: verb, tags: [verbs2], en: [to dream]}
+  # --- ideas and opinions (u8)
+  - {lemma: idee, pos: noun, tags: [ideas], en: [idea]}
+  - {lemma: probleem, pos: noun, tags: [ideas], en: [problem]}
+  - {lemma: waarheid, pos: noun, tags: [ideas], en: [truth]}
+  - {lemma: reden, pos: noun, tags: [ideas], gender: f, en: [reason]}
+  - {lemma: verhaal, pos: noun, tags: [ideas], en: [story]}
+  - {lemma: leven, pos: noun, tags: [ideas], en: [life]}
+  - {lemma: dood, pos: noun, tags: [ideas], gender: m, en: [death, dead]}
+  - {lemma: oorlog, pos: noun, tags: [ideas], en: [war]}
+  - {lemma: vrede, pos: noun, tags: [ideas], en: [peace]}
+  - {lemma: mening, pos: noun, tags: [ideas], en: [opinion]}
+  - {lemma: fout, pos: noun, tags: [ideas], en: [mistake, error, wrong]}
+  - {lemma: woord, pos: noun, tags: [ideas], en: [word]}
+  - {lemma: taal, pos: noun, tags: [ideas], gender: f, en: [language]}
+  - {lemma: zin, pos: noun, tags: [ideas], en: [sentence, sense, mind]}
+  - {lemma: advies, pos: noun, tags: [ideas], en: [advice]}
+  - {lemma: beslissing, pos: noun, tags: [ideas], en: [decision]}
+  - {lemma: keuze, pos: noun, tags: [ideas], en: [choice]}
+  - {lemma: onmogelijk, pos: adj, tags: [ideas], en: [impossible]}
+  - {lemma: juist, pos: adj, tags: [ideas], en: [right, correct, just]}
+  - {lemma: verkeerd, pos: adj, tags: [ideas], en: [wrong]}
+  - {lemma: vreemd, pos: adj, tags: [ideas], en: [strange, odd, foreign]}
+  - {lemma: interessant, pos: adj, tags: [ideas], en: [interesting]}
+  - {lemma: nodig, pos: adj, tags: [ideas], en: [necessary, needed]}
+  - {lemma: voorbeeld, pos: noun, tags: [ideas], en: [example]}
+  - {lemma: manier, pos: noun, tags: [ideas], en: [way, manner]}
+  - {lemma: soort, pos: noun, tags: [ideas], en: [kind, sort, type]}
+  - {lemma: geschiedenis, pos: noun, tags: [ideas], en: [history, story]}
+  # --- family (u3)
+  - {lemma: opa, pos: noun, tags: [family], gender: m, en: [grandpa, grandfather]}
+  - {lemma: oma, pos: noun, tags: [family], gender: f, en: [grandma, grandmother]}
+  - {lemma: grootvader, pos: noun, tags: [family], gender: m, en: [grandfather]}
+  - {lemma: grootmoeder, pos: noun, tags: [family], gender: f, en: [grandmother]}
+  - {lemma: oom, pos: noun, tags: [family], gender: m, en: [uncle]}
+  - {lemma: tante, pos: noun, tags: [family], gender: f, en: [aunt]}
+  - {lemma: neef, pos: noun, tags: [family], gender: m, en: [nephew, cousin (male)]}
+  - {lemma: nicht, pos: noun, tags: [family], gender: f, en: [niece, cousin (female)]}
+  - {lemma: mama, pos: noun, tags: [family], gender: f, en: [mum, mom]}
+  - {lemma: papa, pos: noun, tags: [family], gender: m, en: [dad]}
+  - {lemma: kleinkind, pos: noun, tags: [family], gender: n, en: [grandchild]}
+  - {lemma: echtgenoot, pos: noun, tags: [family], gender: m, en: [husband, spouse]}
+  - {lemma: echtgenote, pos: noun, tags: [family], gender: f, en: [wife, spouse]}
+  - {lemma: getrouwd, pos: adj, tags: [family], en: [married]}
+  - {lemma: tweeling, pos: noun, tags: [family], gender: m, en: [twins, twin]}
+  - {lemma: verjaardag, pos: noun, tags: [family], gender: m, en: [birthday]}
+  - {lemma: bruiloft, pos: noun, tags: [family], gender: f, en: [wedding]}
+  # --- in the kitchen (u6)
+  - {lemma: rijst, pos: noun, tags: [kitchen], gender: m, en: [rice]}
+  - {lemma: soep, pos: noun, tags: [kitchen], gender: f, en: [soup]}
+  - {lemma: worst, pos: noun, tags: [kitchen], gender: f, en: [sausage]}
+  - {lemma: ham, pos: noun, tags: [kitchen], gender: m, en: [ham]}
+  - {lemma: olie, pos: noun, tags: [kitchen], gender: f, en: [oil]}
+  - {lemma: peper, pos: noun, tags: [kitchen], gender: m, en: [pepper]}
+  - {lemma: druif, pos: noun, tags: [kitchen], gender: f, en: [grape]}
+  - {lemma: banaan, pos: noun, tags: [kitchen], gender: f, en: [banana]}
+  - {lemma: sinaasappel, pos: noun, tags: [kitchen], gender: m, en: [orange]}
+  - {lemma: citroen, pos: noun, tags: [kitchen], gender: m, en: [lemon]}
+  - {lemma: aardbei, pos: noun, tags: [kitchen], gender: f, en: [strawberry]}
+  - {lemma: ui, pos: noun, tags: [kitchen], gender: m, en: [onion]}
+  - {lemma: knoflook, pos: noun, tags: [kitchen], gender: m, en: [garlic]}
+  - {lemma: wortel, pos: noun, tags: [kitchen], gender: m, en: [carrot, root]}
+  - {lemma: koekje, pos: noun, tags: [kitchen], gender: n, en: [cookie, biscuit]}
+  - {lemma: chocolade, pos: noun, tags: [kitchen], gender: m, en: [chocolate]}
+  - {lemma: toetje, pos: noun, tags: [kitchen], gender: n, en: [dessert]}
+  - {lemma: broodje, pos: noun, tags: [kitchen], gender: n, en: [sandwich, bread roll]}
+  - {lemma: sap, pos: noun, tags: [kitchen], gender: n, en: [juice]}
+  - {lemma: fles, pos: noun, tags: [kitchen], gender: f, en: [bottle]}
+  - {lemma: vork, pos: noun, tags: [kitchen], gender: f, en: [fork]}
+  - {lemma: lepel, pos: noun, tags: [kitchen], gender: m, en: [spoon]}
+  - {lemma: recept, pos: noun, tags: [kitchen], gender: n, en: [recipe, prescription]}
+  - {lemma: oven, pos: noun, tags: [kitchen], gender: m, en: [oven]}
+  - {lemma: pan, pos: noun, tags: [kitchen], gender: f, en: [pan, pot]}
+  - {lemma: taart, pos: noun, tags: [kitchen], gender: f, en: [cake, pie]}
+  - {lemma: honger, pos: noun, tags: [kitchen], gender: m, en: [hunger]}
+  - {lemma: dorst, pos: noun, tags: [kitchen], gender: m, en: [thirst]}
+  - {lemma: zoet, pos: adj, tags: [kitchen], en: [sweet]}
