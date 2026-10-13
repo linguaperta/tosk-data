@@ -1,0 +1,25 @@
+Duelingo course data
+Copyright (c) 2026 the Duelingo contributors and the authors of the sources listed in ATTRIBUTION.md
+
+The contents of this repository (course files under content/, built packs under dist/) are
+licensed under the Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).
+
+You are free to share (copy and redistribute the material in any medium or format) and adapt
+(remix, transform, and build upon the material) for any purpose, even commercially, under these
+terms:
+
+  Attribution — You must give appropriate credit, provide a link to the license, and indicate if
+  changes were made. See ATTRIBUTION.md for the required credits of the upstream sources.
+
+  ShareAlike — If you remix, transform, or build upon the material, you must distribute your
+  contributions under the same license as the original.
+
+  No additional restrictions — You may not apply legal terms or technological measures that legally
+  restrict others from doing anything the license permits.
+
+Full legal code: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by-sa/4.0/
+
+Parts of the data come from sources under compatible licenses (Wiktionary: CC BY-SA 4.0;
+Tatoeba: CC BY 2.0 FR; FrequencyWords: CC BY-SA 4.0). Their terms continue to apply to those parts;
+see ATTRIBUTION.md.

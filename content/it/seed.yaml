@@ -1,0 +1,286 @@
+# Curated vocabulary for the Italian course (input for `python -m pipeline import it`).
+# tags put an item in a vocab skill; nl/en glosses written here are Claude-authored
+# (marked tr_src: claude in the lexicon). Items without en take their English gloss from
+# Wiktionary. Entries without tags only add/override glosses for automatically selected items.
+# Words never taken into the automatic frequency pool (Wiktionary homographs and inflected
+# forms that inherit a misleading frequency): lemma or lemma/pos.
+exclude: [coso, sulla/noun, fossa, ti/noun, mi/noun, di/noun, si/noun, la/noun, neo, serva/noun, andata/noun, volto/adj, para/noun, stia/noun, sola/noun, unica/noun, fatta/noun, piccola/noun, nuova/noun, sicura/noun, bella/noun, tuoi/noun, miei/noun, suoi/noun, giorni/noun, mani/noun, dimmi, ha/intj, essere/noun, avere/noun, dire/noun, credo/noun, era/noun, fata/noun, visto/noun]
+items:
+  # --- greetings
+  - {lemma: ciao, pos: intj, tags: [greetings], en: [hi, bye], nl: [hoi, doei, dag]}
+  - {lemma: buongiorno, pos: intj, tags: [greetings], en: [good morning, hello], nl: [goedemorgen, goedendag]}
+  - {lemma: buonasera, pos: intj, tags: [greetings], en: [good evening], nl: [goedenavond]}
+  - {lemma: buonanotte, pos: intj, tags: [greetings], en: [good night], nl: [goedenacht, welterusten]}
+  - {lemma: arrivederci, pos: intj, tags: [greetings], en: [goodbye], nl: [tot ziens]}
+  - {lemma: salve, pos: intj, tags: [greetings], en: [hello], nl: [hallo, gegroet]}
+  - {lemma: grazie, pos: intj, tags: [greetings], en: [thank you, thanks], nl: [dank je, dank u, bedankt]}
+  - {lemma: prego, pos: intj, tags: [greetings], en: ["you're welcome", please], nl: [graag gedaan, alsjeblieft]}
+  - {lemma: scusa, pos: intj, tags: [greetings], en: [sorry, excuse me], nl: [sorry, pardon]}
+  - {lemma: per favore, pos: phrase, tags: [greetings], en: [please], nl: [alsjeblieft, alstublieft]}
+  - {lemma: sì, pos: adv, tags: [greetings], en: ["yes"], nl: [ja]}
+  - {lemma: "no", pos: adv, tags: [greetings], en: ["no"], nl: [nee]}
+  - {lemma: piacere, pos: noun, tags: [greetings], en: [pleasure, nice to meet you], nl: [plezier, aangenaam]}
+  - {lemma: benvenuto, pos: adj, tags: [greetings], en: [welcome], nl: [welkom]}
+  - {lemma: come, pos: adv, tags: [greetings], en: [how, like, as], nl: [hoe, zoals, als]}
+  - {lemma: bene, pos: adv, tags: [greetings], en: [well, fine, good], nl: [goed]}
+  - {lemma: male, pos: adv, tags: [greetings], en: [badly], nl: [slecht]}
+  - {lemma: signore, pos: noun, tags: [greetings, people], en: [gentleman, sir, Mr], nl: [meneer, heer]}
+  - {lemma: signora, pos: noun, tags: [greetings, people], en: [lady, madam, Mrs], nl: [mevrouw, dame]}
+  # --- people
+  - {lemma: uomo, pos: noun, tags: [people], en: [man, person], nl: [man, mens]}
+  - {lemma: donna, pos: noun, tags: [people], en: [woman], nl: [vrouw]}
+  - {lemma: ragazzo, pos: noun, tags: [people], en: [boy, young man, boyfriend], nl: [jongen, vriend]}
+  - {lemma: ragazza, pos: noun, tags: [people], en: [girl, young woman, girlfriend], nl: [meisje, vriendin]}
+  - {lemma: bambino, pos: noun, tags: [people], en: [child, little boy, baby], nl: [kind, jongetje]}
+  - {lemma: bambina, pos: noun, tags: [people], en: [little girl, child], nl: [meisje, kind]}
+  - {lemma: amico, pos: noun, tags: [people], en: [friend], nl: [vriend]}
+  - {lemma: amica, pos: noun, tags: [people], en: [friend, girlfriend], nl: [vriendin]}
+  - {lemma: madre, pos: noun, tags: [people], en: [mother], nl: [moeder]}
+  - {lemma: padre, pos: noun, tags: [people], en: [father], nl: [vader]}
+  - {lemma: figlio, pos: noun, tags: [people], en: [son, child], nl: [zoon, kind]}
+  - {lemma: figlia, pos: noun, tags: [people], en: [daughter], nl: [dochter]}
+  - {lemma: fratello, pos: noun, tags: [people], en: [brother], nl: [broer]}
+  - {lemma: sorella, pos: noun, tags: [people], en: [sister], nl: [zus]}
+  - {lemma: famiglia, pos: noun, tags: [people], en: [family], nl: [familie, gezin]}
+  - {lemma: persona, pos: noun, tags: [people], en: [person], nl: [persoon, mens]}
+  - {lemma: marito, pos: noun, tags: [people], en: [husband], nl: [man, echtgenoot]}
+  - {lemma: moglie, pos: noun, tags: [people], en: [wife], nl: [vrouw, echtgenote]}
+  - {lemma: gente, pos: noun, tags: [people], en: [people], nl: [mensen]}
+  - {lemma: io, pos: pron, tags: [people], en: [I], nl: [ik]}
+  - {lemma: tu, pos: pron, tags: [people], en: [you], nl: [jij, je]}
+  - {lemma: lui, pos: pron, tags: [people], en: [he, him], nl: [hij, hem]}
+  - {lemma: lei, pos: pron, tags: [people], en: [she, her, you (formal)], nl: [zij, haar, u]}
+  - {lemma: noi, pos: pron, tags: [people], en: [we, us], nl: [wij, we, ons]}
+  - {lemma: voi, pos: pron, tags: [people], en: [you (plural)], nl: [jullie]}
+  - {lemma: loro, pos: pron, tags: [people], en: [they, them], nl: [zij, ze, hen]}
+  # --- food
+  - {lemma: pane, pos: noun, tags: [food], en: [bread], nl: [brood]}
+  - {lemma: acqua, pos: noun, tags: [food], en: [water], nl: [water]}
+  - {lemma: vino, pos: noun, tags: [food], en: [wine], nl: [wijn]}
+  - {lemma: latte, pos: noun, tags: [food], en: [milk], nl: [melk]}
+  - {lemma: caffè, pos: noun, tags: [food], en: [coffee, café], nl: [koffie, café]}
+  - {lemma: tè, pos: noun, tags: [food], en: [tea], nl: [thee]}
+  - {lemma: birra, pos: noun, tags: [food], en: [beer], nl: [bier]}
+  - {lemma: mela, pos: noun, tags: [food], en: [apple], nl: [appel]}
+  - {lemma: pasta, pos: noun, tags: [food], en: [pasta, dough, pastry], nl: [pasta, deeg, gebakje]}
+  - {lemma: pizza, pos: noun, tags: [food], en: [pizza], nl: [pizza]}
+  - {lemma: formaggio, pos: noun, tags: [food], en: [cheese], nl: [kaas]}
+  - {lemma: carne, pos: noun, tags: [food], en: [meat], nl: [vlees]}
+  - {lemma: pesce, pos: noun, tags: [food], en: [fish], nl: [vis]}
+  - {lemma: uovo, pos: noun, tags: [food], en: [egg], nl: [ei]}
+  - {lemma: zucchero, pos: noun, tags: [food], en: [sugar], nl: [suiker]}
+  - {lemma: sale, pos: noun, tags: [food], en: [salt], nl: [zout]}
+  - {lemma: frutta, pos: noun, tags: [food], en: [fruit], nl: [fruit]}
+  - {lemma: verdura, pos: noun, tags: [food], en: [vegetables], nl: [groente]}
+  - {lemma: cibo, pos: noun, tags: [food], en: [food], nl: [eten, voedsel]}
+  - {lemma: colazione, pos: noun, tags: [food], en: [breakfast], nl: [ontbijt]}
+  - {lemma: pranzo, pos: noun, tags: [food], en: [lunch], nl: [lunch, middageten]}
+  - {lemma: cena, pos: noun, tags: [food], en: [dinner, supper], nl: [avondeten, diner]}
+  - {lemma: ristorante, pos: noun, tags: [food], en: [restaurant], nl: [restaurant]}
+  - {lemma: buono, pos: adj, tags: [food], en: [good, tasty, kind], nl: [goed, lekker, aardig]}
+  # --- time
+  - {lemma: oggi, pos: adv, tags: [time], en: [today], nl: [vandaag]}
+  - {lemma: ieri, pos: adv, tags: [time], en: [yesterday], nl: [gisteren]}
+  - {lemma: domani, pos: adv, tags: [time], en: [tomorrow], nl: [morgen]}
+  - {lemma: adesso, pos: adv, tags: [time], en: [now], nl: [nu]}
+  - {lemma: sempre, pos: adv, tags: [time], en: [always], nl: [altijd]}
+  - {lemma: mai, pos: adv, tags: [time], en: [never, ever], nl: [nooit, ooit]}
+  - {lemma: giorno, pos: noun, tags: [time], en: [day], nl: [dag]}
+  - {lemma: settimana, pos: noun, tags: [time], en: [week], nl: [week]}
+  - {lemma: mese, pos: noun, tags: [time], en: [month], nl: [maand]}
+  - {lemma: anno, pos: noun, tags: [time], en: [year], nl: [jaar]}
+  - {lemma: ora, pos: noun, tags: [time], en: [hour, time], nl: [uur, tijd]}
+  - {lemma: minuto, pos: noun, tags: [time], en: [minute], nl: [minuut]}
+  - {lemma: mattina, pos: noun, tags: [time], en: [morning], nl: [ochtend, morgen]}
+  - {lemma: sera, pos: noun, tags: [time], en: [evening], nl: [avond]}
+  - {lemma: notte, pos: noun, tags: [time], en: [night], nl: [nacht]}
+  - {lemma: tempo, pos: noun, tags: [time], en: [time, weather], nl: [tijd, weer]}
+  - {lemma: lunedì, pos: noun, tags: [time], en: [Monday], nl: [maandag]}
+  - {lemma: martedì, pos: noun, tags: [time], en: [Tuesday], nl: [dinsdag]}
+  - {lemma: mercoledì, pos: noun, tags: [time], en: [Wednesday], nl: [woensdag]}
+  - {lemma: giovedì, pos: noun, tags: [time], en: [Thursday], nl: [donderdag]}
+  - {lemma: venerdì, pos: noun, tags: [time], en: [Friday], nl: [vrijdag]}
+  - {lemma: sabato, pos: noun, tags: [time], en: [Saturday], nl: [zaterdag]}
+  - {lemma: domenica, pos: noun, tags: [time], en: [Sunday], nl: [zondag]}
+  # --- articulated prepositions (not lemma entries in Wiktionary; needed for sentence alignment)
+  - {lemma: del, pos: prep, en: [of the, some], nl: [van de, wat], inflections: [dello, della, "dell'", dei, degli, delle]}
+  - {lemma: al, pos: prep, en: [to the, at the], nl: [naar de, aan de, bij de], inflections: [allo, alla, "all'", ai, agli, alle]}
+  - {lemma: dal, pos: prep, en: [from the, by the], nl: [van de, vanaf de, bij], inflections: [dallo, dalla, "dall'", dai, dagli, dalle]}
+  - {lemma: nel, pos: prep, en: [in the], nl: [in de, in het], inflections: [nello, nella, "nell'", nei, negli, nelle]}
+  - {lemma: sul, pos: prep, en: [on the, about the], nl: [op de, over de], inflections: [sullo, sulla, "sull'", sui, sugli, sulle]}
+  - {lemma: col, pos: prep, en: [with the], nl: [met de], inflections: [coi]}
+  # --- extra people nouns (articles skill: lo/l')
+  - {lemma: studente, pos: noun, tags: [people], en: [student], nl: [student, leerling]}
+  - {lemma: zio, pos: noun, tags: [people], en: [uncle], nl: [oom]}
+  - {lemma: zia, pos: noun, tags: [people], en: [aunt], nl: [tante]}
+  - {lemma: insegnante, pos: noun, tags: [people], gender: m, en: [teacher], nl: [leraar, docent]}
+  - {lemma: straniero, pos: noun, tags: [people], en: [foreigner, stranger], nl: [buitenlander, vreemdeling]}
+  # --- Dutch glosses for verbs that grammar skills may select (Claude-authored)
+  - {lemma: essere, pos: verb, en: [to be], nl: [zijn]}
+  - {lemma: avere, pos: verb, en: [to have], nl: [hebben]}
+  - {lemma: stare, pos: verb, en: [to stay, to be, to stand], nl: [zijn, blijven, staan]}
+  - {lemma: andare, pos: verb, en: [to go], nl: [gaan]}
+  - {lemma: fare, pos: verb, en: [to do, to make], nl: [doen, maken]}
+  - {lemma: volere, pos: verb, en: [to want], nl: [willen]}
+  - {lemma: potere, pos: verb, en: [can, to be able to, may], nl: [kunnen, mogen]}
+  - {lemma: dovere, pos: verb, en: [must, to have to, to owe], nl: [moeten]}
+  - {lemma: sapere, pos: verb, en: [to know, can], nl: [weten, kunnen]}
+  - {lemma: dire, pos: verb, en: [to say, to tell], nl: [zeggen]}
+  - {lemma: venire, pos: verb, nl: [komen]}
+  - {lemma: riuscire, pos: verb, nl: [lukken, slagen]}
+  - {lemma: uscire, pos: verb, nl: [uitgaan, naar buiten gaan]}
+  - {lemma: dare, pos: verb, nl: [geven]}
+  - {lemma: tenere, pos: verb, nl: [houden, vasthouden]}
+  - {lemma: morire, pos: verb, nl: [sterven, doodgaan]}
+  - {lemma: bere, pos: verb, nl: [drinken]}
+  - {lemma: rimanere, pos: verb, nl: [blijven]}
+  - {lemma: scegliere, pos: verb, nl: [kiezen]}
+  - {lemma: salire, pos: verb, nl: [stijgen, instappen, naar boven gaan]}
+  - {lemma: sedere, pos: verb, nl: [zitten]}
+  - {lemma: porre, pos: verb, nl: [zetten, stellen]}
+  - {lemma: tradurre, pos: verb, nl: [vertalen]}
+  - {lemma: piacere, pos: verb, nl: [bevallen, leuk vinden]}
+  - {lemma: dispiacere, pos: verb, nl: [spijten, jammer vinden]}
+  - {lemma: togliere, pos: verb, nl: [weghalen, uittrekken]}
+  - {lemma: apparire, pos: verb, nl: [verschijnen]}
+  - {lemma: parere, pos: verb, nl: [lijken]}
+  - {lemma: tacere, pos: verb, nl: [zwijgen]}
+  - {lemma: ottenere, pos: verb, nl: [verkrijgen, krijgen]}
+  - {lemma: mantenere, pos: verb, nl: [onderhouden, behouden]}
+  - {lemma: sostenere, pos: verb, nl: [steunen, beweren]}
+  - {lemma: proporre, pos: verb, nl: [voorstellen]}
+  - {lemma: avvenire, pos: verb, nl: [gebeuren]}
+  - {lemma: udire, pos: verb, nl: [horen]}
+  - {lemma: pensare, pos: verb, nl: [denken]}
+  - {lemma: parlare, pos: verb, nl: [praten, spreken]}
+  - {lemma: aspettare, pos: verb, nl: [wachten]}
+  - {lemma: sembrare, pos: verb, nl: [lijken]}
+  - {lemma: guardare, pos: verb, nl: [kijken, bekijken]}
+  - {lemma: tornare, pos: verb, nl: [terugkomen, terugkeren]}
+  - {lemma: lasciare, pos: verb, nl: [laten, achterlaten, verlaten]}
+  - {lemma: cercare, pos: verb, nl: [zoeken, proberen]}
+  - {lemma: chiamare, pos: verb, nl: [roepen, bellen, noemen]}
+  - {lemma: trovare, pos: verb, nl: [vinden]}
+  - {lemma: entrare, pos: verb, nl: [binnenkomen, binnengaan]}
+  - {lemma: lavorare, pos: verb, nl: [werken]}
+  - {lemma: arrivare, pos: verb, nl: [aankomen]}
+  - {lemma: ricordare, pos: verb, nl: [herinneren, onthouden]}
+  - {lemma: capitare, pos: verb, nl: [gebeuren, voorkomen]}
+  - {lemma: ascoltare, pos: verb, nl: [luisteren]}
+  - {lemma: mangiare, pos: verb, nl: [eten]}
+  - {lemma: diventare, pos: verb, nl: [worden]}
+  - {lemma: aiutare, pos: verb, nl: [helpen]}
+  - {lemma: passare, pos: verb, nl: [voorbijgaan, langskomen, doorbrengen]}
+  - {lemma: amare, pos: verb, nl: [houden van]}
+  - {lemma: portare, pos: verb, nl: [brengen, dragen]}
+  - {lemma: comprare, pos: verb, nl: [kopen]}
+  - {lemma: giocare, pos: verb, nl: [spelen]}
+  - {lemma: pagare, pos: verb, nl: [betalen]}
+  - {lemma: provare, pos: verb, nl: [proberen, voelen]}
+  - {lemma: toccare, pos: verb, nl: [aanraken]}
+  - {lemma: salvare, pos: verb, nl: [redden]}
+  - {lemma: usare, pos: verb, nl: [gebruiken]}
+  - {lemma: sperare, pos: verb, nl: [hopen]}
+  - {lemma: ammazzare, pos: verb, nl: [doden, vermoorden]}
+  - {lemma: cambiare, pos: verb, nl: [veranderen]}
+  - {lemma: continuare, pos: verb, nl: [doorgaan, voortzetten]}
+  - {lemma: restare, pos: verb, nl: [blijven]}
+  - {lemma: mandare, pos: verb, nl: [sturen]}
+  - {lemma: controllare, pos: verb, nl: [controleren]}
+  - {lemma: incontrare, pos: verb, nl: [ontmoeten]}
+  - {lemma: preparare, pos: verb, nl: [voorbereiden, klaarmaken]}
+  - {lemma: camminare, pos: verb, nl: [lopen, wandelen]}
+  - {lemma: studiare, pos: verb, nl: [studeren]}
+  - {lemma: abitare, pos: verb, nl: [wonen]}
+  - {lemma: cantare, pos: verb, nl: [zingen]}
+  - {lemma: ballare, pos: verb, nl: [dansen]}
+  - {lemma: cucinare, pos: verb, nl: [koken]}
+  - {lemma: imparare, pos: verb, nl: [leren]}
+  - {lemma: insegnare, pos: verb, nl: [lesgeven, onderwijzen]}
+  - {lemma: viaggiare, pos: verb, nl: [reizen]}
+  - {lemma: visitare, pos: verb, nl: [bezoeken]}
+  - {lemma: fermare, pos: verb, nl: [stoppen, tegenhouden]}
+  - {lemma: girare, pos: verb, nl: [draaien, rondgaan]}
+  - {lemma: mostrare, pos: verb, nl: [tonen, laten zien]}
+  - {lemma: uccidere, pos: verb, nl: [doden, vermoorden]}
+  - {lemma: vedere, pos: verb, nl: [zien]}
+  - {lemma: prendere, pos: verb, nl: [nemen, pakken]}
+  - {lemma: credere, pos: verb, nl: [geloven, denken]}
+  - {lemma: chiedere, pos: verb, nl: [vragen]}
+  - {lemma: conoscere, pos: verb, nl: [kennen, leren kennen]}
+  - {lemma: succedere, pos: verb, nl: [gebeuren]}
+  - {lemma: mettere, pos: verb, nl: [zetten, leggen, stoppen]}
+  - {lemma: vivere, pos: verb, nl: [leven, wonen]}
+  - {lemma: perdere, pos: verb, nl: [verliezen, missen]}
+  - {lemma: intendere, pos: verb, nl: [bedoelen, van plan zijn]}
+  - {lemma: ricevere, pos: verb, nl: [ontvangen, krijgen]}
+  - {lemma: rispondere, pos: verb, nl: [antwoorden]}
+  - {lemma: rendere, pos: verb, nl: [maken, teruggeven]}
+  - {lemma: chiudere, pos: verb, nl: [sluiten, dichtdoen]}
+  - {lemma: scrivere, pos: verb, nl: [schrijven]}
+  - {lemma: correre, pos: verb, nl: [rennen]}
+  - {lemma: leggere, pos: verb, nl: [lezen]}
+  - {lemma: vendere, pos: verb, nl: [verkopen]}
+  - {lemma: cadere, pos: verb, nl: [vallen]}
+  - {lemma: ridere, pos: verb, nl: [lachen]}
+  - {lemma: decidere, pos: verb, nl: [beslissen, besluiten]}
+  - {lemma: smettere, pos: verb, nl: [stoppen, ophouden]}
+  - {lemma: permettere, pos: verb, nl: [toestaan]}
+  - {lemma: promettere, pos: verb, nl: [beloven]}
+  - {lemma: battere, pos: verb, nl: [slaan, verslaan]}
+  - {lemma: nascondere, pos: verb, nl: [verbergen]}
+  - {lemma: spendere, pos: verb, nl: [uitgeven]}
+  - {lemma: discutere, pos: verb, nl: [bespreken, discussiëren]}
+  - {lemma: difendere, pos: verb, nl: [verdedigen]}
+  - {lemma: dipendere, pos: verb, nl: [afhangen]}
+  - {lemma: raggiungere, pos: verb, nl: [bereiken]}
+  - {lemma: piangere, pos: verb, nl: [huilen]}
+  - {lemma: muovere, pos: verb, nl: [bewegen]}
+  - {lemma: ripetere, pos: verb, nl: [herhalen]}
+  - {lemma: temere, pos: verb, nl: [vrezen]}
+  - {lemma: godere, pos: verb, nl: [genieten]}
+  - {lemma: vincere, pos: verb, nl: [winnen]}
+  - {lemma: combattere, pos: verb, nl: [vechten]}
+  - {lemma: sorprendere, pos: verb, nl: [verrassen]}
+  - {lemma: rompere, pos: verb, nl: [breken]}
+  - {lemma: esistere, pos: verb, nl: [bestaan]}
+  - {lemma: insistere, pos: verb, nl: [aandringen]}
+  - {lemma: riconoscere, pos: verb, nl: [herkennen]}
+  - {lemma: accendere, pos: verb, nl: [aansteken, aanzetten]}
+  - {lemma: sentire, pos: verb, nl: [horen, voelen]}
+  - {lemma: capire, pos: verb, nl: [begrijpen]}
+  - {lemma: servire, pos: verb, nl: [dienen, nodig zijn]}
+  - {lemma: dormire, pos: verb, nl: [slapen]}
+  - {lemma: finire, pos: verb, nl: [eindigen, afmaken]}
+  - {lemma: aprire, pos: verb, nl: [openen, opendoen]}
+  - {lemma: partire, pos: verb, nl: [vertrekken]}
+  - {lemma: scoprire, pos: verb, nl: [ontdekken]}
+  - {lemma: seguire, pos: verb, nl: [volgen]}
+  - {lemma: offrire, pos: verb, nl: [aanbieden]}
+  - {lemma: mentire, pos: verb, nl: [liegen]}
+  - {lemma: preferire, pos: verb, nl: [verkiezen, liever hebben]}
+  - {lemma: sparire, pos: verb, nl: [verdwijnen]}
+  - {lemma: costruire, pos: verb, nl: [bouwen]}
+  - {lemma: divertire, pos: verb, nl: [vermaken, amuseren]}
+  - {lemma: gestire, pos: verb, nl: [beheren, leiden]}
+  - {lemma: soffrire, pos: verb, nl: [lijden]}
+  - {lemma: impazzire, pos: verb, nl: [gek worden]}
+  - {lemma: pulire, pos: verb, nl: [schoonmaken]}
+  - {lemma: spedire, pos: verb, nl: [versturen]}
+  - {lemma: colpire, pos: verb, nl: [raken, treffen]}
+  - {lemma: coprire, pos: verb, nl: [bedekken]}
+  - {lemma: fuggire, pos: verb, nl: [vluchten]}
+  - {lemma: restituire, pos: verb, nl: [teruggeven]}
+  - {lemma: suggerire, pos: verb, nl: [voorstellen, aanraden]}
+  - {lemma: vestire, pos: verb, nl: [kleden, aankleden]}
+  - {lemma: obbedire, pos: verb, nl: [gehoorzamen]}
+  - {lemma: proibire, pos: verb, nl: [verbieden]}
+  - {lemma: garantire, pos: verb, nl: [garanderen]}
+  - {lemma: unire, pos: verb, nl: [verenigen]}
+  - {lemma: tradire, pos: verb, nl: [verraden]}
+  - {lemma: ferire, pos: verb, nl: [verwonden]}
+  - {lemma: avvertire, pos: verb, nl: [waarschuwen]}
+  - {lemma: consentire, pos: verb, nl: [toestaan]}
+  - {lemma: inseguire, pos: verb, nl: [achtervolgen]}
+  - {lemma: reagire, pos: verb, nl: [reageren]}
+  - {lemma: agire, pos: verb, nl: [handelen]}

@@ -1,0 +1,108 @@
+# Italian course for English and Dutch speakers.
+# Skills select their items with queries (see duelingo/pipeline/pipeline/query.py); the
+# compiler resolves them into skill_items/skill_facets, so the app never reads these queries.
+id: it
+version: 1.0.0
+title: {en: Italian, nl: Italiaans}
+description:
+  en: Italian from the basics, with a strong focus on verbs and conjugation.
+  nl: Italiaans vanaf de basis, met veel aandacht voor werkwoorden en vervoegingen.
+target: it
+translations: [en, nl]
+unverified: false
+persons: [io, tu, lui/lei, noi, voi, loro]
+person_labels:
+  lui/lei: {en: "lui/lei (he/she)", nl: "lui/lei (hij/zij)"}
+  loro: {en: "loro (they)", nl: "loro (zij, mv.)"}
+tenses: [presente, imperfetto, futuro, passato_prossimo]
+tense_labels:
+  presente: {en: present, nl: tegenwoordige tijd}
+  imperfetto: {en: imperfect, nl: onvoltooid verleden tijd}
+  futuro: {en: future, nl: toekomende tijd}
+  passato_prossimo: {en: present perfect (passato prossimo), nl: voltooid tegenwoordige tijd (passato prossimo)}
+articles: [il, lo, la, "l'"]
+
+units:
+  - id: u1
+    title: {en: Basics, nl: Basis}
+    skills:
+      - id: greetings
+        kind: vocab
+        title: {en: Greetings, nl: Begroetingen}
+        icon: wave
+        items: {tags: [greetings]}
+      - id: people
+        kind: vocab
+        title: {en: People, nl: Mensen}
+        icon: people
+        requires: [greetings]
+        items: {tags: [people]}
+      - id: essere-avere
+        kind: grammar
+        title: {en: Essere and avere, nl: Essere en avere}
+        icon: key
+        requires: [greetings]
+        verbs: {lemmas: [essere, avere], tense: presente}
+        exercises: [conj_grid, cloze, spot_error, transform, multiple_choice]
+
+  - id: u2
+    title: {en: The present tense, nl: De tegenwoordige tijd}
+    skills:
+      - id: food
+        kind: vocab
+        title: {en: Food and drink, nl: Eten en drinken}
+        icon: food
+        requires: [people]
+        items: {tags: [food]}
+      - id: articles
+        kind: grammar
+        title: {en: The article, nl: Het lidwoord}
+        icon: article
+        requires: [food]
+        facet: article
+        items: {pos: noun, tags: [people, food]}
+      - id: present-are
+        kind: grammar
+        title: {en: Present tense of -are verbs, nl: Tegenwoordige tijd van -are-werkwoorden}
+        icon: verb
+        requires: [essere-avere]
+        verbs: {class: are, regular: true, tense: presente, top: 20}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+      - id: present-ere
+        kind: grammar
+        title: {en: Present tense of -ere verbs, nl: Tegenwoordige tijd van -ere-werkwoorden}
+        icon: verb
+        requires: [present-are]
+        verbs: {class: ere, regular: true, tense: presente, top: 18, exclude: [uccidere]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+      - id: present-ire
+        kind: grammar
+        title: {en: Present tense of -ire verbs, nl: Tegenwoordige tijd van -ire-werkwoorden}
+        icon: verb
+        requires: [present-ere]
+        verbs: {class: [ire, isc], regular: true, tense: presente, top: 18}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+
+  - id: u3
+    title: {en: Everyday verbs and the past, nl: Alledaagse werkwoorden en het verleden}
+    skills:
+      - id: time
+        kind: vocab
+        title: {en: Time and days, nl: Tijd en dagen}
+        icon: clock
+        requires: [food]
+        items: {tags: [time]}
+      - id: irregular-present
+        kind: grammar
+        title: {en: Irregular verbs in the present, nl: Onregelmatige werkwoorden in de tegenwoordige tijd}
+        icon: bolt
+        requires: [present-ire]
+        verbs: {regular: false, tense: presente, top: 16, exclude: [essere, avere, piacere, dispiacere]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: passato-prossimo
+        kind: grammar
+        title: {en: The passato prossimo, nl: De passato prossimo}
+        icon: history
+        requires: [irregular-present, time]
+        verbs: {tense: passato_prossimo, top: 20, exclude: [stare]}
+        exercises: [conj_grid, cloze, spot_error, transform]

@@ -1,0 +1,35 @@
+{"id": "nl:altijd", "lemma": "altijd", "pos": "adv", "freq": 106, "tr": {"en": ["always"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "unit": "u3"}
+{"id": "nl:avond", "lemma": "avond", "pos": "noun", "article": "de", "gender": "m", "plural": "avonden", "freq": 333, "tr": {"en": ["evening"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["avonden"], "unit": "u3"}
+{"id": "nl:beginnen", "lemma": "beginnen", "pos": "verb", "freq": 158, "tr": {"en": ["to begin", "to start"]}, "tr_src": {"en": "claude"}, "unit": "u3"}
+{"id": "nl:dag", "lemma": "dag", "pos": "noun", "article": "de", "gender": "m", "plural": "dagen", "freq": 117, "tr": {"en": ["day"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["dagen", "daggen"], "unit": "u3"}
+{"id": "nl:dinsdag", "lemma": "dinsdag", "pos": "noun", "article": "de", "gender": "m", "plural": "dinsdagen", "freq": 17313, "tr": {"en": ["Tuesday"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["dinsdagen"], "unit": "u3"}
+{"id": "nl:donderdag", "lemma": "donderdag", "pos": "noun", "article": "de", "gender": "m", "plural": "donderdagen", "freq": 20066, "tr": {"en": ["Thursday"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["donderdagen"], "unit": "u3"}
+{"id": "nl:eindigen", "lemma": "eindigen", "pos": "verb", "freq": 806, "tr": {"en": ["to end", "to finish", "to conclude", "to come to an end"]}, "tr_src": {"en": "wiktionary"}, "unit": "u3"}
+{"id": "nl:gisteren", "lemma": "gisteren", "pos": "adv", "freq": 460, "tr": {"en": ["yesterday"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "unit": "u3"}
+{"id": "nl:houden", "lemma": "houden", "pos": "verb", "freq": 96, "tr": {"en": ["to hold", "to keep"]}, "tr_src": {"en": "claude"}, "unit": "u3"}
+{"id": "nl:jaar", "lemma": "jaar", "pos": "noun", "article": "het", "gender": "n", "plural": "jaren", "freq": 100, "tr": {"en": ["year"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["jaren"], "unit": "u3"}
+{"id": "nl:lopen", "lemma": "lopen", "pos": "verb", "freq": 197, "tr": {"en": ["to walk", "to run"]}, "tr_src": {"en": "claude"}, "unit": "u3"}
+{"id": "nl:maand", "lemma": "maand", "pos": "noun", "article": "de", "gender": "f", "plural": "maanden", "freq": 254, "tr": {"en": ["month"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["maanden"], "unit": "u3"}
+{"id": "nl:maandag", "lemma": "maandag", "pos": "noun", "article": "de", "gender": "m", "plural": "maandagen", "freq": 16543, "tr": {"en": ["Monday"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["maandagen"], "unit": "u3"}
+{"id": "nl:middag", "lemma": "middag", "pos": "noun", "article": "de", "gender": "m", "plural": "middagen", "freq": 1856, "tr": {"en": ["afternoon", "noon"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["middagen"], "unit": "u3"}
+{"id": "nl:minuut", "lemma": "minuut", "pos": "noun", "article": "de", "gender": "f", "plural": "minuten", "freq": 251, "tr": {"en": ["minute"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["minuten"], "unit": "u3"}
+{"id": "nl:morgen", "lemma": "morgen", "pos": "adv", "freq": 225, "tr": {"en": ["tomorrow"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "unit": "u3"}
+{"id": "nl:nacht", "lemma": "nacht", "pos": "noun", "article": "de", "gender": "m", "plural": "nachten", "freq": 315, "tr": {"en": ["night"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["nachten"], "unit": "u3"}
+{"id": "nl:nooit", "lemma": "nooit", "pos": "adv", "freq": 76, "tr": {"en": ["never"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "unit": "u3"}
+{"id": "nl:nu", "lemma": "nu", "pos": "adv", "freq": 2599, "tr": {"en": ["now"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "unit": "u3"}
+{"id": "nl:ochtend", "lemma": "ochtend", "pos": "noun", "article": "de", "gender": "m", "plural": "ochtenden", "freq": 939, "tr": {"en": ["morning"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["ochtenden"], "unit": "u3"}
+{"id": "nl:ontsnappen", "lemma": "ontsnappen", "pos": "verb", "freq": 569, "tr": {"en": ["to escape"]}, "tr_src": {"en": "claude"}, "unit": "u3"}
+{"id": "nl:stappen", "lemma": "stappen", "pos": "verb", "freq": 807, "tr": {"en": ["to march", "to step", "to walk"]}, "tr_src": {"en": "wiktionary"}, "unit": "u3"}
+{"id": "nl:sterven", "lemma": "sterven", "pos": "verb", "freq": 206, "tr": {"en": ["to die"]}, "tr_src": {"en": "claude"}, "unit": "u3"}
+{"id": "nl:tijd", "lemma": "tijd", "pos": "noun", "article": "de", "gender": "m", "plural": "tijden", "freq": 92, "tr": {"en": ["time"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["tijden"], "unit": "u3"}
+{"id": "nl:uur", "lemma": "uur", "pos": "noun", "article": "het", "gender": "n", "plural": "uren", "freq": 154, "tr": {"en": ["hour", "o'clock"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["uren"], "unit": "u3"}
+{"id": "nl:vallen", "lemma": "vallen", "pos": "verb", "freq": 283, "tr": {"en": ["to fall"]}, "tr_src": {"en": "claude"}, "unit": "u3"}
+{"id": "nl:vandaag", "lemma": "vandaag", "pos": "adv", "freq": 212, "tr": {"en": ["today"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "unit": "u3"}
+{"id": "nl:verdwijnen", "lemma": "verdwijnen", "pos": "verb", "freq": 370, "tr": {"en": ["to disappear"]}, "tr_src": {"en": "claude"}, "unit": "u3"}
+{"id": "nl:verhuizen", "lemma": "verhuizen", "pos": "verb", "freq": 830, "tr": {"en": ["to move house"]}, "tr_src": {"en": "wiktionary"}, "unit": "u3"}
+{"id": "nl:vrijdag", "lemma": "vrijdag", "pos": "noun", "article": "de", "gender": "m", "plural": "vrijdagen", "freq": 15946, "tr": {"en": ["Friday"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["vrijdagen"], "unit": "u3"}
+{"id": "nl:week.2", "lemma": "week", "pos": "noun", "article": "de", "gender": "f", "plural": "weken", "freq": 19945, "tr": {"en": ["week"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["weken"], "unit": "u3"}
+{"id": "nl:weggaan", "lemma": "weggaan", "pos": "verb", "freq": 701, "tr": {"en": ["to go away", "to leave"]}, "tr_src": {"en": "claude"}, "unit": "u3"}
+{"id": "nl:woensdag", "lemma": "woensdag", "pos": "noun", "article": "de", "gender": "m", "plural": "woensdagen", "freq": 20256, "tr": {"en": ["Wednesday"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["woensdagen"], "unit": "u3"}
+{"id": "nl:zaterdag", "lemma": "zaterdag", "pos": "noun", "article": "de", "gender": "m", "plural": "zaterdagen", "freq": 14757, "tr": {"en": ["Saturday"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["zaterdagen"], "unit": "u3"}
+{"id": "nl:zondag", "lemma": "zondag", "pos": "noun", "article": "de", "gender": "m", "plural": "zondagen", "freq": 12956, "tr": {"en": ["Sunday"]}, "tr_src": {"en": "claude"}, "tags": ["time"], "inflections": ["zondagen"], "unit": "u3"}

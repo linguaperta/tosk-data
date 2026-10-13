@@ -1,0 +1,105 @@
+# Dutch course for English speakers.
+# Skills select their items with queries (see duelingo/pipeline/pipeline/query.py); the
+# compiler resolves them into skill_items/skill_facets, so the app never reads these queries.
+id: nl
+version: 1.0.0
+title: {en: Dutch, nl: Nederlands}
+description:
+  en: Dutch from the basics, with a strong focus on verbs, the perfect tense and de/het.
+  nl: Nederlands vanaf de basis, met veel aandacht voor werkwoorden, het perfectum en de/het.
+target: nl
+translations: [en]
+unverified: false
+persons: [ik, jij, hij/zij, wij, jullie, zij]
+person_labels:
+  jij: {en: "jij/je (you)", nl: "jij/je"}
+  hij/zij: {en: "hij/zij/het (he/she/it)", nl: "hij/zij/het"}
+  wij: {en: "wij/we (we)", nl: "wij/we"}
+  jullie: {en: "jullie (you, plural)", nl: "jullie"}
+  zij: {en: "zij/ze (they)", nl: "zij/ze (meervoud)"}
+tenses: [tegenwoordige_tijd, verleden_tijd, perfectum]
+tense_labels:
+  tegenwoordige_tijd: {en: present, nl: tegenwoordige tijd}
+  verleden_tijd: {en: simple past, nl: verleden tijd}
+  perfectum: {en: present perfect, nl: voltooid tegenwoordige tijd}
+articles: [de, het]
+
+units:
+  - id: u1
+    title: {en: Basics, nl: Basis}
+    skills:
+      - id: greetings
+        kind: vocab
+        title: {en: Greetings, nl: Begroetingen}
+        icon: wave
+        items: {tags: [greetings]}
+      - id: people
+        kind: vocab
+        title: {en: People, nl: Mensen}
+        icon: people
+        requires: [greetings]
+        items: {tags: [people]}
+      - id: present-regular
+        kind: grammar
+        title: {en: The present tense, nl: De tegenwoordige tijd}
+        icon: verb
+        requires: [greetings]
+        verbs: {tense: tegenwoordige_tijd, regular: true, top: 20,
+                exclude: [gaan, doen, staan, zien, slaan, komen, weten, zeggen, moeten, worden]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+
+  - id: u2
+    title: {en: Daily life, nl: Dagelijks leven}
+    skills:
+      - id: food
+        kind: vocab
+        title: {en: Food and drink, nl: Eten en drinken}
+        icon: food
+        requires: [people]
+        items: {tags: [food]}
+      - id: home
+        kind: vocab
+        title: {en: At home, nl: Thuis}
+        icon: home
+        requires: [food]
+        items: {tags: [home]}
+      - id: de-het
+        kind: grammar
+        title: {en: De or het, nl: De of het}
+        icon: article
+        requires: [home]
+        facet: article
+        items: {pos: noun, tags: [people, food, home]}
+      - id: present-irregular
+        kind: grammar
+        title: {en: "Key verbs: zijn, hebben and modals", nl: "Kernwerkwoorden: zijn, hebben en modale werkwoorden"}
+        icon: key
+        requires: [present-regular]
+        verbs: {tense: tegenwoordige_tijd,
+                lemmas: [zijn, hebben, kunnen, willen, mogen, moeten, zullen, gaan, doen, komen,
+                         staan, zien, weten, zeggen, worden]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+
+  - id: u3
+    title: {en: The past, nl: Het verleden}
+    skills:
+      - id: time
+        kind: vocab
+        title: {en: Time and days, nl: Tijd en dagen}
+        icon: clock
+        requires: [home]
+        items: {tags: [time]}
+      - id: perfectum-hebben
+        kind: grammar
+        title: {en: "Perfect tense with hebben", nl: "Perfectum met hebben"}
+        icon: history
+        requires: [present-irregular, time]
+        verbs: {tense: perfectum, aux: hebben, top: 20, exclude: [moeten]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: perfectum-zijn
+        kind: grammar
+        title: {en: "Perfect tense with zijn", nl: "Perfectum met zijn"}
+        icon: history
+        requires: [perfectum-hebben]
+        verbs: {tense: perfectum, aux: zijn, top: 16, exclude: [oplossen]}
+        exercises: [conj_grid, cloze, spot_error, transform]

@@ -1,0 +1,225 @@
+# Curated vocabulary for the Dutch course (input for `python -m pipeline import nl`).
+# tags put an item in a vocab skill. English glosses written here are Claude-authored
+# (tr_src: claude); items without en take their gloss from Wiktionary.
+# Words never taken into the automatic frequency pool (Wiktionary homographs and inflected
+# forms that inherit a misleading frequency): lemma or lemma/pos.
+exclude: [reet, beuren, dagen/verb, manen/verb, ogen/verb, dingen/verb, weet/noun, kan/noun, wil/noun, was/noun, kom/noun, want/noun, hen/noun, ie/pron, vrouwe, wilde/noun, goede/noun, mijn/noun, waren/verb, lo/noun, a/noun]
+items:
+  # --- greetings
+  - {lemma: hallo, pos: intj, tags: [greetings], en: [hello, hi]}
+  - {lemma: hoi, pos: intj, tags: [greetings], en: [hi]}
+  - {lemma: dag, pos: intj, tags: [greetings], en: [hello, goodbye]}
+  - {lemma: doei, pos: intj, tags: [greetings], en: [bye]}
+  - {lemma: goedemorgen, pos: intj, tags: [greetings], en: [good morning]}
+  - {lemma: goedemiddag, pos: intj, tags: [greetings], en: [good afternoon]}
+  - {lemma: goedenavond, pos: intj, tags: [greetings], en: [good evening]}
+  - {lemma: welterusten, pos: intj, tags: [greetings], en: [good night, sleep well]}
+  - {lemma: tot ziens, pos: phrase, tags: [greetings], en: [goodbye, see you]}
+  - {lemma: bedankt, pos: intj, tags: [greetings], en: [thanks, thank you]}
+  - {lemma: dank je, pos: phrase, tags: [greetings], en: [thank you]}
+  - {lemma: alsjeblieft, pos: adv, tags: [greetings], en: [please, here you are]}
+  - {lemma: alstublieft, pos: adv, tags: [greetings], en: [please (formal), here you are]}
+  - {lemma: sorry, pos: intj, tags: [greetings], en: [sorry]}
+  - {lemma: pardon, pos: intj, tags: [greetings], en: [excuse me, pardon]}
+  - {lemma: ja, pos: intj, tags: [greetings], en: ["yes"]}
+  - {lemma: nee, pos: intj, tags: [greetings], en: ["no"]}
+  - {lemma: welkom, pos: adj, tags: [greetings], en: [welcome]}
+  - {lemma: goed, pos: adj, tags: [greetings], en: [good, well, fine]}
+  - {lemma: hoe, pos: adv, tags: [greetings], en: [how]}
+  # --- people
+  - {lemma: man, pos: noun, tags: [people], en: [man, husband]}
+  - {lemma: vrouw, pos: noun, tags: [people], en: [woman, wife]}
+  - {lemma: jongen, pos: noun, tags: [people], en: [boy]}
+  - {lemma: meisje, pos: noun, tags: [people], en: [girl]}
+  - {lemma: kind, pos: noun, tags: [people], en: [child]}
+  - {lemma: vriend, pos: noun, tags: [people], en: [friend, boyfriend]}
+  - {lemma: vriendin, pos: noun, tags: [people], en: [friend, girlfriend]}
+  - {lemma: moeder, pos: noun, tags: [people], en: [mother]}
+  - {lemma: vader, pos: noun, tags: [people], en: [father]}
+  - {lemma: zoon, pos: noun, tags: [people], en: [son]}
+  - {lemma: dochter, pos: noun, tags: [people], en: [daughter]}
+  - {lemma: broer, pos: noun, tags: [people], en: [brother]}
+  - {lemma: zus, pos: noun, tags: [people], en: [sister]}
+  - {lemma: familie, pos: noun, tags: [people], en: [family, relatives]}
+  - {lemma: mens, pos: noun, tags: [people], en: [person, human]}
+  - {lemma: ouder, pos: noun, tags: [people], en: [parent]}
+  - {lemma: baby, pos: noun, tags: [people], en: [baby]}
+  - {lemma: meneer, pos: noun, tags: [people], en: [sir, gentleman, Mr]}
+  - {lemma: mevrouw, pos: noun, tags: [people], en: [madam, lady, Mrs]}
+  - {lemma: ik, pos: pron, tags: [people], en: [I]}
+  - {lemma: jij, pos: pron, tags: [people], en: [you]}
+  - {lemma: hij, pos: pron, tags: [people], en: [he]}
+  - {lemma: zij, pos: pron, tags: [people], en: [she, they]}
+  - {lemma: wij, pos: pron, tags: [people], en: [we]}
+  - {lemma: jullie, pos: pron, tags: [people], en: [you (plural)]}
+  - {lemma: we, pos: pron, en: [we]}
+  - {lemma: ze, pos: pron, en: [she, they, them, her]}
+  - {lemma: je, pos: pron, en: [you, your]}
+  # --- food
+  - {lemma: brood, pos: noun, tags: [food], en: [bread]}
+  - {lemma: water, pos: noun, tags: [food], en: [water]}
+  - {lemma: melk, pos: noun, tags: [food], en: [milk]}
+  - {lemma: koffie, pos: noun, tags: [food], en: [coffee]}
+  - {lemma: thee, pos: noun, tags: [food], en: [tea]}
+  - {lemma: bier, pos: noun, tags: [food], en: [beer]}
+  - {lemma: wijn, pos: noun, tags: [food], en: [wine]}
+  - {lemma: appel, pos: noun, tags: [food], en: [apple]}
+  - {lemma: kaas, pos: noun, tags: [food], en: [cheese]}
+  - {lemma: vlees, pos: noun, tags: [food], en: [meat]}
+  - {lemma: vis, pos: noun, tags: [food], en: [fish]}
+  - {lemma: ei, pos: noun, tags: [food], en: [egg]}
+  - {lemma: suiker, pos: noun, tags: [food], en: [sugar]}
+  - {lemma: zout, pos: noun, tags: [food], en: [salt]}
+  - {lemma: fruit, pos: noun, tags: [food], en: [fruit]}
+  - {lemma: groente, pos: noun, tags: [food], en: [vegetable, vegetables]}
+  - {lemma: boter, pos: noun, tags: [food], en: [butter]}
+  - {lemma: aardappel, pos: noun, tags: [food], en: [potato]}
+  - {lemma: ontbijt, pos: noun, tags: [food], en: [breakfast]}
+  - {lemma: lunch, pos: noun, tags: [food], en: [lunch]}
+  - {lemma: avondeten, pos: noun, tags: [food], en: [dinner, supper]}
+  - {lemma: eten, pos: noun, tags: [food], en: [food, meal]}
+  - {lemma: lekker, pos: adj, tags: [food], en: [tasty, delicious, nice]}
+  # --- home
+  - {lemma: huis, pos: noun, tags: [home], en: [house, home]}
+  - {lemma: kamer, pos: noun, tags: [home], en: [room]}
+  - {lemma: keuken, pos: noun, tags: [home], en: [kitchen]}
+  - {lemma: deur, pos: noun, tags: [home], en: [door]}
+  - {lemma: raam, pos: noun, tags: [home], en: [window]}
+  - {lemma: tafel, pos: noun, tags: [home], en: [table]}
+  - {lemma: stoel, pos: noun, tags: [home], en: [chair]}
+  - {lemma: bed, pos: noun, tags: [home], en: [bed]}
+  - {lemma: tuin, pos: noun, tags: [home], en: [garden]}
+  - {lemma: badkamer, pos: noun, tags: [home], en: [bathroom]}
+  - {lemma: slaapkamer, pos: noun, tags: [home], en: [bedroom]}
+  - {lemma: bank, pos: noun, tags: [home], en: [couch, sofa, bank]}
+  - {lemma: lamp, pos: noun, tags: [home], en: [lamp, light]}
+  - {lemma: vloer, pos: noun, tags: [home], en: [floor]}
+  - {lemma: muur, pos: noun, tags: [home], en: [wall]}
+  - {lemma: dak, pos: noun, tags: [home], en: [roof]}
+  - {lemma: sleutel, pos: noun, tags: [home], en: [key]}
+  - {lemma: boek, pos: noun, tags: [home], en: [book]}
+  # --- time
+  - {lemma: vandaag, pos: adv, tags: [time], en: [today]}
+  - {lemma: gisteren, pos: adv, tags: [time], en: [yesterday]}
+  - {lemma: morgen, pos: adv, tags: [time], en: [tomorrow]}
+  - {lemma: nu, pos: adv, tags: [time], en: [now]}
+  - {lemma: altijd, pos: adv, tags: [time], en: [always]}
+  - {lemma: nooit, pos: adv, tags: [time], en: [never]}
+  - {lemma: dag, pos: noun, tags: [time], en: [day]}
+  - {lemma: week, pos: noun, tags: [time], en: [week]}
+  - {lemma: maand, pos: noun, tags: [time], en: [month]}
+  - {lemma: jaar, pos: noun, tags: [time], en: [year]}
+  - {lemma: uur, pos: noun, tags: [time], en: [hour, o'clock]}
+  - {lemma: minuut, pos: noun, tags: [time], en: [minute]}
+  - {lemma: ochtend, pos: noun, tags: [time], en: [morning]}
+  - {lemma: middag, pos: noun, tags: [time], en: [afternoon, noon]}
+  - {lemma: avond, pos: noun, tags: [time], en: [evening]}
+  - {lemma: nacht, pos: noun, tags: [time], en: [night]}
+  - {lemma: tijd, pos: noun, tags: [time], en: [time]}
+  - {lemma: maandag, pos: noun, tags: [time], en: [Monday]}
+  - {lemma: dinsdag, pos: noun, tags: [time], en: [Tuesday]}
+  - {lemma: woensdag, pos: noun, tags: [time], en: [Wednesday]}
+  - {lemma: donderdag, pos: noun, tags: [time], en: [Thursday]}
+  - {lemma: vrijdag, pos: noun, tags: [time], en: [Friday]}
+  - {lemma: zaterdag, pos: noun, tags: [time], en: [Saturday]}
+  - {lemma: zondag, pos: noun, tags: [time], en: [Sunday]}
+  # --- English glosses for verbs that grammar skills may select (Claude-authored; the
+  #     Wiktionary glosses list rare senses first for some of them)
+  - {lemma: zijn, pos: verb, en: [to be]}
+  - {lemma: hebben, pos: verb, en: [to have]}
+  - {lemma: kunnen, pos: verb, en: [can, to be able to]}
+  - {lemma: willen, pos: verb, en: [to want]}
+  - {lemma: mogen, pos: verb, en: [may, to be allowed to]}
+  - {lemma: moeten, pos: verb, en: [must, to have to]}
+  - {lemma: zullen, pos: verb, en: [shall, will]}
+  - {lemma: gaan, pos: verb, en: [to go]}
+  - {lemma: doen, pos: verb, en: [to do]}
+  - {lemma: komen, pos: verb, en: [to come]}
+  - {lemma: staan, pos: verb, en: [to stand]}
+  - {lemma: zien, pos: verb, en: [to see]}
+  - {lemma: weten, pos: verb, en: [to know]}
+  - {lemma: zeggen, pos: verb, en: [to say, to tell]}
+  - {lemma: worden, pos: verb, en: [to become, to get]}
+  - {lemma: denken, pos: verb, en: [to think]}
+  - {lemma: maken, pos: verb, en: [to make]}
+  - {lemma: vinden, pos: verb, en: [to find, to think]}
+  - {lemma: laten, pos: verb, en: [to let, to leave]}
+  - {lemma: nemen, pos: verb, en: [to take]}
+  - {lemma: vertellen, pos: verb, en: [to tell]}
+  - {lemma: blijven, pos: verb, en: [to stay, to remain]}
+  - {lemma: krijgen, pos: verb, en: [to get, to receive]}
+  - {lemma: geven, pos: verb, en: [to give]}
+  - {lemma: gebeuren, pos: verb, en: [to happen]}
+  - {lemma: horen, pos: verb, en: [to hear]}
+  - {lemma: kennen, pos: verb, en: [to know]}
+  - {lemma: proberen, pos: verb, en: [to try]}
+  - {lemma: helpen, pos: verb, en: [to help]}
+  - {lemma: werken, pos: verb, en: [to work]}
+  - {lemma: praten, pos: verb, en: [to talk]}
+  - {lemma: brengen, pos: verb, en: [to bring]}
+  - {lemma: bedoelen, pos: verb, en: [to mean]}
+  - {lemma: halen, pos: verb, en: [to fetch, to get]}
+  - {lemma: houden, pos: verb, en: [to hold, to keep]}
+  - {lemma: wachten, pos: verb, en: [to wait]}
+  - {lemma: spelen, pos: verb, en: [to play]}
+  - {lemma: kijken, pos: verb, en: [to look, to watch]}
+  - {lemma: leven, pos: verb, en: [to live]}
+  - {lemma: wonen, pos: verb, en: [to live, to reside]}
+  - {lemma: geloven, pos: verb, en: [to believe]}
+  - {lemma: hopen, pos: verb, en: [to hope]}
+  - {lemma: vragen, pos: verb, en: [to ask]}
+  - {lemma: zoeken, pos: verb, en: [to search, to look for]}
+  - {lemma: betalen, pos: verb, en: [to pay]}
+  - {lemma: kopen, pos: verb, en: [to buy]}
+  - {lemma: eten, pos: verb, en: [to eat]}
+  - {lemma: drinken, pos: verb, en: [to drink]}
+  - {lemma: slapen, pos: verb, en: [to sleep]}
+  - {lemma: lezen, pos: verb, en: [to read]}
+  - {lemma: schrijven, pos: verb, en: [to write]}
+  - {lemma: spreken, pos: verb, en: [to speak]}
+  - {lemma: leren, pos: verb, en: [to learn, to teach]}
+  - {lemma: begrijpen, pos: verb, en: [to understand]}
+  - {lemma: zitten, pos: verb, en: [to sit]}
+  - {lemma: liggen, pos: verb, en: [to lie (be lying)]}
+  - {lemma: lopen, pos: verb, en: [to walk, to run]}
+  - {lemma: rijden, pos: verb, en: [to drive, to ride]}
+  - {lemma: vallen, pos: verb, en: [to fall]}
+  - {lemma: beginnen, pos: verb, en: [to begin, to start]}
+  - {lemma: sterven, pos: verb, en: [to die]}
+  - {lemma: verdwijnen, pos: verb, en: [to disappear]}
+  - {lemma: vertrekken, pos: verb, en: [to leave, to depart]}
+  - {lemma: ontsnappen, pos: verb, en: [to escape]}
+  - {lemma: weggaan, pos: verb, en: [to go away, to leave]}
+  - {lemma: terugkomen, pos: verb, en: [to come back]}
+  - {lemma: binnenkomen, pos: verb, en: [to come in, to enter]}
+  - {lemma: opstaan, pos: verb, en: [to get up, to stand up]}
+  - {lemma: vliegen, pos: verb, en: [to fly]}
+  - {lemma: zwemmen, pos: verb, en: [to swim]}
+  - {lemma: veranderen, pos: verb, en: [to change]}
+  - {lemma: stoppen, pos: verb, en: [to stop]}
+  - {lemma: trouwen, pos: verb, en: [to marry, to get married]}
+  - {lemma: groeien, pos: verb, en: [to grow]}
+  - {lemma: geraken, pos: verb, en: [to get, to reach]}
+  - {lemma: verliezen, pos: verb, en: [to lose]}
+  - {lemma: vergeten, pos: verb, en: [to forget]}
+  - {lemma: gebruiken, pos: verb, en: [to use]}
+  - {lemma: noemen, pos: verb, en: [to call, to name]}
+  - {lemma: zetten, pos: verb, en: [to put, to set]}
+  - {lemma: leggen, pos: verb, en: [to lay, to put]}
+  - {lemma: sturen, pos: verb, en: [to send, to steer]}
+  - {lemma: missen, pos: verb, en: [to miss]}
+  - {lemma: wensen, pos: verb, en: [to wish]}
+  - {lemma: hangen, pos: verb, en: [to hang]}
+  - {lemma: bellen, pos: verb, en: [to call, to ring]}
+  - {lemma: winnen, pos: verb, en: [to win]}
+  - {lemma: dragen, pos: verb, en: [to carry, to wear]}
+  - {lemma: openen, pos: verb, en: [to open]}
+  - {lemma: sluiten, pos: verb, en: [to close]}
+  - {lemma: rennen, pos: verb, en: [to run]}
+  - {lemma: koken, pos: verb, en: [to cook, to boil]}
+  - {lemma: studeren, pos: verb, en: [to study]}
+  - {lemma: reizen, pos: verb, en: [to travel]}
+  - {lemma: dansen, pos: verb, en: [to dance]}
+  - {lemma: zingen, pos: verb, en: [to sing]}
+  - {lemma: fietsen, pos: verb, en: [to cycle]}
+  - {lemma: wandelen, pos: verb, en: [to walk, to hike]}
