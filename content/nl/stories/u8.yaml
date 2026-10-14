@@ -1,0 +1,52 @@
+# Graded mini-stories for unit u8 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u8-concert
+  unit: u8
+  title: {nl: "Het concert van Sanne", en: "Sanne's concert"}
+  sentences:
+    - {nl: "Sanne speelt al tien jaar piano.", en: "Sanne has been playing the piano for ten years."}
+    - {nl: "Vanavond geeft ze haar eerste concert.", en: "Tonight she's giving her first concert."}
+    - {nl: "Haar hele familie komt, en ze is heel zenuwachtig.", en: "Her whole family is coming, and she's very nervous."}
+    - {nl: "Ze begint met een lied van haar opa.", en: "She starts with a song by her grandpa."}
+    - {nl: "Haar vingers zijn koud, maar ze speelt goed.", en: "Her fingers are cold, but she plays well."}
+    - {nl: "Aan het eind staan de mensen op.", en: "At the end the people stand up."}
+    - {nl: "Sanne lacht, en haar moeder huilt.", en: "Sanne laughs, and her mother cries."}
+  new_words: [eind]
+  questions:
+    - q: {en: "How long has Sanne been playing the piano?"}
+      options: [{en: "Ten years"}, {en: "Two years"}, {en: "One year"}]
+      answer: 0
+    - q: {en: "What does she start with?"}
+      options: ["met een lied van haar opa", "met een lied van haar vader", "met een lied van haar moeder"]
+      answer: 0
+    - q: {en: "What do the people do at the end?"}
+      options: [{en: "They stand up"}, {en: "They go home"}, {en: "They sing a song"}]
+      answer: 0
+    - q: {en: "Who cries?"}
+      prompt: "Wie huilt er?"
+      options: ["de moeder van Sanne", "Sanne", "de opa van Sanne"]
+      answer: 0
+
+- id: u8-droom
+  unit: u8
+  title: {nl: "Bram vliegt", en: "Bram flies"}
+  new_words: [toen]
+  sentences:
+    - {nl: "Bram droomde dat hij een vogel was.", en: "Bram dreamt that he was a bird."}
+    - {nl: "Hij vloog over de stad.", en: "He flew over the city."}
+    - {nl: "Hij zag de school en het huis van oma.", en: "He saw the school and grandma's house."}
+    - {nl: "Toen viel hij in een rivier vol vissen.", en: "Then he fell into a river full of fish."}
+    - {nl: "De vissen lachten en praatten met hem!", en: "The fish laughed and talked to him!"}
+    - {nl: "Bram wilde praten, maar hij had geen stem.", en: "Bram wanted to talk, but he had no voice."}
+    - {nl: "Toen hoorde hij mama: \"Bram, opstaan!\"", en: "Then he heard his mum: \"Bram, get up!\""}
+    - {nl: "Bij het ontbijt vertelde Bram over de vissen.", en: "At breakfast Bram told everyone about the fish."}
+  questions:
+    - q: {en: "What was Bram in the dream?"}
+      options: [{en: "A bird"}, {en: "A fish"}, {en: "A horse"}]
+      answer: 0
+    - q: {en: "Where did he fall?"}
+      prompt: "Waar viel hij in?"
+      options: ["in een rivier", "in de zee", "in een bos"]
+      answer: 0
+    - q: {en: "Who woke him up?"}
+      options: [{en: "His mum"}, {en: "His grandma"}, {en: "A fish"}]
+      answer: 0

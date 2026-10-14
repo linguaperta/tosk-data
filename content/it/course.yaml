@@ -8,7 +8,7 @@
 # introduces tense:{T} automatically). Each unit's skills require the previous unit's grammar, so
 # every later skill allows everything taught before it.
 id: it
-version: 1.1.0
+version: 1.2.0
 title: {en: Italian, nl: Italiaans}
 description:
   en: Italian from the basics, with a strong focus on verbs and conjugation.
@@ -27,6 +27,31 @@ tense_labels:
   futuro: {en: future, nl: toekomende tijd}
   passato_prossimo: {en: present perfect (passato prossimo), nl: voltooid tegenwoordige tijd (passato prossimo)}
 articles: [il, lo, la, "l'"]
+
+# Inflection tables of non-verbs (duelingo/docs/ARCHITECTURE.md, "Inflection tables"; the importer
+# fills them from Wiktionary, pipeline/pipeline/inflect.py). Skills train them with
+# `inflections: {table: T}` (facet #infl:T). `agreement`: the cell follows from the noun, so in a
+# sentence every other cell is wrong (una casa bella: bello/belli/belle are wrong options).
+inflection_tables:
+  number:
+    title: {en: singular and plural, nl: enkelvoud en meervoud}
+    pos: [noun]
+    cells: [sg, pl]
+    base: sg
+    labels:
+      sg: {en: singular, nl: enkelvoud}
+      pl: {en: plural, nl: meervoud}
+  agreement:
+    title: {en: gender and number, nl: geslacht en getal}
+    pos: [adj, det]
+    cells: [m.sg, f.sg, m.pl, f.pl]
+    base: m.sg
+    agreement: true
+    labels:
+      m.sg: {en: masculine singular, nl: mannelijk enkelvoud}
+      f.sg: {en: feminine singular, nl: vrouwelijk enkelvoud}
+      m.pl: {en: masculine plural, nl: mannelijk meervoud}
+      f.pl: {en: feminine plural, nl: vrouwelijk meervoud}
 
 base_features: ["tense:presente"]
 feature_detectors:
@@ -212,6 +237,14 @@ units:
         introduces: [modal]
         verbs: {tense: presente, lemmas: [potere, dovere, volere, sapere]}
         exercises: [conj_grid, cloze, spot_error, transform]
+      - id: plurals
+        kind: grammar
+        title: {en: "One and many: plurals", nl: "Een en meer: het meervoud"}
+        icon: grammar
+        requires: [family, home]
+        facet: infl
+        inflections: {table: number}      # #infl:number of nouns with a plural (not città, caffè)
+        items: {pos: noun, tags: [people, food, home, family], top: 30}
 
   - id: u4
     title: {en: Describing things, nl: Dingen beschrijven}
@@ -222,6 +255,7 @@ units:
         icon: grammar
         requires: [pronouns, modal-verbs]
         items: {tags: [adjectives]}
+        inflections: {table: agreement}   # + #infl:agreement (bello, bella, belli, belle)
       - id: body
         kind: vocab
         title: {en: Body and health, nl: Lichaam en gezondheid}
@@ -246,6 +280,7 @@ units:
         icon: person
         requires: [adjectives]
         items: {tags: [possessives]}
+        inflections: {table: agreement}   # + #infl:agreement (mio, mia, miei, mie)
 
   - id: u5
     title: {en: Around town, nl: In de stad}

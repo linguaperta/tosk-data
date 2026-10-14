@@ -8,7 +8,7 @@
 # introduces tense:{T} automatically). Each unit's skills require the previous unit's grammar, so
 # every later skill allows everything taught before it.
 id: nl
-version: 1.1.0
+version: 1.2.0
 title: {en: Dutch, nl: Nederlands}
 description:
   en: Dutch from the basics, with a strong focus on verbs, the perfect tense and de/het.
@@ -29,6 +29,46 @@ tense_labels:
   verleden_tijd: {en: simple past, nl: verleden tijd}
   perfectum: {en: present perfect, nl: voltooid tegenwoordige tijd}
 articles: [de, het]
+
+# Inflection tables of non-verbs (duelingo/docs/ARCHITECTURE.md, "Inflection tables"; the importer
+# fills them from Wiktionary, pipeline/pipeline/inflect.py). Skills train them with
+# `inflections: {table: T}` (facet #infl:T). `agreement`: the cell follows from the sentence (the
+# -e before a noun), so in a sentence the other cell is wrong.
+inflection_tables:
+  number:
+    title: {en: singular and plural, nl: enkelvoud en meervoud}
+    pos: [noun]
+    cells: [sg, pl]
+    base: sg
+    labels:
+      sg: {en: singular, nl: enkelvoud}
+      pl: {en: plural, nl: meervoud}
+  agreement:
+    title: {en: adjective ending, nl: buigings-e}
+    pos: [adj]
+    cells: [base, infl]
+    base: base
+    agreement: true
+    labels:
+      base: {en: without -e, nl: zonder -e}
+      infl: {en: with -e, nl: met -e}
+  comparison:
+    title: {en: comparison, nl: trappen van vergelijking}
+    pos: [adj]
+    cells: [base, comparative, superlative]
+    base: base
+    labels:
+      base: {en: base form, nl: stellende trap}
+      comparative: {en: comparative, nl: vergrotende trap}
+      superlative: {en: superlative, nl: overtreffende trap}
+  diminutive:
+    title: {en: diminutive, nl: verkleinwoord}
+    pos: [noun]
+    cells: [sg, dim]
+    base: sg
+    labels:
+      sg: {en: noun, nl: zelfstandig naamwoord}
+      dim: {en: diminutive, nl: verkleinwoord}
 
 base_features: ["tense:tegenwoordige_tijd"]
 feature_detectors:
@@ -177,6 +217,14 @@ units:
         requires: [everyday-verbs]
         introduces: [separable]
         items: {tags: [separable]}
+      - id: plurals
+        kind: grammar
+        title: {en: "One and many: plurals", nl: "Een en meer: het meervoud"}
+        icon: grammar
+        requires: [family]
+        facet: infl
+        inflections: {table: number}      # #infl:number: katten, huizen, auto's
+        items: {pos: noun, tags: [people, food, home, family], top: 30}
 
   - id: u4
     title: {en: The perfect tense, nl: De voltooide tijd}
@@ -218,6 +266,7 @@ units:
         icon: grammar
         requires: [perfectum-zijn]
         items: {tags: [adjectives]}
+        inflections: {table: agreement}   # + #infl:agreement (groot / grote)
       - id: body
         kind: vocab
         title: {en: Body and health, nl: Lichaam en gezondheid}
@@ -242,6 +291,14 @@ units:
         icon: person
         requires: [adjectives]
         items: {tags: [possessives]}
+      - id: diminutives
+        kind: grammar
+        title: {en: "Small words: diminutives", nl: "Verkleinwoorden"}
+        icon: grammar
+        requires: [adjectives]
+        facet: infl
+        inflections: {table: diminutive}  # #infl:diminutive: huisje, boompje, kopje
+        items: {pos: noun, tags: [people, food, home, family, time, body], top: 25}
 
   - id: u6
     title: {en: Around town, nl: In de stad}

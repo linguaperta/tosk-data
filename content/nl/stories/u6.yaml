@@ -1,0 +1,53 @@
+# Graded mini-stories for unit u6 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u6-markt
+  unit: u6
+  title: {nl: "Op de markt", en: "At the market"}
+  new_words: [kosten]
+  sentences:
+    - {nl: "Op zaterdag gaat Emma naar de markt.", en: "On Saturday Emma goes to the market."}
+    - {nl: "Ze koopt groente, fruit en kaas.", en: "She buys vegetables, fruit and cheese."}
+    - {nl: "\"Wat kosten de aardbeien?\" vraagt ze.", en: "\"How much are the strawberries?\" she asks."}
+    - {nl: "\"Vijf euro,\" zegt de verkoper.", en: "\"Five euros,\" the salesman says."}
+    - {nl: "Dat vindt Emma duur, maar ze koopt ze toch.", en: "Emma thinks that's expensive, but she buys them anyway."}
+    - {nl: "Dan haalt ze brood in de supermarkt.", en: "Then she gets bread at the supermarket."}
+    - {nl: "Met een volle tas fietst ze naar huis.", en: "With a full bag she cycles home."}
+  questions:
+    - q: {en: "Where does Emma go on Saturday?"}
+      options: ["naar de markt", "naar de bioscoop", "naar het station"]
+      answer: 0
+    - q: {en: "How much are the strawberries?"}
+      options: [{en: "Five euros"}, {en: "Two euros"}, {en: "Ten euros"}]
+      answer: 0
+    - q: {en: "Does Emma buy the strawberries?"}
+      options: [{en: "Yes, even though they're expensive"}, {en: "No, they're too expensive"}, {en: "No, there aren't any"}]
+      answer: 0
+    - q: {en: "How does Emma go home?"}
+      options: [{en: "By bike"}, {en: "By bus"}, {en: "By car"}]
+      answer: 0
+
+- id: u6-eiland
+  unit: u6
+  title: {nl: "Naar het eiland", en: "To the island"}
+  sentences:
+    - {nl: "Daan en Sophie gaan op vakantie naar een eiland.", en: "Daan and Sophie are going on holiday to an island."}
+    - {nl: "Eerst nemen ze de trein en dan de boot.", en: "First they take the train and then the boat."}
+    - {nl: "Daan heeft de kaartjes en Sophie heeft de koffers.", en: "Daan has the tickets and Sophie has the suitcases."}
+    - {nl: "De boot is vol met toeristen.", en: "The boat is full of tourists."}
+    - {nl: "Het eiland is klein, maar het strand is heel mooi.", en: "The island is small, but the beach is very beautiful."}
+    - {nl: "Hun hotel is vlak bij de zee.", en: "Their hotel is right next to the sea."}
+    - {nl: "\"Morgen gaan we fietsen!\" zegt Sophie.", en: "\"Tomorrow we're going cycling!\" Sophie says."}
+  new_words: [vlak]
+  questions:
+    - q: {en: "How do they travel to the island?"}
+      options: [{en: "By train and boat"}, {en: "By plane"}, {en: "By car and boat"}]
+      answer: 0
+    - q: {en: "Who has the tickets?"}
+      prompt: "Wie heeft de kaartjes?"
+      options: ["Daan", "Sophie", "de toeristen"]
+      answer: 0
+    - q: {en: "Where is their hotel?"}
+      options: [{en: "Right next to the sea"}, {en: "In the city centre"}, {en: "Near the station"}]
+      answer: 0
+    - q: {en: "What will they do tomorrow?"}
+      options: [{en: "Go cycling"}, {en: "Go swimming"}, {en: "Go home"}]
+      answer: 0

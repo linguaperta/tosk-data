@@ -1,0 +1,49 @@
+# Graded mini-stories for unit u3 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u3-oma
+  unit: u3
+  title: {nl: "Zaterdag bij oma", en: "Saturday at grandma's"}
+  sentences:
+    - {nl: "Op zaterdag gaat Lisa altijd naar oma.", en: "On Saturdays Lisa always goes to her grandma's."}
+    - {nl: "Oma woont in Utrecht, in een huis met een tuin.", en: "Grandma lives in Utrecht, in a house with a garden."}
+    - {nl: "Ze drinken thee en praten over de familie.", en: "They drink tea and talk about the family."}
+    - {nl: "Oma vertelt over opa en over haar bruiloft.", en: "Grandma tells her about grandpa and about her wedding."}
+    - {nl: "Om zes uur kookt oma en Lisa helpt.", en: "At six o'clock grandma cooks and Lisa helps."}
+    - {nl: "Dan eten ze en kijken ze televisie.", en: "Then they eat and watch television."}
+    - {nl: "Om negen uur gaat Lisa naar huis.", en: "At nine o'clock Lisa goes home."}
+  questions:
+    - q: {en: "When does Lisa visit her grandma?"}
+      prompt: "Wanneer gaat Lisa naar oma?"
+      options: ["op zaterdag", "op zondag", "op maandag"]
+      answer: 0
+    - q: {en: "What do they talk about?"}
+      options: [{en: "The family"}, {en: "School"}, {en: "The garden"}]
+      answer: 0
+    - q: {en: "What time does Lisa go home?"}
+      prompt: "Hoe laat gaat Lisa naar huis?"
+      options: ["om negen uur", "om zes uur", "om tien uur"]
+      answer: 0
+
+- id: u3-te-laat
+  unit: u3
+  title: {nl: "Te laat", en: "Too late"}
+  sentences:
+    - {nl: "Daan staat om zes uur op.", en: "Daan gets up at six o'clock."}
+    - {nl: "Hij wast zich en drinkt koffie.", en: "He washes and drinks coffee."}
+    - {nl: "Dan zoekt hij de sleutel.", en: "Then he looks for the key."}
+    - {nl: "Niet in de keuken, niet in de kamer...", en: "Not in the kitchen, not in the living room..."}
+    - {nl: "Om half negen vindt hij de sleutel in de badkamer.", en: "At half past eight he finds the key in the bathroom."}
+    - {nl: "Hij fietst heel hard, maar hij komt te laat.", en: "He cycles very fast, but he's late."}
+    - {nl: "Morgen staat Daan vroeg op!", en: "Tomorrow Daan will get up early!"}
+  new_words: [hard]
+  questions:
+    - q: {en: "What time does Daan get up?"}
+      prompt: "Hoe laat staat Daan op?"
+      options: ["om zes uur", "om half negen", "om acht uur"]
+      answer: 0
+    - q: {en: "Where is the key?"}
+      prompt: "Waar is de sleutel?"
+      options: ["in de badkamer", "in de keuken", "in de kamer"]
+      answer: 0
+    - q: {en: "What will Daan do tomorrow?"}
+      options: [{en: "Get up early"}, {en: "Stay in bed"}, {en: "Take the bus"}]
+      answer: 0

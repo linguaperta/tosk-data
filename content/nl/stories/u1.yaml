@@ -1,0 +1,49 @@
+# Graded mini-stories for unit u1 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u1-familie
+  unit: u1
+  title: {nl: "De familie van Lieke", en: "Lieke's family"}
+  new_words: [zijn]
+  sentences:
+    - {nl: "Dit is Lieke.", en: "This is Lieke."}
+    - {nl: "Lieke is een meisje uit Utrecht.", en: "Lieke is a girl from Utrecht."}
+    - {nl: "Hier is de familie van Lieke: een vader, een moeder en een broer.", en: "Here is Lieke's family: a father, a mother and a brother."}
+    - {nl: "De vader is Pieter en de moeder is Emma.", en: "The father is Pieter and the mother is Emma."}
+    - {nl: "De broer is Bram, en hij is nog een kind.", en: "The brother is Bram, and he's still a child."}
+    - {nl: "En wie is die man daar?", en: "And who is that man over there?"}
+    - {nl: "Dat is Jan, een vriend van Pieter.", en: "That's Jan, a friend of Pieter's."}
+  questions:
+    - q: {en: "Where is Lieke from?"}
+      options: ["uit Utrecht", "uit Amsterdam", "uit Rotterdam"]
+      answer: 0
+    - q: {en: "Who is Bram?"}
+      prompt: "Wie is Bram?"
+      options: ["de broer van Lieke", "de vader van Lieke", "een vriend van Pieter"]
+      answer: 0
+    - q: {en: "Who is the man over there?"}
+      prompt: "Wie is die man?"
+      options: ["een vriend van Pieter", "de broer van Emma", "de vader van Lieke"]
+      answer: 0
+
+- id: u1-tom-helpt
+  unit: u1
+  title: {nl: "Tom helpt", en: "Tom helps"}
+  sentences:
+    - {nl: "Daan praat met Tom.", en: "Daan is talking to Tom."}
+    - {nl: "\"Ik denk aan een meisje,\" vertelt Daan.", en: "\"I'm thinking about a girl,\" Daan says."}
+    - {nl: "\"Wie? Ken ik het meisje?\"", en: "\"Who? Do I know the girl?\""}
+    - {nl: "\"Ja, je kent Eva wel.\"", en: "\"Yes, you know Eva.\""}
+    - {nl: "\"Eva? Dan help ik je!\"", en: "\"Eva? Then I'll help you!\""}
+    - {nl: "Tom praat met Eva en vertelt over Daan.", en: "Tom talks to Eva and tells her about Daan."}
+    - {nl: "En wat gebeurt er dan?", en: "And what happens then?"}
+    - {nl: "En Eva? Zij denkt ook aan Daan!", en: "And Eva? She's thinking about Daan too!"}
+  questions:
+    - q: {en: "Who is Daan thinking about?"}
+      options: ["Eva", "Sanne", "Lisa"]
+      answer: 0
+    - q: {en: "Who helps Daan?"}
+      prompt: "Wie helpt Daan?"
+      options: ["Tom", "Eva", "de vader van Daan"]
+      answer: 0
+    - q: {en: "Who is Eva thinking about?"}
+      options: ["Daan", "Tom", "Bram"]
+      answer: 0

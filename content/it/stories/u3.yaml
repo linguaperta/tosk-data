@@ -1,0 +1,51 @@
+# Graded mini-stories for unit u3 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u3-compleanno
+  unit: u3
+  title: {it: "Domenica a casa", en: "Sunday at home", nl: "Zondag thuis"}
+  sentences:
+    - {it: "Oggi è domenica.", en: "Today is Sunday.", nl: "Vandaag is het zondag."}
+    - {it: "Giulia è a casa con la nonna.", en: "Giulia is at home with her grandmother.", nl: "Giulia is thuis met haar oma."}
+    - {it: "La nonna prepara una torta per il compleanno di Marco.", en: "Grandma is making a cake for Marco's birthday.", nl: "Oma maakt een taart voor de verjaardag van Marco."}
+    - {it: "Giulia vuole aiutare.", en: "Giulia wants to help.", nl: "Giulia wil helpen."}
+    - {it: "Lei lava i piatti e pulisce il tavolo.", en: "She washes the dishes and cleans the table.", nl: "Ze wast de borden af en maakt de tafel schoon."}
+    - {it: "Poi arriva Marco con la mamma e il papà.", en: "Then Marco arrives with his mum and dad.", nl: "Dan komt Marco met zijn mama en papa."}
+    - {it: "Loro mangiano la torta e cantano.", en: "They eat the cake and sing.", nl: "Ze eten de taart en zingen."}
+  questions:
+    - q: {en: "What day is it?", nl: "Welke dag is het?"}
+      prompt: "Che giorno è oggi?"
+      options: ["domenica", "sabato", "lunedì"]
+      answer: 0
+    - q: {en: "Whose birthday is it?", nl: "Wie is er jarig?"}
+      options: ["Marco", "Giulia", "la nonna"]
+      answer: 0
+    - q: {en: "How does Giulia help?", nl: "Hoe helpt Giulia?"}
+      options: [{en: "She washes the dishes", nl: "Ze wast af"}, {en: "She makes the cake", nl: "Ze maakt de taart"}, {en: "She buys the bread", nl: "Ze koopt het brood"}]
+      answer: 0
+    - q: {en: "Who comes with Marco?", nl: "Wie komen er met Marco mee?"}
+      prompt: "Chi arriva con Marco?"
+      options: ["la mamma e il papà", "il nonno e la nonna", "lo zio e la zia"]
+      answer: 0
+
+- id: u3-chiavi
+  unit: u3
+  new_words: [ritardo]
+  title: {it: "Dove sono le chiavi?", en: "Where are the keys?", nl: "Waar zijn de sleutels?"}
+  sentences:
+    - {it: "È lunedì mattina e Paolo è in ritardo.", en: "It's Monday morning and Paolo is late.", nl: "Het is maandagochtend en Paolo is laat."}
+    - {it: "Deve uscire, ma non trova le chiavi.", en: "He has to go out, but he can't find the keys.", nl: "Hij moet weg, maar hij kan de sleutels niet vinden."}
+    - {it: "Cerca in cucina, in camera e in bagno.", en: "He looks in the kitchen, in the bedroom and in the bathroom.", nl: "Hij zoekt in de keuken, in de slaapkamer en in de badkamer."}
+    - {it: "Le chiavi non ci sono!", en: "The keys aren't there!", nl: "De sleutels liggen er niet!"}
+    - {it: "Poi Elena dice: \"Paolo, le chiavi sono qui, in giardino!\"", en: "Then Elena says: \"Paolo, the keys are here, in the garden!\"", nl: "Dan zegt Elena: \"Paolo, de sleutels liggen hier, in de tuin!\""}
+    - {it: "Paolo prende le chiavi e parte.", en: "Paolo takes the keys and leaves.", nl: "Paolo pakt de sleutels en vertrekt."}
+    - {it: "Ma adesso è molto tardi!", en: "But now it's very late!", nl: "Maar nu is het heel laat!"}
+  questions:
+    - q: {en: "What can't Paolo find?", nl: "Wat kan Paolo niet vinden?"}
+      options: [{en: "The keys", nl: "De sleutels"}, {en: "The phone", nl: "De telefoon"}, {en: "His book", nl: "Zijn boek"}]
+      answer: 0
+    - q: {en: "Where are the keys?", nl: "Waar liggen de sleutels?"}
+      prompt: "Dove sono le chiavi?"
+      options: ["in giardino", "in cucina", "in bagno"]
+      answer: 0
+    - q: {en: "What day is it?", nl: "Welke dag is het?"}
+      options: ["lunedì", "domenica", "venerdì"]
+      answer: 0

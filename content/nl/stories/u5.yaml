@@ -1,0 +1,45 @@
+# Graded mini-stories for unit u5 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u5-dokter
+  unit: u5
+  title: {nl: "Bij de dokter", en: "At the doctor's"}
+  sentences:
+    - {nl: "Tom voelt zich niet goed.", en: "Tom doesn't feel well."}
+    - {nl: "Zijn hoofd doet pijn en hij heeft koorts.", en: "His head hurts and he has a fever."}
+    - {nl: "Hij gaat meteen naar de dokter.", en: "He goes to the doctor straight away."}
+    - {nl: "De dokter kijkt in zijn mond en in zijn oren.", en: "The doctor looks in his mouth and in his ears."}
+    - {nl: "\"U bent ziek,\" zegt de dokter. \"U moet in bed blijven.\"", en: "\"You're ill,\" the doctor says. \"You have to stay in bed.\""}
+    - {nl: "Tom krijgt een medicijn voor de koorts.", en: "Tom gets some medicine for the fever."}
+    - {nl: "Drie dagen later voelt hij zich eindelijk goed.", en: "Three days later he finally feels well."}
+  questions:
+    - q: {en: "What's wrong with Tom?"}
+      options: [{en: "A headache and a fever"}, {en: "A sore knee"}, {en: "Toothache"}]
+      answer: 0
+    - q: {en: "What does the doctor say?"}
+      options: ["U moet in bed blijven.", "U moet naar huis gaan.", "U bent niet ziek."]
+      answer: 0
+    - q: {en: "When does Tom feel well again?"}
+      options: [{en: "Three days later"}, {en: "The next day"}, {en: "After a week"}]
+      answer: 0
+
+- id: u5-zusje
+  unit: u5
+  title: {nl: "Mijn kleine zus", en: "My little sister"}
+  sentences:
+    - {nl: "Mijn zus is zes jaar oud.", en: "My sister is six years old."}
+    - {nl: "Ze is klein, maar heel slim.", en: "She's small, but very clever."}
+    - {nl: "Ze heeft blauwe ogen en een lieve glimlach.", en: "She has blue eyes and a sweet smile."}
+    - {nl: "Ze houdt van roze en geel.", en: "She loves pink and yellow."}
+    - {nl: "Ze praat altijd heel snel.", en: "She always talks very fast."}
+    - {nl: "Soms is ze erg druk, en soms is ze moe.", en: "Sometimes she's very lively, and sometimes she's tired."}
+    - {nl: "Maar ik vind haar echt lief.", en: "But I think she's really sweet."}
+  questions:
+    - q: {en: "How old is the little sister?"}
+      options: [{en: "Six"}, {en: "Five"}, {en: "Seven"}]
+      answer: 0
+    - q: {en: "What colour are her eyes?"}
+      prompt: "Wat is de kleur van haar ogen?"
+      options: ["blauw", "bruin", "groen"]
+      answer: 0
+    - q: {en: "How does she talk?"}
+      options: [{en: "Very fast"}, {en: "Very slowly"}, {en: "Not much"}]
+      answer: 0

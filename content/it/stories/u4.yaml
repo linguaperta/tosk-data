@@ -1,0 +1,51 @@
+# Graded mini-stories for unit u4 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u4-malata
+  unit: u4
+  title: {it: "Anna è malata", en: "Anna is ill", nl: "Anna is ziek"}
+  sentences:
+    - {it: "Oggi Anna non sta bene.", en: "Anna isn't well today.", nl: "Anna voelt zich vandaag niet goed."}
+    - {it: "Ha la febbre e sta a letto.", en: "She has a fever and stays in bed.", nl: "Ze heeft koorts en blijft in bed."}
+    - {it: "Sua madre porta una medicina e un tè caldo.", en: "Her mother brings some medicine and a hot tea.", nl: "Haar moeder brengt een medicijn en een warme thee."}
+    - {it: "Anna beve il tè e dorme molto.", en: "Anna drinks the tea and sleeps a lot.", nl: "Anna drinkt de thee en slaapt veel."}
+    - {it: "La sera il suo amico Marco telefona.", en: "In the evening her friend Marco phones.", nl: "'s Avonds belt haar vriend Marco."}
+    - {it: "\"Come stai?\" \"Sono stanca, ma sto già meglio.\"", en: "\"How are you?\" \"I'm tired, but I'm already better.\"", nl: "\"Hoe gaat het?\" \"Ik ben moe, maar het gaat al beter.\""}
+    - {it: "Il giorno dopo, Anna è di nuovo felice.", en: "The next day, Anna is happy again.", nl: "De volgende dag is Anna weer blij."}
+  new_words: [meglio]
+  questions:
+    - q: {en: "What's wrong with Anna?", nl: "Wat heeft Anna?"}
+      options: [{en: "She has a fever", nl: "Ze heeft koorts"}, {en: "Her foot hurts", nl: "Ze heeft pijn aan haar voet"}, {en: "She has a stomach ache", nl: "Ze heeft buikpijn"}]
+      answer: 0
+    - q: {en: "What does her mother bring?", nl: "Wat brengt haar moeder?"}
+      options: ["una medicina e un tè", "un caffè e una torta", "acqua fredda"]
+      answer: 0
+    - q: {en: "Who phones in the evening?", nl: "Wie belt er 's avonds?"}
+      prompt: "Chi telefona la sera?"
+      options: ["Marco", "la nonna", "il padre"]
+      answer: 0
+
+- id: u4-casa-nuova
+  unit: u4
+  title: {it: "La casa nuova", en: "The new house", nl: "Het nieuwe huis"}
+  sentences:
+    - {it: "Luca ha una casa nuova.", en: "Luca has a new house.", nl: "Luca heeft een nieuw huis."}
+    - {it: "È piccola, ma molto bella.", en: "It's small, but very nice.", nl: "Het is klein, maar heel mooi."}
+    - {it: "La porta è rossa e la finestra è grande.", en: "The door is red and the window is big.", nl: "De deur is rood en het raam is groot."}
+    - {it: "In cucina c'è un tavolo bianco.", en: "In the kitchen there's a white table.", nl: "In de keuken staat een witte tafel."}
+    - {it: "Il letto è vecchio, ma va ancora bene.", en: "The bed is old, but it's still fine.", nl: "Het bed is oud, maar het is nog goed."}
+    - {it: "Luca è felice: finalmente vive da solo.", en: "Luca is happy: he finally lives on his own.", nl: "Luca is blij: eindelijk woont hij alleen."}
+    - {it: "Stasera i suoi amici vengono a vedere la casa.", en: "Tonight his friends are coming to see the house.", nl: "Vanavond komen zijn vrienden het huis bekijken."}
+  questions:
+    - q: {en: "What is Luca's house like?", nl: "Hoe is het huis van Luca?"}
+      prompt: "Com'è la casa di Luca?"
+      options: ["piccola ma bella", "grande e vecchia", "brutta e piccola"]
+      answer: 0
+    - q: {en: "What colour is the door?", nl: "Welke kleur heeft de deur?"}
+      prompt: "Di che colore è la porta?"
+      options: ["rossa", "bianca", "verde"]
+      answer: 0
+    - q: {en: "Why is Luca happy?", nl: "Waarom is Luca blij?"}
+      options: [{en: "He finally lives on his own", nl: "Hij woont eindelijk alleen"}, {en: "He has a new job", nl: "Hij heeft een nieuwe baan"}, {en: "His bed is new", nl: "Zijn bed is nieuw"}]
+      answer: 0
+    - q: {en: "Who is coming tonight?", nl: "Wie komen er vanavond?"}
+      options: [{en: "His friends", nl: "Zijn vrienden"}, {en: "His parents", nl: "Zijn ouders"}, {en: "His sister", nl: "Zijn zus"}]
+      answer: 0

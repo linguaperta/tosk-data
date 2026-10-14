@@ -1,0 +1,48 @@
+# Graded mini-stories for unit u1 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u1-piacere
+  unit: u1
+  title: {it: "Piacere!", en: "Nice to meet you!", nl: "Aangenaam!"}
+  sentences:
+    - {it: "Buongiorno, io sono Marco.", en: "Good morning, I'm Marco.", nl: "Goedemorgen, ik ben Marco."}
+    - {it: "Sono uno studente.", en: "I'm a student.", nl: "Ik ben student."}
+    - {it: "Anna è un'amica.", en: "Anna is a friend.", nl: "Anna is een vriendin."}
+    - {it: "Lei ha un fratello e una sorella.", en: "She has a brother and a sister.", nl: "Ze heeft een broer en een zus."}
+    - {it: "Il fratello è Luca: lui è insegnante.", en: "Her brother is Luca: he's a teacher.", nl: "Haar broer is Luca: hij is leraar."}
+    - {it: "La sorella è Giulia, una bambina.", en: "Her sister is Giulia, a little girl.", nl: "Haar zus is Giulia, een klein meisje."}
+    - {it: "Ciao, Giulia! Piacere!", en: "Hi, Giulia! Nice to meet you!", nl: "Hoi, Giulia! Aangenaam!"}
+  questions:
+    - q: {en: "Who is Marco?", nl: "Wie is Marco?"}
+      prompt: "Chi è Marco?"
+      options: ["uno studente", "un insegnante", "un bambino"]
+      answer: 0
+    - q: {en: "Who is Luca?", nl: "Wie is Luca?"}
+      prompt: "Chi è Luca?"
+      options: ["il fratello di Anna", "il padre di Anna", "lo zio di Anna"]
+      answer: 0
+    - q: {en: "How many siblings does Anna have?", nl: "Hoeveel broers en zussen heeft Anna?"}
+      options: [{en: "Two", nl: "Twee"}, {en: "One", nl: "Eén"}, {en: "Three", nl: "Drie"}]
+      answer: 0
+      why: {en: "A brother (Luca) and a sister (Giulia).", nl: "Een broer (Luca) en een zus (Giulia)."}
+
+- id: u1-famiglia
+  unit: u1
+  title: {it: "La famiglia di Paolo", en: "Paolo's family", nl: "Het gezin van Paolo"}
+  sentences:
+    - {it: "Ecco Paolo con la famiglia.", en: "Here is Paolo with his family.", nl: "Hier is Paolo met zijn gezin."}
+    - {it: "Paolo è il padre.", en: "Paolo is the father.", nl: "Paolo is de vader."}
+    - {it: "La moglie è Elena.", en: "His wife is Elena.", nl: "Zijn vrouw is Elena."}
+    - {it: "Loro hanno un figlio e una figlia.", en: "They have a son and a daughter.", nl: "Ze hebben een zoon en een dochter."}
+    - {it: "Il figlio è un ragazzo, la figlia è una bambina.", en: "The son is a boy, the daughter is a little girl.", nl: "De zoon is een jongen, de dochter is een klein meisje."}
+    - {it: "Anche lo zio Roberto è qui.", en: "Uncle Roberto is here too.", nl: "Oom Roberto is er ook."}
+    - {it: "Lo zio non ha moglie e non ha figli.", en: "The uncle has no wife and no children.", nl: "De oom heeft geen vrouw en geen kinderen."}
+  questions:
+    - q: {en: "Who is Elena?", nl: "Wie is Elena?"}
+      prompt: "Chi è Elena?"
+      options: ["la moglie di Paolo", "la figlia di Paolo", "la sorella di Paolo"]
+      answer: 0
+    - q: {en: "How many children do Paolo and Elena have?", nl: "Hoeveel kinderen hebben Paolo en Elena?"}
+      options: [{en: "Two", nl: "Twee"}, {en: "One", nl: "Eén"}, {en: "None", nl: "Geen"}]
+      answer: 0
+    - q: {en: "Does uncle Roberto have children?", nl: "Heeft oom Roberto kinderen?"}
+      options: [{en: "No", nl: "Nee"}, {en: "Yes, a son", nl: "Ja, een zoon"}, {en: "Yes, two", nl: "Ja, twee"}]
+      answer: 0

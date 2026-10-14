@@ -1,0 +1,52 @@
+# Graded mini-stories for unit u5 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u5-treno
+  unit: u5
+  title: {it: "Il treno per Napoli", en: "The train to Naples", nl: "De trein naar Napels"}
+  sentences:
+    - {it: "Sara arriva alla stazione di Roma.", en: "Sara arrives at the station in Rome.", nl: "Sara komt aan op het station van Rome."}
+    - {it: "Il treno per Napoli parte alle dieci.", en: "The train to Naples leaves at ten.", nl: "De trein naar Napels vertrekt om tien uur."}
+    - {it: "Ma Sara non ha il biglietto!", en: "But Sara doesn't have a ticket!", nl: "Maar Sara heeft geen kaartje!"}
+    - {it: "Compra il biglietto e corre al treno.", en: "She buys a ticket and runs to the train.", nl: "Ze koopt een kaartje en rent naar de trein."}
+    - {it: "Il treno è pieno di turisti con le valigie.", en: "The train is full of tourists with suitcases.", nl: "De trein zit vol toeristen met koffers."}
+    - {it: "Sara sta in piedi accanto alla porta.", en: "Sara stands next to the door.", nl: "Sara staat naast de deur."}
+    - {it: "Dalla finestra vede il mare.", en: "From the window she sees the sea.", nl: "Door het raam ziet ze de zee."}
+    - {it: "Il viaggio è molto bello.", en: "The journey is very beautiful.", nl: "De reis is heel mooi."}
+  questions:
+    - q: {en: "When does the train leave?", nl: "Hoe laat vertrekt de trein?"}
+      prompt: "Quando parte il treno?"
+      options: ["alle dieci", "alle otto", "alle undici"]
+      answer: 0
+    - q: {en: "What does Sara have to buy?", nl: "Wat moet Sara kopen?"}
+      options: [{en: "A ticket", nl: "Een kaartje"}, {en: "A suitcase", nl: "Een koffer"}, {en: "A map", nl: "Een kaart"}]
+      answer: 0
+    - q: {en: "Where does Sara stand on the train?", nl: "Waar staat Sara in de trein?"}
+      prompt: "Dove sta Sara?"
+      options: ["accanto alla porta", "accanto alla finestra", "davanti al bar"]
+      answer: 0
+    - q: {en: "What does she see from the window?", nl: "Wat ziet ze door het raam?"}
+      options: ["il mare", "la montagna", "il lago"]
+      answer: 0
+
+- id: u5-zuppa
+  unit: u5
+  title: {it: "La zuppa della nonna", en: "Grandma's soup", nl: "De soep van oma"}
+  sentences:
+    - {it: "La nonna di Giulia prepara la sua zuppa.", en: "Giulia's grandmother is making her soup.", nl: "De oma van Giulia maakt haar soep."}
+    - {it: "Nella pentola mette l'acqua, l'olio e il sale.", en: "She puts the water, the oil and the salt in the pot.", nl: "In de pan doet ze het water, de olie en het zout."}
+    - {it: "Poi mette le carote, la cipolla e l'aglio.", en: "Then she puts in the carrots, the onion and the garlic.", nl: "Dan doet ze de wortels, de ui en de knoflook erin."}
+    - {it: "Giulia ha fame e aspetta in cucina.", en: "Giulia is hungry and waits in the kitchen.", nl: "Giulia heeft honger en wacht in de keuken."}
+    - {it: "\"Nonna, quando è pronta?\"", en: "\"Grandma, when is it ready?\"", nl: "\"Oma, wanneer is het klaar?\""}
+    - {it: "\"Ancora dieci minuti!\"", en: "\"Ten more minutes!\"", nl: "\"Nog tien minuten!\""}
+    - {it: "Finalmente la zuppa è sul tavolo, con il pane.", en: "Finally the soup is on the table, with the bread.", nl: "Eindelijk staat de soep op tafel, met het brood."}
+    - {it: "È davvero buona!", en: "It's really good!", nl: "Hij is echt lekker!"}
+  questions:
+    - q: {en: "What is grandma making?", nl: "Wat maakt oma?"}
+      prompt: "Che cosa prepara la nonna?"
+      options: ["una zuppa", "una torta", "una pizza"]
+      answer: 0
+    - q: {en: "Which vegetables go into the soup?", nl: "Welke groenten gaan er in de soep?"}
+      options: [{en: "Carrots, onion and garlic", nl: "Wortels, ui en knoflook"}, {en: "Potatoes and tomatoes", nl: "Aardappels en tomaten"}, {en: "Only onion", nl: "Alleen ui"}]
+      answer: 0
+    - q: {en: "How long does Giulia still have to wait?", nl: "Hoe lang moet Giulia nog wachten?"}
+      options: [{en: "Ten minutes", nl: "Tien minuten"}, {en: "Five minutes", nl: "Vijf minuten"}, {en: "An hour", nl: "Een uur"}]
+      answer: 0

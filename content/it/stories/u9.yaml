@@ -1,0 +1,53 @@
+# Graded mini-stories for unit u9 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u9-scelta
+  unit: u9
+  title: {it: "Una scelta difficile", en: "A difficult choice", nl: "Een moeilijke keuze"}
+  sentences:
+    - {it: "Sara deve decidere: Roma o Milano?", en: "Sara has to decide: Rome or Milan?", nl: "Sara moet kiezen: Rome of Milaan?"}
+    - {it: "A Milano le offrono un lavoro importante.", en: "In Milan they're offering her an important job.", nl: "In Milaan bieden ze haar een belangrijke baan aan."}
+    - {it: "Ma a Roma vivono la sua famiglia e i suoi amici.", en: "But her family and friends live in Rome.", nl: "Maar in Rome wonen haar familie en haar vrienden."}
+    - {it: "Ha chiesto un consiglio a sua madre.", en: "She asked her mother for advice.", nl: "Ze heeft haar moeder om raad gevraagd."}
+    - {it: "\"È la tua vita: devi scegliere tu\", ha risposto la madre.", en: "\"It's your life: you have to choose\", her mother replied.", nl: "\"Het is jouw leven: jij moet kiezen\", antwoordde haar moeder."}
+    - {it: "Sara non ha dormito per due notti.", en: "Sara didn't sleep for two nights.", nl: "Sara heeft twee nachten niet geslapen."}
+    - {it: "Finalmente ha deciso: ha accettato il lavoro a Milano.", en: "Finally she decided: she accepted the job in Milan.", nl: "Eindelijk heeft ze besloten: ze heeft de baan in Milaan aangenomen."}
+    - {it: "Ma ha promesso di tornare a Roma ogni mese.", en: "But she promised to come back to Rome every month.", nl: "Maar ze heeft beloofd elke maand naar Rome terug te komen."}
+  new_words: [ogni]
+  questions:
+    - q: {en: "What is Sara offered in Milan?", nl: "Wat krijgt Sara in Milaan aangeboden?"}
+      options: [{en: "An important job", nl: "Een belangrijke baan"}, {en: "A house", nl: "Een huis"}, {en: "A trip", nl: "Een reis"}]
+      answer: 0
+    - q: {en: "Who does Sara ask for advice?", nl: "Aan wie vraagt Sara om raad?"}
+      prompt: "A chi ha chiesto un consiglio Sara?"
+      options: ["a sua madre", "a suo padre", "al suo capo"]
+      answer: 0
+    - q: {en: "What does Sara decide?", nl: "Wat besluit Sara?"}
+      options: [{en: "She takes the job in Milan", nl: "Ze neemt de baan in Milaan"}, {en: "She stays in Rome", nl: "Ze blijft in Rome"}, {en: "She doesn't decide", nl: "Ze besluit niets"}]
+      answer: 0
+    - q: {en: "What does she promise?", nl: "Wat belooft ze?"}
+      options: [{en: "To come back to Rome every month", nl: "Elke maand naar Rome terug te komen"}, {en: "To phone every day", nl: "Elke dag te bellen"}, {en: "To never come back", nl: "Nooit meer terug te komen"}]
+      answer: 0
+
+- id: u9-sogno
+  unit: u9
+  title: {it: "Uno strano sogno", en: "A strange dream", nl: "Een vreemde droom"}
+  new_words: [sogno]
+  sentences:
+    - {it: "Ieri notte Luca ha fatto un sogno strano.", en: "Last night Luca had a strange dream.", nl: "Vannacht had Luca een vreemde droom."}
+    - {it: "Volava sopra la città come un uccello.", en: "He was flying over the city like a bird.", nl: "Hij vloog als een vogel boven de stad."}
+    - {it: "Sotto di lui vedeva la sua scuola e la casa dei nonni.", en: "Below him he could see his school and his grandparents' house.", nl: "Onder zich zag hij zijn school en het huis van zijn opa en oma."}
+    - {it: "Poi è caduto in un lago pieno di pesci.", en: "Then he fell into a lake full of fish.", nl: "Toen viel hij in een meer vol vissen."}
+    - {it: "I pesci ridevano e parlavano con lui!", en: "The fish were laughing and talking to him!", nl: "De vissen lachten en praatten met hem!"}
+    - {it: "Luca ha provato a rispondere, ma non aveva voce.", en: "Luca tried to answer, but he had no voice.", nl: "Luca probeerde te antwoorden, maar hij had geen stem."}
+    - {it: "Poi la mamma lo ha chiamato: era ora di andare a scuola.", en: "Then his mum called him: it was time to go to school.", nl: "Toen riep zijn moeder hem: het was tijd om naar school te gaan."}
+    - {it: "A colazione Luca ha raccontato il sogno alla sua famiglia.", en: "At breakfast Luca told his family about the dream.", nl: "Bij het ontbijt vertelde Luca zijn familie over de droom."}
+  questions:
+    - q: {en: "What was Luca doing in the dream?", nl: "Wat deed Luca in de droom?"}
+      options: [{en: "Flying over the city", nl: "Hij vloog boven de stad"}, {en: "Swimming in the sea", nl: "Hij zwom in de zee"}, {en: "Driving a car", nl: "Hij reed in een auto"}]
+      answer: 0
+    - q: {en: "Where did he fall?", nl: "Waar viel hij in?"}
+      prompt: "Dove è caduto Luca?"
+      options: ["in un lago", "in un fiume", "nel mare"]
+      answer: 0
+    - q: {en: "What was strange about the fish?", nl: "Wat was er vreemd aan de vissen?"}
+      options: [{en: "They were laughing and talking", nl: "Ze lachten en praatten"}, {en: "They were flying", nl: "Ze vlogen"}, {en: "They were singing", nl: "Ze zongen"}]
+      answer: 0

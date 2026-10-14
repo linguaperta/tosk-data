@@ -1,0 +1,48 @@
+# Graded mini-stories for unit u2 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u2-ontbijt
+  unit: u2
+  title: {nl: "Het ontbijt", en: "Breakfast"}
+  sentences:
+    - {nl: "Emma en Bram staan in de keuken.", en: "Emma and Bram are standing in the kitchen."}
+    - {nl: "Bram wil brood met kaas.", en: "Bram wants bread with cheese."}
+    - {nl: "Emma neemt een ei en een appel.", en: "Emma has an egg and an apple."}
+    - {nl: "\"Wil je koffie of thee?\" zegt Emma.", en: "\"Do you want coffee or tea?\" Emma says."}
+    - {nl: "\"Thee, met melk en suiker.\"", en: "\"Tea, with milk and sugar.\""}
+    - {nl: "Emma kijkt in de koelkast, maar er is geen melk!", en: "Emma looks in the fridge, but there's no milk!"}
+    - {nl: "Dan neemt Bram thee met suiker.", en: "Then Bram has tea with sugar."}
+    - {nl: "Dat is ook lekker.", en: "That's tasty too."}
+  new_words: [kijken]
+  questions:
+    - q: {en: "What does Bram want to eat?"}
+      prompt: "Wat wil Bram?"
+      options: ["brood met kaas", "een ei en een appel", "vis"]
+      answer: 0
+    - q: {en: "What is missing?"}
+      options: [{en: "Milk"}, {en: "Sugar"}, {en: "Tea"}]
+      answer: 0
+    - q: {en: "What does Bram drink in the end?"}
+      options: [{en: "Tea with sugar"}, {en: "Coffee with milk"}, {en: "Water"}]
+      answer: 0
+
+- id: u2-huis
+  unit: u2
+  title: {nl: "Het huis van Tom", en: "Tom's house"}
+  sentences:
+    - {nl: "Dit is het huis van Tom.", en: "This is Tom's house."}
+    - {nl: "Het huis heeft drie kamers en een tuin.", en: "The house has three rooms and a garden."}
+    - {nl: "In de keuken staan een tafel en vier stoelen.", en: "In the kitchen there's a table with four chairs."}
+    - {nl: "In de slaapkamer staan een bed en een kast.", en: "In the bedroom there's a bed and a wardrobe."}
+    - {nl: "Er is ook een badkamer met een spiegel.", en: "There's also a bathroom with a mirror."}
+    - {nl: "Tom heeft geen televisie, maar wel een computer.", en: "Tom doesn't have a television, but he does have a computer."}
+    - {nl: "\"Ik wil geen televisie,\" zegt Tom. \"Een boek is ook goed!\"", en: "\"I don't want a television,\" Tom says. \"A book is good too!\""}
+  questions:
+    - q: {en: "How many rooms does the house have?"}
+      options: [{en: "Three"}, {en: "Four"}, {en: "Two"}]
+      answer: 0
+    - q: {en: "What is in the kitchen?"}
+      prompt: "Wat staat er in de keuken?"
+      options: ["een tafel en vier stoelen", "een bed en een kast", "een televisie"]
+      answer: 0
+    - q: {en: "What doesn't Tom have?"}
+      options: [{en: "A television"}, {en: "A computer"}, {en: "A garden"}]
+      answer: 0

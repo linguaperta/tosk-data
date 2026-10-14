@@ -1,0 +1,51 @@
+# Graded mini-stories for unit u6 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u6-primo-giorno
+  unit: u6
+  title: {it: "Il primo giorno di lavoro", en: "The first day at work", nl: "De eerste werkdag"}
+  sentences:
+    - {it: "Ieri Marco ha cominciato un lavoro nuovo.", en: "Yesterday Marco started a new job.", nl: "Gisteren is Marco aan een nieuwe baan begonnen."}
+    - {it: "È arrivato in ufficio alle otto.", en: "He arrived at the office at eight.", nl: "Hij kwam om acht uur op kantoor aan."}
+    - {it: "Il capo è stato molto gentile con lui.", en: "The boss was very kind to him.", nl: "De baas was heel aardig tegen hem."}
+    - {it: "Marco ha conosciuto i colleghi.", en: "Marco met his colleagues.", nl: "Marco heeft zijn collega's leren kennen."}
+    - {it: "A pranzo hanno mangiato insieme in un bar.", en: "At lunchtime they ate together in a café.", nl: "Tussen de middag hebben ze samen in een café gegeten."}
+    - {it: "Il pomeriggio Marco ha avuto una riunione lunga.", en: "In the afternoon Marco had a long meeting.", nl: "'s Middags had Marco een lange vergadering."}
+    - {it: "La sera è tornato a casa stanco, ma felice.", en: "In the evening he came home tired, but happy.", nl: "'s Avonds kwam hij moe maar blij thuis."}
+  questions:
+    - q: {en: "When did Marco start his new job?", nl: "Wanneer is Marco aan zijn nieuwe baan begonnen?"}
+      options: ["ieri", "oggi", "lunedì"]
+      answer: 0
+    - q: {en: "What time did he arrive at the office?", nl: "Hoe laat kwam hij op kantoor aan?"}
+      prompt: "A che ora è arrivato in ufficio?"
+      options: ["alle otto", "alle nove", "alle dieci"]
+      answer: 0
+    - q: {en: "How was the boss?", nl: "Hoe was de baas?"}
+      options: [{en: "Very kind", nl: "Heel aardig"}, {en: "Angry", nl: "Boos"}, {en: "Nervous", nl: "Zenuwachtig"}]
+      answer: 0
+    - q: {en: "How did Marco feel in the evening?", nl: "Hoe voelde Marco zich 's avonds?"}
+      prompt: "Com'è tornato a casa Marco?"
+      options: ["stanco, ma felice", "triste e arrabbiato", "nervoso e preoccupato"]
+      answer: 0
+
+- id: u6-esame
+  unit: u6
+  title: {it: "L'esame", en: "The exam", nl: "Het examen"}
+  sentences:
+    - {it: "Oggi Anna ha avuto un esame all'università.", en: "Today Anna had an exam at university.", nl: "Vandaag had Anna een examen op de universiteit."}
+    - {it: "Ha studiato molto per questo esame.", en: "She studied a lot for this exam.", nl: "Ze heeft veel voor dit examen gestudeerd."}
+    - {it: "Prima dell'esame ha avuto paura.", en: "Before the exam she was scared.", nl: "Voor het examen was ze bang."}
+    - {it: "Il professore ha fatto tre domande.", en: "The professor asked three questions.", nl: "De professor heeft drie vragen gesteld."}
+    - {it: "Anna ha risposto bene.", en: "Anna answered well.", nl: "Anna heeft goed geantwoord."}
+    - {it: "Dopo l'esame è uscita con i suoi amici.", en: "After the exam she went out with her friends.", nl: "Na het examen is ze met haar vrienden uitgegaan."}
+    - {it: "Sono andati a mangiare una pizza.", en: "They went to eat a pizza.", nl: "Ze zijn een pizza gaan eten."}
+    - {it: "Anna è molto orgogliosa.", en: "Anna is very proud.", nl: "Anna is heel trots."}
+  questions:
+    - q: {en: "Where did Anna have her exam?", nl: "Waar had Anna haar examen?"}
+      prompt: "Dove ha avuto l'esame Anna?"
+      options: ["all'università", "in ufficio", "a scuola"]
+      answer: 0
+    - q: {en: "How many questions did the professor ask?", nl: "Hoeveel vragen heeft de professor gesteld?"}
+      options: [{en: "Three", nl: "Drie"}, {en: "Two", nl: "Twee"}, {en: "Ten", nl: "Tien"}]
+      answer: 0
+    - q: {en: "What did Anna do after the exam?", nl: "Wat deed Anna na het examen?"}
+      options: [{en: "She went out for a pizza with friends", nl: "Ze ging met vrienden pizza eten"}, {en: "She went home to sleep", nl: "Ze ging naar huis om te slapen"}, {en: "She studied again", nl: "Ze ging weer studeren"}]
+      answer: 0

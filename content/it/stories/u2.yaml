@@ -1,0 +1,51 @@
+# Graded mini-stories for unit u2 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u2-pizza
+  unit: u2
+  title: {it: "Una pizza per due", en: "A pizza for two", nl: "Een pizza voor twee"}
+  sentences:
+    - {it: "Marco e Anna sono in un ristorante.", en: "Marco and Anna are in a restaurant.", nl: "Marco en Anna zitten in een restaurant."}
+    - {it: "Marco prende una pizza e una birra.", en: "Marco has a pizza and a beer.", nl: "Marco neemt een pizza en een biertje."}
+    - {it: "Anna preferisce il pesce con un'insalata.", en: "Anna prefers the fish with a salad.", nl: "Anna heeft liever de vis met een salade."}
+    - {it: "Loro parlano e aspettano.", en: "They talk and wait.", nl: "Ze praten en wachten."}
+    - {it: "Ecco il cibo: è molto buono!", en: "Here's the food: it's very good!", nl: "Daar is het eten: het is heel lekker!"}
+    - {it: "Per finire, Anna prende un caffè.", en: "To finish, Anna has a coffee.", nl: "Tot slot neemt Anna een koffie."}
+    - {it: "E Marco offre la cena.", en: "And Marco pays for dinner.", nl: "En Marco trakteert op het eten."}
+  questions:
+    - q: {en: "What does Marco have?", nl: "Wat neemt Marco?"}
+      prompt: "Che cosa prende Marco?"
+      options: ["una pizza e una birra", "il pesce e un'insalata", "un caffè e un gelato"]
+      answer: 0
+    - q: {en: "What does Anna prefer?", nl: "Wat heeft Anna liever?"}
+      options: [{en: "Fish", nl: "Vis"}, {en: "Pizza", nl: "Pizza"}, {en: "Meat", nl: "Vlees"}]
+      answer: 0
+    - q: {en: "Who pays for dinner?", nl: "Wie betaalt het eten?"}
+      prompt: "Chi offre la cena?"
+      options: ["Marco", "Anna", "Luca"]
+      answer: 0
+
+- id: u2-colazione
+  unit: u2
+  title: {it: "La colazione", en: "Breakfast", nl: "Het ontbijt"}
+  sentences:
+    - {it: "Sono le otto.", en: "It's eight o'clock.", nl: "Het is acht uur."}
+    - {it: "Luca prende un caffè con latte e zucchero.", en: "Luca has a coffee with milk and sugar.", nl: "Luca neemt een koffie met melk en suiker."}
+    - {it: "Il padre preferisce il tè.", en: "His father prefers tea.", nl: "Zijn vader heeft liever thee."}
+    - {it: "Loro mangiano pane e formaggio.", en: "They eat bread and cheese.", nl: "Ze eten brood met kaas."}
+    - {it: "Il padre parla, ma Luca non ascolta.", en: "His father talks, but Luca doesn't listen.", nl: "Zijn vader praat, maar Luca luistert niet."}
+    - {it: "Luca pensa a una ragazza: Giulia.", en: "Luca is thinking about a girl: Giulia.", nl: "Luca denkt aan een meisje: Giulia."}
+    - {it: "Luca finisce il caffè e parte.", en: "Luca finishes his coffee and leaves.", nl: "Luca drinkt zijn koffie op en vertrekt."}
+  questions:
+    - q: {en: "What time is it?", nl: "Hoe laat is het?"}
+      options: [{en: "Eight o'clock", nl: "Acht uur"}, {en: "Ten o'clock", nl: "Tien uur"}, {en: "Seven o'clock", nl: "Zeven uur"}]
+      answer: 0
+    - q: {en: "What does the father prefer?", nl: "Wat heeft de vader liever?"}
+      prompt: "Che cosa preferisce il padre?"
+      options: ["il tè", "il caffè", "il latte"]
+      answer: 0
+    - q: {en: "Who is Luca thinking about?", nl: "Aan wie denkt Luca?"}
+      prompt: "A chi pensa Luca?"
+      options: ["Giulia", "Anna", "Sara"]
+      answer: 0
+    - q: {en: "Does Luca listen to his father?", nl: "Luistert Luca naar zijn vader?"}
+      options: [{en: "No", nl: "Nee"}, {en: "Yes", nl: "Ja"}, {en: "Only a little", nl: "Maar een beetje"}]
+      answer: 0

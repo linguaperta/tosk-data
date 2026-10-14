@@ -1,0 +1,50 @@
+# Graded mini-stories for unit u4 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u4-eerste-werkdag
+  unit: u4
+  title: {nl: "De eerste dag", en: "The first day"}
+  sentences:
+    - {nl: "Gisteren is Sanne bij een nieuw bedrijf begonnen.", en: "Yesterday Sanne started at a new company."}
+    - {nl: "Ze is om acht uur aangekomen.", en: "She arrived at eight o'clock."}
+    - {nl: "De baas heeft haar aan de collega's voorgesteld.", en: "The boss introduced her to her colleagues."}
+    - {nl: "Ze heeft met de collega's koffie gedronken.", en: "She had coffee with her colleagues."}
+    - {nl: "Om twee uur heeft ze haar eerste vergadering gehad.", en: "At two o'clock she had her first meeting."}
+    - {nl: "Om vijf uur is ze naar huis gegaan.", en: "At five o'clock she went home."}
+    - {nl: "Sanne is heel tevreden over haar nieuwe baan.", en: "Sanne is very pleased with her new job."}
+  new_words: [nieuw]
+  questions:
+    - q: {en: "When did Sanne start?"}
+      options: ["gisteren", "vandaag", "op maandag"]
+      answer: 0
+    - q: {en: "Who introduced her to her colleagues?"}
+      prompt: "Wie heeft haar aan de collega's voorgesteld?"
+      options: ["de baas", "een collega", "de dokter"]
+      answer: 0
+    - q: {en: "How does Sanne feel about the job?"}
+      options: [{en: "Very pleased"}, {en: "Disappointed"}, {en: "Nervous"}]
+      answer: 0
+
+- id: u4-examen
+  unit: u4
+  title: {nl: "Het examen", en: "The exam"}
+  new_words: [tot]
+  sentences:
+    - {nl: "Vandaag heeft Lisa een examen gehad.", en: "Today Lisa had an exam."}
+    - {nl: "Ze heeft gisteren tot laat gestudeerd.", en: "Yesterday she studied until late."}
+    - {nl: "Voor een examen is Lisa altijd zenuwachtig.", en: "Before an exam Lisa is always nervous."}
+    - {nl: "Maar het is goed gegaan.", en: "But it went well."}
+    - {nl: "Ze heeft goed geantwoord.", en: "She answered well."}
+    - {nl: "Om vier uur is ze met een vriendin uitgegaan.", en: "At four o'clock she went out with a friend."}
+    - {nl: "Ze hebben koffie gedronken.", en: "They had coffee."}
+    - {nl: "Lisa is heel trots.", en: "Lisa is very proud."}
+  questions:
+    - q: {en: "What did Lisa do yesterday?"}
+      options: [{en: "She studied until late"}, {en: "She went out"}, {en: "She slept a lot"}]
+      answer: 0
+    - q: {en: "How is Lisa before an exam?"}
+      prompt: "Hoe is Lisa voor een examen?"
+      options: ["zenuwachtig", "rustig", "boos"]
+      answer: 0
+    - q: {en: "Who did she go out with?"}
+      prompt: "Met wie is ze uitgegaan?"
+      options: ["met een vriendin", "met haar moeder", "met een collega"]
+      answer: 0
