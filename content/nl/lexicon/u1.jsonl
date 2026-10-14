@@ -86,7 +86,7 @@
 {"id": "nl:van", "lemma": "van", "pos": "prep", "freq": 11, "tr": {"en": ["of", "from"]}, "tr_src": {"en": "claude"}, "tags": ["little"], "inflections": ["daarvan", "ervan", "hiervan", "waarvan"], "unit": "u1"}
 {"id": "nl:vertellen", "lemma": "vertellen", "pos": "verb", "freq": 76, "tr": {"en": ["to tell"]}, "tr_src": {"en": "claude"}, "unit": "u1"}
 {"id": "nl:vinden", "lemma": "vinden", "pos": "verb", "freq": 61, "tr": {"en": ["to find", "to think"]}, "tr_src": {"en": "claude"}, "unit": "u1"}
-{"id": "nl:voelen", "lemma": "voelen", "pos": "verb", "freq": 135, "tr": {"en": ["to feel", "to have sensation of", "to experience a feeling"]}, "tr_src": {"en": "wiktionary"}, "unit": "u1"}
+{"id": "nl:voelen", "lemma": "voelen", "pos": "verb", "freq": 135, "tr": {"en": ["to feel"]}, "tr_src": {"en": "claude"}, "unit": "u1"}
 {"id": "nl:voor.2", "lemma": "voor", "pos": "prep", "freq": 114, "tr": {"en": ["for", "in front of", "before"]}, "tr_src": {"en": "claude"}, "tags": ["little"], "inflections": ["daarvoor", "ervoor", "hiervoor", "waarvoor"], "unit": "u1"}
 {"id": "nl:vriend", "lemma": "vriend", "pos": "noun", "article": "de", "gender": "m", "plural": "vrienden", "freq": 218, "tr": {"en": ["friend", "boyfriend"]}, "tr_src": {"en": "claude"}, "tags": ["people"], "inflections": ["vrienden", "vriendin"], "unit": "u1"}
 {"id": "nl:vriendin", "lemma": "vriendin", "pos": "noun", "article": "de", "gender": "f", "plural": "vriendinnen", "freq": 1190, "tr": {"en": ["friend", "girlfriend"]}, "tr_src": {"en": "claude"}, "tags": ["people"], "inflections": ["vriend", "vriendinnen"], "unit": "u1"}

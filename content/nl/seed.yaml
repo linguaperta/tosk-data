@@ -802,3 +802,12 @@ items:
   - {lemma: honger, pos: noun, tags: [kitchen], gender: m, en: [hunger]}
   - {lemma: dorst, pos: noun, tags: [kitchen], gender: m, en: [thirst]}
   - {lemma: zoet, pos: adj, tags: [kitchen], en: [sweet]}
+  # --- English gloss overrides for verbs (Wiktionary lists rare senses first)
+  - {lemma: stappen, pos: verb, en: [to step, to walk, to go out]}
+  - {lemma: voelen, pos: verb, en: [to feel]}
+  - {lemma: eindigen, pos: verb, en: [to end, to finish]}
+  - {lemma: verhuizen, pos: verb, en: [to move (house)]}
+  - {lemma: betekenen, pos: verb, en: [to mean]}
+  - {lemma: redden, pos: verb, en: [to save, to rescue, to manage]}
+  - {lemma: gebruiken, pos: verb, en: [to use]}
+  - {lemma: veranderen, pos: verb, en: [to change]}

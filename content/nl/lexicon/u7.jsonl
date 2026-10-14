@@ -1,7 +1,7 @@
 {"id": "nl:aap", "lemma": "aap", "pos": "noun", "article": "de", "gender": "m", "plural": "apen", "freq": 1394, "tr": {"en": ["monkey", "ape"]}, "tr_src": {"en": "claude"}, "tags": ["animals"], "inflections": ["apen", "apin"], "unit": "u7"}
 {"id": "nl:aarde", "lemma": "aarde", "pos": "noun", "article": "de", "gender": "f", "plural": "aardes", "freq": 490, "tr": {"en": ["earth", "soil"]}, "tr_src": {"en": "claude"}, "tags": ["weather"], "inflections": ["aardes"], "unit": "u7"}
 {"id": "nl:beer", "lemma": "beer", "pos": "noun", "article": "de", "gender": "m", "plural": "beren", "freq": 3076, "tr": {"en": ["bear"]}, "tr_src": {"en": "claude"}, "tags": ["animals"], "inflections": ["beren"], "unit": "u7"}
-{"id": "nl:betekenen", "lemma": "betekenen", "pos": "verb", "freq": 239, "tr": {"en": ["to mean", "to signify"]}, "tr_src": {"en": "wiktionary"}, "unit": "u7"}
+{"id": "nl:betekenen", "lemma": "betekenen", "pos": "verb", "freq": 239, "tr": {"en": ["to mean"]}, "tr_src": {"en": "claude"}, "unit": "u7"}
 {"id": "nl:bloem", "lemma": "bloem", "pos": "noun", "article": "de", "gender": "f", "plural": "bloemen", "freq": 929, "tr": {"en": ["flower"]}, "tr_src": {"en": "claude"}, "tags": ["weather"], "inflections": ["bloemen"], "unit": "u7"}
 {"id": "nl:boom", "lemma": "boom", "pos": "noun", "article": "de", "gender": "m", "plural": "bomen", "freq": 5561, "tr": {"en": ["tree"]}, "tr_src": {"en": "claude"}, "tags": ["weather"], "inflections": ["bomen", "booms"], "unit": "u7"}
 {"id": "nl:bos", "lemma": "bos", "pos": "noun", "article": "het", "gender": "n", "plural": "bossen", "freq": 5426, "tr": {"en": ["forest", "wood"]}, "tr_src": {"en": "claude"}, "tags": ["weather"], "inflections": ["bossen"], "unit": "u7"}
@@ -39,7 +39,7 @@
 {"id": "nl:paard", "lemma": "paard", "pos": "noun", "article": "het", "gender": "n", "plural": "paarden", "freq": 561, "tr": {"en": ["horse"]}, "tr_src": {"en": "claude"}, "tags": ["animals"], "inflections": ["paarden"], "unit": "u7"}
 {"id": "nl:pak", "lemma": "pak", "pos": "noun", "article": "het", "gender": "n", "plural": "pakken", "freq": 1700, "tr": {"en": ["suit", "package"]}, "tr_src": {"en": "claude"}, "tags": ["clothes"], "inflections": ["pakken"], "unit": "u7"}
 {"id": "nl:paraplu", "lemma": "paraplu", "pos": "noun", "article": "de", "gender": "m", "plural": "paraplu's", "freq": 5700, "tr": {"en": ["umbrella"]}, "tr_src": {"en": "claude"}, "tags": ["clothes"], "inflections": ["paraplu's"], "unit": "u7"}
-{"id": "nl:redden", "lemma": "redden", "pos": "verb", "freq": 204, "tr": {"en": ["to save", "to rescue", "to manage", "to cope", "to be fine"]}, "tr_src": {"en": "wiktionary"}, "unit": "u7"}
+{"id": "nl:redden", "lemma": "redden", "pos": "verb", "freq": 204, "tr": {"en": ["to save", "to rescue", "to manage"]}, "tr_src": {"en": "claude"}, "unit": "u7"}
 {"id": "nl:regen", "lemma": "regen", "pos": "noun", "article": "de", "gender": "m", "plural": "regens", "freq": 7679, "tr": {"en": ["rain"]}, "tr_src": {"en": "claude"}, "tags": ["weather"], "inflections": ["regens"], "unit": "u7"}
 {"id": "nl:regenen", "lemma": "regenen", "pos": "verb", "freq": 3275, "tr": {"en": ["to rain"]}, "tr_src": {"en": "claude"}, "tags": ["weather"], "unit": "u7"}
 {"id": "nl:riem", "lemma": "riem", "pos": "noun", "article": "de", "gender": "m", "plural": "riemen", "freq": 2405, "tr": {"en": ["belt"]}, "tr_src": {"en": "claude"}, "tags": ["clothes"], "inflections": ["riemen"], "unit": "u7"}

@@ -874,3 +874,72 @@ items:
   - {lemma: sugo, pos: noun, tags: [kitchen], gender: m, en: [sauce], nl: [saus]}
   - {lemma: fame, pos: noun, tags: [kitchen], gender: f, en: [hunger], nl: [honger]}
   - {lemma: sete, pos: noun, tags: [kitchen], gender: f, en: [thirst], nl: [dorst]}
+  # --- English gloss overrides for verbs (Wiktionary lists rare senses first)
+  - {lemma: aprire, pos: verb, en: [to open]}
+  - {lemma: arrivare, pos: verb, en: [to arrive]}
+  - {lemma: ascoltare, pos: verb, en: [to listen to, to listen]}
+  - {lemma: aspettare, pos: verb, en: [to wait, to wait for]}
+  - {lemma: chiamare, pos: verb, en: [to call, to name]}
+  - {lemma: conoscere, pos: verb, en: [to know, to meet]}
+  - {lemma: continuare, pos: verb, en: [to continue, to keep on]}
+  - {lemma: correre, pos: verb, en: [to run]}
+  - {lemma: costruire, pos: verb, en: [to build]}
+  - {lemma: diventare, pos: verb, en: [to become]}
+  - {lemma: dormire, pos: verb, en: [to sleep]}
+  - {lemma: entrare, pos: verb, en: [to enter, to go in, to come in]}
+  - {lemma: finire, pos: verb, en: [to finish, to end]}
+  - {lemma: gestire, pos: verb, en: [to manage, to run]}
+  - {lemma: guardare, pos: verb, en: [to look at, to watch]}
+  - {lemma: impazzire, pos: verb, en: [to go mad]}
+  - {lemma: intendere, pos: verb, en: [to mean, to intend]}
+  - {lemma: lavorare, pos: verb, en: [to work]}
+  - {lemma: mangiare, pos: verb, en: [to eat]}
+  - {lemma: mentire, pos: verb, en: [to lie]}
+  - {lemma: offrire, pos: verb, en: [to offer]}
+  - {lemma: parlare, pos: verb, en: [to speak, to talk]}
+  - {lemma: partire, pos: verb, en: [to leave, to depart]}
+  - {lemma: passare, pos: verb, en: [to pass, to spend (time), to come by]}
+  - {lemma: pensare, pos: verb, en: [to think]}
+  - {lemma: perdere, pos: verb, en: [to lose, to miss]}
+  - {lemma: prendere, pos: verb, en: [to take, to get]}
+  - {lemma: rendere, pos: verb, en: [to make, to give back]}
+  - {lemma: ricevere, pos: verb, en: [to receive]}
+  - {lemma: rispondere, pos: verb, en: [to answer, to reply]}
+  - {lemma: scoprire, pos: verb, en: [to discover, to find out]}
+  - {lemma: scrivere, pos: verb, en: [to write]}
+  - {lemma: seguire, pos: verb, en: [to follow]}
+  - {lemma: sembrare, pos: verb, en: [to seem]}
+  - {lemma: servire, pos: verb, en: [to serve, to be needed]}
+  - {lemma: soffrire, pos: verb, en: [to suffer]}
+  - {lemma: sparire, pos: verb, en: [to disappear]}
+  - {lemma: sperare, pos: verb, en: [to hope]}
+  - {lemma: succedere, pos: verb, en: [to happen]}
+  - {lemma: tornare, pos: verb, en: [to return, to come back]}
+  - {lemma: trovare, pos: verb, en: [to find]}
+  - {lemma: usare, pos: verb, en: [to use]}
+  - {lemma: vedere, pos: verb, en: [to see]}
+  - {lemma: vincere, pos: verb, en: [to win]}
+  - {lemma: vivere, pos: verb, en: [to live]}
+  - {lemma: dare, pos: verb, en: [to give]}
+  - {lemma: venire, pos: verb, en: [to come]}
+  - {lemma: riuscire, pos: verb, en: [to manage, to succeed]}
+  - {lemma: salire, pos: verb, en: [to go up, to get on]}
+  - {lemma: tenere, pos: verb, en: [to hold, to keep]}
+  - {lemma: uscire, pos: verb, en: [to go out, to leave]}
+  - {lemma: ottenere, pos: verb, en: [to obtain, to get]}
+  - {lemma: rimanere, pos: verb, en: [to stay, to remain]}
+  - {lemma: restare, pos: verb, en: [to stay, to remain]}
+  - {lemma: chiedere, pos: verb, en: [to ask]}
+  - {lemma: credere, pos: verb, en: [to believe, to think]}
+  - {lemma: mettere, pos: verb, en: [to put]}
+  - {lemma: cercare, pos: verb, en: [to look for, to try]}
+  - {lemma: lasciare, pos: verb, en: [to leave, to let]}
+  - {lemma: esistere, pos: verb, en: [to exist]}
+  - {lemma: divertire, pos: verb, en: [to amuse, to entertain]}
+  - {lemma: preferire, pos: verb, en: [to prefer]}
+  - {lemma: capire, pos: verb, en: [to understand]}
+  - {lemma: sentire, pos: verb, en: [to hear, to feel]}
+  - {lemma: piacere, pos: verb, en: [to please, to be liked]}
+  - {lemma: morire, pos: verb, en: [to die]}
+  - {lemma: scegliere, pos: verb, en: [to choose]}
+  - {lemma: togliere, pos: verb, en: [to take off, to remove]}
