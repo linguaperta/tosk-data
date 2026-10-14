@@ -1,0 +1,424 @@
+# Spanish course for English and Dutch speakers.
+# Skills select their items with queries (see duelingo/pipeline/pipeline/query.py); the
+# compiler resolves them into skill_items/skill_facets, so the app never reads these queries.
+#
+# Variety: neutral / peninsular standard Spanish. All six persons are taught, including vosotros
+# (Spain); the grammar notes say that Latin America uses ustedes for "you all". usted/ustedes take
+# the él/ella and ellos/ellas forms. Language rules for the pipeline: pipeline/pipeline/lang_es.py.
+#
+# Grammar gating (duelingo/docs/ARCHITECTURE.md, "Grammar gating"; pipeline/pipeline/features.py):
+# a learner never meets a grammar construct before the skill that introduces it. The present tense
+# is allowed from the start; every other feature below is introduced by one skill (a verbs skill
+# introduces tense:{T} automatically). Each unit's skills require the previous unit's grammar, so
+# every later skill allows everything taught before it.
+#
+# Adjective agreement and plurals have their own item skills (adjectives, plurals) so that the
+# inflection-table extension can add #infl facets to them later.
+id: es
+version: 1.0.0
+title: {en: Spanish, nl: Spaans}
+description:
+  en: Spanish from the basics (Spain standard, with notes on Latin America), with a strong focus on verbs and the past tenses.
+  nl: Spaans vanaf de basis (standaard uit Spanje, met tips over Latijns-Amerika), met veel aandacht voor werkwoorden en de verleden tijden.
+target: es
+translations: [en, nl]
+unverified: false
+persons: [yo, tú, él/ella, nosotros, vosotros, ellos/ellas]
+person_labels:
+  tú: {en: "tú (you)", nl: "tú (jij)"}
+  él/ella: {en: "él/ella/usted (he/she/you formal)", nl: "él/ella/usted (hij/zij/u)"}
+  nosotros: {en: "nosotros (we)", nl: "nosotros (wij)"}
+  vosotros: {en: "vosotros (you all, Spain)", nl: "vosotros (jullie, Spanje)"}
+  ellos/ellas: {en: "ellos/ellas/ustedes (they/you all)", nl: "ellos/ellas/ustedes (zij/u, mv.)"}
+tenses: [presente, preterito_perfecto, preterito_indefinido, imperfecto, futuro]
+tense_labels:
+  presente: {en: present, nl: tegenwoordige tijd}
+  preterito_perfecto: {en: present perfect (pretérito perfecto), nl: voltooid tegenwoordige tijd (pretérito perfecto)}
+  preterito_indefinido: {en: simple past (pretérito indefinido), nl: "verleden tijd, afgerond (pretérito indefinido)"}
+  imperfecto: {en: imperfect (imperfecto), nl: "verleden tijd, gewoonte en beschrijving (imperfecto)"}
+  futuro: {en: future, nl: toekomende tijd}
+articles: [el, la]
+
+base_features: ["tense:presente"]
+feature_detectors:
+  # poder/querer/deber/saber + infinitive, tener que + infinitive, ir a + infinitive (puedo venir,
+  # tengo que irme, voy a comer); a clitic infinitive counts too (puedo hacerlo)
+  modal:
+    type: modal_infinitive
+    verbs: [poder, querer, deber, saber, tener, ir]
+    infinitive_pattern: "[a-záéíóúñü]+(ar|er|ir|ír|ár|ér)(me|te|se|nos|os|lo|la|los|las|le|les){1,2}"
+  # estar + gerundio and other gerunds (estoy comiendo, sigue lloviendo, haciéndolo)
+  gerund:
+    type: nonfinite
+    form: gerund
+    pattern: "[a-záéíóúñü]+(ándo|iéndo|yéndo)(me|te|se|nos|os|lo|la|los|las|le|les){1,2}"
+  # contractions of a/de + el
+  "prep:contraction": {type: words, words: [al, del]}
+  # a reflexive pronoun of the verb's own person: me levanto, se llama, nos vemos, levantarse
+  reflexive:
+    type: reflexive
+    pronouns: {me: yo, te: tú, se: [él/ella, ellos/ellas], nos: nosotros, os: vosotros}
+    clitics: [lo, la, los, las, le, les]
+    enclitic_any: [se]
+  # irregular participles (hecho, dicho, visto, escrito, puesto, vuelto, abierto, roto, muerto)
+  "irregular:preterito_perfecto": {type: irregular_tense, tense: preterito_perfecto}
+  # irregular preterite stems (tuve, hice, dije, estuve, pude, puse, quise, vine, supe)
+  "irregular:preterito_indefinido": {type: irregular_tense, tense: preterito_indefinido}
+  # irregular future stems (tendré, haré, diré, podré, pondré, querré, sabré, saldré, vendré)
+  "irregular:futuro": {type: irregular_tense, tense: futuro}
+
+# Time adverbs (whole words, case-insensitive) and the tenses they fit. The app never rewrites a
+# sentence with one of these into another tense (transform exercise: no *Ayer como, *Ahora comía).
+# Spain standard: ayer / la semana pasada take the indefinido, hoy / esta semana / ya the perfecto.
+time_adverbs:
+  ahora: [presente]
+  ahora mismo: [presente]
+  actualmente: [presente]
+  en este momento: [presente]
+  hoy en día: [presente]
+  ayer: [preterito_indefinido, imperfecto]
+  anteayer: [preterito_indefinido, imperfecto]
+  anoche: [preterito_indefinido, imperfecto]
+  pasado: [preterito_indefinido, imperfecto]
+  pasada: [preterito_indefinido, imperfecto]
+  en aquel momento: [preterito_indefinido, imperfecto]
+  entonces: [preterito_indefinido, imperfecto, presente, futuro]
+  de niño: [imperfecto, preterito_indefinido]
+  de niña: [imperfecto, preterito_indefinido]
+  de pequeño: [imperfecto, preterito_indefinido]
+  de pequeña: [imperfecto, preterito_indefinido]
+  de joven: [imperfecto, preterito_indefinido]
+  antes: [imperfecto, preterito_indefinido, preterito_perfecto, presente]
+  hoy: [presente, preterito_perfecto, futuro]
+  esta mañana: [preterito_perfecto, presente, futuro]
+  esta tarde: [preterito_perfecto, presente, futuro]
+  esta noche: [presente, futuro, preterito_perfecto]
+  esta semana: [presente, preterito_perfecto, futuro]
+  este año: [presente, preterito_perfecto, futuro]
+  este mes: [presente, preterito_perfecto, futuro]
+  todavía: [presente, preterito_perfecto, imperfecto]
+  ya: [presente, preterito_perfecto, preterito_indefinido, futuro]
+  alguna vez: [preterito_perfecto, preterito_indefinido]
+  nunca: [presente, preterito_perfecto, preterito_indefinido, imperfecto, futuro]
+  mañana: [presente, futuro]
+  pasado mañana: [presente, futuro]
+  próximo: [presente, futuro]
+  próxima: [presente, futuro]
+  que viene: [presente, futuro]
+  dentro de: [presente, futuro]
+  pronto: [presente, futuro]
+  luego: [presente, futuro]
+  normalmente: [presente, imperfecto]
+  generalmente: [presente, imperfecto]
+  por lo general: [presente, imperfecto]
+  siempre: [presente, imperfecto, preterito_perfecto]
+  todos los días: [presente, imperfecto]
+
+units:
+  - id: u1
+    title: {en: Basics, nl: Basis}
+    skills:
+      - id: greetings
+        kind: vocab
+        title: {en: Greetings, nl: Begroetingen}
+        icon: wave
+        items: {tags: [greetings]}
+      - id: little-words
+        kind: vocab
+        title: {en: Little words, nl: Kleine woorden}
+        icon: chat
+        requires: [greetings]
+        items: {tags: [little]}
+      - id: people
+        kind: vocab
+        title: {en: People, nl: Mensen}
+        icon: people
+        requires: [greetings]
+        items: {tags: [people]}
+      - id: ser
+        kind: grammar
+        title: {en: "Ser: to be (what and who)", nl: "Ser: zijn (wat en wie)"}
+        icon: key
+        requires: [little-words, people]
+        verbs: {lemmas: [ser], tense: presente}
+        exercises: [conj_grid, cloze, spot_error, transform, multiple_choice]
+      - id: estar
+        kind: grammar
+        title: {en: "Estar: to be (where and how)", nl: "Estar: zijn (waar en hoe)"}
+        icon: key
+        requires: [ser]
+        verbs: {lemmas: [estar], tense: presente}
+        exercises: [conj_grid, cloze, spot_error, transform, multiple_choice]
+
+  - id: u2
+    title: {en: The present tense, nl: De tegenwoordige tijd}
+    skills:
+      - id: food
+        kind: vocab
+        title: {en: Food and drink, nl: Eten en drinken}
+        icon: food
+        requires: [estar]
+        items: {tags: [food]}
+      - id: numbers
+        kind: vocab
+        title: {en: Numbers, nl: Getallen}
+        icon: numbers
+        requires: [estar]
+        items: {tags: [numbers]}
+      - id: present-ar
+        kind: grammar
+        title: {en: Present tense of -ar verbs, nl: Tegenwoordige tijd van -ar-werkwoorden}
+        icon: verb
+        requires: [estar]
+        verbs: {class: ar, regular: true, tense: presente, top: 16,
+                exclude: [gustar, encantar, interesar, importar, molestar, faltar, quedar, llamar, levantar,
+                          acostar, despertar, equivocar, sentar, lavar, preocupar, casar, quitar, peinar, bañar, matar, tratar]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+      - id: articles
+        kind: grammar
+        title: {en: "The article: el, la", nl: "Het lidwoord: el, la"}
+        icon: article
+        requires: [food]
+        facet: article
+        items: {pos: noun, tags: [people, food], exclude: [estudiante, bebé, gente, turista, joven]}
+      - id: present-er-ir
+        kind: grammar
+        title: {en: Present tense of -er and -ir verbs, nl: Tegenwoordige tijd van -er- en -ir-werkwoorden}
+        icon: verb
+        requires: [present-ar]
+        verbs: {class: [er, ir], regular: true, tense: presente, top: 16, exclude: [doler, parecer, deber, suceder, ocurrir, meter]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+
+  - id: u3
+    title: {en: Everyday life, nl: Het dagelijks leven}
+    skills:
+      - id: time
+        kind: vocab
+        title: {en: Time and days, nl: Tijd en dagen}
+        icon: clock
+        requires: [present-er-ir, articles]
+        items: {tags: [time]}
+      - id: home
+        kind: vocab
+        title: {en: At home, nl: Thuis}
+        icon: home
+        requires: [present-er-ir, articles]
+        items: {tags: [home]}
+      - id: prepositions
+        kind: grammar
+        title: {en: "Prepositions: al, del, por, para...", nl: "Voorzetsels: al, del, por, para..."}
+        icon: grammar
+        requires: [time, home]
+        introduces: ["prep:contraction"]
+        items: {tags: [prepositions]}
+      - id: stem-changing
+        kind: grammar
+        title: {en: "Stem-changing verbs: quiero, puedo, pido", nl: "Klinkerwisseling: quiero, puedo, pido"}
+        icon: bolt
+        requires: [present-er-ir, articles]
+        verbs: {tense: presente, lemmas: [pensar, empezar, cerrar, entender, perder, preferir, sentir, volver,
+                                          dormir, encontrar, recordar, jugar, pedir, servir, seguir]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: irregular-present
+        kind: grammar
+        title: {en: "Irregular verbs: tengo, hago, voy", nl: "Onregelmatige werkwoorden: tengo, hago, voy"}
+        icon: bolt
+        requires: [stem-changing]
+        verbs: {tense: presente, lemmas: [tener, hacer, ir, venir, decir, poner, salir, dar, ver, conocer, traer, oír]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+
+  - id: u4
+    title: {en: Wants and likes, nl: Willen en houden van}
+    skills:
+      - id: everyday-verbs
+        kind: vocab
+        title: {en: Everyday verbs, nl: Alledaagse werkwoorden}
+        icon: verb
+        requires: [prepositions, irregular-present]
+        items: {tags: [verbs1]}
+      - id: body
+        kind: vocab
+        title: {en: Body and health, nl: Lichaam en gezondheid}
+        icon: body
+        requires: [prepositions, irregular-present]
+        items: {tags: [body]}
+      - id: verb-phrases
+        kind: grammar
+        title: {en: "Can, must, going to: verb + verb", nl: "Kunnen, moeten, gaan: werkwoord + werkwoord"}
+        icon: key
+        requires: [prepositions, irregular-present]
+        introduces: [modal, gerund]
+        verbs: {tense: presente, lemmas: [poder, querer, deber, saber]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: object-pronouns
+        kind: grammar
+        title: {en: "Object pronouns: lo, la, le", nl: "Voornaamwoorden als voorwerp: lo, la, le"}
+        icon: person
+        requires: [verb-phrases]
+        items: {tags: [pronouns]}
+      - id: gustar
+        kind: grammar
+        title: {en: "Me gusta: verbs like gustar", nl: "Me gusta: werkwoorden zoals gustar"}
+        icon: star
+        requires: [object-pronouns]
+        items: {lemmas: [gustar, encantar, interesar, importar, molestar, doler, faltar, parecer]}
+
+  - id: u5
+    title: {en: People and things, nl: Mensen en dingen}
+    skills:
+      - id: family
+        kind: vocab
+        title: {en: Family, nl: Familie}
+        icon: family
+        requires: [gustar, everyday-verbs]
+        items: {tags: [family]}
+      - id: adjectives
+        kind: grammar
+        title: {en: "Adjectives: bueno, buena, buenos", nl: "Bijvoeglijke naamwoorden: bueno, buena, buenos"}
+        icon: grammar
+        requires: [gustar, everyday-verbs]
+        items: {tags: [adjectives]}
+      - id: plurals
+        kind: grammar
+        title: {en: "Plurals: casas, ciudades, luces", nl: "Meervoud: casas, ciudades, luces"}
+        icon: grammar
+        requires: [adjectives]
+        items: {tags: [plurals]}
+      - id: colours
+        kind: vocab
+        title: {en: Colours, nl: Kleuren}
+        icon: colors
+        requires: [adjectives]
+        items: {tags: [colours]}
+      - id: possessives
+        kind: grammar
+        title: {en: "My, your, his: possessives", nl: "Mijn, jouw, zijn: bezittelijke voornaamwoorden"}
+        icon: person
+        requires: [family, adjectives]
+        items: {tags: [possessives]}
+
+  - id: u6
+    title: {en: Around town, nl: In de stad}
+    skills:
+      - id: city
+        kind: vocab
+        title: {en: In the city, nl: In de stad}
+        icon: city
+        requires: [plurals, colours, possessives]
+        items: {tags: [city]}
+      - id: travel
+        kind: vocab
+        title: {en: Travel and free time, nl: Reizen en vrije tijd}
+        icon: travel
+        requires: [plurals, colours, possessives]
+        items: {tags: [travel]}
+      - id: shopping
+        kind: vocab
+        title: {en: Shopping and clothes, nl: Winkelen en kleding}
+        icon: shopping
+        requires: [plurals, colours, possessives]
+        items: {tags: [shopping]}
+      - id: reflexive
+        kind: grammar
+        title: {en: "Reflexive verbs: me levanto", nl: "Wederkerende werkwoorden: me levanto"}
+        icon: person
+        requires: [city, travel]
+        introduces: [reflexive]
+        verbs: {tense: presente, lemmas: [levantar, acostar, despertar, equivocar, sentar, lavar, quedar, preocupar,
+                                          casar, quitar, vestir, divertir]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+
+  - id: u7
+    title: {en: The recent past, nl: Het recente verleden}
+    skills:
+      - id: work
+        kind: vocab
+        title: {en: Work and school, nl: Werk en school}
+        icon: work
+        requires: [reflexive, shopping]
+        items: {tags: [work]}
+      - id: feelings
+        kind: vocab
+        title: {en: Feelings, nl: Gevoelens}
+        icon: person
+        requires: [reflexive, shopping]
+        items: {tags: [feelings]}
+      - id: preterito-perfecto
+        kind: grammar
+        title: {en: "The perfect: he comido", nl: "De voltooide tijd: he comido"}
+        icon: past
+        requires: [reflexive, shopping]
+        verbs: {tense: preterito_perfecto, regular: true, top: 16, exclude: [haber, deber, parecer, gustar, matar]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: participles-irregular
+        kind: grammar
+        title: {en: "Irregular participles: hecho, dicho, visto", nl: "Onregelmatige voltooide deelwoorden: hecho, dicho, visto"}
+        icon: past
+        requires: [preterito-perfecto]
+        introduces: ["irregular:preterito_perfecto"]
+        verbs: {tense: preterito_perfecto, regular: false, top: 10,
+                exclude: [haber, leer, creer, oír, traer, caer, reír, sonreír, poseer, construir, huir, destruir, suponer]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+
+  - id: u8
+    title: {en: The simple past, nl: De verleden tijd}
+    skills:
+      - id: weather
+        kind: vocab
+        title: {en: Weather and nature, nl: Weer en natuur}
+        icon: weather
+        requires: [participles-irregular]
+        items: {tags: [weather]}
+      - id: animals
+        kind: vocab
+        title: {en: Animals, nl: Dieren}
+        icon: animals
+        requires: [participles-irregular]
+        items: {tags: [animals]}
+      - id: indefinido
+        kind: grammar
+        title: {en: "The simple past: hablé, comí", nl: "De verleden tijd: hablé, comí"}
+        icon: past
+        requires: [participles-irregular]
+        verbs: {tense: preterito_indefinido, regular: true, top: 16, exclude: [gustar, parecer, deber, matar]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+      - id: indefinido-irregular
+        kind: grammar
+        title: {en: "Irregular simple past: tuve, hice, fui", nl: "Onregelmatige verleden tijd: tuve, hice, fui"}
+        icon: past
+        requires: [indefinido]
+        introduces: ["irregular:preterito_indefinido"]
+        verbs: {tense: preterito_indefinido, regular: false, top: 14, exclude: [haber, ser, ir]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+
+  - id: u9
+    title: {en: Memories and plans, nl: Herinneringen en plannen}
+    skills:
+      - id: imperfecto
+        kind: grammar
+        title: {en: "The imperfect: hablaba, comía", nl: "De imperfecto: hablaba, comía"}
+        icon: past
+        requires: [indefinido-irregular, weather, animals]
+        verbs: {tense: imperfecto, top: 16, exclude: [haber, deber, parecer]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+      - id: futuro
+        kind: grammar
+        title: {en: "The future: hablaré", nl: "De toekomende tijd: hablaré"}
+        icon: future
+        requires: [imperfecto]
+        verbs: {tense: futuro, regular: true, top: 14, exclude: [deber, parecer, gustar]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+      - id: futuro-irregular
+        kind: grammar
+        title: {en: "Irregular futures: tendré, haré", nl: "Onregelmatige toekomende tijd: tendré, haré"}
+        icon: future
+        requires: [futuro]
+        introduces: ["irregular:futuro"]
+        verbs: {tense: futuro, regular: false, top: 10, exclude: [haber, suponer, mantener, detener, obtener, contener]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: ideas
+        kind: vocab
+        title: {en: Ideas and opinions, nl: Ideeën en meningen}
+        icon: chat
+        requires: [imperfecto]
+        items: {tags: [ideas]}
