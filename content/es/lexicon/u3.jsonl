@@ -2,6 +2,7 @@
 {"id": "es:agosto", "lemma": "agosto", "pos": "noun", "article": "el", "gender": "m", "plural": "agostos", "freq": 3704, "tr": {"en": ["August"], "nl": ["augustus"]}, "tr_src": {"en": "claude", "nl": "claude"}, "tags": ["time"], "inflections": ["agostos"], "unit": "u3"}
 {"id": "es:ahora", "lemma": "ahora", "pos": "adv", "freq": 44, "tr": {"en": ["now"], "nl": ["nu"]}, "tr_src": {"en": "claude", "nl": "claude"}, "tags": ["time"], "unit": "u3"}
 {"id": "es:al", "lemma": "al", "pos": "prep", "freq": 37, "tr": {"en": ["to the", "at the"], "nl": ["naar de", "aan de"]}, "tr_src": {"en": "claude", "nl": "claude"}, "tags": ["prepositions"], "unit": "u3"}
+{"id": "es:anoche", "lemma": "anoche", "pos": "adv", "freq": 502, "tr": {"en": ["last night"], "nl": ["gisteravond", "vannacht"]}, "tr_src": {"en": "claude", "nl": "claude"}, "tags": ["time"], "unit": "u3"}
 {"id": "es:antes", "lemma": "antes", "pos": "adv", "freq": 828, "tr": {"en": ["before", "earlier"], "nl": ["eerder", "vroeger", "voor"]}, "tr_src": {"en": "claude", "nl": "claude"}, "tags": ["time"], "unit": "u3"}
 {"id": "es:armario", "lemma": "armario", "pos": "noun", "article": "el", "gender": "m", "plural": "armarios", "freq": 2086, "tr": {"en": ["cupboard", "wardrobe"], "nl": ["kast"]}, "tr_src": {"en": "claude", "nl": "claude"}, "tags": ["home"], "inflections": ["armarios"], "unit": "u3"}
 {"id": "es:ayer", "lemma": "ayer", "pos": "adv", "freq": 558, "tr": {"en": ["yesterday"], "nl": ["gisteren"]}, "tr_src": {"en": "claude", "nl": "claude"}, "tags": ["time"], "unit": "u3"}

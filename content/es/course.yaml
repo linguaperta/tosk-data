@@ -416,11 +416,11 @@ units:
         icon: future
         requires: [futuro]
         introduces: ["irregular:futuro"]
-        verbs: {tense: futuro, regular: false, top: 10, exclude: [haber, suponer, mantener, detener, obtener, contener]}
+        verbs: {tense: futuro, regular: false, top: 9, exclude: [haber, suponer, mantener, detener, obtener, contener, deshacer]}
         exercises: [conj_grid, cloze, spot_error, transform]
       - id: ideas
         kind: vocab
         title: {en: Ideas and opinions, nl: Ideeën en meningen}
         icon: chat
-        requires: [imperfecto]
+        requires: [futuro-irregular]
         items: {tags: [ideas]}

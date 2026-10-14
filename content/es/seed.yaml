@@ -170,6 +170,7 @@ items:
   - {lemma: hoy, pos: adv, tags: [time], en: [today], nl: [vandaag]}
   - {lemma: mañana, pos: noun, tags: [time], en: [morning, tomorrow], nl: [ochtend, morgen]}
   - {lemma: ayer, pos: adv, tags: [time], en: [yesterday], nl: [gisteren]}
+  - {lemma: anoche, pos: adv, tags: [time], en: [last night], nl: [gisteravond, vannacht]}
   - {lemma: ahora, pos: adv, tags: [time], en: [now], nl: [nu]}
   - {lemma: tarde, pos: noun, tags: [time], en: [afternoon, evening, late], nl: [middag, avond, laat]}
   - {lemma: noche, pos: noun, tags: [time], en: [night, evening], nl: [nacht, avond]}
