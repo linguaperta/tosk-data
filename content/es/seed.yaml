@@ -3,7 +3,7 @@
 # (marked tr_src: claude in the lexicon). Items without en take their English gloss from
 # Wiktionary. Entries without tags only add/override glosses for automatically selected items
 # (verbs of the grammar skills).
-exclude: []
+exclude: [vengar]
 # Mass nouns and abstract nouns whose plural is odd or means something else: no plural in the
 # lexicon, so the app never asks for or offers one.
 uncountable: [leche, arroz, azúcar, sal, carne, gente, dinero, sed, hambre, salud, sangre, música, ropa, té,
@@ -64,7 +64,7 @@ items:
   - {lemma: muy, pos: adv, tags: [little], en: [very], nl: [heel, erg, zeer]}
   - {lemma: también, pos: adv, tags: [little], en: [also, too], nl: [ook]}
   - {lemma: más, pos: adv, tags: [little], en: [more, most], nl: [meer, meest]}
-  - {lemma: mucho, pos: adv, tags: [little], en: [a lot, much], nl: [veel]}
+  - {lemma: mucho, pos: adv, tags: [little], en: [a lot, much, many], nl: [veel], inflections: [mucha, muchos, muchas]}
   - {lemma: si, pos: conj, tags: [little], en: [if, whether], nl: [als, of]}
   - {lemma: ya, pos: adv, tags: [little], en: [already, now], nl: [al, nu]}
   - {lemma: algo, pos: pron, tags: [little], en: [something, anything], nl: [iets]}
@@ -307,14 +307,13 @@ items:
   - {lemma: me, pos: pron, tags: [pronouns], en: [me, to me, myself], nl: [me, mij, mezelf]}
   - {lemma: te, pos: pron, tags: [pronouns], en: [you, to you, yourself], nl: [je, jou, jezelf]}
   - {lemma: lo, pos: pron, tags: [pronouns], en: [him, it], nl: [hem, het]}
-  - {lemma: la, pos: pron, tags: [pronouns], en: [her, it], nl: [haar, het]}
   - {lemma: le, pos: pron, tags: [pronouns], en: [to him, to her, him, you (formal)], nl: [hem, haar, aan hem, aan haar, u]}
   - {lemma: nos, pos: pron, tags: [pronouns], en: [us, to us, ourselves], nl: [ons, onszelf]}
   - {lemma: os, pos: pron, tags: [pronouns], en: [you (plural), to you, yourselves], nl: [jullie, je]}
-  - {lemma: los, pos: pron, tags: [pronouns], en: [them], nl: [hen, ze]}
-  - {lemma: las, pos: pron, tags: [pronouns], en: [them], nl: [hen, ze]}
   - {lemma: les, pos: pron, tags: [pronouns], en: [to them, them], nl: [hun, hen, ze]}
   - {lemma: se, pos: pron, tags: [pronouns], en: [himself, herself, oneself, themselves], nl: [zich, zichzelf]}
+  - {lemma: mí, pos: pron, tags: [pronouns], en: [me (after a preposition)], nl: [mij]}
+  - {lemma: ti, pos: pron, tags: [pronouns], en: [you (after a preposition)], nl: [jou, je]}
   # --- gustar-type verbs (grammar skill selects them by lemma)
   - {lemma: gustar, pos: verb, en: [to like (me gusta = I like), to please], nl: [leuk vinden (me gusta = ik vind leuk), bevallen]}
   - {lemma: encantar, pos: verb, en: [to love (me encanta = I love), to delight], nl: [dol zijn op, heerlijk vinden]}
@@ -344,9 +343,9 @@ items:
   - {lemma: boda, pos: noun, tags: [family], en: [wedding], nl: [bruiloft]}
   - {lemma: casado, pos: adj, tags: [family], en: [married], nl: [getrouwd]}
   # --- adjectives
-  - {lemma: bueno, pos: adj, tags: [adjectives], en: [good], nl: [goed]}
+  - {lemma: bueno, pos: adj, tags: [adjectives], en: [good], nl: [goed], inflections: [buen, buena, buenos, buenas]}
   - {lemma: malo, pos: adj, tags: [adjectives], en: [bad], nl: [slecht]}
-  - {lemma: grande, pos: adj, tags: [adjectives], en: [big, large, great], nl: [groot]}
+  - {lemma: grande, pos: adj, tags: [adjectives], en: [big, large, great], nl: [groot], inflections: [gran, grandes]}
   - {lemma: pequeño, pos: adj, tags: [adjectives], en: [small, little], nl: [klein]}
   - {lemma: nuevo, pos: adj, tags: [adjectives], en: [new], nl: [nieuw]}
   - {lemma: viejo, pos: adj, tags: [adjectives], en: [old], nl: [oud]}
@@ -540,7 +539,7 @@ items:
   - {lemma: preocupado, pos: adj, tags: [feelings], en: [worried], nl: [bezorgd, ongerust]}
   - {lemma: aburrido, pos: adj, tags: [feelings], en: [bored, boring], nl: [verveeld, saai]}
   - {lemma: orgulloso, pos: adj, tags: [feelings], en: [proud], nl: [trots]}
-  - {lemma: solo, pos: adv, tags: [feelings], en: [only, just, alone], nl: [alleen, maar, slechts]}
+  - {lemma: solo, pos: adv, tags: [feelings], en: [only, just, alone], nl: [alleen, maar, slechts], inflections: [sola, solos, solas]}
   - {lemma: amor, pos: noun, tags: [feelings], en: [love], nl: [liefde]}
   - {lemma: miedo, pos: noun, tags: [feelings], en: [fear], nl: [angst]}
   - {lemma: alegría, pos: noun, tags: [feelings], en: [joy, happiness], nl: [vreugde, blijdschap]}

@@ -186,7 +186,9 @@ units:
         title: {en: Present tense of -er and -ir verbs, nl: Tegenwoordige tijd van -er- en -ir-werkwoorden}
         icon: verb
         requires: [present-ar]
-        verbs: {class: [er, ir], regular: true, tense: presente, top: 16, exclude: [doler, parecer, deber, suceder, ocurrir, meter]}
+        verbs: {class: [er, ir], regular: true, tense: presente,
+                lemmas: [comer, beber, vivir, leer, escribir, creer, aprender, abrir, vender, correr, recibir,
+                         decidir, comprender, responder, compartir]}
         exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
 
   - id: u3
@@ -357,7 +359,7 @@ units:
         requires: [preterito-perfecto]
         introduces: ["irregular:preterito_perfecto"]
         verbs: {tense: preterito_perfecto, regular: false, top: 10,
-                exclude: [haber, leer, creer, oír, traer, caer, reír, sonreír, poseer, construir, huir, destruir, suponer]}
+                exclude: [haber, leer, creer, oír, traer, caer, reír, sonreír, poseer, construir, huir, destruir, suponer, morir]}
         exercises: [conj_grid, cloze, spot_error, transform]
 
   - id: u8
