@@ -1,0 +1,45 @@
+# Graded mini-stories for unit u5 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u5-mi-familia
+  unit: u5
+  title: {es: "Mi familia", en: "My family", nl: "Mijn familie"}
+  sentences:
+    - {es: "Mi familia es grande.", en: "My family is big.", nl: "Mijn familie is groot."}
+    - {es: "Tengo dos hermanos y una hermana.", en: "I have two brothers and a sister.", nl: "Ik heb twee broers en een zus."}
+    - {es: "Mi hermana es alta y muy guapa.", en: "My sister is tall and very pretty.", nl: "Mijn zus is lang en heel mooi."}
+    - {es: "Mis abuelos viven en una casa pequeña.", en: "My grandparents live in a small house.", nl: "Mijn grootouders wonen in een klein huis."}
+    - {es: "Su casa es vieja, pero bonita.", en: "Their house is old, but pretty.", nl: "Hun huis is oud, maar mooi."}
+    - {es: "Tienen un perro negro.", en: "They have a black dog.", nl: "Ze hebben een zwarte hond."}
+  new_words: [perro]
+  questions:
+    - q: {en: "How many siblings does the narrator have?", nl: "Hoeveel broers en zussen heeft de verteller?"}
+      options: [{en: "Three", nl: "Drie"}, {en: "Two", nl: "Twee"}, {en: "One", nl: "Eén"}]
+      answer: 0
+    - q: {en: "Where do the grandparents live?", nl: "Waar wonen de grootouders?"}
+      options: [{en: "In a small house", nl: "In een klein huis"}, {en: "In a big flat", nl: "In een grote flat"}, {en: "With us", nl: "Bij ons"}]
+      answer: 0
+    - q: {en: "What is their house like?", nl: "Hoe is hun huis?"}
+      prompt: "¿Cómo es su casa?"
+      options: ["vieja, pero bonita", "nueva y grande", "pequeña y fea"]
+      answer: 0
+
+- id: u5-colores
+  unit: u5
+  title: {es: "La casa de colores", en: "The colourful house", nl: "Het gekleurde huis"}
+  sentences:
+    - {es: "Nuestra casa nueva tiene muchos colores.", en: "Our new house has lots of colours.", nl: "Ons nieuwe huis heeft veel kleuren."}
+    - {es: "La puerta es roja y las ventanas son azules.", en: "The door is red and the windows are blue.", nl: "De deur is rood en de ramen zijn blauw."}
+    - {es: "La cocina es amarilla.", en: "The kitchen is yellow.", nl: "De keuken is geel."}
+    - {es: "Mi habitación es verde y blanca.", en: "My room is green and white.", nl: "Mijn kamer is groen met wit."}
+    - {es: "Mis padres prefieren el gris.", en: "My parents prefer grey.", nl: "Mijn ouders houden meer van grijs."}
+    - {es: "Pero a mí me encantan los colores.", en: "But I love colours.", nl: "Maar ik ben gek op kleuren."}
+  questions:
+    - q: {en: "What colour is the door?", nl: "Welke kleur heeft de deur?"}
+      prompt: "¿De qué color es la puerta?"
+      options: ["roja", "azul", "verde"]
+      answer: 0
+    - q: {en: "What colour is the kitchen?", nl: "Welke kleur heeft de keuken?"}
+      options: [{en: "Yellow", nl: "Geel"}, {en: "Grey", nl: "Grijs"}, {en: "Blue", nl: "Blauw"}]
+      answer: 0
+    - q: {en: "Which colour do the parents prefer?", nl: "Welke kleur hebben de ouders liever?"}
+      options: [{en: "Grey", nl: "Grijs"}, {en: "Red", nl: "Rood"}, {en: "Green", nl: "Groen"}]
+      answer: 0

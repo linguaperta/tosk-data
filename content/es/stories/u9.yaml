@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u9 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u9-de-nino
+  unit: u9
+  title: {es: "Cuando era niño", en: "When I was a child", nl: "Toen ik klein was"}
+  sentences:
+    - {es: "Cuando era niño, vivía en un pueblo pequeño.", en: "When I was a child, I lived in a small village.", nl: "Toen ik klein was, woonde ik in een klein dorp."}
+    - {es: "Mi casa estaba cerca del mar.", en: "My house was near the sea.", nl: "Mijn huis lag dicht bij de zee."}
+    - {es: "Todos los días jugaba en la playa con mis amigos.", en: "Every day I played on the beach with my friends.", nl: "Elke dag speelde ik op het strand met mijn vrienden."}
+    - {es: "Mi abuela hacía pasteles los domingos.", en: "My grandmother used to bake cakes on Sundays.", nl: "Mijn oma bakte op zondag taarten."}
+    - {es: "No teníamos televisión, pero éramos felices.", en: "We didn't have a television, but we were happy.", nl: "We hadden geen televisie, maar we waren gelukkig."}
+    - {es: "Era una vida muy tranquila.", en: "It was a very quiet life.", nl: "Het was een heel rustig leven."}
+  questions:
+    - q: {en: "Where did the narrator live?", nl: "Waar woonde de verteller?"}
+      options: [{en: "In a small village by the sea", nl: "In een klein dorp aan zee"}, {en: "In a big city", nl: "In een grote stad"}, {en: "In the mountains", nl: "In de bergen"}]
+      answer: 0
+    - q: {en: "What did the grandmother do on Sundays?", nl: "Wat deed oma op zondag?"}
+      prompt: "¿Qué hacía la abuela los domingos?"
+      options: ["pasteles", "la cena", "nada"]
+      answer: 0
+    - q: {en: "Did they have a television?", nl: "Hadden ze een televisie?"}
+      options: [{en: "No", nl: "Nee"}, {en: "Yes", nl: "Ja"}, {en: "Two", nl: "Twee"}]
+      answer: 0
+
+- id: u9-planes
+  unit: u9
+  title: {es: "El verano que viene", en: "Next summer", nl: "Volgende zomer"}
+  sentences:
+    - {es: "El verano que viene iremos a México.", en: "Next summer we will go to Mexico.", nl: "Volgende zomer gaan we naar Mexico."}
+    - {es: "Viajaremos en avión con los niños.", en: "We will travel by plane with the children.", nl: "We reizen met het vliegtuig met de kinderen."}
+    - {es: "Visitaremos a la familia de mi marido.", en: "We will visit my husband's family.", nl: "We gaan op bezoek bij de familie van mijn man."}
+    - {es: "Tendremos mucho tiempo para la playa.", en: "We will have a lot of time for the beach.", nl: "We hebben veel tijd voor het strand."}
+    - {es: "Creo que será un viaje muy bonito.", en: "I think it will be a very nice trip.", nl: "Ik denk dat het een heel mooie reis wordt."}
+    - {es: "Los niños ya hablan de las vacaciones.", en: "The children are already talking about the holidays.", nl: "De kinderen praten al over de vakantie."}
+  questions:
+    - q: {en: "Where will they go?", nl: "Waar gaan ze heen?"}
+      prompt: "¿Adónde irán?"
+      options: ["a México", "a Madrid", "a Sevilla"]
+      answer: 0
+    - q: {en: "How will they travel?", nl: "Hoe reizen ze?"}
+      options: [{en: "By plane", nl: "Met het vliegtuig"}, {en: "By train", nl: "Met de trein"}, {en: "By car", nl: "Met de auto"}]
+      answer: 0
+    - q: {en: "Whose family will they visit?", nl: "Bij wiens familie gaan ze op bezoek?"}
+      options: [{en: "The husband's family", nl: "De familie van de man"}, {en: "The neighbours", nl: "De buren"}, {en: "Friends", nl: "Vrienden"}]
+      answer: 0

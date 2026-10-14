@@ -39,6 +39,30 @@ tense_labels:
   futuro: {en: future, nl: toekomende tijd}
 articles: [el, la]
 
+# Inflection tables of non-verbs (duelingo/docs/ARCHITECTURE.md, "Inflection tables"; the importer
+# fills them from Wiktionary, pipeline/pipeline/inflect.py es_number / es_agreement). Skills train
+# them with `inflections: {table: T}` (facet #infl:T). `agreement`: the cell follows from the noun.
+inflection_tables:
+  number:
+    title: {en: singular and plural, nl: enkelvoud en meervoud}
+    pos: [noun]
+    cells: [sg, pl]
+    base: sg
+    labels:
+      sg: {en: singular, nl: enkelvoud}
+      pl: {en: plural, nl: meervoud}
+  agreement:
+    title: {en: gender and number, nl: geslacht en getal}
+    pos: [adj, det]
+    cells: [m.sg, f.sg, m.pl, f.pl]
+    base: m.sg
+    agreement: true
+    labels:
+      m.sg: {en: masculine singular, nl: mannelijk enkelvoud}
+      f.sg: {en: feminine singular, nl: vrouwelijk enkelvoud}
+      m.pl: {en: masculine plural, nl: mannelijk meervoud}
+      f.pl: {en: feminine plural, nl: vrouwelijk meervoud}
+
 base_features: ["tense:presente"]
 feature_detectors:
   # poder/querer/deber/saber + infinitive, tener que + infinitive, ir a + infinitive (puedo venir,
@@ -280,24 +304,28 @@ units:
         icon: grammar
         requires: [gustar, everyday-verbs]
         items: {tags: [adjectives]}
+        inflections: {table: agreement}   # + #infl:agreement (bonito, bonita, bonitos, bonitas)
       - id: plurals
         kind: grammar
         title: {en: "Plurals: casas, ciudades, luces", nl: "Meervoud: casas, ciudades, luces"}
         icon: grammar
         requires: [adjectives]
         items: {tags: [plurals]}
+        inflections: {table: number}      # + #infl:number (ciudad -> ciudades, luz -> luces)
       - id: colours
         kind: vocab
         title: {en: Colours, nl: Kleuren}
         icon: colors
         requires: [adjectives]
         items: {tags: [colours]}
+        inflections: {table: agreement}   # + #infl:agreement (rojo, roja, rojos, rojas)
       - id: possessives
         kind: grammar
         title: {en: "My, your, his: possessives", nl: "Mijn, jouw, zijn: bezittelijke voornaamwoorden"}
         icon: person
         requires: [family, adjectives]
         items: {tags: [possessives]}
+        inflections: {table: agreement}   # + #infl:agreement (nuestro, nuestra; mi, mis)
 
   - id: u6
     title: {en: Around town, nl: In de stad}

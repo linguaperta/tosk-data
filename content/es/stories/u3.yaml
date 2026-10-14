@@ -1,0 +1,46 @@
+# Graded mini-stories for unit u3 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u3-un-dia
+  unit: u3
+  title: {es: "Un día de Carmen", en: "A day in Carmen's life", nl: "Een dag van Carmen"}
+  sentences:
+    - {es: "Carmen vive en un piso con jardín.", en: "Carmen lives in a flat with a garden.", nl: "Carmen woont in een flat met een tuin."}
+    - {es: "Por la mañana sale de casa a las ocho.", en: "In the morning she leaves home at eight.", nl: "'s Ochtends gaat ze om acht uur van huis."}
+    - {es: "Vuelve a casa por la tarde.", en: "She comes back home in the afternoon.", nl: "Ze komt 's middags weer thuis."}
+    - {es: "Hace la cena en la cocina.", en: "She makes dinner in the kitchen.", nl: "Ze maakt het avondeten in de keuken."}
+    - {es: "Después ve la televisión.", en: "Afterwards she watches television.", nl: "Daarna kijkt ze televisie."}
+    - {es: "Duerme muy bien.", en: "She sleeps very well.", nl: "Ze slaapt heel goed."}
+  questions:
+    - q: {en: "Where does Carmen live?", nl: "Waar woont Carmen?"}
+      options: [{en: "In a flat with a garden", nl: "In een flat met een tuin"}, {en: "In a hotel", nl: "In een hotel"}, {en: "With her parents", nl: "Bij haar ouders"}]
+      answer: 0
+    - q: {en: "What time does she leave home?", nl: "Hoe laat gaat ze van huis?"}
+      options: [{en: "At eight", nl: "Om acht uur"}, {en: "At nine", nl: "Om negen uur"}, {en: "At seven", nl: "Om zeven uur"}]
+      answer: 0
+    - q: {en: "What does she do in the evening?", nl: "Wat doet ze 's avonds?"}
+      options: [{en: "She cooks and watches TV", nl: "Ze kookt en kijkt tv"}, {en: "She goes out with friends", nl: "Ze gaat uit met vrienden"}, {en: "She reads a book", nl: "Ze leest een boek"}]
+      answer: 0
+
+- id: u3-la-llave
+  unit: u3
+  title: {es: "La llave", en: "The key", nl: "De sleutel"}
+  sentences:
+    - {es: "Juan no encuentra la llave.", en: "Juan can't find the key.", nl: "Juan vindt de sleutel niet."}
+    - {es: "Busca en la cocina y en el baño.", en: "He looks in the kitchen and in the bathroom.", nl: "Hij zoekt in de keuken en in de badkamer."}
+    - {es: "No está encima de la mesa.", en: "It isn't on the table.", nl: "Hij ligt niet op tafel."}
+    - {es: "Tampoco está debajo de la cama.", en: "It isn't under the bed either.", nl: "Hij ligt ook niet onder het bed."}
+    - {es: "La hija de Juan encuentra la llave.", en: "Juan's daughter finds the key.", nl: "De dochter van Juan vindt de sleutel."}
+    - {es: "La llave está en la puerta.", en: "The key is in the door.", nl: "De sleutel zit in de deur."}
+    - {es: "Juan dice: «¡Gracias!»", en: "Juan says: \"Thanks!\"", nl: "Juan zegt: \"Bedankt!\""}
+  new_words: [tampoco]
+  questions:
+    - q: {en: "What is Juan looking for?", nl: "Wat zoekt Juan?"}
+      prompt: "¿Qué busca Juan?"
+      options: ["la llave", "el libro", "el teléfono"]
+      answer: 0
+    - q: {en: "Is the key on the table?", nl: "Ligt de sleutel op tafel?"}
+      options: [{en: "No", nl: "Nee"}, {en: "Yes", nl: "Ja"}, {en: "Yes, under a book", nl: "Ja, onder een boek"}]
+      answer: 0
+    - q: {en: "Where is the key?", nl: "Waar is de sleutel?"}
+      prompt: "¿Dónde está la llave?"
+      options: ["en la puerta", "en la cocina", "debajo de la cama"]
+      answer: 0

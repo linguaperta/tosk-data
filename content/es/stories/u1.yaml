@@ -1,0 +1,49 @@
+# Graded mini-stories for unit u1 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u1-encantado
+  unit: u1
+  title: {es: "¡Encantado!", en: "Nice to meet you!", nl: "Aangenaam!"}
+  new_words: [hoy]
+  sentences:
+    - {es: "Hola, me llamo Pablo.", en: "Hello, my name is Pablo.", nl: "Hallo, ik heet Pablo."}
+    - {es: "Soy estudiante y estoy en Madrid.", en: "I'm a student and I'm in Madrid.", nl: "Ik ben student en ik ben in Madrid."}
+    - {es: "Ana es una amiga.", en: "Ana is a friend.", nl: "Ana is een vriendin."}
+    - {es: "Ella es profesora.", en: "She is a teacher.", nl: "Zij is lerares."}
+    - {es: "Hoy Ana está muy bien.", en: "Today Ana is very well.", nl: "Vandaag gaat het heel goed met Ana."}
+    - {es: "Elena es la hija de Ana.", en: "Elena is Ana's daughter.", nl: "Elena is de dochter van Ana."}
+    - {es: "¡Hola, Elena! ¡Encantado!", en: "Hi, Elena! Nice to meet you!", nl: "Hoi, Elena! Aangenaam!"}
+  questions:
+    - q: {en: "Who is Pablo?", nl: "Wie is Pablo?"}
+      prompt: "¿Quién es Pablo?"
+      options: ["un estudiante", "un profesor", "un niño"]
+      answer: 0
+    - q: {en: "What is Ana's job?", nl: "Wat is Ana van beroep?"}
+      options: [{en: "Teacher", nl: "Lerares"}, {en: "Student", nl: "Student"}, {en: "Doctor", nl: "Dokter"}]
+      answer: 0
+    - q: {en: "Who is Elena?", nl: "Wie is Elena?"}
+      prompt: "¿Quién es Elena?"
+      options: ["la hija de Ana", "la madre de Ana", "la amiga de Pablo"]
+      answer: 0
+      why: {en: "Sentence 6.", nl: "Zin 6."}
+
+- id: u1-donde-estan
+  unit: u1
+  title: {es: "¿Dónde están?", en: "Where are they?", nl: "Waar zijn ze?"}
+  sentences:
+    - {es: "Buenos días, señora.", en: "Good morning, madam.", nl: "Goedemorgen, mevrouw."}
+    - {es: "¿Dónde está el profesor?", en: "Where is the teacher?", nl: "Waar is de leraar?"}
+    - {es: "El profesor no está aquí.", en: "The teacher isn't here.", nl: "De leraar is er niet."}
+    - {es: "Está allí, con los estudiantes.", en: "He's over there, with the students.", nl: "Hij is daar, bij de studenten."}
+    - {es: "Los estudiantes son de México.", en: "The students are from Mexico.", nl: "De studenten komen uit Mexico."}
+    - {es: "Son muy amigos.", en: "They are close friends.", nl: "Ze zijn goede vrienden."}
+    - {es: "Gracias, señora. ¡Adiós!", en: "Thank you, madam. Goodbye!", nl: "Dank u, mevrouw. Tot ziens!"}
+  questions:
+    - q: {en: "Is the teacher here?", nl: "Is de leraar hier?"}
+      options: [{en: "No, he is over there", nl: "Nee, hij is daar"}, {en: "Yes, he is here", nl: "Ja, hij is hier"}, {en: "He is in Mexico", nl: "Hij is in Mexico"}]
+      answer: 0
+    - q: {en: "Where are the students from?", nl: "Waar komen de studenten vandaan?"}
+      prompt: "¿De dónde son los estudiantes?"
+      options: ["de México", "de Madrid", "de España"]
+      answer: 0
+    - q: {en: "Who is the teacher with?", nl: "Bij wie is de leraar?"}
+      options: [{en: "With the students", nl: "Bij de studenten"}, {en: "With the lady", nl: "Bij de mevrouw"}, {en: "Alone", nl: "Alleen"}]
+      answer: 0

@@ -1,0 +1,46 @@
+# Graded mini-stories for unit u4 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u4-medico
+  unit: u4
+  title: {es: "En el médico", en: "At the doctor's", nl: "Bij de dokter"}
+  new_words: [médico]
+  sentences:
+    - {es: "Carlos está enfermo.", en: "Carlos is ill.", nl: "Carlos is ziek."}
+    - {es: "Le duele la cabeza y tiene fiebre.", en: "He has a headache and a fever.", nl: "Hij heeft hoofdpijn en koorts."}
+    - {es: "No puede trabajar hoy.", en: "He can't work today.", nl: "Hij kan vandaag niet werken."}
+    - {es: "Tiene que ir al médico.", en: "He has to go to the doctor.", nl: "Hij moet naar de dokter."}
+    - {es: "El médico dice: «Debes dormir mucho».", en: "The doctor says: \"You must sleep a lot.\"", nl: "De dokter zegt: \"Je moet veel slapen.\""}
+    - {es: "Ahora Carlos está durmiendo en casa.", en: "Now Carlos is sleeping at home.", nl: "Nu ligt Carlos thuis te slapen."}
+  questions:
+    - q: {en: "What hurts?", nl: "Wat doet pijn?"}
+      prompt: "¿Qué le duele a Carlos?"
+      options: ["la cabeza", "la mano", "el pie"]
+      answer: 0
+    - q: {en: "Can Carlos work today?", nl: "Kan Carlos vandaag werken?"}
+      options: [{en: "No", nl: "Nee"}, {en: "Yes", nl: "Ja"}, {en: "Only in the afternoon", nl: "Alleen 's middags"}]
+      answer: 0
+    - q: {en: "What does the doctor say?", nl: "Wat zegt de dokter?"}
+      options: [{en: "He must sleep a lot", nl: "Hij moet veel slapen"}, {en: "He must work", nl: "Hij moet werken"}, {en: "He must eat more", nl: "Hij moet meer eten"}]
+      answer: 0
+
+- id: u4-me-gusta
+  unit: u4
+  title: {es: "Me gusta, no me gusta", en: "I like it, I don't like it", nl: "Leuk, niet leuk"}
+  sentences:
+    - {es: "A Sofía le gusta mucho el chocolate.", en: "Sofía really likes chocolate.", nl: "Sofía is dol op chocolade."}
+    - {es: "También le encantan las manzanas.", en: "She also loves apples.", nl: "Ze is ook gek op appels."}
+    - {es: "Pero no le gusta el pescado.", en: "But she doesn't like fish.", nl: "Maar ze houdt niet van vis."}
+    - {es: "El hermano de Sofía quiere comer pescado.", en: "Sofía's brother wants to eat fish.", nl: "De broer van Sofía wil vis eten."}
+    - {es: "A él no le importa la comida.", en: "He doesn't care about the food.", nl: "Het eten maakt hem niet uit."}
+    - {es: "Quiere hablar con Sofía.", en: "He wants to talk to Sofía.", nl: "Hij wil met Sofía praten."}
+  new_words: [hermano]
+  questions:
+    - q: {en: "What does Sofía love?", nl: "Waar is Sofía gek op?"}
+      options: [{en: "Chocolate and apples", nl: "Chocolade en appels"}, {en: "Fish", nl: "Vis"}, {en: "Coffee", nl: "Koffie"}]
+      answer: 0
+    - q: {en: "What doesn't she like?", nl: "Waar houdt ze niet van?"}
+      prompt: "¿Qué no le gusta a Sofía?"
+      options: ["el pescado", "el chocolate", "las manzanas"]
+      answer: 0
+    - q: {en: "What does her brother want?", nl: "Wat wil haar broer?"}
+      options: [{en: "To eat fish and talk to Sofía", nl: "Vis eten en met Sofía praten"}, {en: "To eat chocolate", nl: "Chocolade eten"}, {en: "To sleep", nl: "Slapen"}]
+      answer: 0

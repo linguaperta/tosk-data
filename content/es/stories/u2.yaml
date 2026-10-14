@@ -1,0 +1,48 @@
+# Graded mini-stories for unit u2 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u2-desayuno
+  unit: u2
+  title: {es: "El desayuno", en: "Breakfast", nl: "Het ontbijt"}
+  sentences:
+    - {es: "Carmen y Luis toman el desayuno.", en: "Carmen and Luis are having breakfast.", nl: "Carmen en Luis zitten aan het ontbijt."}
+    - {es: "Carmen bebe un café con leche.", en: "Carmen drinks a coffee with milk.", nl: "Carmen drinkt een koffie verkeerd."}
+    - {es: "Luis toma un zumo de naranja.", en: "Luis has an orange juice.", nl: "Luis neemt een sinaasappelsap."}
+    - {es: "Comen pan con queso y fruta.", en: "They eat bread with cheese and fruit.", nl: "Ze eten brood met kaas en fruit."}
+    - {es: "Luis necesita azúcar.", en: "Luis needs sugar.", nl: "Luis heeft suiker nodig."}
+    - {es: "Carmen no come huevos.", en: "Carmen doesn't eat eggs.", nl: "Carmen eet geen eieren."}
+    - {es: "Después, los dos trabajan.", en: "Afterwards, they both work.", nl: "Daarna werken ze alle twee."}
+  new_words: [después]
+  questions:
+    - q: {en: "What does Carmen drink?", nl: "Wat drinkt Carmen?"}
+      prompt: "¿Qué bebe Carmen?"
+      options: ["un café con leche", "un zumo de naranja", "un té"]
+      answer: 0
+    - q: {en: "What does Luis need?", nl: "Wat heeft Luis nodig?"}
+      prompt: "¿Qué necesita Luis?"
+      options: ["azúcar", "leche", "pan"]
+      answer: 0
+    - q: {en: "What doesn't Carmen eat?", nl: "Wat eet Carmen niet?"}
+      options: [{en: "Eggs", nl: "Eieren"}, {en: "Cheese", nl: "Kaas"}, {en: "Fruit", nl: "Fruit"}]
+      answer: 0
+
+- id: u2-la-cena
+  unit: u2
+  title: {es: "Una cena con amigos", en: "Dinner with friends", nl: "Een etentje met vrienden"}
+  sentences:
+    - {es: "Pedro vive con dos amigos.", en: "Pedro lives with two friends.", nl: "Pedro woont met twee vrienden."}
+    - {es: "Los tres toman la cena.", en: "The three of them have dinner.", nl: "De drie vrienden eten samen."}
+    - {es: "Pedro come pescado con patatas.", en: "Pedro eats fish with potatoes.", nl: "Pedro eet vis met aardappelen."}
+    - {es: "Javier come una ensalada de tomate.", en: "Javier eats a tomato salad.", nl: "Javier eet een tomatensalade."}
+    - {es: "Sofía llega con una botella de vino.", en: "Sofía arrives with a bottle of wine.", nl: "Sofía komt met een fles wijn."}
+    - {es: "Comen, beben y hablan mucho.", en: "They eat, drink and talk a lot.", nl: "Ze eten, drinken en praten veel."}
+  new_words: [botella]
+  questions:
+    - q: {en: "How many friends does Pedro live with?", nl: "Met hoeveel vrienden woont Pedro?"}
+      options: [{en: "Two", nl: "Twee"}, {en: "Three", nl: "Drie"}, {en: "One", nl: "Eén"}]
+      answer: 0
+    - q: {en: "What does Javier eat?", nl: "Wat eet Javier?"}
+      prompt: "¿Qué come Javier?"
+      options: ["una ensalada", "el pescado", "una sopa"]
+      answer: 0
+    - q: {en: "What does Sofía bring?", nl: "Wat neemt Sofía mee?"}
+      options: [{en: "A bottle of wine", nl: "Een fles wijn"}, {en: "Bread", nl: "Brood"}, {en: "Fish", nl: "Vis"}]
+      answer: 0

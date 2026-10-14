@@ -3,7 +3,7 @@
 # (marked tr_src: claude in the lexicon). Items without en take their English gloss from
 # Wiktionary. Entries without tags only add/override glosses for automatically selected items
 # (verbs of the grammar skills).
-exclude: [vengar]
+exclude: [vengar, luis, nueva/noun, digo/intj, puede/intj, sabes/intj, sé/intj, vamos/intj, va/intj, por/intj, tranquilo/intj, mio/intj, venga/intj, siga/intj, vaya/intj]
 # Mass nouns and abstract nouns whose plural is odd or means something else: no plural in the
 # lexicon, so the app never asks for or offers one.
 uncountable: [leche, arroz, azúcar, sal, carne, gente, dinero, sed, hambre, salud, sangre, música, ropa, té,
@@ -66,6 +66,8 @@ items:
   - {lemma: más, pos: adv, tags: [little], en: [more, most], nl: [meer, meest]}
   - {lemma: mucho, pos: adv, tags: [little], en: [a lot, much, many], nl: [veel], inflections: [mucha, muchos, muchas]}
   - {lemma: si, pos: conj, tags: [little], en: [if, whether], nl: [als, of]}
+  - {lemma: cuando, pos: conj, tags: [little], en: [when], nl: [wanneer, toen, als]}
+  - {lemma: adónde, pos: adv, tags: [little], en: [where (to)], nl: [waarheen, waar naartoe]}
   - {lemma: ya, pos: adv, tags: [little], en: [already, now], nl: [al, nu]}
   - {lemma: algo, pos: pron, tags: [little], en: [something, anything], nl: [iets]}
   - {lemma: nada, pos: pron, tags: [little], en: [nothing, anything], nl: [niets]}
