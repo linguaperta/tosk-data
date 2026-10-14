@@ -13,7 +13,7 @@
 {"id": "it:buongiorno", "lemma": "buongiorno", "pos": "intj", "freq": 410, "tr": {"en": ["good morning", "hello"], "nl": ["goedemorgen", "goedendag"]}, "tr_src": {"en": "claude", "nl": "claude"}, "tags": ["greetings"], "unit": "u1"}
 {"id": "it:che", "lemma": "che", "pos": "conj", "freq": 5, "tr": {"en": ["that", "what", "than"], "nl": ["dat", "wat", "dan"]}, "tr_src": {"en": "claude", "nl": "claude"}, "tags": ["little"], "unit": "u1"}
 {"id": "it:chi", "lemma": "chi", "pos": "pron", "freq": 52, "tr": {"en": ["who"], "nl": ["wie"]}, "tr_src": {"en": "claude", "nl": "claude"}, "tags": ["little"], "unit": "u1"}
-{"id": "it:ciao", "lemma": "ciao", "pos": "intj", "freq": 113, "tr": {"en": ["hi", "bye"], "nl": ["hoi", "doei", "dag"]}, "tr_src": {"en": "claude", "nl": "claude"}, "tags": ["greetings"], "unit": "u1"}
+{"id": "it:ciao", "lemma": "ciao", "pos": "intj", "freq": 113, "tr": {"en": ["hi", "hello", "bye"], "nl": ["hoi", "hallo", "doei", "dag"]}, "tr_src": {"en": "claude", "nl": "claude"}, "tags": ["greetings"], "unit": "u1"}
 {"id": "it:come", "lemma": "come", "pos": "adv", "freq": 174, "tr": {"en": ["how", "like", "as"], "nl": ["hoe", "zoals", "als"]}, "tr_src": {"en": "claude", "nl": "claude"}, "tags": ["greetings"], "unit": "u1"}
 {"id": "it:con", "lemma": "con", "pos": "prep", "freq": 19, "tr": {"en": ["with"], "nl": ["met"]}, "tr_src": {"en": "claude", "nl": "claude"}, "tags": ["little"], "unit": "u1"}
 {"id": "it:cosa.2", "lemma": "cosa", "pos": "noun", "article": "la", "gender": "f", "plural": "cose", "freq": 100, "tr": {"en": ["thing", "what"], "nl": ["ding", "wat"]}, "tr_src": {"en": "claude", "nl": "claude"}, "tags": ["little"], "inflections": ["cose"], "unit": "u1"}

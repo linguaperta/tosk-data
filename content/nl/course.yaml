@@ -45,6 +45,34 @@ feature_detectors:
   # strong and irregular simple past (ging, kwam, was, had, zei)
   "irregular:verleden_tijd": {type: irregular_tense, tense: verleden_tijd}
 
+# Time adverbs (whole words, case-insensitive) and the tenses they fit. The app never rewrites a
+# sentence with one of these into another tense (transform exercise: no *Gisteren eet ik).
+time_adverbs:
+  nu: [tegenwoordige_tijd]
+  momenteel: [tegenwoordige_tijd]
+  tegenwoordig: [tegenwoordige_tijd]
+  op dit moment: [tegenwoordige_tijd]
+  gisteren: [verleden_tijd, perfectum]
+  eergisteren: [verleden_tijd, perfectum]
+  gisteravond: [verleden_tijd, perfectum]
+  gistermiddag: [verleden_tijd, perfectum]
+  gisterochtend: [verleden_tijd, perfectum]
+  vorige: [verleden_tijd, perfectum]
+  vorig: [verleden_tijd, perfectum]
+  geleden: [verleden_tijd, perfectum]
+  toen: [verleden_tijd, perfectum]
+  zojuist: [verleden_tijd, perfectum]
+  zonet: [verleden_tijd, perfectum]
+  onlangs: [verleden_tijd, perfectum]
+  morgen: [tegenwoordige_tijd]
+  overmorgen: [tegenwoordige_tijd]
+  morgenochtend: [tegenwoordige_tijd]
+  morgenavond: [tegenwoordige_tijd]
+  volgende: [tegenwoordige_tijd]
+  volgend: [tegenwoordige_tijd]
+  straks: [tegenwoordige_tijd]
+  binnenkort: [tegenwoordige_tijd]
+
 units:
   - id: u1
     title: {en: Basics, nl: Basis}

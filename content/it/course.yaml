@@ -46,6 +46,50 @@ feature_detectors:
   # irregular future stems (sarò, avrò, andrò, farò, potrò, verrò, ...)
   "irregular:futuro": {type: irregular_tense, tense: futuro}
 
+# Time adverbs (whole words, case-insensitive) and the tenses they fit. The app never rewrites a
+# sentence with one of these into another tense (transform exercise: no *Ieri mangio, *Adesso mangiavo).
+time_adverbs:
+  adesso: [presente]
+  ora: [presente]
+  attualmente: [presente]
+  oggigiorno: [presente]
+  in questo momento: [presente]
+  al momento: [presente]
+  ieri: [passato_prossimo, imperfetto]
+  scorso: [passato_prossimo, imperfetto]
+  scorsa: [passato_prossimo, imperfetto]
+  scorsi: [passato_prossimo, imperfetto]
+  scorse: [passato_prossimo, imperfetto]
+  poco fa: [passato_prossimo, imperfetto]
+  tempo fa: [passato_prossimo, imperfetto]
+  anni fa: [passato_prossimo, imperfetto]
+  anno fa: [passato_prossimo, imperfetto]
+  mesi fa: [passato_prossimo, imperfetto]
+  mese fa: [passato_prossimo, imperfetto]
+  settimane fa: [passato_prossimo, imperfetto]
+  settimana fa: [passato_prossimo, imperfetto]
+  giorni fa: [passato_prossimo, imperfetto]
+  giorno fa: [passato_prossimo, imperfetto]
+  ore fa: [passato_prossimo, imperfetto]
+  minuti fa: [passato_prossimo, imperfetto]
+  da bambino: [imperfetto, passato_prossimo]
+  da bambina: [imperfetto, passato_prossimo]
+  da piccolo: [imperfetto, passato_prossimo]
+  da piccola: [imperfetto, passato_prossimo]
+  da giovane: [imperfetto, passato_prossimo]
+  domani: [presente, futuro]
+  dopodomani: [presente, futuro]
+  domattina: [presente, futuro]
+  prossimo: [presente, futuro]
+  prossima: [presente, futuro]
+  prossimi: [presente, futuro]
+  prossime: [presente, futuro]
+  fra poco: [presente, futuro]
+  tra poco: [presente, futuro]
+  in futuro: [presente, futuro]
+  di solito: [presente, imperfetto]
+  solitamente: [presente, imperfetto]
+
 units:
   - id: u1
     title: {en: Basics, nl: Basis}
