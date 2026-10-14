@@ -1,13 +1,13 @@
 {"id": "nl:accepteren", "lemma": "accepteren", "pos": "verb", "freq": 830, "tr": {"en": ["to accept"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u8"}
 {"id": "nl:advies", "lemma": "advies", "pos": "noun", "article": "het", "gender": "n", "plural": "adviezen", "freq": 1071, "tr": {"en": ["advice"]}, "tr_src": {"en": "claude"}, "tags": ["ideas"], "inflections": ["adviezen"], "unit": "u8"}
-{"id": "nl:bal", "lemma": "bal", "pos": "noun", "article": "de", "gender": "m", "plural": "ballen", "freq": 4622, "tr": {"en": ["ball"]}, "tr_src": {"en": "claude"}, "tags": ["leisure"], "inflections": ["ballen", "bals"], "unit": "u8"}
+{"id": "nl:bal", "lemma": "bal", "pos": "noun", "article": "de|het", "gender": "m", "plural": "ballen", "freq": 4622, "tr": {"en": ["ball"]}, "tr_src": {"en": "claude"}, "tags": ["leisure"], "inflections": ["ballen", "bals"], "unit": "u8"}
 {"id": "nl:bedanken", "lemma": "bedanken", "pos": "verb", "freq": 806, "tr": {"en": ["to thank"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u8"}
 {"id": "nl:beloven", "lemma": "beloven", "pos": "verb", "freq": 307, "tr": {"en": ["to promise"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u8"}
 {"id": "nl:beslissen", "lemma": "beslissen", "pos": "verb", "freq": 1165, "tr": {"en": ["to decide"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u8"}
 {"id": "nl:beslissing", "lemma": "beslissing", "pos": "noun", "article": "de", "gender": "f", "plural": "beslissingen", "freq": 739, "tr": {"en": ["decision"]}, "tr_src": {"en": "claude"}, "tags": ["ideas"], "inflections": ["beslissingen"], "unit": "u8"}
 {"id": "nl:concert", "lemma": "concert", "pos": "noun", "article": "het", "gender": "n", "plural": "concerten", "freq": 2430, "tr": {"en": ["concert"]}, "tr_src": {"en": "claude"}, "tags": ["leisure"], "inflections": ["concerten"], "unit": "u8"}
 {"id": "nl:dans", "lemma": "dans", "pos": "noun", "article": "de", "gender": "m", "plural": "dansen", "freq": 19278, "tr": {"en": ["dance"]}, "tr_src": {"en": "claude"}, "tags": ["leisure"], "inflections": ["dansen"], "unit": "u8"}
-{"id": "nl:dood.2", "lemma": "dood", "pos": "noun", "article": "de", "gender": "m", "plural": "doden", "freq": 646, "tr": {"en": ["death", "dead"]}, "tr_src": {"en": "claude"}, "tags": ["ideas"], "inflections": ["doden"], "unit": "u8"}
+{"id": "nl:dood.2", "lemma": "dood", "pos": "noun", "article": "de", "gender": "m", "freq": 646, "tr": {"en": ["death", "dead"]}, "tr_src": {"en": "claude"}, "tags": ["ideas"], "inflections": ["doden"], "unit": "u8"}
 {"id": "nl:dromen", "lemma": "dromen", "pos": "verb", "freq": 1194, "tr": {"en": ["to dream"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u8"}
 {"id": "nl:duwen", "lemma": "duwen", "pos": "verb", "freq": 1710, "tr": {"en": ["to push"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u8"}
 {"id": "nl:feest", "lemma": "feest", "pos": "noun", "article": "het", "gender": "n", "plural": "feesten", "freq": 3564, "tr": {"en": ["party", "celebration"]}, "tr_src": {"en": "claude"}, "tags": ["leisure"], "inflections": ["feesten"], "unit": "u8"}
@@ -46,7 +46,7 @@
 {"id": "nl:roken", "lemma": "roken", "pos": "verb", "freq": 2170, "tr": {"en": ["to smoke"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u8"}
 {"id": "nl:roman", "lemma": "roman", "pos": "noun", "article": "de", "gender": "m", "plural": "romans", "freq": 2319, "tr": {"en": ["novel"]}, "tr_src": {"en": "claude"}, "tags": ["leisure"], "inflections": ["romans"], "unit": "u8"}
 {"id": "nl:rusten", "lemma": "rusten", "pos": "verb", "freq": 5764, "tr": {"en": ["to rest"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u8"}
-{"id": "nl:soort", "lemma": "soort", "pos": "noun", "article": "het", "gender": "n", "plural": "soorten", "freq": 273, "tr": {"en": ["kind", "sort", "type"]}, "tr_src": {"en": "claude"}, "tags": ["ideas"], "inflections": ["soorten"], "unit": "u8"}
+{"id": "nl:soort", "lemma": "soort", "pos": "noun", "article": "de|het", "gender": "n", "plural": "soorten", "freq": 273, "tr": {"en": ["kind", "sort", "type"]}, "tr_src": {"en": "claude"}, "tags": ["ideas"], "inflections": ["soorten"], "unit": "u8"}
 {"id": "nl:spel", "lemma": "spel", "pos": "noun", "article": "het", "gender": "n", "plural": "spellen", "freq": 3148, "tr": {"en": ["game"]}, "tr_src": {"en": "claude"}, "tags": ["leisure"], "inflections": ["spelen", "spellen"], "unit": "u8"}
 {"id": "nl:sport", "lemma": "sport", "pos": "noun", "article": "de", "gender": "f", "plural": "sporten", "freq": 9201, "tr": {"en": ["sport", "sports"]}, "tr_src": {"en": "claude"}, "tags": ["leisure"], "inflections": ["sporten"], "unit": "u8"}
 {"id": "nl:stelen", "lemma": "stelen", "pos": "verb", "freq": 498, "tr": {"en": ["to steal"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u8"}
@@ -67,7 +67,7 @@
 {"id": "nl:verliezen", "lemma": "verliezen", "pos": "verb", "freq": 314, "tr": {"en": ["to lose"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u8"}
 {"id": "nl:vermijden", "lemma": "vermijden", "pos": "verb", "freq": 1972, "tr": {"en": ["to avoid"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u8"}
 {"id": "nl:vliegen", "lemma": "vliegen", "pos": "verb", "freq": 479, "tr": {"en": ["to fly"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u8"}
-{"id": "nl:voetbal", "lemma": "voetbal", "pos": "noun", "article": "het", "gender": "n", "plural": "voetballen", "freq": 11496, "tr": {"en": ["football", "soccer"]}, "tr_src": {"en": "claude"}, "tags": ["leisure"], "inflections": ["voetballen"], "unit": "u8"}
+{"id": "nl:voetbal", "lemma": "voetbal", "pos": "noun", "article": "het|de", "gender": "n", "plural": "voetballen", "freq": 11496, "tr": {"en": ["football", "soccer"]}, "tr_src": {"en": "claude"}, "tags": ["leisure"], "inflections": ["voetballen"], "unit": "u8"}
 {"id": "nl:voorbeeld", "lemma": "voorbeeld", "pos": "noun", "article": "het", "gender": "n", "plural": "voorbeelden", "freq": 1561, "tr": {"en": ["example"]}, "tr_src": {"en": "claude"}, "tags": ["ideas"], "inflections": ["voorbeelden"], "unit": "u8"}
 {"id": "nl:vrede", "lemma": "vrede", "pos": "noun", "article": "de", "gender": "m", "freq": 874, "tr": {"en": ["peace"]}, "tr_src": {"en": "claude"}, "tags": ["ideas"], "unit": "u8"}
 {"id": "nl:vreemd", "lemma": "vreemd", "pos": "adj", "freq": 1530, "tr": {"en": ["strange", "odd", "foreign"]}, "tr_src": {"en": "claude"}, "tags": ["ideas"], "inflections": ["vreemde", "vreemder", "vreemdere", "vreemders", "vreemds", "vreemdst", "vreemdste"], "unit": "u8"}

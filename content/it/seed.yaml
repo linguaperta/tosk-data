@@ -5,6 +5,11 @@
 # Words never taken into the automatic frequency pool (Wiktionary homographs and inflected
 # forms that inherit a misleading frequency): lemma or lemma/pos.
 exclude: [coso, bastardo, troia, scopare, puttana, alla/prep, prestare, liberare, voltare, scorrere, sulla/noun, fossa, ti/noun, mi/noun, di/noun, si/noun, la/noun, neo, serva/noun, andata/noun, volto/adj, para/noun, stia/noun, sola/noun, unica/noun, fatta/noun, piccola/noun, nuova/noun, sicura/noun, bella/noun, tuoi/noun, miei/noun, suoi/noun, giorni/noun, mani/noun, dimmi, ha/intj, essere/noun, avere/noun, dire/noun, credo/noun, era/noun, fata/noun, visto/noun]
+# Mass nouns and abstract nouns whose plural is odd, invariable or means something else (burri, risa =
+# laughter, saluti = greetings, radi, euri): no plural in the lexicon, so the app never asks for or offers one.
+uncountable: [latte, burro, sale, zucchero, pepe, riso, aglio, olio, frutta, pane, fame, sete, sangue, salute,
+              tristezza, rabbia, pace, polizia, aria, natura, nebbia, neve, sole, denaro, musica, autunno, primavera,
+              gente, radio, euro, cioccolato]
 items:
   # --- greetings
   - {lemma: ciao, pos: intj, tags: [greetings], en: [hi, hello, bye], nl: [hoi, hallo, doei, dag]}
@@ -482,7 +487,7 @@ items:
   - {lemma: occhio, pos: noun, tags: [body], en: [eye], nl: [oog]}
   - {lemma: mano, pos: noun, tags: [body], en: [hand], nl: [hand]}
   - {lemma: piede, pos: noun, tags: [body], en: [foot], nl: [voet]}
-  - {lemma: braccio, pos: noun, tags: [body], en: [arm], nl: [arm]}
+  - {lemma: braccio, pos: noun, tags: [body], plural: braccia, en: [arm], nl: [arm]}
   - {lemma: gamba, pos: noun, tags: [body], en: [leg], nl: [been]}
   - {lemma: bocca, pos: noun, tags: [body], en: [mouth], nl: [mond]}
   - {lemma: naso, pos: noun, tags: [body], en: [nose], nl: [neus]}
@@ -494,7 +499,7 @@ items:
   - {lemma: collo, pos: noun, tags: [body], gender: m, en: [neck], nl: [nek, hals]}
   - {lemma: schiena, pos: noun, tags: [body], en: [back], nl: [rug]}
   - {lemma: pancia, pos: noun, tags: [body], en: [belly, tummy], nl: [buik]}
-  - {lemma: dito, pos: noun, tags: [body], en: [finger, toe], nl: [vinger, teen]}
+  - {lemma: dito, pos: noun, tags: [body], plural: dita, en: [finger, toe], nl: [vinger, teen]}
   - {lemma: spalla, pos: noun, tags: [body], en: [shoulder], nl: [schouder]}
   - {lemma: sangue, pos: noun, tags: [body], en: [blood], nl: [bloed]}
   - {lemma: pelle, pos: noun, tags: [body], en: [skin], nl: [huid]}

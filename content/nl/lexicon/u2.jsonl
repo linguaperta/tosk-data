@@ -8,7 +8,7 @@
 {"id": "nl:bier", "lemma": "bier", "pos": "noun", "article": "het", "gender": "n", "plural": "bieren", "freq": 1053, "tr": {"en": ["beer"]}, "tr_src": {"en": "claude"}, "tags": ["food"], "inflections": ["bieren"], "unit": "u2"}
 {"id": "nl:boek", "lemma": "boek", "pos": "noun", "article": "het", "gender": "n", "plural": "boeken", "freq": 2826, "tr": {"en": ["book"]}, "tr_src": {"en": "claude"}, "tags": ["home"], "inflections": ["boeken"], "unit": "u2"}
 {"id": "nl:bord", "lemma": "bord", "pos": "noun", "article": "het", "gender": "n", "plural": "borden", "freq": 1281, "tr": {"en": ["plate", "board"]}, "tr_src": {"en": "claude"}, "tags": ["home"], "inflections": ["borden"], "unit": "u2"}
-{"id": "nl:boter", "lemma": "boter", "pos": "noun", "article": "de", "gender": "f", "plural": "boters", "freq": 3433, "tr": {"en": ["butter"]}, "tr_src": {"en": "claude"}, "tags": ["food"], "inflections": ["boters"], "unit": "u2"}
+{"id": "nl:boter", "lemma": "boter", "pos": "noun", "article": "de", "gender": "f", "freq": 3433, "tr": {"en": ["butter"]}, "tr_src": {"en": "claude"}, "tags": ["food"], "inflections": ["boters"], "unit": "u2"}
 {"id": "nl:brood", "lemma": "brood", "pos": "noun", "article": "het", "gender": "n", "plural": "broden", "freq": 1643, "tr": {"en": ["bread"]}, "tr_src": {"en": "claude"}, "tags": ["food"], "inflections": ["broden"], "unit": "u2"}
 {"id": "nl:computer", "lemma": "computer", "pos": "noun", "article": "de", "gender": "m", "plural": "computers", "freq": 698, "tr": {"en": ["computer"]}, "tr_src": {"en": "claude"}, "tags": ["home"], "inflections": ["computers"], "unit": "u2"}
 {"id": "nl:dak", "lemma": "dak", "pos": "noun", "article": "het", "gender": "n", "plural": "daken", "freq": 988, "tr": {"en": ["roof"]}, "tr_src": {"en": "claude"}, "tags": ["home"], "inflections": ["daken"], "unit": "u2"}
@@ -56,11 +56,11 @@
 {"id": "nl:spiegel", "lemma": "spiegel", "pos": "noun", "article": "de", "gender": "m", "plural": "spiegels", "freq": 1692, "tr": {"en": ["mirror"]}, "tr_src": {"en": "claude"}, "tags": ["home"], "inflections": ["spiegels"], "unit": "u2"}
 {"id": "nl:staan", "lemma": "staan", "pos": "verb", "freq": 149, "tr": {"en": ["to stand"]}, "tr_src": {"en": "claude"}, "unit": "u2"}
 {"id": "nl:stoel", "lemma": "stoel", "pos": "noun", "article": "de", "gender": "m", "plural": "stoelen", "freq": 5471, "tr": {"en": ["chair"]}, "tr_src": {"en": "claude"}, "tags": ["home"], "inflections": ["stoelen"], "unit": "u2"}
-{"id": "nl:suiker", "lemma": "suiker", "pos": "noun", "article": "de", "gender": "m", "plural": "suikers", "freq": 2097, "tr": {"en": ["sugar"]}, "tr_src": {"en": "claude"}, "tags": ["food"], "inflections": ["suikers"], "unit": "u2"}
+{"id": "nl:suiker", "lemma": "suiker", "pos": "noun", "article": "de", "gender": "m", "freq": 2097, "tr": {"en": ["sugar"]}, "tr_src": {"en": "claude"}, "tags": ["food"], "inflections": ["suikers"], "unit": "u2"}
 {"id": "nl:tafel", "lemma": "tafel", "pos": "noun", "article": "de", "gender": "f", "plural": "tafels", "freq": 655, "tr": {"en": ["table"]}, "tr_src": {"en": "claude"}, "tags": ["home"], "inflections": ["tafelen", "tafels"], "unit": "u2"}
 {"id": "nl:telefoon", "lemma": "telefoon", "pos": "noun", "article": "de", "gender": "m", "plural": "telefoons", "freq": 348, "tr": {"en": ["telephone", "phone"]}, "tr_src": {"en": "claude"}, "tags": ["home"], "inflections": ["telefonen", "telefoons"], "unit": "u2"}
 {"id": "nl:televisie", "lemma": "televisie", "pos": "noun", "article": "de", "gender": "f", "plural": "televisies", "freq": 2460, "tr": {"en": ["television"]}, "tr_src": {"en": "claude"}, "tags": ["home"], "inflections": ["televisies"], "unit": "u2"}
-{"id": "nl:thee", "lemma": "thee", "pos": "noun", "article": "de", "gender": "m", "plural": "theeën", "freq": 893, "tr": {"en": ["tea"]}, "tr_src": {"en": "claude"}, "tags": ["food"], "inflections": ["theeën"], "unit": "u2"}
+{"id": "nl:thee", "lemma": "thee", "pos": "noun", "article": "de", "gender": "m", "freq": 893, "tr": {"en": ["tea"]}, "tr_src": {"en": "claude"}, "tags": ["food"], "inflections": ["theeën"], "unit": "u2"}
 {"id": "nl:tien", "lemma": "tien", "pos": "num", "freq": 346, "tr": {"en": ["ten"]}, "tr_src": {"en": "claude"}, "tags": ["numbers"], "unit": "u2"}
 {"id": "nl:trap", "lemma": "trap", "pos": "noun", "article": "de", "gender": "m", "plural": "trappen", "freq": 6102, "tr": {"en": ["stairs", "staircase"]}, "tr_src": {"en": "claude"}, "tags": ["home"], "inflections": ["trappen"], "unit": "u2"}
 {"id": "nl:tuin", "lemma": "tuin", "pos": "noun", "article": "de", "gender": "m", "plural": "tuinen", "freq": 6805, "tr": {"en": ["garden"]}, "tr_src": {"en": "claude"}, "tags": ["home"], "inflections": ["tuinen"], "unit": "u2"}
@@ -74,7 +74,7 @@
 {"id": "nl:vijftien", "lemma": "vijftien", "pos": "num", "freq": 2181, "tr": {"en": ["fifteen"]}, "tr_src": {"en": "claude"}, "tags": ["numbers"], "unit": "u2"}
 {"id": "nl:vijftig", "lemma": "vijftig", "pos": "num", "freq": 2475, "tr": {"en": ["fifty"]}, "tr_src": {"en": "claude"}, "tags": ["numbers"], "unit": "u2"}
 {"id": "nl:vis", "lemma": "vis", "pos": "noun", "article": "de", "gender": "m", "plural": "vissen", "freq": 5940, "tr": {"en": ["fish"]}, "tr_src": {"en": "claude"}, "tags": ["food"], "inflections": ["vissen"], "unit": "u2"}
-{"id": "nl:vlees", "lemma": "vlees", "pos": "noun", "article": "het", "gender": "n", "plural": "vlezen", "freq": 968, "tr": {"en": ["meat"]}, "tr_src": {"en": "claude"}, "tags": ["food"], "inflections": ["vlezen"], "unit": "u2"}
+{"id": "nl:vlees", "lemma": "vlees", "pos": "noun", "article": "het", "gender": "n", "freq": 968, "tr": {"en": ["meat"]}, "tr_src": {"en": "claude"}, "tags": ["food"], "inflections": ["vlezen"], "unit": "u2"}
 {"id": "nl:vloer", "lemma": "vloer", "pos": "noun", "article": "de", "gender": "m", "plural": "vloeren", "freq": 7061, "tr": {"en": ["floor"]}, "tr_src": {"en": "claude"}, "tags": ["home"], "inflections": ["vloeren"], "unit": "u2"}
 {"id": "nl:water", "lemma": "water", "pos": "noun", "article": "het", "gender": "n", "plural": "waters", "freq": 1684, "tr": {"en": ["water"]}, "tr_src": {"en": "claude"}, "tags": ["food"], "inflections": ["wateren", "waters"], "unit": "u2"}
 {"id": "nl:weten", "lemma": "weten", "pos": "verb", "freq": 140, "tr": {"en": ["to know"]}, "tr_src": {"en": "claude"}, "unit": "u2"}
@@ -86,5 +86,5 @@
 {"id": "nl:zeven.2", "lemma": "zeven", "pos": "num", "freq": 20463, "tr": {"en": ["seven"]}, "tr_src": {"en": "claude"}, "tags": ["numbers"], "unit": "u2"}
 {"id": "nl:zien", "lemma": "zien", "pos": "verb", "freq": 45, "tr": {"en": ["to see"]}, "tr_src": {"en": "claude"}, "unit": "u2"}
 {"id": "nl:zijn", "lemma": "zijn", "pos": "verb", "freq": 3, "tr": {"en": ["to be"]}, "tr_src": {"en": "claude"}, "unit": "u2"}
-{"id": "nl:zout", "lemma": "zout", "pos": "noun", "article": "het", "gender": "n", "plural": "zouten", "freq": 7672, "tr": {"en": ["salt"]}, "tr_src": {"en": "claude"}, "tags": ["food"], "inflections": ["zouten"], "unit": "u2"}
+{"id": "nl:zout", "lemma": "zout", "pos": "noun", "article": "het", "gender": "n", "freq": 7672, "tr": {"en": ["salt"]}, "tr_src": {"en": "claude"}, "tags": ["food"], "inflections": ["zouten"], "unit": "u2"}
 {"id": "nl:zullen", "lemma": "zullen", "pos": "verb", "freq": 24, "tr": {"en": ["shall", "will"]}, "tr_src": {"en": "claude"}, "unit": "u2"}

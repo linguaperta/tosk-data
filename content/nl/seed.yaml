@@ -4,6 +4,12 @@
 # Words never taken into the automatic frequency pool (Wiktionary homographs and inflected
 # forms that inherit a misleading frequency): lemma or lemma/pos.
 exclude: [reet, shit, fuck, neuken, teef, klote, bastaard, geef/noun, hou/adj, kijk/noun, luister/noun, wacht/noun, zit/noun, stop/noun, bel/noun, zeg/intj, beuren, dagen/verb, manen/verb, ogen/verb, dingen/verb, weet/noun, kan/noun, wil/noun, was/noun, kom/noun, want/noun, hen/noun, ie/pron, vrouwe, wilde/noun, goede/noun, mijn/noun, waren/verb, lo/noun, a/noun]
+# Mass nouns and abstract nouns whose plural is odd or means something else (boters, vlezen, herfsten,
+# hopen = heaps): no plural in the lexicon, so the app never asks for one or offers one as a wrong option.
+uncountable: [boter, vlees, suiker, zout, thee, herfst, lente, geluk, verdriet, vreugde, hoop, aarde, mist, natuur,
+              gras, knoflook, olie, geld, ham, dood, werk, zon, maan, koorts, regen]
+# Nouns with both articles (het mens, de/het soort, het bal = the dance, de bos = the bunch): article
+# "de|het" in the items below; the app never asks for or swaps their article (and de-het excludes them).
 items:
   # --- greetings
   - {lemma: hallo, pos: intj, tags: [greetings], en: [hello, hi]}
@@ -41,7 +47,7 @@ items:
   - {lemma: broer, pos: noun, tags: [people], en: [brother]}
   - {lemma: zus, pos: noun, tags: [people], en: [sister]}
   - {lemma: familie, pos: noun, tags: [people], en: [family, relatives]}
-  - {lemma: mens, pos: noun, tags: [people], en: [person, human]}
+  - {lemma: mens, pos: noun, tags: [people], article: "de|het", en: [person, human]}
   - {lemma: ouder, pos: noun, tags: [people], en: [parent]}
   - {lemma: baby, pos: noun, tags: [people], en: [baby]}
   - {lemma: meneer, pos: noun, tags: [people], en: [sir, gentleman, Mr]}
@@ -611,7 +617,7 @@ items:
   - {lemma: boom, pos: noun, tags: [weather], gender: m, en: [tree]}
   - {lemma: bloem, pos: noun, tags: [weather], en: [flower]}
   - {lemma: gras, pos: noun, tags: [weather], en: [grass]}
-  - {lemma: bos, pos: noun, tags: [weather], gender: n, en: [forest, wood]}
+  - {lemma: bos, pos: noun, tags: [weather], gender: n, article: "het|de", en: [forest, wood]}
   - {lemma: aarde, pos: noun, tags: [weather], en: [earth, soil]}
   - {lemma: ster, pos: noun, tags: [weather], en: [star]}
   - {lemma: maan, pos: noun, tags: [weather], gender: f, en: [moon]}
@@ -678,7 +684,7 @@ items:
   - {lemma: spel, pos: noun, tags: [leisure], en: [game]}
   - {lemma: wedstrijd, pos: noun, tags: [leisure], en: [match, game, competition]}
   - {lemma: sport, pos: noun, tags: [leisure], gender: f, en: [sport, sports]}
-  - {lemma: voetbal, pos: noun, tags: [leisure], gender: n, en: [football, soccer]}
+  - {lemma: voetbal, pos: noun, tags: [leisure], gender: n, article: "het|de", en: [football, soccer]}
   - {lemma: feest, pos: noun, tags: [leisure], gender: n, en: [party, celebration]}
   - {lemma: concert, pos: noun, tags: [leisure], en: [concert]}
   - {lemma: foto, pos: noun, tags: [leisure], en: [photo, picture]}
@@ -691,7 +697,7 @@ items:
   - {lemma: roman, pos: noun, tags: [leisure], en: [novel]}
   - {lemma: team, pos: noun, tags: [leisure], en: [team]}
   - {lemma: tekening, pos: noun, tags: [leisure], en: [drawing]}
-  - {lemma: bal, pos: noun, tags: [leisure], gender: m, en: [ball]}
+  - {lemma: bal, pos: noun, tags: [leisure], gender: m, article: "de|het", en: [ball]}
   - {lemma: hobby, pos: noun, tags: [leisure], en: [hobby]}
   - {lemma: tennis, pos: noun, tags: [leisure], gender: n, en: [tennis]}
   # --- more verbs (u8, vocabulary)
@@ -752,7 +758,7 @@ items:
   - {lemma: nodig, pos: adj, tags: [ideas], en: [necessary, needed]}
   - {lemma: voorbeeld, pos: noun, tags: [ideas], en: [example]}
   - {lemma: manier, pos: noun, tags: [ideas], en: [way, manner]}
-  - {lemma: soort, pos: noun, tags: [ideas], en: [kind, sort, type]}
+  - {lemma: soort, pos: noun, tags: [ideas], article: "de|het", en: [kind, sort, type]}
   - {lemma: geschiedenis, pos: noun, tags: [ideas], en: [history, story]}
   # --- family (u3)
   - {lemma: opa, pos: noun, tags: [family], gender: m, en: [grandpa, grandfather]}

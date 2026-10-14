@@ -140,7 +140,8 @@ units:
         icon: article
         requires: [home]
         facet: article
-        items: {pos: noun, tags: [people, food, home]}
+        # nouns with both articles (mens: de/het, seed.yaml) have no #article facet
+        items: {pos: noun, tags: [people, food, home], exclude: [mens]}
 
   - id: u3
     title: {en: Everyday life, nl: Het dagelijks leven}
