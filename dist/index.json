@@ -1,6 +1,7 @@
 {
-  "schema_version": 1,
-  "note": "url is relative to this index.json; replace with the release/download URL when publishing",
+  "index_version": 1,
+  "generated_at": "2026-10-14T09:35:08Z",
+  "tag": "packs-20261014",
   "courses": [
     {
       "id": "it",
@@ -9,11 +10,21 @@
         "en": "Italian",
         "nl": "Italiaans"
       },
+      "description": {
+        "en": "Italian from the basics, with a strong focus on verbs and conjugation.",
+        "nl": "Italiaans vanaf de basis, met veel aandacht voor werkwoorden en vervoegingen."
+      },
+      "target": "it",
+      "sources": [
+        "en",
+        "nl"
+      ],
+      "unverified": false,
+      "schema_version": "1",
+      "min_app_version": "0.4.0",
       "sha256": "b30bc3b917c04fc2ac69cbc5c2fc95cbd0c7dee676f49c1e6ba01ccc70347c23",
       "size": 18726912,
-      "schema_version": 1,
-      "schema_minor": 1,
-      "url": "it.sqlite"
+      "url": "https://github.com/timoverlaan/duelingo-data/releases/download/packs-20261014/it.sqlite"
     },
     {
       "id": "nl",
@@ -22,11 +33,20 @@
         "en": "Dutch",
         "nl": "Nederlands"
       },
+      "description": {
+        "en": "Dutch from the basics, with a strong focus on verbs, the perfect tense and de/het.",
+        "nl": "Nederlands vanaf de basis, met veel aandacht voor werkwoorden, het perfectum en de/het."
+      },
+      "target": "nl",
+      "sources": [
+        "en"
+      ],
+      "unverified": false,
+      "schema_version": "1",
+      "min_app_version": "0.4.0",
       "sha256": "769dacc8b900200e042b788a0dbfe81cf20e3e05acdc4ff11e68d779cb4f153c",
       "size": 15736832,
-      "schema_version": 1,
-      "schema_minor": 1,
-      "url": "nl.sqlite"
+      "url": "https://github.com/timoverlaan/duelingo-data/releases/download/packs-20261014/nl.sqlite"
     }
   ]
 }
