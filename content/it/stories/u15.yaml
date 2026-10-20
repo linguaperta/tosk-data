@@ -1,0 +1,51 @@
+# Graded mini-stories for unit u15 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# The passato remoto is for reading only: these stories are where the learner meets it in context.
+- id: u15-commissario
+  unit: u15
+  title: {it: "La lettera senza firma", en: "The unsigned letter"}
+  sentences:
+    - {it: "Una mattina il commissario arrivò presto in ufficio.", en: "One morning the inspector arrived at the office early."}
+    - {it: "Sul tavolo trovò una lettera senza firma.", en: "On the table he found an unsigned letter."}
+    - {it: "La lesse due volte e capì subito.", en: "He read it twice and understood at once."}
+    - {it: "Un testimone vide il ladro vicino alla banca.", en: "A witness saw the thief near the bank."}
+    - {it: "Il commissario chiamò l'ispettore e andarono insieme in banca.", en: "The inspector called the detective and they went to the bank together."}
+    - {it: "Lì trovarono le impronte del ladro.", en: "There they found the thief's fingerprints."}
+    - {it: "Il giorno dopo lo arrestarono.", en: "The next day they arrested him."}
+  questions:
+    - q: {en: "What did the inspector find on the table?"}
+      options: [{en: "A letter without a signature"}, {en: "A gun"}, {en: "Money"}]
+      answer: 0
+    - q: {en: "Who saw the thief?"}
+      options: [{en: "A witness"}, {en: "The inspector"}, {en: "A clerk"}]
+      answer: 0
+    - q: {en: "What did they find at the bank?"}
+      options: [{en: "The thief's fingerprints"}, {en: "The thief"}, {en: "Another letter"}]
+      answer: 0
+    - q: {en: "When did they arrest him?"}
+      options: [{en: "The next day"}, {en: "The same morning"}, {en: "A year later"}]
+      answer: 0
+
+- id: u15-favola
+  unit: u15
+  title: {it: "La figlia del re", en: "The king's daughter"}
+  sentences:
+    - {it: "Questo è il libro di cui ti ho parlato.", en: "This is the book I told you about."}
+    - {it: "C'era una volta un re che aveva tre figlie.", en: "Once upon a time there was a king who had three daughters."}
+    - {it: "La figlia minore, la quale era molto saggia, partì senza nessuno.", en: "The youngest daughter, who was very wise, left without anyone."}
+    - {it: "Viaggiò per molti paesi e conobbe molte persone.", en: "She travelled through many countries and met many people."}
+    - {it: "Un giorno trovò un castello in una foresta.", en: "One day she found a castle in a forest."}
+    - {it: "Lì visse un anno con un principe gentile.", en: "There she lived for a year with a kind prince."}
+    - {it: "Alla fine tornò a casa e diventò regina.", en: "In the end she went home and became queen."}
+  questions:
+    - q: {en: "How many daughters did the king have?"}
+      options: [{en: "Three"}, {en: "Two"}, {en: "One"}]
+      answer: 0
+    - q: {en: "What was the youngest daughter like?"}
+      options: [{en: "Very wise"}, {en: "Very lazy"}, {en: "Very rich"}]
+      answer: 0
+    - q: {en: "What did she find in the forest?"}
+      options: [{en: "A castle"}, {en: "A lake"}, {en: "A dragon"}]
+      answer: 0
+    - q: {en: "What did she become in the end?"}
+      options: [{en: "Queen"}, {en: "A writer"}, {en: "A doctor"}]
+      answer: 0

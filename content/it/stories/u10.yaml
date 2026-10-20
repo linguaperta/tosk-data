@@ -1,0 +1,51 @@
+# Graded mini-stories for unit u10 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# From unit 10 on the stories are English only (owner decision 2026-10-20).
+- id: u10-mattina
+  unit: u10
+  title: {it: "Una mattina difficile", en: "A difficult morning"}
+  sentences:
+    - {it: "Luca si sveglia sempre alle sette.", en: "Luca always wakes up at seven."}
+    - {it: "Oggi non sente la sveglia e si alza alle nove.", en: "Today he doesn't hear the alarm clock and gets up at nine."}
+    - {it: "Si lava in fretta e si veste.", en: "He has a quick wash and gets dressed."}
+    - {it: "Non fa colazione perché è in ritardo.", en: "He doesn't have breakfast because he is late."}
+    - {it: "Al lavoro si sente stanco e ha mal di testa.", en: "At work he feels tired and has a headache."}
+    - {it: "Va dal medico, che gli dà una medicina.", en: "He goes to the doctor, who gives him a medicine."}
+    - {it: "La sera si riposa sul divano e si addormenta presto.", en: "In the evening he rests on the sofa and falls asleep early."}
+  questions:
+    - q: {en: "Why does Luca get up late?"}
+      options: [{en: "He doesn't hear the alarm clock"}, {en: "He is ill"}, {en: "It is Sunday"}]
+      answer: 0
+    - q: {en: "What doesn't he do this morning?"}
+      options: [{en: "Have breakfast"}, {en: "Get dressed"}, {en: "Wash"}]
+      answer: 0
+    - q: {en: "How does he feel at work?"}
+      options: [{en: "Tired, with a headache"}, {en: "Happy and relaxed"}, {en: "Bored"}]
+      answer: 0
+    - q: {en: "What does he do in the evening?"}
+      options: [{en: "He rests and falls asleep early"}, {en: "He goes out with friends"}, {en: "He works late"}]
+      answer: 0
+
+- id: u10-banca
+  unit: u10
+  title: {it: "In banca", en: "At the bank"}
+  sentences:
+    - {it: "Sara deve pagare l'affitto e va in banca.", en: "Sara has to pay the rent and goes to the bank."}
+    - {it: "Davanti allo sportello c'è una lunga fila.", en: "There is a long queue in front of the counter."}
+    - {it: "Sara si siede e aspetta.", en: "Sara sits down and waits."}
+    - {it: "Dopo venti minuti un impiegato la chiama.", en: "After twenty minutes a clerk calls her."}
+    - {it: "Sara compila un modulo e firma.", en: "Sara fills in a form and signs."}
+    - {it: "Poi vede che non ha la carta di credito.", en: "Then she sees that she doesn't have her credit card."}
+    - {it: "Si arrabbia, ma l'impiegato è gentile e la aiuta.", en: "She gets angry, but the clerk is kind and helps her."}
+  questions:
+    - q: {en: "Why does Sara go to the bank?"}
+      options: [{en: "To pay the rent"}, {en: "To open an account"}, {en: "To meet a friend"}]
+      answer: 0
+    - q: {en: "What is there in front of the counter?"}
+      options: [{en: "A long queue"}, {en: "A sofa"}, {en: "A cash machine"}]
+      answer: 0
+    - q: {en: "What does she fill in?"}
+      options: [{en: "A form"}, {en: "A letter"}, {en: "A receipt"}]
+      answer: 0
+    - q: {en: "What doesn't she have?"}
+      options: [{en: "Her credit card"}, {en: "Her passport"}, {en: "Her phone"}]
+      answer: 0

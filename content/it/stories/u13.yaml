@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u13 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u13-gita
+  unit: u13
+  title: {it: "In montagna", en: "In the mountains"}
+  sentences:
+    - {it: "Oggi stiamo camminando in montagna.", en: "Today we are walking in the mountains."}
+    - {it: "Il paesaggio è bellissimo.", en: "The landscape is very beautiful."}
+    - {it: "Qui l'aria è più fresca che in città.", en: "Here the air is fresher than in the city."}
+    - {it: "In questo bosco si vedono molti animali.", en: "In this wood you can see many animals."}
+    - {it: "Mio fratello è più veloce di me e arriva prima.", en: "My brother is faster than me and arrives first."}
+    - {it: "Dalla collina si vede il mare.", en: "From the hill you can see the sea."}
+    - {it: "È il giorno più bello dell'anno!", en: "It's the best day of the year!"}
+  questions:
+    - q: {en: "What are they doing today?"}
+      options: [{en: "Walking in the mountains"}, {en: "Swimming in the sea"}, {en: "Working in the city"}]
+      answer: 0
+    - q: {en: "Who is faster?"}
+      options: [{en: "The brother"}, {en: "The narrator"}, {en: "Nobody"}]
+      answer: 0
+    - q: {en: "What can you see from the hill?"}
+      options: [{en: "The sea"}, {en: "The city"}, {en: "A lake"}]
+      answer: 0
+
+- id: u13-citta
+  unit: u13
+  title: {it: "La città cambia", en: "The city is changing"}
+  sentences:
+    - {it: "La nostra città sta cambiando molto.", en: "Our city is changing a lot."}
+    - {it: "Il governo sta costruendo nuove case in periferia.", en: "The government is building new houses on the outskirts."}
+    - {it: "Il sindaco dice che la vita qui è migliore di prima.", en: "The mayor says that life here is better than before."}
+    - {it: "Ma il traffico è peggiore e l'inquinamento aumenta.", en: "But the traffic is worse and pollution is increasing."}
+    - {it: "Molti cittadini protestano in piazza.", en: "Many citizens are protesting in the square."}
+    - {it: "In città si parla molto di ambiente.", en: "In the city people talk a lot about the environment."}
+  new_words: [aumentare]
+  questions:
+    - q: {en: "What is the government building?"}
+      options: [{en: "New houses on the outskirts"}, {en: "A new station"}, {en: "A motorway"}]
+      answer: 0
+    - q: {en: "What is worse now?"}
+      options: [{en: "The traffic"}, {en: "The weather"}, {en: "The food"}]
+      answer: 0
+    - q: {en: "What do people talk about a lot?"}
+      options: [{en: "The environment"}, {en: "Football"}, {en: "The weather"}]
+      answer: 0

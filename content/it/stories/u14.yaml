@@ -1,0 +1,43 @@
+# Graded mini-stories for unit u14 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u14-colloquio
+  unit: u14
+  title: {it: "Il colloquio", en: "The interview"}
+  sentences:
+    - {it: "Domani Elena ha un colloquio di lavoro.", en: "Tomorrow Elena has a job interview."}
+    - {it: "Spera che il direttore sia simpatico.", en: "She hopes the manager is nice."}
+    - {it: "Sua madre pensa che debba vestirsi bene.", en: "Her mother thinks she should dress well."}
+    - {it: "Elena è timida, però è molto intelligente.", en: "Elena is shy, but she is very clever."}
+    - {it: "Benché sia nervosa, risponde a molte domande.", en: "Although she is nervous, she answers many questions."}
+    - {it: "Il direttore vuole che cominci lunedì.", en: "The manager wants her to start on Monday."}
+    - {it: "Elena è felice: finalmente ha un lavoro!", en: "Elena is happy: at last she has a job!"}
+  questions:
+    - q: {en: "What does Elena have tomorrow?"}
+      options: [{en: "A job interview"}, {en: "An exam"}, {en: "A party"}]
+      answer: 0
+    - q: {en: "What is Elena like?"}
+      options: [{en: "Shy but clever"}, {en: "Lazy and rude"}, {en: "Funny and loud"}]
+      answer: 0
+    - q: {en: "When does she start?"}
+      options: [{en: "On Monday"}, {en: "Tomorrow"}, {en: "Next year"}]
+      answer: 0
+
+- id: u14-lotteria
+  unit: u14
+  title: {it: "Se vincessi...", en: "If I won..."}
+  sentences:
+    - {it: "Marco sogna sempre di diventare ricco.", en: "Marco always dreams of becoming rich."}
+    - {it: "Se vincessi, comprerei una casa al mare.", en: "If I won, I would buy a house by the sea."}
+    - {it: "Se avessi molti soldi, non lavorerei più.", en: "If I had a lot of money, I wouldn't work any more."}
+    - {it: "Sua moglie ride: magari fosse vero!", en: "His wife laughs: if only it were true!"}
+    - {it: "Lei pensa che sia meglio risparmiare.", en: "She thinks it is better to save."}
+    - {it: "Così mettono i soldi in banca e aspettano.", en: "So they put the money in the bank and wait."}
+  questions:
+    - q: {en: "What would Marco buy?"}
+      options: [{en: "A house by the sea"}, {en: "A car"}, {en: "A boat"}]
+      answer: 0
+    - q: {en: "What does his wife think?"}
+      options: [{en: "It is better to save"}, {en: "He should buy a car"}, {en: "He will win"}]
+      answer: 0
+    - q: {en: "Where do they put the money?"}
+      options: [{en: "In the bank"}, {en: "Under the bed"}, {en: "In the lottery"}]
+      answer: 0

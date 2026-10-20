@@ -1,0 +1,47 @@
+# Graded mini-stories for unit u11 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u11-stazione
+  unit: u11
+  title: {it: "Dov'è la stazione?", en: "Where is the station?"}
+  sentences:
+    - {it: "Buongiorno, dov'è la stazione?", en: "Good morning, where is the station?"}
+    - {it: "Vada dritto fino al semaforo.", en: "Go straight on as far as the traffic lights."}
+    - {it: "Al semaforo, giri a destra.", en: "At the traffic lights, turn right."}
+    - {it: "Attraversi la piazza.", en: "Cross the square."}
+    - {it: "La stazione è a sinistra, di fronte al parco.", en: "The station is on the left, opposite the park."}
+    - {it: "È lontano?", en: "Is it far?"}
+    - {it: "No, sono dieci minuti a piedi.", en: "No, it's ten minutes on foot."}
+    - {it: "Grazie mille, buona giornata!", en: "Thanks a lot, have a nice day!"}
+  questions:
+    - q: {en: "What should he do at the traffic lights?"}
+      options: [{en: "Turn right"}, {en: "Turn left"}, {en: "Stop"}]
+      answer: 0
+    - q: {en: "Where is the station?"}
+      options: [{en: "On the left, opposite the park"}, {en: "Behind the square"}, {en: "On the motorway"}]
+      answer: 0
+    - q: {en: "How far is it?"}
+      options: [{en: "Ten minutes on foot"}, {en: "One hour by bus"}, {en: "Two kilometres"}]
+      answer: 0
+
+- id: u11-ricetta
+  unit: u11
+  title: {it: "La ricetta della nonna", en: "Grandma's recipe"}
+  sentences:
+    - {it: "Nonna, dimmi la tua ricetta!", en: "Grandma, tell me your recipe!"}
+    - {it: "Allora, prendi una pentola grande.", en: "Well, take a big pot."}
+    - {it: "Quando l'acqua bolle, aggiungi il sale e la pasta.", en: "When the water boils, add the salt and the pasta."}
+    - {it: "Taglia i pomodori e la cipolla.", en: "Cut the tomatoes and the onion."}
+    - {it: "Cucina il sugo con olio e basilico.", en: "Cook the sauce with oil and basil."}
+    - {it: "Non dimenticare il formaggio!", en: "Don't forget the cheese!"}
+    - {it: "Assaggia: com'è?", en: "Taste it: how is it?"}
+    - {it: "È perfetta, nonna!", en: "It's perfect, grandma!"}
+  new_words: [perfetto]
+  questions:
+    - q: {en: "What do you add when the water boils?"}
+      options: [{en: "The salt and the pasta"}, {en: "The cheese"}, {en: "The tomatoes"}]
+      answer: 0
+    - q: {en: "What do you cut?"}
+      options: [{en: "Tomatoes and onion"}, {en: "Bread and cheese"}, {en: "Basil and garlic"}]
+      answer: 0
+    - q: {en: "What must you not forget?"}
+      options: [{en: "The cheese"}, {en: "The pot"}, {en: "The oil"}]
+      answer: 0

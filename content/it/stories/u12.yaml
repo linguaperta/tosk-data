@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u12 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u12-regalo
+  unit: u12
+  title: {it: "Un regalo per Anna", en: "A present for Anna"}
+  sentences:
+    - {it: "Domani è il compleanno di Anna.", en: "Tomorrow is Anna's birthday."}
+    - {it: "Marco vorrebbe comprarle un regalo, ma non sa cosa.", en: "Marco would like to buy her a present, but he doesn't know what."}
+    - {it: "Ne parla con Giulia.", en: "He talks about it with Giulia."}
+    - {it: "Giulia dice che le comprerebbe un libro.", en: "Giulia says she would buy her a book."}
+    - {it: "Marco va in un negozio e ne sceglie uno.", en: "Marco goes to a shop and chooses one."}
+    - {it: "Il giorno dopo glielo dà.", en: "The next day he gives it to her."}
+    - {it: "Anna è felice e lo abbraccia.", en: "Anna is happy and hugs him."}
+  questions:
+    - q: {en: "Whose birthday is it tomorrow?"}
+      options: [{en: "Anna's"}, {en: "Giulia's"}, {en: "Marco's"}]
+      answer: 0
+    - q: {en: "What would Giulia buy?"}
+      options: [{en: "A book"}, {en: "Flowers"}, {en: "A cake"}]
+      answer: 0
+    - q: {en: "How does Anna react?"}
+      options: [{en: "She is happy and hugs him"}, {en: "She gets angry"}, {en: "She cries"}]
+      answer: 0
+
+- id: u12-mare
+  unit: u12
+  title: {it: "Mare o montagna?", en: "Sea or mountains?"}
+  sentences:
+    - {it: "Paolo e Sara discutono al bar.", en: "Paolo and Sara are arguing at the bar."}
+    - {it: "Secondo me, dovremmo andare al mare questa estate.", en: "In my opinion, we should go to the seaside this summer."}
+    - {it: "Sara non è d'accordo: preferirebbe la montagna.", en: "Sara doesn't agree: she would prefer the mountains."}
+    - {it: "Dice che al mare ci sono troppe persone.", en: "She says there are too many people at the seaside."}
+    - {it: "Paolo ammette che ha ragione.", en: "Paolo admits that she is right."}
+    - {it: "Alla fine decidono di andare in montagna.", en: "In the end they decide to go to the mountains."}
+    - {it: "Paolo ci pensa e sorride: ci andrà volentieri.", en: "Paolo thinks about it and smiles: he will gladly go there."}
+  questions:
+    - q: {en: "Where would Paolo like to go?"}
+      options: [{en: "To the seaside"}, {en: "To the mountains"}, {en: "To Rome"}]
+      answer: 0
+    - q: {en: "Why doesn't Sara want to go to the seaside?"}
+      options: [{en: "There are too many people"}, {en: "It is too expensive"}, {en: "She can't swim"}]
+      answer: 0
+    - q: {en: "What do they decide in the end?"}
+      options: [{en: "To go to the mountains"}, {en: "To stay at home"}, {en: "To go to the seaside"}]
+      answer: 0

@@ -8,24 +8,54 @@
 # introduces tense:{T} automatically). Each unit's skills require the previous unit's grammar, so
 # every later skill allows everything taught before it.
 id: it
-version: 1.2.0
+version: 1.3.0
 title: {en: Italian, nl: Italiaans}
 description:
-  en: Italian from the basics, with a strong focus on verbs and conjugation.
-  nl: Italiaans vanaf de basis, met veel aandacht voor werkwoorden en vervoegingen.
+  en: Italian from the basics to A2/B1, with a strong focus on verbs, moods and reading.
+  nl: Italiaans vanaf de basis tot A2/B1, met veel aandacht voor werkwoorden, wijzen en lezen.
 target: it
+# English is the source language of the course; the Dutch glosses, translations and notes of units
+# 1-9 are kept (owner decision 2026-10-20), later content has English only and the app falls back
+# to English where a Dutch text is missing.
 translations: [en, nl]
+required_translations: [en]
+note_langs: [en]
 unverified: false
 persons: [io, tu, lui/lei, noi, voi, loro]
 person_labels:
+  # tu and voi are both English "you": a sentence without a subject pronoun never swaps them
+  tu: {en: "tu (you)", nl: "tu (jij)"}
   lui/lei: {en: "lui/lei (he/she)", nl: "lui/lei (hij/zij)"}
+  voi: {en: "voi (you, plural)", nl: "voi (jullie)"}
   loro: {en: "loro (they)", nl: "loro (zij, mv.)"}
-tenses: [presente, imperfetto, futuro, passato_prossimo]
+tenses: [presente, imperfetto, futuro, passato_prossimo, condizionale, congiuntivo_presente,
+         congiuntivo_imperfetto, imperativo, passato_remoto]
 tense_labels:
   presente: {en: present, nl: tegenwoordige tijd}
   imperfetto: {en: imperfect, nl: onvoltooid verleden tijd}
   futuro: {en: future, nl: toekomende tijd}
   passato_prossimo: {en: present perfect (passato prossimo), nl: voltooid tegenwoordige tijd (passato prossimo)}
+  condizionale: {en: conditional (condizionale), nl: voorwaardelijke wijs (condizionale)}
+  congiuntivo_presente: {en: present subjunctive (congiuntivo presente), nl: "aanvoegende wijs, tegenwoordig (congiuntivo presente)"}
+  congiuntivo_imperfetto: {en: imperfect subjunctive (congiuntivo imperfetto), nl: "aanvoegende wijs, verleden (congiuntivo imperfetto)"}
+  imperativo: {en: imperative, nl: gebiedende wijs}
+  passato_remoto: {en: simple past (passato remoto), nl: verleden tijd van verhalen (passato remoto)}
+# the imperative has no io and no (formal, rare) Loro form; its lui/lei row is the formal Lei
+tense_persons:
+  imperativo: [tu, lui/lei, noi, voi]
+tense_person_labels:
+  imperativo:
+    tu: {en: "tu (you)", nl: "tu (jij)"}
+    lui/lei: {en: "Lei (you, formal)", nl: "Lei (u)"}
+    noi: {en: "noi (let's)", nl: "noi (laten we)"}
+    voi: {en: "voi (you, plural)", nl: "voi (jullie)"}
+# the transform exercise changes the tense only within one group: the indicative tenses (unlisted),
+# never into or out of a mood (Mangio -> *Mangi; Se piove resto -> *Se piove resterei)
+tense_groups:
+  condizionale: conditional
+  congiuntivo_presente: subjunctive_present
+  congiuntivo_imperfetto: subjunctive_imperfect
+  imperativo: imperative
 articles: [il, lo, la, "l'"]
 
 # Inflection tables of non-verbs (duelingo/docs/ARCHITECTURE.md, "Inflection tables"; the importer
@@ -70,6 +100,68 @@ feature_detectors:
             sul, sullo, sulla, "sull'", sui, sugli, sulle, col, coi]
   # irregular future stems (sarò, avrò, andrò, farò, potrò, verrò, ...)
   "irregular:futuro": {type: irregular_tense, tense: futuro}
+  # --- units 10-15 (pack 1.3)
+  # a reflexive pronoun of the verb's own person (mi alzo, ti sei svegliato, ci vediamo; pronominal
+  # verbs like alzarsi align their pronoun to themselves and count too)
+  reflexive:
+    type: reflexive
+    pronouns: {mi: io, ti: tu, ci: noi, vi: voi, si: [lui/lei, loro]}
+    clitics: [lo, la, li, le, ne, gli, "l'", me, te, ce, ve, se]
+  # impersonal and passive si with a verb that is no pronominal item (si dice, si vendono case)
+  si:
+    type: reflexive
+    pronouns: {si: [lui/lei, loro]}
+    clitics: [lo, la, li, le, ne, ci, gli, "l'"]
+    unbound: true
+  # locative/idiomatic ci with a verb of another person than noi (ci vado, ci penso, non ci riesco)
+  ci:
+    type: reflexive
+    pronouns: {ci: [io, tu, lui/lei, voi, loro]}
+    clitics: [lo, la, li, le, ne, "l'", si, mi, ti, vi]
+    unbound: true
+    verbs: [andare, venire, pensare, credere, riuscire, tornare, stare, mettere, volere, vedere, sentire,
+            entrare, arrivare, provare, rimanere, restare, passare, abitare, vivere, contare, giocare, salire]
+  # partitive/genitive ne (ne voglio due, ne parliamo, che ne pensi?), not inside andarsene forms
+  ne: {type: words, words: [ne, "n'"]}
+  # stare + gerund and other gerunds (sto mangiando, studiando si impara, dicendolo)
+  gerund:
+    type: nonfinite
+    form: gerund
+    pattern: "[a-zàèéìòù]+(ando|endo)(mi|ti|si|ci|vi|lo|la|li|le|ne|gli|glielo|gliela|gliene|melo|telo|selo|sene)"
+  # negative tu imperative: non + infinitive at the start of a clause (Non parlare! Non preoccuparti.)
+  # (the words with their aligned forms: 'Non{} ti{} preoccupare{infinitive._}', not 'Non ti diverti?')
+  "imperative:negative":
+    type: pattern
+    annotate: true
+    pattern: "(^|[.!?;:,«\"]\\s*)non\\{\\}\\s+((mi|ti|ci|vi|si|lo|la|li|le|ne|gli|me|te|ce|ve|se|l')\\{\\}\\s*)*[a-zàèéìòù']+\\{infinitive\\._\\}"
+  # an imperative with attached pronouns (dimmi, fallo, aspettami, parlagli)
+  "imperative:pronoun": {type: enclitic, tense: imperativo}
+  # irregular imperatives (va', fa', di', sii, abbi, vieni), conditionals (sarei, vorrei),
+  # subjunctives (sia, abbia, vada, faccia) and passato remoto forms (fu, ebbe, fece, disse)
+  "irregular:imperativo": {type: irregular_tense, tense: imperativo}
+  "irregular:condizionale": {type: irregular_tense, tense: condizionale}
+  "irregular:congiuntivo_presente": {type: irregular_tense, tense: congiuntivo_presente}
+  "irregular:passato_remoto": {type: irregular_tense, tense: passato_remoto}
+  # combined pronouns: glielo, me lo, te ne, ce l'ho ... and attached (dammelo, dirglielo)
+  "pronoun:combined":
+    type: words
+    words: [glielo, gliela, glieli, gliele, gliene, "me lo", "me la", "me li", "me le", "me ne", "me l'",
+            "te lo", "te la", "te li", "te le", "te ne", "te l'", "ce lo", "ce la", "ce li", "ce le", "ce ne",
+            "ce l'", "ve lo", "ve la", "ve li", "ve le", "ve ne", "ve l'", "se lo", "se la", "se li", "se le",
+            "se l'"]
+  "pronoun:attached":
+    type: pattern
+    pattern: "\\b[a-zàèéìòù]+(ar|er|ir|r|ando|endo)(glie|me|te|ce|ve|se)(lo|la|li|le|ne)\\b|\\b(da|di|fa|sta|va)(mm|tt|cc)?(glie|me|te|ce|ve)(lo|la|li|le|ne)\\b"
+  # comparatives and superlatives (più alto di, meno che, migliore, il più bello, bellissimo)
+  comparative:
+    type: pattern
+    pattern: "\\b(più|meno)\\s+[a-zàèéìòù']+\\s+(di|del|dello|della|dei|degli|delle|dell'|che)\\b|\\b(migliore|migliori|peggiore|peggiori|maggiore|maggiori|minore|minori|peggio)\\b|\\b(il|la|i|le|lo|gli)\\s+(più|meno)\\b|\\b[a-zàèéìòù]{3,}issim[oaie]\\b"
+  # relative pronouns cui and il quale (la casa in cui abito, l'uomo del quale parlo)
+  relative:
+    type: words
+    words: [cui, "il quale", "la quale", "i quali", "le quali", "del quale", "della quale", "dei quali",
+            "delle quali", "al quale", "alla quale", "ai quali", "alle quali", "nel quale", "nella quale",
+            "sul quale", "sulla quale", "dal quale", "dalla quale"]
 
 # Time adverbs (whole words, case-insensitive) and the tenses they fit. The app never rewrites a
 # sentence with one of these into another tense (transform exercise: no *Ieri mangio, *Adesso mangiavo).
@@ -164,7 +256,7 @@ units:
         title: {en: Present tense of -are verbs, nl: Tegenwoordige tijd van -are-werkwoorden}
         icon: verb
         requires: [essere-avere]
-        verbs: {class: are, regular: true, tense: presente, top: 20}
+        verbs: {class: are, regular: true, tense: presente, top: 20, exclude: [cambiare]}
         exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
       - id: articles
         kind: grammar
@@ -178,7 +270,7 @@ units:
         title: {en: Present tense of -ere verbs, nl: Tegenwoordige tijd van -ere-werkwoorden}
         icon: verb
         requires: [present-are]
-        verbs: {class: ere, regular: true, tense: presente, top: 18, exclude: [uccidere]}
+        verbs: {class: ere, regular: true, tense: presente, top: 18, exclude: [uccidere, smettere]}
         exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
       - id: present-ire
         kind: grammar
@@ -220,8 +312,9 @@ units:
         title: {en: Irregular verbs in the present, nl: Onregelmatige werkwoorden in de tegenwoordige tijd}
         icon: bolt
         requires: [present-ire]
-        verbs: {regular: false, tense: presente, top: 14,
-                exclude: [essere, avere, piacere, dispiacere, potere, dovere, volere, sapere, parere, supporre]}
+        # frozen at the 1.2.0 selection (the frequency query would now pick other verbs)
+        verbs: {tense: presente, lemmas: [stare, andare, fare, dire, venire, riuscire, uscire, dare, tenere, morire,
+                                          rimanere, bere, ottenere, salire]}
         exercises: [conj_grid, cloze, spot_error, transform]
       - id: pronouns
         kind: grammar
@@ -391,7 +484,9 @@ units:
         title: {en: The future tense, nl: De toekomende tijd}
         icon: future
         requires: [imperfetto]
-        verbs: {tense: futuro, regular: true, top: 18, exclude: [dispiacere]}
+        # frozen at the 1.2.0 selection
+        verbs: {tense: futuro, lemmas: [dire, pensare, parlare, capire, sentire, aspettare, sembrare, prendere, piacere,
+                                        guardare, tornare, lasciare, cercare, chiamare, trovare, chiedere, conoscere, servire]}
         exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
       - id: futuro-irregular
         kind: grammar
@@ -417,3 +512,294 @@ units:
         icon: chat
         requires: [futuro-irregular]
         items: {tags: [ideas]}
+
+  # ---- units 10-15 (pack 1.3, toward A2/B1): moods, pronouns, reading. English only (see the top).
+  - id: u10
+    title: {en: Daily routine, nl: De dagelijkse routine}
+    skills:
+      - id: little-words-2
+        kind: vocab
+        title: {en: "More little words: se, tutto, niente", nl: "Meer kleine woorden: se, tutto, niente"}
+        icon: chat
+        requires: [more-verbs, ideas]
+        items: {tags: [little2]}
+      - id: reflexive-present
+        kind: grammar
+        title: {en: "Reflexive verbs: mi alzo", nl: "Wederkerende werkwoorden: mi alzo"}
+        icon: person
+        requires: [little-words-2]
+        introduces: [reflexive]
+        verbs: {tense: presente, lemmas: [chiamarsi, alzarsi, svegliarsi, sentirsi, vestirsi, lavarsi, divertirsi,
+                                          preoccuparsi, dimenticarsi, sbagliarsi, fermarsi, sedersi, trovarsi,
+                                          addormentarsi, arrabbiarsi, innamorarsi, riposarsi, annoiarsi,
+                                          prepararsi, andarsene]}
+        exercises: [conj_grid, cloze, spot_error, transform, multiple_choice]
+      - id: routine
+        kind: vocab
+        title: {en: From morning to night, nl: Van 's ochtends tot 's avonds}
+        icon: clock
+        requires: [reflexive-present]
+        items: {tags: [routine]}
+      - id: reflexive-past
+        kind: grammar
+        title: {en: "Reflexive verbs in the past: mi sono alzato", nl: "Wederkerend in het verleden: mi sono alzato"}
+        icon: past
+        requires: [reflexive-present]
+        verbs: {tense: passato_prossimo, lemmas: [alzarsi, svegliarsi, sentirsi, vestirsi, lavarsi, divertirsi,
+                                                  preoccuparsi, dimenticarsi, sbagliarsi, fermarsi, sedersi, trovarsi,
+                                                  addormentarsi, arrabbiarsi, innamorarsi, sposarsi, annoiarsi,
+                                                  andarsene]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: health
+        kind: vocab
+        title: {en: At the doctor's, nl: Bij de dokter}
+        icon: body
+        requires: [reflexive-present]
+        items: {tags: [health]}
+      - id: services
+        kind: vocab
+        title: {en: "Banks, post and services", nl: "Bank, post en diensten"}
+        icon: city
+        requires: [reflexive-past]
+        items: {tags: [services]}
+
+  - id: u11
+    title: {en: Do it!, nl: Doe het!}
+    skills:
+      - id: imperative
+        kind: grammar
+        title: {en: "The imperative: parla! prendi!", nl: "De gebiedende wijs: parla! prendi!"}
+        icon: verb
+        requires: [reflexive-past, health, routine]
+        introduces: ["imperative:negative"]
+        verbs: {tense: imperativo, lemmas: [parlare, guardare, ascoltare, aspettare, prendere, scrivere, leggere, sentire,
+                                            aprire, chiudere, finire, mangiare, entrare, chiamare, lasciare, pensare, provare,
+                                            mettere]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error]
+      - id: directions
+        kind: vocab
+        title: {en: Finding the way, nl: De weg vinden}
+        icon: travel
+        requires: [imperative]
+        items: {tags: [directions]}
+      - id: imperative-irregular
+        kind: grammar
+        title: {en: "Irregular imperatives: va', fa', di'", nl: "Onregelmatige gebiedende wijs: va', fa', di'"}
+        icon: bolt
+        requires: [imperative]
+        introduces: ["irregular:imperativo"]
+        verbs: {tense: imperativo, lemmas: [essere, avere, andare, fare, dire, dare, stare, venire, tenere, uscire, rimanere,
+                                            bere, salire, scegliere]}
+        exercises: [conj_grid, cloze, spot_error]
+      - id: food-more
+        kind: vocab
+        title: {en: Cooking and shopping for food, nl: Koken en boodschappen}
+        icon: food
+        requires: [imperative]
+        items: {tags: [food2]}
+      - id: imperative-pronouns
+        kind: grammar
+        title: {en: "Imperative with pronouns: alzati, dimmi", nl: "Gebiedende wijs met voornaamwoorden: alzati, dimmi"}
+        icon: person
+        requires: [imperative-irregular]
+        introduces: ["imperative:pronoun"]
+        verbs: {tense: imperativo, lemmas: [alzarsi, sedersi, preoccuparsi, fermarsi, divertirsi, rilassarsi,
+                                            svegliarsi, vestirsi, prepararsi, riposarsi]}
+        exercises: [conj_grid, cloze, spot_error]
+      - id: media
+        kind: vocab
+        title: {en: "News, phones and computers", nl: "Nieuws, telefoons en computers"}
+        icon: chat
+        requires: [imperative-irregular]
+        items: {tags: [media]}
+
+  - id: u12
+    title: {en: I would like..., nl: Ik zou graag...}
+    skills:
+      - id: ci-ne
+        kind: grammar
+        title: {en: "Ci and ne: ci vado, ne voglio due", nl: "Ci en ne: ci vado, ne voglio due"}
+        icon: grammar
+        requires: [imperative-pronouns, media, directions, food-more]
+        introduces: [ci, ne]
+        items: {tags: [ci_ne]}
+      - id: emotions
+        kind: vocab
+        title: {en: Emotions, nl: Emoties}
+        icon: person
+        requires: [ci-ne]
+        items: {tags: [emotions]}
+      - id: combined-pronouns
+        kind: grammar
+        title: {en: "Glielo, me lo, te ne: combined pronouns", nl: "Glielo, me lo, te ne: samengestelde voornaamwoorden"}
+        icon: grammar
+        requires: [ci-ne]
+        introduces: ["pronoun:combined", "pronoun:attached"]
+        items: {tags: [combined]}
+      - id: condizionale
+        kind: grammar
+        title: {en: "The conditional: parlerei", nl: "De voorwaardelijke wijs: parlerei"}
+        icon: star
+        requires: [ci-ne]
+        verbs: {tense: condizionale, regular: true, top: 16, exclude: [dispiacere]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+      - id: condizionale-irregular
+        kind: grammar
+        title: {en: "Vorrei, potrei, dovrei: irregular conditionals", nl: "Vorrei, potrei, dovrei: onregelmatig"}
+        icon: star
+        requires: [condizionale]
+        introduces: ["irregular:condizionale"]
+        verbs: {tense: condizionale, regular: false, top: 16, exclude: [dispiacere, parere, supporre, piacere]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: opinions
+        kind: vocab
+        title: {en: Agreeing and disagreeing, nl: Het eens en oneens zijn}
+        icon: chat
+        requires: [condizionale-irregular]
+        items: {tags: [opinions]}
+      - id: verbs-three
+        kind: vocab
+        title: {en: Even more verbs, nl: Nog meer werkwoorden}
+        icon: verb
+        requires: [condizionale]
+        items: {tags: [verbs3]}
+
+  - id: u13
+    title: {en: More or less, nl: Meer of minder}
+    skills:
+      - id: comparatives
+        kind: grammar
+        title: {en: "Più, meno, migliore: comparing", nl: "Più, meno, migliore: vergelijken"}
+        icon: grammar
+        requires: [combined-pronouns, condizionale-irregular, emotions, opinions, verbs-three]
+        introduces: [comparative]
+        items: {tags: [comparatives]}
+      - id: adjectives-more
+        kind: vocab
+        title: {en: More adjectives, nl: Meer bijvoeglijke naamwoorden}
+        icon: star
+        requires: [comparatives]
+        items: {tags: [adjectives2]}
+        inflections: {table: agreement}
+      - id: progressive
+        kind: grammar
+        title: {en: "Stare + gerund: sto mangiando", nl: "Stare + gerundium: sto mangiando"}
+        icon: clock
+        requires: [comparatives]
+        introduces: [gerund]
+        verbs: {tense: presente, lemmas: [stare]}
+        exercises: [conj_grid, cloze, spot_error]
+      - id: nature
+        kind: vocab
+        title: {en: Landscapes and nature, nl: Landschap en natuur}
+        icon: nature
+        requires: [progressive]
+        items: {tags: [nature]}
+      - id: impersonal-si
+        kind: grammar
+        title: {en: "Si dice, si mangia: impersonal si", nl: "Si dice, si mangia: onpersoonlijk si"}
+        icon: people
+        requires: [progressive]
+        introduces: [si]
+        items: {tags: [impersonal]}
+      - id: society
+        kind: vocab
+        title: {en: Society and politics, nl: Maatschappij en politiek}
+        icon: city
+        requires: [impersonal-si]
+        items: {tags: [society]}
+      - id: abstract
+        kind: vocab
+        title: {en: Ideas and things, nl: Begrippen}
+        icon: star
+        requires: [impersonal-si]
+        items: {tags: [abstract]}
+
+  - id: u14
+    title: {en: Hopes and doubts, nl: Hoop en twijfel}
+    skills:
+      - id: congiuntivo
+        kind: grammar
+        title: {en: "The subjunctive: penso che parli", nl: "De aanvoegende wijs: penso che parli"}
+        icon: chat
+        requires: [adjectives-more, nature, society, abstract]
+        verbs: {tense: congiuntivo_presente, lemmas: [pensare, parlare, sentire, capire, prendere, aspettare, guardare, lasciare,
+                                                      tornare, trovare, chiamare, cercare, chiedere, conoscere, arrivare, mangiare,
+                                                      scrivere, dormire]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error]
+      - id: character
+        kind: vocab
+        title: {en: Character, nl: Karakter}
+        icon: person
+        requires: [congiuntivo]
+        items: {tags: [character]}
+        inflections: {table: agreement}
+      - id: congiuntivo-irregular
+        kind: grammar
+        title: {en: "Sia, abbia, vada: irregular subjunctives", nl: "Sia, abbia, vada: onregelmatig"}
+        icon: bolt
+        requires: [congiuntivo]
+        introduces: ["irregular:congiuntivo_presente"]
+        verbs: {tense: congiuntivo_presente, regular: false, top: 16, exclude: [dispiacere, parere, supporre, piacere, succedere]}
+        exercises: [conj_grid, cloze, spot_error]
+      - id: connectors
+        kind: vocab
+        title: {en: "Però, quindi, mentre: linking words", nl: "Però, quindi, mentre: verbindingswoorden"}
+        icon: chat
+        requires: [congiuntivo-irregular]
+        items: {tags: [connectors]}
+      - id: congiuntivo-imperfetto
+        kind: grammar
+        title: {en: "If I were: se fossi, se avessi", nl: "Als ik was: se fossi, se avessi"}
+        icon: past
+        requires: [congiuntivo-irregular]
+        verbs: {tense: congiuntivo_imperfetto, top: 18, exclude: [dispiacere, importare, parere, piacere]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error]
+      - id: money
+        kind: vocab
+        title: {en: Money and business, nl: Geld en zaken}
+        icon: shopping
+        requires: [congiuntivo-imperfetto]
+        items: {tags: [money]}
+
+  - id: u15
+    title: {en: Reading Italian, nl: Italiaans lezen}
+    skills:
+      - id: passato-remoto
+        kind: grammar
+        title: {en: "Reading the passato remoto: parlò", nl: "De passato remoto lezen: parlò"}
+        icon: book
+        requires: [character, connectors, money]
+        recognition: true
+        equivalent_tense: passato_prossimo
+        verbs: {tense: passato_remoto, regular: true, top: 18, exclude: [dispiacere, importare]}
+        exercises: [multiple_choice]
+      - id: crime
+        kind: vocab
+        title: {en: Crime and investigation, nl: Misdaad en onderzoek}
+        icon: question
+        requires: [passato-remoto]
+        items: {tags: [crime]}
+      - id: passato-remoto-irregular
+        kind: grammar
+        title: {en: "Fu, ebbe, fece, disse: irregular passato remoto", nl: "Fu, ebbe, fece, disse: onregelmatig"}
+        icon: book
+        requires: [passato-remoto]
+        recognition: true
+        equivalent_tense: passato_prossimo
+        introduces: ["irregular:passato_remoto"]
+        verbs: {tense: passato_remoto, regular: false, top: 20, exclude: [dispiacere, parere, supporre, piacere]}
+        exercises: [multiple_choice]
+      - id: relatives
+        kind: grammar
+        title: {en: "In cui, il quale: relative pronouns", nl: "In cui, il quale: betrekkelijke voornaamwoorden"}
+        icon: grammar
+        requires: [passato-remoto-irregular]
+        introduces: [relative]
+        items: {tags: [relatives]}
+      - id: reading
+        kind: vocab
+        title: {en: Books and stories, nl: Boeken en verhalen}
+        icon: book
+        requires: [passato-remoto-irregular]
+        items: {tags: [reading]}
