@@ -4,11 +4,23 @@
 # Wiktionary. Entries without tags only add/override glosses for automatically selected items
 # (verbs of the grammar skills).
 exclude: [vengar, luis, nueva/noun, digo/intj, puede/intj, sabes/intj, sé/intj, vamos/intj, va/intj, por/intj, tranquilo/intj, mio/intj, venga/intj, siga/intj, vaya/intj]
+# Tatoeba sentences the native review (duelingo/docs/samples/es_exercises.txt) found wrong or odd:
+# nonsense or slang, and translations that do not match.
+exclude_sentences: [10909282, 6690705, 10624125, 4555048, 7320671, 5961479, 7965350, 3603144,
+                    2227998, 3442069]
+# The course teaches peninsular standard Spanish: no voseo (Río de la Plata 'vos tenés').
+exclude_words: [vos, sos, tenés, querés, podés, sabés, hacés, andás, hablás, pensás, entendés, conocés, comés,
+                necesitás, ponés, llamás, creés, trabajás, jugás, mirá, vení, decime, tomá, escuchame, fijate,
+                contame, dejame, perdoname, tené, poné, hacé, andá, esperá, sentate]
+# The tables have no subjunctive, conditional or imperative (pipeline/README.md, seed.yaml): sentences
+# with such forms ('que vengas', 'podría', 'decid') are not imported, so they never leak into a unit.
+exclude_moods: [subjunctive, conditional, imperative]
 # Mass nouns and abstract nouns whose plural is odd or means something else: no plural in the
 # lexicon, so the app never asks for or offers one.
 uncountable: [leche, arroz, azúcar, sal, carne, gente, dinero, sed, hambre, salud, sangre, música, ropa, té,
               chocolate, policía, naturaleza, lluvia, nieve, calor, suerte, miedo, tiempo, alegría, comida, fruta,
-              agua, café, fútbol, ganas, gafas, vacaciones, fiebre, medicina, cariño]
+              agua, café, fútbol, ganas, gafas, vacaciones, fiebre, medicina, cariño,
+              harina, pimienta, miel, tenis, baloncesto, ajedrez, arena, tráfico, basura, gripe, lana, aire, moda]
 items:
   # --- greetings
   - {lemma: hola, pos: intj, tags: [greetings], en: [hello, hi], nl: [hallo, hoi]}
@@ -480,19 +492,19 @@ items:
   - {lemma: precio, pos: noun, tags: [shopping], en: [price], nl: [prijs]}
   - {lemma: euro, pos: noun, tags: [shopping], en: [euro], nl: [euro]}
   - {lemma: tarjeta, pos: noun, tags: [shopping], en: [card], nl: [kaart, pas]}
-  - {lemma: ropa, pos: noun, tags: [shopping], en: [clothes, clothing], nl: [kleren, kleding]}
-  - {lemma: camisa, pos: noun, tags: [shopping], en: [shirt], nl: [overhemd]}
-  - {lemma: camiseta, pos: noun, tags: [shopping], en: [T-shirt], nl: [T-shirt, shirt]}
-  - {lemma: pantalón, pos: noun, tags: [shopping], en: [trousers, pants], nl: [broek]}
-  - {lemma: falda, pos: noun, tags: [shopping], en: [skirt], nl: [rok]}
-  - {lemma: vestido, pos: noun, tags: [shopping], en: [dress], nl: [jurk]}
-  - {lemma: zapato, pos: noun, tags: [shopping], en: [shoe], nl: [schoen]}
-  - {lemma: abrigo, pos: noun, tags: [shopping], en: [coat], nl: [jas]}
-  - {lemma: chaqueta, pos: noun, tags: [shopping], en: [jacket], nl: [jas, jasje]}
-  - {lemma: sombrero, pos: noun, tags: [shopping], en: [hat], nl: [hoed]}
-  - {lemma: bolso, pos: noun, tags: [shopping], en: [bag, handbag], nl: [tas, handtas]}
-  - {lemma: gafas, pos: noun, tags: [shopping], en: [glasses], nl: [bril]}
-  - {lemma: talla, pos: noun, tags: [shopping], en: [size], nl: [maat]}
+  - {lemma: ropa, pos: noun, tags: [clothes], en: [clothes, clothing], nl: [kleren, kleding]}
+  - {lemma: camisa, pos: noun, tags: [clothes], en: [shirt], nl: [overhemd]}
+  - {lemma: camiseta, pos: noun, tags: [clothes], en: [T-shirt], nl: [T-shirt, shirt]}
+  - {lemma: pantalón, pos: noun, tags: [clothes], en: [trousers, pants], nl: [broek]}
+  - {lemma: falda, pos: noun, tags: [clothes], en: [skirt], nl: [rok]}
+  - {lemma: vestido, pos: noun, tags: [clothes], en: [dress], nl: [jurk]}
+  - {lemma: zapato, pos: noun, tags: [clothes], en: [shoe], nl: [schoen]}
+  - {lemma: abrigo, pos: noun, tags: [clothes], en: [coat], nl: [jas]}
+  - {lemma: chaqueta, pos: noun, tags: [clothes], en: [jacket], nl: [jas, jasje]}
+  - {lemma: sombrero, pos: noun, tags: [clothes], en: [hat], nl: [hoed]}
+  - {lemma: bolso, pos: noun, tags: [clothes], en: [bag, handbag], nl: [tas, handtas]}
+  - {lemma: gafas, pos: noun, tags: [clothes], en: [glasses], nl: [bril]}
+  - {lemma: talla, pos: noun, tags: [clothes], en: [size], nl: [maat]}
   - {lemma: compra, pos: noun, tags: [shopping], en: [purchase, shopping], nl: [aankoop, boodschappen]}
   - {lemma: cliente, pos: noun, tags: [shopping], en: [customer, client], nl: [klant]}
   - {lemma: vendedor, pos: noun, tags: [shopping], en: [seller, salesperson], nl: [verkoper]}
@@ -500,7 +512,7 @@ items:
   - {lemma: bolsa, pos: noun, tags: [shopping], en: [bag], nl: [tas, zak]}
   - {lemma: regalo, pos: noun, tags: [shopping], en: [present, gift], nl: [cadeau]}
   - {lemma: oferta, pos: noun, tags: [shopping], en: [offer, special offer], nl: [aanbod, aanbieding]}
-  - {lemma: calcetín, pos: noun, tags: [shopping], en: [sock], nl: [sok]}
+  - {lemma: calcetín, pos: noun, tags: [clothes], en: [sock], nl: [sok]}
   - {lemma: vender, pos: verb, tags: [shopping], en: [to sell], nl: [verkopen]}
   - {lemma: probar, pos: verb, tags: [shopping], en: [to try, to try on, to taste], nl: [proberen, passen, proeven]}
   # --- work and school
@@ -713,3 +725,305 @@ items:
   - {lemma: cuenta, pos: noun, tags: [shopping], en: [bill, account], nl: [rekening]}
   - {lemma: cambio, pos: noun, tags: [shopping], en: [change, exchange], nl: [verandering, wisselgeld, ruil]}
   - {lemma: abrir, pos: verb, nl: [openen, opendoen, openmaken]}
+  # --- adverbs (v0.6 expansion)
+  - {lemma: así, pos: adv, tags: [adverbs], en: [like this, like that, so], nl: [zo, op die manier]}
+  - {lemma: entonces, pos: adv, tags: [adverbs], en: [then, so], nl: [dan, toen]}
+  - {lemma: ahí, pos: adv, tags: [adverbs], en: [there, over there], nl: [daar]}
+  - {lemma: aún, pos: adv, tags: [adverbs], en: [still, yet], nl: [nog, nog steeds]}
+  - {lemma: incluso, pos: adv, tags: [adverbs], en: [even], nl: [zelfs]}
+  - {lemma: exactamente, pos: adv, tags: [adverbs], en: [exactly], nl: [precies]}
+  - {lemma: abajo, pos: adv, tags: [adverbs], en: [down, downstairs, below], nl: [beneden, naar beneden]}
+  - {lemma: arriba, pos: adv, tags: [adverbs], en: [up, upstairs, above], nl: [boven, naar boven]}
+  - {lemma: atrás, pos: adv, tags: [adverbs], en: [back, behind], nl: [achter, terug]}
+  - {lemma: tampoco, pos: adv, tags: [adverbs], en: [neither, not either], nl: [ook niet]}
+  - {lemma: jamás, pos: adv, tags: [adverbs], en: [never], nl: [nooit]}
+  - {lemma: enseguida, pos: adv, tags: [adverbs], en: [right away, immediately], nl: [meteen, direct]}
+  - {lemma: apenas, pos: adv, tags: [adverbs], en: [hardly, barely], nl: [nauwelijks, amper]}
+  - {lemma: despacio, pos: adv, tags: [adverbs], en: [slowly], nl: [langzaam]}
+  - {lemma: solamente, pos: adv, tags: [adverbs], en: [only], nl: [alleen, slechts]}
+  - {lemma: normalmente, pos: adv, tags: [adverbs], en: [normally, usually], nl: [normaal, meestal]}
+  - {lemma: rápidamente, pos: adv, tags: [adverbs], en: [quickly], nl: [snel]}
+  - {lemma: a veces, pos: phrase, tags: [adverbs], en: [sometimes], nl: [soms]}
+  - {lemma: a menudo, pos: phrase, tags: [adverbs], en: [often], nl: [vaak]}
+  - {lemma: otra vez, pos: phrase, tags: [adverbs], en: [again], nl: [weer, opnieuw]}
+  - {lemma: de repente, pos: phrase, tags: [adverbs], en: [suddenly], nl: [plotseling, opeens]}
+  - {lemma: por fin, pos: phrase, tags: [adverbs], en: [finally, at last], nl: [eindelijk]}
+  - {lemma: poco, pos: det, tags: [adverbs], en: [little, not much, few], nl: [weinig]}
+  - {lemma: menos, pos: det, tags: [adverbs], en: [less, fewer], nl: [minder]}
+  - {lemma: tan, pos: adv, tags: [adverbs], en: [so, as], nl: [zo]}
+  - {lemma: tanto, pos: det, tags: [adverbs], en: [so much, as much], nl: [zoveel]}
+  - {lemma: mientras, pos: conj, tags: [adverbs], en: [while], nl: [terwijl]}
+  # --- clothes (v0.6 expansion)
+  - {lemma: bufanda, pos: noun, tags: [clothes], en: [scarf], nl: [sjaal]}
+  - {lemma: guante, pos: noun, tags: [clothes], en: [glove], nl: [handschoen]}
+  - {lemma: cinturón, pos: noun, tags: [clothes], en: [belt], nl: [riem]}
+  - {lemma: corbata, pos: noun, tags: [clothes], en: [tie], nl: [stropdas]}
+  - {lemma: bota, pos: noun, tags: [clothes], en: [boot], nl: [laars]}
+  - {lemma: jersey, pos: noun, tags: [clothes], en: [sweater, jumper], nl: [trui]}
+  - {lemma: pijama, pos: noun, tags: [clothes], en: [pyjamas, pajamas], nl: [pyjama]}
+  - {lemma: gorra, pos: noun, tags: [clothes], en: [cap], nl: [pet]}
+  - {lemma: traje, pos: noun, tags: [clothes], en: [suit], nl: [pak]}
+  - {lemma: zapatilla, pos: noun, tags: [clothes], en: [slipper, trainer, sneaker], nl: [pantoffel, sportschoen]}
+  - {lemma: bolsillo, pos: noun, tags: [clothes], en: [pocket], nl: [zak]}
+  - {lemma: anillo, pos: noun, tags: [clothes], en: [ring], nl: [ring]}
+  - {lemma: paraguas, pos: noun, tags: [clothes], en: [umbrella], nl: [paraplu]}
+  - {lemma: mochila, pos: noun, tags: [clothes], en: [backpack, rucksack], nl: [rugzak]}
+  - {lemma: cartera, pos: noun, tags: [clothes], en: [wallet, briefcase], nl: [portemonnee, aktetas]}
+  - {lemma: moda, pos: noun, tags: [clothes], en: [fashion], nl: [mode]}
+  - {lemma: lana, pos: noun, tags: [clothes], en: [wool], nl: [wol]}
+  # --- shopping (v0.6 expansion)
+  - {lemma: supermercado, pos: noun, tags: [shopping], en: [supermarket], nl: [supermarkt]}
+  - {lemma: panadería, pos: noun, tags: [shopping], en: [bakery], nl: [bakkerij]}
+  - {lemma: kilo, pos: noun, tags: [shopping], en: [kilo], nl: [kilo]}
+  - {lemma: moneda, pos: noun, tags: [shopping], en: [coin, currency], nl: [munt, munteenheid]}
+  - {lemma: dependiente, pos: noun, tags: [shopping], en: [shop assistant], nl: [verkoper]}
+  - {lemma: descuento, pos: noun, tags: [shopping], en: [discount], nl: [korting]}
+  - {lemma: gastar, pos: verb, tags: [shopping], en: [to spend], nl: [uitgeven]}
+  - {lemma: costar, pos: verb, tags: [shopping], en: [to cost], nl: [kosten]}
+  - {lemma: ahorrar, pos: verb, tags: [shopping], en: [to save], nl: [sparen]}
+  - {lemma: gratis, pos: adv, tags: [shopping], en: [free, for free], nl: [gratis]}
+  # --- kitchen (v0.6 expansion)
+  - {lemma: cocinar, pos: verb, tags: [kitchen], en: [to cook], nl: [koken]}
+  - {lemma: cortar, pos: verb, tags: [kitchen], en: [to cut], nl: [snijden]}
+  - {lemma: preparar, pos: verb, tags: [kitchen], en: [to prepare, to make], nl: [bereiden, klaarmaken]}
+  - {lemma: receta, pos: noun, tags: [kitchen], en: [recipe, prescription], nl: [recept]}
+  - {lemma: horno, pos: noun, tags: [kitchen], en: [oven], nl: [oven]}
+  - {lemma: sartén, pos: noun, tags: [kitchen], en: [frying pan], nl: [koekenpan]}
+  - {lemma: olla, pos: noun, tags: [kitchen], en: [pot, saucepan], nl: [pan, kookpan]}
+  - {lemma: harina, pos: noun, tags: [kitchen], en: [flour], nl: [meel, bloem]}
+  - {lemma: pimienta, pos: noun, tags: [kitchen], en: [pepper], nl: [peper]}
+  - {lemma: aceituna, pos: noun, tags: [kitchen], en: [olive], nl: [olijf]}
+  - {lemma: jamón, pos: noun, tags: [kitchen], en: [ham], nl: [ham]}
+  - {lemma: salchicha, pos: noun, tags: [kitchen], en: [sausage], nl: [worst, worstje]}
+  - {lemma: gamba, pos: noun, tags: [kitchen], en: [prawn, shrimp], nl: [garnaal]}
+  - {lemma: atún, pos: noun, tags: [kitchen], en: [tuna], nl: [tonijn]}
+  - {lemma: yogur, pos: noun, tags: [kitchen], en: [yogurt, yoghurt], nl: [yoghurt]}
+  - {lemma: miel, pos: noun, tags: [kitchen], en: [honey], nl: [honing]}
+  - {lemma: lechuga, pos: noun, tags: [kitchen], en: [lettuce], nl: [sla]}
+  - {lemma: zanahoria, pos: noun, tags: [kitchen], en: [carrot], nl: [wortel]}
+  - {lemma: pimiento, pos: noun, tags: [kitchen], en: [pepper, bell pepper], nl: [paprika]}
+  - {lemma: fresa, pos: noun, tags: [kitchen], en: [strawberry], nl: [aardbei]}
+  - {lemma: uva, pos: noun, tags: [kitchen], en: [grape], nl: [druif]}
+  - {lemma: limón, pos: noun, tags: [kitchen], en: [lemon], nl: [citroen]}
+  - {lemma: pera, pos: noun, tags: [kitchen], en: [pear], nl: [peer]}
+  - {lemma: almuerzo, pos: noun, tags: [kitchen], en: [lunch], nl: [lunch, middageten]}
+  - {lemma: postre, pos: noun, tags: [kitchen], en: [dessert], nl: [toetje, dessert]}
+  - {lemma: menú, pos: noun, tags: [kitchen], en: [menu], nl: [menu, menukaart]}
+  - {lemma: camarero, pos: noun, tags: [kitchen], en: [waiter], nl: [ober]}
+  - {lemma: propina, pos: noun, tags: [kitchen], en: [tip], nl: [fooi]}
+  - {lemma: delicioso, pos: adj, tags: [kitchen], en: [delicious], nl: [heerlijk, lekker]}
+  - {lemma: fresco, pos: adj, tags: [kitchen], en: [fresh, cool], nl: [vers, fris]}
+  # --- leisure (v0.6 expansion)
+  - {lemma: partido, pos: noun, tags: [leisure], en: [match, game], nl: [wedstrijd]}
+  - {lemma: jugador, pos: noun, tags: [leisure], en: [player], nl: [speler]}
+  - {lemma: ganar, pos: verb, tags: [leisure], en: [to win, to earn], nl: [winnen, verdienen]}
+  - {lemma: pintar, pos: verb, tags: [leisure], en: [to paint], nl: [schilderen]}
+  - {lemma: dibujar, pos: verb, tags: [leisure], en: [to draw], nl: [tekenen]}
+  - {lemma: tenis, pos: noun, tags: [leisure], en: [tennis], nl: [tennis]}
+  - {lemma: baloncesto, pos: noun, tags: [leisure], en: [basketball], nl: [basketbal]}
+  - {lemma: ajedrez, pos: noun, tags: [leisure], en: [chess], nl: [schaken, schaakspel]}
+  - {lemma: novela, pos: noun, tags: [leisure], en: [novel], nl: [roman]}
+  - {lemma: revista, pos: noun, tags: [leisure], en: [magazine], nl: [tijdschrift]}
+  - {lemma: periódico, pos: noun, tags: [leisure], en: [newspaper], nl: [krant]}
+  - {lemma: concierto, pos: noun, tags: [leisure], en: [concert], nl: [concert]}
+  - {lemma: entrada, pos: noun, tags: [leisure], en: [ticket, entrance], nl: [kaartje, ingang]}
+  - {lemma: cámara, pos: noun, tags: [leisure], en: [camera], nl: [camera]}
+  - {lemma: arte, pos: noun, tags: [leisure], en: [art], nl: [kunst]}
+  - {lemma: artista, pos: noun, tags: [leisure], en: [artist], nl: [kunstenaar]}
+  - {lemma: cuadro, pos: noun, tags: [leisure], en: [painting, picture], nl: [schilderij]}
+  - {lemma: poema, pos: noun, tags: [leisure], en: [poem], nl: [gedicht]}
+  - {lemma: escritor, pos: noun, tags: [leisure], en: [writer], nl: [schrijver]}
+  - {lemma: radio, pos: noun, tags: [leisure], en: [radio], nl: [radio]}
+  - {lemma: programa, pos: noun, tags: [leisure], en: [programme, program, show], nl: [programma]}
+  - {lemma: noticia, pos: noun, tags: [leisure], en: [news, piece of news], nl: [nieuws, bericht]}
+  - {lemma: serie, pos: noun, tags: [leisure], en: [series], nl: [serie]}
+  - {lemma: gimnasio, pos: noun, tags: [leisure], en: [gym], nl: [sportschool]}
+  - {lemma: caminar, pos: verb, tags: [leisure], en: [to walk], nl: [lopen, wandelen]}
+  - {lemma: disfrutar, pos: verb, tags: [leisure], en: [to enjoy], nl: [genieten]}
+  - {lemma: divertido, pos: adj, tags: [leisure], en: [fun, funny], nl: [leuk, grappig]}
+  - {lemma: favorito, pos: adj, tags: [leisure], en: [favourite, favorite], nl: [favoriet, lievelings-]}
+  - {lemma: famoso, pos: adj, tags: [leisure], en: [famous], nl: [beroemd]}
+  # --- verbs2 (v0.6 expansion)
+  - {lemma: usar, pos: verb, tags: [verbs2], en: [to use], nl: [gebruiken]}
+  - {lemma: contar, pos: verb, tags: [verbs2], en: [to tell, to count], nl: [vertellen, tellen]}
+  - {lemma: enviar, pos: verb, tags: [verbs2], en: [to send], nl: [sturen, versturen]}
+  - {lemma: mover, pos: verb, tags: [verbs2], en: [to move], nl: [bewegen, verplaatsen]}
+  - {lemma: permitir, pos: verb, tags: [verbs2], en: [to allow, to let], nl: [toestaan]}
+  - {lemma: subir, pos: verb, tags: [verbs2], en: [to go up, to climb, to get on], nl: [omhooggaan, naar boven gaan, instappen]}
+  - {lemma: bajar, pos: verb, tags: [verbs2], en: [to go down, to get off], nl: [naar beneden gaan, uitstappen]}
+  - {lemma: mostrar, pos: verb, tags: [verbs2], en: [to show], nl: [tonen, laten zien]}
+  - {lemma: tocar, pos: verb, tags: [verbs2], en: [to touch, to play], nl: [aanraken, spelen]}
+  - {lemma: aceptar, pos: verb, tags: [verbs2], en: [to accept], nl: [accepteren, aannemen]}
+  - {lemma: cuidar, pos: verb, tags: [verbs2], en: [to take care of, to look after], nl: [zorgen voor, verzorgen]}
+  - {lemma: arreglar, pos: verb, tags: [verbs2], en: [to fix, to repair], nl: [repareren, maken]}
+  - {lemma: crear, pos: verb, tags: [verbs2], en: [to create], nl: [scheppen, creëren]}
+  - {lemma: conducir, pos: verb, tags: [verbs2], en: [to drive], nl: [rijden, autorijden]}
+  - {lemma: elegir, pos: verb, tags: [verbs2], en: [to choose], nl: [kiezen]}
+  - {lemma: ofrecer, pos: verb, tags: [verbs2], en: [to offer], nl: [aanbieden]}
+  - {lemma: continuar, pos: verb, tags: [verbs2], en: [to continue], nl: [doorgaan, voortzetten]}
+  - {lemma: crecer, pos: verb, tags: [verbs2], en: [to grow], nl: [groeien]}
+  - {lemma: limpiar, pos: verb, tags: [verbs2], en: [to clean], nl: [schoonmaken]}
+  - {lemma: nacer, pos: verb, tags: [verbs2], en: [to be born], nl: [geboren worden]}
+  - {lemma: guardar, pos: verb, tags: [verbs2], en: [to keep, to save], nl: [bewaren]}
+  - {lemma: invitar, pos: verb, tags: [verbs2], en: [to invite], nl: [uitnodigen]}
+  - {lemma: descansar, pos: verb, tags: [verbs2], en: [to rest], nl: [rusten, uitrusten]}
+  - {lemma: conseguir, pos: verb, tags: [verbs2], en: [to get, to manage], nl: [krijgen, bereiken]}
+  - {lemma: regresar, pos: verb, tags: [verbs2], en: [to return, to come back], nl: [terugkomen, terugkeren]}
+  - {lemma: ocurrir, pos: verb, tags: [verbs2], en: [to happen], nl: [gebeuren]}
+  - {lemma: sacar, pos: verb, tags: [verbs2], en: [to take out], nl: [eruit halen, pakken]}
+  - {lemma: caer, pos: verb, tags: [verbs2], en: [to fall], nl: [vallen]}
+  - {lemma: contestar, pos: verb, tags: [verbs2], en: [to answer], nl: [antwoorden, beantwoorden]}
+  - {lemma: cumplir, pos: verb, tags: [verbs2], en: [to fulfil, "to turn (an age)"], nl: [vervullen, worden]}
+  # --- numbers (v0.6 expansion)
+  - {lemma: trece, pos: num, tags: [numbers], en: [thirteen], nl: [dertien]}
+  - {lemma: catorce, pos: num, tags: [numbers], en: [fourteen], nl: [veertien]}
+  - {lemma: dieciséis, pos: num, tags: [numbers], en: [sixteen], nl: [zestien]}
+  - {lemma: diecisiete, pos: num, tags: [numbers], en: [seventeen], nl: [zeventien]}
+  - {lemma: dieciocho, pos: num, tags: [numbers], en: [eighteen], nl: [achttien]}
+  - {lemma: diecinueve, pos: num, tags: [numbers], en: [nineteen], nl: [negentien]}
+  - {lemma: doscientos, pos: num, tags: [numbers], en: [two hundred], nl: [tweehonderd]}
+  - {lemma: quinientos, pos: num, tags: [numbers], en: [five hundred], nl: [vijfhonderd]}
+  - {lemma: docena, pos: noun, tags: [numbers], en: [dozen], nl: [dozijn]}
+  # --- family (v0.6 expansion)
+  - {lemma: suegro, pos: noun, tags: [family], en: [father-in-law], nl: [schoonvader]}
+  - {lemma: suegra, pos: noun, tags: [family], en: [mother-in-law], nl: [schoonmoeder]}
+  - {lemma: sobrino, pos: noun, tags: [family], en: [nephew], nl: [neef, neefje]}
+  - {lemma: sobrina, pos: noun, tags: [family], en: [niece], nl: [nicht, nichtje]}
+  - {lemma: cuñado, pos: noun, tags: [family], en: [brother-in-law], nl: [zwager]}
+  - {lemma: cuñada, pos: noun, tags: [family], en: [sister-in-law], nl: [schoonzus]}
+  - {lemma: pareja, pos: noun, tags: [family], en: [partner, couple], nl: [partner, stel]}
+  - {lemma: apellido, pos: noun, tags: [family], en: [surname, last name], nl: [achternaam]}
+  # --- adjectives (v0.6 expansion)
+  - {lemma: limpio, pos: adj, tags: [adjectives], en: [clean], nl: [schoon]}
+  - {lemma: sucio, pos: adj, tags: [adjectives], en: [dirty], nl: [vies, vuil]}
+  - {lemma: simpático, pos: adj, tags: [adjectives], en: [nice, friendly], nl: [aardig, sympathiek]}
+  - {lemma: amable, pos: adj, tags: [adjectives], en: [kind], nl: [vriendelijk, aardig]}
+  - {lemma: inteligente, pos: adj, tags: [adjectives], en: [intelligent, clever], nl: [intelligent, slim]}
+  - {lemma: tonto, pos: adj, tags: [adjectives], en: [silly, stupid], nl: [dom]}
+  - {lemma: gordo, pos: adj, tags: [adjectives], en: [fat], nl: [dik]}
+  - {lemma: delgado, pos: adj, tags: [adjectives], en: [thin, slim], nl: [dun, slank]}
+  - {lemma: rubio, pos: adj, tags: [adjectives], en: [blond, fair-haired], nl: [blond]}
+  - {lemma: moreno, pos: adj, tags: [adjectives], en: [dark-haired, dark, tanned], nl: [donker, bruin]}
+  - {lemma: cómodo, pos: adj, tags: [adjectives], en: [comfortable], nl: [comfortabel, gemakkelijk]}
+  - {lemma: perfecto, pos: adj, tags: [adjectives], en: [perfect], nl: [perfect]}
+  - {lemma: necesario, pos: adj, tags: [adjectives], en: [necessary], nl: [nodig, noodzakelijk]}
+  - {lemma: diferente, pos: adj, tags: [adjectives], en: [different], nl: [anders, verschillend]}
+  - {lemma: serio, pos: adj, tags: [adjectives], en: [serious], nl: [serieus, ernstig]}
+  - {lemma: especial, pos: adj, tags: [adjectives], en: [special], nl: [speciaal]}
+  - {lemma: antiguo, pos: adj, tags: [adjectives], en: [old, ancient], nl: [oud]}
+  - {lemma: dulce, pos: adj, tags: [adjectives], en: [sweet], nl: [zoet]}
+  # --- body (v0.6 expansion)
+  - {lemma: labio, pos: noun, tags: [body], en: [lip], nl: [lip]}
+  - {lemma: garganta, pos: noun, tags: [body], en: [throat], nl: [keel]}
+  - {lemma: pecho, pos: noun, tags: [body], en: [chest], nl: [borst]}
+  - {lemma: lengua, pos: noun, tags: [body], en: [tongue, language], nl: [tong, taal]}
+  - {lemma: tobillo, pos: noun, tags: [body], en: [ankle], nl: [enkel]}
+  - {lemma: codo, pos: noun, tags: [body], en: [elbow], nl: [elleboog]}
+  - {lemma: gripe, pos: noun, tags: [body], en: [flu], nl: [griep]}
+  - {lemma: tos, pos: noun, tags: [body], en: [cough], nl: [hoest]}
+  - {lemma: enfermera, pos: noun, tags: [body], en: [nurse], nl: [verpleegster, verpleegkundige]}
+  - {lemma: pastilla, pos: noun, tags: [body], en: [pill, tablet], nl: [pil, tablet]}
+  - {lemma: dentista, pos: noun, tags: [body], en: [dentist], nl: [tandarts]}
+  # --- animals (v0.6 expansion)
+  - {lemma: tortuga, pos: noun, tags: [animals], en: [turtle, tortoise], nl: [schildpad]}
+  - {lemma: abeja, pos: noun, tags: [animals], en: [bee], nl: [bij]}
+  - {lemma: rana, pos: noun, tags: [animals], en: [frog], nl: [kikker]}
+  - {lemma: delfín, pos: noun, tags: [animals], en: [dolphin], nl: [dolfijn]}
+  - {lemma: tiburón, pos: noun, tags: [animals], en: [shark], nl: [haai]}
+  - {lemma: hormiga, pos: noun, tags: [animals], en: [ant], nl: [mier]}
+  - {lemma: mariposa, pos: noun, tags: [animals], en: [butterfly], nl: [vlinder]}
+  - {lemma: gallo, pos: noun, tags: [animals], en: [rooster, cock], nl: [haan]}
+  - {lemma: cabra, pos: noun, tags: [animals], en: [goat], nl: [geit]}
+  # --- home (v0.6 expansion)
+  - {lemma: escalera, pos: noun, tags: [home], en: [stairs, ladder], nl: [trap, ladder]}
+  - {lemma: techo, pos: noun, tags: [home], en: [ceiling, roof], nl: [plafond, dak]}
+  - {lemma: pasillo, pos: noun, tags: [home], en: [hallway, corridor], nl: [gang]}
+  - {lemma: balcón, pos: noun, tags: [home], en: [balcony], nl: [balkon]}
+  - {lemma: terraza, pos: noun, tags: [home], en: [terrace], nl: [terras]}
+  - {lemma: alfombra, pos: noun, tags: [home], en: [rug, carpet], nl: [kleed, tapijt]}
+  - {lemma: cortina, pos: noun, tags: [home], en: [curtain], nl: [gordijn]}
+  - {lemma: almohada, pos: noun, tags: [home], en: [pillow], nl: [kussen, hoofdkussen]}
+  - {lemma: manta, pos: noun, tags: [home], en: [blanket], nl: [deken]}
+  - {lemma: basura, pos: noun, tags: [home], en: [rubbish, trash, garbage], nl: [afval, vuilnis]}
+  - {lemma: lavadora, pos: noun, tags: [home], en: [washing machine], nl: [wasmachine]}
+  - {lemma: dormitorio, pos: noun, tags: [home], en: [bedroom], nl: [slaapkamer]}
+  - {lemma: garaje, pos: noun, tags: [home], en: [garage], nl: [garage]}
+  # --- city (v0.6 expansion)
+  - {lemma: ayuntamiento, pos: noun, tags: [city], en: [town hall, city council], nl: [stadhuis, gemeente]}
+  - {lemma: catedral, pos: noun, tags: [city], en: [cathedral], nl: [kathedraal]}
+  - {lemma: castillo, pos: noun, tags: [city], en: [castle], nl: [kasteel]}
+  - {lemma: avenida, pos: noun, tags: [city], en: [avenue], nl: [laan]}
+  - {lemma: carretera, pos: noun, tags: [city], en: [road, highway], nl: [weg, autoweg]}
+  - {lemma: parada, pos: noun, tags: [city], en: [stop], nl: [halte]}
+  - {lemma: tráfico, pos: noun, tags: [city], en: [traffic], nl: [verkeer]}
+  - {lemma: ruido, pos: noun, tags: [city], en: [noise], nl: [lawaai, geluid]}
+  - {lemma: fuente, pos: noun, tags: [city], en: [fountain, source], nl: [fontein, bron]}
+  # --- travel (v0.6 expansion)
+  - {lemma: isla, pos: noun, tags: [travel], en: [island], nl: [eiland]}
+  - {lemma: costa, pos: noun, tags: [travel], en: [coast], nl: [kust]}
+  - {lemma: guía, pos: noun, tags: [travel], en: [guide, guidebook], nl: [gids]}
+  - {lemma: excursión, pos: noun, tags: [travel], en: [trip, excursion], nl: [uitstapje, excursie]}
+  - {lemma: arena, pos: noun, tags: [travel], en: [sand], nl: [zand]}
+  - {lemma: ola, pos: noun, tags: [travel], en: [wave], nl: [golf]}
+  - {lemma: frontera, pos: noun, tags: [travel], en: [border], nl: [grens]}
+  - {lemma: llegada, pos: noun, tags: [travel], en: [arrival], nl: [aankomst]}
+  - {lemma: salida, pos: noun, tags: [travel], en: [departure, exit], nl: [vertrek, uitgang]}
+  # --- work (v0.6 expansion)
+  - {lemma: empleado, pos: noun, tags: [work], en: [employee], nl: [werknemer]}
+  - {lemma: trabajador, pos: noun, tags: [work], en: [worker], nl: [arbeider, werknemer]}
+  - {lemma: bombero, pos: noun, tags: [work], en: [firefighter], nl: [brandweerman]}
+  - {lemma: ingeniero, pos: noun, tags: [work], en: [engineer], nl: [ingenieur]}
+  - {lemma: dueño, pos: noun, tags: [work], en: [owner], nl: [eigenaar]}
+  - {lemma: contrato, pos: noun, tags: [work], en: [contract], nl: [contract]}
+  - {lemma: entrevista, pos: noun, tags: [work], en: [interview], nl: [interview, sollicitatiegesprek]}
+  - {lemma: horario, pos: noun, tags: [work], en: [timetable, schedule], nl: [rooster, dienstregeling]}
+  - {lemma: alumno, pos: noun, tags: [work], en: [pupil, student], nl: [leerling]}
+  - {lemma: curso, pos: noun, tags: [work], en: [course, school year], nl: [cursus, schooljaar]}
+  - {lemma: asignatura, pos: noun, tags: [work], en: [subject], nl: [vak, schoolvak]}
+  # --- feelings (v0.6 expansion)
+  - {lemma: vergüenza, pos: noun, tags: [feelings], en: [shame, embarrassment], nl: [schaamte]}
+  - {lemma: sonrisa, pos: noun, tags: [feelings], en: [smile], nl: [glimlach]}
+  - {lemma: risa, pos: noun, tags: [feelings], en: [laughter, laugh], nl: [lach, gelach]}
+  - {lemma: esperanza, pos: noun, tags: [feelings], en: [hope], nl: [hoop]}
+  - {lemma: sentimiento, pos: noun, tags: [feelings], en: [feeling], nl: [gevoel]}
+  - {lemma: alegre, pos: adj, tags: [feelings], en: [cheerful, happy], nl: [vrolijk]}
+  - {lemma: tímido, pos: adj, tags: [feelings], en: [shy], nl: [verlegen]}
+  - {lemma: emocionado, pos: adj, tags: [feelings], en: [excited, moved], nl: [opgewonden, ontroerd]}
+  # --- weather (v0.6 expansion)
+  - {lemma: hoja, pos: noun, tags: [weather], en: [leaf, sheet], nl: [blad]}
+  - {lemma: planta, pos: noun, tags: [weather], en: [plant], nl: [plant]}
+  - {lemma: hierba, pos: noun, tags: [weather], en: [grass, herb], nl: [gras, kruid]}
+  - {lemma: fuego, pos: noun, tags: [weather], en: [fire], nl: [vuur]}
+  - {lemma: aire, pos: noun, tags: [weather], en: [air], nl: [lucht]}
+  - {lemma: trueno, pos: noun, tags: [weather], en: [thunder], nl: [donder]}
+  - {lemma: seco, pos: adj, tags: [weather], en: [dry], nl: [droog]}
+  - {lemma: húmedo, pos: adj, tags: [weather], en: [humid, damp], nl: [vochtig]}
+  # --- time (v0.6 expansion)
+  - {lemma: mediodía, pos: noun, tags: [time], en: [noon, midday], nl: [middag, "twaalf uur 's middags"]}
+  - {lemma: medianoche, pos: noun, tags: [time], en: [midnight], nl: [middernacht]}
+  - {lemma: madrugada, pos: noun, tags: [time], en: [early morning, small hours], nl: [vroege ochtend, nacht]}
+  - {lemma: siglo, pos: noun, tags: [time], en: [century], nl: [eeuw]}
+  - {lemma: cumpleaños, pos: noun, tags: [time], en: [birthday], nl: [verjaardag]}
+  - {lemma: futuro, pos: noun, tags: [time], en: [future], nl: [toekomst]}
+  # --- ideas (v0.6 expansion)
+  - {lemma: lugar, pos: noun, tags: [ideas], en: [place], nl: [plaats, plek]}
+  - {lemma: tipo, pos: noun, tags: [ideas], en: [type, kind], nl: [soort, type]}
+  - {lemma: realidad, pos: noun, tags: [ideas], en: [reality], nl: [werkelijkheid]}
+  - {lemma: oportunidad, pos: noun, tags: [ideas], en: [opportunity, chance], nl: [kans]}
+  - {lemma: decisión, pos: noun, tags: [ideas], en: [decision], nl: [beslissing]}
+  - {lemma: situación, pos: noun, tags: [ideas], en: [situation], nl: [situatie]}
+  - {lemma: consejo, pos: noun, tags: [ideas], en: [advice, piece of advice], nl: [advies, raad]}
+  - {lemma: error, pos: noun, tags: [ideas], en: [mistake, error], nl: [fout]}
+  - {lemma: plan, pos: noun, tags: [ideas], en: [plan], nl: [plan]}
+  - {lemma: caso, pos: noun, tags: [ideas], en: [case], nl: [geval]}
+  # --- people (v0.6 expansion)
+  - {lemma: muchacho, pos: noun, tags: [people], en: [boy, lad], nl: [jongen]}
+  - {lemma: muchacha, pos: noun, tags: [people], en: [girl], nl: [meisje]}
+  # --- little (v0.6 expansion)
+  - {lemma: ese, pos: det, tags: [little], en: [that], nl: [die, dat]}
+  - {lemma: aquel, pos: det, tags: [little], en: ["that (over there)"], nl: ["die (daar)", "dat (daar)"]}
+  - {lemma: cada, pos: det, tags: [time], en: [each, every], nl: [elk, ieder]}
+  - {lemma: alguno, pos: det, tags: [little], en: [some, any], nl: [sommige, enig]}
+  - {lemma: ninguno, pos: det, tags: [little], en: ["no", none], nl: [geen, geen enkele]}
+  # --- gloss overrides from the native review
+  - {lemma: dejar, pos: verb, en: [to leave, to let, to allow, to stop (dejar de)], nl: [laten, achterlaten, toestaan, ophouden met (dejar de)]}

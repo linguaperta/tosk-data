@@ -268,6 +268,12 @@ units:
         icon: body
         requires: [prepositions, irregular-present]
         items: {tags: [body]}
+      - id: adverbs
+        kind: vocab
+        title: {en: Useful adverbs, nl: Handige bijwoorden}
+        icon: star
+        requires: [prepositions, irregular-present]
+        items: {tags: [adverbs]}
       - id: verb-phrases
         kind: grammar
         title: {en: "Can, must, going to: verb + verb", nl: "Kunnen, moeten, gaan: werkwoord + werkwoord"}
@@ -344,10 +350,16 @@ units:
         items: {tags: [travel]}
       - id: shopping
         kind: vocab
-        title: {en: Shopping and clothes, nl: Winkelen en kleding}
+        title: {en: Shopping, nl: Winkelen}
         icon: shopping
         requires: [plurals, colours, possessives]
         items: {tags: [shopping]}
+      - id: kitchen
+        kind: vocab
+        title: {en: Cooking and eating out, nl: Koken en uit eten}
+        icon: food
+        requires: [plurals, colours, possessives]
+        items: {tags: [kitchen]}
       - id: reflexive
         kind: grammar
         title: {en: "Reflexive verbs: me levanto", nl: "Wederkerende werkwoorden: me levanto"}
@@ -357,6 +369,12 @@ units:
         verbs: {tense: presente, lemmas: [levantar, acostar, despertar, equivocar, sentar, lavar, quedar, preocupar,
                                           casar, quitar, vestir, divertir]}
         exercises: [conj_grid, cloze, spot_error, transform]
+      - id: clothes
+        kind: vocab
+        title: {en: Clothes, nl: Kleding}
+        icon: clothes
+        requires: [reflexive, shopping]
+        items: {tags: [clothes]}
 
   - id: u7
     title: {en: The recent past, nl: Het recente verleden}
@@ -365,19 +383,19 @@ units:
         kind: vocab
         title: {en: Work and school, nl: Werk en school}
         icon: work
-        requires: [reflexive, shopping]
+        requires: [clothes, kitchen]
         items: {tags: [work]}
       - id: feelings
         kind: vocab
         title: {en: Feelings, nl: Gevoelens}
         icon: person
-        requires: [reflexive, shopping]
+        requires: [clothes, kitchen]
         items: {tags: [feelings]}
       - id: preterito-perfecto
         kind: grammar
         title: {en: "The perfect: he comido", nl: "De voltooide tijd: he comido"}
         icon: past
-        requires: [reflexive, shopping]
+        requires: [clothes, kitchen]
         verbs: {tense: preterito_perfecto, regular: true, top: 16, exclude: [haber, deber, parecer, gustar, matar]}
         exercises: [conj_grid, cloze, spot_error, transform]
       - id: participles-irregular
@@ -405,6 +423,12 @@ units:
         icon: animals
         requires: [participles-irregular]
         items: {tags: [animals]}
+      - id: leisure
+        kind: vocab
+        title: {en: Hobbies and culture, nl: Hobby's en cultuur}
+        icon: star
+        requires: [participles-irregular]
+        items: {tags: [leisure]}
       - id: indefinido
         kind: grammar
         title: {en: "The simple past: hablé, comí", nl: "De verleden tijd: hablé, comí"}
@@ -428,7 +452,7 @@ units:
         kind: grammar
         title: {en: "The imperfect: hablaba, comía", nl: "De imperfecto: hablaba, comía"}
         icon: past
-        requires: [indefinido-irregular, weather, animals]
+        requires: [indefinido-irregular, weather, animals, leisure]
         verbs: {tense: imperfecto, top: 16, exclude: [haber, deber, parecer]}
         exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
       - id: futuro
@@ -446,6 +470,12 @@ units:
         introduces: ["irregular:futuro"]
         verbs: {tense: futuro, regular: false, top: 9, exclude: [haber, suponer, mantener, detener, obtener, contener, deshacer]}
         exercises: [conj_grid, cloze, spot_error, transform]
+      - id: more-verbs
+        kind: vocab
+        title: {en: More verbs, nl: Meer werkwoorden}
+        icon: verb
+        requires: [futuro-irregular]
+        items: {tags: [verbs2]}
       - id: ideas
         kind: vocab
         title: {en: Ideas and opinions, nl: Ideeën en meningen}
