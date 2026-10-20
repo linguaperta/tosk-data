@@ -4,7 +4,7 @@
 # Wiktionary. Entries without tags only add/override glosses for automatically selected items
 # (verbs of the grammar skills).
 exclude: [vengar, luis, nueva/noun, digo/intj, puede/intj, sabes/intj, sé/intj, vamos/intj, va/intj, por/intj, tranquilo/intj, mio/intj, venga/intj, siga/intj, vaya/intj]
-# Tatoeba sentences the native review (duelingo/docs/samples/es_exercises.txt) found wrong or odd:
+# Tatoeba sentences the native review (tosk/docs/samples/es_exercises.txt) found wrong or odd:
 # nonsense or slang, and translations that do not match.
 exclude_sentences: [10909282, 6690705, 10624125, 4555048, 7320671, 5961479, 7965350, 3603144,
                     2227998, 3442069]

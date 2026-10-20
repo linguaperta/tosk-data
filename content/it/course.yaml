@@ -1,8 +1,8 @@
 # Italian course for English and Dutch speakers.
-# Skills select their items with queries (see duelingo/pipeline/pipeline/query.py); the
+# Skills select their items with queries (see tosk/pipeline/pipeline/query.py); the
 # compiler resolves them into skill_items/skill_facets, so the app never reads these queries.
 #
-# Grammar gating (duelingo/docs/ARCHITECTURE.md, "Grammar gating"; pipeline/pipeline/features.py):
+# Grammar gating (tosk/docs/ARCHITECTURE.md, "Grammar gating"; pipeline/pipeline/features.py):
 # a learner never meets a grammar construct before the skill that introduces it. The present tense
 # is allowed from the start; every other feature below is introduced by one skill (a verbs skill
 # introduces tense:{T} automatically). Each unit's skills require the previous unit's grammar, so
@@ -58,7 +58,7 @@ tense_groups:
   imperativo: imperative
 articles: [il, lo, la, "l'"]
 
-# Inflection tables of non-verbs (duelingo/docs/ARCHITECTURE.md, "Inflection tables"; the importer
+# Inflection tables of non-verbs (tosk/docs/ARCHITECTURE.md, "Inflection tables"; the importer
 # fills them from Wiktionary, pipeline/pipeline/inflect.py). Skills train them with
 # `inflections: {table: T}` (facet #infl:T). `agreement`: the cell follows from the noun, so in a
 # sentence every other cell is wrong (una casa bella: bello/belli/belle are wrong options).

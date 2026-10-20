@@ -1,12 +1,12 @@
 # Spanish course for English and Dutch speakers.
-# Skills select their items with queries (see duelingo/pipeline/pipeline/query.py); the
+# Skills select their items with queries (see tosk/pipeline/pipeline/query.py); the
 # compiler resolves them into skill_items/skill_facets, so the app never reads these queries.
 #
 # Variety: neutral / peninsular standard Spanish. All six persons are taught, including vosotros
 # (Spain); the grammar notes say that Latin America uses ustedes for "you all". usted/ustedes take
 # the él/ella and ellos/ellas forms. Language rules for the pipeline: pipeline/pipeline/lang_es.py.
 #
-# Grammar gating (duelingo/docs/ARCHITECTURE.md, "Grammar gating"; pipeline/pipeline/features.py):
+# Grammar gating (tosk/docs/ARCHITECTURE.md, "Grammar gating"; pipeline/pipeline/features.py):
 # a learner never meets a grammar construct before the skill that introduces it. The present tense
 # is allowed from the start; every other feature below is introduced by one skill (a verbs skill
 # introduces tense:{T} automatically). Each unit's skills require the previous unit's grammar, so
@@ -15,7 +15,7 @@
 # Adjective agreement and plurals have their own item skills (adjectives, plurals) so that the
 # inflection-table extension can add #infl facets to them later.
 id: es
-version: 1.0.0
+version: 1.0.1
 title: {en: Spanish, nl: Spaans}
 description:
   en: Spanish from the basics (Spain standard, with notes on Latin America), with a strong focus on verbs and the past tenses.
@@ -39,7 +39,7 @@ tense_labels:
   futuro: {en: future, nl: toekomende tijd}
 articles: [el, la]
 
-# Inflection tables of non-verbs (duelingo/docs/ARCHITECTURE.md, "Inflection tables"; the importer
+# Inflection tables of non-verbs (tosk/docs/ARCHITECTURE.md, "Inflection tables"; the importer
 # fills them from Wiktionary, pipeline/pipeline/inflect.py es_number / es_agreement). Skills train
 # them with `inflections: {table: T}` (facet #infl:T). `agreement`: the cell follows from the noun.
 inflection_tables:

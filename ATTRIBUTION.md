@@ -1,6 +1,6 @@
 # Attribution
 
-The Duelingo course packs are built from open data by the pipeline in the `duelingo` repository
+The tosk course packs are built from open data by the pipeline in the `tosk` repository
 (`pipeline/`). This file lists every source, its license, and how it was changed.
 
 ## Wiktionary (CC BY-SA 4.0, also GFDL)
