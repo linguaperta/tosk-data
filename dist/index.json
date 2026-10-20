@@ -24,7 +24,7 @@
       "min_app_version": "0.4.0",
       "sha256": "b30bc3b917c04fc2ac69cbc5c2fc95cbd0c7dee676f49c1e6ba01ccc70347c23",
       "size": 18726912,
-      "url": "https://github.com/timoverlaan/duelingo-data/releases/download/packs-20261014/it.sqlite"
+      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261014/it.sqlite"
     },
     {
       "id": "nl",
@@ -46,7 +46,7 @@
       "min_app_version": "0.4.0",
       "sha256": "769dacc8b900200e042b788a0dbfe81cf20e3e05acdc4ff11e68d779cb4f153c",
       "size": 15736832,
-      "url": "https://github.com/timoverlaan/duelingo-data/releases/download/packs-20261014/nl.sqlite"
+      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261014/nl.sqlite"
     }
   ]
 }
