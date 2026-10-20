@@ -1,8 +1,31 @@
 {
   "index_version": 1,
-  "generated_at": "2026-10-14T09:35:08Z",
-  "tag": "packs-20261014",
+  "generated_at": "2026-10-20T18:31:03Z",
+  "tag": "packs-20261020",
   "courses": [
+    {
+      "id": "es",
+      "version": "1.0.0",
+      "title": {
+        "en": "Spanish",
+        "nl": "Spaans"
+      },
+      "description": {
+        "en": "Spanish from the basics (Spain standard, with notes on Latin America), with a strong focus on verbs and the past tenses.",
+        "nl": "Spaans vanaf de basis (standaard uit Spanje, met tips over Latijns-Amerika), met veel aandacht voor werkwoorden en de verleden tijden."
+      },
+      "target": "es",
+      "sources": [
+        "en",
+        "nl"
+      ],
+      "unverified": false,
+      "schema_version": "1",
+      "min_app_version": "0.4.0",
+      "sha256": "41530ed06b7ce81c0602d0cc9c7257c807585d4435597d5aafc1399ab6dba59a",
+      "size": 22560768,
+      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261020/es.sqlite"
+    },
     {
       "id": "it",
       "version": "1.2.0",
@@ -22,9 +45,9 @@
       "unverified": false,
       "schema_version": "1",
       "min_app_version": "0.4.0",
-      "sha256": "b30bc3b917c04fc2ac69cbc5c2fc95cbd0c7dee676f49c1e6ba01ccc70347c23",
-      "size": 18726912,
-      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261014/it.sqlite"
+      "sha256": "f5626b50af8da52f5f2c1696292f5169b1e4cbaf9c2bd4bc611ea9234bc0c707",
+      "size": 18911232,
+      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261020/it.sqlite"
     },
     {
       "id": "nl",
@@ -44,9 +67,9 @@
       "unverified": false,
       "schema_version": "1",
       "min_app_version": "0.4.0",
-      "sha256": "769dacc8b900200e042b788a0dbfe81cf20e3e05acdc4ff11e68d779cb4f153c",
-      "size": 15736832,
-      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261014/nl.sqlite"
+      "sha256": "0bcd5869f28c71019662969cba024838b9c3f6950ac3f36004a1f32a1e0db36e",
+      "size": 15892480,
+      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261020/nl.sqlite"
     }
   ]
 }
