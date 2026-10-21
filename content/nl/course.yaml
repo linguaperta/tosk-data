@@ -19,7 +19,7 @@ unverified: false
 # Apps before topics (0.7.3 and older) would show the topic units at the end of the main tree, with
 # prerequisite boughs running from far up the map; their bough painter fails on boughs that long
 # (Skia path ops), so they keep their bundled pack (tosk/docs/topic-split.md, "Versions and old apps").
-min_app_version: 0.7.4
+min_app_version: 0.7.5
 persons: [ik, jij, hij/zij, wij, jullie, zij]
 person_labels:
   jij: {en: "jij/je (you)", nl: "jij/je"}
