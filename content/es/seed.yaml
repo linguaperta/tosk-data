@@ -7,7 +7,11 @@ exclude: [vengar, luis, nueva/noun, digo/intj, puede/intj, sabes/intj, sé/intj,
 # Tatoeba sentences the native review (tosk/docs/samples/es_exercises.txt) found wrong or odd:
 # nonsense or slang, and translations that do not match.
 exclude_sentences: [10909282, 6690705, 10624125, 4555048, 7320671, 5961479, 7965350, 3603144,
-                    2227998, 3442069]
+                    2227998, 3442069,
+                    # the subjunctive 'fuera' read as the adverb (que se fuera, que Tom fuera tan gordo)
+                    8970635, 874445, 5275048, 10356363, 10356364, 10356367, 10847596, 1288872,
+                    # the subjunctive of sentirse read as sentar (que te sientas mejor)
+                    1100881, 5578644]
 # The course teaches peninsular standard Spanish: no voseo (Río de la Plata 'vos tenés').
 exclude_words: [vos, sos, tenés, querés, podés, sabés, hacés, andás, hablás, pensás, entendés, conocés, comés,
                 necesitás, ponés, llamás, creés, trabajás, jugás, mirá, vení, decime, tomá, escuchame, fijate,

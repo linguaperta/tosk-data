@@ -1,45 +1,46 @@
 # Graded mini-stories for unit u8 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
-- id: u8-tormenta
+# New in pack 1.1 (the topic restructure, tosk/docs/topic-split.md): written from core vocabulary.
+- id: u8-valencia
   unit: u8
-  title: {es: "La tormenta", en: "The storm", nl: "De storm"}
+  title: {es: "El viaje a Valencia", en: "The trip to Valencia", nl: "De reis naar Valencia"}
   sentences:
-    - {es: "Ayer fuimos al campo con los niños.", en: "Yesterday we went to the countryside with the children.", nl: "Gisteren gingen we met de kinderen naar het platteland."}
-    - {es: "Por la mañana hizo mucho sol.", en: "In the morning it was very sunny.", nl: "'s Ochtends scheen de zon volop."}
-    - {es: "Comimos al lado de un río.", en: "We ate next to a river.", nl: "We aten naast een rivier."}
-    - {es: "Por la tarde llegó una tormenta.", en: "In the afternoon a storm came.", nl: "'s Middags kwam er een storm."}
-    - {es: "Corrimos al coche y volvimos a casa.", en: "We ran to the car and went back home.", nl: "We renden naar de auto en gingen terug naar huis."}
-    - {es: "Los niños no tuvieron miedo.", en: "The children weren't afraid.", nl: "De kinderen waren niet bang."}
-  new_words: [lado]
+    - {es: "Hace un año mis padres visitaron Valencia.", en: "A year ago my parents visited Valencia.", nl: "Een jaar geleden bezochten mijn ouders Valencia."}
+    - {es: "Viajaron en tren y llegaron por la tarde.", en: "They travelled by train and arrived in the afternoon.", nl: "Ze reisden met de trein en kwamen 's middags aan."}
+    - {es: "Primero vieron la catedral.", en: "First they saw the cathedral.", nl: "Eerst zagen ze de kathedraal."}
+    - {es: "Luego comieron en un restaurante cerca de la playa.", en: "Then they ate at a restaurant near the beach.", nl: "Daarna aten ze in een restaurant bij het strand."}
+    - {es: "Por la noche dieron un paseo por la ciudad.", en: "In the evening they went for a walk through the city.", nl: "'s Avonds maakten ze een wandeling door de stad."}
+    - {es: "Mi madre compró un libro para mí.", en: "My mother bought a book for me.", nl: "Mijn moeder kocht een boek voor mij."}
+    - {es: "Volvieron a casa el domingo.", en: "They came back home on Sunday.", nl: "Ze kwamen zondag weer thuis."}
   questions:
-    - q: {en: "Where did they go?", nl: "Waar gingen ze heen?"}
-      options: [{en: "To the countryside", nl: "Naar het platteland"}, {en: "To the beach", nl: "Naar het strand"}, {en: "To the city", nl: "Naar de stad"}]
+    - q: {en: "Which city did the parents visit?", nl: "Welke stad bezochten de ouders?"}
+      options: ["a Valencia", "a Sevilla", "a Madrid"]
       answer: 0
-    - q: {en: "What happened in the afternoon?", nl: "Wat gebeurde er 's middags?"}
-      prompt: "¿Qué llegó por la tarde?"
-      options: ["una tormenta", "un perro", "un tren"]
+    - q: {en: "What did they see first?", nl: "Wat zagen ze eerst?"}
+      options: [{en: "The cathedral", nl: "De kathedraal"}, {en: "A museum", nl: "Een museum"}, {en: "The beach", nl: "Het strand"}]
       answer: 0
-    - q: {en: "Were the children afraid?", nl: "Waren de kinderen bang?"}
-      options: [{en: "No", nl: "Nee"}, {en: "Yes, very", nl: "Ja, heel erg"}, {en: "Only a little", nl: "Een beetje"}]
+    - q: {en: "What did the mother buy?", nl: "Wat kocht de moeder?"}
+      options: [{en: "A book", nl: "Een boek"}, {en: "A map", nl: "Een kaart"}, {en: "A suitcase", nl: "Een koffer"}]
       answer: 0
 
-- id: u8-gato
+- id: u8-carta
   unit: u8
-  title: {es: "¿Dónde está el gato?", en: "Where is the cat?", nl: "Waar is de kat?"}
+  title: {es: "La carta de la abuela", en: "Grandma's letter", nl: "De brief van oma"}
   sentences:
-    - {es: "El sábado Carmen perdió a su gato.", en: "On Saturday Carmen lost her cat.", nl: "Zaterdag raakte Carmen haar kat kwijt."}
-    - {es: "Lo buscó en el jardín y en la calle.", en: "She looked for it in the garden and in the street.", nl: "Ze zocht hem in de tuin en op straat."}
-    - {es: "Preguntó a los vecinos.", en: "She asked the neighbours.", nl: "Ze vroeg het aan de buren."}
-    - {es: "No encontró al gato.", en: "She didn't find the cat.", nl: "Ze vond de kat niet."}
-    - {es: "Por la noche Carmen oyó algo en la puerta.", en: "At night Carmen heard something at the door.", nl: "'s Avonds hoorde Carmen iets bij de deur."}
-    - {es: "¡Es el gato! Volvió solo a casa.", en: "It's the cat! It came back home by itself.", nl: "Het is de kat! Hij kwam vanzelf terug naar huis."}
+    - {es: "Ayer Juan recibió una carta de su abuela.", en: "Yesterday Juan received a letter from his grandmother.", nl: "Gisteren kreeg Juan een brief van zijn oma."}
+    - {es: "La abrió en la cocina y la leyó otra vez.", en: "He opened it in the kitchen and read it again.", nl: "Hij maakte hem open in de keuken en las hem nog een keer."}
+    - {es: "Su abuela le escribió sobre su pueblo.", en: "His grandmother wrote to him about her village.", nl: "Zijn oma schreef hem over haar dorp."}
+    - {es: "Juan decidió visitarla.", en: "Juan decided to visit her.", nl: "Juan besloot haar te bezoeken."}
+    - {es: "El sábado tomó el autobús hasta el pueblo.", en: "On Saturday he took the bus to the village.", nl: "Zaterdag nam hij de bus naar het dorp."}
+    - {es: "Su abuela abrió la puerta y no dijo nada.", en: "His grandmother opened the door and didn't say anything.", nl: "Zijn oma deed de deur open en zei niets."}
+    - {es: "Después le dio un abrazo muy fuerte.", en: "Then she gave him a very big hug.", nl: "Daarna gaf ze hem een heel stevige knuffel."}
   questions:
-    - q: {en: "What did Carmen lose?", nl: "Wat raakte Carmen kwijt?"}
-      prompt: "¿Qué perdió Carmen?"
-      options: ["su gato", "su perro", "su llave"]
+    - q: {en: "Who wrote the letter?", nl: "Wie schreef de brief?"}
+      options: [{en: "His grandmother", nl: "Zijn oma"}, {en: "His mother", nl: "Zijn moeder"}, {en: "A friend", nl: "Een vriend"}]
       answer: 0
-    - q: {en: "Who did she ask?", nl: "Aan wie vroeg ze het?"}
-      options: [{en: "The neighbours", nl: "De buren"}, {en: "The police", nl: "De politie"}, {en: "Her mother", nl: "Haar moeder"}]
+    - q: {en: "What did Juan decide?", nl: "Wat besloot Juan?"}
+      options: [{en: "To visit her", nl: "Haar te bezoeken"}, {en: "To call her", nl: "Haar te bellen"}, {en: "To write back", nl: "Terug te schrijven"}]
       answer: 0
-    - q: {en: "How did the cat come back?", nl: "Hoe kwam de kat terug?"}
-      options: [{en: "By itself", nl: "Vanzelf"}, {en: "With a neighbour", nl: "Met een buurman"}, {en: "It didn't come back", nl: "Hij kwam niet terug"}]
+    - q: {en: "What did he take to the village?", nl: "Wat nam hij naar het dorp?"}
+      prompt: "¿Qué tomó Juan?"
+      options: ["el autobús", "el tren", "un taxi"]
       answer: 0

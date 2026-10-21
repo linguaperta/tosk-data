@@ -1,0 +1,25 @@
+# Graded mini-stories of the topic salud (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# They were stories of main-tree units until the topic restructure (tosk/docs/topic-split.md) and moved
+# here with their skills; their ids are kept, so reading progress is kept.
+- id: u4-medico
+  unit: salud-u1
+  title: {es: "En el médico", en: "At the doctor's", nl: "Bij de dokter"}
+  new_words: [médico]
+  sentences:
+    - {es: "Carlos está enfermo.", en: "Carlos is ill.", nl: "Carlos is ziek."}
+    - {es: "Le duele la cabeza y tiene fiebre.", en: "He has a headache and a fever.", nl: "Hij heeft hoofdpijn en koorts."}
+    - {es: "No puede trabajar hoy.", en: "He can't work today.", nl: "Hij kan vandaag niet werken."}
+    - {es: "Tiene que ir al médico.", en: "He has to go to the doctor.", nl: "Hij moet naar de dokter."}
+    - {es: "El médico dice: «Debes dormir mucho».", en: "The doctor says: \"You must sleep a lot.\"", nl: "De dokter zegt: \"Je moet veel slapen.\""}
+    - {es: "Ahora Carlos está durmiendo en casa.", en: "Now Carlos is sleeping at home.", nl: "Nu ligt Carlos thuis te slapen."}
+  questions:
+    - q: {en: "What hurts?", nl: "Wat doet pijn?"}
+      prompt: "¿Qué le duele a Carlos?"
+      options: ["la cabeza", "la mano", "el pie"]
+      answer: 0
+    - q: {en: "Can Carlos work today?", nl: "Kan Carlos vandaag werken?"}
+      options: [{en: "No", nl: "Nee"}, {en: "Yes", nl: "Ja"}, {en: "Only in the afternoon", nl: "Alleen 's middags"}]
+      answer: 0
+    - q: {en: "What does the doctor say?", nl: "Wat zegt de dokter?"}
+      options: [{en: "He must sleep a lot", nl: "Hij moet veel slapen"}, {en: "He must work", nl: "Hij moet werken"}, {en: "He must eat more", nl: "Hij moet meer eten"}]
+      answer: 0

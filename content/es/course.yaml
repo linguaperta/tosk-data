@@ -15,7 +15,7 @@
 # Adjective agreement and plurals have their own item skills (adjectives, plurals) so that the
 # inflection-table extension can add #infl facets to them later.
 id: es
-version: 1.0.1
+version: 1.1.0
 title: {en: Spanish, nl: Spaans}
 description:
   en: Spanish from the basics (Spain standard, with notes on Latin America), with a strong focus on verbs and the past tenses.
@@ -262,12 +262,6 @@ units:
         icon: verb
         requires: [prepositions, irregular-present]
         items: {tags: [verbs1]}
-      - id: body
-        kind: vocab
-        title: {en: Body and health, nl: Lichaam en gezondheid}
-        icon: body
-        requires: [prepositions, irregular-present]
-        items: {tags: [body]}
       - id: adverbs
         kind: vocab
         title: {en: Useful adverbs, nl: Handige bijwoorden}
@@ -348,18 +342,6 @@ units:
         icon: travel
         requires: [plurals, colours, possessives]
         items: {tags: [travel]}
-      - id: shopping
-        kind: vocab
-        title: {en: Shopping, nl: Winkelen}
-        icon: shopping
-        requires: [plurals, colours, possessives]
-        items: {tags: [shopping]}
-      - id: kitchen
-        kind: vocab
-        title: {en: Cooking and eating out, nl: Koken en uit eten}
-        icon: food
-        requires: [plurals, colours, possessives]
-        items: {tags: [kitchen]}
       - id: reflexive
         kind: grammar
         title: {en: "Reflexive verbs: me levanto", nl: "Wederkerende werkwoorden: me levanto"}
@@ -369,12 +351,6 @@ units:
         verbs: {tense: presente, lemmas: [levantar, acostar, despertar, equivocar, sentar, lavar, quedar, preocupar,
                                           casar, quitar, vestir, divertir]}
         exercises: [conj_grid, cloze, spot_error, transform]
-      - id: clothes
-        kind: vocab
-        title: {en: Clothes, nl: Kleding}
-        icon: clothes
-        requires: [reflexive, shopping]
-        items: {tags: [clothes]}
 
   - id: u7
     title: {en: The recent past, nl: Het recente verleden}
@@ -383,19 +359,13 @@ units:
         kind: vocab
         title: {en: Work and school, nl: Werk en school}
         icon: work
-        requires: [clothes, kitchen]
+        requires: [reflexive]
         items: {tags: [work]}
-      - id: feelings
-        kind: vocab
-        title: {en: Feelings, nl: Gevoelens}
-        icon: person
-        requires: [clothes, kitchen]
-        items: {tags: [feelings]}
       - id: preterito-perfecto
         kind: grammar
         title: {en: "The perfect: he comido", nl: "De voltooide tijd: he comido"}
         icon: past
-        requires: [clothes, kitchen]
+        requires: [reflexive]
         verbs: {tense: preterito_perfecto, regular: true, top: 16, exclude: [haber, deber, parecer, gustar, matar]}
         exercises: [conj_grid, cloze, spot_error, transform]
       - id: participles-irregular
@@ -411,24 +381,6 @@ units:
   - id: u8
     title: {en: The simple past, nl: De verleden tijd}
     skills:
-      - id: weather
-        kind: vocab
-        title: {en: Weather and nature, nl: Weer en natuur}
-        icon: weather
-        requires: [participles-irregular]
-        items: {tags: [weather]}
-      - id: animals
-        kind: vocab
-        title: {en: Animals, nl: Dieren}
-        icon: animals
-        requires: [participles-irregular]
-        items: {tags: [animals]}
-      - id: leisure
-        kind: vocab
-        title: {en: Hobbies and culture, nl: Hobby's en cultuur}
-        icon: star
-        requires: [participles-irregular]
-        items: {tags: [leisure]}
       - id: indefinido
         kind: grammar
         title: {en: "The simple past: hablé, comí", nl: "De verleden tijd: hablé, comí"}
@@ -452,7 +404,7 @@ units:
         kind: grammar
         title: {en: "The imperfect: hablaba, comía", nl: "De imperfecto: hablaba, comía"}
         icon: past
-        requires: [indefinido-irregular, weather, animals, leisure]
+        requires: [indefinido-irregular]
         verbs: {tense: imperfecto, top: 16, exclude: [haber, deber, parecer]}
         exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
       - id: futuro
@@ -482,3 +434,139 @@ units:
         icon: chat
         requires: [futuro-irregular]
         items: {tags: [ideas]}
+
+# Topics (pack format 1.2, tosk/docs/pack-format.md "Topics"): themed side trees, each drawn as its own
+# map, with a branch leaving the main tree at its anchor (the last main-tree skill its first skill
+# requires); a later skill of a topic may require a later main-tree skill and waits for it.
+# Pack 1.1 (tosk/docs/topic-split.md): the main tree keeps the grammar and the core vocabulary, and
+# themed vocabulary lives in these topics, so a learner may skip them. Grammar skills require only
+# main-tree skills. The fairness rule (tosk/docs/extensions.md): never unknown grammar, some unknown
+# words are fine: words of a skipped topic may appear in main-tree lessons within the unknown-word
+# cap, and in main-tree stories (at most three per story, glossed). Skill, item and facet ids are
+# unchanged, so progress is kept.
+topics:
+  # The body (unit 4 until pack 1.1); "me duele" comes with gustar.
+  - id: salud
+    title: {en: Body and health, nl: Lichaam en gezondheid}
+    short_title: {en: Health, nl: Gezondheid}
+    description:
+      en: "The body, feeling ill and going to the doctor."
+      nl: "Het lichaam, ziek zijn en naar de dokter gaan."
+    icon: health
+    units:
+      - id: salud-u1
+        title: {en: At the doctor's, nl: Bij de dokter}
+        skills:
+          - id: body
+            kind: vocab
+            title: {en: Body and health, nl: Lichaam en gezondheid}
+            icon: body
+            requires: [gustar]
+            items: {tags: [body]}
+
+  # Shopping and clothes (unit 6 until pack 1.1).
+  - id: compras
+    title: {en: Shopping and clothes, nl: Winkelen en kleding}
+    short_title: {en: Shopping, nl: Winkelen}
+    description:
+      en: "Prices, paying and presents, and what to wear."
+      nl: "Prijzen, betalen en cadeaus, en wat je aantrekt."
+    icon: shopping
+    units:
+      - id: compras-u1
+        title: {en: In the shops, nl: In de winkels}
+        skills:
+          - id: shopping
+            kind: vocab
+            title: {en: Shopping, nl: Winkelen}
+            icon: shopping
+            requires: [plurals, colours, possessives]
+            items: {tags: [shopping]}
+          - id: clothes
+            kind: vocab
+            title: {en: Clothes, nl: Kleding}
+            icon: clothes
+            requires: [shopping, reflexive]
+            items: {tags: [clothes]}
+
+  # Cooking and eating out (unit 6 until pack 1.1): the kitchen and the restaurant in town.
+  - id: cocina
+    title: {en: Cooking and eating out, nl: Koken en uit eten}
+    short_title: {en: Cooking, nl: Koken}
+    description:
+      en: "Recipes, the kitchen, and ordering at a restaurant."
+      nl: "Recepten, de keuken, en bestellen in een restaurant."
+    icon: food
+    units:
+      - id: cocina-u1
+        title: {en: In the kitchen, nl: In de keuken}
+        skills:
+          - id: kitchen
+            kind: vocab
+            title: {en: Cooking and eating out, nl: Koken en uit eten}
+            icon: food
+            requires: [city]
+            items: {tags: [kitchen]}
+
+  # Feelings (unit 7 until pack 1.1).
+  - id: sentimientos
+    title: {en: Feelings, nl: Gevoelens}
+    short_title: {en: Feelings, nl: Gevoelens}
+    description:
+      en: "Happy, sad, nervous or in love: how you feel."
+      nl: "Blij, verdrietig, zenuwachtig of verliefd: hoe je je voelt."
+    icon: heart
+    units:
+      - id: sentimientos-u1
+        title: {en: "How do you feel?", nl: "Hoe voel je je?"}
+        skills:
+          - id: feelings
+            kind: vocab
+            title: {en: Feelings, nl: Gevoelens}
+            icon: heart
+            requires: [preterito-perfecto]
+            items: {tags: [feelings]}
+
+  # Weather and animals (unit 8 until pack 1.1), told in the indefinido.
+  - id: naturaleza
+    title: {en: Weather and animals, nl: Weer en dieren}
+    short_title: {en: Nature, nl: Natuur}
+    description:
+      en: "Sun, rain and storms; animals at home and in the wild."
+      nl: "Zon, regen en storm; dieren thuis en in het wild."
+    icon: nature
+    units:
+      - id: naturaleza-u1
+        title: {en: Out of doors, nl: Buiten}
+        skills:
+          - id: weather
+            kind: vocab
+            title: {en: Weather and nature, nl: Weer en natuur}
+            icon: weather
+            requires: [indefinido-irregular]
+            items: {tags: [weather]}
+          - id: animals
+            kind: vocab
+            title: {en: Animals, nl: Dieren}
+            icon: animals
+            requires: [indefinido-irregular]
+            items: {tags: [animals]}
+
+  # Hobbies and culture (unit 8 until pack 1.1).
+  - id: ocio
+    title: {en: Hobbies and culture, nl: Hobby's en cultuur}
+    short_title: {en: Free time, nl: Vrije tijd}
+    description:
+      en: "Sport, music, art and the news."
+      nl: "Sport, muziek, kunst en het nieuws."
+    icon: music
+    units:
+      - id: ocio-u1
+        title: {en: Free time, nl: Vrije tijd}
+        skills:
+          - id: leisure
+            kind: vocab
+            title: {en: Hobbies and culture, nl: Hobby's en cultuur}
+            icon: music
+            requires: [indefinido]
+            items: {tags: [leisure]}

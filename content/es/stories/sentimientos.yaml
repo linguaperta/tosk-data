@@ -1,0 +1,24 @@
+# Graded mini-stories of the topic sentimientos (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# They were stories of main-tree units until the topic restructure (tosk/docs/topic-split.md) and moved
+# here with their skills; their ids are kept, so reading progress is kept.
+- id: u7-dia-largo
+  unit: sentimientos-u1
+  title: {es: "Un día muy largo", en: "A very long day", nl: "Een heel lange dag"}
+  sentences:
+    - {es: "Hoy Pedro ha trabajado mucho.", en: "Today Pedro has worked a lot.", nl: "Vandaag heeft Pedro veel gewerkt."}
+    - {es: "Ha tenido tres reuniones con el jefe.", en: "He has had three meetings with the boss.", nl: "Hij heeft drie vergaderingen met de baas gehad."}
+    - {es: "No ha comido nada.", en: "He hasn't eaten anything.", nl: "Hij heeft niets gegeten."}
+    - {es: "Ha escrito muchos correos.", en: "He has written lots of emails.", nl: "Hij heeft veel mails geschreven."}
+    - {es: "Ahora está cansado, pero contento.", en: "Now he is tired, but happy.", nl: "Nu is hij moe, maar tevreden."}
+    - {es: "Ha terminado el proyecto.", en: "He has finished the project.", nl: "Hij heeft het project afgerond."}
+  questions:
+    - q: {en: "How many meetings has Pedro had?", nl: "Hoeveel vergaderingen heeft Pedro gehad?"}
+      options: [{en: "Three", nl: "Drie"}, {en: "Two", nl: "Twee"}, {en: "None", nl: "Geen"}]
+      answer: 0
+    - q: {en: "What has he eaten?", nl: "Wat heeft hij gegeten?"}
+      options: [{en: "Nothing", nl: "Niets"}, {en: "A sandwich", nl: "Een broodje"}, {en: "Soup", nl: "Soep"}]
+      answer: 0
+    - q: {en: "How does he feel now?", nl: "Hoe voelt hij zich nu?"}
+      prompt: "¿Cómo está Pedro ahora?"
+      options: ["cansado, pero contento", "triste y enfadado", "muy enfermo"]
+      answer: 0

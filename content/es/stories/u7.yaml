@@ -1,26 +1,4 @@
 # Graded mini-stories for unit u7 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
-- id: u7-dia-largo
-  unit: u7
-  title: {es: "Un día muy largo", en: "A very long day", nl: "Een heel lange dag"}
-  sentences:
-    - {es: "Hoy Pedro ha trabajado mucho.", en: "Today Pedro has worked a lot.", nl: "Vandaag heeft Pedro veel gewerkt."}
-    - {es: "Ha tenido tres reuniones con el jefe.", en: "He has had three meetings with the boss.", nl: "Hij heeft drie vergaderingen met de baas gehad."}
-    - {es: "No ha comido nada.", en: "He hasn't eaten anything.", nl: "Hij heeft niets gegeten."}
-    - {es: "Ha escrito muchos correos.", en: "He has written lots of emails.", nl: "Hij heeft veel mails geschreven."}
-    - {es: "Ahora está cansado, pero contento.", en: "Now he is tired, but happy.", nl: "Nu is hij moe, maar tevreden."}
-    - {es: "Ha terminado el proyecto.", en: "He has finished the project.", nl: "Hij heeft het project afgerond."}
-  questions:
-    - q: {en: "How many meetings has Pedro had?", nl: "Hoeveel vergaderingen heeft Pedro gehad?"}
-      options: [{en: "Three", nl: "Drie"}, {en: "Two", nl: "Twee"}, {en: "None", nl: "Geen"}]
-      answer: 0
-    - q: {en: "What has he eaten?", nl: "Wat heeft hij gegeten?"}
-      options: [{en: "Nothing", nl: "Niets"}, {en: "A sandwich", nl: "Een broodje"}, {en: "Soup", nl: "Soep"}]
-      answer: 0
-    - q: {en: "How does he feel now?", nl: "Hoe voelt hij zich nu?"}
-      prompt: "¿Cómo está Pedro ahora?"
-      options: ["cansado, pero contento", "triste y enfadado", "muy enfermo"]
-      answer: 0
-
 - id: u7-examen
   unit: u7
   title: {es: "El examen", en: "The exam", nl: "Het examen"}
@@ -42,4 +20,27 @@
     - q: {en: "What did the teacher say?", nl: "Wat zei de lerares?"}
       prompt: "¿Qué le ha dicho la profesora?"
       options: ["¡Muy bien!", "¡Muy mal!", "¡Hasta mañana!"]
+      answer: 0
+
+- id: u7-primer-dia
+  unit: u7
+  title: {es: "El trabajo nuevo", en: "The new job", nl: "De nieuwe baan"}
+  sentences:
+    - {es: "Hoy he empezado un trabajo nuevo.", en: "Today I have started a new job.", nl: "Vandaag ben ik aan een nieuwe baan begonnen."}
+    - {es: "Me he levantado muy temprano.", en: "I got up very early.", nl: "Ik ben heel vroeg opgestaan."}
+    - {es: "He llegado a la oficina a las ocho.", en: "I arrived at the office at eight.", nl: "Ik ben om acht uur op kantoor aangekomen."}
+    - {es: "Mi jefe me ha explicado mi horario.", en: "My boss has explained my schedule to me.", nl: "Mijn baas heeft me mijn rooster uitgelegd."}
+    - {es: "He conocido a mis compañeros.", en: "I have met my colleagues.", nl: "Ik heb mijn collega's leren kennen."}
+    - {es: "Hemos comido en un restaurante cerca de la oficina.", en: "We have eaten at a restaurant near the office.", nl: "We hebben in een restaurant bij het kantoor gegeten."}
+    - {es: "Ha sido un día largo, pero bueno.", en: "It has been a long day, but a good one.", nl: "Het was een lange dag, maar een goede."}
+  questions:
+    - q: {en: "What has the narrator started today?", nl: "Waar is de verteller vandaag mee begonnen?"}
+      options: [{en: "A new job", nl: "Een nieuwe baan"}, {en: "A new course", nl: "Een nieuwe cursus"}, {en: "A trip", nl: "Een reis"}]
+      answer: 0
+    - q: {en: "What time did the narrator arrive?", nl: "Hoe laat kwam de verteller aan?"}
+      prompt: "¿A qué hora ha llegado?"
+      options: ["a las ocho", "a las nueve", "a las diez"]
+      answer: 0
+    - q: {en: "Where did they eat?", nl: "Waar hebben ze gegeten?"}
+      options: [{en: "At a restaurant near the office", nl: "In een restaurant bij het kantoor"}, {en: "At home", nl: "Thuis"}, {en: "In the office", nl: "Op kantoor"}]
       answer: 0

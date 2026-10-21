@@ -21,24 +21,26 @@
       options: [{en: "The church and a museum", nl: "De kerk en een museum"}, {en: "A market", nl: "Een markt"}, {en: "The beach", nl: "Het strand"}]
       answer: 0
 
-- id: u6-tienda
+- id: u6-barrio
   unit: u6
-  title: {es: "En la tienda de ropa", en: "In the clothes shop", nl: "In de kledingwinkel"}
+  title: {es: "Mi barrio", en: "My neighbourhood", nl: "Mijn wijk"}
   sentences:
-    - {es: "Elena necesita un vestido para una boda.", en: "Elena needs a dress for a wedding.", nl: "Elena heeft een jurk nodig voor een bruiloft."}
-    - {es: "En la tienda se prueba un vestido azul.", en: "In the shop she tries on a blue dress.", nl: "In de winkel past ze een blauwe jurk."}
-    - {es: "Es bonito, pero es muy caro.", en: "It's pretty, but it's very expensive.", nl: "Hij is mooi, maar heel duur."}
-    - {es: "Después se prueba un vestido rojo.", en: "Then she tries on a red dress.", nl: "Daarna past ze een rode jurk."}
-    - {es: "Este es más barato y le queda bien.", en: "This one is cheaper and it suits her.", nl: "Deze is goedkoper en staat haar goed."}
-    - {es: "Elena paga con tarjeta.", en: "Elena pays by card.", nl: "Elena betaalt met haar pinpas."}
+    - {es: "Vivo en un barrio pequeño cerca del centro.", en: "I live in a small neighbourhood near the centre.", nl: "Ik woon in een kleine wijk dicht bij het centrum."}
+    - {es: "En mi calle hay una farmacia, un bar y una iglesia.", en: "In my street there's a pharmacy, a bar and a church.", nl: "In mijn straat zijn een apotheek, een café en een kerk."}
+    - {es: "Los vecinos son muy amables.", en: "The neighbours are very kind.", nl: "De buren zijn heel aardig."}
+    - {es: "Por la mañana me levanto temprano y voy al parque.", en: "In the morning I get up early and go to the park.", nl: "'s Ochtends sta ik vroeg op en ga ik naar het park."}
+    - {es: "La parada del autobús está en la esquina.", en: "The bus stop is on the corner.", nl: "De bushalte is op de hoek."}
+    - {es: "El autobús me lleva a la estación en diez minutos.", en: "The bus takes me to the station in ten minutes.", nl: "De bus brengt me in tien minuten naar het station."}
+    - {es: "Los domingos hay un mercado en la plaza.", en: "On Sundays there's a market in the square.", nl: "Op zondag is er een markt op het plein."}
+    - {es: "Me gusta mucho mi barrio.", en: "I really like my neighbourhood.", nl: "Ik vind mijn wijk heel leuk."}
   questions:
-    - q: {en: "Why does Elena need a dress?", nl: "Waarom heeft Elena een jurk nodig?"}
-      options: [{en: "For a wedding", nl: "Voor een bruiloft"}, {en: "For work", nl: "Voor haar werk"}, {en: "For a trip", nl: "Voor een reis"}]
+    - q: {en: "What are the neighbours like?", nl: "Hoe zijn de buren?"}
+      prompt: "¿Cómo son los vecinos?"
+      options: ["muy amables", "muy serios", "muy jóvenes"]
       answer: 0
-    - q: {en: "What's wrong with the blue dress?", nl: "Wat is er mis met de blauwe jurk?"}
-      options: [{en: "It's very expensive", nl: "Hij is heel duur"}, {en: "It's ugly", nl: "Hij is lelijk"}, {en: "It's too small", nl: "Hij is te klein"}]
+    - q: {en: "Where is the bus stop?", nl: "Waar is de bushalte?"}
+      options: [{en: "On the corner", nl: "Op de hoek"}, {en: "In the square", nl: "Op het plein"}, {en: "Near the church", nl: "Bij de kerk"}]
       answer: 0
-    - q: {en: "Which dress does she buy?", nl: "Welke jurk koopt ze?"}
-      prompt: "¿Qué vestido compra Elena?"
-      options: ["el vestido rojo", "el vestido azul", "un vestido negro"]
+    - q: {en: "When is there a market?", nl: "Wanneer is er een markt?"}
+      options: [{en: "On Sundays", nl: "Op zondag"}, {en: "On Saturdays", nl: "Op zaterdag"}, {en: "Every day", nl: "Elke dag"}]
       answer: 0

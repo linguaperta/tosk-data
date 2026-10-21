@@ -1,27 +1,4 @@
 # Graded mini-stories for unit u4 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
-- id: u4-medico
-  unit: u4
-  title: {es: "En el médico", en: "At the doctor's", nl: "Bij de dokter"}
-  new_words: [médico]
-  sentences:
-    - {es: "Carlos está enfermo.", en: "Carlos is ill.", nl: "Carlos is ziek."}
-    - {es: "Le duele la cabeza y tiene fiebre.", en: "He has a headache and a fever.", nl: "Hij heeft hoofdpijn en koorts."}
-    - {es: "No puede trabajar hoy.", en: "He can't work today.", nl: "Hij kan vandaag niet werken."}
-    - {es: "Tiene que ir al médico.", en: "He has to go to the doctor.", nl: "Hij moet naar de dokter."}
-    - {es: "El médico dice: «Debes dormir mucho».", en: "The doctor says: \"You must sleep a lot.\"", nl: "De dokter zegt: \"Je moet veel slapen.\""}
-    - {es: "Ahora Carlos está durmiendo en casa.", en: "Now Carlos is sleeping at home.", nl: "Nu ligt Carlos thuis te slapen."}
-  questions:
-    - q: {en: "What hurts?", nl: "Wat doet pijn?"}
-      prompt: "¿Qué le duele a Carlos?"
-      options: ["la cabeza", "la mano", "el pie"]
-      answer: 0
-    - q: {en: "Can Carlos work today?", nl: "Kan Carlos vandaag werken?"}
-      options: [{en: "No", nl: "Nee"}, {en: "Yes", nl: "Ja"}, {en: "Only in the afternoon", nl: "Alleen 's middags"}]
-      answer: 0
-    - q: {en: "What does the doctor say?", nl: "Wat zegt de dokter?"}
-      options: [{en: "He must sleep a lot", nl: "Hij moet veel slapen"}, {en: "He must work", nl: "Hij moet werken"}, {en: "He must eat more", nl: "Hij moet meer eten"}]
-      answer: 0
-
 - id: u4-me-gusta
   unit: u4
   title: {es: "Me gusta, no me gusta", en: "I like it, I don't like it", nl: "Leuk, niet leuk"}
@@ -43,4 +20,29 @@
       answer: 0
     - q: {en: "What does her brother want?", nl: "Wat wil haar broer?"}
       options: [{en: "To eat fish and talk to Sofía", nl: "Vis eten en met Sofía praten"}, {en: "To eat chocolate", nl: "Chocolade eten"}, {en: "To sleep", nl: "Slapen"}]
+      answer: 0
+
+- id: u4-sabado
+  unit: u4
+  title: {es: "Los sábados", en: "Saturdays", nl: "Zaterdagen"}
+  names: [Ana]
+  sentences:
+    - {es: "Los sábados no trabajo.", en: "On Saturdays I don't work.", nl: "Op zaterdag werk ik niet."}
+    - {es: "Duermo hasta las diez.", en: "I sleep until ten.", nl: "Ik slaap tot tien uur."}
+    - {es: "Después tomo un café con leche y leo un libro.", en: "Then I have a coffee with milk and read a book.", nl: "Daarna drink ik een koffie met melk en lees ik een boek."}
+    - {es: "A mediodía voy a comer con un amigo.", en: "At noon I go and eat with a friend.", nl: "Tussen de middag ga ik met een vriend eten."}
+    - {es: "Me gusta mucho leer y ver la televisión.", en: "I really like reading and watching television.", nl: "Ik lees graag en kijk graag televisie."}
+    - {es: "Por la tarde salgo con Ana.", en: "In the afternoon I go out with Ana.", nl: "'s Middags ga ik uit met Ana."}
+    - {es: "Volvemos a casa a las nueve.", en: "We get back home at nine.", nl: "We komen om negen uur thuis."}
+    - {es: "¡Me encantan los sábados!", en: "I love Saturdays!", nl: "Ik ben dol op zaterdagen!"}
+  questions:
+    - q: {en: "What doesn't the narrator do on Saturdays?", nl: "Wat doet de verteller op zaterdag niet?"}
+      options: [{en: "Work", nl: "Werken"}, {en: "Sleep", nl: "Slapen"}, {en: "Read", nl: "Lezen"}]
+      answer: 0
+    - q: {en: "Until when does the narrator sleep?", nl: "Tot hoe laat slaapt de verteller?"}
+      prompt: "¿Hasta qué hora duerme?"
+      options: ["hasta las diez", "hasta las ocho", "hasta mediodía"]
+      answer: 0
+    - q: {en: "Who does the narrator go out with?", nl: "Met wie gaat de verteller uit?"}
+      options: [{en: "With Ana", nl: "Met Ana"}, {en: "With a brother", nl: "Met een broer"}, {en: "Alone", nl: "Alleen"}]
       answer: 0

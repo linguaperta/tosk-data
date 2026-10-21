@@ -1,0 +1,47 @@
+# Graded mini-stories of the topic naturaleza (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# They were stories of main-tree units until the topic restructure (tosk/docs/topic-split.md) and moved
+# here with their skills; their ids are kept, so reading progress is kept.
+- id: u8-tormenta
+  unit: naturaleza-u1
+  title: {es: "La tormenta", en: "The storm", nl: "De storm"}
+  sentences:
+    - {es: "Ayer fuimos al campo con los niños.", en: "Yesterday we went to the countryside with the children.", nl: "Gisteren gingen we met de kinderen naar het platteland."}
+    - {es: "Por la mañana hizo mucho sol.", en: "In the morning it was very sunny.", nl: "'s Ochtends scheen de zon volop."}
+    - {es: "Comimos al lado de un río.", en: "We ate next to a river.", nl: "We aten naast een rivier."}
+    - {es: "Por la tarde llegó una tormenta.", en: "In the afternoon a storm came.", nl: "'s Middags kwam er een storm."}
+    - {es: "Corrimos al coche y volvimos a casa.", en: "We ran to the car and went back home.", nl: "We renden naar de auto en gingen terug naar huis."}
+    - {es: "Los niños no tuvieron miedo.", en: "The children weren't afraid.", nl: "De kinderen waren niet bang."}
+  new_words: [lado]
+  questions:
+    - q: {en: "Where did they go?", nl: "Waar gingen ze heen?"}
+      options: [{en: "To the countryside", nl: "Naar het platteland"}, {en: "To the beach", nl: "Naar het strand"}, {en: "To the city", nl: "Naar de stad"}]
+      answer: 0
+    - q: {en: "What happened in the afternoon?", nl: "Wat gebeurde er 's middags?"}
+      prompt: "¿Qué llegó por la tarde?"
+      options: ["una tormenta", "un perro", "un tren"]
+      answer: 0
+    - q: {en: "Were the children afraid?", nl: "Waren de kinderen bang?"}
+      options: [{en: "No", nl: "Nee"}, {en: "Yes, very", nl: "Ja, heel erg"}, {en: "Only a little", nl: "Een beetje"}]
+      answer: 0
+
+- id: u8-gato
+  unit: naturaleza-u1
+  title: {es: "¿Dónde está el gato?", en: "Where is the cat?", nl: "Waar is de kat?"}
+  sentences:
+    - {es: "El sábado Carmen perdió a su gato.", en: "On Saturday Carmen lost her cat.", nl: "Zaterdag raakte Carmen haar kat kwijt."}
+    - {es: "Lo buscó en el jardín y en la calle.", en: "She looked for it in the garden and in the street.", nl: "Ze zocht hem in de tuin en op straat."}
+    - {es: "Preguntó a los vecinos.", en: "She asked the neighbours.", nl: "Ze vroeg het aan de buren."}
+    - {es: "No encontró al gato.", en: "She didn't find the cat.", nl: "Ze vond de kat niet."}
+    - {es: "Por la noche Carmen oyó algo en la puerta.", en: "At night Carmen heard something at the door.", nl: "'s Avonds hoorde Carmen iets bij de deur."}
+    - {es: "¡Es el gato! Volvió solo a casa.", en: "It's the cat! It came back home by itself.", nl: "Het is de kat! Hij kwam vanzelf terug naar huis."}
+  questions:
+    - q: {en: "What did Carmen lose?", nl: "Wat raakte Carmen kwijt?"}
+      prompt: "¿Qué perdió Carmen?"
+      options: ["su gato", "su perro", "su llave"]
+      answer: 0
+    - q: {en: "Who did she ask?", nl: "Aan wie vroeg ze het?"}
+      options: [{en: "The neighbours", nl: "De buren"}, {en: "The police", nl: "De politie"}, {en: "Her mother", nl: "Haar moeder"}]
+      answer: 0
+    - q: {en: "How did the cat come back?", nl: "Hoe kwam de kat terug?"}
+      options: [{en: "By itself", nl: "Vanzelf"}, {en: "With a neighbour", nl: "Met een buurman"}, {en: "It didn't come back", nl: "Hij kwam niet terug"}]
+      answer: 0

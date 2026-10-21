@@ -1,0 +1,24 @@
+# Graded mini-stories of the topic compras (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# They were stories of main-tree units until the topic restructure (tosk/docs/topic-split.md) and moved
+# here with their skills; their ids are kept, so reading progress is kept.
+- id: u6-tienda
+  unit: compras-u1
+  title: {es: "En la tienda de ropa", en: "In the clothes shop", nl: "In de kledingwinkel"}
+  sentences:
+    - {es: "Elena necesita un vestido para una boda.", en: "Elena needs a dress for a wedding.", nl: "Elena heeft een jurk nodig voor een bruiloft."}
+    - {es: "En la tienda se prueba un vestido azul.", en: "In the shop she tries on a blue dress.", nl: "In de winkel past ze een blauwe jurk."}
+    - {es: "Es bonito, pero es muy caro.", en: "It's pretty, but it's very expensive.", nl: "Hij is mooi, maar heel duur."}
+    - {es: "Después se prueba un vestido rojo.", en: "Then she tries on a red dress.", nl: "Daarna past ze een rode jurk."}
+    - {es: "Este es más barato y le queda bien.", en: "This one is cheaper and it suits her.", nl: "Deze is goedkoper en staat haar goed."}
+    - {es: "Elena paga con tarjeta.", en: "Elena pays by card.", nl: "Elena betaalt met haar pinpas."}
+  questions:
+    - q: {en: "Why does Elena need a dress?", nl: "Waarom heeft Elena een jurk nodig?"}
+      options: [{en: "For a wedding", nl: "Voor een bruiloft"}, {en: "For work", nl: "Voor haar werk"}, {en: "For a trip", nl: "Voor een reis"}]
+      answer: 0
+    - q: {en: "What's wrong with the blue dress?", nl: "Wat is er mis met de blauwe jurk?"}
+      options: [{en: "It's very expensive", nl: "Hij is heel duur"}, {en: "It's ugly", nl: "Hij is lelijk"}, {en: "It's too small", nl: "Hij is te klein"}]
+      answer: 0
+    - q: {en: "Which dress does she buy?", nl: "Welke jurk koopt ze?"}
+      prompt: "¿Qué vestido compra Elena?"
+      options: ["el vestido rojo", "el vestido azul", "un vestido negro"]
+      answer: 0
