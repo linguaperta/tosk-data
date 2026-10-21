@@ -23,6 +23,10 @@ description:
 target: es
 translations: [en, nl]
 unverified: false
+# Apps before topics (0.7.3 and older) would show the topic units at the end of the main tree, with
+# prerequisite boughs running from far up the map; their bough painter fails on boughs that long
+# (Skia path ops), so they keep their bundled pack (tosk/docs/topic-split.md, "Versions and old apps").
+min_app_version: 0.7.4
 persons: [yo, tú, él/ella, nosotros, vosotros, ellos/ellas]
 person_labels:
   tú: {en: "tú (you)", nl: "tú (jij)"}
