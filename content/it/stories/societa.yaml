@@ -1,0 +1,46 @@
+# Graded mini-stories of the topic societa (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# They were stories of main-tree units until the topic restructure (tosk/docs/topic-split.md) and moved
+# here with their skills; their ids are kept, so reading progress is kept.
+- id: u13-citta
+  unit: societa-u1
+  title: {it: "La città cambia", en: "The city is changing"}
+  sentences:
+    - {it: "La nostra città sta cambiando molto.", en: "Our city is changing a lot."}
+    - {it: "Il governo sta costruendo molte case nuove.", en: "The government is building many new houses."}
+    - {it: "Il sindaco dice che la vita qui è migliore di prima.", en: "The mayor says that life here is better than before."}
+    - {it: "Ma il traffico è peggiore e l'inquinamento aumenta.", en: "But the traffic is worse and pollution is increasing."}
+    - {it: "Molti cittadini protestano in piazza.", en: "Many citizens are protesting in the square."}
+    - {it: "In città si parla molto di ambiente.", en: "In the city people talk a lot about the environment."}
+  new_words: [aumentare]
+  questions:
+    - q: {en: "What is the government building?"}
+      options: [{en: "Many new houses"}, {en: "A new station"}, {en: "A motorway"}]
+      answer: 0
+    - q: {en: "What is worse now?"}
+      options: [{en: "The traffic"}, {en: "The weather"}, {en: "The food"}]
+      answer: 0
+    - q: {en: "What do people talk about a lot?"}
+      options: [{en: "The environment"}, {en: "Football"}, {en: "The weather"}]
+      answer: 0
+
+- id: u14-colloquio
+  unit: societa-u2
+  title: {it: "Il colloquio", en: "The interview"}
+  sentences:
+    - {it: "Domani Elena ha un colloquio di lavoro.", en: "Tomorrow Elena has a job interview."}
+    - {it: "Spera che il direttore sia gentile.", en: "She hopes the manager is kind."}
+    - {it: "Sua madre pensa che debba vestirsi bene.", en: "Her mother thinks she should dress well."}
+    - {it: "Elena è timida, però è molto intelligente.", en: "Elena is shy, but she is very clever."}
+    - {it: "Benché sia nervosa, risponde a molte domande.", en: "Although she is nervous, she answers many questions."}
+    - {it: "Il direttore vuole che cominci lunedì.", en: "The manager wants her to start on Monday."}
+    - {it: "Elena è felice: finalmente ha un lavoro!", en: "Elena is happy: at last she has a job!"}
+  questions:
+    - q: {en: "What does Elena have tomorrow?"}
+      options: [{en: "A job interview"}, {en: "An exam"}, {en: "A party"}]
+      answer: 0
+    - q: {en: "What is Elena like?"}
+      options: [{en: "Shy but clever"}, {en: "Lazy and rude"}, {en: "Funny and loud"}]
+      answer: 0
+    - q: {en: "When does she start?"}
+      options: [{en: "On Monday"}, {en: "Tomorrow"}, {en: "Next year"}]
+      answer: 0

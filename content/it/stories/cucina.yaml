@@ -1,0 +1,50 @@
+# Graded mini-stories of the topic cucina (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# They were stories of main-tree units until the topic restructure (tosk/docs/topic-split.md) and moved
+# here with their skills; their ids are kept, so reading progress is kept.
+- id: u5-zuppa
+  unit: cucina-u1
+  title: {it: "La zuppa della nonna", en: "Grandma's soup", nl: "De soep van oma"}
+  sentences:
+    - {it: "La nonna di Giulia prepara la sua zuppa.", en: "Giulia's grandmother is making her soup.", nl: "De oma van Giulia maakt haar soep."}
+    - {it: "Nella pentola mette l'acqua, l'olio e il sale.", en: "She puts the water, the oil and the salt in the pot.", nl: "In de pan doet ze het water, de olie en het zout."}
+    - {it: "Poi mette le carote, la cipolla e l'aglio.", en: "Then she puts in the carrots, the onion and the garlic.", nl: "Dan doet ze de wortels, de ui en de knoflook erin."}
+    - {it: "Giulia ha fame e aspetta in cucina.", en: "Giulia is hungry and waits in the kitchen.", nl: "Giulia heeft honger en wacht in de keuken."}
+    - {it: "\"Nonna, quando è pronta?\"", en: "\"Grandma, when is it ready?\"", nl: "\"Oma, wanneer is het klaar?\""}
+    - {it: "\"Ancora dieci minuti!\"", en: "\"Ten more minutes!\"", nl: "\"Nog tien minuten!\""}
+    - {it: "Finalmente la zuppa è sul tavolo, con il pane.", en: "Finally the soup is on the table, with the bread.", nl: "Eindelijk staat de soep op tafel, met het brood."}
+    - {it: "È davvero buona!", en: "It's really good!", nl: "Hij is echt lekker!"}
+  questions:
+    - q: {en: "What is grandma making?", nl: "Wat maakt oma?"}
+      prompt: "Che cosa prepara la nonna?"
+      options: ["una zuppa", "una torta", "una pizza"]
+      answer: 0
+    - q: {en: "Which vegetables go into the soup?", nl: "Welke groenten gaan er in de soep?"}
+      options: [{en: "Carrots, onion and garlic", nl: "Wortels, ui en knoflook"}, {en: "Potatoes and tomatoes", nl: "Aardappels en tomaten"}, {en: "Only onion", nl: "Alleen ui"}]
+      answer: 0
+    - q: {en: "How long does Giulia still have to wait?", nl: "Hoe lang moet Giulia nog wachten?"}
+      options: [{en: "Ten minutes", nl: "Tien minuten"}, {en: "Five minutes", nl: "Vijf minuten"}, {en: "An hour", nl: "Een uur"}]
+      answer: 0
+
+- id: u11-ricetta
+  unit: cucina-u2
+  title: {it: "La ricetta della nonna", en: "Grandma's recipe"}
+  sentences:
+    - {it: "Nonna, dimmi la tua ricetta!", en: "Grandma, tell me your recipe!"}
+    - {it: "Allora, prendi una pentola grande.", en: "Well, take a big pot."}
+    - {it: "Quando l'acqua bolle, aggiungi il sale e la pasta.", en: "When the water boils, add the salt and the pasta."}
+    - {it: "Taglia i pomodori e la cipolla.", en: "Cut the tomatoes and the onion."}
+    - {it: "Cucina il sugo con olio e basilico.", en: "Cook the sauce with oil and basil."}
+    - {it: "Non dimenticare il formaggio!", en: "Don't forget the cheese!"}
+    - {it: "Assaggia: com'è?", en: "Taste it: how is it?"}
+    - {it: "È perfetta, nonna!", en: "It's perfect, grandma!"}
+  new_words: [perfetto]
+  questions:
+    - q: {en: "What do you add when the water boils?"}
+      options: [{en: "The salt and the pasta"}, {en: "The cheese"}, {en: "The tomatoes"}]
+      answer: 0
+    - q: {en: "What do you cut?"}
+      options: [{en: "Tomatoes and onion"}, {en: "Bread and cheese"}, {en: "Basil and garlic"}]
+      answer: 0
+    - q: {en: "What must you not forget?"}
+      options: [{en: "The cheese"}, {en: "The pot"}, {en: "The oil"}]
+      answer: 0

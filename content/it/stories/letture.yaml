@@ -1,0 +1,27 @@
+# Graded mini-stories of the topic letture (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# They were stories of main-tree units until the topic restructure (tosk/docs/topic-split.md) and moved
+# here with their skills; their ids are kept, so reading progress is kept.
+- id: u15-favola
+  unit: letture-u1
+  title: {it: "La figlia del re", en: "The king's daughter"}
+  sentences:
+    - {it: "Questo è il libro di cui ti ho parlato.", en: "This is the book I told you about."}
+    - {it: "C'era una volta un re che aveva tre figlie.", en: "Once upon a time there was a king who had three daughters."}
+    - {it: "La figlia minore, la quale era molto saggia, partì senza nessuno.", en: "The youngest daughter, who was very wise, left without anyone."}
+    - {it: "Viaggiò per molti paesi e conobbe molte persone.", en: "She travelled through many countries and met many people."}
+    - {it: "Un giorno trovò un castello in una foresta.", en: "One day she found a castle in a forest."}
+    - {it: "Lì visse un anno con un principe gentile.", en: "There she lived for a year with a kind prince."}
+    - {it: "Alla fine tornò a casa e diventò regina.", en: "In the end she went home and became queen."}
+  questions:
+    - q: {en: "How many daughters did the king have?"}
+      options: [{en: "Three"}, {en: "Two"}, {en: "One"}]
+      answer: 0
+    - q: {en: "What was the youngest daughter like?"}
+      options: [{en: "Very wise"}, {en: "Very lazy"}, {en: "Very rich"}]
+      answer: 0
+    - q: {en: "What did she find in the forest?"}
+      options: [{en: "A castle"}, {en: "A lake"}, {en: "A dragon"}]
+      answer: 0
+    - q: {en: "What did she become in the end?"}
+      options: [{en: "Queen"}, {en: "A writer"}, {en: "A doctor"}]
+      answer: 0

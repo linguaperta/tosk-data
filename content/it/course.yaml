@@ -8,7 +8,7 @@
 # introduces tense:{T} automatically). Each unit's skills require the previous unit's grammar, so
 # every later skill allows everything taught before it.
 id: it
-version: 1.4.0
+version: 1.5.0
 title: {en: Italian, nl: Italiaans}
 description:
   en: Italian from the basics to A2/B1, with a strong focus on verbs, moods and reading.
@@ -349,12 +349,6 @@ units:
         requires: [pronouns, modal-verbs]
         items: {tags: [adjectives]}
         inflections: {table: agreement}   # + #infl:agreement (bello, bella, belli, belle)
-      - id: body
-        kind: vocab
-        title: {en: Body and health, nl: Lichaam en gezondheid}
-        icon: body
-        requires: [pronouns, modal-verbs]
-        items: {tags: [body]}
       - id: adverbs
         kind: vocab
         title: {en: Useful adverbs, nl: Handige bijwoorden}
@@ -390,12 +384,6 @@ units:
         icon: travel
         requires: [colours, possessives]
         items: {tags: [travel]}
-      - id: kitchen
-        kind: vocab
-        title: {en: In the kitchen, nl: In de keuken}
-        icon: food
-        requires: [colours, possessives]
-        items: {tags: [kitchen]}
       - id: prepositions
         kind: grammar
         title: {en: "Prepositions: nel, al, del...", nl: "Voorzetsels: nel, al, del..."}
@@ -413,12 +401,6 @@ units:
         icon: work
         requires: [prepositions]
         items: {tags: [work]}
-      - id: feelings
-        kind: vocab
-        title: {en: Feelings, nl: Gevoelens}
-        icon: person
-        requires: [prepositions]
-        items: {tags: [feelings]}
       - id: passato-prossimo
         kind: grammar
         title: {en: The passato prossimo with avere, nl: De passato prossimo met avere}
@@ -438,24 +420,6 @@ units:
   - id: u7
     title: {en: Memories, nl: Herinneringen}
     skills:
-      - id: weather
-        kind: vocab
-        title: {en: Weather and nature, nl: Weer en natuur}
-        icon: weather
-        requires: [passato-prossimo-essere]
-        items: {tags: [weather]}
-      - id: animals
-        kind: vocab
-        title: {en: Animals, nl: Dieren}
-        icon: animals
-        requires: [passato-prossimo-essere]
-        items: {tags: [animals]}
-      - id: clothes
-        kind: vocab
-        title: {en: Clothes, nl: Kleding}
-        icon: clothes
-        requires: [passato-prossimo-essere]
-        items: {tags: [clothes]}
       - id: imperfetto
         kind: grammar
         title: {en: The imperfetto, nl: De imperfetto}
@@ -467,18 +431,6 @@ units:
   - id: u8
     title: {en: Plans for the future, nl: Plannen voor de toekomst}
     skills:
-      - id: leisure
-        kind: vocab
-        title: {en: Free time, nl: Vrije tijd}
-        icon: star
-        requires: [imperfetto]
-        items: {tags: [leisure]}
-      - id: shopping
-        kind: vocab
-        title: {en: Shopping, nl: Winkelen}
-        icon: shopping
-        requires: [imperfetto]
-        items: {tags: [shopping]}
       - id: futuro
         kind: grammar
         title: {en: The future tense, nl: De toekomende tijd}
@@ -534,12 +486,6 @@ units:
                                           addormentarsi, arrabbiarsi, innamorarsi, riposarsi, annoiarsi,
                                           prepararsi, andarsene]}
         exercises: [conj_grid, cloze, spot_error, transform, multiple_choice]
-      - id: routine
-        kind: vocab
-        title: {en: From morning to night, nl: Van 's ochtends tot 's avonds}
-        icon: clock
-        requires: [reflexive-present]
-        items: {tags: [routine]}
       - id: reflexive-past
         kind: grammar
         title: {en: "Reflexive verbs in the past: mi sono alzato", nl: "Wederkerend in het verleden: mi sono alzato"}
@@ -550,18 +496,6 @@ units:
                                                   addormentarsi, arrabbiarsi, innamorarsi, sposarsi, annoiarsi,
                                                   andarsene]}
         exercises: [conj_grid, cloze, spot_error, transform]
-      - id: health
-        kind: vocab
-        title: {en: At the doctor's, nl: Bij de dokter}
-        icon: body
-        requires: [reflexive-present]
-        items: {tags: [health]}
-      - id: services
-        kind: vocab
-        title: {en: "Banks, post and services", nl: "Bank, post en diensten"}
-        icon: city
-        requires: [reflexive-past]
-        items: {tags: [services]}
 
   - id: u11
     title: {en: Do it!, nl: Doe het!}
@@ -570,18 +504,12 @@ units:
         kind: grammar
         title: {en: "The imperative: parla! prendi!", nl: "De gebiedende wijs: parla! prendi!"}
         icon: verb
-        requires: [reflexive-past, health, routine]
+        requires: [reflexive-past]
         introduces: ["imperative:negative"]
         verbs: {tense: imperativo, lemmas: [parlare, guardare, ascoltare, aspettare, prendere, scrivere, leggere, sentire,
                                             aprire, chiudere, finire, mangiare, entrare, chiamare, lasciare, pensare, provare,
                                             mettere]}
         exercises: [conj_pick, conj_grid, cloze, spot_error]
-      - id: directions
-        kind: vocab
-        title: {en: Finding the way, nl: De weg vinden}
-        icon: travel
-        requires: [imperative]
-        items: {tags: [directions]}
       - id: imperative-irregular
         kind: grammar
         title: {en: "Irregular imperatives: va', fa', di'", nl: "Onregelmatige gebiedende wijs: va', fa', di'"}
@@ -591,12 +519,6 @@ units:
         verbs: {tense: imperativo, lemmas: [essere, avere, andare, fare, dire, dare, stare, venire, tenere, uscire, rimanere,
                                             bere, salire, scegliere]}
         exercises: [conj_grid, cloze, spot_error]
-      - id: food-more
-        kind: vocab
-        title: {en: Cooking and shopping for food, nl: Koken en boodschappen}
-        icon: food
-        requires: [imperative]
-        items: {tags: [food2]}
       - id: imperative-pronouns
         kind: grammar
         title: {en: "Imperative with pronouns: alzati, dimmi", nl: "Gebiedende wijs met voornaamwoorden: alzati, dimmi"}
@@ -606,12 +528,6 @@ units:
         verbs: {tense: imperativo, lemmas: [alzarsi, sedersi, preoccuparsi, fermarsi, divertirsi, rilassarsi,
                                             svegliarsi, vestirsi, prepararsi, riposarsi]}
         exercises: [conj_grid, cloze, spot_error]
-      - id: media
-        kind: vocab
-        title: {en: "News, phones and computers", nl: "Nieuws, telefoons en computers"}
-        icon: chat
-        requires: [imperative-irregular]
-        items: {tags: [media]}
 
   - id: u12
     title: {en: I would like..., nl: Ik zou graag...}
@@ -620,15 +536,9 @@ units:
         kind: grammar
         title: {en: "Ci and ne: ci vado, ne voglio due", nl: "Ci en ne: ci vado, ne voglio due"}
         icon: grammar
-        requires: [imperative-pronouns, media, directions, food-more]
+        requires: [imperative-pronouns]
         introduces: [ci, ne]
         items: {tags: [ci_ne]}
-      - id: emotions
-        kind: vocab
-        title: {en: Emotions, nl: Emoties}
-        icon: person
-        requires: [ci-ne]
-        items: {tags: [emotions]}
       - id: combined-pronouns
         kind: grammar
         title: {en: "Glielo, me lo, te ne: combined pronouns", nl: "Glielo, me lo, te ne: samengestelde voornaamwoorden"}
@@ -671,7 +581,7 @@ units:
         kind: grammar
         title: {en: "Più, meno, migliore: comparing", nl: "Più, meno, migliore: vergelijken"}
         icon: grammar
-        requires: [combined-pronouns, condizionale-irregular, emotions, opinions, verbs-three]
+        requires: [combined-pronouns, condizionale-irregular, opinions, verbs-three]
         introduces: [comparative]
         items: {tags: [comparatives]}
       - id: adjectives-more
@@ -689,12 +599,6 @@ units:
         introduces: [gerund]
         verbs: {tense: presente, lemmas: [stare]}
         exercises: [conj_grid, cloze, spot_error]
-      - id: nature
-        kind: vocab
-        title: {en: Landscapes and nature, nl: Landschap en natuur}
-        icon: nature
-        requires: [progressive]
-        items: {tags: [nature]}
       - id: impersonal-si
         kind: grammar
         title: {en: "Si dice, si mangia: impersonal si", nl: "Si dice, si mangia: onpersoonlijk si"}
@@ -702,12 +606,6 @@ units:
         requires: [progressive]
         introduces: [si]
         items: {tags: [impersonal]}
-      - id: society
-        kind: vocab
-        title: {en: Society and politics, nl: Maatschappij en politiek}
-        icon: city
-        requires: [impersonal-si]
-        items: {tags: [society]}
       - id: abstract
         kind: vocab
         title: {en: Ideas and things, nl: Begrippen}
@@ -722,18 +620,11 @@ units:
         kind: grammar
         title: {en: "The subjunctive: penso che parli", nl: "De aanvoegende wijs: penso che parli"}
         icon: chat
-        requires: [adjectives-more, nature, society, abstract]
+        requires: [adjectives-more, abstract]
         verbs: {tense: congiuntivo_presente, lemmas: [pensare, parlare, sentire, capire, prendere, aspettare, guardare, lasciare,
                                                       tornare, trovare, chiamare, cercare, chiedere, conoscere, arrivare, mangiare,
                                                       scrivere, dormire]}
         exercises: [conj_pick, conj_grid, cloze, spot_error]
-      - id: character
-        kind: vocab
-        title: {en: Character, nl: Karakter}
-        icon: person
-        requires: [congiuntivo]
-        items: {tags: [character]}
-        inflections: {table: agreement}
       - id: congiuntivo-irregular
         kind: grammar
         title: {en: "Sia, abbia, vada: irregular subjunctives", nl: "Sia, abbia, vada: onregelmatig"}
@@ -755,12 +646,6 @@ units:
         requires: [congiuntivo-irregular]
         verbs: {tense: congiuntivo_imperfetto, top: 18, exclude: [dispiacere, importare, parere, piacere]}
         exercises: [conj_pick, conj_grid, cloze, spot_error]
-      - id: money
-        kind: vocab
-        title: {en: Money and business, nl: Geld en zaken}
-        icon: shopping
-        requires: [congiuntivo-imperfetto]
-        items: {tags: [money]}
 
   - id: u15
     title: {en: Reading Italian, nl: Italiaans lezen}
@@ -769,7 +654,7 @@ units:
         kind: grammar
         title: {en: "Reading the passato remoto: parlò", nl: "De passato remoto lezen: parlò"}
         icon: book
-        requires: [character, connectors, money]
+        requires: [connectors, congiuntivo-imperfetto]
         recognition: true
         equivalent_tense: passato_prossimo
         verbs: {tense: passato_remoto, regular: true, top: 18, exclude: [dispiacere, importare]}
@@ -791,19 +676,261 @@ units:
         requires: [passato-remoto-irregular]
         introduces: [relative]
         items: {tags: [relatives]}
-      - id: reading
-        kind: vocab
-        title: {en: Books and stories, nl: Boeken en verhalen}
-        icon: book
-        requires: [passato-remoto-irregular]
-        items: {tags: [reading]}
 
 # Topics (pack format 1.2, tosk/docs/pack-format.md "Topics"): themed side trees, each drawn as its own
-# map, with a branch leaving the main tree at its anchor. A skill moves into a topic only when the rest of
-# the main tree can skip it: no later main-tree skill requires it, selects its words, or uses them in a
-# story or for its sentences, and it teaches no grammar (tosk/docs/topic-split.md). Ids are kept, so
-# progress is kept.
+# map, with a branch leaving the main tree at its anchor (the last main-tree skill its first skill
+# requires); a later skill of a topic may require a later main-tree skill and waits for it.
+# Pack 1.5 (tosk/docs/topic-split.md): the main tree keeps the grammar and the core vocabulary, and
+# themed vocabulary lives in these topics, so a learner may skip them. Grammar skills require only
+# main-tree skills. The fairness rule (tosk/docs/extensions.md): never unknown grammar, some unknown
+# words are fine: words of a skipped topic may appear in main-tree lessons within the unknown-word
+# cap, and in main-tree stories (at most three per story, glossed). Skill, item and facet ids are
+# unchanged, so progress is kept.
 topics:
+  # The body (unit 4 until pack 1.5) with the daily routine and the doctor's (unit 10).
+  - id: salute
+    title: {en: Body and health, nl: Lichaam en gezondheid}
+    short_title: {en: Health, nl: Gezondheid}
+    description:
+      en: "The body, washing and dressing, and a visit to the doctor."
+      nl: "Het lichaam, wassen en aankleden, en een bezoek aan de dokter."
+    icon: health
+    units:
+      - id: salute-u1
+        title: {en: The body, nl: Het lichaam}
+        skills:
+          - id: body
+            kind: vocab
+            title: {en: The body, nl: Het lichaam}
+            icon: body
+            requires: [adjectives]
+            items: {tags: [body]}
+      - id: salute-u2
+        title: {en: Daily care and the doctor, nl: Verzorging en de dokter}
+        skills:
+          - id: routine
+            kind: vocab
+            title: {en: From morning to night, nl: Van 's ochtends tot 's avonds}
+            icon: clock
+            requires: [body, reflexive-present]
+            items: {tags: [routine]}
+          - id: health
+            kind: vocab
+            title: {en: At the doctor's, nl: Bij de dokter}
+            icon: health
+            requires: [body, reflexive-present]
+            items: {tags: [health]}
+
+  # In the kitchen (unit 5; its story uses the articulated prepositions) and cooking (unit 11, written in
+  # the imperative).
+  - id: cucina
+    title: {en: Food and cooking, nl: Eten en koken}
+    short_title: {en: Cooking, nl: Koken}
+    description:
+      en: "Fruit, vegetables and the kitchen, then recipes in the imperative."
+      nl: "Fruit, groente en de keuken, daarna recepten in de gebiedende wijs."
+    icon: food
+    units:
+      - id: cucina-u1
+        title: {en: In the kitchen, nl: In de keuken}
+        skills:
+          - id: kitchen
+            kind: vocab
+            title: {en: In the kitchen, nl: In de keuken}
+            icon: food
+            requires: [prepositions]
+            items: {tags: [kitchen]}
+      - id: cucina-u2
+        title: {en: Recipes, nl: Recepten}
+        skills:
+          - id: food-more
+            kind: vocab
+            title: {en: Cooking and shopping for food, nl: Koken en boodschappen}
+            icon: food
+            requires: [kitchen, imperative]
+            items: {tags: [food2]}
+
+  # Feelings (unit 6, after the passato prossimo), emotions (unit 12) and character (unit 14).
+  - id: emozioni
+    title: {en: Feelings and character, nl: Gevoelens en karakter}
+    short_title: {en: Feelings, nl: Gevoelens}
+    description:
+      en: "How you feel, from afraid to proud, and what people are like."
+      nl: "Hoe je je voelt, van bang tot trots, en hoe mensen zijn."
+    icon: heart
+    units:
+      - id: emozioni-u1
+        title: {en: "How do you feel?", nl: "Hoe voel je je?"}
+        skills:
+          - id: feelings
+            kind: vocab
+            title: {en: Feelings, nl: Gevoelens}
+            icon: heart
+            requires: [passato-prossimo]
+            items: {tags: [feelings]}
+      - id: emozioni-u2
+        title: {en: Emotions, nl: Emoties}
+        skills:
+          - id: emotions
+            kind: vocab
+            title: {en: Emotions, nl: Emoties}
+            icon: heart
+            requires: [feelings, ci-ne]
+            items: {tags: [emotions]}
+      - id: emozioni-u3
+        title: {en: Character, nl: Karakter}
+        skills:
+          - id: character
+            kind: vocab
+            title: {en: Character, nl: Karakter}
+            icon: person
+            requires: [emotions, congiuntivo]
+            items: {tags: [character]}
+            inflections: {table: agreement}
+
+  # Clothes (unit 7) and shopping (unit 8).
+  - id: moda
+    title: {en: Clothes and shopping, nl: Kleding en winkelen}
+    short_title: {en: Shopping, nl: Winkelen}
+    description:
+      en: "What to wear, and paying at the till."
+      nl: "Wat je aantrekt, en afrekenen bij de kassa."
+    icon: clothes
+    units:
+      - id: moda-u1
+        title: {en: In the shops, nl: In de winkels}
+        skills:
+          - id: clothes
+            kind: vocab
+            title: {en: Clothes, nl: Kleding}
+            icon: clothes
+            requires: [passato-prossimo-essere]
+            items: {tags: [clothes]}
+          - id: shopping
+            kind: vocab
+            title: {en: Shopping, nl: Winkelen}
+            icon: shopping
+            requires: [clothes, futuro]
+            items: {tags: [shopping]}
+
+  # Weather and animals (unit 7), told in the imperfetto, and landscapes (unit 13).
+  - id: natura
+    title: {en: "Weather, animals and nature", nl: "Weer, dieren en natuur"}
+    short_title: {en: Nature, nl: Natuur}
+    description:
+      en: "Seasons, animals, woods and mountains."
+      nl: "Seizoenen, dieren, bossen en bergen."
+    icon: nature
+    units:
+      - id: natura-u1
+        title: {en: Weather and animals, nl: Weer en dieren}
+        skills:
+          - id: weather
+            kind: vocab
+            title: {en: Weather and seasons, nl: Weer en seizoenen}
+            icon: weather
+            requires: [imperfetto]
+            items: {tags: [weather]}
+          - id: animals
+            kind: vocab
+            title: {en: Animals, nl: Dieren}
+            icon: animals
+            requires: [imperfetto]
+            items: {tags: [animals]}
+      - id: natura-u2
+        title: {en: Landscapes, nl: Landschappen}
+        skills:
+          - id: nature
+            kind: vocab
+            title: {en: Landscapes and nature, nl: Landschap en natuur}
+            icon: nature
+            requires: [weather, progressive]
+            items: {tags: [nature]}
+
+  # Free time (unit 8) and media (unit 11).
+  - id: tempo-libero
+    title: {en: Free time and media, nl: Vrije tijd en media}
+    short_title: {en: Free time, nl: Vrije tijd}
+    description:
+      en: "Music, sport and hobbies; news, phones and computers."
+      nl: "Muziek, sport en hobby's; nieuws, telefoons en computers."
+    icon: music
+    units:
+      - id: tempo-libero-u1
+        title: {en: Hobbies, nl: Hobby's}
+        skills:
+          - id: leisure
+            kind: vocab
+            title: {en: Free time, nl: Vrije tijd}
+            icon: music
+            requires: [futuro]
+            items: {tags: [leisure]}
+      - id: tempo-libero-u2
+        title: {en: News and phones, nl: Nieuws en telefoons}
+        skills:
+          - id: media
+            kind: vocab
+            title: {en: "News, phones and computers", nl: "Nieuws, telefoons en computers"}
+            icon: chat
+            requires: [leisure, imperative-irregular]
+            items: {tags: [media]}
+
+  # Banks and post (unit 10) and finding the way (unit 11, in the imperative).
+  - id: servizi
+    title: {en: "In town: services and directions", nl: "In de stad: diensten en de weg"}
+    short_title: {en: In town, nl: In de stad}
+    description:
+      en: "Banks, post offices and forms, and asking the way."
+      nl: "Bank, postkantoor en formulieren, en de weg vragen."
+    icon: city
+    units:
+      - id: servizi-u1
+        title: {en: Banks and post offices, nl: Bank en postkantoor}
+        skills:
+          - id: services
+            kind: vocab
+            title: {en: "Banks, post and services", nl: "Bank, post en diensten"}
+            icon: money
+            requires: [reflexive-past]
+            items: {tags: [services]}
+      - id: servizi-u2
+        title: {en: Finding the way, nl: De weg vinden}
+        skills:
+          - id: directions
+            kind: vocab
+            title: {en: Finding the way, nl: De weg vinden}
+            icon: travel
+            requires: [services, imperative]
+            items: {tags: [directions]}
+
+  # Society and politics (unit 13) and money and business (unit 14).
+  - id: societa
+    title: {en: Society and the economy, nl: Maatschappij en economie}
+    short_title: {en: Society, nl: Maatschappij}
+    description:
+      en: "Politics, laws and elections; jobs, money and business."
+      nl: "Politiek, wetten en verkiezingen; banen, geld en zaken."
+    icon: society
+    units:
+      - id: societa-u1
+        title: {en: Politics, nl: Politiek}
+        skills:
+          - id: society
+            kind: vocab
+            title: {en: Society and politics, nl: Maatschappij en politiek}
+            icon: society
+            requires: [impersonal-si]
+            items: {tags: [society]}
+      - id: societa-u2
+        title: {en: Money and business, nl: Geld en zaken}
+        skills:
+          - id: money
+            kind: vocab
+            title: {en: Money and business, nl: Geld en zaken}
+            icon: money
+            requires: [society, congiuntivo-imperfetto]
+            items: {tags: [money]}
+
   # crime (unit 15 until pack 1.4) grows where the passato remoto is taught: crime stories are told in
   # it. uccidere stays a main-tree word (passato-remoto-irregular trains it); the story
   # "La lettera senza firma" moved here with the skill.
@@ -825,3 +952,22 @@ topics:
             icon: search
             requires: [passato-remoto]
             items: {tags: [crime]}
+
+  # Books and stories (unit 15 until pack 1.5), read with the passato remoto.
+  - id: letture
+    title: {en: Books and stories, nl: Boeken en verhalen}
+    short_title: {en: Books, nl: Boeken}
+    description:
+      en: "Fairy tales, novels and poems: the words of reading."
+      nl: "Sprookjes, romans en gedichten: de woorden van het lezen."
+    icon: book
+    units:
+      - id: letture-u1
+        title: {en: Once upon a time, nl: Er was eens}
+        skills:
+          - id: reading
+            kind: vocab
+            title: {en: Books and stories, nl: Boeken en verhalen}
+            icon: book
+            requires: [passato-remoto-irregular]
+            items: {tags: [reading]}

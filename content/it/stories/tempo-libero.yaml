@@ -1,0 +1,26 @@
+# Graded mini-stories of the topic tempo-libero (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# They were stories of main-tree units until the topic restructure (tosk/docs/topic-split.md) and moved
+# here with their skills; their ids are kept, so reading progress is kept.
+- id: u8-concerto
+  unit: tempo-libero-u1
+  title: {it: "Il concerto", en: "The concert", nl: "Het concert"}
+  sentences:
+    - {it: "Sabato Marco andrà a un concerto con Giulia.", en: "On Saturday Marco will go to a concert with Giulia.", nl: "Zaterdag gaat Marco met Giulia naar een concert."}
+    - {it: "Domani compreranno i biglietti.", en: "Tomorrow they'll buy the tickets.", nl: "Morgen kopen ze de kaartjes."}
+    - {it: "Prima del concerto mangeranno in un ristorante.", en: "Before the concert they'll eat in a restaurant.", nl: "Voor het concert gaan ze in een restaurant eten."}
+    - {it: "Giulia vuole una foto con il cantante.", en: "Giulia wants a photo with the singer.", nl: "Giulia wil een foto met de zanger."}
+    - {it: "La musica sarà forte e loro balleranno.", en: "The music will be loud and they'll dance.", nl: "De muziek zal hard zijn en ze zullen dansen."}
+    - {it: "Torneranno a casa molto tardi.", en: "They'll get home very late.", nl: "Ze komen heel laat thuis."}
+    - {it: "Domenica Marco dormirà fino a tardi!", en: "On Sunday Marco will sleep in!", nl: "Zondag slaapt Marco lekker uit!"}
+  new_words: [cantante]
+  questions:
+    - q: {en: "When is the concert?", nl: "Wanneer is het concert?"}
+      options: ["sabato", "domenica", "venerdì"]
+      answer: 0
+    - q: {en: "What does Giulia want?", nl: "Wat wil Giulia?"}
+      prompt: "Che cosa vuole Giulia?"
+      options: ["una foto con il cantante", "una chitarra nuova", "un biglietto gratis"]
+      answer: 0
+    - q: {en: "What will Marco do on Sunday?", nl: "Wat gaat Marco zondag doen?"}
+      options: [{en: "Sleep late", nl: "Uitslapen"}, {en: "Play football", nl: "Voetballen"}, {en: "Go to another concert", nl: "Naar nog een concert gaan"}]
+      answer: 0

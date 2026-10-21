@@ -1,53 +1,52 @@
 # Graded mini-stories for unit u7 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
-- id: u7-bambino
+# New in pack 1.5 (the topic restructure, tosk/docs/topic-split.md): written from core vocabulary.
+- id: u7-nonna
   unit: u7
-  title: {it: "Quando ero bambino", en: "When I was a child", nl: "Toen ik klein was"}
+  title: {it: "La casa della nonna", en: "Grandma's house", nl: "Het huis van oma"}
   sentences:
-    - {it: "Quando ero bambino, vivevo in un piccolo paese.", en: "When I was a child, I lived in a small village.", nl: "Toen ik klein was, woonde ik in een klein dorp."}
-    - {it: "Avevamo un cane e due gatti.", en: "We had a dog and two cats.", nl: "We hadden een hond en twee katten."}
-    - {it: "D'estate giocavo nel bosco con mio fratello.", en: "In summer I played in the woods with my brother.", nl: "In de zomer speelde ik met mijn broer in het bos."}
-    - {it: "In inverno c'era spesso la neve.", en: "In winter there was often snow.", nl: "In de winter lag er vaak sneeuw."}
-    - {it: "Mia madre indossava sempre un cappotto rosso.", en: "My mother always wore a red coat.", nl: "Mijn moeder droeg altijd een rode jas."}
-    - {it: "La sera guardavamo le stelle dal giardino.", en: "In the evening we looked at the stars from the garden.", nl: "'s Avonds keken we vanuit de tuin naar de sterren."}
-    - {it: "Ero un bambino molto felice.", en: "I was a very happy child.", nl: "Ik was een heel gelukkig kind."}
+    - {it: "Quando ero piccola, andavo spesso dalla nonna.", en: "When I was little, I often went to my grandmother's.", nl: "Toen ik klein was, ging ik vaak naar oma."}
+    - {it: "La nonna abitava in una casa grande con un giardino.", en: "Grandma lived in a big house with a garden.", nl: "Oma woonde in een groot huis met een tuin."}
+    - {it: "La mattina preparava il pane e una torta.", en: "In the morning she made bread and a cake.", nl: "'s Ochtends maakte ze brood en een taart."}
+    - {it: "Io l'aiutavo sempre in cucina.", en: "I always helped her in the kitchen.", nl: "Ik hielp haar altijd in de keuken."}
+    - {it: "Il pomeriggio leggevamo insieme in giardino.", en: "In the afternoon we read together in the garden.", nl: "'s Middags lazen we samen in de tuin."}
+    - {it: "La sera guardavamo la televisione con il nonno.", en: "In the evening we watched television with grandpa.", nl: "'s Avonds keken we met opa televisie."}
+    - {it: "Due anni fa sono tornata nel paese della nonna.", en: "Two years ago I went back to grandma's village.", nl: "Twee jaar geleden ben ik teruggegaan naar het dorp van oma."}
+    - {it: "La casa era vuota, ma il giardino era ancora bello.", en: "The house was empty, but the garden was still beautiful.", nl: "Het huis was leeg, maar de tuin was nog steeds mooi."}
   questions:
-    - q: {en: "Where did he live as a child?", nl: "Waar woonde hij als kind?"}
-      prompt: "Dove viveva da bambino?"
-      options: ["in un piccolo paese", "in una grande città", "al mare"]
+    - q: {en: "Where did grandma live?", nl: "Waar woonde oma?"}
+      options: [{en: "In a big house with a garden", nl: "In een groot huis met een tuin"}, {en: "In a small flat", nl: "In een kleine flat"}, {en: "In the city centre", nl: "In het centrum van de stad"}]
       answer: 0
-    - q: {en: "Which animals did they have?", nl: "Welke dieren hadden ze?"}
-      options: [{en: "A dog and two cats", nl: "Een hond en twee katten"}, {en: "Two dogs and a cat", nl: "Twee honden en een kat"}, {en: "A horse", nl: "Een paard"}]
-      answer: 0
-    - q: {en: "What did his mother always wear?", nl: "Wat droeg zijn moeder altijd?"}
-      prompt: "Che cosa indossava sempre la madre?"
-      options: ["un cappotto rosso", "un cappello nero", "una giacca verde"]
+    - q: {en: "What did grandma make in the morning?", nl: "Wat maakte oma 's ochtends?"}
+      prompt: "Che cosa preparava la nonna la mattina?"
+      options: ["il pane e una torta", "la pasta", "il caffè"]
       answer: 0
     - q: {en: "What did they do in the evening?", nl: "Wat deden ze 's avonds?"}
-      options: [{en: "They looked at the stars", nl: "Ze keken naar de sterren"}, {en: "They played in the woods", nl: "Ze speelden in het bos"}, {en: "They watched television", nl: "Ze keken televisie"}]
+      options: [{en: "They watched television", nl: "Ze keken televisie"}, {en: "They read in the garden", nl: "Ze lazen in de tuin"}, {en: "They went to the cinema", nl: "Ze gingen naar de bioscoop"}]
+      answer: 0
+    - q: {en: "What was the house like two years ago?", nl: "Hoe was het huis twee jaar geleden?"}
+      options: [{en: "Empty", nl: "Leeg"}, {en: "Full of people", nl: "Vol mensen"}, {en: "New", nl: "Nieuw"}]
       answer: 0
 
-- id: u7-pioggia
+- id: u7-primo-lavoro
   unit: u7
-  title: {it: "Una passeggiata sotto la pioggia", en: "A walk in the rain", nl: "Een wandeling in de regen"}
-  names: [Rex]
-  new_words: [passeggiata]
+  title: {it: "Il mio primo lavoro", en: "My first job", nl: "Mijn eerste baan"}
   sentences:
-    - {it: "Ieri pioveva e faceva freddo.", en: "Yesterday it was raining and it was cold.", nl: "Gisteren regende het en het was koud."}
-    - {it: "Luca era a casa con il suo cane, Rex.", en: "Luca was at home with his dog, Rex.", nl: "Luca was thuis met zijn hond, Rex."}
-    - {it: "Ma Rex voleva uscire.", en: "But Rex wanted to go out.", nl: "Maar Rex wilde naar buiten."}
-    - {it: "Allora Luca ha preso l'ombrello e la giacca.", en: "So Luca took his umbrella and his jacket.", nl: "Dus pakte Luca zijn paraplu en zijn jas."}
-    - {it: "Il parco era vuoto e c'era molto vento.", en: "The park was empty and it was very windy.", nl: "Het park was leeg en het waaide hard."}
-    - {it: "Rex correva felice nell'erba.", en: "Rex ran happily through the grass.", nl: "Rex rende vrolijk door het gras."}
-    - {it: "Quando sono tornati a casa, erano stanchi ma contenti.", en: "When they got home, they were tired but happy.", nl: "Toen ze thuiskwamen, waren ze moe maar tevreden."}
+    - {it: "Dieci anni fa lavoravo in un ristorante a Roma.", en: "Ten years ago I worked in a restaurant in Rome.", nl: "Tien jaar geleden werkte ik in een restaurant in Rome."}
+    - {it: "Ero giovane e non avevo soldi.", en: "I was young and I didn't have any money.", nl: "Ik was jong en ik had geen geld."}
+    - {it: "Cominciavo alle cinque del pomeriggio e finivo molto tardi.", en: "I started at five in the afternoon and finished very late.", nl: "Ik begon om vijf uur 's middags en was heel laat klaar."}
+    - {it: "Il capo era un uomo difficile.", en: "The boss was a difficult man.", nl: "De baas was een moeilijke man."}
+    - {it: "Ma i miei colleghi erano bravi e gentili.", en: "But my colleagues were good and kind.", nl: "Maar mijn collega's waren goed en aardig."}
+    - {it: "Una sera è arrivato mio padre.", en: "One evening my father arrived.", nl: "Op een avond kwam mijn vader."}
+    - {it: "Ha mangiato la pasta e ha detto che era buona.", en: "He ate the pasta and said it was good.", nl: "Hij at de pasta en zei dat die lekker was."}
+    - {it: "Ero molto felice.", en: "I was very happy.", nl: "Ik was heel gelukkig."}
   questions:
-    - q: {en: "What was the weather like yesterday?", nl: "Wat voor weer was het gisteren?"}
-      options: [{en: "Rainy and cold", nl: "Regenachtig en koud"}, {en: "Sunny and warm", nl: "Zonnig en warm"}, {en: "Foggy", nl: "Mistig"}]
+    - q: {en: "Where did the narrator work?", nl: "Waar werkte de verteller?"}
+      options: [{en: "In a restaurant", nl: "In een restaurant"}, {en: "In a shop", nl: "In een winkel"}, {en: "In a school", nl: "Op een school"}]
       answer: 0
-    - q: {en: "Who wanted to go out?", nl: "Wie wilde er naar buiten?"}
-      prompt: "Chi voleva uscire?"
-      options: ["il cane", "Luca", "il gatto"]
+    - q: {en: "What was the boss like?", nl: "Hoe was de baas?"}
+      prompt: "Com'era il capo?"
+      options: ["difficile", "gentile", "giovane"]
       answer: 0
-    - q: {en: "What did Luca take?", nl: "Wat pakte Luca?"}
-      prompt: "Che cosa ha preso Luca?"
-      options: ["l'ombrello e la giacca", "il cappello e le scarpe", "la borsa e gli occhiali"]
+    - q: {en: "Who came one evening?", nl: "Wie kwam er op een avond?"}
+      options: [{en: "The narrator's father", nl: "De vader van de verteller"}, {en: "A famous man", nl: "Een beroemde man"}, {en: "The boss's wife", nl: "De vrouw van de baas"}]
       answer: 0

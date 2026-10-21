@@ -1,47 +1,47 @@
 # Graded mini-stories for unit u11 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
-- id: u11-stazione
+# New in pack 1.5 (the topic restructure, tosk/docs/topic-split.md): written from core vocabulary.
+- id: u11-consigli
   unit: u11
-  title: {it: "Dov'è la stazione?", en: "Where is the station?"}
+  title: {it: "I consigli della mamma", en: "Mum's advice"}
   sentences:
-    - {it: "Buongiorno, dov'è la stazione?", en: "Good morning, where is the station?"}
-    - {it: "Vada dritto fino al semaforo.", en: "Go straight on as far as the traffic lights."}
-    - {it: "Al semaforo, giri a destra.", en: "At the traffic lights, turn right."}
-    - {it: "Attraversi la piazza.", en: "Cross the square."}
-    - {it: "La stazione è a sinistra, di fronte al parco.", en: "The station is on the left, opposite the park."}
-    - {it: "È lontano?", en: "Is it far?"}
-    - {it: "No, sono dieci minuti a piedi.", en: "No, it's ten minutes on foot."}
-    - {it: "Grazie mille, buona giornata!", en: "Thanks a lot, have a nice day!"}
+    - {it: "Domani Luca parte per l'università.", en: "Tomorrow Luca leaves for university."}
+    - {it: "La mamma gli dà tanti consigli.", en: "His mum gives him lots of advice."}
+    - {it: "\"Mangia bene e dormi abbastanza!\"", en: "\"Eat well and sleep enough!\""}
+    - {it: "\"Non spendere tutti i soldi il primo giorno.\"", en: "\"Don't spend all your money on the first day.\""}
+    - {it: "\"Chiamami ogni sera e scrivimi spesso.\"", en: "\"Call me every evening and write to me often.\""}
+    - {it: "\"E studia: non uscire tutte le sere!\"", en: "\"And study: don't go out every night!\""}
+    - {it: "Luca ride: \"Mamma, stai tranquilla!\"", en: "Luca laughs: \"Mum, don't worry!\""}
+    - {it: "Poi l'abbraccia e va a dormire.", en: "Then he hugs her and goes to bed."}
   questions:
-    - q: {en: "What should he do at the traffic lights?"}
-      options: [{en: "Turn right"}, {en: "Turn left"}, {en: "Stop"}]
+    - q: {en: "Where is Luca going tomorrow?"}
+      options: [{en: "To university"}, {en: "On holiday"}, {en: "To work"}]
       answer: 0
-    - q: {en: "Where is the station?"}
-      options: [{en: "On the left, opposite the park"}, {en: "Behind the square"}, {en: "On the motorway"}]
+    - q: {en: "What does his mum ask?"}
+      options: [{en: "That he calls her every evening"}, {en: "That he goes out every night"}, {en: "That he sells his car"}]
       answer: 0
-    - q: {en: "How far is it?"}
-      options: [{en: "Ten minutes on foot"}, {en: "One hour by bus"}, {en: "Two kilometres"}]
+    - q: {en: "What does Luca say?"}
+      options: [{en: "Don't worry"}, {en: "I'm afraid"}, {en: "I don't want to go"}]
       answer: 0
 
-- id: u11-ricetta
+- id: u11-ospite
   unit: u11
-  title: {it: "La ricetta della nonna", en: "Grandma's recipe"}
+  title: {it: "Benvenuto!", en: "Welcome!"}
   sentences:
-    - {it: "Nonna, dimmi la tua ricetta!", en: "Grandma, tell me your recipe!"}
-    - {it: "Allora, prendi una pentola grande.", en: "Well, take a big pot."}
-    - {it: "Quando l'acqua bolle, aggiungi il sale e la pasta.", en: "When the water boils, add the salt and the pasta."}
-    - {it: "Taglia i pomodori e la cipolla.", en: "Cut the tomatoes and the onion."}
-    - {it: "Cucina il sugo con olio e basilico.", en: "Cook the sauce with oil and basil."}
-    - {it: "Non dimenticare il formaggio!", en: "Don't forget the cheese!"}
-    - {it: "Assaggia: com'è?", en: "Taste it: how is it?"}
-    - {it: "È perfetta, nonna!", en: "It's perfect, grandma!"}
-  new_words: [perfetto]
+    - {it: "Paolo arriva a casa di Elena.", en: "Paolo arrives at Elena's house."}
+    - {it: "\"Entra, entra! Dammi la giacca.\"", en: "\"Come in, come in! Give me your jacket.\""}
+    - {it: "\"Siediti sul divano e aspettami qui.\"", en: "\"Sit on the sofa and wait for me here.\""}
+    - {it: "Elena va in cucina e torna con due tazze di tè.", en: "Elena goes into the kitchen and comes back with two cups of tea."}
+    - {it: "\"Prendi lo zucchero, se vuoi.\"", en: "\"Take some sugar, if you like.\""}
+    - {it: "Poi gli mostra la casa: \"Guarda, questa è la mia camera.\"", en: "Then she shows him the house: \"Look, this is my room.\""}
+    - {it: "Paolo dice: \"Che bella casa!\"", en: "Paolo says: \"What a beautiful house!\""}
   questions:
-    - q: {en: "What do you add when the water boils?"}
-      options: [{en: "The salt and the pasta"}, {en: "The cheese"}, {en: "The tomatoes"}]
+    - q: {en: "Whose house is it?"}
+      options: [{en: "Elena's"}, {en: "Paolo's"}, {en: "A friend's"}]
       answer: 0
-    - q: {en: "What do you cut?"}
-      options: [{en: "Tomatoes and onion"}, {en: "Bread and cheese"}, {en: "Basil and garlic"}]
+    - q: {en: "What does Elena bring from the kitchen?"}
+      options: [{en: "Two cups of tea"}, {en: "Two coffees"}, {en: "A cake"}]
       answer: 0
-    - q: {en: "What must you not forget?"}
-      options: [{en: "The cheese"}, {en: "The pot"}, {en: "The oil"}]
+    - q: {en: "Where does Paolo sit?"}
+      prompt: "Dove si siede Paolo?"
+      options: ["sul divano", "in cucina", "in giardino"]
       answer: 0

@@ -1,44 +1,48 @@
 # Graded mini-stories for unit u13 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
-- id: u13-gita
+# New in pack 1.5 (the topic restructure, tosk/docs/topic-split.md): written from core vocabulary.
+- id: u13-sorelle
   unit: u13
-  title: {it: "In montagna", en: "In the mountains"}
+  title: {it: "Due sorelle", en: "Two sisters"}
   sentences:
-    - {it: "Oggi stiamo camminando in montagna.", en: "Today we are walking in the mountains."}
-    - {it: "Il paesaggio è bellissimo.", en: "The landscape is very beautiful."}
-    - {it: "Qui l'aria è più fresca che in città.", en: "Here the air is fresher than in the city."}
-    - {it: "In questo bosco si vedono molti animali.", en: "In this wood you can see many animals."}
-    - {it: "Mio fratello è più veloce di me e arriva prima.", en: "My brother is faster than me and arrives first."}
-    - {it: "Dalla collina si vede il mare.", en: "From the hill you can see the sea."}
-    - {it: "È il giorno più bello dell'anno!", en: "It's the best day of the year!"}
+    - {it: "Anna e Sara sono sorelle, ma sono molto diverse.", en: "Anna and Sara are sisters, but they are very different."}
+    - {it: "Anna è più alta di Sara, ma Sara è più veloce.", en: "Anna is taller than Sara, but Sara is faster."}
+    - {it: "Anna è la più seria della famiglia.", en: "Anna is the most serious in the family."}
+    - {it: "Sara ride sempre: è meno seria di sua sorella.", en: "Sara is always laughing: she is less serious than her sister."}
+    - {it: "In questo momento stanno preparando la cena.", en: "Right now they are making dinner."}
+    - {it: "Anna dice che a casa si mangia meglio che al ristorante.", en: "Anna says that at home you eat better than at a restaurant."}
+    - {it: "Sara non è d'accordo, ma la pasta di Anna è ottima.", en: "Sara doesn't agree, but Anna's pasta is excellent."}
+    - {it: "Alla fine ne mangiano due piatti!", en: "In the end they eat two plates of it!"}
   questions:
-    - q: {en: "What are they doing today?"}
-      options: [{en: "Walking in the mountains"}, {en: "Swimming in the sea"}, {en: "Working in the city"}]
+    - q: {en: "Who is taller?"}
+      prompt: "Chi è più alta?"
+      options: ["Anna", "Sara", "la madre"]
       answer: 0
-    - q: {en: "Who is faster?"}
-      options: [{en: "The brother"}, {en: "The narrator"}, {en: "Nobody"}]
+    - q: {en: "What are they doing right now?"}
+      options: [{en: "Making dinner"}, {en: "Eating at a restaurant"}, {en: "Watching television"}]
       answer: 0
-    - q: {en: "What can you see from the hill?"}
-      options: [{en: "The sea"}, {en: "The city"}, {en: "A lake"}]
+    - q: {en: "Where does Anna think you eat better?"}
+      options: [{en: "At home"}, {en: "At a restaurant"}, {en: "At grandma's"}]
       answer: 0
 
-- id: u13-citta
+- id: u13-milano
   unit: u13
-  title: {it: "La città cambia", en: "The city is changing"}
+  title: {it: "Una vita diversa", en: "A different life"}
   sentences:
-    - {it: "La nostra città sta cambiando molto.", en: "Our city is changing a lot."}
-    - {it: "Il governo sta costruendo nuove case in periferia.", en: "The government is building new houses on the outskirts."}
-    - {it: "Il sindaco dice che la vita qui è migliore di prima.", en: "The mayor says that life here is better than before."}
-    - {it: "Ma il traffico è peggiore e l'inquinamento aumenta.", en: "But the traffic is worse and pollution is increasing."}
-    - {it: "Molti cittadini protestano in piazza.", en: "Many citizens are protesting in the square."}
-    - {it: "In città si parla molto di ambiente.", en: "In the city people talk a lot about the environment."}
-  new_words: [aumentare]
+    - {it: "Da un anno Francesca vive a Milano.", en: "Francesca has been living in Milan for a year."}
+    - {it: "La vita qui è più cara che nel suo paese.", en: "Life here is more expensive than in her village."}
+    - {it: "Le case sono più piccole e più care.", en: "The houses are smaller and more expensive."}
+    - {it: "Ma il lavoro è migliore e si guadagna di più.", en: "But the work is better and you earn more."}
+    - {it: "Francesca sta imparando molte cose nuove.", en: "Francesca is learning lots of new things."}
+    - {it: "Il suo ufficio è in un edificio altissimo.", en: "Her office is in a very tall building."}
+    - {it: "La sera si sente un po' triste e pensa alla sua famiglia.", en: "In the evening she feels a bit sad and thinks about her family."}
+    - {it: "Ci torna ogni mese per vedere i genitori.", en: "She goes back there every month to see her parents."}
   questions:
-    - q: {en: "What is the government building?"}
-      options: [{en: "New houses on the outskirts"}, {en: "A new station"}, {en: "A motorway"}]
+    - q: {en: "How long has Francesca lived in Milan?"}
+      options: [{en: "For a year"}, {en: "For ten years"}, {en: "For a month"}]
       answer: 0
-    - q: {en: "What is worse now?"}
-      options: [{en: "The traffic"}, {en: "The weather"}, {en: "The food"}]
+    - q: {en: "What is better in Milan?"}
+      options: [{en: "The work"}, {en: "The houses"}, {en: "The food"}]
       answer: 0
-    - q: {en: "What do people talk about a lot?"}
-      options: [{en: "The environment"}, {en: "Football"}, {en: "The weather"}]
+    - q: {en: "How often does she go home?"}
+      options: [{en: "Every month"}, {en: "Every week"}, {en: "Never"}]
       answer: 0

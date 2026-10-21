@@ -1,26 +1,48 @@
 # Graded mini-stories for unit u15 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
 # The passato remoto is for reading only: these stories are where the learner meets it in context.
-- id: u15-favola
+# New in pack 1.5 (the topic restructure, tosk/docs/topic-split.md): written from core vocabulary.
+- id: u15-ponte
   unit: u15
-  title: {it: "La figlia del re", en: "The king's daughter"}
+  title: {it: "Il ponte", en: "The bridge"}
   sentences:
-    - {it: "Questo è il libro di cui ti ho parlato.", en: "This is the book I told you about."}
-    - {it: "C'era una volta un re che aveva tre figlie.", en: "Once upon a time there was a king who had three daughters."}
-    - {it: "La figlia minore, la quale era molto saggia, partì senza nessuno.", en: "The youngest daughter, who was very wise, left without anyone."}
-    - {it: "Viaggiò per molti paesi e conobbe molte persone.", en: "She travelled through many countries and met many people."}
-    - {it: "Un giorno trovò un castello in una foresta.", en: "One day she found a castle in a forest."}
-    - {it: "Lì visse un anno con un principe gentile.", en: "There she lived for a year with a kind prince."}
-    - {it: "Alla fine tornò a casa e diventò regina.", en: "In the end she went home and became queen."}
+    - {it: "Molti anni fa, in un piccolo paese, viveva un uomo povero.", en: "Many years ago, in a small village, there lived a poor man."}
+    - {it: "Ogni giorno passava sul vecchio ponte per andare al lavoro.", en: "Every day he crossed the old bridge to go to work."}
+    - {it: "Una notte il ponte cadde.", en: "One night the bridge fell down."}
+    - {it: "L'uomo decise di costruire un ponte nuovo.", en: "The man decided to build a new bridge."}
+    - {it: "Lavorò per tre anni, da solo, giorno e notte.", en: "He worked for three years, alone, day and night."}
+    - {it: "La gente del paese rideva di lui.", en: "The people of the village laughed at him."}
+    - {it: "Ma quando finì il ponte, tutti capirono.", en: "But when he finished the bridge, everyone understood."}
+    - {it: "Il ponte su cui passiamo oggi è ancora il suo.", en: "The bridge we cross today is still his."}
   questions:
-    - q: {en: "How many daughters did the king have?"}
+    - q: {en: "What happened one night?"}
+      options: [{en: "The bridge fell down"}, {en: "The man left"}, {en: "The village burned"}]
+      answer: 0
+    - q: {en: "How long did the man work?"}
+      options: [{en: "Three years"}, {en: "Three months"}, {en: "Ten years"}]
+      answer: 0
+    - q: {en: "What did the people of the village do?"}
+      options: [{en: "They laughed at him"}, {en: "They helped him"}, {en: "They paid him"}]
+      answer: 0
+
+- id: u15-quaderno
+  unit: u15
+  title: {it: "Il quaderno del nonno", en: "Grandpa's notebook"}
+  sentences:
+    - {it: "Dopo la morte del nonno, trovai un vecchio quaderno.", en: "After my grandfather's death, I found an old notebook."}
+    - {it: "Era il quaderno in cui scriveva da giovane.", en: "It was the notebook in which he wrote as a young man."}
+    - {it: "Nel 1950 il nonno lasciò il suo paese.", en: "In 1950 grandpa left his village."}
+    - {it: "Partì da solo e arrivò in una grande città.", en: "He left alone and arrived in a big city."}
+    - {it: "Lì conobbe la nonna, che lavorava in un bar.", en: "There he met grandma, who worked in a café."}
+    - {it: "Un anno dopo si sposarono.", en: "A year later they got married."}
+    - {it: "Ebbero tre figli e una casa piena di amici.", en: "They had three children and a house full of friends."}
+    - {it: "Leggendo il quaderno, capii molte cose della sua vita.", en: "Reading the notebook, I understood many things about his life."}
+  questions:
+    - q: {en: "What did the narrator find?"}
+      options: [{en: "An old notebook"}, {en: "A letter"}, {en: "A photo"}]
+      answer: 0
+    - q: {en: "Where did grandpa meet grandma?"}
+      options: [{en: "In a big city"}, {en: "In his village"}, {en: "On a train"}]
+      answer: 0
+    - q: {en: "How many children did they have?"}
       options: [{en: "Three"}, {en: "Two"}, {en: "One"}]
-      answer: 0
-    - q: {en: "What was the youngest daughter like?"}
-      options: [{en: "Very wise"}, {en: "Very lazy"}, {en: "Very rich"}]
-      answer: 0
-    - q: {en: "What did she find in the forest?"}
-      options: [{en: "A castle"}, {en: "A lake"}, {en: "A dragon"}]
-      answer: 0
-    - q: {en: "What did she become in the end?"}
-      options: [{en: "Queen"}, {en: "A writer"}, {en: "A doctor"}]
       answer: 0

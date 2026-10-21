@@ -1,0 +1,26 @@
+# Graded mini-stories of the topic moda (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# They were stories of main-tree units until the topic restructure (tosk/docs/topic-split.md) and moved
+# here with their skills; their ids are kept, so reading progress is kept.
+- id: u8-spesa
+  unit: moda-u1
+  title: {it: "La spesa per la festa", en: "Shopping for the party", nl: "Boodschappen voor het feest"}
+  sentences:
+    - {it: "Domani Elena farà la spesa al supermercato.", en: "Tomorrow Elena will do the shopping at the supermarket.", nl: "Morgen doet Elena boodschappen in de supermarkt."}
+    - {it: "Comprerà pane, latte, frutta e verdura.", en: "She'll buy bread, milk, fruit and vegetables.", nl: "Ze koopt brood, melk, fruit en groente."}
+    - {it: "Per la festa di Paolo prenderà anche una torta.", en: "For Paolo's party she'll also get a cake.", nl: "Voor het feest van Paolo neemt ze ook een taart."}
+    - {it: "Il regalo è già pronto: un libro e una cravatta.", en: "The present is already ready: a book and a tie.", nl: "Het cadeau is al klaar: een boek en een stropdas."}
+    - {it: "Alla cassa pagherà con trenta euro.", en: "At the checkout she'll pay with thirty euros.", nl: "Bij de kassa betaalt ze met dertig euro."}
+    - {it: "Il commesso le darà lo scontrino e il resto.", en: "The shop assistant will give her the receipt and the change.", nl: "De verkoper geeft haar de kassabon en het wisselgeld."}
+    - {it: "Poi tornerà a casa in autobus.", en: "Then she'll go home by bus.", nl: "Daarna gaat ze met de bus naar huis."}
+    - {it: "La festa sarà molto bella!", en: "The party will be lovely!", nl: "Het wordt een heel mooi feest!"}
+  questions:
+    - q: {en: "Where will Elena do the shopping?", nl: "Waar doet Elena boodschappen?"}
+      prompt: "Dove farà la spesa Elena?"
+      options: ["al supermercato", "al mercato", "in farmacia"]
+      answer: 0
+    - q: {en: "What is the present for Paolo?", nl: "Wat is het cadeau voor Paolo?"}
+      options: [{en: "A book and a tie", nl: "Een boek en een stropdas"}, {en: "A cake", nl: "Een taart"}, {en: "A watch", nl: "Een horloge"}]
+      answer: 0
+    - q: {en: "How will Elena go home?", nl: "Hoe gaat Elena naar huis?"}
+      options: ["in autobus", "in taxi", "in macchina"]
+      answer: 0

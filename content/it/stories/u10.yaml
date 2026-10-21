@@ -1,51 +1,50 @@
 # Graded mini-stories for unit u10 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
 # From unit 10 on the stories are English only (owner decision 2026-10-20).
-- id: u10-mattina
+# New in pack 1.5 (the topic restructure, tosk/docs/topic-split.md): written from core vocabulary.
+- id: u10-lunedi
   unit: u10
-  title: {it: "Una mattina difficile", en: "A difficult morning"}
+  title: {it: "Lunedì mattina", en: "Monday morning"}
   sentences:
-    - {it: "Luca si sveglia sempre alle sette.", en: "Luca always wakes up at seven."}
-    - {it: "Oggi non sente la sveglia e si alza alle nove.", en: "Today he doesn't hear the alarm clock and gets up at nine."}
-    - {it: "Si lava in fretta e si veste.", en: "He has a quick wash and gets dressed."}
-    - {it: "Non fa colazione perché è in ritardo.", en: "He doesn't have breakfast because he is late."}
-    - {it: "Al lavoro si sente stanco e ha mal di testa.", en: "At work he feels tired and has a headache."}
-    - {it: "Va dal medico, che gli dà una medicina.", en: "He goes to the doctor, who gives him a medicine."}
-    - {it: "La sera si riposa sul divano e si addormenta presto.", en: "In the evening he rests on the sofa and falls asleep early."}
+    - {it: "Ogni lunedì Giovanni si sveglia alle sette.", en: "Every Monday Giovanni wakes up at seven."}
+    - {it: "Si alza subito, ma si sente ancora stanco.", en: "He gets up straight away, but he still feels tired."}
+    - {it: "Si lava, si veste e prepara il caffè.", en: "He washes, gets dressed and makes coffee."}
+    - {it: "Poi si siede in cucina e guarda il telefono.", en: "Then he sits down in the kitchen and looks at his phone."}
+    - {it: "Alle otto esce di casa, ma si ferma subito.", en: "At eight he leaves the house, but stops at once."}
+    - {it: "Si è dimenticato ancora le chiavi!", en: "He has forgotten his keys again!"}
+    - {it: "Allora torna a casa e le trova sul tavolo.", en: "So he goes back home and finds them on the table."}
+    - {it: "Arriva in ufficio tardi, ma non si preoccupa.", en: "He gets to the office late, but he doesn't worry."}
   questions:
-    - q: {en: "Why does Luca get up late?"}
-      options: [{en: "He doesn't hear the alarm clock"}, {en: "He is ill"}, {en: "It is Sunday"}]
+    - q: {en: "What time does Giovanni wake up?"}
+      options: [{en: "At seven"}, {en: "At eight"}, {en: "At six"}]
       answer: 0
-    - q: {en: "What doesn't he do this morning?"}
-      options: [{en: "Have breakfast"}, {en: "Get dressed"}, {en: "Wash"}]
+    - q: {en: "How does he feel when he gets up?"}
+      options: [{en: "Still tired"}, {en: "Happy"}, {en: "Ill"}]
       answer: 0
-    - q: {en: "How does he feel at work?"}
-      options: [{en: "Tired, with a headache"}, {en: "Happy and relaxed"}, {en: "Bored"}]
-      answer: 0
-    - q: {en: "What does he do in the evening?"}
-      options: [{en: "He rests and falls asleep early"}, {en: "He goes out with friends"}, {en: "He works late"}]
+    - q: {en: "What has he forgotten?"}
+      prompt: "Che cosa si è dimenticato?"
+      options: ["le chiavi", "il telefono", "il caffè"]
       answer: 0
 
-- id: u10-banca
+- id: u10-matrimonio
   unit: u10
-  title: {it: "In banca", en: "At the bank"}
+  title: {it: "Il matrimonio di Lucia", en: "Lucia's wedding"}
   sentences:
-    - {it: "Sara deve pagare l'affitto e va in banca.", en: "Sara has to pay the rent and goes to the bank."}
-    - {it: "Davanti allo sportello c'è una lunga fila.", en: "There is a long queue in front of the counter."}
-    - {it: "Sara si siede e aspetta.", en: "Sara sits down and waits."}
-    - {it: "Dopo venti minuti un impiegato la chiama.", en: "After twenty minutes a clerk calls her."}
-    - {it: "Sara compila un modulo e firma.", en: "Sara fills in a form and signs."}
-    - {it: "Poi vede che non ha la carta di credito.", en: "Then she sees that she doesn't have her credit card."}
-    - {it: "Si arrabbia, ma l'impiegato è gentile e la aiuta.", en: "She gets angry, but the clerk is kind and helps her."}
+    - {it: "Sabato Lucia si sposa con Roberto.", en: "On Saturday Lucia is marrying Roberto."}
+    - {it: "La mattina si prepara con la mamma e la sorella.", en: "In the morning she gets ready with her mum and her sister."}
+    - {it: "Il suo vestito è bianco e lungo.", en: "Her dress is white and long."}
+    - {it: "In chiesa ci sono tutti i loro amici.", en: "All their friends are in the church."}
+    - {it: "Roberto aspetta davanti alla chiesa e sorride.", en: "Roberto waits in front of the church and smiles."}
+    - {it: "Dopo, tutti mangiano in un ristorante sul lago.", en: "Afterwards everyone eats at a restaurant on the lake."}
+    - {it: "La sera Lucia e Roberto ballano e si divertono molto.", en: "In the evening Lucia and Roberto dance and have a lot of fun."}
+    - {it: "Si sono innamorati a scuola, dieci anni fa.", en: "They fell in love at school, ten years ago."}
   questions:
-    - q: {en: "Why does Sara go to the bank?"}
-      options: [{en: "To pay the rent"}, {en: "To open an account"}, {en: "To meet a friend"}]
+    - q: {en: "Who is Lucia marrying?"}
+      prompt: "Con chi si sposa Lucia?"
+      options: ["con Roberto", "con Marco", "con Paolo"]
       answer: 0
-    - q: {en: "What is there in front of the counter?"}
-      options: [{en: "A long queue"}, {en: "A sofa"}, {en: "A cash machine"}]
+    - q: {en: "Where do they eat afterwards?"}
+      options: [{en: "At a restaurant on the lake"}, {en: "At home"}, {en: "In the church"}]
       answer: 0
-    - q: {en: "What does she fill in?"}
-      options: [{en: "A form"}, {en: "A letter"}, {en: "A receipt"}]
-      answer: 0
-    - q: {en: "What doesn't she have?"}
-      options: [{en: "Her credit card"}, {en: "Her passport"}, {en: "Her phone"}]
+    - q: {en: "When did they fall in love?"}
+      options: [{en: "Ten years ago, at school"}, {en: "Last year"}, {en: "At work"}]
       answer: 0

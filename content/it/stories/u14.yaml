@@ -1,26 +1,4 @@
 # Graded mini-stories for unit u14 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
-- id: u14-colloquio
-  unit: u14
-  title: {it: "Il colloquio", en: "The interview"}
-  sentences:
-    - {it: "Domani Elena ha un colloquio di lavoro.", en: "Tomorrow Elena has a job interview."}
-    - {it: "Spera che il direttore sia simpatico.", en: "She hopes the manager is nice."}
-    - {it: "Sua madre pensa che debba vestirsi bene.", en: "Her mother thinks she should dress well."}
-    - {it: "Elena è timida, però è molto intelligente.", en: "Elena is shy, but she is very clever."}
-    - {it: "Benché sia nervosa, risponde a molte domande.", en: "Although she is nervous, she answers many questions."}
-    - {it: "Il direttore vuole che cominci lunedì.", en: "The manager wants her to start on Monday."}
-    - {it: "Elena è felice: finalmente ha un lavoro!", en: "Elena is happy: at last she has a job!"}
-  questions:
-    - q: {en: "What does Elena have tomorrow?"}
-      options: [{en: "A job interview"}, {en: "An exam"}, {en: "A party"}]
-      answer: 0
-    - q: {en: "What is Elena like?"}
-      options: [{en: "Shy but clever"}, {en: "Lazy and rude"}, {en: "Funny and loud"}]
-      answer: 0
-    - q: {en: "When does she start?"}
-      options: [{en: "On Monday"}, {en: "Tomorrow"}, {en: "Next year"}]
-      answer: 0
-
 - id: u14-lotteria
   unit: u14
   title: {it: "Se vincessi...", en: "If I won..."}
@@ -40,4 +18,26 @@
       answer: 0
     - q: {en: "Where do they put the money?"}
       options: [{en: "In the bank"}, {en: "Under the bed"}, {en: "In the lottery"}]
+      answer: 0
+
+- id: u14-partenza
+  unit: u14
+  title: {it: "Prima che tu parta", en: "Before you leave"}
+  sentences:
+    - {it: "Giulia partirà per un lungo viaggio.", en: "Giulia will set off on a long journey."}
+    - {it: "Sua madre pensa che il viaggio sia pericoloso.", en: "Her mother thinks the trip is dangerous."}
+    - {it: "Suo padre invece crede che sia un'esperienza importante.", en: "Her father, on the other hand, thinks it's an important experience."}
+    - {it: "Prima che Giulia parta, fanno una cena insieme.", en: "Before Giulia leaves, they have dinner together."}
+    - {it: "Il padre le dice: \"Benché tu sia giovane, sei molto forte.\"", en: "Her father tells her: \"Although you are young, you are very strong.\""}
+    - {it: "La madre le chiede di scrivere appena arriva.", en: "Her mother asks her to write as soon as she arrives."}
+    - {it: "Giulia sorride: \"Se fosse possibile, vi porterei con me!\"", en: "Giulia smiles: \"If it were possible, I'd take you with me!\""}
+  questions:
+    - q: {en: "What does her mother think?"}
+      options: [{en: "That the trip is dangerous"}, {en: "That Giulia is lazy"}, {en: "That the trip is too short"}]
+      answer: 0
+    - q: {en: "What do they do before Giulia leaves?"}
+      options: [{en: "They have dinner together"}, {en: "They go to the seaside"}, {en: "They buy a car"}]
+      answer: 0
+    - q: {en: "What would Giulia do if it were possible?"}
+      options: [{en: "Take her parents with her"}, {en: "Stay at home"}, {en: "Leave tomorrow"}]
       answer: 0

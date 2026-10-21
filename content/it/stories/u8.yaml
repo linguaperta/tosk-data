@@ -1,48 +1,50 @@
 # Graded mini-stories for unit u8 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
-- id: u8-concerto
+# New in pack 1.5 (the topic restructure, tosk/docs/topic-split.md): written from core vocabulary.
+- id: u8-milano
   unit: u8
-  title: {it: "Il concerto", en: "The concert", nl: "Het concert"}
+  title: {it: "Tra un anno", en: "In a year", nl: "Over een jaar"}
   sentences:
-    - {it: "Sabato Marco andrà a un concerto con Giulia.", en: "On Saturday Marco will go to a concert with Giulia.", nl: "Zaterdag gaat Marco met Giulia naar een concert."}
-    - {it: "Domani compreranno i biglietti.", en: "Tomorrow they'll buy the tickets.", nl: "Morgen kopen ze de kaartjes."}
-    - {it: "Prima del concerto mangeranno in un ristorante.", en: "Before the concert they'll eat in a restaurant.", nl: "Voor het concert gaan ze in een restaurant eten."}
-    - {it: "Giulia vuole una foto con il cantante.", en: "Giulia wants a photo with the singer.", nl: "Giulia wil een foto met de zanger."}
-    - {it: "La musica sarà forte e loro balleranno.", en: "The music will be loud and they'll dance.", nl: "De muziek zal hard zijn en ze zullen dansen."}
-    - {it: "Torneranno a casa molto tardi.", en: "They'll get home very late.", nl: "Ze komen heel laat thuis."}
-    - {it: "Domenica Marco dormirà fino a tardi!", en: "On Sunday Marco will sleep in!", nl: "Zondag slaapt Marco lekker uit!"}
-  new_words: [cantante]
+    - {it: "Tra un anno Sara finirà la scuola.", en: "In a year Sara will finish school.", nl: "Over een jaar maakt Sara de school af."}
+    - {it: "Dopo, andrà a vivere a Milano.", en: "Afterwards she'll go and live in Milan.", nl: "Daarna gaat ze in Milaan wonen."}
+    - {it: "Studierà all'università e lavorerà in un bar.", en: "She'll study at university and work in a café.", nl: "Ze gaat studeren aan de universiteit en werken in een café."}
+    - {it: "Sua madre dice che la città sarà troppo cara.", en: "Her mother says the city will be too expensive.", nl: "Haar moeder zegt dat de stad te duur zal zijn."}
+    - {it: "Ma Sara troverà un piccolo appartamento con due ragazze.", en: "But Sara will find a small flat with two girls.", nl: "Maar Sara zal met twee meisjes een klein appartement vinden."}
+    - {it: "La domenica telefonerà sempre a casa.", en: "On Sundays she'll always call home.", nl: "Op zondag zal ze altijd naar huis bellen."}
+    - {it: "E le vacanze le passerà con la sua famiglia.", en: "And she'll spend the holidays with her family.", nl: "En de vakanties brengt ze door met haar familie."}
   questions:
-    - q: {en: "When is the concert?", nl: "Wanneer is het concert?"}
-      options: ["sabato", "domenica", "venerdì"]
+    - q: {en: "What will Sara do in a year?", nl: "Wat doet Sara over een jaar?"}
+      options: [{en: "Finish school", nl: "De school afmaken"}, {en: "Get married", nl: "Trouwen"}, {en: "Buy a car", nl: "Een auto kopen"}]
       answer: 0
-    - q: {en: "What does Giulia want?", nl: "Wat wil Giulia?"}
-      prompt: "Che cosa vuole Giulia?"
-      options: ["una foto con il cantante", "una chitarra nuova", "un biglietto gratis"]
+    - q: {en: "Where will she live?", nl: "Waar gaat ze wonen?"}
+      prompt: "Dove andrà a vivere Sara?"
+      options: ["a Milano", "a Roma", "a Napoli"]
       answer: 0
-    - q: {en: "What will Marco do on Sunday?", nl: "Wat gaat Marco zondag doen?"}
-      options: [{en: "Sleep late", nl: "Uitslapen"}, {en: "Play football", nl: "Voetballen"}, {en: "Go to another concert", nl: "Naar nog een concert gaan"}]
+    - q: {en: "What does her mother say?", nl: "Wat zegt haar moeder?"}
+      options: [{en: "The city will be too expensive", nl: "De stad zal te duur zijn"}, {en: "The flat is too small", nl: "Het appartement is te klein"}, {en: "Sara works too much", nl: "Sara werkt te veel"}]
+      answer: 0
+    - q: {en: "When will she call home?", nl: "Wanneer belt ze naar huis?"}
+      options: [{en: "On Sundays", nl: "Op zondag"}, {en: "On Mondays", nl: "Op maandag"}, {en: "Never", nl: "Nooit"}]
       answer: 0
 
-- id: u8-spesa
+- id: u8-sabato
   unit: u8
-  title: {it: "La spesa per la festa", en: "Shopping for the party", nl: "Boodschappen voor het feest"}
+  title: {it: "Sabato", en: "Saturday", nl: "Zaterdag"}
   sentences:
-    - {it: "Domani Elena farà la spesa al supermercato.", en: "Tomorrow Elena will do the shopping at the supermarket.", nl: "Morgen doet Elena boodschappen in de supermarkt."}
-    - {it: "Comprerà pane, latte, frutta e verdura.", en: "She'll buy bread, milk, fruit and vegetables.", nl: "Ze koopt brood, melk, fruit en groente."}
-    - {it: "Per la festa di Paolo prenderà anche una torta.", en: "For Paolo's party she'll also get a cake.", nl: "Voor het feest van Paolo neemt ze ook een taart."}
-    - {it: "Il regalo è già pronto: un libro e una cravatta.", en: "The present is already ready: a book and a tie.", nl: "Het cadeau is al klaar: een boek en een stropdas."}
-    - {it: "Alla cassa pagherà con trenta euro.", en: "At the checkout she'll pay with thirty euros.", nl: "Bij de kassa betaalt ze met dertig euro."}
-    - {it: "Il commesso le darà lo scontrino e il resto.", en: "The shop assistant will give her the receipt and the change.", nl: "De verkoper geeft haar de kassabon en het wisselgeld."}
-    - {it: "Poi tornerà a casa in autobus.", en: "Then she'll go home by bus.", nl: "Daarna gaat ze met de bus naar huis."}
-    - {it: "La festa sarà molto bella!", en: "The party will be lovely!", nl: "Het wordt een heel mooi feest!"}
+    - {it: "Sabato Marco e Anna non lavoreranno.", en: "On Saturday Marco and Anna won't work.", nl: "Zaterdag werken Marco en Anna niet."}
+    - {it: "La mattina dormiranno fino a tardi.", en: "In the morning they'll sleep until late.", nl: "'s Ochtends slapen ze lang uit."}
+    - {it: "Poi andranno al mercato in bicicletta.", en: "Then they'll go to the market by bike.", nl: "Dan gaan ze met de fiets naar de markt."}
+    - {it: "A pranzo mangeranno da Paolo, il fratello di Anna.", en: "For lunch they'll eat at Paolo's, Anna's brother.", nl: "Tussen de middag eten ze bij Paolo, de broer van Anna."}
+    - {it: "Paolo farà una pizza grande.", en: "Paolo will make a big pizza.", nl: "Paolo maakt een grote pizza."}
+    - {it: "Il pomeriggio verranno anche i loro amici.", en: "In the afternoon their friends will come too.", nl: "'s Middags komen hun vrienden ook."}
+    - {it: "La sera, stanchi ma contenti, torneranno a casa.", en: "In the evening, tired but happy, they'll go back home.", nl: "'s Avonds gaan ze moe maar tevreden naar huis."}
   questions:
-    - q: {en: "Where will Elena do the shopping?", nl: "Waar doet Elena boodschappen?"}
-      prompt: "Dove farà la spesa Elena?"
-      options: ["al supermercato", "al mercato", "in farmacia"]
+    - q: {en: "What won't Marco and Anna do on Saturday?", nl: "Wat doen Marco en Anna zaterdag niet?"}
+      options: [{en: "Work", nl: "Werken"}, {en: "Sleep", nl: "Slapen"}, {en: "Eat", nl: "Eten"}]
       answer: 0
-    - q: {en: "What is the present for Paolo?", nl: "Wat is het cadeau voor Paolo?"}
-      options: [{en: "A book and a tie", nl: "Een boek en een stropdas"}, {en: "A cake", nl: "Een taart"}, {en: "A watch", nl: "Een horloge"}]
+    - q: {en: "How will they go to the market?", nl: "Hoe gaan ze naar de markt?"}
+      options: [{en: "By bike", nl: "Met de fiets"}, {en: "By car", nl: "Met de auto"}, {en: "By bus", nl: "Met de bus"}]
       answer: 0
-    - q: {en: "How will Elena go home?", nl: "Hoe gaat Elena naar huis?"}
-      options: ["in autobus", "in taxi", "in macchina"]
+    - q: {en: "Who is Paolo?", nl: "Wie is Paolo?"}
+      prompt: "Chi è Paolo?"
+      options: ["il fratello di Anna", "il padre di Marco", "un amico di Marco"]
       answer: 0

@@ -1,28 +1,4 @@
 # Graded mini-stories for unit u4 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
-- id: u4-malata
-  unit: u4
-  title: {it: "Anna è malata", en: "Anna is ill", nl: "Anna is ziek"}
-  sentences:
-    - {it: "Oggi Anna non sta bene.", en: "Anna isn't well today.", nl: "Anna voelt zich vandaag niet goed."}
-    - {it: "Ha la febbre e sta a letto.", en: "She has a fever and stays in bed.", nl: "Ze heeft koorts en blijft in bed."}
-    - {it: "Sua madre porta una medicina e un tè caldo.", en: "Her mother brings some medicine and a hot tea.", nl: "Haar moeder brengt een medicijn en een warme thee."}
-    - {it: "Anna beve il tè e dorme molto.", en: "Anna drinks the tea and sleeps a lot.", nl: "Anna drinkt de thee en slaapt veel."}
-    - {it: "La sera il suo amico Marco telefona.", en: "In the evening her friend Marco phones.", nl: "'s Avonds belt haar vriend Marco."}
-    - {it: "\"Come stai?\" \"Sono stanca, ma sto già meglio.\"", en: "\"How are you?\" \"I'm tired, but I'm already better.\"", nl: "\"Hoe gaat het?\" \"Ik ben moe, maar het gaat al beter.\""}
-    - {it: "Il giorno dopo, Anna è di nuovo felice.", en: "The next day, Anna is happy again.", nl: "De volgende dag is Anna weer blij."}
-  new_words: [meglio]
-  questions:
-    - q: {en: "What's wrong with Anna?", nl: "Wat heeft Anna?"}
-      options: [{en: "She has a fever", nl: "Ze heeft koorts"}, {en: "Her foot hurts", nl: "Ze heeft pijn aan haar voet"}, {en: "She has a stomach ache", nl: "Ze heeft buikpijn"}]
-      answer: 0
-    - q: {en: "What does her mother bring?", nl: "Wat brengt haar moeder?"}
-      options: ["una medicina e un tè", "un caffè e una torta", "acqua fredda"]
-      answer: 0
-    - q: {en: "Who phones in the evening?", nl: "Wie belt er 's avonds?"}
-      prompt: "Chi telefona la sera?"
-      options: ["Marco", "la nonna", "il padre"]
-      answer: 0
-
 - id: u4-casa-nuova
   unit: u4
   title: {it: "La casa nuova", en: "The new house", nl: "Het nieuwe huis"}
@@ -48,4 +24,29 @@
       answer: 0
     - q: {en: "Who is coming tonight?", nl: "Wie komen er vanavond?"}
       options: [{en: "His friends", nl: "Zijn vrienden"}, {en: "His parents", nl: "Zijn ouders"}, {en: "His sister", nl: "Zijn zus"}]
+      answer: 0
+
+- id: u4-paolo
+  unit: u4
+  title: {it: "Mio fratello Paolo", en: "My brother Paolo", nl: "Mijn broer Paolo"}
+  sentences:
+    - {it: "Mio fratello Paolo è alto e forte.", en: "My brother Paolo is tall and strong.", nl: "Mijn broer Paolo is lang en sterk."}
+    - {it: "Ha venti anni e studia molto.", en: "He is twenty and he studies a lot.", nl: "Hij is twintig en hij studeert veel."}
+    - {it: "La sua camera è piccola e piena di libri.", en: "His room is small and full of books.", nl: "Zijn kamer is klein en vol boeken."}
+    - {it: "Ama il verde e il blu.", en: "He loves green and blue.", nl: "Hij houdt van groen en blauw."}
+    - {it: "La mattina beve un caffè e mangia una mela.", en: "In the morning he drinks a coffee and eats an apple.", nl: "'s Ochtends drinkt hij een koffie en eet hij een appel."}
+    - {it: "Poi lavora in un ristorante.", en: "Then he works in a restaurant.", nl: "Daarna werkt hij in een restaurant."}
+    - {it: "È un ragazzo bravo e gentile.", en: "He is a good and kind boy.", nl: "Hij is een goede en aardige jongen."}
+    - {it: "Sono contento di avere un fratello così.", en: "I'm happy to have a brother like him.", nl: "Ik ben blij dat ik zo'n broer heb."}
+  questions:
+    - q: {en: "What is Paolo like?", nl: "Hoe is Paolo?"}
+      prompt: "Com'è Paolo?"
+      options: ["alto e forte", "basso e lento", "vecchio e stanco"]
+      answer: 0
+    - q: {en: "What is his room like?", nl: "Hoe is zijn kamer?"}
+      options: [{en: "Small and full of books", nl: "Klein en vol boeken"}, {en: "Big and empty", nl: "Groot en leeg"}, {en: "Red and white", nl: "Rood en wit"}]
+      answer: 0
+    - q: {en: "Where does Paolo work?", nl: "Waar werkt Paolo?"}
+      prompt: "Dove lavora Paolo?"
+      options: ["in un ristorante", "a casa", "con suo padre"]
       answer: 0

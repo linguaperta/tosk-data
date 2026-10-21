@@ -1,0 +1,77 @@
+# Graded mini-stories of the topic natura (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# They were stories of main-tree units until the topic restructure (tosk/docs/topic-split.md) and moved
+# here with their skills; their ids are kept, so reading progress is kept.
+- id: u7-bambino
+  unit: natura-u1
+  title: {it: "Quando ero bambino", en: "When I was a child", nl: "Toen ik klein was"}
+  sentences:
+    - {it: "Quando ero bambino, vivevo in un piccolo paese.", en: "When I was a child, I lived in a small village.", nl: "Toen ik klein was, woonde ik in een klein dorp."}
+    - {it: "Avevamo un cane e due gatti.", en: "We had a dog and two cats.", nl: "We hadden een hond en twee katten."}
+    - {it: "D'estate giocavo nel bosco con mio fratello.", en: "In summer I played in the woods with my brother.", nl: "In de zomer speelde ik met mijn broer in het bos."}
+    - {it: "In inverno c'era spesso la neve.", en: "In winter there was often snow.", nl: "In de winter lag er vaak sneeuw."}
+    - {it: "Mia madre indossava sempre un cappotto rosso.", en: "My mother always wore a red coat.", nl: "Mijn moeder droeg altijd een rode jas."}
+    - {it: "La sera guardavamo le stelle dal giardino.", en: "In the evening we looked at the stars from the garden.", nl: "'s Avonds keken we vanuit de tuin naar de sterren."}
+    - {it: "Ero un bambino molto felice.", en: "I was a very happy child.", nl: "Ik was een heel gelukkig kind."}
+  questions:
+    - q: {en: "Where did he live as a child?", nl: "Waar woonde hij als kind?"}
+      prompt: "Dove viveva da bambino?"
+      options: ["in un piccolo paese", "in una grande città", "al mare"]
+      answer: 0
+    - q: {en: "Which animals did they have?", nl: "Welke dieren hadden ze?"}
+      options: [{en: "A dog and two cats", nl: "Een hond en twee katten"}, {en: "Two dogs and a cat", nl: "Twee honden en een kat"}, {en: "A horse", nl: "Een paard"}]
+      answer: 0
+    - q: {en: "What did his mother always wear?", nl: "Wat droeg zijn moeder altijd?"}
+      prompt: "Che cosa indossava sempre la madre?"
+      options: [{en: "A red coat", nl: "Een rode jas"}, {en: "A black hat", nl: "Een zwarte hoed"}, {en: "A green jacket", nl: "Een groen jasje"}]
+      answer: 0
+    - q: {en: "What did they do in the evening?", nl: "Wat deden ze 's avonds?"}
+      options: [{en: "They looked at the stars", nl: "Ze keken naar de sterren"}, {en: "They played in the woods", nl: "Ze speelden in het bos"}, {en: "They watched television", nl: "Ze keken televisie"}]
+      answer: 0
+
+- id: u7-pioggia
+  unit: natura-u1
+  title: {it: "Una passeggiata sotto la pioggia", en: "A walk in the rain", nl: "Een wandeling in de regen"}
+  names: [Rex]
+  new_words: [passeggiata]
+  sentences:
+    - {it: "Ieri pioveva e faceva freddo.", en: "Yesterday it was raining and it was cold.", nl: "Gisteren regende het en het was koud."}
+    - {it: "Luca era a casa con il suo cane, Rex.", en: "Luca was at home with his dog, Rex.", nl: "Luca was thuis met zijn hond, Rex."}
+    - {it: "Ma Rex voleva uscire.", en: "But Rex wanted to go out.", nl: "Maar Rex wilde naar buiten."}
+    - {it: "Allora Luca ha preso l'ombrello e la giacca.", en: "So Luca took his umbrella and his jacket.", nl: "Dus pakte Luca zijn paraplu en zijn jas."}
+    - {it: "Il parco era vuoto e c'era molto vento.", en: "The park was empty and it was very windy.", nl: "Het park was leeg en het waaide hard."}
+    - {it: "Rex correva felice nell'erba.", en: "Rex ran happily through the grass.", nl: "Rex rende vrolijk door het gras."}
+    - {it: "Quando sono tornati a casa, erano stanchi ma contenti.", en: "When they got home, they were tired but happy.", nl: "Toen ze thuiskwamen, waren ze moe maar tevreden."}
+  questions:
+    - q: {en: "What was the weather like yesterday?", nl: "Wat voor weer was het gisteren?"}
+      options: [{en: "Rainy and cold", nl: "Regenachtig en koud"}, {en: "Sunny and warm", nl: "Zonnig en warm"}, {en: "Foggy", nl: "Mistig"}]
+      answer: 0
+    - q: {en: "Who wanted to go out?", nl: "Wie wilde er naar buiten?"}
+      prompt: "Chi voleva uscire?"
+      options: ["il cane", "Luca", "il gatto"]
+      answer: 0
+    - q: {en: "What did Luca take?", nl: "Wat pakte Luca?"}
+      prompt: "Che cosa ha preso Luca?"
+      options: [{en: "His umbrella and his jacket", nl: "Zijn paraplu en zijn jas"}, {en: "His hat and his shoes", nl: "Zijn hoed en zijn schoenen"}, {en: "His bag and his glasses", nl: "Zijn tas en zijn bril"}]
+      answer: 0
+
+- id: u13-gita
+  unit: natura-u2
+  title: {it: "In montagna", en: "In the mountains"}
+  sentences:
+    - {it: "Oggi stiamo camminando in montagna.", en: "Today we are walking in the mountains."}
+    - {it: "Il paesaggio è bellissimo.", en: "The landscape is very beautiful."}
+    - {it: "Qui l'aria è più fresca che in città.", en: "Here the air is fresher than in the city."}
+    - {it: "In questo bosco si vedono molti animali.", en: "In this wood you can see many animals."}
+    - {it: "Mio fratello è più veloce di me e arriva prima.", en: "My brother is faster than me and arrives first."}
+    - {it: "Dalla collina si vede il mare.", en: "From the hill you can see the sea."}
+    - {it: "È il giorno più bello dell'anno!", en: "It's the best day of the year!"}
+  questions:
+    - q: {en: "What are they doing today?"}
+      options: [{en: "Walking in the mountains"}, {en: "Swimming in the sea"}, {en: "Working in the city"}]
+      answer: 0
+    - q: {en: "Who is faster?"}
+      options: [{en: "The brother"}, {en: "The narrator"}, {en: "Nobody"}]
+      answer: 0
+    - q: {en: "What can you see from the hill?"}
+      options: [{en: "The sea"}, {en: "The city"}, {en: "A lake"}]
+      answer: 0
