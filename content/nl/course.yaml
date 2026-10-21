@@ -8,7 +8,7 @@
 # introduces tense:{T} automatically). Each unit's skills require the previous unit's grammar, so
 # every later skill allows everything taught before it.
 id: nl
-version: 1.2.1
+version: 1.3.0
 title: {en: Dutch, nl: Nederlands}
 description:
   en: Dutch from the basics, with a strong focus on verbs, the perfect tense and de/het.
@@ -343,12 +343,6 @@ units:
         icon: animals
         requires: [shopping, travel]
         items: {tags: [animals]}
-      - id: clothes
-        kind: vocab
-        title: {en: Clothes, nl: Kleding}
-        icon: clothes
-        requires: [shopping, travel]
-        items: {tags: [clothes]}
       - id: verleden-tijd-weak
         kind: grammar
         title: {en: "Simple past: weak verbs", nl: "Verleden tijd: zwakke werkwoorden"}
@@ -386,3 +380,29 @@ units:
         icon: chat
         requires: [verleden-tijd-strong]
         items: {tags: [ideas]}
+
+# Topics (pack format 1.2, tosk/docs/pack-format.md "Topics"): themed side trees, each drawn as its own
+# map, with a branch leaving the main tree at its anchor. A skill moves into a topic only when the rest of
+# the main tree can skip it: no later main-tree skill requires it, selects its words, or uses them in a
+# story or for its sentences, and it teaches no grammar (tosk/docs/topic-split.md). Ids are kept, so
+# progress is kept.
+topics:
+  # clothes was a unit-7 skill until pack 1.3; it grows where shopping is taught (unit 6)
+  - id: kleding
+    title: {en: Clothes, nl: Kleding}
+    short_title: {en: Clothes, nl: Kleding}
+    description:
+      en: "What to wear: clothes, shoes and accessories."
+      nl: "Wat trek je aan: kleding, schoenen en accessoires."
+    icon: clothes
+    anchor: shopping
+    units:
+      - id: kleding-u1
+        title: {en: What to wear, nl: "Wat trek je aan?"}
+        skills:
+          - id: clothes
+            kind: vocab
+            title: {en: Clothes, nl: Kleding}
+            icon: clothes
+            requires: [shopping, travel]
+            items: {tags: [clothes]}

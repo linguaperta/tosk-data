@@ -1677,7 +1677,7 @@ items:
   - {lemma: licenziare, pos: verb, tags: [money], en: [to fire, to dismiss, to sack]}
   - {lemma: investire, pos: verb, tags: [money], en: [to invest, to run over]}
   - {lemma: produrre, pos: verb, tags: [money], en: [to produce]}
-  # --- crime and investigation (u15; Montalbano's world)
+  # --- crime and investigation (topic crimine, unit u15 until pack 1.4; Montalbano's world)
   - {lemma: commissario, pos: noun, tags: [crime], en: [inspector, police superintendent]}
   - {lemma: delitto, pos: noun, tags: [crime], en: [crime, murder]}
   - {lemma: omicidio, pos: noun, tags: [crime], en: [murder, homicide]}

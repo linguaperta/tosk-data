@@ -1,0 +1,27 @@
+# Graded mini-story of the topic crimine (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# It was a story of unit u15 until pack 1.4 and moved here with the crime skill (tosk/docs/topic-split.md);
+# its id is kept, so reading progress is kept. The passato remoto is for reading only.
+- id: u15-commissario
+  unit: crimine-u1
+  title: {it: "La lettera senza firma", en: "The unsigned letter"}
+  sentences:
+    - {it: "Una mattina il commissario arrivò presto in ufficio.", en: "One morning the inspector arrived at the office early."}
+    - {it: "Sul tavolo trovò una lettera senza firma.", en: "On the table he found an unsigned letter."}
+    - {it: "La lesse due volte e capì subito.", en: "He read it twice and understood at once."}
+    - {it: "Un testimone vide il ladro vicino alla banca.", en: "A witness saw the thief near the bank."}
+    - {it: "Il commissario chiamò l'ispettore e andarono insieme in banca.", en: "The inspector called the detective and they went to the bank together."}
+    - {it: "Lì trovarono le impronte del ladro.", en: "There they found the thief's fingerprints."}
+    - {it: "Il giorno dopo lo arrestarono.", en: "The next day they arrested him."}
+  questions:
+    - q: {en: "What did the inspector find on the table?"}
+      options: [{en: "A letter without a signature"}, {en: "A gun"}, {en: "Money"}]
+      answer: 0
+    - q: {en: "Who saw the thief?"}
+      options: [{en: "A witness"}, {en: "The inspector"}, {en: "A clerk"}]
+      answer: 0
+    - q: {en: "What did they find at the bank?"}
+      options: [{en: "The thief's fingerprints"}, {en: "The thief"}, {en: "Another letter"}]
+      answer: 0
+    - q: {en: "When did they arrest him?"}
+      options: [{en: "The next day"}, {en: "The same morning"}, {en: "A year later"}]
+      answer: 0

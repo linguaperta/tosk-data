@@ -8,7 +8,7 @@
 # introduces tense:{T} automatically). Each unit's skills require the previous unit's grammar, so
 # every later skill allows everything taught before it.
 id: it
-version: 1.3.0
+version: 1.4.0
 title: {en: Italian, nl: Italiaans}
 description:
   en: Italian from the basics to A2/B1, with a strong focus on verbs, moods and reading.
@@ -774,12 +774,6 @@ units:
         equivalent_tense: passato_prossimo
         verbs: {tense: passato_remoto, regular: true, top: 18, exclude: [dispiacere, importare]}
         exercises: [multiple_choice]
-      - id: crime
-        kind: vocab
-        title: {en: Crime and investigation, nl: Misdaad en onderzoek}
-        icon: question
-        requires: [passato-remoto]
-        items: {tags: [crime]}
       - id: passato-remoto-irregular
         kind: grammar
         title: {en: "Fu, ebbe, fece, disse: irregular passato remoto", nl: "Fu, ebbe, fece, disse: onregelmatig"}
@@ -803,3 +797,31 @@ units:
         icon: book
         requires: [passato-remoto-irregular]
         items: {tags: [reading]}
+
+# Topics (pack format 1.2, tosk/docs/pack-format.md "Topics"): themed side trees, each drawn as its own
+# map, with a branch leaving the main tree at its anchor. A skill moves into a topic only when the rest of
+# the main tree can skip it: no later main-tree skill requires it, selects its words, or uses them in a
+# story or for its sentences, and it teaches no grammar (tosk/docs/topic-split.md). Ids are kept, so
+# progress is kept.
+topics:
+  # crime (unit 15 until pack 1.4) grows where the passato remoto is taught: crime stories are told in
+  # it. uccidere stays a main-tree word (passato-remoto-irregular trains it); the story
+  # "La lettera senza firma" moved here with the skill.
+  - id: crimine
+    title: {en: Crime and investigation, nl: Misdaad en onderzoek}
+    short_title: {en: Crime, nl: Misdaad}
+    description:
+      en: "Police, witnesses and courts: the words of Italian crime stories, read with the passato remoto."
+      nl: "Politie, getuigen en rechters: de woorden van Italiaanse misdaadverhalen, gelezen met de passato remoto."
+    icon: search
+    anchor: passato-remoto
+    units:
+      - id: crimine-u1
+        title: {en: The inspector, nl: De commissaris}
+        skills:
+          - id: crime
+            kind: vocab
+            title: {en: Crime and investigation, nl: Misdaad en onderzoek}
+            icon: search
+            requires: [passato-remoto]
+            items: {tags: [crime]}
