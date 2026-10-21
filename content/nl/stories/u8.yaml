@@ -1,31 +1,4 @@
 # Graded mini-stories for unit u8 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
-- id: u8-concert
-  unit: u8
-  title: {nl: "Het concert van Sanne", en: "Sanne's concert"}
-  sentences:
-    - {nl: "Sanne speelt al tien jaar piano.", en: "Sanne has been playing the piano for ten years."}
-    - {nl: "Vanavond geeft ze haar eerste concert.", en: "Tonight she's giving her first concert."}
-    - {nl: "Haar hele familie komt, en ze is heel zenuwachtig.", en: "Her whole family is coming, and she's very nervous."}
-    - {nl: "Ze begint met een lied van haar opa.", en: "She starts with a song by her grandpa."}
-    - {nl: "Haar vingers zijn koud, maar ze speelt goed.", en: "Her fingers are cold, but she plays well."}
-    - {nl: "Aan het eind staan de mensen op.", en: "At the end the people stand up."}
-    - {nl: "Sanne lacht, en haar moeder huilt.", en: "Sanne laughs, and her mother cries."}
-  new_words: [eind]
-  questions:
-    - q: {en: "How long has Sanne been playing the piano?"}
-      options: [{en: "Ten years"}, {en: "Two years"}, {en: "One year"}]
-      answer: 0
-    - q: {en: "What does she start with?"}
-      options: ["met een lied van haar opa", "met een lied van haar vader", "met een lied van haar moeder"]
-      answer: 0
-    - q: {en: "What do the people do at the end?"}
-      options: [{en: "They stand up"}, {en: "They go home"}, {en: "They sing a song"}]
-      answer: 0
-    - q: {en: "Who cries?"}
-      prompt: "Wie huilt er?"
-      options: ["de moeder van Sanne", "Sanne", "de opa van Sanne"]
-      answer: 0
-
 - id: u8-droom
   unit: u8
   title: {nl: "Bram vliegt", en: "Bram flies"}
@@ -45,8 +18,31 @@
       answer: 0
     - q: {en: "Where did he fall?"}
       prompt: "Waar viel hij in?"
-      options: ["in een rivier", "in de zee", "in een bos"]
+      options: [{en: "Into a river"}, {en: "Into the sea"}, {en: "Into a lake"}]
       answer: 0
     - q: {en: "Who woke him up?"}
       options: [{en: "His mum"}, {en: "His grandma"}, {en: "A fish"}]
+      answer: 0
+
+- id: u8-keuze
+  unit: u8
+  title: {nl: "Een moeilijke keuze", en: "A difficult choice"}
+  sentences:
+    - {nl: "Sanne moet een belangrijke beslissing nemen.", en: "Sanne has to make an important decision."}
+    - {nl: "Ze kan in Amsterdam gaan studeren of in Utrecht.", en: "She can go and study in Amsterdam or in Utrecht."}
+    - {nl: "Haar ouders geven haar advies.", en: "Her parents give her advice."}
+    - {nl: "Haar moeder zegt: \"Kies wat jij wilt.\"", en: "Her mother says: \"Choose what you want.\""}
+    - {nl: "Haar vader heeft liever Utrecht.", en: "Her father prefers Utrecht."}
+    - {nl: "Sanne denkt lang na.", en: "Sanne thinks for a long time."}
+    - {nl: "Ze kiest voor Amsterdam: daar woont haar vriendin.", en: "She chooses Amsterdam: her friend lives there."}
+    - {nl: "Het was geen makkelijke keuze, maar ze is blij.", en: "It wasn't an easy choice, but she's happy."}
+  questions:
+    - q: {en: "What does Sanne have to do?"}
+      options: [{en: "Make an important decision"}, {en: "Find a job"}, {en: "Buy a house"}]
+      answer: 0
+    - q: {en: "Which city does her father prefer?"}
+      options: ["Utrecht", "Amsterdam", "Rotterdam"]
+      answer: 0
+    - q: {en: "Why does she choose Amsterdam?"}
+      options: [{en: "Her friend lives there"}, {en: "It is cheaper"}, {en: "Her parents live there"}]
       answer: 0

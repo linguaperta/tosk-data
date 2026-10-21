@@ -1,0 +1,24 @@
+# Graded mini-stories of the topic gezondheid (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# They were stories of main-tree units until the topic restructure (tosk/docs/topic-split.md) and moved
+# here with their skills; their ids are kept, so reading progress is kept.
+- id: u5-dokter
+  unit: gezondheid-u1
+  title: {nl: "Bij de dokter", en: "At the doctor's"}
+  sentences:
+    - {nl: "Tom voelt zich niet goed.", en: "Tom doesn't feel well."}
+    - {nl: "Zijn hoofd doet pijn en hij heeft koorts.", en: "His head hurts and he has a fever."}
+    - {nl: "Hij gaat meteen naar de dokter.", en: "He goes to the doctor straight away."}
+    - {nl: "De dokter kijkt in zijn mond en in zijn oren.", en: "The doctor looks in his mouth and in his ears."}
+    - {nl: "\"U bent ziek,\" zegt de dokter. \"U moet in bed blijven.\"", en: "\"You're ill,\" the doctor says. \"You have to stay in bed.\""}
+    - {nl: "Tom krijgt een medicijn voor de koorts.", en: "Tom gets some medicine for the fever."}
+    - {nl: "Drie dagen later voelt hij zich eindelijk goed.", en: "Three days later he finally feels well."}
+  questions:
+    - q: {en: "What's wrong with Tom?"}
+      options: [{en: "A headache and a fever"}, {en: "A sore knee"}, {en: "Toothache"}]
+      answer: 0
+    - q: {en: "What does the doctor say?"}
+      options: ["U moet in bed blijven.", "U moet naar huis gaan.", "U bent niet ziek."]
+      answer: 0
+    - q: {en: "When does Tom feel well again?"}
+      options: [{en: "Three days later"}, {en: "The next day"}, {en: "After a week"}]
+      answer: 0

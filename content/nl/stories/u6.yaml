@@ -1,30 +1,4 @@
 # Graded mini-stories for unit u6 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
-- id: u6-markt
-  unit: u6
-  title: {nl: "Op de markt", en: "At the market"}
-  new_words: [kosten]
-  sentences:
-    - {nl: "Op zaterdag gaat Emma naar de markt.", en: "On Saturday Emma goes to the market."}
-    - {nl: "Ze koopt groente, fruit en kaas.", en: "She buys vegetables, fruit and cheese."}
-    - {nl: "\"Wat kosten de aardbeien?\" vraagt ze.", en: "\"How much are the strawberries?\" she asks."}
-    - {nl: "\"Vijf euro,\" zegt de verkoper.", en: "\"Five euros,\" the salesman says."}
-    - {nl: "Dat vindt Emma duur, maar ze koopt ze toch.", en: "Emma thinks that's expensive, but she buys them anyway."}
-    - {nl: "Dan haalt ze brood in de supermarkt.", en: "Then she gets bread at the supermarket."}
-    - {nl: "Met een volle tas fietst ze naar huis.", en: "With a full bag she cycles home."}
-  questions:
-    - q: {en: "Where does Emma go on Saturday?"}
-      options: ["naar de markt", "naar de bioscoop", "naar het station"]
-      answer: 0
-    - q: {en: "How much are the strawberries?"}
-      options: [{en: "Five euros"}, {en: "Two euros"}, {en: "Ten euros"}]
-      answer: 0
-    - q: {en: "Does Emma buy the strawberries?"}
-      options: [{en: "Yes, even though they're expensive"}, {en: "No, they're too expensive"}, {en: "No, there aren't any"}]
-      answer: 0
-    - q: {en: "How does Emma go home?"}
-      options: [{en: "By bike"}, {en: "By bus"}, {en: "By car"}]
-      answer: 0
-
 - id: u6-eiland
   unit: u6
   title: {nl: "Naar het eiland", en: "To the island"}
@@ -50,4 +24,26 @@
       answer: 0
     - q: {en: "What will they do tomorrow?"}
       options: [{en: "Go cycling"}, {en: "Go swimming"}, {en: "Go home"}]
+      answer: 0
+
+- id: u6-stad
+  unit: u6
+  title: {nl: "Een dag in de stad", en: "A day in town"}
+  sentences:
+    - {nl: "Op zaterdag gaat Eva met haar oma naar de stad.", en: "On Saturday Eva goes into town with her grandma."}
+    - {nl: "Ze nemen de bus bij het station.", en: "They take the bus at the station."}
+    - {nl: "Eerst gaan ze naar het museum.", en: "First they go to the museum."}
+    - {nl: "Dan drinken ze koffie in een café op het plein.", en: "Then they drink coffee in a café on the square."}
+    - {nl: "Oma wil ook nog naar de kerk.", en: "Grandma also wants to go to the church."}
+    - {nl: "De kerk is heel oud en heel mooi.", en: "The church is very old and very beautiful."}
+    - {nl: "Om vijf uur nemen ze een taxi naar huis.", en: "At five o'clock they take a taxi home."}
+  questions:
+    - q: {en: "Who does Eva go into town with?"}
+      options: [{en: "Her grandma"}, {en: "Her mother"}, {en: "A friend"}]
+      answer: 0
+    - q: {en: "Where do they go first?"}
+      options: [{en: "To the museum"}, {en: "To the church"}, {en: "To a café"}]
+      answer: 0
+    - q: {en: "How do they go home?"}
+      options: [{en: "By taxi"}, {en: "By bus"}, {en: "On foot"}]
       answer: 0

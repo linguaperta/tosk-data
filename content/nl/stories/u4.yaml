@@ -42,7 +42,7 @@
       answer: 0
     - q: {en: "How is Lisa before an exam?"}
       prompt: "Hoe is Lisa voor een examen?"
-      options: ["zenuwachtig", "rustig", "boos"]
+      options: [{en: "Nervous"}, {en: "Calm"}, {en: "Angry"}]
       answer: 0
     - q: {en: "Who did she go out with?"}
       prompt: "Met wie is ze uitgegaan?"

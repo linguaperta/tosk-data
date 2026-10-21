@@ -1,0 +1,29 @@
+# Graded mini-stories of the topic vrije-tijd (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# They were stories of main-tree units until the topic restructure (tosk/docs/topic-split.md) and moved
+# here with their skills; their ids are kept, so reading progress is kept.
+- id: u8-concert
+  unit: vrije-tijd-u1
+  title: {nl: "Het concert van Sanne", en: "Sanne's concert"}
+  sentences:
+    - {nl: "Sanne speelt al tien jaar piano.", en: "Sanne has been playing the piano for ten years."}
+    - {nl: "Vanavond geeft ze haar eerste concert.", en: "Tonight she's giving her first concert."}
+    - {nl: "Haar hele familie komt, en ze is heel zenuwachtig.", en: "Her whole family is coming, and she's very nervous."}
+    - {nl: "Ze begint met een lied van haar opa.", en: "She starts with a song by her grandpa."}
+    - {nl: "Haar vingers zijn koud, maar ze speelt goed.", en: "Her fingers are cold, but she plays well."}
+    - {nl: "Aan het eind staan de mensen op.", en: "At the end the people stand up."}
+    - {nl: "Sanne lacht, en haar moeder huilt.", en: "Sanne laughs, and her mother cries."}
+  new_words: [eind]
+  questions:
+    - q: {en: "How long has Sanne been playing the piano?"}
+      options: [{en: "Ten years"}, {en: "Two years"}, {en: "One year"}]
+      answer: 0
+    - q: {en: "What does she start with?"}
+      options: ["met een lied van haar opa", "met een lied van haar vader", "met een lied van haar moeder"]
+      answer: 0
+    - q: {en: "What do the people do at the end?"}
+      options: [{en: "They stand up"}, {en: "They go home"}, {en: "They sing a song"}]
+      answer: 0
+    - q: {en: "Who cries?"}
+      prompt: "Wie huilt er?"
+      options: ["de moeder van Sanne", "Sanne", "de opa van Sanne"]
+      answer: 0

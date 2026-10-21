@@ -1,0 +1,51 @@
+# Graded mini-stories of the topic natuur (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# They were stories of main-tree units until the topic restructure (tosk/docs/topic-split.md) and moved
+# here with their skills; their ids are kept, so reading progress is kept.
+- id: u7-storm
+  unit: natuur-u1
+  title: {nl: "De storm", en: "The storm"}
+  sentences:
+    - {nl: "Gisteren was er een storm.", en: "Yesterday there was a storm."}
+    - {nl: "Het regende en het was koud.", en: "It was raining and it was cold."}
+    - {nl: "Lisa bleef in huis met haar kat.", en: "Lisa stayed indoors with her cat."}
+    - {nl: "Ze las een boek en dronk thee.", en: "She read a book and drank tea."}
+    - {nl: "Om acht uur wilde de kat naar buiten.", en: "At eight o'clock the cat wanted to go out."}
+    - {nl: "\"Nee, het is te koud!\" zei Lisa.", en: "\"No, it's too cold!\" Lisa said."}
+    - {nl: "Maar de kat ontsnapte toch.", en: "But the cat escaped anyway."}
+    - {nl: "Een uur later stond de kat voor de deur, koud en moe.", en: "An hour later the cat was at the door, cold and tired."}
+  new_words: [buiten]
+  questions:
+    - q: {en: "What was the weather like yesterday?"}
+      options: [{en: "Stormy, rainy and cold"}, {en: "Sunny and warm"}, {en: "Foggy"}]
+      answer: 0
+    - q: {en: "What did Lisa do?"}
+      options: [{en: "She read a book and drank tea"}, {en: "She went for a walk"}, {en: "She watched television"}]
+      answer: 0
+    - q: {en: "When was the cat back at the door?"}
+      prompt: "Wanneer stond de kat voor de deur?"
+      options: ["een uur later", "om tien uur", "nooit"]
+      answer: 0
+
+- id: u7-dieren
+  unit: natuur-u1
+  title: {nl: "Een dag met de dieren", en: "A day with the animals"}
+  sentences:
+    - {nl: "Zaterdag gingen we naar een park met dieren.", en: "On Saturday we went to a park with animals."}
+    - {nl: "Het was een warme dag.", en: "It was a warm day."}
+    - {nl: "Eerst zagen we de olifanten en de leeuwen.", en: "First we saw the elephants and the lions."}
+    - {nl: "De apen aten bananen.", en: "The monkeys were eating bananas."}
+    - {nl: "Mijn kleine broer was bang voor de slangen.", en: "My little brother was scared of the snakes."}
+    - {nl: "Mijn zus vond de vlinders het mooist.", en: "My sister liked the butterflies best."}
+    - {nl: "Om vijf uur gingen we moe maar blij naar huis.", en: "At five o'clock we went home tired but happy."}
+  questions:
+    - q: {en: "What was the weather like?"}
+      options: [{en: "Warm"}, {en: "Cold and rainy"}, {en: "Windy"}]
+      answer: 0
+    - q: {en: "What were the monkeys eating?"}
+      prompt: "Wat aten de apen?"
+      options: ["bananen", "appels", "brood"]
+      answer: 0
+    - q: {en: "Who was scared of the snakes?"}
+      prompt: "Wie was bang voor de slangen?"
+      options: ["mijn kleine broer", "mijn zus", "mijn vader"]
+      answer: 0

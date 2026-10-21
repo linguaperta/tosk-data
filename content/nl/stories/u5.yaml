@@ -1,26 +1,4 @@
 # Graded mini-stories for unit u5 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
-- id: u5-dokter
-  unit: u5
-  title: {nl: "Bij de dokter", en: "At the doctor's"}
-  sentences:
-    - {nl: "Tom voelt zich niet goed.", en: "Tom doesn't feel well."}
-    - {nl: "Zijn hoofd doet pijn en hij heeft koorts.", en: "His head hurts and he has a fever."}
-    - {nl: "Hij gaat meteen naar de dokter.", en: "He goes to the doctor straight away."}
-    - {nl: "De dokter kijkt in zijn mond en in zijn oren.", en: "The doctor looks in his mouth and in his ears."}
-    - {nl: "\"U bent ziek,\" zegt de dokter. \"U moet in bed blijven.\"", en: "\"You're ill,\" the doctor says. \"You have to stay in bed.\""}
-    - {nl: "Tom krijgt een medicijn voor de koorts.", en: "Tom gets some medicine for the fever."}
-    - {nl: "Drie dagen later voelt hij zich eindelijk goed.", en: "Three days later he finally feels well."}
-  questions:
-    - q: {en: "What's wrong with Tom?"}
-      options: [{en: "A headache and a fever"}, {en: "A sore knee"}, {en: "Toothache"}]
-      answer: 0
-    - q: {en: "What does the doctor say?"}
-      options: ["U moet in bed blijven.", "U moet naar huis gaan.", "U bent niet ziek."]
-      answer: 0
-    - q: {en: "When does Tom feel well again?"}
-      options: [{en: "Three days later"}, {en: "The next day"}, {en: "After a week"}]
-      answer: 0
-
 - id: u5-zusje
   unit: u5
   title: {nl: "Mijn kleine zus", en: "My little sister"}
@@ -42,4 +20,27 @@
       answer: 0
     - q: {en: "How does she talk?"}
       options: [{en: "Very fast"}, {en: "Very slowly"}, {en: "Not much"}]
+      answer: 0
+
+- id: u5-nieuw-huis
+  unit: u5
+  title: {nl: "Ons nieuwe huis", en: "Our new house"}
+  sentences:
+    - {nl: "Mijn ouders hebben een nieuw huis gekocht.", en: "My parents have bought a new house."}
+    - {nl: "Het huis is oud, maar heel mooi.", en: "The house is old, but very beautiful."}
+    - {nl: "De keuken is groot en de deur is groen.", en: "The kitchen is big and the door is green."}
+    - {nl: "Mijn kamer is klein, maar ik vind hem leuk.", en: "My room is small, but I like it."}
+    - {nl: "Er staan een wit bed en een bruine kast.", en: "There's a white bed and a brown wardrobe."}
+    - {nl: "Mijn kleine broer slaapt in een kamer met een blauwe muur.", en: "My little brother sleeps in a room with a blue wall."}
+    - {nl: "Gisteren hebben we samen de kamers opgeruimd.", en: "Yesterday we tidied up the rooms together."}
+    - {nl: "Nu zijn we moe, maar heel blij.", en: "Now we're tired, but very happy."}
+  questions:
+    - q: {en: "What have the parents bought?"}
+      options: [{en: "A new house"}, {en: "A new car"}, {en: "A big bed"}]
+      answer: 0
+    - q: {en: "What colour is the door?"}
+      options: ["groen", "wit", "bruin"]
+      answer: 0
+    - q: {en: "What did they do yesterday?"}
+      options: [{en: "They tidied up the rooms"}, {en: "They bought a bed"}, {en: "They went out"}]
       answer: 0

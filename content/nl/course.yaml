@@ -8,7 +8,7 @@
 # introduces tense:{T} automatically). Each unit's skills require the previous unit's grammar, so
 # every later skill allows everything taught before it.
 id: nl
-version: 1.3.0
+version: 1.4.0
 title: {en: Dutch, nl: Nederlands}
 description:
   en: Dutch from the basics, with a strong focus on verbs, the perfect tense and de/het.
@@ -235,12 +235,6 @@ units:
         icon: work
         requires: [separable, pronouns, time]
         items: {tags: [work]}
-      - id: feelings
-        kind: vocab
-        title: {en: Feelings, nl: Gevoelens}
-        icon: person
-        requires: [separable, pronouns, time]
-        items: {tags: [feelings]}
       - id: perfectum-hebben
         kind: grammar
         title: {en: "Perfect tense with hebben", nl: "Perfectum met hebben"}
@@ -267,12 +261,6 @@ units:
         requires: [perfectum-zijn]
         items: {tags: [adjectives]}
         inflections: {table: agreement}   # + #infl:agreement (groot / grote)
-      - id: body
-        kind: vocab
-        title: {en: Body and health, nl: Lichaam en gezondheid}
-        icon: body
-        requires: [perfectum-zijn]
-        items: {tags: [body]}
       - id: adverbs
         kind: vocab
         title: {en: Useful adverbs, nl: Handige bijwoorden}
@@ -315,39 +303,15 @@ units:
         icon: travel
         requires: [colours, possessives]
         items: {tags: [travel]}
-      - id: kitchen
-        kind: vocab
-        title: {en: In the kitchen, nl: In de keuken}
-        icon: food
-        requires: [colours, possessives]
-        items: {tags: [kitchen]}
-      - id: shopping
-        kind: vocab
-        title: {en: Shopping, nl: Winkelen}
-        icon: shopping
-        requires: [city]
-        items: {tags: [shopping]}
 
   - id: u7
     title: {en: The simple past, nl: De verleden tijd}
     skills:
-      - id: weather
-        kind: vocab
-        title: {en: Weather and nature, nl: Weer en natuur}
-        icon: weather
-        requires: [shopping, travel]
-        items: {tags: [weather]}
-      - id: animals
-        kind: vocab
-        title: {en: Animals, nl: Dieren}
-        icon: animals
-        requires: [shopping, travel]
-        items: {tags: [animals]}
       - id: verleden-tijd-weak
         kind: grammar
         title: {en: "Simple past: weak verbs", nl: "Verleden tijd: zwakke werkwoorden"}
         icon: past
-        requires: [shopping, travel]
+        requires: [city, travel]
         verbs: {tense: verleden_tijd, class: weak, regular: true, top: 20, exclude: [jongen, vermoorden]}
         exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
       - id: verleden-tijd-strong
@@ -362,12 +326,6 @@ units:
   - id: u8
     title: {en: Free time and ideas, nl: Vrije tijd en ideeën}
     skills:
-      - id: leisure
-        kind: vocab
-        title: {en: Free time, nl: Vrije tijd}
-        icon: star
-        requires: [verleden-tijd-strong]
-        items: {tags: [leisure]}
       - id: more-verbs
         kind: vocab
         title: {en: More verbs, nl: Meer werkwoorden}
@@ -382,27 +340,138 @@ units:
         items: {tags: [ideas]}
 
 # Topics (pack format 1.2, tosk/docs/pack-format.md "Topics"): themed side trees, each drawn as its own
-# map, with a branch leaving the main tree at its anchor. A skill moves into a topic only when the rest of
-# the main tree can skip it: no later main-tree skill requires it, selects its words, or uses them in a
-# story or for its sentences, and it teaches no grammar (tosk/docs/topic-split.md). Ids are kept, so
-# progress is kept.
+# map, with a branch leaving the main tree at its anchor (the last main-tree skill its first skill
+# requires); a later skill of a topic may require a later main-tree skill and waits for it.
+# Pack 1.4 (tosk/docs/topic-split.md): the main tree keeps the grammar and the core vocabulary, and
+# themed vocabulary lives in these topics, so a learner may skip them. Grammar skills require only
+# main-tree skills. The fairness rule (tosk/docs/extensions.md): never unknown grammar, some unknown
+# words are fine: words of a skipped topic may appear in main-tree lessons within the unknown-word
+# cap, and in main-tree stories (at most three per story, glossed). Skill, item and facet ids are
+# unchanged, so progress is kept.
 topics:
-  # clothes was a unit-7 skill until pack 1.3; it grows where shopping is taught (unit 6)
-  - id: kleding
-    title: {en: Clothes, nl: Kleding}
-    short_title: {en: Clothes, nl: Kleding}
+  # Feelings (unit 4 until pack 1.4).
+  - id: gevoelens
+    title: {en: Feelings, nl: Gevoelens}
+    short_title: {en: Feelings, nl: Gevoelens}
     description:
-      en: "What to wear: clothes, shoes and accessories."
-      nl: "Wat trek je aan: kleding, schoenen en accessoires."
+      en: "How you feel: happy, afraid, proud or angry."
+      nl: "Hoe je je voelt: blij, bang, trots of boos."
+    icon: heart
+    units:
+      - id: gevoelens-u1
+        title: {en: "How do you feel?", nl: "Hoe voel je je?"}
+        skills:
+          - id: feelings
+            kind: vocab
+            title: {en: Feelings, nl: Gevoelens}
+            icon: heart
+            requires: [separable, pronouns, time]
+            items: {tags: [feelings]}
+
+  # The body (unit 5 until pack 1.4). Its nouns that the diminutives skill trains (handje) stay
+  # main-tree words, shared with this topic.
+  - id: gezondheid
+    title: {en: Body and health, nl: Lichaam en gezondheid}
+    short_title: {en: Health, nl: Gezondheid}
+    description:
+      en: "The body, feeling ill and going to the doctor."
+      nl: "Het lichaam, ziek zijn en naar de dokter gaan."
+    icon: health
+    units:
+      - id: gezondheid-u1
+        title: {en: At the doctor's, nl: Bij de dokter}
+        skills:
+          - id: body
+            kind: vocab
+            title: {en: Body and health, nl: Lichaam en gezondheid}
+            icon: body
+            requires: [adjectives]
+            items: {tags: [body]}
+
+  # In the kitchen (unit 6 until pack 1.4).
+  - id: eten
+    title: {en: Food and cooking, nl: Eten en koken}
+    short_title: {en: Cooking, nl: Koken}
+    description:
+      en: "Fruit, sweets and the kitchen: cooking and baking."
+      nl: "Fruit, zoetigheid en de keuken: koken en bakken."
+    icon: food
+    units:
+      - id: eten-u1
+        title: {en: In the kitchen, nl: In de keuken}
+        skills:
+          - id: kitchen
+            kind: vocab
+            title: {en: In the kitchen, nl: In de keuken}
+            icon: food
+            requires: [colours, possessives]
+            items: {tags: [kitchen]}
+
+  # Shopping (unit 6 until pack 1.4) and clothes (unit 7 until pack 1.3; the topic "Clothes" of pack 1.3).
+  - id: kleding
+    title: {en: Clothes and shopping, nl: Kleding en winkelen}
+    short_title: {en: Shopping, nl: Winkelen}
+    description:
+      en: "In the shops: prices and paying, and what to wear."
+      nl: "In de winkels: prijzen en betalen, en wat je aantrekt."
     icon: clothes
-    anchor: shopping
     units:
       - id: kleding-u1
         title: {en: What to wear, nl: "Wat trek je aan?"}
         skills:
+          - id: shopping
+            kind: vocab
+            title: {en: Shopping, nl: Winkelen}
+            icon: shopping
+            requires: [city]
+            items: {tags: [shopping]}
           - id: clothes
             kind: vocab
             title: {en: Clothes, nl: Kleding}
             icon: clothes
             requires: [shopping, travel]
             items: {tags: [clothes]}
+
+  # Weather and animals (unit 7 until pack 1.4), told in the simple past.
+  - id: natuur
+    title: {en: Weather and animals, nl: Weer en dieren}
+    short_title: {en: Nature, nl: Natuur}
+    description:
+      en: "Sun, rain and storms; animals at home and in the zoo."
+      nl: "Zon, regen en storm; dieren thuis en in de dierentuin."
+    icon: nature
+    units:
+      - id: natuur-u1
+        title: {en: Out of doors, nl: Buiten}
+        skills:
+          - id: weather
+            kind: vocab
+            title: {en: Weather and nature, nl: Weer en natuur}
+            icon: weather
+            requires: [verleden-tijd-strong]
+            items: {tags: [weather]}
+          - id: animals
+            kind: vocab
+            title: {en: Animals, nl: Dieren}
+            icon: animals
+            requires: [verleden-tijd-strong]
+            items: {tags: [animals]}
+
+  # Free time (unit 8 until pack 1.4).
+  - id: vrije-tijd
+    title: {en: Free time, nl: Vrije tijd}
+    short_title: {en: Free time, nl: Vrije tijd}
+    description:
+      en: "Music, sport, films and hobbies."
+      nl: "Muziek, sport, films en hobby's."
+    icon: music
+    units:
+      - id: vrije-tijd-u1
+        title: {en: Hobbies, nl: Hobby's}
+        skills:
+          - id: leisure
+            kind: vocab
+            title: {en: Free time, nl: Vrije tijd}
+            icon: music
+            requires: [more-verbs, ideas]
+            items: {tags: [leisure]}

@@ -1,0 +1,28 @@
+# Graded mini-stories of the topic kleding (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+# They were stories of main-tree units until the topic restructure (tosk/docs/topic-split.md) and moved
+# here with their skills; their ids are kept, so reading progress is kept.
+- id: u6-markt
+  unit: kleding-u1
+  title: {nl: "Op de markt", en: "At the market"}
+  new_words: [kosten]
+  sentences:
+    - {nl: "Op zaterdag gaat Emma naar de markt.", en: "On Saturday Emma goes to the market."}
+    - {nl: "Ze koopt groente, fruit en kaas.", en: "She buys vegetables, fruit and cheese."}
+    - {nl: "\"Wat kosten de aardbeien?\" vraagt ze.", en: "\"How much are the strawberries?\" she asks."}
+    - {nl: "\"Vijf euro,\" zegt de verkoper.", en: "\"Five euros,\" the salesman says."}
+    - {nl: "Dat vindt Emma duur, maar ze koopt ze toch.", en: "Emma thinks that's expensive, but she buys them anyway."}
+    - {nl: "Dan haalt ze brood in de supermarkt.", en: "Then she gets bread at the supermarket."}
+    - {nl: "Met een volle tas fietst ze naar huis.", en: "With a full bag she cycles home."}
+  questions:
+    - q: {en: "Where does Emma go on Saturday?"}
+      options: ["naar de markt", "naar de bioscoop", "naar het station"]
+      answer: 0
+    - q: {en: "How much are the strawberries?"}
+      options: [{en: "Five euros"}, {en: "Two euros"}, {en: "Ten euros"}]
+      answer: 0
+    - q: {en: "Does Emma buy the strawberries?"}
+      options: [{en: "Yes, even though they're expensive"}, {en: "No, they're too expensive"}, {en: "No, there aren't any"}]
+      answer: 0
+    - q: {en: "How does Emma go home?"}
+      options: [{en: "By bike"}, {en: "By bus"}, {en: "By car"}]
+      answer: 0

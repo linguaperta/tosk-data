@@ -1,49 +1,45 @@
 # Graded mini-stories for unit u7 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
-- id: u7-storm
+# New in pack 1.4 (the topic restructure, tosk/docs/topic-split.md): written from core vocabulary.
+- id: u7-opa
   unit: u7
-  title: {nl: "De storm", en: "The storm"}
+  title: {nl: "Opa vertelt", en: "Grandpa's story"}
   sentences:
-    - {nl: "Gisteren was er een storm.", en: "Yesterday there was a storm."}
-    - {nl: "Het regende en het was koud.", en: "It was raining and it was cold."}
-    - {nl: "Lisa bleef in huis met haar kat.", en: "Lisa stayed indoors with her cat."}
-    - {nl: "Ze las een boek en dronk thee.", en: "She read a book and drank tea."}
-    - {nl: "Om acht uur wilde de kat naar buiten.", en: "At eight o'clock the cat wanted to go out."}
-    - {nl: "\"Nee, het is te koud!\" zei Lisa.", en: "\"No, it's too cold!\" Lisa said."}
-    - {nl: "Maar de kat ontsnapte toch.", en: "But the cat escaped anyway."}
-    - {nl: "Een uur later stond de kat voor de deur, koud en moe.", en: "An hour later the cat was at the door, cold and tired."}
-  new_words: [buiten]
+    - {nl: "Mijn opa woonde als kind in een klein dorp.", en: "As a child my grandpa lived in a small village."}
+    - {nl: "Zijn vader werkte op een boot.", en: "His father worked on a boat."}
+    - {nl: "Opa fietste altijd naar school.", en: "Grandpa always cycled to school."}
+    - {nl: "Hij had geen auto en geen televisie.", en: "He had no car and no television."}
+    - {nl: "Hij las vaak een boek.", en: "He often read a book."}
+    - {nl: "Op zondag gingen ze naar de kerk.", en: "On Sundays they went to church."}
+    - {nl: "Hij vond het een mooie tijd.", en: "He thought it was a lovely time."}
   questions:
-    - q: {en: "What was the weather like yesterday?"}
-      options: [{en: "Stormy, rainy and cold"}, {en: "Sunny and warm"}, {en: "Foggy"}]
+    - q: {en: "Where did grandpa live as a child?"}
+      options: [{en: "In a small village"}, {en: "In a big city"}, {en: "On a boat"}]
       answer: 0
-    - q: {en: "What did Lisa do?"}
-      options: [{en: "She read a book and drank tea"}, {en: "She went for a walk"}, {en: "She watched television"}]
+    - q: {en: "Where did his father work?"}
+      options: [{en: "On a boat"}, {en: "In a shop"}, {en: "At a school"}]
       answer: 0
-    - q: {en: "When was the cat back at the door?"}
-      prompt: "Wanneer stond de kat voor de deur?"
-      options: ["een uur later", "om tien uur", "nooit"]
+    - q: {en: "What did they do on Sundays?"}
+      options: [{en: "They went to church"}, {en: "They went to the sea"}, {en: "They watched television"}]
       answer: 0
 
-- id: u7-dieren
+- id: u7-trein
   unit: u7
-  title: {nl: "Een dag met de dieren", en: "A day with the animals"}
+  title: {nl: "In de trein", en: "On the train"}
   sentences:
-    - {nl: "Zaterdag gingen we naar een park met dieren.", en: "On Saturday we went to a park with animals."}
-    - {nl: "Het was een warme dag.", en: "It was a warm day."}
-    - {nl: "Eerst zagen we de olifanten en de leeuwen.", en: "First we saw the elephants and the lions."}
-    - {nl: "De apen aten bananen.", en: "The monkeys were eating bananas."}
-    - {nl: "Mijn kleine broer was bang voor de slangen.", en: "My little brother was scared of the snakes."}
-    - {nl: "Mijn zus vond de vlinders het mooist.", en: "My sister liked the butterflies best."}
-    - {nl: "Om vijf uur gingen we moe maar blij naar huis.", en: "At five o'clock we went home tired but happy."}
+    - {nl: "Gisteren ging Pieter met de trein naar Utrecht.", en: "Yesterday Pieter went to Utrecht by train."}
+    - {nl: "Hij kocht een kaartje op het station.", en: "He bought a ticket at the station."}
+    - {nl: "In de trein las hij een boek.", en: "On the train he read a book."}
+    - {nl: "Hij las zo lang dat hij zijn station vergat.", en: "He read for so long that he forgot his station."}
+    - {nl: "Om drie uur was hij in Rotterdam.", en: "At three o'clock he was in Rotterdam."}
+    - {nl: "Hij belde zijn vriend Daan.", en: "He called his friend Daan."}
+    - {nl: "Daan kwam met de auto en ze gingen samen eten.", en: "Daan came by car and they went to eat together."}
   questions:
-    - q: {en: "What was the weather like?"}
-      options: [{en: "Warm"}, {en: "Cold and rainy"}, {en: "Windy"}]
+    - q: {en: "Where did Pieter want to go?"}
+      options: ["naar Utrecht", "naar Rotterdam", "naar Amsterdam"]
       answer: 0
-    - q: {en: "What were the monkeys eating?"}
-      prompt: "Wat aten de apen?"
-      options: ["bananen", "appels", "brood"]
+    - q: {en: "What did he do on the train?"}
+      options: [{en: "He read a book"}, {en: "He slept"}, {en: "He called his mother"}]
       answer: 0
-    - q: {en: "Who was scared of the snakes?"}
-      prompt: "Wie was bang voor de slangen?"
-      options: ["mijn kleine broer", "mijn zus", "mijn vader"]
+    - q: {en: "Who came by car?"}
+      options: [{en: "Daan"}, {en: "Pieter's father"}, {en: "A taxi driver"}]
       answer: 0
