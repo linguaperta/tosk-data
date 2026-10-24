@@ -1,11 +1,11 @@
 {
   "index_version": 1,
-  "generated_at": "2026-10-20T23:04:37Z",
-  "tag": "packs-20261021",
+  "generated_at": "2026-10-24T21:15:15Z",
+  "tag": "packs-20261024",
   "courses": [
     {
       "id": "es",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "title": {
         "en": "Spanish",
         "nl": "Spaans"
@@ -21,14 +21,14 @@
       ],
       "unverified": false,
       "schema_version": "1",
-      "min_app_version": "0.4.0",
-      "sha256": "a6561bcb4c06a82f3bc335b3ee90f430dc20e647eb9209ae7afd208251c01f15",
-      "size": 22560768,
-      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261021/es.sqlite"
+      "min_app_version": "0.7.5",
+      "sha256": "d5d42e948897c99c50e87118a9f07333a0723b43c375c93acf70143625bd94b1",
+      "size": 22781952,
+      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261024/es.sqlite"
     },
     {
       "id": "it",
-      "version": "1.3.0",
+      "version": "1.5.0",
       "title": {
         "en": "Italian",
         "nl": "Italiaans"
@@ -44,14 +44,14 @@
       ],
       "unverified": false,
       "schema_version": "1",
-      "min_app_version": "0.7.3",
-      "sha256": "ad2eae5e4739536ed421d75029fdbec5e0185374f113429df034b5f7f1261093",
-      "size": 42455040,
-      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261021/it.sqlite"
+      "min_app_version": "0.7.5",
+      "sha256": "5973152f271643890bfd346eb9a550abb351a6dee24e1502c9e36f6a6c09a72d",
+      "size": 42958848,
+      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261024/it.sqlite"
     },
     {
       "id": "nl",
-      "version": "1.2.1",
+      "version": "1.4.0",
       "title": {
         "en": "Dutch",
         "nl": "Nederlands"
@@ -66,10 +66,10 @@
       ],
       "unverified": false,
       "schema_version": "1",
-      "min_app_version": "0.4.0",
-      "sha256": "8cd4afba57a5691b1ecfac075eb34fe3949a77757d284e0bbe8f0bb721b1c1ae",
-      "size": 15892480,
-      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261021/nl.sqlite"
+      "min_app_version": "0.7.5",
+      "sha256": "94f73e4d02e47d0ef931e0e4c4a8f707074ef0770325fdb141ff5e4e73a407b6",
+      "size": 16048128,
+      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261024/nl.sqlite"
     }
   ]
 }
