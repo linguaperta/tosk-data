@@ -1,7 +1,7 @@
 {
   "index_version": 1,
-  "generated_at": "2026-10-24T21:15:15Z",
-  "tag": "packs-20261024",
+  "generated_at": "2026-10-25T04:59:42Z",
+  "tag": "packs-20261025",
   "courses": [
     {
       "id": "es",
@@ -24,7 +24,35 @@
       "min_app_version": "0.7.5",
       "sha256": "d5d42e948897c99c50e87118a9f07333a0723b43c375c93acf70143625bd94b1",
       "size": 22781952,
-      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261024/es.sqlite"
+      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261025/es.sqlite"
+    },
+    {
+      "id": "fr",
+      "version": "1.0.0",
+      "title": {
+        "en": "French"
+      },
+      "description": {
+        "en": "French for advanced learners (B1-B2): every tense and mood, pronouns, the subjunctive and reading French, with themed topics."
+      },
+      "target": "fr",
+      "sources": [
+        "en"
+      ],
+      "unverified": true,
+      "schema_version": "1",
+      "min_app_version": "0.7.5",
+      "sha256": "d0c9192bfa50238ead19c4551a7f80d755d63deac19119c6eab844df106c859e",
+      "size": 48316416,
+      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261025/fr.sqlite",
+      "license": "CC-BY-SA-4.0",
+      "authors": [
+        {
+          "name": "tosk contributors",
+          "role": "author",
+          "url": "https://github.com/linguaperta/tosk-data"
+        }
+      ]
     },
     {
       "id": "it",
@@ -47,7 +75,7 @@
       "min_app_version": "0.7.5",
       "sha256": "5973152f271643890bfd346eb9a550abb351a6dee24e1502c9e36f6a6c09a72d",
       "size": 42958848,
-      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261024/it.sqlite"
+      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261025/it.sqlite"
     },
     {
       "id": "nl",
@@ -69,7 +97,7 @@
       "min_app_version": "0.7.5",
       "sha256": "94f73e4d02e47d0ef931e0e4c4a8f707074ef0770325fdb141ff5e4e73a407b6",
       "size": 16048128,
-      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261024/nl.sqlite"
+      "url": "https://github.com/linguaperta/tosk-data/releases/download/packs-20261025/nl.sqlite"
     }
   ]
 }
