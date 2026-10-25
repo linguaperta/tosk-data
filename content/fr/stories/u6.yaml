@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u6 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u6-travail
+  unit: u6
+  title: {fr: "Le nouveau travail", en: "The new job"}
+  sentences:
+    - {fr: "Julie commence un nouveau travail dans une entreprise.", en: "Julie is starting a new job in a company."}
+    - {fr: "Son patron est un homme très gentil.", en: "Her boss is a very kind man."}
+    - {fr: "Il lui explique le projet.", en: "He explains the project to her."}
+    - {fr: "Julie ne comprend pas tout, alors elle parle à une collègue.", en: "Julie doesn't understand everything, so she talks to a colleague."}
+    - {fr: "La collègue le lui explique encore.", en: "The colleague explains it to her again."}
+    - {fr: "Elle a beaucoup de travail, mais elle en est contente.", en: "She has a lot of work, but she is happy with it."}
+    - {fr: "Demain, elle y va à huit heures.", en: "Tomorrow she goes there at eight."}
+  questions:
+    - q: {en: "What is Julie's boss like?"}
+      options: [{en: "Very kind"}, {en: "Very old"}, {en: "Very busy"}]
+      answer: 0
+    - q: {en: "Who explains the project again?"}
+      options: [{en: "A colleague"}, {en: "The boss"}, {en: "Julie's mother"}]
+      answer: 0
+    - q: {en: "When does Julie go to work tomorrow?"}
+      options: [{en: "At eight"}, {en: "At noon"}, {en: "In the evening"}]
+      answer: 0
+
+- id: u6-examen
+  unit: u6
+  title: {fr: "L'examen", en: "The exam"}
+  sentences:
+    - {fr: "Lucas a un examen de français demain.", en: "Lucas has a French exam tomorrow."}
+    - {fr: "Il étudie dans sa chambre avec un ami.", en: "He is studying in his room with a friend."}
+    - {fr: "Son ami lui donne des exemples.", en: "His friend gives him examples."}
+    - {fr: "Lucas fait beaucoup d'erreurs, mais il veut réussir.", en: "Lucas makes a lot of mistakes, but he wants to pass."}
+    - {fr: "« Tu as un stylo ? — Oui, j'en ai deux. »", en: "\"Do you have a pen?\" \"Yes, I have two.\""}
+    - {fr: "« Tu peux me le donner ? »", en: "\"Can you give it to me?\""}
+    - {fr: "Le professeur va expliquer les réponses après l'examen.", en: "The teacher is going to explain the answers after the exam."}
+  questions:
+    - q: {en: "What exam does Lucas have?"}
+      options: [{en: "A French exam"}, {en: "An English exam"}, {en: "A maths exam"}]
+      answer: 0
+    - q: {en: "How many pens does the friend have?"}
+      options: [{en: "Two"}, {en: "One"}, {en: "None"}]
+      answer: 0
+    - q: {en: "When will the teacher explain the answers?"}
+      options: [{en: "After the exam"}, {en: "Tomorrow morning"}, {en: "Before the exam"}]
+      answer: 0

@@ -1,0 +1,5 @@
+{"id": "fr:devenir", "lemma": "devenir", "pos": "verb", "freq": 220, "tr": {"en": ["to become"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u7"}
+{"id": "fr:mourir", "lemma": "mourir", "pos": "verb", "freq": 217, "tr": {"en": ["to die"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u7"}
+{"id": "fr:naître", "lemma": "naître", "pos": "verb", "freq": 1191, "tr": {"en": ["to be born"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u7"}
+{"id": "fr:recevoir", "lemma": "recevoir", "pos": "verb", "freq": 710, "tr": {"en": ["to receive", "to get"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u7"}
+{"id": "fr:revenir", "lemma": "revenir", "pos": "verb", "freq": 181, "tr": {"en": ["to come back", "to return"]}, "tr_src": {"en": "claude"}, "tags": ["verbs2"], "unit": "u7"}

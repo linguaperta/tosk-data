@@ -1,0 +1,22 @@
+# Graded mini-stories for the topic cuisine (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: cuisine-recette
+  unit: cuisine-u2
+  title: {fr: "La soupe de grand-mère", en: "Grandma's soup"}
+  sentences:
+    - {fr: "Voici la recette de la soupe de ma grand-mère.", en: "Here is my grandmother's soup recipe."}
+    - {fr: "Coupe deux oignons, trois carottes et quatre pommes de terre.", en: "Cut two onions, three carrots and four potatoes."}
+    - {fr: "Fais chauffer un peu d'huile dans une casserole.", en: "Heat a little oil in a saucepan."}
+    - {fr: "Mets les légumes et un litre d'eau.", en: "Put in the vegetables and a litre of water."}
+    - {fr: "Laisse cuire pendant une heure.", en: "Let it cook for an hour."}
+    - {fr: "Goûte et mets un peu de sel et de poivre.", en: "Taste it and put in a little salt and pepper."}
+    - {fr: "Sers la soupe avec du pain frais. Bon appétit !", en: "Serve the soup with fresh bread. Enjoy your meal!"}
+  questions:
+    - q: {en: "How many carrots do you need?"}
+      options: [{en: "Three"}, {en: "Two"}, {en: "Four"}]
+      answer: 0
+    - q: {en: "How long does the soup cook?"}
+      options: [{en: "An hour"}, {en: "Ten minutes"}, {en: "Two hours"}]
+      answer: 0
+    - q: {en: "What do you serve with the soup?"}
+      options: [{en: "Fresh bread"}, {en: "Cheese"}, {en: "Rice"}]
+      answer: 0

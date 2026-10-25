@@ -1,0 +1,6 @@
+{"id": "fr:auquel", "lemma": "auquel", "pos": "pron", "freq": 3966, "tr": {"en": ["to which", "to whom"]}, "tr_src": {"en": "claude"}, "tags": ["lequel"], "unit": "u18"}
+{"id": "fr:auxquels", "lemma": "auxquels", "pos": "pron", "freq": 8600, "tr": {"en": ["to which", "to whom"]}, "tr_src": {"en": "claude"}, "tags": ["lequel"], "unit": "u18"}
+{"id": "fr:duquel", "lemma": "duquel", "pos": "pron", "freq": 11280, "tr": {"en": ["of which", "of whom"]}, "tr_src": {"en": "claude"}, "tags": ["lequel"], "unit": "u18"}
+{"id": "fr:laquelle", "lemma": "laquelle", "pos": "pron", "freq": 840, "tr": {"en": ["which", "which one", "whom"]}, "tr_src": {"en": "claude"}, "tags": ["lequel"], "unit": "u18"}
+{"id": "fr:lesquelles", "lemma": "lesquelles", "pos": "pron", "freq": 3934, "tr": {"en": ["which", "which ones", "whom"]}, "tr_src": {"en": "claude"}, "tags": ["lequel"], "unit": "u18"}
+{"id": "fr:lesquels", "lemma": "lesquels", "pos": "pron", "freq": 4268, "tr": {"en": ["which", "which ones", "whom"]}, "tr_src": {"en": "claude"}, "tags": ["lequel"], "unit": "u18"}

@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u4 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u4-chambre
+  unit: u4
+  title: {fr: "La chambre de Camille", en: "Camille's room"}
+  sentences:
+    - {fr: "Camille a une nouvelle chambre.", en: "Camille has a new bedroom."}
+    - {fr: "Les murs sont blancs et la porte est bleue.", en: "The walls are white and the door is blue."}
+    - {fr: "Il y a un grand lit et deux chaises vertes.", en: "There is a big bed and two green chairs."}
+    - {fr: "Sur la table, il y a les livres de ses frères.", en: "On the table there are her brothers' books."}
+    - {fr: "Cette chambre est petite, mais elle est jolie.", en: "This room is small, but it is pretty."}
+    - {fr: "Ses amis trouvent les couleurs un peu tristes.", en: "Her friends find the colours a bit sad."}
+    - {fr: "Mais Camille aime beaucoup sa nouvelle chambre.", en: "But Camille really likes her new room."}
+  questions:
+    - q: {en: "What colour is the door?"}
+      options: [{en: "Blue"}, {en: "White"}, {en: "Green"}]
+      answer: 0
+    - q: {en: "Whose books are on the table?"}
+      options: [{en: "Her brothers'"}, {en: "Her friends'"}, {en: "Camille's"}]
+      answer: 0
+    - q: {en: "Does Camille like her room?"}
+      options: [{en: "Yes, very much"}, {en: "No, it is too small"}, {en: "No, the colours are sad"}]
+      answer: 0
+
+- id: u4-chats
+  unit: u4
+  title: {fr: "Deux chats", en: "Two cats"}
+  sentences:
+    - {fr: "Hugo a deux chats : un noir et un blanc.", en: "Hugo has two cats: a black one and a white one."}
+    - {fr: "Le chat noir est vieux et gros.", en: "The black cat is old and fat."}
+    - {fr: "Le chat blanc est jeune et très rapide.", en: "The white cat is young and very fast."}
+    - {fr: "Ils dorment souvent ensemble sur le canapé.", en: "They often sleep together on the sofa."}
+    - {fr: "Le matin, le petit chat blanc mange vite.", en: "In the morning, the little white cat eats quickly."}
+    - {fr: "Le vieux chat attend : il est trop lent.", en: "The old cat waits: he is too slow."}
+    - {fr: "« Ce sont mes amis », dit Hugo.", en: "\"They are my friends,\" says Hugo."}
+  questions:
+    - q: {en: "Which cat is old?"}
+      options: [{en: "The black one"}, {en: "The white one"}, {en: "Both"}]
+      answer: 0
+    - q: {en: "Where do the cats sleep?"}
+      options: [{en: "On the sofa"}, {en: "On the bed"}, {en: "In the garden"}]
+      answer: 0
+    - q: {en: "Why does the old cat wait?"}
+      options: [{en: "He is too slow"}, {en: "He is not hungry"}, {en: "He is asleep"}]
+      answer: 0

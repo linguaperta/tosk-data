@@ -1,0 +1,39 @@
+{"id": "fr:ailleurs", "lemma": "ailleurs", "pos": "adv", "freq": 696, "tr": {"en": ["elsewhere"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:ainsi", "lemma": "ainsi", "pos": "adv", "freq": 451, "tr": {"en": ["thus", "so", "like this"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:amuser", "lemma": "amuser", "pos": "verb", "freq": 722, "tr": {"en": ["to amuse", "to have fun (s'amuser)"]}, "tr_src": {"en": "claude"}, "unit": "u9"}
+{"id": "fr:autant", "lemma": "autant", "pos": "adv", "freq": 453, "tr": {"en": ["as much", "as many"]}, "tr_src": {"en": "claude"}, "tags": ["comparatives", "little2"], "unit": "u9"}
+{"id": "fr:car", "lemma": "car", "pos": "conj", "freq": 266, "tr": {"en": ["because", "for"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:certain", "lemma": "certain", "pos": "adj", "freq": 272, "tr": {"en": ["certain", "some"]}, "tr_src": {"en": "claude"}, "tags": ["little2", "opinions"], "inflections": ["certaine", "certaines", "certains"], "infl": {"agreement": {"m.sg": {"form": "certain", "stem": "certain", "ending": ""}, "f.sg": {"form": "certaine", "stem": "certain", "ending": "e"}, "m.pl": {"form": "certains", "stem": "certain", "ending": "s"}, "f.pl": {"form": "certaines", "stem": "certain", "ending": "es"}}}, "unit": "u9"}
+{"id": "fr:chacun", "lemma": "chacun", "pos": "pron", "freq": 903, "tr": {"en": ["each one", "everyone"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:chaque", "lemma": "chaque", "pos": "det", "freq": 277, "tr": {"en": ["each", "every"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:comme", "lemma": "comme", "pos": "conj", "freq": 52, "tr": {"en": ["like", "as", "how"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:coucher", "lemma": "coucher", "pos": "verb", "freq": 677, "tr": {"en": ["to put to bed", "to go to bed (se coucher)"]}, "tr_src": {"en": "claude"}, "unit": "u9"}
+{"id": "fr:d'abord", "lemma": "d'abord", "pos": "adv", "freq": null, "tr": {"en": ["first", "at first"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:davantage", "lemma": "davantage", "pos": "adv", "freq": 2579, "tr": {"en": ["more"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:dépêcher", "lemma": "dépêcher", "pos": "verb", "freq": 3342, "tr": {"en": ["to hurry (se dépêcher)", "to dispatch"]}, "tr_src": {"en": "claude"}, "unit": "u9"}
+{"id": "fr:en_fait", "lemma": "en fait", "pos": "adv", "freq": 463, "tr": {"en": ["in fact", "actually"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:enfin", "lemma": "enfin", "pos": "adv", "freq": 324, "tr": {"en": ["finally", "at last", "well"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:environ", "lemma": "environ", "pos": "adv", "freq": 1066, "tr": {"en": ["about", "around", "approximately"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:exprès", "lemma": "exprès", "pos": "adv", "freq": 2760, "tr": {"en": ["on purpose"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:habiller", "lemma": "habiller", "pos": "verb", "freq": 2092, "tr": {"en": ["to dress", "to get dressed (s'habiller)"]}, "tr_src": {"en": "claude"}, "unit": "u9"}
+{"id": "fr:laver", "lemma": "laver", "pos": "verb", "freq": 1592, "tr": {"en": ["to wash"]}, "tr_src": {"en": "claude"}, "unit": "u9"}
+{"id": "fr:lever", "lemma": "lever", "pos": "verb", "freq": 675, "tr": {"en": ["to raise", "to lift", "to get up (se lever)"]}, "tr_src": {"en": "claude"}, "unit": "u9"}
+{"id": "fr:marier", "lemma": "marier", "pos": "verb", "freq": 511, "tr": {"en": ["to marry", "to get married (se marier)"]}, "tr_src": {"en": "claude"}, "unit": "u9"}
+{"id": "fr:n'importe_quoi", "lemma": "n'importe quoi", "pos": "pron", "freq": null, "tr": {"en": ["anything", "nonsense"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:plusieurs", "lemma": "plusieurs", "pos": "det", "freq": 799, "tr": {"en": ["several"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:plutôt", "lemma": "plutôt", "pos": "adv", "freq": 342, "tr": {"en": ["rather", "instead"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:pourtant", "lemma": "pourtant", "pos": "adv", "freq": 890, "tr": {"en": ["yet", "however", "though"]}, "tr_src": {"en": "claude"}, "tags": ["connectors", "little2"], "unit": "u9"}
+{"id": "fr:promener", "lemma": "promener", "pos": "verb", "freq": 2333, "tr": {"en": ["to walk", "to go for a walk (se promener)"]}, "tr_src": {"en": "claude"}, "unit": "u9"}
+{"id": "fr:quand_même", "lemma": "quand même", "pos": "adv", "freq": 1060, "tr": {"en": ["all the same", "still", "anyway"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:quelques", "lemma": "quelques", "pos": "det", "freq": 211, "tr": {"en": ["a few", "some"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:reposer", "lemma": "reposer", "pos": "verb", "freq": 1041, "tr": {"en": ["to rest", "to put back"]}, "tr_src": {"en": "claude"}, "unit": "u9"}
+{"id": "fr:réveiller", "lemma": "réveiller", "pos": "verb", "freq": 933, "tr": {"en": ["to wake up"]}, "tr_src": {"en": "claude"}, "unit": "u9"}
+{"id": "fr:sans_doute", "lemma": "sans doute", "pos": "adv", "freq": 5893, "tr": {"en": ["probably", "no doubt"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:si", "lemma": "si", "pos": "conj", "freq": 32, "tr": {"en": ["if", "whether", "so", "yes"]}, "tr_src": {"en": "claude"}, "tags": ["little2", "si"], "unit": "u9"}
+{"id": "fr:sinon", "lemma": "sinon", "pos": "conj", "freq": 613, "tr": {"en": ["otherwise", "or else"]}, "tr_src": {"en": "claude"}, "tags": ["little2", "si"], "unit": "u9"}
+{"id": "fr:souvenir", "lemma": "souvenir", "pos": "verb", "freq": 254, "tr": {"en": ["to remember (se souvenir)"]}, "tr_src": {"en": "claude"}, "unit": "u9"}
+{"id": "fr:tel", "lemma": "tel", "pos": "adj", "freq": 922, "tr": {"en": ["such", "like"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "inflections": ["telle", "telles", "tels"], "infl": {"agreement": {"m.sg": {"form": "tel", "stem": "tel", "ending": ""}, "f.sg": {"form": "telle", "stem": "tel", "ending": "le"}, "m.pl": {"form": "tels", "stem": "tel", "ending": "s"}, "f.pl": {"form": "telles", "stem": "tel", "ending": "les", "wrong": ["teles"]}}}, "unit": "u9"}
+{"id": "fr:tout_le_monde", "lemma": "tout le monde", "pos": "pron", "freq": 1474, "tr": {"en": ["everyone", "everybody"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:tromper", "lemma": "tromper", "pos": "verb", "freq": 968, "tr": {"en": ["to deceive", "to be wrong (se tromper)"]}, "tr_src": {"en": "claude"}, "unit": "u9"}
+{"id": "fr:volontiers", "lemma": "volontiers", "pos": "adv", "freq": 4404, "tr": {"en": ["gladly", "willingly"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}
+{"id": "fr:à_peine", "lemma": "à peine", "pos": "adv", "freq": 5138, "tr": {"en": ["hardly", "barely"]}, "tr_src": {"en": "claude"}, "tags": ["little2"], "unit": "u9"}

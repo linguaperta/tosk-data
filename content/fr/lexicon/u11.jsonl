@@ -1,0 +1,6 @@
+{"id": "fr:approcher", "lemma": "approcher", "pos": "verb", "freq": 1243, "tr": {"en": ["to approach", "to come closer"]}, "tr_src": {"en": "claude"}, "unit": "u11"}
+{"id": "fr:asseoir", "lemma": "asseoir", "pos": "verb", "freq": 1001, "tr": {"en": ["to sit", "to sit down (s'asseoir)"]}, "tr_src": {"en": "claude"}, "unit": "u11"}
+{"id": "fr:calmer", "lemma": "calmer", "pos": "verb", "freq": 1799, "tr": {"en": ["to calm", "to calm down"]}, "tr_src": {"en": "claude"}, "unit": "u11"}
+{"id": "fr:excuser", "lemma": "excuser", "pos": "verb", "freq": 783, "tr": {"en": ["to excuse", "to apologize (s'excuser)"]}, "tr_src": {"en": "claude"}, "unit": "u11"}
+{"id": "fr:inquiéter", "lemma": "inquiéter", "pos": "verb", "freq": 305, "tr": {"en": ["to worry"]}, "tr_src": {"en": "claude"}, "unit": "u11"}
+{"id": "fr:taire", "lemma": "taire", "pos": "verb", "freq": 1397, "tr": {"en": ["to keep quiet", "to hush up"]}, "tr_src": {"en": "claude"}, "unit": "u11"}

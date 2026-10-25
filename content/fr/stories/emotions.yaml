@@ -1,0 +1,22 @@
+# Graded mini-stories for the topic emotions (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: emotions-lettre
+  unit: emotions-u1
+  title: {fr: "Une bonne surprise", en: "A nice surprise"}
+  sentences:
+    - {fr: "Hier, Julie a reçu une lettre de son ami Paul.", en: "Yesterday Julie got a letter from her friend Paul."}
+    - {fr: "Paul habite loin et il lui manque beaucoup.", en: "Paul lives far away and she misses him a lot."}
+    - {fr: "Quand elle a lu la lettre, elle a souri.", en: "When she read the letter, she smiled."}
+    - {fr: "Paul va venir en France pour les vacances !", en: "Paul is going to come to France for the holidays!"}
+    - {fr: "Julie a pleuré de joie.", en: "Julie cried with joy."}
+    - {fr: "Sa sœur, un peu jalouse, n'a rien dit.", en: "Her sister, a little jealous, said nothing."}
+    - {fr: "Le soir, elle a écrit une longue lettre à Paul.", en: "In the evening she wrote a long letter to Paul."}
+  questions:
+    - q: {en: "Where does Paul live?"}
+      options: [{en: "Far away"}, {en: "In Lyon"}, {en: "Next door"}]
+      answer: 0
+    - q: {en: "What did Julie do when she read the letter?"}
+      options: [{en: "She smiled"}, {en: "She shouted"}, {en: "She went out"}]
+      answer: 0
+    - q: {en: "How did her sister feel?"}
+      options: [{en: "A little jealous"}, {en: "Very happy"}, {en: "Angry"}]
+      answer: 0

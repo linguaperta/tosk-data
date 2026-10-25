@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u8 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u8-enfance
+  unit: u8
+  title: {fr: "Quand j'étais petit", en: "When I was little"}
+  sentences:
+    - {fr: "Quand j'étais petit, j'habitais à la campagne.", en: "When I was little, I lived in the country."}
+    - {fr: "Mes grands-parents avaient une grande maison.", en: "My grandparents had a big house."}
+    - {fr: "Tous les jours, je jouais dans le jardin avec mon frère.", en: "Every day I played in the garden with my brother."}
+    - {fr: "Le dimanche, nous allions au marché avec notre grand-mère.", en: "On Sundays we went to the market with our grandmother."}
+    - {fr: "Elle connaissait tous les gens du village.", en: "She knew all the people in the village."}
+    - {fr: "Un jour, mon frère est tombé dans l'escalier.", en: "One day my brother fell down the stairs."}
+    - {fr: "Notre mère est venue tout de suite.", en: "Our mother came straight away."}
+  questions:
+    - q: {en: "Where did the narrator live as a child?"}
+      options: [{en: "In the country"}, {en: "In Paris"}, {en: "By the sea"}]
+      answer: 0
+    - q: {en: "Where did they go on Sundays?"}
+      options: [{en: "To the market"}, {en: "To church"}, {en: "To the beach"}]
+      answer: 0
+    - q: {en: "What happened one day?"}
+      options: [{en: "The brother fell down the stairs"}, {en: "The grandmother got lost"}, {en: "The house burned"}]
+      answer: 0
+
+- id: u8-rencontre
+  unit: u8
+  title: {fr: "La rencontre", en: "The meeting"}
+  sentences:
+    - {fr: "Il faisait froid et il était tard.", en: "It was cold and it was late."}
+    - {fr: "Marie attendait le bus devant la gare.", en: "Marie was waiting for the bus in front of the station."}
+    - {fr: "Un jeune homme attendait aussi.", en: "A young man was waiting too."}
+    - {fr: "Soudain, il a commencé à parler avec elle.", en: "Suddenly he started to talk to her."}
+    - {fr: "Son nom était Nicolas et il était très drôle.", en: "His name was Nicolas and he was very funny."}
+    - {fr: "Ils ont parlé pendant une heure, et le bus n'est pas arrivé.", en: "They talked for an hour, and the bus didn't come."}
+    - {fr: "Aujourd'hui, Nicolas est son mari !", en: "Today Nicolas is her husband!"}
+  questions:
+    - q: {en: "What was the weather like?"}
+      options: [{en: "Cold"}, {en: "Hot"}, {en: "Rainy"}]
+      answer: 0
+    - q: {en: "Where was Marie waiting?"}
+      options: [{en: "In front of the station"}, {en: "In a café"}, {en: "At home"}]
+      answer: 0
+    - q: {en: "Who is Nicolas today?"}
+      options: [{en: "Marie's husband"}, {en: "Marie's brother"}, {en: "A bus driver"}]
+      answer: 0

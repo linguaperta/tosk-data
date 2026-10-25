@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u10 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u10-dix-ans
+  unit: u10
+  title: {fr: "Dans dix ans", en: "In ten years"}
+  sentences:
+    - {fr: "Dans dix ans, je serai médecin.", en: "In ten years I'll be a doctor."}
+    - {fr: "J'habiterai dans une grande ville.", en: "I'll live in a big city."}
+    - {fr: "J'aurai une maison avec un jardin.", en: "I'll have a house with a garden."}
+    - {fr: "Je voyagerai beaucoup et je verrai le monde.", en: "I'll travel a lot and I'll see the world."}
+    - {fr: "Ma sœur sera professeur, comme notre mère.", en: "My sister will be a teacher, like our mother."}
+    - {fr: "Nous ferons un grand repas pour l'anniversaire de papa.", en: "We'll make a big meal for Dad's birthday."}
+    - {fr: "C'est mon rêve, et j'espère réussir.", en: "That's my dream, and I hope to succeed."}
+  questions:
+    - q: {en: "What job will the narrator have?"}
+      options: [{en: "Doctor"}, {en: "Teacher"}, {en: "Cook"}]
+      answer: 0
+    - q: {en: "What will the sister be?"}
+      options: [{en: "A teacher"}, {en: "A doctor"}, {en: "A student"}]
+      answer: 0
+    - q: {en: "What will the family do for Dad's birthday?"}
+      options: [{en: "Make a big meal"}, {en: "Travel"}, {en: "Buy a house"}]
+      answer: 0
+
+- id: u10-projet
+  unit: u10
+  title: {fr: "Le grand projet", en: "The big plan"}
+  sentences:
+    - {fr: "Pierre a une idée : il va ouvrir un restaurant.", en: "Pierre has an idea: he is going to open a restaurant."}
+    - {fr: "« Ce sera un petit restaurant, près de la mer. »", en: "\"It will be a small restaurant, near the sea.\""}
+    - {fr: "« Je préparerai le poisson et tu choisiras les vins. »", en: "\"I'll prepare the fish and you'll choose the wines.\""}
+    - {fr: "Sa femme n'est pas sûre de cette idée.", en: "His wife isn't sure about this idea."}
+    - {fr: "« Il y aura beaucoup de travail et nous n'aurons pas d'argent. »", en: "\"There will be a lot of work and we won't have any money.\""}
+    - {fr: "« Nous pourrons demander à la banque », répond Pierre.", en: "\"We'll be able to ask the bank,\" Pierre replies."}
+    - {fr: "« Un jour, tu verras : tout le monde viendra chez nous ! »", en: "\"One day you'll see: everyone will come to our place!\""}
+  questions:
+    - q: {en: "What does Pierre want to open?"}
+      options: [{en: "A restaurant"}, {en: "A shop"}, {en: "A hotel"}]
+      answer: 0
+    - q: {en: "What will Pierre prepare?"}
+      options: [{en: "The fish"}, {en: "The wines"}, {en: "The cakes"}]
+      answer: 0
+    - q: {en: "What is the wife worried about?"}
+      options: [{en: "Work and money"}, {en: "The sea"}, {en: "The fish"}]
+      answer: 0

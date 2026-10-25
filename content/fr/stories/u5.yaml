@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u5 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u5-paris
+  unit: u5
+  title: {fr: "Un week-end à Paris", en: "A weekend in Paris"}
+  sentences:
+    - {fr: "Thomas et Léa vont visiter Paris.", en: "Thomas and Léa are going to visit Paris."}
+    - {fr: "Ils prennent le train à la gare de Lyon.", en: "They take the train at Lyon station."}
+    - {fr: "L'hôtel est près de la gare, à côté d'une boulangerie.", en: "The hotel is near the station, next to a bakery."}
+    - {fr: "À Paris, ils vont au musée et dans un grand parc.", en: "In Paris they go to the museum and to a big park."}
+    - {fr: "Le soir, ils mangent dans un restaurant du quartier.", en: "In the evening they eat in a local restaurant."}
+    - {fr: "Demain, ils vont prendre le métro jusqu'à la mairie.", en: "Tomorrow they are going to take the underground to the town hall."}
+    - {fr: "Mais ils viennent d'arriver et ils sont déjà fatigués !", en: "But they have just arrived and they are already tired!"}
+  questions:
+    - q: {en: "How do Thomas and Léa travel to Paris?"}
+      options: [{en: "By train"}, {en: "By car"}, {en: "By plane"}]
+      answer: 0
+    - q: {en: "Where is the hotel?"}
+      options: [{en: "Near the station"}, {en: "Next to the museum"}, {en: "In the park"}]
+      answer: 0
+    - q: {en: "How do they feel?"}
+      options: [{en: "Tired"}, {en: "Hungry"}, {en: "Sad"}]
+      answer: 0
+
+- id: u5-route
+  unit: u5
+  title: {fr: "Sur la route", en: "On the road"}
+  sentences:
+    - {fr: "Ce matin, Pierre va vers la mer en voiture.", en: "This morning, Pierre is driving towards the sea."}
+    - {fr: "Sur la route, il y a beaucoup de voitures.", en: "There are a lot of cars on the road."}
+    - {fr: "Il est en retard : ses amis attendent à la plage.", en: "He is late: his friends are waiting at the beach."}
+    - {fr: "Au feu, il prend à gauche.", en: "At the traffic lights he turns left."}
+    - {fr: "Puis il va tout droit vers le village.", en: "Then he goes straight on towards the village."}
+    - {fr: "Ses amis sont devant un café, près de la plage.", en: "His friends are in front of a café, near the beach."}
+    - {fr: "« Salut, Pierre ! Tu vas manger avec nous ? »", en: "\"Hi, Pierre! Are you going to eat with us?\""}
+  questions:
+    - q: {en: "Where is Pierre going?"}
+      options: [{en: "To the sea"}, {en: "To the mountains"}, {en: "To Paris"}]
+      answer: 0
+    - q: {en: "Why is Pierre in a hurry?"}
+      options: [{en: "He is late"}, {en: "He is hungry"}, {en: "The café is closing"}]
+      answer: 0
+    - q: {en: "Where are his friends?"}
+      options: [{en: "In front of a café near the beach"}, {en: "In the village"}, {en: "At the station"}]
+      answer: 0

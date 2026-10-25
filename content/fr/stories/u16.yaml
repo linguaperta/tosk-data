@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u16 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u16-regrets
+  unit: u16
+  title: {fr: "Si j'avais su", en: "If I had known"}
+  sentences:
+    - {fr: "Hier, je n'ai pas vu le spectacle de Julie.", en: "Yesterday I didn't see Julie's show."}
+    - {fr: "J'aurais dû partir à six heures.", en: "I should have left at six."}
+    - {fr: "Si je n'avais pas perdu mes clés, je serais arrivé à l'heure.", en: "If I hadn't lost my keys, I would have arrived on time."}
+    - {fr: "Julie était triste, bien que je lui aie écrit une lettre.", en: "Julie was sad, although I had written her a letter."}
+    - {fr: "Si j'avais une voiture, ce serait plus simple.", en: "If I had a car, it would be simpler."}
+    - {fr: "Si j'avais su, je serais venu plus tôt.", en: "If I had known, I would have come earlier."}
+    - {fr: "La prochaine fois, je partirai avant tout le monde.", en: "Next time I'll leave before everyone else."}
+  questions:
+    - q: {en: "What did the narrator miss?"}
+      options: [{en: "Julie's show"}, {en: "The train"}, {en: "A meeting"}]
+      answer: 0
+    - q: {en: "Why was the narrator late?"}
+      options: [{en: "He had lost his keys"}, {en: "He had no car"}, {en: "He got up late"}]
+      answer: 0
+    - q: {en: "What will he do next time?"}
+      options: [{en: "Leave before everyone else"}, {en: "Buy a car"}, {en: "Stay at home"}]
+      answer: 0
+
+- id: u16-jeu
+  unit: u16
+  title: {fr: "Et si on gagnait ?", en: "What if we won?"}
+  sentences:
+    - {fr: "Paul et Claire jouent à un jeu à la télé.", en: "Paul and Claire are playing a game on TV."}
+    - {fr: "« Si nous gagnions, qu'est-ce que tu ferais ? »", en: "\"If we won, what would you do?\""}
+    - {fr: "« J'achèterais une maison magnifique près de la mer. »", en: "\"I'd buy a magnificent house near the sea.\""}
+    - {fr: "« Moi, je voyagerais dans le monde entier. »", en: "\"I would travel all over the world.\""}
+    - {fr: "« Et si nous perdions ? — Nous aurions perdu deux euros ! »", en: "\"And if we lost?\" \"We would have lost two euros!\""}
+    - {fr: "Ils n'ont rien gagné, mais la soirée a été très agréable.", en: "They won nothing, but the evening was very pleasant."}
+    - {fr: "C'est dommage qu'ils n'aient pas gagné !", en: "It's a shame they didn't win!"}
+  questions:
+    - q: {en: "What would Claire or Paul buy?"}
+      options: [{en: "A house near the sea"}, {en: "A car"}, {en: "A boat"}]
+      answer: 0
+    - q: {en: "What would the other one do?"}
+      options: [{en: "Travel all over the world"}, {en: "Stop working"}, {en: "Buy a restaurant"}]
+      answer: 0
+    - q: {en: "Did they win?"}
+      options: [{en: "No"}, {en: "Yes, two euros"}, {en: "Yes, a house"}]
+      answer: 0

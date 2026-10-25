@@ -1,0 +1,15 @@
+{"id": "fr:après_que", "lemma": "après que", "pos": "conj", "freq": 1594, "tr": {"en": ["after"]}, "tr_src": {"en": "claude"}, "tags": ["time-connectors"], "variants": ["après qu'"], "unit": "u14"}
+{"id": "fr:auparavant", "lemma": "auparavant", "pos": "adv", "freq": 2780, "tr": {"en": ["before", "previously"]}, "tr_src": {"en": "claude"}, "tags": ["time-connectors"], "unit": "u14"}
+{"id": "fr:aussitôt_que", "lemma": "aussitôt que", "pos": "conj", "freq": 21928, "tr": {"en": ["as soon as"]}, "tr_src": {"en": "claude"}, "tags": ["time-connectors"], "variants": ["aussitôt qu'"], "unit": "u14"}
+{"id": "fr:avant_de", "lemma": "avant de", "pos": "prep", "freq": null, "tr": {"en": ["before"]}, "tr_src": {"en": "claude"}, "tags": ["time-connectors"], "variants": ["avant d'"], "unit": "u14"}
+{"id": "fr:d'ici", "lemma": "d'ici", "pos": "prep", "freq": null, "tr": {"en": ["by", "between now and"]}, "tr_src": {"en": "claude"}, "tags": ["time-connectors"], "unit": "u14"}
+{"id": "fr:depuis_que", "lemma": "depuis que", "pos": "conj", "freq": 1821, "tr": {"en": ["since"]}, "tr_src": {"en": "claude"}, "tags": ["time-connectors"], "variants": ["depuis qu'"], "unit": "u14"}
+{"id": "fr:dès_que", "lemma": "dès que", "pos": "conj", "freq": 5771, "tr": {"en": ["as soon as"]}, "tr_src": {"en": "claude"}, "tags": ["time-connectors"], "variants": ["dès qu'"], "unit": "u14"}
+{"id": "fr:désormais", "lemma": "désormais", "pos": "adv", "freq": 1761, "tr": {"en": ["from now on", "henceforth"]}, "tr_src": {"en": "claude"}, "tags": ["time-connectors"], "unit": "u14"}
+{"id": "fr:entre-temps", "lemma": "entre-temps", "pos": "adv", "freq": 9111, "tr": {"en": ["meanwhile", "in the meantime"]}, "tr_src": {"en": "claude"}, "tags": ["time-connectors"], "unit": "u14"}
+{"id": "fr:jusque-là", "lemma": "jusque-là", "pos": "adv", "freq": 4924, "tr": {"en": ["until then", "up to that point"]}, "tr_src": {"en": "claude"}, "tags": ["time-connectors"], "unit": "u14"}
+{"id": "fr:la_veille", "lemma": "la veille", "pos": "adv", "freq": null, "tr": {"en": ["the day before", "the night before"]}, "tr_src": {"en": "claude"}, "tags": ["time-connectors"], "unit": "u14"}
+{"id": "fr:le_lendemain", "lemma": "le lendemain", "pos": "adv", "freq": null, "tr": {"en": ["the next day", "the day after"]}, "tr_src": {"en": "claude"}, "tags": ["time-connectors"], "unit": "u14"}
+{"id": "fr:promettre", "lemma": "promettre", "pos": "verb", "freq": 371, "tr": {"en": ["to promise"]}, "tr_src": {"en": "claude"}, "tags": ["reporting"], "unit": "u14"}
+{"id": "fr:tant_que", "lemma": "tant que", "pos": "conj", "freq": 2989, "tr": {"en": ["as long as", "while"]}, "tr_src": {"en": "claude"}, "tags": ["time-connectors"], "variants": ["tant qu'"], "unit": "u14"}
+{"id": "fr:une_fois_que", "lemma": "une fois que", "pos": "conj", "freq": null, "tr": {"en": ["once"]}, "tr_src": {"en": "claude"}, "tags": ["time-connectors"], "variants": ["une fois qu'"], "unit": "u14"}

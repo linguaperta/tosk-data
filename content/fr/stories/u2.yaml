@@ -1,0 +1,45 @@
+# Graded mini-stories for unit u2 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u2-cafe
+  unit: u2
+  title: {fr: "Dans un café", en: "In a café"}
+  sentences:
+    - {fr: "Marie et Paul entrent dans un café.", en: "Marie and Paul go into a café."}
+    - {fr: "Paul demande un café et un verre d'eau.", en: "Paul asks for a coffee and a glass of water."}
+    - {fr: "Marie n'aime pas le café.", en: "Marie doesn't like coffee."}
+    - {fr: "Elle demande un thé et un gâteau.", en: "She asks for a tea and a cake."}
+    - {fr: "Ils parlent de Julie, une amie.", en: "They talk about Julie, a friend."}
+    - {fr: "Julie ne mange jamais de gâteau !", en: "Julie never eats cake!"}
+    - {fr: "Paul donne dix euros et ils partent.", en: "Paul gives ten euros and they leave."}
+  new_words: [partir]
+  questions:
+    - q: {en: "What does Paul ask for?"}
+      options: [{en: "A coffee and a glass of water"}, {en: "A tea and a cake"}, {en: "A beer"}]
+      answer: 0
+    - q: {en: "What does Marie not like?"}
+      options: [{en: "Coffee"}, {en: "Tea"}, {en: "Cake"}]
+      answer: 0
+    - q: {en: "How much does Paul give?"}
+      options: [{en: "Ten euros"}, {en: "Two euros"}, {en: "A hundred euros"}]
+      answer: 0
+
+- id: u2-diner
+  unit: u2
+  title: {fr: "Le dîner de Sophie", en: "Sophie's dinner"}
+  sentences:
+    - {fr: "Sophie cherche un restaurant.", en: "Sophie is looking for a restaurant."}
+    - {fr: "Elle trouve un petit restaurant.", en: "She finds a small restaurant."}
+    - {fr: "Elle choisit une table et attend Thomas.", en: "She chooses a table and waits for Thomas."}
+    - {fr: "Thomas arrive avec deux amis.", en: "Thomas arrives with two friends."}
+    - {fr: "Ils mangent du poisson, du riz et une salade.", en: "They eat fish, rice and a salad."}
+    - {fr: "Thomas a soif et il demande une bouteille de vin.", en: "Thomas is thirsty and he asks for a bottle of wine."}
+    - {fr: "Sophie ne finit pas le repas : elle n'a plus faim.", en: "Sophie doesn't finish the meal: she isn't hungry any more."}
+  questions:
+    - q: {en: "Who does Sophie wait for?"}
+      options: [{en: "Thomas"}, {en: "Two friends"}, {en: "A waiter"}]
+      answer: 0
+    - q: {en: "What do they eat?"}
+      options: [{en: "Fish, rice and a salad"}, {en: "Meat and cheese"}, {en: "Soup and bread"}]
+      answer: 0
+    - q: {en: "Why doesn't Sophie finish the meal?"}
+      options: [{en: "She isn't hungry any more"}, {en: "She doesn't like fish"}, {en: "She is thirsty"}]
+      answer: 0

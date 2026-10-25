@@ -1,0 +1,23 @@
+# Graded mini-stories for the topic nature (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: nature-orage
+  unit: nature-u1
+  title: {fr: "L'orage", en: "The storm"}
+  sentences:
+    - {fr: "Ce jour-là, il faisait très chaud.", en: "That day it was very hot."}
+    - {fr: "Le ciel était bleu et le soleil brillait.", en: "The sky was blue and the sun was shining."}
+    - {fr: "Les vaches dormaient dans le champ.", en: "The cows were sleeping in the field."}
+    - {fr: "Soudain, le vent a commencé à souffler.", en: "Suddenly the wind started to blow."}
+    - {fr: "De gros nuages noirs sont arrivés.", en: "Big black clouds arrived."}
+    - {fr: "Il a plu pendant toute la nuit.", en: "It rained all night."}
+    - {fr: "Le matin, tous les animaux sont sortis.", en: "In the morning all the animals came out."}
+  new_words: [champ]
+  questions:
+    - q: {en: "What was the weather like at first?"}
+      options: [{en: "Hot and sunny"}, {en: "Cold and rainy"}, {en: "Foggy"}]
+      answer: 0
+    - q: {en: "What were the cows doing?"}
+      options: [{en: "Sleeping in the field"}, {en: "Eating"}, {en: "Running"}]
+      answer: 0
+    - q: {en: "How long did it rain?"}
+      options: [{en: "All night"}, {en: "An hour"}, {en: "Two days"}]
+      answer: 0

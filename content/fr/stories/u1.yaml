@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u1 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u1-bonjour
+  unit: u1
+  title: {fr: "Bonjour !", en: "Hello!"}
+  sentences:
+    - {fr: "Bonjour, je suis Paul.", en: "Hello, I'm Paul."}
+    - {fr: "Je suis étudiant.", en: "I'm a student."}
+    - {fr: "Voici Marie, une amie.", en: "Here is Marie, a friend."}
+    - {fr: "Elle est française.", en: "She is French."}
+    - {fr: "Marie a un chat et un chien.", en: "Marie has a cat and a dog."}
+    - {fr: "Le chat est petit, mais le chien est très grand.", en: "The cat is small, but the dog is very big."}
+    - {fr: "Salut, Marie ! Ça va ?", en: "Hi, Marie! How are you?"}
+  questions:
+    - q: {en: "Who is Paul?"}
+      options: [{en: "A student"}, {en: "A teacher"}, {en: "A doctor"}]
+      answer: 0
+    - q: {en: "What does Marie have?"}
+      options: [{en: "A cat and a dog"}, {en: "Two cats"}, {en: "A dog"}]
+      answer: 0
+    - q: {en: "Is the dog small?"}
+      options: [{en: "No, it is very big"}, {en: "Yes, very small"}, {en: "It is a cat"}]
+      answer: 0
+
+- id: u1-professeur
+  unit: u1
+  title: {fr: "Le professeur de Julie", en: "Julie's teacher"}
+  sentences:
+    - {fr: "Bonsoir, madame.", en: "Good evening, madam."}
+    - {fr: "Je suis le professeur de Julie.", en: "I am Julie's teacher."}
+    - {fr: "Julie est une bonne élève.", en: "Julie is a good pupil."}
+    - {fr: "Elle a un ami, Hugo.", en: "She has a friend, Hugo."}
+    - {fr: "Hugo est un jeune garçon anglais.", en: "Hugo is a young English boy."}
+    - {fr: "Les enfants sont ici avec moi.", en: "The children are here with me."}
+    - {fr: "Merci, monsieur. Au revoir !", en: "Thank you, sir. Goodbye!"}
+  questions:
+    - q: {en: "Who is speaking first?"}
+      options: [{en: "Julie's teacher"}, {en: "Julie"}, {en: "Hugo"}]
+      answer: 0
+    - q: {en: "Who is Hugo?"}
+      options: [{en: "Julie's friend"}, {en: "Julie's teacher"}, {en: "A doctor"}]
+      answer: 0
+    - q: {en: "Where are the children?"}
+      options: [{en: "Here, with the teacher"}, {en: "With the doctor"}, {en: "In England"}]
+      answer: 0

@@ -1,0 +1,72 @@
+{"id": "fr:affirmer", "lemma": "affirmer", "pos": "verb", "freq": 3309, "tr": {"en": ["to claim", "to state", "to assert"]}, "tr_src": {"en": "claude"}, "tags": ["reporting"], "unit": "u17"}
+{"id": "fr:agir", "lemma": "agir", "pos": "verb", "freq": 394, "tr": {"en": ["to act"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:ajouter", "lemma": "ajouter", "pos": "verb", "freq": 1522, "tr": {"en": ["to add"]}, "tr_src": {"en": "claude"}, "tags": ["reporting"], "unit": "u17"}
+{"id": "fr:annoncer", "lemma": "annoncer", "pos": "verb", "freq": 1682, "tr": {"en": ["to announce"]}, "tr_src": {"en": "claude"}, "tags": ["reporting"], "unit": "u17"}
+{"id": "fr:avertir", "lemma": "avertir", "pos": "verb", "freq": 2309, "tr": {"en": ["to warn"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:avouer", "lemma": "avouer", "pos": "verb", "freq": 1424, "tr": {"en": ["to admit", "to confess"]}, "tr_src": {"en": "claude"}, "tags": ["reporting"], "unit": "u17"}
+{"id": "fr:blesser", "lemma": "blesser", "pos": "verb", "freq": 1383, "tr": {"en": ["to injure", "to hurt", "to wound"]}, "tr_src": {"en": "claude"}, "tags": ["passive"], "unit": "u17"}
+{"id": "fr:bâtir", "lemma": "bâtir", "pos": "verb", "freq": 6251, "tr": {"en": ["to build"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:chanter", "lemma": "chanter", "pos": "verb", "freq": 608, "tr": {"en": ["to sing"]}, "tr_src": {"en": "claude"}, "tags": ["gerund", "leisure"], "unit": "u17"}
+{"id": "fr:construire", "lemma": "construire", "pos": "verb", "freq": 1069, "tr": {"en": ["to build", "to construct"]}, "tr_src": {"en": "claude"}, "tags": ["passive"], "unit": "u17"}
+{"id": "fr:convaincre", "lemma": "convaincre", "pos": "verb", "freq": 1586, "tr": {"en": ["to convince"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:débarrasser", "lemma": "débarrasser", "pos": "verb", "freq": 1355, "tr": {"en": ["to clear", "to get rid of (se débarrasser)"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:déclarer", "lemma": "déclarer", "pos": "verb", "freq": 1635, "tr": {"en": ["to declare", "to state"]}, "tr_src": {"en": "claude"}, "tags": ["reporting"], "unit": "u17"}
+{"id": "fr:découvrir", "lemma": "découvrir", "pos": "verb", "freq": 713, "tr": {"en": ["to discover"]}, "tr_src": {"en": "claude"}, "tags": ["passive"], "unit": "u17"}
+{"id": "fr:déménager", "lemma": "déménager", "pos": "verb", "freq": 1712, "tr": {"en": ["to move (house)"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:dépasser", "lemma": "dépasser", "pos": "verb", "freq": 2117, "tr": {"en": ["to exceed", "to overtake"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:détruire", "lemma": "détruire", "pos": "verb", "freq": 615, "tr": {"en": ["to destroy"]}, "tr_src": {"en": "claude"}, "tags": ["passive"], "unit": "u17"}
+{"id": "fr:en_passant", "lemma": "en passant", "pos": "adv", "freq": 18239, "tr": {"en": ["in passing", "by the way"]}, "tr_src": {"en": "claude"}, "tags": ["gerund"], "unit": "u17"}
+{"id": "fr:enfermer", "lemma": "enfermer", "pos": "verb", "freq": 1694, "tr": {"en": ["to lock up", "to shut in"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:entourer", "lemma": "entourer", "pos": "verb", "freq": 3025, "tr": {"en": ["to surround"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:fixer", "lemma": "fixer", "pos": "verb", "freq": 2667, "tr": {"en": ["to fix", "to set", "to stare at"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:fonder", "lemma": "fonder", "pos": "verb", "freq": 7386, "tr": {"en": ["to found", "to establish"]}, "tr_src": {"en": "claude"}, "tags": ["passive"], "unit": "u17"}
+{"id": "fr:fournir", "lemma": "fournir", "pos": "verb", "freq": 2461, "tr": {"en": ["to supply", "to provide"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:fuir", "lemma": "fuir", "pos": "verb", "freq": 966, "tr": {"en": ["to flee", "to run away", "to leak"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:garantir", "lemma": "garantir", "pos": "verb", "freq": 3149, "tr": {"en": ["to guarantee"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:glisser", "lemma": "glisser", "pos": "verb", "freq": 2556, "tr": {"en": ["to slip", "to slide"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:grossir", "lemma": "grossir", "pos": "verb", "freq": 5279, "tr": {"en": ["to put on weight", "to grow"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:habituer", "lemma": "habituer", "pos": "verb", "freq": 3251, "tr": {"en": ["to get used to (s'habituer)"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:interdire", "lemma": "interdire", "pos": "verb", "freq": 3780, "tr": {"en": ["to forbid", "to ban"]}, "tr_src": {"en": "claude"}, "tags": ["passive"], "unit": "u17"}
+{"id": "fr:inventer", "lemma": "inventer", "pos": "verb", "freq": 1459, "tr": {"en": ["to invent"]}, "tr_src": {"en": "claude"}, "tags": ["passive"], "unit": "u17"}
+{"id": "fr:joindre", "lemma": "joindre", "pos": "verb", "freq": 1555, "tr": {"en": ["to join", "to reach", "to attach"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:lutter", "lemma": "lutter", "pos": "verb", "freq": 2966, "tr": {"en": ["to fight", "to struggle"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:maigrir", "lemma": "maigrir", "pos": "verb", "freq": 9352, "tr": {"en": ["to lose weight"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:mener", "lemma": "mener", "pos": "verb", "freq": 769, "tr": {"en": ["to lead"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:nier", "lemma": "nier", "pos": "verb", "freq": 2512, "tr": {"en": ["to deny"]}, "tr_src": {"en": "claude"}, "tags": ["reporting"], "unit": "u17"}
+{"id": "fr:obéir", "lemma": "obéir", "pos": "verb", "freq": 1996, "tr": {"en": ["to obey"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:organiser", "lemma": "organiser", "pos": "verb", "freq": 1156, "tr": {"en": ["to organize"]}, "tr_src": {"en": "claude"}, "tags": ["passive"], "unit": "u17"}
+{"id": "fr:peser", "lemma": "peser", "pos": "verb", "freq": 3227, "tr": {"en": ["to weigh"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:poursuivre", "lemma": "poursuivre", "pos": "verb", "freq": 1065, "tr": {"en": ["to pursue", "to continue", "to chase"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:prier", "lemma": "prier", "pos": "verb", "freq": 327, "tr": {"en": ["to pray", "to beg"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:produire", "lemma": "produire", "pos": "verb", "freq": 2161, "tr": {"en": ["to produce"]}, "tr_src": {"en": "claude"}, "tags": ["passive"], "unit": "u17"}
+{"id": "fr:prétendre", "lemma": "prétendre", "pos": "verb", "freq": 1697, "tr": {"en": ["to claim", "to pretend"]}, "tr_src": {"en": "claude"}, "tags": ["reporting"], "unit": "u17"}
+{"id": "fr:prévenir", "lemma": "prévenir", "pos": "verb", "freq": 987, "tr": {"en": ["to warn", "to tell", "to prevent"]}, "tr_src": {"en": "claude"}, "tags": ["reporting"], "unit": "u17"}
+{"id": "fr:publier", "lemma": "publier", "pos": "verb", "freq": 2867, "tr": {"en": ["to publish"]}, "tr_src": {"en": "claude"}, "tags": ["passive"], "unit": "u17"}
+{"id": "fr:punir", "lemma": "punir", "pos": "verb", "freq": 1909, "tr": {"en": ["to punish"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:raconter", "lemma": "raconter", "pos": "verb", "freq": 454, "tr": {"en": ["to tell", "to recount"]}, "tr_src": {"en": "claude"}, "tags": ["reporting"], "unit": "u17"}
+{"id": "fr:rajeunir", "lemma": "rajeunir", "pos": "verb", "freq": 10099, "tr": {"en": ["to look younger", "to rejuvenate"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:ralentir", "lemma": "ralentir", "pos": "verb", "freq": 2325, "tr": {"en": ["to slow down"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:remplacer", "lemma": "remplacer", "pos": "verb", "freq": 1630, "tr": {"en": ["to replace"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:renoncer", "lemma": "renoncer", "pos": "verb", "freq": 1947, "tr": {"en": ["to give up", "to renounce"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:retenir", "lemma": "retenir", "pos": "verb", "freq": 1344, "tr": {"en": ["to hold back", "to remember", "to keep"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:rougir", "lemma": "rougir", "pos": "verb", "freq": 7800, "tr": {"en": ["to blush", "to go red"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:rouler", "lemma": "rouler", "pos": "verb", "freq": 1363, "tr": {"en": ["to roll", "to drive"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:répéter", "lemma": "répéter", "pos": "verb", "freq": 874, "tr": {"en": ["to repeat", "to rehearse"]}, "tr_src": {"en": "claude"}, "tags": ["reporting"], "unit": "u17"}
+{"id": "fr:résoudre", "lemma": "résoudre", "pos": "verb", "freq": 1627, "tr": {"en": ["to solve", "to resolve"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:réunir", "lemma": "réunir", "pos": "verb", "freq": 1759, "tr": {"en": ["to bring together", "to gather"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:révéler", "lemma": "révéler", "pos": "verb", "freq": 1810, "tr": {"en": ["to reveal"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:saisir", "lemma": "saisir", "pos": "verb", "freq": 2494, "tr": {"en": ["to seize", "to grab", "to grasp"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:serrer", "lemma": "serrer", "pos": "verb", "freq": 2779, "tr": {"en": ["to squeeze", "to tighten", "to shake (hands)"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:soulever", "lemma": "soulever", "pos": "verb", "freq": 3178, "tr": {"en": ["to lift", "to raise"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:supposer", "lemma": "supposer", "pos": "verb", "freq": 440, "tr": {"en": ["to suppose", "to assume"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:surprendre", "lemma": "surprendre", "pos": "verb", "freq": 2563, "tr": {"en": ["to surprise", "to catch"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:tout_en", "lemma": "tout en", "pos": "conj", "freq": null, "tr": {"en": ["while", "whilst"]}, "tr_src": {"en": "claude"}, "tags": ["gerund"], "unit": "u17"}
+{"id": "fr:traduire", "lemma": "traduire", "pos": "verb", "freq": 3658, "tr": {"en": ["to translate"]}, "tr_src": {"en": "claude"}, "tags": ["passive"], "unit": "u17"}
+{"id": "fr:vieillir", "lemma": "vieillir", "pos": "verb", "freq": 4612, "tr": {"en": ["to grow old", "to age"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:viser", "lemma": "viser", "pos": "verb", "freq": 1723, "tr": {"en": ["to aim"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:échapper", "lemma": "échapper", "pos": "verb", "freq": 1132, "tr": {"en": ["to escape"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:éclairer", "lemma": "éclairer", "pos": "verb", "freq": 6314, "tr": {"en": ["to light up", "to enlighten"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:élever", "lemma": "élever", "pos": "verb", "freq": 2504, "tr": {"en": ["to raise", "to bring up"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}
+{"id": "fr:élire", "lemma": "élire", "pos": "verb", "freq": 9642, "tr": {"en": ["to elect"]}, "tr_src": {"en": "claude"}, "tags": ["passive"], "unit": "u17"}
+{"id": "fr:étant_donné", "lemma": "étant donné", "pos": "prep", "freq": 10651, "tr": {"en": ["given", "considering"]}, "tr_src": {"en": "claude"}, "tags": ["gerund"], "unit": "u17"}
+{"id": "fr:étendre", "lemma": "étendre", "pos": "verb", "freq": 4269, "tr": {"en": ["to spread", "to stretch", "to hang out"]}, "tr_src": {"en": "claude"}, "tags": ["verbs4"], "unit": "u17"}

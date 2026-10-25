@@ -1,0 +1,1117 @@
+# French course for English speakers, B1-B2 (an advanced learner: the basics are compact but complete).
+# Skills select their items with queries (see tosk/pipeline/pipeline/query.py); the compiler resolves
+# them into skill_items/skill_facets, so the app never reads these queries.
+#
+# Variety: standard French of France. Language rules for the pipeline: pipeline/pipeline/lang_fr.py
+# (elision, hyphenated inversion and imperatives, reflexive verbs as verb + pronoun, participle
+# agreement, mood homographs such as parle = present / subjunctive).
+#
+# Grammar gating (tosk/docs/ARCHITECTURE.md, "Grammar gating"; pipeline/pipeline/features.py): a learner
+# never meets a grammar construct before the skill that introduces it. The present is allowed from the
+# start; every other feature below is introduced by one skill (a verbs skill introduces tense:{T} by
+# itself). Each unit's skills require the previous unit's grammar, so every later skill allows
+# everything taught before it.
+id: fr
+version: 1.0.0
+title: {en: French}
+description:
+  en: "French for advanced learners (B1-B2): every tense and mood, pronouns, the subjunctive and reading French, with themed topics."
+target: fr
+translations: [en]
+required_translations: [en]
+note_langs: [en]
+unverified: true
+# topics (pack format 1.2) need app 0.7.5 (tosk/docs/topic-split.md, "Versions and old apps")
+min_app_version: 0.7.5
+license: CC-BY-SA-4.0
+authors:
+  - {name: "tosk contributors", role: author, url: "https://github.com/linguaperta/tosk-data"}
+data_sources:
+  - {id: wiktionary, title: "Wiktionary (via kaikki.org)", url: "https://kaikki.org", license: CC-BY-SA-4.0}
+  - {id: tatoeba, title: Tatoeba, url: "https://tatoeba.org", license: CC-BY-2.0-FR}
+  - {id: frequencywords, title: "FrequencyWords (hermitdave, OpenSubtitles 2018)", url: "https://github.com/hermitdave/FrequencyWords", license: CC-BY-SA-4.0}
+  - {id: claude-gen, title: "Sentences, stories and notes written with Claude (Anthropic)", license: CC-BY-SA-4.0}
+persons: [je, tu, il/elle, nous, vous, ils/elles]
+person_labels:
+  je: {en: "je/j' (I)"}
+  tu: {en: "tu (you)"}
+  il/elle: {en: "il/elle/on (he/she/one)"}
+  nous: {en: "nous (we)"}
+  vous: {en: "vous (you, plural or formal)"}
+  ils/elles: {en: "ils/elles (they)"}
+tenses: [present, passe_compose, imparfait, futur, plus_que_parfait, futur_anterieur, conditionnel,
+         conditionnel_passe, subjonctif, subjonctif_passe, imperatif, passe_simple]
+tense_labels:
+  present: {en: present}
+  passe_compose: {en: "perfect (passé composé)"}
+  imparfait: {en: "imperfect (imparfait)"}
+  futur: {en: "future (futur simple)"}
+  plus_que_parfait: {en: "pluperfect (plus-que-parfait)"}
+  futur_anterieur: {en: "future perfect (futur antérieur)"}
+  conditionnel: {en: "conditional (conditionnel présent)"}
+  conditionnel_passe: {en: "past conditional (conditionnel passé)"}
+  subjonctif: {en: "subjunctive (subjonctif présent)"}
+  subjonctif_passe: {en: "past subjunctive (subjonctif passé)"}
+  imperatif: {en: imperative}
+  passe_simple: {en: "simple past of narration (passé simple)"}
+# the imperative has only tu, nous and vous
+tense_persons:
+  imperatif: [tu, nous, vous]
+tense_person_labels:
+  imperatif:
+    tu: {en: "tu (you)"}
+    nous: {en: "nous (let's)"}
+    vous: {en: "vous (you, plural or formal)"}
+# the transform exercise changes the tense only within one group: the indicative tenses (unlisted),
+# never into or out of a mood (Il parle -> *Qu'il parle; S'il pleut, je reste -> *je resterais)
+tense_groups:
+  conditionnel: conditional
+  conditionnel_passe: conditional
+  subjonctif: subjunctive
+  subjonctif_passe: subjunctive
+  imperatif: imperative
+articles: [le, la, "l'"]
+
+# Inflection tables of non-verbs (tosk/docs/ARCHITECTURE.md, "Inflection tables"; the importer fills them
+# from Wiktionary, pipeline/pipeline/inflect.py fr_number / fr_agreement).
+inflection_tables:
+  number:
+    title: {en: singular and plural}
+    pos: [noun]
+    cells: [sg, pl]
+    base: sg
+    labels:
+      sg: {en: singular}
+      pl: {en: plural}
+  agreement:
+    title: {en: gender and number}
+    pos: [adj, det]
+    cells: [m.sg, f.sg, m.pl, f.pl]
+    base: m.sg
+    agreement: true
+    labels:
+      m.sg: {en: masculine singular}
+      f.sg: {en: feminine singular}
+      m.pl: {en: masculine plural}
+      f.pl: {en: feminine plural}
+
+base_features: ["tense:present"]
+feature_detectors:
+  # ne ... jamais / rien / personne / aucun / ni (ne ... pas is allowed from the start)
+  negation: {type: words, words: [jamais, rien, personne, aucun, aucune, nulle, ni, guère]}
+  # questions by inversion: parlez-vous ? a-t-il ? est-ce que ...
+  inversion:
+    type: pattern
+    pattern: "[\\w']-(t-)?(je|tu|il|elle|on|ils|elles|ce)\\b|(?<!rendez)-(nous|vous)\\b[^.!]*\\?"
+  # pouvoir/vouloir/devoir/savoir + infinitive (je peux venir, il doit partir)
+  modal: {type: modal_infinitive, verbs: [pouvoir, vouloir, devoir, savoir]}
+  # the near future: aller + infinitive (je vais partir) and the recent past: venir de + infinitive
+  futur_proche: {type: modal_infinitive, verbs: [aller]}
+  venir_de:
+    type: pattern
+    annotate: true
+    pattern: "\\b(viens|vient|venons|venez|viennent|venais|venait|venions|veniez|venaient)\\{[^}]*\\}\\s+(de\\{\\}\\s+|d'\\{\\})([^\\s{]+\\{\\}\\s*)*?[^\\s{]+\\{infinitive\\._\\}"
+  # the pronouns y and en (j'y vais, il en veut deux); 'il y a' (there is) is allowed from the start
+  "pronoun:y":
+    type: pattern
+    pattern: "(^|[\\s'])y\\b(?!\\s+(a|avait|aura|aurait|ait|eut|avoir|a-t-il|avait-il|aura-t-il|aurait-il)\\b)|-y\\b"
+  "pronoun:en":
+    type: pattern
+    annotate: true
+    pattern: "(^|[\\s}])en\\{\\}\\s*(y\\{\\}\\s*)?[^\\s{]+\\{([a-z_]+\\.(je|tu|il/elle|nous|vous|ils/elles)|infinitive\\._)\\}|-en\\b|t'en\\b"
+  # two object pronouns together: il me le donne, je le lui dis, je m'en vais, donne-le-moi
+  "pronoun:combined":
+    type: pattern
+    pattern: "\\b(je|j'|tu|il|elle|on|nous|vous|ils|elles|ne|n')\\s+(me|te|se|nous|vous)\\s+(le|la|les|l')|\\b(le|la|les|l')\\s+(lui|leur)\\b|\\b(m'|t'|s'|lui\\s+|leur\\s+)en\\b|-(le|la|les)-(moi|toi|lui|nous|vous|leur)\\b"
+  # the passé composé with être (je suis allé, elle est partie) and participle agreement (elle est
+  # allée; je les ai vues: an agreeing participle that is no form of the avoir table)
+  "aux:etre": {type: compound_aux, aux: être}
+  agreement: {type: enclitic, tense: passe_compose}
+  # irregular participles (fait, dit, pris, vu, mis, eu, été, écrit, ouvert, venu)
+  "irregular:passe_compose": {type: irregular_tense, tense: passe_compose}
+  # a reflexive pronoun of the verb's own person (je me lève, nous nous sommes vus)
+  reflexive:
+    type: reflexive
+    pronouns: {me: je, "m'": je, te: tu, "t'": tu, se: [il/elle, ils/elles], "s'": [il/elle, ils/elles], nous: nous, vous: vous}
+    clitics: [le, la, les, "l'", y, en, lui, leur, ne, "n'"]
+    subject_pronouns: [nous, vous]
+  # irregular future and conditional stems (serai, aurai, irai, ferai, pourrai, viendrai, verrai)
+  "irregular:futur": {type: irregular_tense, tense: futur}
+  "irregular:conditionnel": {type: irregular_tense, tense: conditionnel}
+  # irregular imperatives (sois, aie, sache, veuille, va), with pronouns (donne-moi, lève-toi), negative (ne parle pas)
+  "irregular:imperatif": {type: irregular_tense, tense: imperatif}
+  "imperative:pronoun": {type: enclitic, tense: imperatif}
+  "imperative:negative":
+    type: pattern
+    annotate: true
+    pattern: "(^|[.!?;:,«\"]\\s*)(ne|n')\\{\\}\\s*((me|te|se|le|la|les|lui|leur|y|en|nous|vous|m'|t'|l')\\{\\}\\s*)*[^\\s{]+\\{imperatif\\."
+  # comparatives and superlatives (plus grand que, aussi vite que, meilleur, le plus beau)
+  comparative:
+    type: pattern
+    pattern: "\\b(plus|moins|aussi|autant)\\s+(de\\s+|d')?[\\w'-]+\\s+(que|qu')|\\b(meilleur|meilleure|meilleurs|meilleures|pire|pires)\\b|\\b(le|la|les)\\s+(plus|moins)\\b|\\bautant\\s+que\\b"
+  # relative pronouns dont and lequel (le livre dont je parle, la raison pour laquelle)
+  "relative:dont": {type: words, words: [dont]}
+  "relative:lequel":
+    type: words
+    words: [lequel, laquelle, lesquels, lesquelles, auquel, auxquels, auxquelles, duquel, desquels, desquelles]
+  # irregular subjunctives (sois, aie, aille, fasse, puisse, sache, veuille, vienne)
+  "irregular:subjonctif": {type: irregular_tense, tense: subjonctif}
+  # hypotheses: si + imparfait / plus-que-parfait with a conditional (si j'avais le temps, je viendrais)
+  si_clause:
+    type: pattern
+    annotate: true
+    pattern: "(^|[\\s'\"«])(si|s')\\{\\}(?:[^.!?;]|\\.(?=[a-z/_]+\\}))*\\{(imparfait|plus_que_parfait)\\.(?:[^.!?;]|\\.(?=[a-z/_]+\\}))*\\{(conditionnel|conditionnel_passe)\\.|\\{(conditionnel|conditionnel_passe)\\.(?:[^.!?;]|\\.(?=[a-z/_]+\\}))*\\s(si|s')\\{\\}(?:[^.!?;]|\\.(?=[a-z/_]+\\}))*\\{(imparfait|plus_que_parfait)\\."
+  # the passive: être + participle (la maison a été construite, il est aimé de tous)
+  passive:
+    type: pattern
+    annotate: true
+    pattern: "\\b(suis|es|est|sommes|êtes|sont|étais|était|étions|étiez|étaient|serai|seras|sera|serons|serez|seront|serais|serait|serions|seriez|seraient|sois|soit|soyons|soyez|soient|être|été|étant|fut|furent)\\{[^}]*\\}\\s+([^\\s{]+\\{\\}\\s+){0,2}[^\\s{]+\\{participle\\._\\}"
+  # the gérondif and the present participle (en marchant, étant donné)
+  gerund: {type: nonfinite, form: gerund}
+  # irregular passé simple (fut, eut, fit, dit, prit, vint, mit, put, sut, vit)
+  "irregular:passe_simple": {type: irregular_tense, tense: passe_simple}
+
+# Time adverbs (whole words, case-insensitive) and the tenses they fit. The app never rewrites a
+# sentence with one of these into another tense (transform exercise: no *Hier je mange).
+time_adverbs:
+  maintenant: [present]
+  actuellement: [present]
+  en ce moment: [present]
+  de nos jours: [present]
+  aujourd'hui: [present, passe_compose, futur]
+  hier: [passe_compose, imparfait, plus_que_parfait, passe_simple]
+  avant-hier: [passe_compose, imparfait, plus_que_parfait, passe_simple]
+  hier soir: [passe_compose, imparfait, plus_que_parfait, passe_simple]
+  dernier: [passe_compose, imparfait, plus_que_parfait, passe_simple]
+  dernière: [passe_compose, imparfait, plus_que_parfait, passe_simple]
+  autrefois: [imparfait, passe_compose, passe_simple]
+  jadis: [imparfait, passe_compose, passe_simple]
+  à l'époque: [imparfait, passe_compose, plus_que_parfait]
+  quand j'étais petit: [imparfait, passe_compose]
+  quand j'étais petite: [imparfait, passe_compose]
+  d'habitude: [present, imparfait]
+  souvent: [present, imparfait, passe_compose, futur]
+  demain: [present, futur, futur_anterieur]
+  après-demain: [present, futur, futur_anterieur]
+  prochain: [present, futur, futur_anterieur]
+  prochaine: [present, futur, futur_anterieur]
+  bientôt: [present, futur, futur_anterieur]
+  plus tard: [present, futur, futur_anterieur]
+  dans un an: [present, futur, futur_anterieur]
+  ce soir: [present, futur, passe_compose]
+  déjà: [present, passe_compose, plus_que_parfait, futur_anterieur]
+  jamais: [present, passe_compose, imparfait, futur, plus_que_parfait]
+  toujours: [present, passe_compose, imparfait, futur]
+  depuis: [present, imparfait]
+
+units:
+  - id: u1
+    title: {en: Basics}
+    skills:
+      - id: greetings
+        kind: vocab
+        title: {en: Greetings}
+        icon: wave
+        items: {tags: [greetings]}
+      - id: little-words
+        kind: vocab
+        title: {en: Little words}
+        icon: chat
+        requires: [greetings]
+        items: {tags: [little]}
+      - id: people
+        kind: vocab
+        title: {en: People}
+        icon: people
+        requires: [greetings]
+        items: {tags: [people]}
+      - id: etre-avoir
+        kind: grammar
+        title: {en: "Être and avoir"}
+        icon: key
+        requires: [little-words, people]
+        verbs: {lemmas: [être, avoir], tense: present}
+        exercises: [conj_grid, cloze, spot_error, transform, multiple_choice]
+
+  - id: u2
+    title: {en: The present tense}
+    skills:
+      - id: present-er
+        kind: grammar
+        title: {en: "Present of -er verbs: je parle"}
+        icon: verb
+        requires: [etre-avoir]
+        verbs: {tense: present, lemmas: [parler, aimer, regarder, chercher, trouver, donner, travailler, écouter,
+                                          demander, penser, habiter, arriver, entrer, rester, oublier, jouer,
+                                          marcher, manger]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+      - id: food
+        kind: vocab
+        title: {en: Food and drink}
+        icon: food
+        requires: [etre-avoir]
+        items: {tags: [food]}
+      - id: articles
+        kind: grammar
+        title: {en: "Articles: le, la, un, du"}
+        icon: article
+        requires: [food]
+        facet: article
+        items: {tags: [gender]}
+      - id: numbers
+        kind: vocab
+        title: {en: Numbers}
+        icon: numbers
+        requires: [etre-avoir]
+        items: {tags: [numbers]}
+      - id: present-ir-re
+        kind: grammar
+        title: {en: "Present of -ir and -re verbs: je finis, je vends"}
+        icon: verb
+        requires: [present-er]
+        verbs: {tense: present, lemmas: [finir, choisir, réussir, réfléchir, grandir, remplir, vendre, attendre,
+                                          entendre, répondre, perdre, rendre, descendre, défendre]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+      - id: negation
+        kind: grammar
+        title: {en: "Negation: ne ... pas, jamais, rien"}
+        icon: grammar
+        requires: [present-er, articles]
+        introduces: [negation]
+        items: {tags: [negation]}
+
+  - id: u3
+    title: {en: Everyday life}
+    skills:
+      - id: time
+        kind: vocab
+        title: {en: Time and days}
+        icon: clock
+        requires: [present-ir-re, negation]
+        items: {tags: [time]}
+      - id: home
+        kind: vocab
+        title: {en: At home}
+        icon: home
+        requires: [present-ir-re, negation]
+        items: {tags: [home]}
+      - id: family
+        kind: vocab
+        title: {en: Family}
+        icon: family
+        requires: [time]
+        items: {tags: [family]}
+      - id: everyday-verbs
+        kind: vocab
+        title: {en: Everyday verbs}
+        icon: verb
+        requires: [home]
+        items: {tags: [verbs1]}
+      - id: irregular-present
+        kind: grammar
+        title: {en: "Irregular verbs: je vais, je fais, je viens"}
+        icon: bolt
+        requires: [present-ir-re, negation]
+        verbs: {tense: present, lemmas: [aller, faire, venir, prendre, dire, voir, mettre, partir, sortir, dormir,
+                                          lire, écrire, boire, connaître, croire]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: modal-verbs
+        kind: grammar
+        title: {en: "Pouvoir, vouloir, devoir, savoir"}
+        icon: key
+        requires: [irregular-present]
+        introduces: [modal]
+        verbs: {tense: present, lemmas: [pouvoir, vouloir, devoir, savoir]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: questions
+        kind: grammar
+        title: {en: "Questions: est-ce que, inversion"}
+        icon: question
+        requires: [irregular-present]
+        introduces: [inversion]
+        items: {tags: [questions]}
+
+  - id: u4
+    title: {en: Describing things}
+    skills:
+      - id: adjectives
+        kind: grammar
+        title: {en: "Adjectives: petit, petite, petits"}
+        icon: grammar
+        requires: [modal-verbs, questions]
+        items: {tags: [adjectives]}
+        inflections: {table: agreement}
+      - id: colours
+        kind: vocab
+        title: {en: Colours}
+        icon: colors
+        requires: [adjectives]
+        items: {tags: [colours]}
+        inflections: {table: agreement}
+      - id: adverbs
+        kind: vocab
+        title: {en: Useful adverbs}
+        icon: star
+        requires: [modal-verbs, questions]
+        items: {tags: [adverbs]}
+      - id: possessives
+        kind: grammar
+        title: {en: "Mon, ton, son: possessives"}
+        icon: person
+        requires: [adjectives, family]
+        items: {tags: [possessives]}
+        inflections: {table: agreement}
+      - id: demonstratives
+        kind: grammar
+        title: {en: "Ce, cette, celui-ci: demonstratives"}
+        icon: grammar
+        requires: [possessives]
+        items: {tags: [demonstratives]}
+      - id: plurals
+        kind: grammar
+        title: {en: "Plurals: chevaux, yeux, bijoux"}
+        icon: grammar
+        requires: [adjectives]
+        facet: infl
+        inflections: {table: number}
+        items: {pos: noun, tags: [plurals]}
+
+  - id: u5
+    title: {en: Around town}
+    skills:
+      - id: city
+        kind: vocab
+        title: {en: In the city}
+        icon: city
+        requires: [demonstratives, plurals, colours]
+        items: {tags: [city]}
+      - id: travel
+        kind: vocab
+        title: {en: Travel}
+        icon: travel
+        requires: [demonstratives, plurals, colours]
+        items: {tags: [travel]}
+      - id: prepositions
+        kind: grammar
+        title: {en: "Prepositions: à, de, chez, en, au"}
+        icon: grammar
+        requires: [city, travel]
+        items: {tags: [prepositions]}
+      - id: near-future
+        kind: grammar
+        title: {en: "Je vais partir, je viens d'arriver"}
+        icon: future
+        requires: [prepositions]
+        introduces: [futur_proche, venir_de]
+        items: {tags: [near-future]}
+
+  - id: u6
+    title: {en: Pronouns}
+    skills:
+      - id: work
+        kind: vocab
+        title: {en: Work and school}
+        icon: work
+        requires: [near-future]
+        items: {tags: [work]}
+      - id: pronouns
+        kind: grammar
+        title: {en: "Object pronouns: le, la, lui, leur"}
+        icon: person
+        requires: [near-future]
+        items: {tags: [pronouns]}
+      - id: y-en
+        kind: grammar
+        title: {en: "Y and en: j'y vais, j'en veux"}
+        icon: grammar
+        requires: [pronouns]
+        introduces: ["pronoun:y", "pronoun:en"]
+        items: {tags: [y-en], min: 3}
+      - id: combined-pronouns
+        kind: grammar
+        title: {en: "Two pronouns: il me le donne"}
+        icon: grammar
+        requires: [y-en]
+        introduces: ["pronoun:combined"]
+        items: {tags: [combined]}
+
+  - id: u7
+    title: {en: The past}
+    skills:
+      - id: passe-compose
+        kind: grammar
+        title: {en: "The passé composé: j'ai parlé"}
+        icon: past
+        requires: [combined-pronouns, work]
+        verbs: {tense: passe_compose, lemmas: [parler, aimer, regarder, chercher, trouver,
+                                                                          donner, travailler, écouter, demander, penser,
+                                                                          manger, oublier, finir, choisir, attendre,
+                                                                          perdre, répondre, vendre]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: participles-irregular
+        kind: grammar
+        title: {en: "Irregular participles: fait, dit, pris, vu"}
+        icon: past
+        requires: [passe-compose]
+        introduces: ["irregular:passe_compose"]
+        verbs: {tense: passe_compose, lemmas: [être, avoir, faire, dire, prendre, voir, mettre, écrire, lire, boire,
+                                                connaître, croire, pouvoir, vouloir, devoir, savoir, ouvrir, recevoir]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: passe-compose-etre
+        kind: grammar
+        title: {en: "With être: je suis allé, elle est partie"}
+        icon: past
+        requires: [participles-irregular]
+        introduces: ["aux:etre", agreement]
+        verbs: {tense: passe_compose, lemmas: [aller, venir, arriver, partir, sortir, entrer, rentrer, rester, tomber,
+                                                monter, descendre, naître, mourir, devenir, retourner, revenir]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+
+  - id: u8
+    title: {en: Memories}
+    skills:
+      - id: imparfait
+        kind: grammar
+        title: {en: "The imparfait: je parlais, j'étais"}
+        icon: past
+        requires: [passe-compose-etre]
+        verbs: {tense: imparfait, lemmas: [être, avoir, faire, aller, parler, aimer, habiter, penser, pouvoir, vouloir,
+                                            savoir, devoir, venir, prendre, finir, connaître, croire, voir]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+      - id: narration
+        kind: grammar
+        title: {en: "Imparfait or passé composé? Telling a story"}
+        icon: book
+        requires: [imparfait]
+        items: {tags: [narration]}
+      - id: more-verbs
+        kind: vocab
+        title: {en: More verbs}
+        icon: verb
+        requires: [imparfait]
+        items: {tags: [verbs2]}
+      - id: people-2
+        kind: vocab
+        title: {en: People and relationships}
+        icon: people
+        requires: [imparfait]
+        items: {tags: [people2]}
+
+  - id: u9
+    title: {en: Daily routine}
+    skills:
+      - id: reflexive
+        kind: grammar
+        title: {en: "Reflexive verbs: je me lève"}
+        icon: person
+        requires: [narration, more-verbs]
+        introduces: [reflexive]
+        verbs: {tense: present, lemmas: [lever, coucher, laver, habiller, réveiller, promener, appeler, reposer,
+                                          dépêcher, amuser, marier, souvenir]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: reflexive-past
+        kind: grammar
+        title: {en: "Je me suis levé: reflexive verbs in the past"}
+        icon: past
+        requires: [reflexive]
+        verbs: {tense: passe_compose, lemmas: [lever, coucher, laver, habiller, réveiller, promener, reposer,
+                                                dépêcher, amuser, marier, souvenir, tromper]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: little-words-2
+        kind: vocab
+        title: {en: "More little words"}
+        icon: chat
+        requires: [reflexive]
+        items: {tags: [little2]}
+
+  - id: u10
+    title: {en: Plans for the future}
+    skills:
+      - id: futur
+        kind: grammar
+        title: {en: "The future: je parlerai"}
+        icon: future
+        requires: [reflexive-past, little-words-2]
+        verbs: {tense: futur, lemmas: [parler, aimer, chercher, trouver, donner, travailler,
+                                                      demander, penser, arriver, rester, manger, oublier, jouer,
+                                                      finir, choisir, attendre, répondre, vendre]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+      - id: futur-irregular
+        kind: grammar
+        title: {en: "Irregular futures: je serai, j'irai, je ferai"}
+        icon: future
+        requires: [futur]
+        introduces: ["irregular:futur"]
+        verbs: {tense: futur, lemmas: [être, avoir, aller, faire, venir, pouvoir, vouloir, devoir, savoir, voir,
+                                        tenir, envoyer]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: ideas
+        kind: vocab
+        title: {en: Ideas and opinions}
+        icon: chat
+        requires: [futur]
+        items: {tags: [ideas]}
+
+  - id: u11
+    title: {en: Do it!}
+    skills:
+      - id: imperatif
+        kind: grammar
+        title: {en: "The imperative: parle ! finissons !"}
+        icon: verb
+        requires: [futur-irregular, ideas]
+        introduces: ["imperative:negative"]
+        verbs: {tense: imperatif, lemmas: [parler, regarder, écouter, chercher, donner, manger, attendre, finir,
+                                            choisir, répondre, prendre, mettre, venir, partir, écrire, lire]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error]
+      - id: imperatif-irregular
+        kind: grammar
+        title: {en: "Sois, aie, sache, va: irregular imperatives"}
+        icon: bolt
+        requires: [imperatif]
+        introduces: ["irregular:imperatif"]
+        verbs: {tense: imperatif, lemmas: [être, avoir, savoir, vouloir, aller, faire, dire, voir, boire, croire]}
+        exercises: [conj_grid, cloze, spot_error]
+      - id: imperatif-pronouns
+        kind: grammar
+        title: {en: "Donne-moi, lève-toi: imperative with pronouns"}
+        icon: person
+        requires: [imperatif-irregular]
+        introduces: ["imperative:pronoun"]
+        verbs: {tense: imperatif, lemmas: [lever, asseoir, dépêcher, coucher, laver, habiller, reposer, taire,
+                                            calmer, approcher, inquiéter, excuser]}
+        exercises: [conj_grid, cloze, spot_error]
+
+  - id: u12
+    title: {en: More or less}
+    skills:
+      - id: comparatives
+        kind: grammar
+        title: {en: "Plus grand que, le meilleur: comparing"}
+        icon: grammar
+        requires: [imperatif-pronouns]
+        introduces: [comparative]
+        items: {tags: [comparatives]}
+      - id: relatives
+        kind: grammar
+        title: {en: "Qui, que, où, dont: relative pronouns"}
+        icon: grammar
+        requires: [comparatives]
+        introduces: ["relative:dont"]
+        items: {tags: [relatives]}
+      - id: abstract
+        kind: vocab
+        title: {en: Abstract words}
+        icon: book
+        requires: [comparatives]
+        items: {tags: [abstract]}
+
+  - id: u13
+    title: {en: I would like...}
+    skills:
+      - id: conditionnel
+        kind: grammar
+        title: {en: "The conditional: je voudrais, j'aimerais"}
+        icon: star
+        requires: [relatives, abstract]
+        verbs: {tense: conditionnel, lemmas: [aimer, parler, trouver, donner, penser,
+                                                             demander, aider, rester, manger, jouer, finir,
+                                                             choisir, attendre, répondre, prendre, vivre]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error, transform]
+      - id: conditionnel-irregular
+        kind: grammar
+        title: {en: "Je serais, j'aurais, je pourrais"}
+        icon: bolt
+        requires: [conditionnel]
+        introduces: ["irregular:conditionnel"]
+        verbs: {tense: conditionnel, lemmas: [être, avoir, aller, faire, venir, pouvoir, vouloir, devoir, savoir,
+                                               voir, recevoir, courir]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: opinions
+        kind: vocab
+        title: {en: Opinions and arguments}
+        icon: chat
+        requires: [conditionnel]
+        items: {tags: [opinions]}
+      - id: verbs-3
+        kind: vocab
+        title: {en: Useful verbs}
+        icon: verb
+        requires: [conditionnel]
+        items: {tags: [verbs3]}
+
+  - id: u14
+    title: {en: Before and after}
+    skills:
+      - id: plus-que-parfait
+        kind: grammar
+        title: {en: "The plus-que-parfait: j'avais fini"}
+        icon: past
+        requires: [conditionnel-irregular, opinions]
+        verbs: {tense: plus_que_parfait, lemmas: [être, avoir, faire, dire, prendre, voir, finir, partir, arriver,
+                                                   oublier, perdre, promettre, lire, aller, venir, entendre]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: futur-anterieur
+        kind: grammar
+        title: {en: "The futur antérieur: j'aurai fini"}
+        icon: future
+        requires: [plus-que-parfait]
+        verbs: {tense: futur_anterieur, lemmas: [finir, partir, arriver, faire, terminer, lire, rentrer, comprendre,
+                                                  recevoir, décider, trouver, être]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: time-connectors
+        kind: vocab
+        title: {en: "Dès que, avant de, après avoir: time links"}
+        icon: clock
+        requires: [plus-que-parfait]
+        items: {tags: [time-connectors]}
+
+  - id: u15
+    title: {en: Wishes and doubts}
+    skills:
+      - id: subjonctif
+        kind: grammar
+        title: {en: "The subjunctive: il faut que je parte"}
+        icon: chat
+        requires: [futur-anterieur, time-connectors]
+        verbs: {tense: subjonctif, lemmas: [parler, finir, partir, attendre, choisir, répondre, rester, comprendre,
+                                             prendre, venir, dormir, sortir, écrire, lire, dire, mettre, vendre,
+                                             connaître]}
+        exercises: [conj_pick, conj_grid, cloze, spot_error]
+      - id: subjonctif-irregular
+        kind: grammar
+        title: {en: "Que je sois, que j'aie, qu'il fasse"}
+        icon: bolt
+        requires: [subjonctif]
+        introduces: ["irregular:subjonctif"]
+        verbs: {tense: subjonctif, lemmas: [être, avoir, aller, faire, pouvoir, savoir, vouloir]}
+        exercises: [conj_grid, cloze, spot_error]
+      - id: subjonctif-triggers
+        kind: grammar
+        title: {en: "Bien que, pour que, avant que: what takes the subjunctive"}
+        icon: grammar
+        requires: [subjonctif-irregular]
+        items: {tags: [subj-triggers]}
+
+  - id: u16
+    title: {en: What if...}
+    skills:
+      - id: conditionnel-passe
+        kind: grammar
+        title: {en: "The past conditional: j'aurais aimé"}
+        icon: star
+        requires: [subjonctif-triggers]
+        verbs: {tense: conditionnel_passe, lemmas: [être, avoir, aimer, faire, dire, pouvoir, vouloir, devoir, aller,
+                                                     venir, préférer, savoir, voir, partir, rester, prendre]}
+        exercises: [conj_grid, cloze, spot_error, transform]
+      - id: si-clauses
+        kind: grammar
+        title: {en: "Si j'avais su: if-clauses"}
+        icon: question
+        requires: [conditionnel-passe]
+        introduces: [si_clause]
+        items: {tags: [si]}
+      - id: subjonctif-passe
+        kind: grammar
+        title: {en: "Le subjonctif passé: bien qu'il soit parti"}
+        icon: chat
+        requires: [si-clauses]
+        verbs: {tense: subjonctif_passe, lemmas: [être, avoir, faire, partir, finir, arriver, comprendre, dire,
+                                                   venir, oublier, réussir, prendre]}
+        exercises: [conj_grid, cloze, spot_error]
+      - id: adjectives-2
+        kind: vocab
+        title: {en: Describing people and things}
+        icon: star
+        requires: [si-clauses]
+        items: {tags: [adjectives2]}
+        inflections: {table: agreement}
+
+  - id: u17
+    title: {en: Reporting}
+    skills:
+      - id: passive
+        kind: grammar
+        title: {en: "The passive: la maison a été construite"}
+        icon: grammar
+        requires: [subjonctif-passe]
+        introduces: [passive]
+        items: {tags: [passive]}
+      - id: indirect-speech
+        kind: grammar
+        title: {en: "Il a dit qu'il viendrait: reported speech"}
+        icon: chat
+        requires: [passive]
+        items: {tags: [reporting]}
+      - id: gerondif
+        kind: grammar
+        title: {en: "En marchant: the gérondif"}
+        icon: verb
+        requires: [passive]
+        introduces: [gerund]
+        items: {tags: [gerund]}
+      - id: verbs-4
+        kind: vocab
+        title: {en: More useful verbs}
+        icon: verb
+        requires: [passive]
+        items: {tags: [verbs4]}
+
+  - id: u18
+    title: {en: Reading French}
+    skills:
+      - id: passe-simple
+        kind: grammar
+        title: {en: "Reading the passé simple: il parla"}
+        icon: book
+        requires: [indirect-speech, gerondif]
+        recognition: true
+        equivalent_tense: passe_compose
+        verbs: {tense: passe_simple, lemmas: [parler, regarder, arriver, entrer, demander, donner,
+                                                             trouver, penser, tomber, rester, répondre, entendre,
+                                                             attendre, finir, choisir]}
+        exercises: [multiple_choice]
+      - id: passe-simple-irregular
+        kind: grammar
+        title: {en: "Il fut, il eut, il fit: irregular passé simple"}
+        icon: book
+        requires: [passe-simple]
+        recognition: true
+        equivalent_tense: passe_compose
+        introduces: ["irregular:passe_simple"]
+        verbs: {tense: passe_simple, lemmas: [être, avoir, faire, dire, prendre, venir, mettre, voir, pouvoir, savoir,
+                                               vouloir, devoir, tenir, naître, mourir, vivre, connaître, écrire]}
+        exercises: [multiple_choice]
+      - id: relatives-lequel
+        kind: grammar
+        title: {en: "Lequel, auquel, duquel"}
+        icon: grammar
+        requires: [passe-simple-irregular]
+        introduces: ["relative:lequel"]
+        items: {tags: [lequel]}
+
+  - id: u19
+    title: {en: Nuance and argument}
+    skills:
+      - id: connectors
+        kind: vocab
+        title: {en: "Cependant, pourtant, ainsi: linking ideas"}
+        icon: chat
+        requires: [relatives-lequel]
+        items: {tags: [connectors]}
+      - id: abstract-2
+        kind: vocab
+        title: {en: More abstract words}
+        icon: book
+        requires: [connectors]
+        items: {tags: [abstract2]}
+      - id: expressions
+        kind: vocab
+        title: {en: Everyday expressions}
+        icon: star
+        requires: [connectors]
+        items: {tags: [expressions]}
+
+# Topics (pack format 1.2, tosk/docs/pack-format.md "Topics"): themed side trees, each drawn as its own
+# map, with a branch leaving the main tree at its anchor (the last main-tree skill its first skill
+# requires); a later skill of a topic may require a later main-tree skill and waits for it. The main
+# tree keeps the grammar and the core vocabulary; themed vocabulary lives in these topics, so a learner
+# may skip them (tosk/docs/topic-split.md). The fairness rule (tosk/docs/extensions.md): never unknown
+# grammar, some unknown words are fine.
+topics:
+  - id: sante
+    title: {en: Body and health}
+    short_title: {en: Health}
+    description: {en: "The body, feeling ill and going to the doctor."}
+    icon: health
+    units:
+      - id: sante-u1
+        title: {en: The body}
+        skills:
+          - id: body
+            kind: vocab
+            title: {en: The body}
+            icon: body
+            requires: [adjectives]
+            items: {tags: [body]}
+      - id: sante-u2
+        title: {en: "At the doctor's"}
+        skills:
+          - id: health
+            kind: vocab
+            title: {en: Health and illness}
+            icon: health
+            requires: [body, reflexive]
+            items: {tags: [health]}
+
+  - id: cuisine
+    title: {en: Food and cooking}
+    short_title: {en: Cooking}
+    description: {en: "The kitchen and the market, then recipes and the restaurant."}
+    icon: food
+    units:
+      - id: cuisine-u1
+        title: {en: In the kitchen}
+        skills:
+          - id: kitchen
+            kind: vocab
+            title: {en: In the kitchen}
+            icon: food
+            requires: [prepositions]
+            items: {tags: [kitchen]}
+      - id: cuisine-u2
+        title: {en: Recipes and restaurants}
+        skills:
+          - id: cooking
+            kind: vocab
+            title: {en: Cooking and eating out}
+            icon: food
+            requires: [kitchen, imperatif]
+            items: {tags: [cooking]}
+
+  - id: mode
+    title: {en: Clothes and shopping}
+    short_title: {en: Shopping}
+    description: {en: "What to wear, sizes, prices and paying."}
+    icon: shopping
+    units:
+      - id: mode-u1
+        title: {en: In the shops}
+        skills:
+          - id: clothes
+            kind: vocab
+            title: {en: Clothes}
+            icon: clothes
+            requires: [city]
+            items: {tags: [clothes]}
+          - id: shopping
+            kind: vocab
+            title: {en: Shopping}
+            icon: shopping
+            requires: [clothes]
+            items: {tags: [shopping]}
+
+  - id: emotions
+    title: {en: Feelings and character}
+    short_title: {en: Feelings}
+    description: {en: "Joy, fear and anger; what people are like."}
+    icon: heart
+    units:
+      - id: emotions-u1
+        title: {en: "How do you feel?"}
+        skills:
+          - id: feelings
+            kind: vocab
+            title: {en: Feelings}
+            icon: heart
+            requires: [passe-compose]
+            items: {tags: [feelings]}
+      - id: emotions-u2
+        title: {en: Character}
+        skills:
+          - id: character
+            kind: vocab
+            title: {en: Character and behaviour}
+            icon: people
+            requires: [feelings, subjonctif]
+            items: {tags: [character]}
+
+  - id: nature
+    title: {en: "Weather, animals and nature"}
+    short_title: {en: Nature}
+    description: {en: "Rain and sunshine, animals, the countryside and the sea."}
+    icon: nature
+    units:
+      - id: nature-u1
+        title: {en: Out of doors}
+        skills:
+          - id: weather
+            kind: vocab
+            title: {en: Weather}
+            icon: weather
+            requires: [imparfait]
+            items: {tags: [weather]}
+          - id: animals
+            kind: vocab
+            title: {en: Animals}
+            icon: animals
+            requires: [imparfait]
+            items: {tags: [animals]}
+      - id: nature-u2
+        title: {en: Landscapes}
+        skills:
+          - id: landscape
+            kind: vocab
+            title: {en: "Countryside, mountains and sea"}
+            icon: nature
+            requires: [weather, futur]
+            items: {tags: [landscape]}
+
+  - id: loisirs
+    title: {en: Free time and culture}
+    short_title: {en: Free time}
+    description: {en: "Sport, music, cinema, the arts and the news."}
+    icon: music
+    units:
+      - id: loisirs-u1
+        title: {en: Free time}
+        skills:
+          - id: leisure
+            kind: vocab
+            title: {en: Sport and hobbies}
+            icon: music
+            requires: [futur]
+            items: {tags: [leisure]}
+      - id: loisirs-u2
+        title: {en: Culture and media}
+        skills:
+          - id: culture
+            kind: vocab
+            title: {en: "Cinema, music and the arts"}
+            icon: music
+            requires: [leisure, conditionnel]
+            items: {tags: [culture]}
+          - id: media
+            kind: vocab
+            title: {en: News and media}
+            icon: book
+            requires: [leisure, conditionnel]
+            items: {tags: [media]}
+
+  - id: services
+    title: {en: "In town: services and directions"}
+    short_title: {en: In town}
+    description: {en: "The bank, the post office, the police, and finding the way."}
+    icon: city
+    units:
+      - id: services-u1
+        title: {en: Finding the way}
+        skills:
+          - id: directions
+            kind: vocab
+            title: {en: Directions and transport}
+            icon: travel
+            requires: [imperatif]
+            items: {tags: [directions]}
+          - id: services-skill
+            kind: vocab
+            title: {en: Services}
+            icon: city
+            requires: [directions]
+            items: {tags: [services]}
+
+  - id: travail
+    title: {en: Work and money}
+    short_title: {en: Work}
+    description: {en: "Jobs, the office, looking for work, and money matters."}
+    icon: work
+    units:
+      - id: travail-u1
+        title: {en: At the office}
+        skills:
+          - id: careers
+            kind: vocab
+            title: {en: Jobs and careers}
+            icon: work
+            requires: [conditionnel]
+            items: {tags: [careers]}
+      - id: travail-u2
+        title: {en: Money}
+        skills:
+          - id: money
+            kind: vocab
+            title: {en: Money and the economy}
+            icon: money
+            requires: [careers, plus-que-parfait]
+            items: {tags: [money]}
+
+  - id: societe
+    title: {en: Society and the environment}
+    short_title: {en: Society}
+    description: {en: "Politics, the law, the environment and the big questions."}
+    icon: society
+    units:
+      - id: societe-u1
+        title: {en: Society}
+        skills:
+          - id: society
+            kind: vocab
+            title: {en: Society and politics}
+            icon: society
+            requires: [subjonctif]
+            items: {tags: [society]}
+      - id: societe-u2
+        title: {en: The planet}
+        skills:
+          - id: environment
+            kind: vocab
+            title: {en: The environment}
+            icon: nature
+            requires: [society, si-clauses]
+            items: {tags: [environment]}
+
+  - id: sciences
+    title: {en: Science and technology}
+    short_title: {en: Science}
+    description: {en: "Computers, the internet, research and inventions."}
+    icon: search
+    units:
+      - id: sciences-u1
+        title: {en: Technology}
+        skills:
+          - id: technology
+            kind: vocab
+            title: {en: Computers and the internet}
+            icon: search
+            requires: [conditionnel-irregular]
+            items: {tags: [technology]}
+          - id: science
+            kind: vocab
+            title: {en: Science and research}
+            icon: search
+            requires: [technology, passive]
+            items: {tags: [science]}
+
+  - id: maison
+    title: {en: Around the house}
+    short_title: {en: House}
+    description: {en: "Furniture and everyday objects, cleaning and odd jobs."}
+    icon: home
+    units:
+      - id: maison-u1
+        title: {en: Around the house}
+        skills:
+          - id: household
+            kind: vocab
+            title: {en: Furniture and objects}
+            icon: home
+            requires: [reflexive]
+            items: {tags: [household]}
+          - id: housework
+            kind: vocab
+            title: {en: Housework and odd jobs}
+            icon: home
+            requires: [household]
+            items: {tags: [housework]}
+
+  - id: lecture
+    title: {en: Books and history}
+    short_title: {en: Books}
+    description: {en: "Novels, tales and history, told in the passé simple."}
+    icon: book
+    units:
+      - id: lecture-u1
+        title: {en: Reading}
+        skills:
+          - id: reading
+            kind: vocab
+            title: {en: Books and tales}
+            icon: book
+            requires: [passe-simple]
+            items: {tags: [reading]}
+          - id: history
+            kind: vocab
+            title: {en: History}
+            icon: book
+            requires: [reading, passe-simple-irregular]
+            items: {tags: [history]}

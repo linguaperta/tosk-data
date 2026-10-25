@@ -1,0 +1,12 @@
+{"id": "fr:afin_que", "lemma": "afin que", "pos": "conj", "freq": 11147, "tr": {"en": ["so that"]}, "tr_src": {"en": "claude"}, "tags": ["subj-triggers"], "variants": ["afin qu'"], "unit": "u15"}
+{"id": "fr:avant_que", "lemma": "avant que", "pos": "conj", "freq": 1494, "tr": {"en": ["before"]}, "tr_src": {"en": "claude"}, "tags": ["subj-triggers"], "variants": ["avant qu'"], "unit": "u15"}
+{"id": "fr:bien_que", "lemma": "bien que", "pos": "conj", "freq": 335, "tr": {"en": ["although", "even though"]}, "tr_src": {"en": "claude"}, "tags": ["subj-triggers"], "variants": ["bien qu'"], "unit": "u15"}
+{"id": "fr:de_peur_que", "lemma": "de peur que", "pos": "conj", "freq": 2550, "tr": {"en": ["for fear that"]}, "tr_src": {"en": "claude"}, "tags": ["subj-triggers"], "variants": ["de peur qu'"], "unit": "u15"}
+{"id": "fr:en_attendant_que", "lemma": "en attendant que", "pos": "conj", "freq": 11415, "tr": {"en": ["until", "while waiting for"]}, "tr_src": {"en": "claude"}, "tags": ["subj-triggers"], "variants": ["en attendant qu'"], "unit": "u15"}
+{"id": "fr:jusqu'à_ce_que", "lemma": "jusqu'à ce que", "pos": "conj", "freq": null, "tr": {"en": ["until"]}, "tr_src": {"en": "claude"}, "tags": ["subj-triggers"], "variants": ["jusqu'à ce qu'"], "unit": "u15"}
+{"id": "fr:pour_que", "lemma": "pour que", "pos": "conj", "freq": 218, "tr": {"en": ["so that", "in order that"]}, "tr_src": {"en": "claude"}, "tags": ["subj-triggers"], "variants": ["pour qu'"], "unit": "u15"}
+{"id": "fr:pourvu_que", "lemma": "pourvu que", "pos": "conj", "freq": 21844, "tr": {"en": ["provided that", "let's hope that"]}, "tr_src": {"en": "claude"}, "tags": ["subj-triggers"], "variants": ["pourvu qu'"], "unit": "u15"}
+{"id": "fr:quoique", "lemma": "quoique", "pos": "conj", "freq": 3476, "tr": {"en": ["although"]}, "tr_src": {"en": "claude"}, "tags": ["subj-triggers"], "unit": "u15"}
+{"id": "fr:sans_que", "lemma": "sans que", "pos": "conj", "freq": null, "tr": {"en": ["without"]}, "tr_src": {"en": "claude"}, "tags": ["subj-triggers"], "variants": ["sans qu'"], "unit": "u15"}
+{"id": "fr:à_condition_que", "lemma": "à condition que", "pos": "conj", "freq": 16152, "tr": {"en": ["on condition that", "provided that"]}, "tr_src": {"en": "claude"}, "tags": ["subj-triggers"], "variants": ["à condition qu'"], "unit": "u15"}
+{"id": "fr:à_moins_que", "lemma": "à moins que", "pos": "conj", "freq": 2384, "tr": {"en": ["unless"]}, "tr_src": {"en": "claude"}, "tags": ["subj-triggers"], "variants": ["à moins qu'"], "unit": "u15"}

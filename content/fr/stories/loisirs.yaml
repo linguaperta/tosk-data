@@ -1,0 +1,22 @@
+# Graded mini-stories for the topic loisirs (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: loisirs-match
+  unit: loisirs-u1
+  title: {fr: "Le grand match", en: "The big match"}
+  sentences:
+    - {fr: "Samedi, l'équipe de Hugo jouera un match important.", en: "On Saturday Hugo's team will play an important match."}
+    - {fr: "Hugo est un bon joueur, mais il est nerveux.", en: "Hugo is a good player, but he is nervous."}
+    - {fr: "Toute la semaine, il s'entraînera avec ses amis.", en: "All week he will train with his friends."}
+    - {fr: "Ses parents viendront le voir avec sa petite sœur.", en: "His parents will come to see him with his little sister."}
+    - {fr: "Après le match, il y aura une fête chez Hugo.", en: "After the match there will be a party at Hugo's."}
+    - {fr: "Si l'équipe gagne, tout le monde dansera !", en: "If the team wins, everyone will dance!"}
+    - {fr: "Et si elle perd ? Ce ne sera pas grave.", en: "And if it loses? It won't matter."}
+  questions:
+    - q: {en: "When is the match?"}
+      options: [{en: "On Saturday"}, {en: "On Sunday"}, {en: "Tomorrow"}]
+      answer: 0
+    - q: {en: "How does Hugo feel?"}
+      options: [{en: "Nervous"}, {en: "Tired"}, {en: "Sad"}]
+      answer: 0
+    - q: {en: "What will happen after the match?"}
+      options: [{en: "A party at Hugo's"}, {en: "A dinner at home"}, {en: "Another match"}]
+      answer: 0

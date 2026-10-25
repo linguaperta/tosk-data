@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u3 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u3-dimanche
+  unit: u3
+  title: {fr: "Le dimanche", en: "On Sundays"}
+  sentences:
+    - {fr: "Le dimanche, la famille de Léa va chez le grand-père.", en: "On Sundays, Léa's family goes to her grandfather's."}
+    - {fr: "La grand-mère fait un gâteau dans la cuisine.", en: "The grandmother makes a cake in the kitchen."}
+    - {fr: "Le père de Léa lit un livre dans le jardin.", en: "Léa's father reads a book in the garden."}
+    - {fr: "Les enfants jouent dans le jardin avec le chien.", en: "The children play in the garden with the dog."}
+    - {fr: "À midi, ils mangent tous dans la cuisine.", en: "At noon they all eat in the kitchen."}
+    - {fr: "L'après-midi, Léa dort une heure.", en: "In the afternoon, Léa sleeps for an hour."}
+    - {fr: "Le soir, ils partent tard.", en: "In the evening they leave late."}
+  questions:
+    - q: {en: "Where does the family go on Sundays?"}
+      options: [{en: "To the grandfather's"}, {en: "To a restaurant"}, {en: "To the beach"}]
+      answer: 0
+    - q: {en: "What does the grandmother make?"}
+      options: [{en: "A cake"}, {en: "A soup"}, {en: "A salad"}]
+      answer: 0
+    - q: {en: "What does Léa do in the afternoon?"}
+      options: [{en: "She sleeps"}, {en: "She reads"}, {en: "She plays with the dog"}]
+      answer: 0
+
+- id: u3-voisine
+  unit: u3
+  title: {fr: "La nouvelle voisine", en: "The new neighbour"}
+  sentences:
+    - {fr: "Une femme arrive à la porte.", en: "A woman comes to the door."}
+    - {fr: "« Bonjour, je suis Claire, la voisine. »", en: "\"Hello, I'm Claire, the neighbour.\""}
+    - {fr: "« Je ne trouve pas la clé de l'appartement. »", en: "\"I can't find the key to the flat.\""}
+    - {fr: "« Voulez-vous entrer ? » demande la mère de Lucas.", en: "\"Would you like to come in?\" asks Lucas's mother."}
+    - {fr: "« Oui, merci. Est-ce que je peux attendre ici ? »", en: "\"Yes, thank you. Can I wait here?\""}
+    - {fr: "Claire prend un café et elles parlent une heure.", en: "Claire has a coffee and they talk for an hour."}
+    - {fr: "Le mari de Claire arrive avec la clé.", en: "Claire's husband arrives with the key."}
+  questions:
+    - q: {en: "Who is Claire?"}
+      options: [{en: "The new neighbour"}, {en: "Lucas's mother"}, {en: "A teacher"}]
+      answer: 0
+    - q: {en: "What can't Claire find?"}
+      options: [{en: "The key to her flat"}, {en: "Her husband"}, {en: "The door"}]
+      answer: 0
+    - q: {en: "Who brings the key?"}
+      options: [{en: "Claire's husband"}, {en: "Lucas"}, {en: "The grandmother"}]
+      answer: 0

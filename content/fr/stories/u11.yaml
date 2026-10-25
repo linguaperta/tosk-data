@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u11 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u11-grand-mere
+  unit: u11
+  title: {fr: "Grand-mère a raison", en: "Grandma is right"}
+  sentences:
+    - {fr: "Demain, tu as un examen : écoute-moi bien !", en: "Tomorrow you have an exam: listen to me carefully!"}
+    - {fr: "Couche-toi tôt et dors bien.", en: "Go to bed early and sleep well."}
+    - {fr: "Le matin, prends un bon petit-déjeuner.", en: "In the morning, have a good breakfast."}
+    - {fr: "Ne bois pas trop de café !", en: "Don't drink too much coffee!"}
+    - {fr: "Lis bien les questions et réfléchis.", en: "Read the questions carefully and think."}
+    - {fr: "Ne sois pas nerveux, tu vas réussir.", en: "Don't be nervous, you're going to pass."}
+    - {fr: "Et appelle-moi après l'examen !", en: "And call me after the exam!"}
+  questions:
+    - q: {en: "What should he do in the morning?"}
+      options: [{en: "Have a good breakfast"}, {en: "Drink a lot of coffee"}, {en: "Sleep late"}]
+      answer: 0
+    - q: {en: "What should he not drink too much of?"}
+      options: [{en: "Coffee"}, {en: "Water"}, {en: "Milk"}]
+      answer: 0
+    - q: {en: "What should he do after the exam?"}
+      options: [{en: "Call his grandmother"}, {en: "Go to bed"}, {en: "Read a book"}]
+      answer: 0
+
+- id: u11-gare
+  unit: u11
+  title: {fr: "Pour aller à la gare", en: "The way to the station"}
+  sentences:
+    - {fr: "« Excusez-moi, où est la gare, s'il vous plaît ? »", en: "\"Excuse me, where is the station, please?\""}
+    - {fr: "« Allez tout droit jusqu'à la place. »", en: "\"Go straight on as far as the square.\""}
+    - {fr: "« Puis prenez la deuxième rue à droite. »", en: "\"Then take the second street on the right.\""}
+    - {fr: "« Ne prenez pas le bus, c'est tout près. »", en: "\"Don't take the bus, it's very close.\""}
+    - {fr: "« Attendez, je viens avec vous ! »", en: "\"Wait, I'll come with you!\""}
+    - {fr: "« Merci beaucoup, vous êtes très gentil. »", en: "\"Thank you very much, you're very kind.\""}
+    - {fr: "« De rien. Regardez bien les voitures ! »", en: "\"You're welcome. Watch out for the cars!\""}
+  questions:
+    - q: {en: "What is the tourist looking for?"}
+      options: [{en: "The station"}, {en: "The square"}, {en: "A bus stop"}]
+      answer: 0
+    - q: {en: "Which street should they take?"}
+      options: [{en: "The second on the right"}, {en: "The first on the left"}, {en: "The third on the right"}]
+      answer: 0
+    - q: {en: "Why not take the bus?"}
+      options: [{en: "The station is very close"}, {en: "There is no bus"}, {en: "The bus is late"}]
+      answer: 0

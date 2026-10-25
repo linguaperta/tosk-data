@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u14 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u14-train
+  unit: u14
+  title: {fr: "Le train", en: "The train"}
+  sentences:
+    - {fr: "Quand Julie est arrivée à la gare, le train était déjà parti.", en: "When Julie got to the station, the train had already left."}
+    - {fr: "Elle avait oublié son billet à la maison.", en: "She had left her ticket at home."}
+    - {fr: "Elle était retournée le chercher.", en: "She had gone back to get it."}
+    - {fr: "Le prochain train partait une heure plus tard.", en: "The next train was leaving an hour later."}
+    - {fr: "Dès qu'elle est montée dans le train, elle a appelé son patron.", en: "As soon as she got on the train, she called her boss."}
+    - {fr: "« Quand vous serez arrivée, nous commencerons la réunion. »", en: "\"When you have arrived, we'll start the meeting.\""}
+    - {fr: "Julie a promis d'arriver avant midi.", en: "Julie promised to arrive before noon."}
+  questions:
+    - q: {en: "Why did Julie miss the train?"}
+      options: [{en: "She had forgotten her ticket at home"}, {en: "She got up late"}, {en: "The train left early"}]
+      answer: 0
+    - q: {en: "When was the next train?"}
+      options: [{en: "An hour later"}, {en: "The next day"}, {en: "Ten minutes later"}]
+      answer: 0
+    - q: {en: "When will the meeting start?"}
+      options: [{en: "When Julie has arrived"}, {en: "At noon"}, {en: "Without Julie"}]
+      answer: 0
+
+- id: u14-fete
+  unit: u14
+  title: {fr: "La surprise", en: "The surprise"}
+  sentences:
+    - {fr: "Demain, Léa aura vingt ans.", en: "Tomorrow Léa will be twenty."}
+    - {fr: "Hier, nous avions déjà invité tous ses amis.", en: "Yesterday we had already invited all her friends."}
+    - {fr: "Avant de partir au travail, j'aurai acheté le gâteau.", en: "Before I leave for work, I'll have bought the cake."}
+    - {fr: "Paul aura préparé le repas quand je rentrerai.", en: "Paul will have made the meal when I get home."}
+    - {fr: "Léa ne sait rien : personne ne lui a parlé du repas.", en: "Léa knows nothing: nobody has told her about the meal."}
+    - {fr: "Une fois que tout le monde sera arrivé, nous l'appellerons.", en: "Once everyone has arrived, we'll call her."}
+    - {fr: "Elle ne va rien comprendre !", en: "She won't understand a thing!"}
+  questions:
+    - q: {en: "How old will Léa be tomorrow?"}
+      options: [{en: "Twenty"}, {en: "Ten"}, {en: "Thirty"}]
+      answer: 0
+    - q: {en: "Who will make the meal?"}
+      options: [{en: "Paul"}, {en: "Léa"}, {en: "Her friends"}]
+      answer: 0
+    - q: {en: "When will they call Léa?"}
+      options: [{en: "Once everyone has arrived"}, {en: "Before work"}, {en: "Yesterday"}]
+      answer: 0

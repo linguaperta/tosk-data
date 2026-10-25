@@ -1,0 +1,45 @@
+# Graded mini-stories for unit u18 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u18-voyageur
+  unit: u18
+  title: {fr: "Le vieil homme", en: "The old man"}
+  sentences:
+    - {fr: "Un soir, un vieil homme arriva dans un petit village.", en: "One evening, an old man arrived in a small village."}
+    - {fr: "Il alla vers une maison et attendit devant la porte.", en: "He went towards a house and waited in front of the door."}
+    - {fr: "Une femme ouvrit la porte et le regarda.", en: "A woman opened the door and looked at him."}
+    - {fr: "« Je cherche un lit pour la nuit », dit l'homme.", en: "\"I'm looking for a bed for the night,\" said the man."}
+    - {fr: "La femme le fit entrer et lui donna de la soupe.", en: "The woman let him in and gave him some soup."}
+    - {fr: "Le lendemain, l'homme partit très tôt.", en: "The next day the man left very early."}
+    - {fr: "Sur la table, elle trouva une boîte dans laquelle il y avait une lettre.", en: "On the table she found a box with a letter in it."}
+  questions:
+    - q: {en: "What was the old man looking for?"}
+      options: [{en: "A bed for the night"}, {en: "His son"}, {en: "The station"}]
+      answer: 0
+    - q: {en: "What did the woman give him?"}
+      options: [{en: "Some soup"}, {en: "Money"}, {en: "A letter"}]
+      answer: 0
+    - q: {en: "What did she find the next day?"}
+      options: [{en: "A box with a letter in it"}, {en: "The old man asleep"}, {en: "Nothing"}]
+      answer: 0
+
+- id: u18-ecrivain
+  unit: u18
+  title: {fr: "La vie d'un écrivain", en: "A writer's life"}
+  names: [Victor]
+  sentences:
+    - {fr: "Victor naquit en 1802 dans une petite ville.", en: "Victor was born in 1802 in a small town."}
+    - {fr: "Très jeune, il voulut devenir écrivain.", en: "Very young, he wanted to become a writer."}
+    - {fr: "Il écrivit son premier livre à vingt ans.", en: "He wrote his first book at the age of twenty."}
+    - {fr: "Ce livre, pour lequel il travailla trois ans, fut lu par tout le monde.", en: "This book, which he worked on for three years, was read by everyone."}
+    - {fr: "Il vécut longtemps à Paris, où il eut beaucoup d'amis.", en: "He lived in Paris for a long time, where he had many friends."}
+    - {fr: "Il mourut en 1885.", en: "He died in 1885."}
+    - {fr: "Aujourd'hui, on lit encore les livres qu'il écrivit.", en: "Today people still read the books he wrote."}
+  questions:
+    - q: {en: "When was Victor born?"}
+      options: [{en: "In 1802"}, {en: "In 1885"}, {en: "In 1850"}]
+      answer: 0
+    - q: {en: "How long did he work on his first book?"}
+      options: [{en: "Three years"}, {en: "Twenty years"}, {en: "One year"}]
+      answer: 0
+    - q: {en: "Where did he live for a long time?"}
+      options: [{en: "In Paris"}, {en: "In Lyon"}, {en: "In a small town"}]
+      answer: 0

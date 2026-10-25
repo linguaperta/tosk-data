@@ -1,0 +1,45 @@
+# Graded mini-stories for unit u15 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u15-depart
+  unit: u15
+  title: {fr: "Avant le départ", en: "Before leaving"}
+  sentences:
+    - {fr: "Il faut que je parte demain matin.", en: "I have to leave tomorrow morning."}
+    - {fr: "Ma mère veut que je prenne le train de huit heures.", en: "My mother wants me to take the eight o'clock train."}
+    - {fr: "Elle a peur que je sois en retard.", en: "She is afraid I'll be late."}
+    - {fr: "Bien que le voyage soit long, je suis content.", en: "Although the journey is long, I'm happy."}
+    - {fr: "Je voudrais que mon frère vienne avec moi.", en: "I'd like my brother to come with me."}
+    - {fr: "Mais il faut qu'il finisse son travail.", en: "But he has to finish his work."}
+    - {fr: "Pourvu qu'il fasse beau !", en: "Let's hope the weather is nice!"}
+  questions:
+    - q: {en: "Which train does the mother want him to take?"}
+      options: [{en: "The eight o'clock train"}, {en: "The evening train"}, {en: "The noon train"}]
+      answer: 0
+    - q: {en: "What is the mother afraid of?"}
+      options: [{en: "That he will be late"}, {en: "That the journey is long"}, {en: "That it will rain"}]
+      answer: 0
+    - q: {en: "Why can't the brother come?"}
+      options: [{en: "He has to finish his work"}, {en: "He is ill"}, {en: "He doesn't want to"}]
+      answer: 0
+
+- id: u15-lettre
+  unit: u15
+  title: {fr: "La lettre de Camille", en: "Camille's letter"}
+  sentences:
+    - {fr: "Chère Sophie, je suis heureuse que tu viennes à Lyon.", en: "Dear Sophie, I'm happy that you're coming to Lyon."}
+    - {fr: "Il est important que tu m'écrives avant ton arrivée.", en: "It's important that you write to me before you arrive."}
+    - {fr: "Je ne pense pas que mon appartement soit assez grand.", en: "I don't think my flat is big enough."}
+    - {fr: "Il est possible que tu doives dormir sur le canapé.", en: "You may have to sleep on the sofa."}
+    - {fr: "Je préfère que nous mangions au restaurant le premier soir.", en: "I'd rather we eat at a restaurant on the first evening."}
+    - {fr: "J'attends ta réponse pour que nous puissions tout préparer.", en: "I'm waiting for your answer so that we can get everything ready."}
+    - {fr: "À bientôt !", en: "See you soon!"}
+  names: [Camille]
+  questions:
+    - q: {en: "Where is Sophie going?"}
+      options: [{en: "To Lyon"}, {en: "To Paris"}, {en: "To Brittany"}]
+      answer: 0
+    - q: {en: "Where might Sophie sleep?"}
+      options: [{en: "On the sofa"}, {en: "In a hotel"}, {en: "In Camille's bed"}]
+      answer: 0
+    - q: {en: "Where will they eat on the first evening?"}
+      options: [{en: "At a restaurant"}, {en: "At Camille's flat"}, {en: "At a friend's"}]
+      answer: 0

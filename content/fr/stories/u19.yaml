@@ -1,0 +1,45 @@
+# Graded mini-stories for unit u19 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u19-maison
+  unit: u19
+  title: {fr: "Travailler à la maison ?", en: "Working from home?"}
+  sentences:
+    - {fr: "Travailler à la maison, c'est bien ? Les avis sont différents.", en: "Is working from home good? Opinions differ."}
+    - {fr: "D'un côté, on ne perd pas de temps dans le métro.", en: "On the one hand, you don't waste time on the underground."}
+    - {fr: "De plus, on peut organiser son travail comme on veut.", en: "Moreover, you can organise your work as you like."}
+    - {fr: "Cependant, certains se sentent seuls.", en: "However, some people feel lonely."}
+    - {fr: "En effet, ils ne voient plus leurs collègues.", en: "Indeed, they no longer see their colleagues."}
+    - {fr: "Par conséquent, beaucoup choisissent deux jours au bureau et trois à la maison.", en: "Consequently, many people choose two days at the office and three at home."}
+    - {fr: "Bref, chacun doit trouver son équilibre.", en: "In short, everyone has to find their own balance."}
+  questions:
+    - q: {en: "What is one advantage of working from home?"}
+      options: [{en: "You don't waste time on the underground"}, {en: "You see your colleagues"}, {en: "You earn more"}]
+      answer: 0
+    - q: {en: "What is the problem for some people?"}
+      options: [{en: "They feel lonely"}, {en: "They work too much"}, {en: "They have no computer"}]
+      answer: 0
+    - q: {en: "What do many companies choose?"}
+      options: [{en: "Two days at the office and three at home"}, {en: "Only the office"}, {en: "Only home"}]
+      answer: 0
+
+- id: u19-voyage
+  unit: u19
+  names: [Italie]
+  title: {fr: "Un voyage difficile", en: "A difficult trip"}
+  sentences:
+    - {fr: "Nous devions partir une semaine en Italie.", en: "We were supposed to go to Italy for a week."}
+    - {fr: "Pourtant, rien ne s'est passé comme nous voulions.", en: "Yet nothing went the way we wanted."}
+    - {fr: "D'abord, l'avion avait trois heures de retard.", en: "First, the plane was three hours late."}
+    - {fr: "Ensuite, nos valises ont été perdues.", en: "Then our suitcases were lost."}
+    - {fr: "Malgré tout, nous avons décidé de rester tranquilles.", en: "Despite everything, we decided to stay calm."}
+    - {fr: "Finalement, les valises sont arrivées deux jours après.", en: "In the end, the suitcases arrived two days later."}
+    - {fr: "Bref, c'est un voyage dont nous nous souviendrons longtemps !", en: "In short, it's a trip we will remember for a long time!"}
+  questions:
+    - q: {en: "How late was the plane?"}
+      options: [{en: "Three hours"}, {en: "Two days"}, {en: "One hour"}]
+      answer: 0
+    - q: {en: "What happened to the suitcases?"}
+      options: [{en: "They were lost"}, {en: "They were stolen"}, {en: "They stayed at home"}]
+      answer: 0
+    - q: {en: "When did the suitcases arrive?"}
+      options: [{en: "Two days later"}, {en: "The same evening"}, {en: "Never"}]
+      answer: 0

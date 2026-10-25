@@ -1,0 +1,2232 @@
+# Curated vocabulary for the French course (input for `python -m pipeline import fr`).
+# tags put an item in a vocab skill (course.yaml); en glosses written here are Claude-authored (marked
+# tr_src: claude in the lexicon). Items without en take their English gloss from Wiktionary. Entries
+# without tags only add/override glosses for automatically selected items (verbs of the grammar skills).
+# `aux` overrides a verb's perfect auxiliaries, primary first: verbs taught as reflexives take être
+# (je me suis levé) and keep avoir (j'ai levé la main); verbs of motion take avoir with an object
+# (j'ai sorti la poubelle).
+exclude: [allez/intj, si/intj, bon/intj, bien/intj, quoi/intj, comment/intj, alors/intj, tiens/intj, voyons/intj,
+          allons/intj, dis/intj, écoute/intj, attends/intj, arrête/intj, regarde/intj, voilà/intj, ça/intj, oh/intj, est-il, est-ce, a-t-il, y'a, belle/noun, bonne/noun, folle/noun, grosse/noun, histoires/noun, la/noun, première/noun, mes/det, sa/det,
+          ses/det, ta/det, tes/det, nouvelles/noun, une/noun, pas/noun, est/adj, a/noun, son/noun, sens/verb, fils/noun, as/noun, vis/noun, point/adv,
+          mal/adj, bien/noun, tout/noun, rien/noun, avions/noun, être/noun, avoir/noun, pouvoir/noun, devoir/noun,
+          savoir/noun, dîner/verb, déjeuner/verb, souper/verb, goûter/verb, sortie/verb, cours/verb, mort/verb, fait/adj,
+          dit/adj, pris/adj, vu/prep, faute/verb, vide/verb, tue/adj, sois/noun, soit/conj, ouais, putain, merde, con,
+          connard, salope, bordel, foutre, baiser, chier, enculé, pute, nique, niquer, bite, couille, cul]
+# Tatoeba sentences the native review (tosk/docs/samples/fr_exercises.txt) found wrong or odd.
+exclude_sentences: [
+    # 'quoique' for 'quoi que' (quoi que ce soit, quoi que tu fasses)
+    1684378, 5317116, 1638782, 11502524, 891000, 6914994, 6914995, 545159, 1017080, 1642900, 2124224,
+    5783127, 5783128, 6382191, 8608430, 8636306,
+    # 'Vas vite' (imperative without s), a missing subject ('si serais resté'), 'de l'espèce' for cash
+    6864242, 5802179, 8676195,
+    # translations that do not match (the boat on the route, the professor and the piece)
+    12657489, 431297]
+# The imperfect subjunctive (qu'il fût, qu'il eût, parlât) is literary and not taught: sentences with
+# such forms are not imported. Every other mood is in the tables.
+exclude_moods: [imperfect-subjunctive]
+# Quebec and slang spellings (another variety or register): sentences with them are not imported.
+exclude_words: [chu, chuis, icitte, astheure, tsé, pantoute, chum, magasiner, kif, ouf, meuf, keuf, relou, chelou,
+                zarbi, ouais, nan, kiffer, kiffe, ptit, "p'tit", "p'tite", "y'a", "j'suis", chais, chépa]
+# Mass nouns and nouns without a usual plural: no plural in the lexicon, so the app never asks for one.
+uncountable: [lait, pain, beurre, sel, sucre, riz, viande, eau, café, thé, vin, bière, fromage, argent, temps, monde,
+              courage, patience, peur, faim, soif, sommeil, santé, chance, sang, musique, nature, pluie, neige,
+              chaleur, froid, vent, soleil, bonheur, jeunesse, vieillesse, enfance, silence, paix, justice, liberté,
+              confiance, respect, électricité, essence, farine, huile, poivre, miel, chocolat, confiture,
+              lessive, vaisselle, ménage, courrier, pollution, police, publicité, sida, oxygène, or, fer]
+items:
+  # ------------------------------------------------------------------ u1 greetings
+  - {lemma: bonjour, pos: intj, tags: [greetings], en: [hello, good morning, good day]}
+  - {lemma: bonsoir, pos: intj, tags: [greetings], en: [good evening]}
+  - {lemma: salut, pos: intj, tags: [greetings], en: [hi, bye]}
+  - {lemma: au revoir, pos: phrase, tags: [greetings], en: [goodbye]}
+  - {lemma: à bientôt, pos: phrase, tags: [greetings], en: [see you soon]}
+  - {lemma: à demain, pos: phrase, tags: [greetings], en: [see you tomorrow]}
+  - {lemma: bonne nuit, pos: phrase, tags: [greetings], en: [good night]}
+  - {lemma: merci, pos: intj, tags: [greetings], en: [thank you, thanks]}
+  - {lemma: s'il vous plaît, pos: phrase, tags: [greetings], en: [please]}
+  - {lemma: s'il te plaît, pos: phrase, tags: [greetings], en: [please]}
+  - {lemma: de rien, pos: phrase, tags: [greetings], en: ["you're welcome"]}
+  - {lemma: pardon, pos: intj, tags: [greetings], en: [sorry, excuse me, pardon]}
+  - {lemma: excusez-moi, pos: phrase, tags: [greetings], en: [excuse me]}
+  - {lemma: désolé, pos: adj, tags: [greetings], en: [sorry]}
+  - {lemma: oui, pos: adv, tags: [greetings], en: ["yes"]}
+  - {lemma: non, pos: adv, tags: [greetings], en: ["no", not]}
+  - {lemma: d'accord, pos: intj, tags: [greetings], en: [okay, all right, agreed]}
+  - {lemma: bienvenue, pos: intj, tags: [greetings], en: [welcome]}
+  - {lemma: enchanté, pos: adj, tags: [greetings], en: [pleased to meet you, delighted]}
+  - {lemma: monsieur, pos: noun, tags: [greetings], en: [sir, Mr, gentleman]}
+  - {lemma: madame, pos: noun, tags: [greetings], en: [madam, Mrs, lady]}
+  - {lemma: mademoiselle, pos: noun, tags: [greetings], en: [miss, young lady]}
+  - {lemma: ça va, pos: phrase, tags: [greetings], en: [how are you, "I'm fine", "it's okay"]}
+  - {lemma: bien, pos: adv, tags: [greetings], en: [well, good, fine]}
+  - {lemma: mal, pos: adv, tags: [greetings], en: [badly, bad]}
+  - {lemma: bon, pos: adj, tags: [greetings], en: [good, right, kind]}
+  - {lemma: félicitations, pos: noun, tags: [greetings], en: [congratulations]}
+  - {lemma: bravo, pos: intj, tags: [greetings], en: [well done, bravo]}
+  - {lemma: allô, pos: intj, tags: [greetings], en: [hello (on the phone)]}
+  # ------------------------------------------------------------------ u1 little words
+  - {lemma: le, pos: det, tags: [little], en: [the], inflections: [la, les, "l'"]}
+  - {lemma: un, pos: det, tags: [little], en: [a, an, one]}
+  - {lemma: une, pos: det, tags: [little], en: [a, an, one]}
+  - {lemma: des, pos: det, tags: [little], en: [some, of the]}
+  - {lemma: du, pos: det, tags: [little], en: [some, of the]}
+  - {lemma: et, pos: conj, tags: [little], en: [and]}
+  - {lemma: ou, pos: conj, tags: [little], en: [or]}
+  - {lemma: mais, pos: conj, tags: [little], en: [but]}
+  - {lemma: de, pos: prep, tags: [little], en: [of, from]}
+  - {lemma: à, pos: prep, tags: [little], en: [to, at, in]}
+  - {lemma: en, pos: prep, tags: [little], en: [in, to, by]}
+  - {lemma: dans, pos: prep, tags: [little], en: [in, into, inside]}
+  - {lemma: avec, pos: prep, tags: [little], en: [with]}
+  - {lemma: pour, pos: prep, tags: [little], en: [for, in order to]}
+  - {lemma: sur, pos: prep, tags: [little], en: ["on", "upon", about]}
+  - {lemma: sous, pos: prep, tags: [little], en: [under, beneath]}
+  - {lemma: sans, pos: prep, tags: [little], en: [without]}
+  - {lemma: par, pos: prep, tags: [little], en: [by, through, per]}
+  - {lemma: ce, pos: pron, tags: [little], en: [it, this, that]}
+  - {lemma: ça, pos: pron, tags: [little], en: [that, this, it]}
+  - {lemma: cela, pos: pron, tags: [little], en: [that, this, it]}
+  - {lemma: ici, pos: adv, tags: [little], en: [here]}
+  - {lemma: là, pos: adv, tags: [little], en: [there, here]}
+  - {lemma: très, pos: adv, tags: [little], en: [very]}
+  - {lemma: aussi, pos: adv, tags: [little], en: [also, too, as]}
+  - {lemma: pas, pos: adv, tags: [little], en: [not]}
+  - {lemma: ne, pos: particle, tags: [little], en: [not]}
+  - {lemma: tout, pos: pron, tags: [little], en: [everything, all]}
+  - {lemma: tout, pos: det, tags: [little], en: [all, every, whole]}
+  - {lemma: il y a, pos: phrase, tags: [little], en: [there is, there are, ago]}
+  - {lemma: voici, pos: prep, tags: [little], en: [here is, here are]}
+  - {lemma: voilà, pos: prep, tags: [little], en: [there is, here is, that's it]}
+  - {lemma: que, pos: conj, tags: [little, relatives], en: [that, than, which, whom, what]}
+  - {lemma: qui, pos: pron, tags: [little], en: [who, which, that]}
+  - {lemma: je, pos: pron, tags: [little], en: [I]}
+  - {lemma: tu, pos: pron, tags: [little], en: [you]}
+  - {lemma: il, pos: pron, tags: [little], en: [he, it]}
+  - {lemma: elle, pos: pron, tags: [little], en: [she, it, her]}
+  - {lemma: "on", pos: pron, tags: [little], en: [we, one, people, you]}
+  - {lemma: nous, pos: pron, tags: [little], en: [we, us]}
+  - {lemma: vous, pos: pron, tags: [little], en: [you]}
+  - {lemma: ils, pos: pron, tags: [little], en: [they]}
+  - {lemma: elles, pos: pron, tags: [little], en: [they]}
+  - {lemma: moi, pos: pron, tags: [little], en: [me, I]}
+  - {lemma: toi, pos: pron, tags: [little], en: [you]}
+  - {lemma: lui, pos: pron, tags: [little], en: [him, he, to him, to her]}
+  - {lemma: eux, pos: pron, tags: [little], en: [them, they]}
+  - {lemma: chose, pos: noun, tags: [little], en: [thing]}
+  - {lemma: quelque chose, pos: pron, tags: [little], en: [something, anything]}
+  - {lemma: quelqu'un, pos: pron, tags: [little], en: [someone, somebody, anyone]}
+  # ------------------------------------------------------------------ u1 people
+  - {lemma: homme, pos: noun, tags: [people], en: [man]}
+  - {lemma: femme, pos: noun, tags: [people, gender], en: [woman, wife]}
+  - {lemma: garçon, pos: noun, tags: [people, gender], en: [boy, waiter]}
+  - {lemma: fille, pos: noun, tags: [people, gender], en: [girl, daughter]}
+  - {lemma: enfant, pos: noun, tags: [people], en: [child, kid]}
+  - {lemma: bébé, pos: noun, tags: [people, gender], en: [baby]}
+  - {lemma: personne, pos: noun, tags: [people, gender, negation], en: [person, nobody (ne ... personne)]}
+  - {lemma: gens, pos: noun, tags: [people], en: [people]}
+  - {lemma: ami, pos: noun, tags: [people], en: [friend]}
+  - {lemma: amie, pos: noun, tags: [people], en: [friend (female), girlfriend]}
+  - {lemma: copain, pos: noun, tags: [people, gender], en: [friend, mate, boyfriend]}
+  - {lemma: copine, pos: noun, tags: [people, gender], en: [friend (female), girlfriend]}
+  - {lemma: voisin, pos: noun, tags: [people, gender], en: [neighbour]}
+  - {lemma: monde, pos: noun, tags: [people, gender], en: [world, people]}
+  - {lemma: nom, pos: noun, tags: [people, gender], en: [name, surname, noun]}
+  - {lemma: prénom, pos: noun, tags: [people, gender], en: [first name]}
+  - {lemma: âge, pos: noun, tags: [people], en: [age]}
+  - {lemma: étudiant, pos: noun, tags: [people], en: [student]}
+  - {lemma: élève, pos: noun, tags: [people], en: [pupil, student]}
+  - {lemma: professeur, pos: noun, tags: [people, gender], en: [teacher, professor]}
+  - {lemma: médecin, pos: noun, tags: [people, gender], en: [doctor]}
+  - {lemma: docteur, pos: noun, tags: [people, gender], en: [doctor]}
+  - {lemma: dame, pos: noun, tags: [people, gender], en: [lady]}
+  - {lemma: jeune, pos: adj, tags: [people], en: [young]}
+  - {lemma: vieux, pos: adj, tags: [people], en: [old]}
+  - {lemma: grand, pos: adj, tags: [people], en: [big, tall, great]}
+  - {lemma: petit, pos: adj, tags: [people], en: [small, little, short]}
+  - {lemma: français, pos: adj, tags: [people], en: [French]}
+  - {lemma: anglais, pos: adj, tags: [people], en: [English]}
+  - {lemma: pays, pos: noun, tags: [people, gender], en: [country]}
+  - {lemma: langue, pos: noun, tags: [people, gender], en: [language, tongue]}
+  - {lemma: mot, pos: noun, tags: [people, gender], en: [word]}
+  - {lemma: chat, pos: noun, tags: [people, gender], en: [cat]}
+  - {lemma: chien, pos: noun, tags: [people, gender], en: [dog]}
+  # ------------------------------------------------------------------ u2 food
+  - {lemma: pain, pos: noun, tags: [food, gender], en: [bread]}
+  - {lemma: eau, pos: noun, tags: [food, plurals], en: [water]}
+  - {lemma: lait, pos: noun, tags: [food, gender], en: [milk]}
+  - {lemma: café, pos: noun, tags: [food, gender], en: [coffee, café]}
+  - {lemma: thé, pos: noun, tags: [food, gender], en: [tea]}
+  - {lemma: vin, pos: noun, tags: [food, gender], en: [wine]}
+  - {lemma: bière, pos: noun, tags: [food, gender], en: [beer]}
+  - {lemma: jus, pos: noun, tags: [food, gender], en: [juice]}
+  - {lemma: viande, pos: noun, tags: [food, gender], en: [meat]}
+  - {lemma: poisson, pos: noun, tags: [food, gender], en: [fish]}
+  - {lemma: poulet, pos: noun, tags: [food, gender], en: [chicken]}
+  - {lemma: fromage, pos: noun, tags: [food, gender], en: [cheese]}
+  - {lemma: œuf, pos: noun, tags: [food], en: [egg]}
+  - {lemma: fruit, pos: noun, tags: [food, gender], en: [fruit]}
+  - {lemma: pomme, pos: noun, tags: [food, gender], en: [apple]}
+  - {lemma: légume, pos: noun, tags: [food, gender], en: [vegetable]}
+  - {lemma: pomme de terre, pos: noun, tags: [food], en: [potato]}
+  - {lemma: salade, pos: noun, tags: [food, gender], en: [salad, lettuce]}
+  - {lemma: soupe, pos: noun, tags: [food, gender], en: [soup]}
+  - {lemma: gâteau, pos: noun, tags: [food, gender, plurals], en: [cake]}
+  - {lemma: chocolat, pos: noun, tags: [food, gender], en: [chocolate]}
+  - {lemma: sucre, pos: noun, tags: [food, gender], en: [sugar]}
+  - {lemma: sel, pos: noun, tags: [food, gender], en: [salt]}
+  - {lemma: riz, pos: noun, tags: [food, gender], en: [rice]}
+  - {lemma: pâtes, pos: noun, tags: [food], en: [pasta]}
+  - {lemma: repas, pos: noun, tags: [food, gender], en: [meal]}
+  - {lemma: petit-déjeuner, pos: noun, tags: [food, gender], en: [breakfast]}
+  - {lemma: déjeuner, pos: noun, tags: [food, gender], en: [lunch]}
+  - {lemma: dîner, pos: noun, tags: [food, gender], en: [dinner]}
+  - {lemma: faim, pos: noun, tags: [food, gender], en: [hunger]}
+  - {lemma: soif, pos: noun, tags: [food, gender], en: [thirst]}
+  - {lemma: bouteille, pos: noun, tags: [food, gender], en: [bottle]}
+  - {lemma: verre, pos: noun, tags: [food, gender], en: [glass]}
+  - {lemma: tasse, pos: noun, tags: [food, gender], en: [cup]}
+  - {lemma: table, pos: noun, tags: [food, gender], en: [table]}
+  - {lemma: restaurant, pos: noun, tags: [food, gender], en: [restaurant]}
+  - {lemma: délicieux, pos: adj, tags: [food], en: [delicious]}
+  # ------------------------------------------------------------------ u2 numbers
+  - {lemma: zéro, pos: num, tags: [numbers], en: [zero]}
+  - {lemma: deux, pos: num, tags: [numbers], en: [two]}
+  - {lemma: trois, pos: num, tags: [numbers], en: [three]}
+  - {lemma: quatre, pos: num, tags: [numbers], en: [four]}
+  - {lemma: cinq, pos: num, tags: [numbers], en: [five]}
+  - {lemma: six, pos: num, tags: [numbers], en: [six]}
+  - {lemma: sept, pos: num, tags: [numbers], en: [seven]}
+  - {lemma: huit, pos: num, tags: [numbers], en: [eight]}
+  - {lemma: neuf, pos: num, tags: [numbers], en: [nine]}
+  - {lemma: dix, pos: num, tags: [numbers], en: [ten]}
+  - {lemma: onze, pos: num, tags: [numbers], en: [eleven]}
+  - {lemma: douze, pos: num, tags: [numbers], en: [twelve]}
+  - {lemma: treize, pos: num, tags: [numbers], en: [thirteen]}
+  - {lemma: quatorze, pos: num, tags: [numbers], en: [fourteen]}
+  - {lemma: quinze, pos: num, tags: [numbers], en: [fifteen]}
+  - {lemma: seize, pos: num, tags: [numbers], en: [sixteen]}
+  - {lemma: vingt, pos: num, tags: [numbers], en: [twenty]}
+  - {lemma: trente, pos: num, tags: [numbers], en: [thirty]}
+  - {lemma: quarante, pos: num, tags: [numbers], en: [forty]}
+  - {lemma: cinquante, pos: num, tags: [numbers], en: [fifty]}
+  - {lemma: soixante, pos: num, tags: [numbers], en: [sixty]}
+  - {lemma: cent, pos: num, tags: [numbers], en: [hundred, a hundred]}
+  - {lemma: mille, pos: num, tags: [numbers], en: [thousand, a thousand]}
+  - {lemma: million, pos: noun, tags: [numbers], en: [million]}
+  - {lemma: premier, pos: adj, tags: [numbers], en: [first]}
+  - {lemma: dernier, pos: adj, tags: [numbers], en: [last]}
+  - {lemma: deuxième, pos: adj, tags: [numbers], en: [second]}
+  - {lemma: moitié, pos: noun, tags: [numbers], en: [half]}
+  - {lemma: nombre, pos: noun, tags: [numbers], en: [number]}
+  - {lemma: numéro, pos: noun, tags: [numbers], en: [number]}
+  - {lemma: combien, pos: adv, tags: [numbers], en: [how much, how many]}
+  - {lemma: euro, pos: noun, tags: [numbers], en: [euro]}
+  # ------------------------------------------------------------------ u2 negation
+  - {lemma: jamais, pos: adv, tags: [negation], en: [never, ever]}
+  - {lemma: rien, pos: pron, tags: [negation], en: [nothing, anything]}
+  - {lemma: plus, pos: adv, tags: [negation], en: [no longer, no more, more]}
+  - {lemma: aucun, pos: det, tags: [negation], en: ["no", none, not any]}
+  - {lemma: ni, pos: conj, tags: [negation], en: [nor, neither]}
+  - {lemma: nulle part, pos: adv, tags: [negation], en: [nowhere, anywhere]}
+  - {lemma: encore, pos: adv, tags: [negation], en: [still, again, yet]}
+  - {lemma: toujours, pos: adv, tags: [negation], en: [always, still]}
+  - {lemma: seulement, pos: adv, tags: [negation], en: [only]}
+  # ------------------------------------------------------------------ u3 time
+  - {lemma: jour, pos: noun, tags: [time], en: [day]}
+  - {lemma: semaine, pos: noun, tags: [time], en: [week]}
+  - {lemma: mois, pos: noun, tags: [time], en: [month]}
+  - {lemma: an, pos: noun, tags: [time], en: [year]}
+  - {lemma: année, pos: noun, tags: [time], en: [year]}
+  - {lemma: heure, pos: noun, tags: [time], en: [hour, time, "o'clock"]}
+  - {lemma: minute, pos: noun, tags: [time], en: [minute]}
+  - {lemma: seconde, pos: noun, tags: [time], en: [second]}
+  - {lemma: matin, pos: noun, tags: [time], en: [morning]}
+  - {lemma: après-midi, pos: noun, tags: [time], en: [afternoon]}
+  - {lemma: soir, pos: noun, tags: [time], en: [evening]}
+  - {lemma: soirée, pos: noun, tags: [time], en: [evening, party]}
+  - {lemma: nuit, pos: noun, tags: [time], en: [night]}
+  - {lemma: midi, pos: noun, tags: [time], en: [noon, midday]}
+  - {lemma: aujourd'hui, pos: adv, tags: [time], en: [today]}
+  - {lemma: hier, pos: adv, tags: [time], en: [yesterday]}
+  - {lemma: demain, pos: adv, tags: [time], en: [tomorrow]}
+  - {lemma: maintenant, pos: adv, tags: [time], en: [now]}
+  - {lemma: tôt, pos: adv, tags: [time], en: [early]}
+  - {lemma: tard, pos: adv, tags: [time], en: [late]}
+  - {lemma: lundi, pos: noun, tags: [time], en: [Monday]}
+  - {lemma: mardi, pos: noun, tags: [time], en: [Tuesday]}
+  - {lemma: mercredi, pos: noun, tags: [time], en: [Wednesday]}
+  - {lemma: jeudi, pos: noun, tags: [time], en: [Thursday]}
+  - {lemma: vendredi, pos: noun, tags: [time], en: [Friday]}
+  - {lemma: samedi, pos: noun, tags: [time], en: [Saturday]}
+  - {lemma: dimanche, pos: noun, tags: [time], en: [Sunday]}
+  - {lemma: week-end, pos: noun, tags: [time], en: [weekend]}
+  - {lemma: temps, pos: noun, tags: [time], en: [time, weather]}
+  - {lemma: moment, pos: noun, tags: [time], en: [moment, time]}
+  - {lemma: fois, pos: noun, tags: [time], en: [time, times]}
+  - {lemma: date, pos: noun, tags: [time], en: [date]}
+  - {lemma: été, pos: noun, tags: [time], en: [summer]}
+  - {lemma: hiver, pos: noun, tags: [time], en: [winter]}
+  - {lemma: printemps, pos: noun, tags: [time], en: [spring]}
+  - {lemma: automne, pos: noun, tags: [time], en: [autumn, fall]}
+  - {lemma: janvier, pos: noun, tags: [time], en: [January]}
+  - {lemma: mai, pos: noun, tags: [time], en: [May]}
+  - {lemma: juillet, pos: noun, tags: [time], en: [July]}
+  - {lemma: décembre, pos: noun, tags: [time], en: [December]}
+  - {lemma: anniversaire, pos: noun, tags: [time], en: [birthday, anniversary]}
+  - {lemma: vacances, pos: noun, tags: [time], en: [holidays, vacation]}
+  # ------------------------------------------------------------------ u3 home
+  - {lemma: maison, pos: noun, tags: [home], en: [house, home]}
+  - {lemma: appartement, pos: noun, tags: [home], en: [flat, apartment]}
+  - {lemma: chambre, pos: noun, tags: [home], en: [bedroom, room]}
+  - {lemma: pièce, pos: noun, tags: [home], en: [room, piece, coin]}
+  - {lemma: en train de, pos: prep, tags: [near-future], en: [in the middle of (doing), -ing], variants: ["en train d'"]}
+  - {lemma: cuisine, pos: noun, tags: [home], en: [kitchen, cooking, cuisine]}
+  - {lemma: salle de bains, pos: noun, tags: [home], en: [bathroom]}
+  - {lemma: salon, pos: noun, tags: [home], en: [living room, lounge]}
+  - {lemma: jardin, pos: noun, tags: [home], en: [garden]}
+  - {lemma: porte, pos: noun, tags: [home], en: [door, gate]}
+  - {lemma: fenêtre, pos: noun, tags: [home], en: [window]}
+  - {lemma: mur, pos: noun, tags: [home], en: [wall]}
+  - {lemma: lit, pos: noun, tags: [home], en: [bed]}
+  - {lemma: chaise, pos: noun, tags: [home], en: [chair]}
+  - {lemma: canapé, pos: noun, tags: [home], en: [sofa, couch]}
+  - {lemma: clé, pos: noun, tags: [home], en: [key]}
+  - {lemma: étage, pos: noun, tags: [home], en: [floor, storey]}
+  - {lemma: escalier, pos: noun, tags: [home], en: [stairs, staircase]}
+  - {lemma: lumière, pos: noun, tags: [home], en: [light]}
+  - {lemma: télé, pos: noun, tags: [home], en: [TV, telly]}
+  - {lemma: télévision, pos: noun, tags: [home], en: [television]}
+  - {lemma: ordinateur, pos: noun, tags: [home], en: [computer]}
+  - {lemma: téléphone, pos: noun, tags: [home], en: [phone, telephone]}
+  - {lemma: livre, pos: noun, tags: [home], en: [book]}
+  - {lemma: lettre, pos: noun, tags: [home], en: [letter]}
+  - {lemma: photo, pos: noun, tags: [home], en: [photo, picture]}
+  - {lemma: boîte, pos: noun, tags: [home], en: [box, tin]}
+  - {lemma: sac, pos: noun, tags: [home], en: [bag]}
+  - {lemma: lampe, pos: noun, tags: [home], en: [lamp]}
+  - {lemma: tapis, pos: noun, tags: [home], en: [carpet, rug]}
+  - {lemma: toit, pos: noun, tags: [home], en: [roof]}
+  - {lemma: chez, pos: prep, tags: [home], en: [at the home of, at, to]}
+  - {lemma: ménage, pos: noun, tags: [home], en: [housework, household]}
+  # ------------------------------------------------------------------ u3 family
+  - {lemma: famille, pos: noun, tags: [family], en: [family]}
+  - {lemma: père, pos: noun, tags: [family], en: [father]}
+  - {lemma: mère, pos: noun, tags: [family], en: [mother]}
+  - {lemma: parent, pos: noun, tags: [family], en: [parent, relative]}
+  - {lemma: fils, pos: noun, tags: [family], en: [son]}
+  - {lemma: frère, pos: noun, tags: [family], en: [brother]}
+  - {lemma: sœur, pos: noun, tags: [family], en: [sister]}
+  - {lemma: mari, pos: noun, tags: [family], en: [husband]}
+  - {lemma: grand-père, pos: noun, tags: [family], en: [grandfather]}
+  - {lemma: grand-mère, pos: noun, tags: [family], en: [grandmother]}
+  - {lemma: grands-parents, pos: noun, tags: [family], en: [grandparents]}
+  - {lemma: oncle, pos: noun, tags: [family], en: [uncle]}
+  - {lemma: tante, pos: noun, tags: [family], en: [aunt]}
+  - {lemma: cousin, pos: noun, tags: [family], en: [cousin]}
+  - {lemma: cousine, pos: noun, tags: [family], en: [cousin (female)]}
+  - {lemma: neveu, pos: noun, tags: [family, plurals], en: [nephew]}
+  - {lemma: nièce, pos: noun, tags: [family], en: [niece]}
+  - {lemma: papa, pos: noun, tags: [family], en: [dad, daddy]}
+  - {lemma: maman, pos: noun, tags: [family], en: [mum, mom, mummy]}
+  - {lemma: marié, pos: adj, tags: [family], en: [married]}
+  - {lemma: mariage, pos: noun, tags: [family], en: [wedding, marriage]}
+  # ------------------------------------------------------------------ u3 everyday verbs
+  - {lemma: faire, pos: verb, tags: [verbs1], en: [to do, to make]}
+  - {lemma: aller, pos: verb, tags: [verbs1], en: [to go]}
+  - {lemma: venir, pos: verb, tags: [verbs1], en: [to come]}
+  - {lemma: prendre, pos: verb, tags: [verbs1], en: [to take, to have (food or drink)]}
+  - {lemma: dire, pos: verb, tags: [verbs1], en: [to say, to tell]}
+  - {lemma: voir, pos: verb, tags: [verbs1], en: [to see]}
+  - {lemma: mettre, pos: verb, tags: [verbs1], en: [to put, to put on]}
+  - {lemma: partir, pos: verb, tags: [verbs1], en: [to leave, to go away]}
+  - {lemma: sortir, pos: verb, tags: [verbs1], en: [to go out, to come out, to take out], aux: "être|avoir"}
+  - {lemma: dormir, pos: verb, tags: [verbs1], en: [to sleep]}
+  - {lemma: lire, pos: verb, tags: [verbs1], en: [to read]}
+  - {lemma: écrire, pos: verb, tags: [verbs1], en: [to write]}
+  - {lemma: boire, pos: verb, tags: [verbs1], en: [to drink]}
+  - {lemma: connaître, pos: verb, tags: [verbs1], en: [to know, to be familiar with]}
+  - {lemma: croire, pos: verb, tags: [verbs1], en: [to believe, to think]}
+  - {lemma: parler, pos: verb, tags: [verbs1], en: [to speak, to talk]}
+  - {lemma: aimer, pos: verb, tags: [verbs1], en: [to love, to like]}
+  - {lemma: regarder, pos: verb, tags: [verbs1], en: [to look at, to watch]}
+  - {lemma: chercher, pos: verb, tags: [verbs1], en: [to look for, to fetch]}
+  - {lemma: trouver, pos: verb, tags: [verbs1], en: [to find, to think]}
+  - {lemma: donner, pos: verb, tags: [verbs1], en: [to give]}
+  - {lemma: travailler, pos: verb, tags: [verbs1], en: [to work]}
+  - {lemma: écouter, pos: verb, tags: [verbs1], en: [to listen to]}
+  - {lemma: demander, pos: verb, tags: [verbs1], en: [to ask, to ask for]}
+  - {lemma: penser, pos: verb, tags: [verbs1], en: [to think]}
+  - {lemma: habiter, pos: verb, tags: [verbs1], en: [to live, to live in]}
+  - {lemma: arriver, pos: verb, tags: [verbs1], en: [to arrive, to happen, to manage]}
+  - {lemma: manger, pos: verb, tags: [verbs1], en: [to eat]}
+  - {lemma: acheter, pos: verb, tags: [verbs1], en: [to buy]}
+  - {lemma: payer, pos: verb, tags: [verbs1], en: [to pay, to pay for]}
+  - {lemma: aider, pos: verb, tags: [verbs1], en: [to help]}
+  - {lemma: attendre, pos: verb, tags: [verbs1], en: [to wait, to wait for, to expect]}
+  - {lemma: finir, pos: verb, tags: [verbs1], en: [to finish, to end]}
+  - {lemma: comprendre, pos: verb, tags: [verbs1], en: [to understand]}
+  - {lemma: apprendre, pos: verb, tags: [verbs1], en: [to learn, to teach]}
+  - {lemma: ouvrir, pos: verb, tags: [verbs1], en: [to open]}
+  - {lemma: fermer, pos: verb, tags: [verbs1], en: [to close, to shut]}
+  - {lemma: entrer, pos: verb, tags: [verbs1], en: [to enter, to go in, to come in]}
+  - {lemma: rester, pos: verb, tags: [verbs1], en: [to stay, to remain]}
+  - {lemma: jouer, pos: verb, tags: [verbs1], en: [to play]}
+  - {lemma: falloir, pos: verb, tags: [verbs1], en: [to be necessary, must (il faut), to need]}
+  # ------------------------------------------------------------------ u3 questions
+  - {lemma: est-ce que, pos: particle, tags: [questions], en: [question marker, is it that], variants: ["est-ce qu'"]}
+  - {lemma: qu'est-ce que, pos: pron, tags: [questions], en: [what], variants: ["qu'est-ce qu'"]}
+  - {lemma: qu'est-ce qui, pos: pron, tags: [questions], en: [what]}
+  - {lemma: quoi, pos: pron, tags: [questions], en: [what]}
+  - {lemma: où, pos: adv, tags: [questions, relatives], en: [where, when, in which]}
+  - {lemma: quand, pos: adv, tags: [questions, narration], en: [when]}
+  - {lemma: comment, pos: adv, tags: [questions], en: [how]}
+  - {lemma: pourquoi, pos: adv, tags: [questions], en: [why]}
+  - {lemma: quel, pos: det, tags: [questions], en: [which, what]}
+  - {lemma: lequel, pos: pron, tags: [questions], en: [which one, which]}
+  - {lemma: parce que, pos: conj, tags: [questions], en: [because], variants: ["parce qu'"]}
+  - {lemma: n'est-ce pas, pos: phrase, tags: [questions], en: ["isn't it", "right", "don't you"]}
+  # ------------------------------------------------------------------ u4 adjectives
+  - {lemma: beau, pos: adj, tags: [adjectives], en: [beautiful, handsome, fine]}
+  - {lemma: joli, pos: adj, tags: [adjectives], en: [pretty, nice]}
+  - {lemma: nouveau, pos: adj, tags: [adjectives], en: [new]}
+  - {lemma: neuf, pos: adj, tags: [adjectives], en: [new, brand new]}
+  - {lemma: ancien, pos: adj, tags: [adjectives], en: [old, former, ancient]}
+  - {lemma: long, pos: adj, tags: [adjectives], en: [long]}
+  - {lemma: court, pos: adj, tags: [adjectives], en: [short]}
+  - {lemma: gros, pos: adj, tags: [adjectives], en: [big, fat, large]}
+  - {lemma: mauvais, pos: adj, tags: [adjectives], en: [bad, wrong]}
+  - {lemma: meilleur, pos: adj, tags: [adjectives], en: [better, best], inflections: [meilleure, meilleurs, meilleures]}
+  - {lemma: facile, pos: adj, tags: [adjectives], en: [easy]}
+  - {lemma: difficile, pos: adj, tags: [adjectives], en: [difficult, hard]}
+  - {lemma: heureux, pos: adj, tags: [adjectives], en: [happy]}
+  - {lemma: triste, pos: adj, tags: [adjectives], en: [sad]}
+  - {lemma: content, pos: adj, tags: [adjectives], en: [happy, pleased, glad]}
+  - {lemma: fatigué, pos: adj, tags: [adjectives], en: [tired]}
+  - {lemma: malade, pos: adj, tags: [adjectives], en: [ill, sick]}
+  - {lemma: chaud, pos: adj, tags: [adjectives], en: [hot, warm]}
+  - {lemma: froid, pos: adj, tags: [adjectives], en: [cold]}
+  - {lemma: cher, pos: adj, tags: [adjectives], en: [expensive, dear]}
+  - {lemma: gentil, pos: adj, tags: [adjectives], en: [kind, nice]}
+  - {lemma: intéressant, pos: adj, tags: [adjectives], en: [interesting]}
+  - {lemma: important, pos: adj, tags: [adjectives], en: [important]}
+  - {lemma: possible, pos: adj, tags: [adjectives], en: [possible]}
+  - {lemma: prêt, pos: adj, tags: [adjectives], en: [ready]}
+  - {lemma: libre, pos: adj, tags: [adjectives], en: [free]}
+  - {lemma: plein, pos: adj, tags: [adjectives], en: [full]}
+  - {lemma: vide, pos: adj, tags: [adjectives], en: [empty]}
+  - {lemma: propre, pos: adj, tags: [adjectives], en: [clean, own]}
+  - {lemma: sale, pos: adj, tags: [adjectives], en: [dirty]}
+  - {lemma: fort, pos: adj, tags: [adjectives], en: [strong, loud]}
+  - {lemma: vrai, pos: adj, tags: [adjectives], en: ["true", real]}
+  - {lemma: faux, pos: adj, tags: [adjectives], en: ["false", wrong, fake]}
+  - {lemma: sûr, pos: adj, tags: [adjectives], en: [sure, safe]}
+  - {lemma: seul, pos: adj, tags: [adjectives], en: [alone, only, single]}
+  - {lemma: même, pos: adj, tags: [adjectives, little2], en: [same, even, itself]}
+  - {lemma: autre, pos: adj, tags: [adjectives], en: [other, another]}
+  - {lemma: rapide, pos: adj, tags: [adjectives], en: [fast, quick]}
+  - {lemma: lent, pos: adj, tags: [adjectives], en: [slow]}
+  - {lemma: occupé, pos: adj, tags: [adjectives], en: [busy, occupied]}
+  # ------------------------------------------------------------------ u4 colours
+  - {lemma: couleur, pos: noun, tags: [colours], en: [colour, color]}
+  - {lemma: blanc, pos: adj, tags: [colours], en: [white]}
+  - {lemma: noir, pos: adj, tags: [colours], en: [black]}
+  - {lemma: rouge, pos: adj, tags: [colours], en: [red]}
+  - {lemma: bleu, pos: adj, tags: [colours], en: [blue]}
+  - {lemma: vert, pos: adj, tags: [colours], en: [green]}
+  - {lemma: jaune, pos: adj, tags: [colours], en: [yellow]}
+  - {lemma: gris, pos: adj, tags: [colours], en: [grey, gray]}
+  - {lemma: brun, pos: adj, tags: [colours], en: [brown, dark-haired]}
+  - {lemma: marron, pos: adj, tags: [colours], en: [brown]}
+  - {lemma: rose, pos: adj, tags: [colours], en: [pink]}
+  - {lemma: orange, pos: adj, tags: [colours], en: [orange]}
+  - {lemma: violet, pos: adj, tags: [colours], en: [purple, violet]}
+  - {lemma: blond, pos: adj, tags: [colours], en: [blond, fair]}
+  - {lemma: clair, pos: adj, tags: [colours], en: [light, clear]}
+  - {lemma: foncé, pos: adj, tags: [colours], en: [dark]}
+  # ------------------------------------------------------------------ u4 adverbs
+  - {lemma: beaucoup, pos: adv, tags: [adverbs], en: [a lot, much, many]}
+  - {lemma: peu, pos: adv, tags: [adverbs], en: [little, not much, few]}
+  - {lemma: trop, pos: adv, tags: [adverbs], en: [too, too much]}
+  - {lemma: assez, pos: adv, tags: [adverbs], en: [enough, quite, rather]}
+  - {lemma: souvent, pos: adv, tags: [adverbs], en: [often]}
+  - {lemma: parfois, pos: adv, tags: [adverbs], en: [sometimes]}
+  - {lemma: déjà, pos: adv, tags: [adverbs], en: [already, ever]}
+  - {lemma: bientôt, pos: adv, tags: [adverbs], en: [soon]}
+  - {lemma: ensemble, pos: adv, tags: [adverbs], en: [together]}
+  - {lemma: vite, pos: adv, tags: [adverbs], en: [quickly, fast]}
+  - {lemma: vraiment, pos: adv, tags: [adverbs], en: [really, truly]}
+  - {lemma: peut-être, pos: adv, tags: [adverbs], en: [maybe, perhaps]}
+  - {lemma: presque, pos: adv, tags: [adverbs], en: [almost, nearly]}
+  - {lemma: surtout, pos: adv, tags: [adverbs], en: [especially, above all]}
+  - {lemma: ensuite, pos: adv, tags: [adverbs], en: [then, next, afterwards]}
+  - {lemma: puis, pos: adv, tags: [adverbs], en: [then, next]}
+  - {lemma: alors, pos: adv, tags: [adverbs], en: [so, then]}
+  - {lemma: donc, pos: conj, tags: [adverbs], en: [so, therefore]}
+  - {lemma: mieux, pos: adv, tags: [adverbs], en: [better]}
+  - {lemma: moins, pos: adv, tags: [adverbs], en: [less, fewer, minus]}
+  - {lemma: tellement, pos: adv, tags: [adverbs], en: [so, so much]}
+  - {lemma: longtemps, pos: adv, tags: [adverbs], en: [a long time, long]}
+  - {lemma: partout, pos: adv, tags: [adverbs], en: [everywhere]}
+  - {lemma: dehors, pos: adv, tags: [adverbs], en: [outside, out]}
+  - {lemma: loin, pos: adv, tags: [adverbs], en: [far, far away]}
+  - {lemma: près, pos: adv, tags: [adverbs], en: [near, close]}
+  # ------------------------------------------------------------------ u4 possessives
+  - {lemma: mon, pos: det, tags: [possessives], en: [my]}
+  - {lemma: ton, pos: det, tags: [possessives], en: [your]}
+  - {lemma: son, pos: det, tags: [possessives], en: [his, her, its]}
+  - {lemma: notre, pos: det, tags: [possessives], en: [our], inflections: [nos]}
+  - {lemma: votre, pos: det, tags: [possessives], en: [your], inflections: [vos]}
+  - {lemma: leur, pos: det, tags: [possessives], en: [their]}
+  - {lemma: le mien, pos: pron, tags: [possessives], en: [mine]}
+  - {lemma: le tien, pos: pron, tags: [possessives], en: [yours]}
+  - {lemma: le sien, pos: pron, tags: [possessives], en: [his, hers]}
+  # ------------------------------------------------------------------ u4 demonstratives
+  - {lemma: ce, pos: det, tags: [demonstratives], en: [this, that]}
+  - {lemma: celui, pos: pron, tags: [demonstratives], en: [the one, that]}
+  - {lemma: celle, pos: pron, tags: [demonstratives], en: [the one, that]}
+  - {lemma: ceux, pos: pron, tags: [demonstratives], en: [those, the ones]}
+  - {lemma: celles, pos: pron, tags: [demonstratives], en: [those, the ones]}
+  - {lemma: ceci, pos: pron, tags: [demonstratives], en: [this]}
+  - {lemma: celui-ci, pos: pron, tags: [demonstratives], en: [this one, the latter]}
+  - {lemma: celui-là, pos: pron, tags: [demonstratives], en: [that one, the former]}
+  - {lemma: celle-ci, pos: pron, tags: [demonstratives], en: [this one]}
+  - {lemma: celle-là, pos: pron, tags: [demonstratives], en: [that one]}
+  # ------------------------------------------------------------------ u4 plurals (nouns with notable plurals)
+  - {lemma: cheval, pos: noun, tags: [plurals], en: [horse]}
+  - {lemma: journal, pos: noun, tags: [plurals], en: [newspaper, diary]}
+  - {lemma: animal, pos: noun, tags: [plurals], en: [animal]}
+  - {lemma: œil, pos: noun, tags: [plurals], en: [eye]}
+  - {lemma: travail, pos: noun, tags: [plurals], en: [work, job]}
+  - {lemma: bijou, pos: noun, tags: [plurals], en: [jewel, piece of jewellery]}
+  - {lemma: genou, pos: noun, tags: [plurals], en: [knee]}
+  - {lemma: jeu, pos: noun, tags: [plurals], en: [game, play]}
+  - {lemma: cheveu, pos: noun, tags: [plurals], en: [hair (a single hair)]}
+  - {lemma: bateau, pos: noun, tags: [plurals], en: [boat, ship]}
+  - {lemma: chapeau, pos: noun, tags: [plurals], en: [hat]}
+  - {lemma: oiseau, pos: noun, tags: [plurals], en: [bird]}
+  - {lemma: feu, pos: noun, tags: [plurals], en: [fire, traffic light]}
+  - {lemma: hôpital, pos: noun, tags: [plurals], en: [hospital]}
+  - {lemma: ciel, pos: noun, tags: [plurals], en: [sky, heaven]}
+  - {lemma: monsieur, pos: noun, tags: [plurals], en: [sir, Mr, gentleman]}
+  - {lemma: madame, pos: noun, tags: [plurals], en: [madam, Mrs, lady]}
+  - {lemma: lieu, pos: noun, tags: [plurals], en: [place]}
+  - {lemma: cadeau, pos: noun, tags: [plurals], en: [present, gift]}
+  - {lemma: château, pos: noun, tags: [plurals], en: [castle, palace]}
+  - {lemma: tableau, pos: noun, tags: [plurals], en: [painting, picture, board]}
+  - {lemma: bureau, pos: noun, tags: [plurals], en: [office, desk]}
+  - {lemma: festival, pos: noun, tags: [plurals], en: [festival]}
+  - {lemma: détail, pos: noun, tags: [plurals], en: [detail]}
+  - {lemma: chou, pos: noun, tags: [plurals], en: [cabbage, darling]}
+  # ------------------------------------------------------------------ u5 city
+  - {lemma: ville, pos: noun, tags: [city], en: [town, city]}
+  - {lemma: village, pos: noun, tags: [city], en: [village]}
+  - {lemma: rue, pos: noun, tags: [city], en: [street, road]}
+  - {lemma: place, pos: noun, tags: [city], en: [square, place, seat, room]}
+  - {lemma: quartier, pos: noun, tags: [city], en: [neighbourhood, district]}
+  - {lemma: centre, pos: noun, tags: [city], en: [centre, center]}
+  - {lemma: magasin, pos: noun, tags: [city], en: [shop, store]}
+  - {lemma: marché, pos: noun, tags: [city], en: [market]}
+  - {lemma: banque, pos: noun, tags: [city], en: [bank]}
+  - {lemma: poste, pos: noun, tags: [city], en: [post office, post]}
+  - {lemma: église, pos: noun, tags: [city], en: [church]}
+  - {lemma: musée, pos: noun, tags: [city], en: [museum]}
+  - {lemma: parc, pos: noun, tags: [city], en: [park]}
+  - {lemma: pont, pos: noun, tags: [city], en: [bridge]}
+  - {lemma: bâtiment, pos: noun, tags: [city], en: [building]}
+  - {lemma: immeuble, pos: noun, tags: [city], en: [block of flats, building]}
+  - {lemma: boulangerie, pos: noun, tags: [city], en: [bakery]}
+  - {lemma: pharmacie, pos: noun, tags: [city], en: [chemist, pharmacy]}
+  - {lemma: cinéma, pos: noun, tags: [city], en: [cinema, movie theater]}
+  - {lemma: café, pos: noun, tags: [city], en: [café, coffee]}
+  - {lemma: hôtel, pos: noun, tags: [city], en: [hotel]}
+  - {lemma: école, pos: noun, tags: [city], en: [school]}
+  - {lemma: mairie, pos: noun, tags: [city], en: [town hall]}
+  - {lemma: police, pos: noun, tags: [city], en: [police]}
+  - {lemma: voiture, pos: noun, tags: [city], en: [car]}
+  - {lemma: bus, pos: noun, tags: [city], en: [bus]}
+  - {lemma: métro, pos: noun, tags: [city], en: [underground, subway, metro]}
+  - {lemma: vélo, pos: noun, tags: [city], en: [bike, bicycle]}
+  - {lemma: taxi, pos: noun, tags: [city], en: [taxi]}
+  - {lemma: coin, pos: noun, tags: [city], en: [corner, area]}
+  - {lemma: droite, pos: noun, tags: [city], en: [right, the right]}
+  - {lemma: gauche, pos: noun, tags: [city], en: [left, the left]}
+  - {lemma: tout droit, pos: adv, tags: [city], en: [straight ahead, straight on]}
+  # ------------------------------------------------------------------ u5 travel
+  - {lemma: voyage, pos: noun, tags: [travel], en: [journey, trip, travel]}
+  - {lemma: voyager, pos: verb, tags: [travel], en: [to travel]}
+  - {lemma: train, pos: noun, tags: [travel], en: [train]}
+  - {lemma: gare, pos: noun, tags: [travel], en: [station, railway station]}
+  - {lemma: avion, pos: noun, tags: [travel], en: [plane, aeroplane, airplane]}
+  - {lemma: aéroport, pos: noun, tags: [travel], en: [airport]}
+  - {lemma: billet, pos: noun, tags: [travel], en: [ticket, banknote]}
+  - {lemma: valise, pos: noun, tags: [travel], en: [suitcase]}
+  - {lemma: passeport, pos: noun, tags: [travel], en: [passport]}
+  - {lemma: route, pos: noun, tags: [travel], en: [road, way]}
+  - {lemma: chemin, pos: noun, tags: [travel], en: [path, way]}
+  - {lemma: plage, pos: noun, tags: [travel], en: [beach]}
+  - {lemma: mer, pos: noun, tags: [travel], en: [sea]}
+  - {lemma: montagne, pos: noun, tags: [travel], en: [mountain]}
+  - {lemma: campagne, pos: noun, tags: [travel], en: [countryside, campaign]}
+  - {lemma: étranger, pos: noun, tags: [travel], en: [foreigner, stranger, abroad]}
+  - {lemma: touriste, pos: noun, tags: [travel], en: [tourist]}
+  - {lemma: carte, pos: noun, tags: [travel], en: [map, card, menu]}
+  - {lemma: départ, pos: noun, tags: [travel], en: [departure, start]}
+  - {lemma: arrivée, pos: noun, tags: [travel], en: [arrival]}
+  - {lemma: retard, pos: noun, tags: [travel], en: [delay]}
+  - {lemma: en retard, pos: adv, tags: [travel], en: [late]}
+  - {lemma: à l'heure, pos: adv, tags: [travel], en: [on time]}
+  - {lemma: visiter, pos: verb, tags: [travel], en: [to visit]}
+  - {lemma: monter, pos: verb, tags: [travel], en: [to go up, to get on, to climb], aux: "être|avoir"}
+  - {lemma: descendre, pos: verb, tags: [travel], en: [to go down, to get off, to come down], aux: "être|avoir"}
+  - {lemma: tomber, pos: verb, tags: [travel], en: [to fall]}
+  - {lemma: retourner, pos: verb, tags: [travel], en: [to go back, to return, to turn over], aux: "être|avoir"}
+  - {lemma: rentrer, pos: verb, tags: [travel], en: [to go home, to come back, to get back], aux: "être|avoir"}
+  - {lemma: conduire, pos: verb, tags: [travel], en: [to drive, to lead]}
+  - {lemma: pays, pos: noun, tags: [travel], en: [country]}
+  - {lemma: France, pos: noun, tags: [travel], en: [France]}
+  - {lemma: Paris, pos: noun, tags: [travel], en: [Paris]}
+  # ------------------------------------------------------------------ u5 prepositions
+  - {lemma: au, pos: prep, tags: [prepositions], en: [to the, at the, in the]}
+  - {lemma: aux, pos: prep, tags: [prepositions], en: [to the, at the, in the]}
+  - {lemma: entre, pos: prep, tags: [prepositions], en: [between, among]}
+  - {lemma: devant, pos: prep, tags: [prepositions], en: [in front of, before]}
+  - {lemma: derrière, pos: prep, tags: [prepositions], en: [behind]}
+  - {lemma: vers, pos: prep, tags: [prepositions], en: [towards, around]}
+  - {lemma: contre, pos: prep, tags: [prepositions], en: [against]}
+  - {lemma: depuis, pos: prep, tags: [prepositions], en: [since, for, from]}
+  - {lemma: pendant, pos: prep, tags: [prepositions], en: [during, for]}
+  - {lemma: avant, pos: prep, tags: [prepositions], en: [before]}
+  - {lemma: après, pos: prep, tags: [prepositions], en: [after]}
+  - {lemma: jusqu'à, pos: prep, tags: [prepositions], en: [until, up to, as far as]}
+  - {lemma: à côté de, pos: prep, tags: [prepositions], en: [next to, beside], variants: ["à côté d'"]}
+  - {lemma: en face de, pos: prep, tags: [prepositions], en: [opposite, facing], variants: ["en face d'"]}
+  - {lemma: près de, pos: prep, tags: [prepositions], en: [near, close to], variants: ["près d'"]}
+  - {lemma: loin de, pos: prep, tags: [prepositions], en: [far from], variants: ["loin d'"]}
+  - {lemma: au-dessus de, pos: prep, tags: [prepositions], en: [above, over], variants: ["au-dessus d'"]}
+  - {lemma: autour de, pos: prep, tags: [prepositions], en: [around], variants: ["autour d'"]}
+  - {lemma: à cause de, pos: prep, tags: [prepositions], en: [because of], variants: ["à cause d'"]}
+  - {lemma: grâce à, pos: prep, tags: [prepositions], en: [thanks to]}
+  - {lemma: selon, pos: prep, tags: [prepositions], en: [according to]}
+  - {lemma: sauf, pos: prep, tags: [prepositions], en: [except, but]}
+  # ------------------------------------------------------------------ u5 near future
+  - {lemma: prochain, pos: adj, tags: [near-future], en: [next]}
+  - {lemma: tout à l'heure, pos: adv, tags: [near-future], en: [in a moment, a moment ago, later]}
+  - {lemma: tout de suite, pos: adv, tags: [near-future], en: [right away, immediately]}
+  - {lemma: ce soir, pos: adv, tags: [near-future], en: [tonight, this evening]}
+  - {lemma: plus tard, pos: adv, tags: [near-future], en: [later]}
+  - {lemma: venir, pos: verb, tags: [near-future], en: [to come]}
+  - {lemma: aller, pos: verb, tags: [near-future], en: [to go]}
+  # ------------------------------------------------------------------ u6 work and school
+  - {lemma: travail, pos: noun, tags: [work], en: [work, job]}
+  - {lemma: métier, pos: noun, tags: [work], en: [job, trade, profession]}
+  - {lemma: emploi, pos: noun, tags: [work], en: [job, employment, use]}
+  - {lemma: entreprise, pos: noun, tags: [work], en: [company, business, firm]}
+  - {lemma: patron, pos: noun, tags: [work], en: [boss]}
+  - {lemma: collègue, pos: noun, tags: [work], en: [colleague]}
+  - {lemma: réunion, pos: noun, tags: [work], en: [meeting]}
+  - {lemma: projet, pos: noun, tags: [work], en: [project, plan]}
+  - {lemma: argent, pos: noun, tags: [work], en: [money, silver]}
+  - {lemma: salaire, pos: noun, tags: [work], en: [salary, wages]}
+  - {lemma: classe, pos: noun, tags: [work], en: [class, classroom]}
+  - {lemma: cours, pos: noun, tags: [work], en: [lesson, class, course]}
+  - {lemma: leçon, pos: noun, tags: [work], en: [lesson]}
+  - {lemma: examen, pos: noun, tags: [work], en: [exam, examination]}
+  - {lemma: devoir, pos: noun, tags: [work], en: [homework, duty]}
+  - {lemma: question, pos: noun, tags: [work], en: [question]}
+  - {lemma: réponse, pos: noun, tags: [work], en: [answer, reply]}
+  - {lemma: problème, pos: noun, tags: [work], en: [problem]}
+  - {lemma: université, pos: noun, tags: [work], en: [university]}
+  - {lemma: papier, pos: noun, tags: [work], en: [paper]}
+  - {lemma: stylo, pos: noun, tags: [work], en: [pen]}
+  - {lemma: cahier, pos: noun, tags: [work], en: [notebook, exercise book]}
+  - {lemma: page, pos: noun, tags: [work], en: [page]}
+  - {lemma: exemple, pos: noun, tags: [work], en: [example]}
+  - {lemma: erreur, pos: noun, tags: [work], en: [mistake, error]}
+  - {lemma: faute, pos: noun, tags: [work], en: [mistake, fault]}
+  - {lemma: étudier, pos: verb, tags: [work], en: [to study]}
+  - {lemma: enseigner, pos: verb, tags: [work], en: [to teach]}
+  - {lemma: expliquer, pos: verb, tags: [work], en: [to explain]}
+  - {lemma: essayer, pos: verb, tags: [work], en: [to try, to try on]}
+  - {lemma: réussir, pos: verb, tags: [work], en: [to succeed, to pass]}
+  - {lemma: gagner, pos: verb, tags: [work], en: [to win, to earn]}
+  - {lemma: commencer, pos: verb, tags: [work], en: [to begin, to start]}
+  - {lemma: terminer, pos: verb, tags: [work], en: [to finish, to end]}
+  - {lemma: bureau, pos: noun, tags: [work], en: [office, desk]}
+  # ------------------------------------------------------------------ u6 object pronouns
+  - {lemma: le, pos: pron, tags: [pronouns], en: [him, it]}
+  - {lemma: la, pos: pron, tags: [pronouns], en: [her, it]}
+  - {lemma: les, pos: pron, tags: [pronouns], en: [them]}
+  - {lemma: leur, pos: pron, tags: [pronouns], en: [to them, them]}
+  - {lemma: me, pos: pron, tags: [pronouns], en: [me, to me, myself]}
+  - {lemma: te, pos: pron, tags: [pronouns], en: [you, to you, yourself]}
+  - {lemma: se, pos: pron, tags: [pronouns], en: [himself, herself, themselves, each other]}
+  - {lemma: soi, pos: pron, tags: [pronouns], en: [oneself]}
+  # ------------------------------------------------------------------ u6 y and en
+  - {lemma: "y", pos: pron, tags: [y-en], en: [there, to it, about it]}
+  - {lemma: en, pos: pron, tags: [y-en], en: [some, of it, of them, from there]}
+  - {lemma: il y en a, pos: phrase, tags: [y-en], en: [there are some, there is some]}
+  # ------------------------------------------------------------------ u6 combined pronouns
+  - {lemma: me le, pos: pron, tags: [combined], en: [it to me, it for me]}
+  - {lemma: te le, pos: pron, tags: [combined], en: [it to you]}
+  - {lemma: le lui, pos: pron, tags: [combined], en: [it to him, it to her]}
+  - {lemma: la lui, pos: pron, tags: [combined], en: [it to him, it to her]}
+  - {lemma: les lui, pos: pron, tags: [combined], en: [them to him, them to her]}
+  - {lemma: le leur, pos: pron, tags: [combined], en: [it to them]}
+  - {lemma: m'en, pos: pron, tags: [combined], en: [some to me, of it to me]}
+  - {lemma: s'en, pos: pron, tags: [combined], en: [of it (oneself), away (oneself)]}
+  - {lemma: lui en, pos: pron, tags: [combined], en: [some to him, some to her]}
+  # ------------------------------------------------------------------ u8 narration
+  - {lemma: soudain, pos: adv, tags: [narration], en: [suddenly]}
+  - {lemma: tout à coup, pos: adv, tags: [narration], en: [suddenly, all of a sudden]}
+  - {lemma: d'habitude, pos: adv, tags: [narration], en: [usually]}
+  - {lemma: autrefois, pos: adv, tags: [narration], en: [in the past, once, formerly]}
+  - {lemma: pendant que, pos: conj, tags: [narration], en: [while], variants: ["pendant qu'"]}
+  - {lemma: lorsque, pos: conj, tags: [narration], en: [when]}
+  - {lemma: un jour, pos: adv, tags: [narration], en: [one day]}
+  - {lemma: à ce moment-là, pos: adv, tags: [narration], en: [at that moment, at that time]}
+  - {lemma: enfance, pos: noun, tags: [narration], en: [childhood]}
+  - {lemma: souvenir, pos: noun, tags: [narration], en: [memory, souvenir]}
+  - {lemma: histoire, pos: noun, tags: [narration], en: [story, history]}
+  # ------------------------------------------------------------------ u8 more verbs
+  - {lemma: vivre, pos: verb, tags: [verbs2], en: [to live]}
+  - {lemma: mourir, pos: verb, tags: [verbs2], en: [to die]}
+  - {lemma: naître, pos: verb, tags: [verbs2], en: [to be born]}
+  - {lemma: devenir, pos: verb, tags: [verbs2], en: [to become]}
+  - {lemma: revenir, pos: verb, tags: [verbs2], en: [to come back, to return]}
+  - {lemma: tenir, pos: verb, tags: [verbs2], en: [to hold, to keep]}
+  - {lemma: recevoir, pos: verb, tags: [verbs2], en: [to receive, to get]}
+  - {lemma: envoyer, pos: verb, tags: [verbs2], en: [to send]}
+  - {lemma: montrer, pos: verb, tags: [verbs2], en: [to show]}
+  - {lemma: porter, pos: verb, tags: [verbs2], en: [to carry, to wear]}
+  - {lemma: laisser, pos: verb, tags: [verbs2], en: [to leave, to let]}
+  - {lemma: passer, pos: verb, tags: [verbs2], en: [to pass, to spend, to go by, to drop in], aux: "avoir|être"}
+  - {lemma: tourner, pos: verb, tags: [verbs2], en: [to turn]}
+  - {lemma: courir, pos: verb, tags: [verbs2], en: [to run]}
+  - {lemma: suivre, pos: verb, tags: [verbs2], en: [to follow, to take (a course)]}
+  - {lemma: sentir, pos: verb, tags: [verbs2], en: [to feel, to smell]}
+  - {lemma: perdre, pos: verb, tags: [verbs2], en: [to lose, to waste]}
+  - {lemma: oublier, pos: verb, tags: [verbs2], en: [to forget]}
+  - {lemma: rencontrer, pos: verb, tags: [verbs2], en: [to meet]}
+  - {lemma: changer, pos: verb, tags: [verbs2], en: [to change]}
+  - {lemma: choisir, pos: verb, tags: [verbs2], en: [to choose]}
+  - {lemma: répondre, pos: verb, tags: [verbs2], en: [to answer, to reply]}
+  - {lemma: entendre, pos: verb, tags: [verbs2], en: [to hear]}
+  - {lemma: vendre, pos: verb, tags: [verbs2], en: [to sell]}
+  - {lemma: rendre, pos: verb, tags: [verbs2], en: [to give back, to return, to make]}
+  - {lemma: arrêter, pos: verb, tags: [verbs2], en: [to stop, to arrest]}
+  - {lemma: continuer, pos: verb, tags: [verbs2], en: [to continue, to go on]}
+  - {lemma: utiliser, pos: verb, tags: [verbs2], en: [to use]}
+  - {lemma: préparer, pos: verb, tags: [verbs2], en: [to prepare]}
+  - {lemma: appeler, pos: verb, tags: [verbs2], en: [to call, to phone]}
+  - {lemma: tuer, pos: verb, tags: [verbs2], en: [to kill]}
+  - {lemma: quitter, pos: verb, tags: [verbs2], en: [to leave]}
+  - {lemma: cacher, pos: verb, tags: [verbs2], en: [to hide]}
+  - {lemma: casser, pos: verb, tags: [verbs2], en: [to break]}
+  # ------------------------------------------------------------------ u9 reflexive verbs (glosses only)
+  - {lemma: lever, pos: verb, en: [to raise, to lift, to get up (se lever)], aux: "être|avoir"}
+  - {lemma: coucher, pos: verb, en: [to put to bed, to go to bed (se coucher)], aux: "être|avoir"}
+  - {lemma: laver, pos: verb, en: [to wash], aux: "être|avoir"}
+  - {lemma: habiller, pos: verb, en: [to dress, to get dressed (s'habiller)], aux: "être|avoir"}
+  - {lemma: réveiller, pos: verb, en: [to wake up], aux: "être|avoir"}
+  - {lemma: promener, pos: verb, en: [to walk, to go for a walk (se promener)], aux: "être|avoir"}
+  - {lemma: reposer, pos: verb, en: [to rest, to put back], aux: "être|avoir"}
+  - {lemma: dépêcher, pos: verb, en: [to hurry (se dépêcher), to dispatch], aux: "être|avoir"}
+  - {lemma: amuser, pos: verb, en: [to amuse, to have fun (s'amuser)], aux: "être|avoir"}
+  - {lemma: marier, pos: verb, en: [to marry, to get married (se marier)], aux: "être|avoir"}
+  - {lemma: tromper, pos: verb, en: [to deceive, to be wrong (se tromper)], aux: "être|avoir"}
+  - {lemma: souvenir, pos: verb, en: [to remember (se souvenir)]}
+  - {lemma: asseoir, pos: verb, en: [to sit, to sit down (s'asseoir)], aux: "avoir|être"}
+  - {lemma: taire, pos: verb, en: [to keep quiet, to hush up], aux: "avoir|être"}
+  - {lemma: calmer, pos: verb, en: [to calm, to calm down], aux: "avoir|être"}
+  - {lemma: approcher, pos: verb, en: [to approach, to come closer], aux: "avoir|être"}
+  - {lemma: inquiéter, pos: verb, en: [to worry], aux: "avoir|être"}
+  - {lemma: excuser, pos: verb, en: [to excuse, to apologize (s'excuser)], aux: "avoir|être"}
+  - {lemma: occuper, pos: verb, en: [to occupy, to take care of (s'occuper de)], aux: "avoir|être"}
+  - {lemma: trouver, pos: verb, en: [to find, to think, to be located (se trouver)], aux: "avoir|être"}
+  - {lemma: sentir, pos: verb, en: [to feel, to smell], aux: "avoir|être"}
+  # ------------------------------------------------------------------ u9 more little words
+  - {lemma: comme, pos: conj, tags: [little2], en: [like, as, how]}
+  - {lemma: si, pos: conj, tags: [little2], en: [if, whether, so, "yes"]}
+  - {lemma: pourtant, pos: adv, tags: [little2], en: [yet, however, though]}
+  - {lemma: car, pos: conj, tags: [little2], en: [because, for]}
+  - {lemma: plutôt, pos: adv, tags: [little2], en: [rather, instead]}
+  - {lemma: chaque, pos: det, tags: [little2], en: [each, every]}
+  - {lemma: plusieurs, pos: det, tags: [little2], en: [several]}
+  - {lemma: quelques, pos: det, tags: [little2], en: [a few, some]}
+  - {lemma: certain, pos: adj, tags: [little2], en: [certain, some]}
+  - {lemma: tel, pos: adj, tags: [little2], en: [such, like]}
+  - {lemma: ainsi, pos: adv, tags: [little2], en: [thus, so, like this]}
+  - {lemma: environ, pos: adv, tags: [little2], en: [about, around, approximately]}
+  - {lemma: enfin, pos: adv, tags: [little2], en: [finally, at last, well]}
+  - {lemma: d'abord, pos: adv, tags: [little2], en: [first, at first]}
+  - {lemma: sinon, pos: conj, tags: [little2], en: [otherwise, or else]}
+  - {lemma: quand même, pos: adv, tags: [little2], en: [all the same, still, anyway]}
+  - {lemma: tout le monde, pos: pron, tags: [little2], en: [everyone, everybody]}
+  - {lemma: chacun, pos: pron, tags: [little2], en: [each one, everyone]}
+  - {lemma: autant, pos: adv, tags: [little2], en: [as much, as many]}
+  - {lemma: davantage, pos: adv, tags: [little2], en: [more]}
+  - {lemma: ailleurs, pos: adv, tags: [little2], en: [elsewhere]}
+  - {lemma: n'importe quoi, pos: pron, tags: [little2], en: [anything, nonsense]}
+  - {lemma: à peine, pos: adv, tags: [little2], en: [hardly, barely]}
+  - {lemma: exprès, pos: adv, tags: [little2], en: [on purpose]}
+  - {lemma: volontiers, pos: adv, tags: [little2], en: [gladly, willingly]}
+  - {lemma: sans doute, pos: adv, tags: [little2], en: [probably, no doubt]}
+  - {lemma: en fait, pos: adv, tags: [little2], en: [in fact, actually]}
+  # ------------------------------------------------------------------ u10 ideas
+  - {lemma: idée, pos: noun, tags: [ideas], en: [idea]}
+  - {lemma: avis, pos: noun, tags: [ideas], en: [opinion, view, notice]}
+  - {lemma: raison, pos: noun, tags: [ideas], en: [reason]}
+  - {lemma: tort, pos: noun, tags: [ideas], en: [wrong, fault]}
+  - {lemma: vérité, pos: noun, tags: [ideas], en: [truth]}
+  - {lemma: mensonge, pos: noun, tags: [ideas], en: [lie]}
+  - {lemma: rêve, pos: noun, tags: [ideas], en: [dream]}
+  - {lemma: espoir, pos: noun, tags: [ideas], en: [hope]}
+  - {lemma: choix, pos: noun, tags: [ideas], en: [choice]}
+  - {lemma: décision, pos: noun, tags: [ideas], en: [decision]}
+  - {lemma: chance, pos: noun, tags: [ideas], en: [luck, chance]}
+  - {lemma: possibilité, pos: noun, tags: [ideas], en: [possibility]}
+  - {lemma: sens, pos: noun, tags: [ideas], en: [meaning, sense, direction]}
+  - {lemma: façon, pos: noun, tags: [ideas], en: [way, manner]}
+  - {lemma: manière, pos: noun, tags: [ideas], en: [way, manner]}
+  - {lemma: plan, pos: noun, tags: [ideas], en: [plan, map]}
+  - {lemma: but, pos: noun, tags: [ideas], en: [goal, aim]}
+  - {lemma: avenir, pos: noun, tags: [ideas], en: [future]}
+  - {lemma: futur, pos: noun, tags: [ideas], en: [future]}
+  - {lemma: passé, pos: noun, tags: [ideas], en: [past]}
+  - {lemma: vie, pos: noun, tags: [ideas], en: [life]}
+  - {lemma: mort, pos: noun, tags: [ideas], en: [death]}
+  - {lemma: amour, pos: noun, tags: [ideas], en: [love]}
+  - {lemma: guerre, pos: noun, tags: [ideas], en: [war]}
+  - {lemma: paix, pos: noun, tags: [ideas], en: [peace]}
+  - {lemma: espérer, pos: verb, tags: [ideas], en: [to hope]}
+  - {lemma: imaginer, pos: verb, tags: [ideas], en: [to imagine]}
+  - {lemma: décider, pos: verb, tags: [ideas], en: [to decide]}
+  - {lemma: préférer, pos: verb, tags: [ideas], en: [to prefer]}
+  - {lemma: rêver, pos: verb, tags: [ideas], en: [to dream]}
+  - {lemma: sembler, pos: verb, tags: [ideas], en: [to seem]}
+  - {lemma: paraître, pos: verb, tags: [ideas], en: [to seem, to appear]}
+  - {lemma: compter, pos: verb, tags: [ideas], en: [to count, to matter, to intend]}
+  - {lemma: projet, pos: noun, tags: [ideas], en: [project, plan]}
+  # ------------------------------------------------------------------ u12 comparatives
+  - {lemma: plus, pos: adv, tags: [comparatives], en: [more, most]}
+  - {lemma: moins, pos: adv, tags: [comparatives], en: [less, least]}
+  - {lemma: aussi, pos: adv, tags: [comparatives], en: [as, also]}
+  - {lemma: autant, pos: adv, tags: [comparatives], en: [as much, as many]}
+  - {lemma: meilleur, pos: adj, tags: [comparatives], en: [better, best]}
+  - {lemma: mieux, pos: adv, tags: [comparatives], en: [better, best]}
+  - {lemma: pire, pos: adj, tags: [comparatives], en: [worse, worst]}
+  - {lemma: pareil, pos: adj, tags: [comparatives], en: [the same, alike, similar]}
+  - {lemma: différent, pos: adj, tags: [comparatives], en: [different]}
+  - {lemma: comparer, pos: verb, tags: [comparatives], en: [to compare]}
+  - {lemma: le plus, pos: adv, tags: [comparatives], en: [the most]}
+  - {lemma: le moins, pos: adv, tags: [comparatives], en: [the least]}
+  # ------------------------------------------------------------------ u12 relatives
+  - {lemma: qui, pos: pron, tags: [relatives], en: [who, which, that]}
+  - {lemma: dont, pos: pron, tags: [relatives], en: [whose, of which, of whom, about which]}
+  - {lemma: ce qui, pos: pron, tags: [relatives], en: [what, which]}
+  - {lemma: ce que, pos: pron, tags: [relatives], en: [what, which], variants: ["ce qu'"]}
+  - {lemma: ce dont, pos: pron, tags: [relatives], en: [what (of which)]}
+  # ------------------------------------------------------------------ u12 abstract
+  - {lemma: problème, pos: noun, tags: [abstract], en: [problem]}
+  - {lemma: situation, pos: noun, tags: [abstract], en: [situation]}
+  - {lemma: cas, pos: noun, tags: [abstract], en: [case]}
+  - {lemma: fait, pos: noun, tags: [abstract], en: [fact]}
+  - {lemma: partie, pos: noun, tags: [abstract], en: [part, game]}
+  - {lemma: part, pos: noun, tags: [abstract], en: [share, part, slice]}
+  - {lemma: côté, pos: noun, tags: [abstract], en: [side]}
+  - {lemma: fin, pos: noun, tags: [abstract], en: [end]}
+  - {lemma: début, pos: noun, tags: [abstract], en: [beginning, start]}
+  - {lemma: suite, pos: noun, tags: [abstract], en: [continuation, sequel, result]}
+  - {lemma: genre, pos: noun, tags: [abstract], en: [kind, type, gender]}
+  - {lemma: sorte, pos: noun, tags: [abstract], en: [sort, kind]}
+  - {lemma: point, pos: noun, tags: [abstract], en: [point, full stop]}
+  - {lemma: niveau, pos: noun, tags: [abstract], en: [level]}
+  - {lemma: rapport, pos: noun, tags: [abstract], en: [report, relationship, connection]}
+  - {lemma: relation, pos: noun, tags: [abstract], en: [relationship, relation]}
+  - {lemma: différence, pos: noun, tags: [abstract], en: [difference]}
+  - {lemma: raison, pos: noun, tags: [abstract], en: [reason]}
+  - {lemma: effort, pos: noun, tags: [abstract], en: [effort]}
+  - {lemma: risque, pos: noun, tags: [abstract], en: [risk]}
+  - {lemma: danger, pos: noun, tags: [abstract], en: [danger]}
+  - {lemma: besoin, pos: noun, tags: [abstract], en: [need]}
+  - {lemma: envie, pos: noun, tags: [abstract], en: [desire, wish, envy]}
+  - {lemma: peur, pos: noun, tags: [abstract], en: [fear]}
+  - {lemma: force, pos: noun, tags: [abstract], en: [strength, force]}
+  - {lemma: pouvoir, pos: noun, tags: [abstract], en: [power]}
+  - {lemma: liberté, pos: noun, tags: [abstract], en: [freedom, liberty]}
+  - {lemma: réalité, pos: noun, tags: [abstract], en: [reality]}
+  - {lemma: expérience, pos: noun, tags: [abstract], en: [experience, experiment]}
+  - {lemma: occasion, pos: noun, tags: [abstract], en: [opportunity, occasion, chance]}
+  - {lemma: moyen, pos: noun, tags: [abstract], en: [means, way]}
+  - {lemma: résultat, pos: noun, tags: [abstract], en: [result]}
+  - {lemma: solution, pos: noun, tags: [abstract], en: [solution]}
+  - {lemma: sujet, pos: noun, tags: [abstract], en: [subject, topic]}
+  - {lemma: affaire, pos: noun, tags: [abstract], en: [business, matter, affair, case]}
+  - {lemma: travailler, pos: verb, tags: [abstract], en: [to work]}
+  # ------------------------------------------------------------------ u13 opinions
+  - {lemma: à mon avis, pos: phrase, tags: [opinions], en: [in my opinion]}
+  - {lemma: selon moi, pos: phrase, tags: [opinions], en: [in my view, as I see it]}
+  - {lemma: d'après, pos: prep, tags: [opinions], en: [according to]}
+  - {lemma: accord, pos: noun, tags: [opinions], en: [agreement]}
+  - {lemma: raison, pos: noun, tags: [opinions], en: [reason]}
+  - {lemma: discuter, pos: verb, tags: [opinions], en: [to discuss, to talk, to argue]}
+  - {lemma: discussion, pos: noun, tags: [opinions], en: [discussion, conversation]}
+  - {lemma: conseil, pos: noun, tags: [opinions], en: [advice, council]}
+  - {lemma: conseiller, pos: verb, tags: [opinions], en: [to advise, to recommend]}
+  - {lemma: proposer, pos: verb, tags: [opinions], en: [to suggest, to offer, to propose]}
+  - {lemma: refuser, pos: verb, tags: [opinions], en: [to refuse, to turn down]}
+  - {lemma: accepter, pos: verb, tags: [opinions], en: [to accept, to agree]}
+  - {lemma: souhaiter, pos: verb, tags: [opinions], en: [to wish, to hope for]}
+  - {lemma: douter, pos: verb, tags: [opinions], en: [to doubt]}
+  - {lemma: doute, pos: noun, tags: [opinions], en: [doubt]}
+  - {lemma: certain, pos: adj, tags: [opinions], en: [certain, sure]}
+  - {lemma: évident, pos: adj, tags: [opinions], en: [obvious, evident]}
+  - {lemma: probable, pos: adj, tags: [opinions], en: [likely, probable]}
+  - {lemma: nécessaire, pos: adj, tags: [opinions], en: [necessary]}
+  - {lemma: normal, pos: adj, tags: [opinions], en: [normal, natural]}
+  - {lemma: bizarre, pos: adj, tags: [opinions], en: [strange, weird, odd]}
+  - {lemma: étrange, pos: adj, tags: [opinions], en: [strange]}
+  - {lemma: dommage, pos: noun, tags: [opinions], en: [pity, shame, damage]}
+  - {lemma: génial, pos: adj, tags: [opinions], en: [great, brilliant]}
+  - {lemma: terrible, pos: adj, tags: [opinions], en: [terrible, awful]}
+  - {lemma: incroyable, pos: adj, tags: [opinions], en: [incredible, unbelievable]}
+  - {lemma: parfait, pos: adj, tags: [opinions], en: [perfect]}
+  - {lemma: juste, pos: adj, tags: [opinions], en: [fair, right, just, tight]}
+  # ------------------------------------------------------------------ u14 time connectors
+  - {lemma: dès que, pos: conj, tags: [time-connectors], en: [as soon as], variants: ["dès qu'"]}
+  - {lemma: aussitôt que, pos: conj, tags: [time-connectors], en: [as soon as], variants: ["aussitôt qu'"]}
+  - {lemma: une fois que, pos: conj, tags: [time-connectors], en: [once], variants: ["une fois qu'"]}
+  - {lemma: après que, pos: conj, tags: [time-connectors], en: [after], variants: ["après qu'"]}
+  - {lemma: depuis que, pos: conj, tags: [time-connectors], en: [since], variants: ["depuis qu'"]}
+  - {lemma: tant que, pos: conj, tags: [time-connectors], en: [as long as, while], variants: ["tant qu'"]}
+  - {lemma: avant de, pos: prep, tags: [time-connectors], en: [before], variants: ["avant d'"]}
+  - {lemma: après, pos: prep, tags: [time-connectors], en: [after]}
+  - {lemma: déjà, pos: adv, tags: [time-connectors], en: [already]}
+  - {lemma: auparavant, pos: adv, tags: [time-connectors], en: [before, previously]}
+  - {lemma: la veille, pos: adv, tags: [time-connectors], en: [the day before, the night before]}
+  - {lemma: le lendemain, pos: adv, tags: [time-connectors], en: [the next day, the day after]}
+  - {lemma: entre-temps, pos: adv, tags: [time-connectors], en: [meanwhile, in the meantime]}
+  - {lemma: désormais, pos: adv, tags: [time-connectors], en: [from now on, henceforth]}
+  - {lemma: jusque-là, pos: adv, tags: [time-connectors], en: [until then, up to that point]}
+  - {lemma: d'ici, pos: prep, tags: [time-connectors], en: [by, between now and]}
+  # ------------------------------------------------------------------ u15 subjunctive triggers
+  - {lemma: bien que, pos: conj, tags: [subj-triggers], en: [although, even though], variants: ["bien qu'"]}
+  - {lemma: quoique, pos: conj, tags: [subj-triggers], en: [although]}
+  - {lemma: pour que, pos: conj, tags: [subj-triggers], en: [so that, in order that], variants: ["pour qu'"]}
+  - {lemma: afin que, pos: conj, tags: [subj-triggers], en: [so that], variants: ["afin qu'"]}
+  - {lemma: avant que, pos: conj, tags: [subj-triggers], en: [before], variants: ["avant qu'"]}
+  - {lemma: à moins que, pos: conj, tags: [subj-triggers], en: [unless], variants: ["à moins qu'"]}
+  - {lemma: sans que, pos: conj, tags: [subj-triggers], en: [without], variants: ["sans qu'"]}
+  - {lemma: jusqu'à ce que, pos: conj, tags: [subj-triggers], en: [until], variants: ["jusqu'à ce qu'"]}
+  - {lemma: pourvu que, pos: conj, tags: [subj-triggers], en: [provided that, let's hope that], variants: ["pourvu qu'"]}
+  - {lemma: à condition que, pos: conj, tags: [subj-triggers], en: [on condition that, provided that], variants: ["à condition qu'"]}
+  - {lemma: de peur que, pos: conj, tags: [subj-triggers], en: [for fear that], variants: ["de peur qu'"]}
+  - {lemma: en attendant que, pos: conj, tags: [subj-triggers], en: [until, while waiting for], variants: ["en attendant qu'"]}
+  # ------------------------------------------------------------------ u16 if-clauses
+  - {lemma: si, pos: conj, tags: [si], en: [if, whether]}
+  - {lemma: même si, pos: conj, tags: [si], en: [even if]}
+  - {lemma: sauf si, pos: conj, tags: [si], en: [unless, except if]}
+  - {lemma: au cas où, pos: conj, tags: [si], en: [in case]}
+  - {lemma: sinon, pos: conj, tags: [si], en: [otherwise, if not]}
+  - {lemma: à ta place, pos: phrase, tags: [si], en: [if I were you, in your place]}
+  - {lemma: à votre place, pos: phrase, tags: [si], en: [if I were you, in your place]}
+  - {lemma: si seulement, pos: conj, tags: [si], en: [if only]}
+  # ------------------------------------------------------------------ u17 passive
+  - {lemma: construire, pos: verb, tags: [passive], en: [to build, to construct]}
+  - {lemma: détruire, pos: verb, tags: [passive], en: [to destroy]}
+  - {lemma: inventer, pos: verb, tags: [passive], en: [to invent]}
+  - {lemma: découvrir, pos: verb, tags: [passive], en: [to discover]}
+  - {lemma: élire, pos: verb, tags: [passive], en: [to elect]}
+  - {lemma: publier, pos: verb, tags: [passive], en: [to publish]}
+  - {lemma: traduire, pos: verb, tags: [passive], en: [to translate]}
+  - {lemma: produire, pos: verb, tags: [passive], en: [to produce]}
+  - {lemma: organiser, pos: verb, tags: [passive], en: [to organize]}
+  - {lemma: fonder, pos: verb, tags: [passive], en: [to found, to establish]}
+  - {lemma: blesser, pos: verb, tags: [passive], en: [to injure, to hurt, to wound]}
+  - {lemma: interdire, pos: verb, tags: [passive], en: [to forbid, to ban]}
+  # ------------------------------------------------------------------ u17 reported speech
+  - {lemma: affirmer, pos: verb, tags: [reporting], en: [to claim, to state, to assert]}
+  - {lemma: prétendre, pos: verb, tags: [reporting], en: [to claim, to pretend]}
+  - {lemma: ajouter, pos: verb, tags: [reporting], en: [to add]}
+  - {lemma: annoncer, pos: verb, tags: [reporting], en: [to announce]}
+  - {lemma: promettre, pos: verb, tags: [reporting], en: [to promise]}
+  - {lemma: avouer, pos: verb, tags: [reporting], en: [to admit, to confess]}
+  - {lemma: raconter, pos: verb, tags: [reporting], en: [to tell, to recount]}
+  - {lemma: répéter, pos: verb, tags: [reporting], en: [to repeat, to rehearse]}
+  - {lemma: prévenir, pos: verb, tags: [reporting], en: [to warn, to tell, to prevent]}
+  - {lemma: déclarer, pos: verb, tags: [reporting], en: [to declare, to state]}
+  - {lemma: nier, pos: verb, tags: [reporting], en: [to deny]}
+  # ------------------------------------------------------------------ u17 gérondif
+  - {lemma: tout en, pos: conj, tags: [gerund], en: [while, whilst]}
+  - {lemma: marcher, pos: verb, tags: [gerund], en: [to walk, to work (machine)]}
+  - {lemma: chanter, pos: verb, tags: [gerund], en: [to sing]}
+  - {lemma: étant donné, pos: prep, tags: [gerund], en: [given, considering]}
+  - {lemma: en passant, pos: adv, tags: [gerund], en: [in passing, by the way]}
+  # ------------------------------------------------------------------ u18 lequel
+  - {lemma: laquelle, pos: pron, tags: [lequel], en: [which, which one, whom]}
+  - {lemma: lesquels, pos: pron, tags: [lequel], en: [which, which ones, whom]}
+  - {lemma: lesquelles, pos: pron, tags: [lequel], en: [which, which ones, whom]}
+  - {lemma: auquel, pos: pron, tags: [lequel], en: [to which, to whom]}
+  - {lemma: duquel, pos: pron, tags: [lequel], en: [of which, of whom]}
+  - {lemma: auxquels, pos: pron, tags: [lequel], en: [to which, to whom]}
+  - {lemma: lequel, pos: pron, tags: [lequel], en: [which, which one, whom]}
+  # ------------------------------------------------------------------ u19 connectors
+  - {lemma: cependant, pos: adv, tags: [connectors], en: [however, yet]}
+  - {lemma: néanmoins, pos: adv, tags: [connectors], en: [nevertheless, nonetheless]}
+  - {lemma: toutefois, pos: adv, tags: [connectors], en: [however, nevertheless]}
+  - {lemma: pourtant, pos: adv, tags: [connectors], en: [yet, however]}
+  - {lemma: par conséquent, pos: adv, tags: [connectors], en: [consequently, therefore]}
+  - {lemma: en effet, pos: adv, tags: [connectors], en: [indeed, in fact]}
+  - {lemma: d'ailleurs, pos: adv, tags: [connectors], en: [besides, moreover, by the way]}
+  - {lemma: de plus, pos: adv, tags: [connectors], en: [moreover, furthermore]}
+  - {lemma: en outre, pos: adv, tags: [connectors], en: [furthermore, in addition]}
+  - {lemma: or, pos: conj, tags: [connectors], en: [now, but, yet]}
+  - {lemma: bref, pos: adv, tags: [connectors], en: [in short, anyway]}
+  - {lemma: quant à, pos: prep, tags: [connectors], en: [as for, as to]}
+  - {lemma: alors que, pos: conj, tags: [connectors], en: [whereas, while, when], variants: ["alors qu'"]}
+  - {lemma: tandis que, pos: conj, tags: [connectors], en: [whereas, while], variants: ["tandis qu'"]}
+  - {lemma: puisque, pos: conj, tags: [connectors], en: [since, as]}
+  - {lemma: de sorte que, pos: conj, tags: [connectors], en: [so that], variants: ["de sorte qu'"]}
+  - {lemma: en revanche, pos: adv, tags: [connectors], en: [on the other hand, however]}
+  - {lemma: au contraire, pos: adv, tags: [connectors], en: [on the contrary]}
+  - {lemma: c'est-à-dire, pos: adv, tags: [connectors], en: [that is, i.e., in other words]}
+  - {lemma: autrement dit, pos: adv, tags: [connectors], en: [in other words]}
+  - {lemma: en tout cas, pos: adv, tags: [connectors], en: [in any case, anyway]}
+  - {lemma: malgré, pos: prep, tags: [connectors], en: [despite, in spite of]}
+  - {lemma: en fin de compte, pos: adv, tags: [connectors], en: [in the end, ultimately]}
+  - {lemma: du moins, pos: adv, tags: [connectors], en: [at least]}
+  - {lemma: au moins, pos: adv, tags: [connectors], en: [at least]}
+  - {lemma: finalement, pos: adv, tags: [connectors], en: [finally, in the end]}
+  - {lemma: notamment, pos: adv, tags: [connectors], en: [notably, in particular]}
+  - {lemma: c'est pourquoi, pos: adv, tags: [connectors], en: [that's why]}
+  # ------------------------------------------------------------------ u19 abstract 2
+  - {lemma: esprit, pos: noun, tags: [abstract2], en: [mind, spirit, wit]}
+  - {lemma: âme, pos: noun, tags: [abstract2], en: [soul]}
+  - {lemma: conscience, pos: noun, tags: [abstract2], en: [conscience, consciousness, awareness]}
+  - {lemma: pensée, pos: noun, tags: [abstract2], en: [thought]}
+  - {lemma: connaissance, pos: noun, tags: [abstract2], en: [knowledge, acquaintance]}
+  - {lemma: savoir, pos: noun, tags: [abstract2], en: [knowledge]}
+  - {lemma: valeur, pos: noun, tags: [abstract2], en: [value, worth]}
+  - {lemma: sentiment, pos: noun, tags: [abstract2], en: [feeling]}
+  - {lemma: devoir, pos: noun, tags: [abstract2], en: [duty, homework]}
+  - {lemma: droit, pos: noun, tags: [abstract2], en: [right, law]}
+  - {lemma: loi, pos: noun, tags: [abstract2], en: [law]}
+  - {lemma: règle, pos: noun, tags: [abstract2], en: [rule, ruler]}
+  - {lemma: but, pos: noun, tags: [abstract2], en: [goal, aim]}
+  - {lemma: cause, pos: noun, tags: [abstract2], en: [cause]}
+  - {lemma: conséquence, pos: noun, tags: [abstract2], en: [consequence]}
+  - {lemma: effet, pos: noun, tags: [abstract2], en: [effect]}
+  - {lemma: hasard, pos: noun, tags: [abstract2], en: [chance, coincidence]}
+  - {lemma: destin, pos: noun, tags: [abstract2], en: [fate, destiny]}
+  - {lemma: souci, pos: noun, tags: [abstract2], en: [worry, concern]}
+  - {lemma: inquiétude, pos: noun, tags: [abstract2], en: [worry, anxiety]}
+  - {lemma: lien, pos: noun, tags: [abstract2], en: [link, bond, tie]}
+  - {lemma: équilibre, pos: noun, tags: [abstract2], en: [balance]}
+  - {lemma: avantage, pos: noun, tags: [abstract2], en: [advantage, benefit]}
+  - {lemma: inconvénient, pos: noun, tags: [abstract2], en: [drawback, disadvantage]}
+  - {lemma: tendance, pos: noun, tags: [abstract2], en: [tendency, trend]}
+  - {lemma: hypothèse, pos: noun, tags: [abstract2], en: [hypothesis, assumption]}
+  - {lemma: preuve, pos: noun, tags: [abstract2], en: [proof, evidence]}
+  - {lemma: exigence, pos: noun, tags: [abstract2], en: [demand, requirement]}
+  - {lemma: enjeu, pos: noun, tags: [abstract2], en: [stake, issue]}
+  - {lemma: démarche, pos: noun, tags: [abstract2], en: [step, approach, procedure]}
+  - {lemma: atteindre, pos: verb, tags: [abstract2], en: [to reach, to achieve]}
+  - {lemma: éviter, pos: verb, tags: [abstract2], en: [to avoid]}
+  - {lemma: permettre, pos: verb, tags: [abstract2], en: [to allow, to enable]}
+  - {lemma: empêcher, pos: verb, tags: [abstract2], en: [to prevent, to stop]}
+  - {lemma: exiger, pos: verb, tags: [abstract2], en: [to demand, to require]}
+  - {lemma: obtenir, pos: verb, tags: [abstract2], en: [to obtain, to get]}
+  - {lemma: dépendre, pos: verb, tags: [abstract2], en: [to depend]}
+  - {lemma: remarquer, pos: verb, tags: [abstract2], en: [to notice]}
+  - {lemma: reconnaître, pos: verb, tags: [abstract2], en: [to recognize, to admit]}
+  - {lemma: prouver, pos: verb, tags: [abstract2], en: [to prove]}
+  # ------------------------------------------------------------------ u19 expressions
+  - {lemma: tant pis, pos: intj, tags: [expressions], en: [too bad, never mind]}
+  - {lemma: tant mieux, pos: intj, tags: [expressions], en: [so much the better, good]}
+  - {lemma: ça ne fait rien, pos: phrase, tags: [expressions], en: ["it doesn't matter", never mind]}
+  - {lemma: ça dépend, pos: phrase, tags: [expressions], en: [it depends]}
+  - {lemma: ça vaut la peine, pos: phrase, tags: [expressions], en: ["it's worth it"]}
+  - {lemma: n'importe où, pos: adv, tags: [expressions], en: [anywhere]}
+  - {lemma: n'importe qui, pos: pron, tags: [expressions], en: [anyone, anybody]}
+  - {lemma: à vrai dire, pos: adv, tags: [expressions], en: [to tell the truth]}
+  - {lemma: tout à fait, pos: adv, tags: [expressions], en: [absolutely, quite, completely]}
+  - {lemma: pas du tout, pos: adv, tags: [expressions], en: [not at all]}
+  - {lemma: de temps en temps, pos: adv, tags: [expressions], en: [from time to time]}
+  - {lemma: à la fois, pos: adv, tags: [expressions], en: [at the same time, both]}
+  - {lemma: peu à peu, pos: adv, tags: [expressions], en: [little by little]}
+  - {lemma: du coup, pos: adv, tags: [expressions], en: [so, as a result]}
+  - {lemma: en tout, pos: adv, tags: [expressions], en: [in total, altogether]}
+  - {lemma: au fait, pos: adv, tags: [expressions], en: [by the way]}
+  - {lemma: à peu près, pos: adv, tags: [expressions], en: [about, roughly, more or less]}
+  - {lemma: de toute façon, pos: adv, tags: [expressions], en: [anyway, in any case]}
+  - {lemma: c'est la vie, pos: phrase, tags: [expressions], en: ["that's life"]}
+  - {lemma: il vaut mieux, pos: phrase, tags: [expressions], en: ["it's better", "had better"]}
+  - {lemma: bien sûr, pos: adv, tags: [expressions], en: [of course]}
+  - {lemma: par exemple, pos: adv, tags: [expressions], en: [for example, for instance]}
+  - {lemma: en général, pos: adv, tags: [expressions], en: [generally, in general]}
+  - {lemma: par hasard, pos: adv, tags: [expressions], en: [by chance]}
+  - {lemma: en plus, pos: adv, tags: [expressions], en: [moreover, "what's more", extra]}
+  - {lemma: à propos, pos: adv, tags: [expressions], en: [by the way, about]}
+  - {lemma: tout de même, pos: adv, tags: [expressions], en: [all the same, even so]}
+  - {lemma: de nouveau, pos: adv, tags: [expressions], en: [again]}
+  - {lemma: à l'avance, pos: adv, tags: [expressions], en: [in advance, beforehand]}
+  # ================================================================== topics
+  # ------------------------------------------------------------------ sante: body
+  - {lemma: corps, pos: noun, tags: [body], en: [body]}
+  - {lemma: tête, pos: noun, tags: [body], en: [head]}
+  - {lemma: visage, pos: noun, tags: [body], en: [face]}
+  - {lemma: nez, pos: noun, tags: [body], en: [nose]}
+  - {lemma: bouche, pos: noun, tags: [body], en: [mouth]}
+  - {lemma: dent, pos: noun, tags: [body], en: [tooth]}
+  - {lemma: oreille, pos: noun, tags: [body], en: [ear]}
+  - {lemma: cou, pos: noun, tags: [body], en: [neck]}
+  - {lemma: épaule, pos: noun, tags: [body], en: [shoulder]}
+  - {lemma: bras, pos: noun, tags: [body], en: [arm]}
+  - {lemma: main, pos: noun, tags: [body], en: [hand]}
+  - {lemma: doigt, pos: noun, tags: [body], en: [finger]}
+  - {lemma: dos, pos: noun, tags: [body], en: [back]}
+  - {lemma: ventre, pos: noun, tags: [body], en: [belly, stomach]}
+  - {lemma: jambe, pos: noun, tags: [body], en: [leg]}
+  - {lemma: pied, pos: noun, tags: [body], en: [foot]}
+  - {lemma: cœur, pos: noun, tags: [body], en: [heart]}
+  - {lemma: peau, pos: noun, tags: [body], en: [skin]}
+  - {lemma: sang, pos: noun, tags: [body], en: [blood]}
+  - {lemma: voix, pos: noun, tags: [body], en: [voice]}
+  - {lemma: lèvre, pos: noun, tags: [body], en: [lip]}
+  - {lemma: front, pos: noun, tags: [body], en: [forehead, front]}
+  - {lemma: poitrine, pos: noun, tags: [body], en: [chest, breast]}
+  - {lemma: gorge, pos: noun, tags: [body], en: [throat]}
+  - {lemma: os, pos: noun, tags: [body], en: [bone]}
+  - {lemma: ongle, pos: noun, tags: [body], en: [nail, fingernail]}
+  - {lemma: mince, pos: adj, tags: [body], en: [thin, slim]}
+  - {lemma: maigre, pos: adj, tags: [body], en: [thin, skinny]}
+  - {lemma: genou, pos: noun, tags: [body], en: [knee]}
+  - {lemma: œil, pos: noun, tags: [body], en: [eye]}
+  - {lemma: cheveu, pos: noun, tags: [body], en: [hair]}
+  # ------------------------------------------------------------------ sante: health
+  - {lemma: santé, pos: noun, tags: [health], en: [health]}
+  - {lemma: maladie, pos: noun, tags: [health], en: [illness, disease]}
+  - {lemma: douleur, pos: noun, tags: [health], en: [pain, ache]}
+  - {lemma: fièvre, pos: noun, tags: [health], en: [fever, temperature]}
+  - {lemma: rhume, pos: noun, tags: [health], en: [cold]}
+  - {lemma: grippe, pos: noun, tags: [health], en: [flu]}
+  - {lemma: toux, pos: noun, tags: [health], en: [cough]}
+  - {lemma: blessure, pos: noun, tags: [health], en: [injury, wound]}
+  - {lemma: médicament, pos: noun, tags: [health], en: [medicine, drug]}
+  - {lemma: pilule, pos: noun, tags: [health], en: [pill]}
+  - {lemma: ordonnance, pos: noun, tags: [health], en: [prescription]}
+  - {lemma: infirmier, pos: noun, tags: [health], en: [nurse]}
+  - {lemma: infirmière, pos: noun, tags: [health], en: [nurse]}
+  - {lemma: patient, pos: noun, tags: [health], en: [patient]}
+  - {lemma: dentiste, pos: noun, tags: [health], en: [dentist]}
+  - {lemma: urgence, pos: noun, tags: [health], en: [emergency, urgency]}
+  - {lemma: ambulance, pos: noun, tags: [health], en: [ambulance]}
+  - {lemma: rendez-vous, pos: noun, tags: [health], en: [appointment, date, meeting]}
+  - {lemma: hôpital, pos: noun, tags: [health], en: [hospital]}
+  - {lemma: soigner, pos: verb, tags: [health], en: [to treat, to look after, to care for]}
+  - {lemma: guérir, pos: verb, tags: [health], en: [to cure, to heal, to recover]}
+  - {lemma: tousser, pos: verb, tags: [health], en: [to cough]}
+  - {lemma: souffrir, pos: verb, tags: [health], en: [to suffer]}
+  - {lemma: respirer, pos: verb, tags: [health], en: [to breathe]}
+  - {lemma: brûler, pos: verb, tags: [health], en: [to burn]}
+  - {lemma: vomir, pos: verb, tags: [health], en: [to vomit, to throw up]}
+  - {lemma: enceinte, pos: adj, tags: [health], en: [pregnant]}
+  - {lemma: blessé, pos: adj, tags: [health], en: [injured, wounded, hurt]}
+  - {lemma: grave, pos: adj, tags: [health], en: [serious, grave]}
+  - {lemma: sain, pos: adj, tags: [health], en: [healthy]}
+  - {lemma: régime, pos: noun, tags: [health], en: [diet, regime]}
+  - {lemma: stress, pos: noun, tags: [health], en: [stress]}
+  - {lemma: sommeil, pos: noun, tags: [health], en: [sleep]}
+  - {lemma: fatigue, pos: noun, tags: [health], en: [tiredness, fatigue]}
+  # ------------------------------------------------------------------ cuisine: kitchen
+  - {lemma: frigo, pos: noun, tags: [kitchen], en: [fridge]}
+  - {lemma: four, pos: noun, tags: [kitchen], en: [oven]}
+  - {lemma: assiette, pos: noun, tags: [kitchen], en: [plate]}
+  - {lemma: couteau, pos: noun, tags: [kitchen], en: [knife]}
+  - {lemma: fourchette, pos: noun, tags: [kitchen], en: [fork]}
+  - {lemma: cuillère, pos: noun, tags: [kitchen], en: [spoon]}
+  - {lemma: casserole, pos: noun, tags: [kitchen], en: [saucepan, pan]}
+  - {lemma: poêle, pos: noun, tags: [kitchen], en: [frying pan]}
+  - {lemma: bol, pos: noun, tags: [kitchen], en: [bowl]}
+  - {lemma: carotte, pos: noun, tags: [kitchen], en: [carrot]}
+  - {lemma: tomate, pos: noun, tags: [kitchen], en: [tomato]}
+  - {lemma: oignon, pos: noun, tags: [kitchen], en: [onion]}
+  - {lemma: ail, pos: noun, tags: [kitchen], en: [garlic]}
+  - {lemma: haricot, pos: noun, tags: [kitchen], en: [bean]}
+  - {lemma: champignon, pos: noun, tags: [kitchen], en: [mushroom]}
+  - {lemma: citron, pos: noun, tags: [kitchen], en: [lemon]}
+  - {lemma: banane, pos: noun, tags: [kitchen], en: [banana]}
+  - {lemma: fraise, pos: noun, tags: [kitchen], en: [strawberry]}
+  - {lemma: poire, pos: noun, tags: [kitchen], en: [pear]}
+  - {lemma: raisin, pos: noun, tags: [kitchen], en: [grapes, grape]}
+  - {lemma: beurre, pos: noun, tags: [kitchen], en: [butter]}
+  - {lemma: huile, pos: noun, tags: [kitchen], en: [oil]}
+  - {lemma: farine, pos: noun, tags: [kitchen], en: [flour]}
+  - {lemma: poivre, pos: noun, tags: [kitchen], en: [pepper]}
+  - {lemma: confiture, pos: noun, tags: [kitchen], en: [jam]}
+  - {lemma: jambon, pos: noun, tags: [kitchen], en: [ham]}
+  - {lemma: porc, pos: noun, tags: [kitchen], en: [pork]}
+  - {lemma: bœuf, pos: noun, tags: [kitchen], en: [beef, ox]}
+  - {lemma: crème, pos: noun, tags: [kitchen], en: [cream]}
+  - {lemma: yaourt, pos: noun, tags: [kitchen], en: [yoghurt]}
+  - {lemma: glace, pos: noun, tags: [kitchen], en: [ice cream, ice, mirror]}
+  - {lemma: tarte, pos: noun, tags: [kitchen], en: [tart, pie]}
+  - {lemma: sandwich, pos: noun, tags: [kitchen], en: [sandwich]}
+  # ------------------------------------------------------------------ cuisine: cooking
+  - {lemma: recette, pos: noun, tags: [cooking], en: [recipe]}
+  - {lemma: cuire, pos: verb, tags: [cooking], en: [to cook, to bake]}
+  - {lemma: cuisiner, pos: verb, tags: [cooking], en: [to cook]}
+  - {lemma: couper, pos: verb, tags: [cooking], en: [to cut]}
+  - {lemma: mélanger, pos: verb, tags: [cooking], en: [to mix, to stir]}
+  - {lemma: verser, pos: verb, tags: [cooking], en: [to pour]}
+  - {lemma: goûter, pos: verb, tags: [cooking], en: [to taste]}
+  - {lemma: servir, pos: verb, tags: [cooking], en: [to serve]}
+  - {lemma: chauffer, pos: verb, tags: [cooking], en: [to heat, to warm up]}
+  - {lemma: bouillir, pos: verb, tags: [cooking], en: [to boil]}
+  - {lemma: commander, pos: verb, tags: [cooking], en: [to order]}
+  - {lemma: goût, pos: noun, tags: [cooking], en: [taste, flavour]}
+  - {lemma: plat, pos: noun, tags: [cooking], en: [dish, course]}
+  - {lemma: entrée, pos: noun, tags: [cooking], en: [starter, entrance]}
+  - {lemma: dessert, pos: noun, tags: [cooking], en: [dessert]}
+  - {lemma: menu, pos: noun, tags: [cooking], en: [menu, set menu]}
+  - {lemma: addition, pos: noun, tags: [cooking], en: [bill, check, addition]}
+  - {lemma: pourboire, pos: noun, tags: [cooking], en: [tip]}
+  - {lemma: serveur, pos: noun, tags: [cooking], en: [waiter]}
+  - {lemma: serveuse, pos: noun, tags: [cooking], en: [waitress]}
+  - {lemma: cuisinier, pos: noun, tags: [cooking], en: [cook, chef]}
+  - {lemma: chef, pos: noun, tags: [cooking], en: [chef, boss, head]}
+  - {lemma: morceau, pos: noun, tags: [cooking], en: [piece, bit]}
+  - {lemma: tranche, pos: noun, tags: [cooking], en: [slice]}
+  - {lemma: kilo, pos: noun, tags: [cooking], en: [kilo]}
+  - {lemma: litre, pos: noun, tags: [cooking], en: [litre, liter]}
+  - {lemma: sucré, pos: adj, tags: [cooking], en: [sweet, sugary]}
+  - {lemma: salé, pos: adj, tags: [cooking], en: [salty, savoury]}
+  - {lemma: frais, pos: adj, tags: [cooking], en: [fresh, cool]}
+  - {lemma: cru, pos: adj, tags: [cooking], en: [raw]}
+  - {lemma: cuit, pos: adj, tags: [cooking], en: [cooked, done]}
+  - {lemma: végétarien, pos: adj, tags: [cooking], en: [vegetarian]}
+  - {lemma: bon appétit, pos: intj, tags: [cooking], en: [enjoy your meal]}
+  # ------------------------------------------------------------------ mode: clothes
+  - {lemma: vêtement, pos: noun, tags: [clothes], en: [garment, piece of clothing, clothes]}
+  - {lemma: chemise, pos: noun, tags: [clothes], en: [shirt]}
+  - {lemma: pantalon, pos: noun, tags: [clothes], en: [trousers, pants]}
+  - {lemma: robe, pos: noun, tags: [clothes], en: [dress]}
+  - {lemma: jupe, pos: noun, tags: [clothes], en: [skirt]}
+  - {lemma: veste, pos: noun, tags: [clothes], en: [jacket]}
+  - {lemma: manteau, pos: noun, tags: [clothes], en: [coat]}
+  - {lemma: pull, pos: noun, tags: [clothes], en: [jumper, sweater]}
+  - {lemma: chaussure, pos: noun, tags: [clothes], en: [shoe]}
+  - {lemma: chaussette, pos: noun, tags: [clothes], en: [sock]}
+  - {lemma: botte, pos: noun, tags: [clothes], en: [boot]}
+  - {lemma: chapeau, pos: noun, tags: [clothes], en: [hat]}
+  - {lemma: casquette, pos: noun, tags: [clothes], en: [cap]}
+  - {lemma: gant, pos: noun, tags: [clothes], en: [glove]}
+  - {lemma: écharpe, pos: noun, tags: [clothes], en: [scarf]}
+  - {lemma: cravate, pos: noun, tags: [clothes], en: [tie]}
+  - {lemma: ceinture, pos: noun, tags: [clothes], en: [belt]}
+  - {lemma: costume, pos: noun, tags: [clothes], en: [suit, costume]}
+  - {lemma: jean, pos: noun, tags: [clothes], en: [jeans]}
+  - {lemma: tee-shirt, pos: noun, tags: [clothes], en: [T-shirt]}
+  - {lemma: lunettes, pos: noun, tags: [clothes], en: [glasses, spectacles]}
+  - {lemma: montre, pos: noun, tags: [clothes], en: [watch]}
+  - {lemma: bague, pos: noun, tags: [clothes], en: [ring]}
+  - {lemma: poche, pos: noun, tags: [clothes], en: [pocket]}
+  - {lemma: mode, pos: noun, tags: [clothes], en: [fashion, way]}
+  - {lemma: élégant, pos: adj, tags: [clothes], en: [elegant, smart]}
+  - {lemma: serré, pos: adj, tags: [clothes], en: [tight]}
+  - {lemma: large, pos: adj, tags: [clothes], en: [wide, loose, broad]}
+  - {lemma: porter, pos: verb, tags: [clothes], en: [to wear, to carry]}
+  - {lemma: enlever, pos: verb, tags: [clothes], en: [to take off, to remove]}
+  # ------------------------------------------------------------------ mode: shopping
+  - {lemma: prix, pos: noun, tags: [shopping], en: [price, prize]}
+  - {lemma: taille, pos: noun, tags: [shopping], en: [size, height, waist]}
+  - {lemma: pointure, pos: noun, tags: [shopping], en: [shoe size]}
+  - {lemma: cabine, pos: noun, tags: [shopping], en: [fitting room, cabin, booth]}
+  - {lemma: caisse, pos: noun, tags: [shopping], en: [till, checkout, box]}
+  - {lemma: client, pos: noun, tags: [shopping], en: [customer, client]}
+  - {lemma: vendeur, pos: noun, tags: [shopping], en: [shop assistant, seller]}
+  - {lemma: vendeuse, pos: noun, tags: [shopping], en: [shop assistant (female)]}
+  - {lemma: soldes, pos: noun, tags: [shopping], en: [sales]}
+  - {lemma: réduction, pos: noun, tags: [shopping], en: [discount, reduction]}
+  - {lemma: monnaie, pos: noun, tags: [shopping], en: [change, currency]}
+  - {lemma: reçu, pos: noun, tags: [shopping], en: [receipt]}
+  - {lemma: cadeau, pos: noun, tags: [shopping], en: [present, gift]}
+  - {lemma: supermarché, pos: noun, tags: [shopping], en: [supermarket]}
+  - {lemma: vitrine, pos: noun, tags: [shopping], en: [shop window]}
+  - {lemma: courses, pos: noun, tags: [shopping], en: [shopping, errands]}
+  - {lemma: dépenser, pos: verb, tags: [shopping], en: [to spend]}
+  - {lemma: coûter, pos: verb, tags: [shopping], en: [to cost]}
+  - {lemma: échanger, pos: verb, tags: [shopping], en: [to exchange, to swap]}
+  - {lemma: rembourser, pos: verb, tags: [shopping], en: [to refund, to pay back]}
+  - {lemma: bon marché, pos: adj, tags: [shopping], en: [cheap]}
+  - {lemma: gratuit, pos: adj, tags: [shopping], en: [free, free of charge]}
+  - {lemma: ouvert, pos: adj, tags: [shopping], en: [open]}
+  - {lemma: fermé, pos: adj, tags: [shopping], en: [closed]}
+  # ------------------------------------------------------------------ emotions: feelings
+  - {lemma: joie, pos: noun, tags: [feelings], en: [joy]}
+  - {lemma: bonheur, pos: noun, tags: [feelings], en: [happiness]}
+  - {lemma: tristesse, pos: noun, tags: [feelings], en: [sadness]}
+  - {lemma: colère, pos: noun, tags: [feelings], en: [anger]}
+  - {lemma: honte, pos: noun, tags: [feelings], en: [shame]}
+  - {lemma: plaisir, pos: noun, tags: [feelings], en: [pleasure]}
+  - {lemma: surprise, pos: noun, tags: [feelings], en: [surprise]}
+  - {lemma: ennui, pos: noun, tags: [feelings], en: [boredom, trouble]}
+  - {lemma: jaloux, pos: adj, tags: [feelings], en: [jealous]}
+  - {lemma: fier, pos: adj, tags: [feelings], en: [proud]}
+  - {lemma: nerveux, pos: adj, tags: [feelings], en: [nervous]}
+  - {lemma: inquiet, pos: adj, tags: [feelings], en: [worried, anxious]}
+  - {lemma: calme, pos: adj, tags: [feelings], en: [calm, quiet]}
+  - {lemma: tranquille, pos: adj, tags: [feelings], en: [quiet, calm, peaceful]}
+  - {lemma: furieux, pos: adj, tags: [feelings], en: [furious]}
+  - {lemma: fâché, pos: adj, tags: [feelings], en: [angry, cross]}
+  - {lemma: surpris, pos: adj, tags: [feelings], en: [surprised]}
+  - {lemma: déçu, pos: adj, tags: [feelings], en: [disappointed]}
+  - {lemma: amoureux, pos: adj, tags: [feelings], en: [in love]}
+  - {lemma: ravi, pos: adj, tags: [feelings], en: [delighted]}
+  - {lemma: ému, pos: adj, tags: [feelings], en: [moved, touched]}
+  - {lemma: gêné, pos: adj, tags: [feelings], en: [embarrassed]}
+  - {lemma: effrayé, pos: adj, tags: [feelings], en: [frightened, scared]}
+  - {lemma: pleurer, pos: verb, tags: [feelings], en: [to cry, to weep]}
+  - {lemma: rire, pos: verb, tags: [feelings], en: [to laugh]}
+  - {lemma: sourire, pos: verb, tags: [feelings], en: [to smile]}
+  - {lemma: craindre, pos: verb, tags: [feelings], en: [to fear, to be afraid of]}
+  - {lemma: détester, pos: verb, tags: [feelings], en: [to hate]}
+  - {lemma: adorer, pos: verb, tags: [feelings], en: [to love, to adore]}
+  - {lemma: manquer, pos: verb, tags: [feelings], en: [to miss, to lack]}
+  - {lemma: regretter, pos: verb, tags: [feelings], en: [to regret, to be sorry]}
+  - {lemma: embrasser, pos: verb, tags: [feelings], en: [to kiss, to hug]}
+  - {lemma: larme, pos: noun, tags: [feelings], en: [tear]}
+  # ------------------------------------------------------------------ emotions: character
+  - {lemma: caractère, pos: noun, tags: [character], en: [character, temper]}
+  - {lemma: personnalité, pos: noun, tags: [character], en: [personality]}
+  - {lemma: qualité, pos: noun, tags: [character], en: [quality]}
+  - {lemma: défaut, pos: noun, tags: [character], en: [flaw, fault, defect]}
+  - {lemma: sympathique, pos: adj, tags: [character], en: [nice, friendly, pleasant]}
+  - {lemma: sympa, pos: adj, tags: [character], en: [nice, friendly]}
+  - {lemma: méchant, pos: adj, tags: [character], en: [nasty, mean, wicked]}
+  - {lemma: honnête, pos: adj, tags: [character], en: [honest]}
+  - {lemma: patient, pos: adj, tags: [character], en: [patient]}
+  - {lemma: timide, pos: adj, tags: [character], en: [shy]}
+  - {lemma: drôle, pos: adj, tags: [character], en: [funny, odd]}
+  - {lemma: sérieux, pos: adj, tags: [character], en: [serious]}
+  - {lemma: intelligent, pos: adj, tags: [character], en: [intelligent, clever]}
+  - {lemma: bête, pos: adj, tags: [character], en: [stupid, silly]}
+  - {lemma: stupide, pos: adj, tags: [character], en: [stupid]}
+  - {lemma: paresseux, pos: adj, tags: [character], en: [lazy]}
+  - {lemma: courageux, pos: adj, tags: [character], en: [brave, courageous]}
+  - {lemma: généreux, pos: adj, tags: [character], en: [generous]}
+  - {lemma: égoïste, pos: adj, tags: [character], en: [selfish]}
+  - {lemma: poli, pos: adj, tags: [character], en: [polite]}
+  - {lemma: curieux, pos: adj, tags: [character], en: [curious, inquisitive]}
+  - {lemma: travailleur, pos: adj, tags: [character], en: [hard-working]}
+  - {lemma: têtu, pos: adj, tags: [character], en: [stubborn]}
+  - {lemma: fidèle, pos: adj, tags: [character], en: [faithful, loyal]}
+  - {lemma: sage, pos: adj, tags: [character], en: [wise, good, well-behaved]}
+  - {lemma: fou, pos: adj, tags: [character], en: [mad, crazy]}
+  - {lemma: doux, pos: adj, tags: [character], en: [gentle, soft, mild, sweet]}
+  - {lemma: dur, pos: adj, tags: [character], en: [hard, tough]}
+  - {lemma: confiance, pos: noun, tags: [character], en: [trust, confidence]}
+  - {lemma: respect, pos: noun, tags: [character], en: [respect]}
+  - {lemma: comportement, pos: noun, tags: [character], en: [behaviour, behavior]}
+  - {lemma: mentir, pos: verb, tags: [character], en: [to lie]}
+  # ------------------------------------------------------------------ nature: weather
+  - {lemma: météo, pos: noun, tags: [weather], en: [weather forecast, weather]}
+  - {lemma: soleil, pos: noun, tags: [weather], en: [sun, sunshine]}
+  - {lemma: pluie, pos: noun, tags: [weather], en: [rain]}
+  - {lemma: neige, pos: noun, tags: [weather], en: [snow]}
+  - {lemma: vent, pos: noun, tags: [weather], en: [wind]}
+  - {lemma: nuage, pos: noun, tags: [weather], en: [cloud]}
+  - {lemma: orage, pos: noun, tags: [weather], en: [storm, thunderstorm]}
+  - {lemma: tempête, pos: noun, tags: [weather], en: [storm, gale]}
+  - {lemma: brouillard, pos: noun, tags: [weather], en: [fog]}
+  - {lemma: chaleur, pos: noun, tags: [weather], en: [heat]}
+  - {lemma: degré, pos: noun, tags: [weather], en: [degree]}
+  - {lemma: température, pos: noun, tags: [weather], en: [temperature]}
+  - {lemma: saison, pos: noun, tags: [weather], en: [season]}
+  - {lemma: pleuvoir, pos: verb, tags: [weather], en: [to rain]}
+  - {lemma: neiger, pos: verb, tags: [weather], en: [to snow]}
+  - {lemma: briller, pos: verb, tags: [weather], en: [to shine]}
+  - {lemma: souffler, pos: verb, tags: [weather], en: [to blow]}
+  - {lemma: geler, pos: verb, tags: [weather], en: [to freeze]}
+  - {lemma: ensoleillé, pos: adj, tags: [weather], en: [sunny]}
+  - {lemma: nuageux, pos: adj, tags: [weather], en: [cloudy]}
+  - {lemma: humide, pos: adj, tags: [weather], en: [damp, humid, wet]}
+  - {lemma: sec, pos: adj, tags: [weather], en: [dry]}
+  - {lemma: mouillé, pos: adj, tags: [weather], en: [wet]}
+  - {lemma: parapluie, pos: noun, tags: [weather], en: [umbrella]}
+  - {lemma: ciel, pos: noun, tags: [weather], en: [sky]}
+  - {lemma: étoile, pos: noun, tags: [weather], en: [star]}
+  - {lemma: lune, pos: noun, tags: [weather], en: [moon]}
+  # ------------------------------------------------------------------ nature: animals
+  - {lemma: oiseau, pos: noun, tags: [animals], en: [bird]}
+  - {lemma: cheval, pos: noun, tags: [animals], en: [horse]}
+  - {lemma: vache, pos: noun, tags: [animals], en: [cow]}
+  - {lemma: cochon, pos: noun, tags: [animals], en: [pig]}
+  - {lemma: mouton, pos: noun, tags: [animals], en: [sheep]}
+  - {lemma: poule, pos: noun, tags: [animals], en: [hen]}
+  - {lemma: lapin, pos: noun, tags: [animals], en: [rabbit]}
+  - {lemma: souris, pos: noun, tags: [animals], en: [mouse]}
+  - {lemma: rat, pos: noun, tags: [animals], en: [rat]}
+  - {lemma: loup, pos: noun, tags: [animals], en: [wolf]}
+  - {lemma: renard, pos: noun, tags: [animals], en: [fox]}
+  - {lemma: ours, pos: noun, tags: [animals], en: [bear]}
+  - {lemma: lion, pos: noun, tags: [animals], en: [lion]}
+  - {lemma: tigre, pos: noun, tags: [animals], en: [tiger]}
+  - {lemma: éléphant, pos: noun, tags: [animals], en: [elephant]}
+  - {lemma: singe, pos: noun, tags: [animals], en: [monkey]}
+  - {lemma: serpent, pos: noun, tags: [animals], en: [snake]}
+  - {lemma: insecte, pos: noun, tags: [animals], en: [insect]}
+  - {lemma: mouche, pos: noun, tags: [animals], en: [fly]}
+  - {lemma: abeille, pos: noun, tags: [animals], en: [bee]}
+  - {lemma: araignée, pos: noun, tags: [animals], en: [spider]}
+  - {lemma: papillon, pos: noun, tags: [animals], en: [butterfly]}
+  - {lemma: canard, pos: noun, tags: [animals], en: [duck]}
+  - {lemma: baleine, pos: noun, tags: [animals], en: [whale]}
+  - {lemma: chèvre, pos: noun, tags: [animals], en: [goat]}
+  - {lemma: âne, pos: noun, tags: [animals], en: [donkey]}
+  - {lemma: grenouille, pos: noun, tags: [animals], en: [frog]}
+  - {lemma: tortue, pos: noun, tags: [animals], en: [tortoise, turtle]}
+  - {lemma: queue, pos: noun, tags: [animals], en: [tail, queue]}
+  - {lemma: aile, pos: noun, tags: [animals], en: [wing]}
+  - {lemma: sauvage, pos: adj, tags: [animals], en: [wild]}
+  - {lemma: nourrir, pos: verb, tags: [animals], en: [to feed]}
+  - {lemma: mordre, pos: verb, tags: [animals], en: [to bite]}
+  - {lemma: voler, pos: verb, tags: [animals], en: [to fly, to steal]}
+  # ------------------------------------------------------------------ nature: landscape
+  - {lemma: nature, pos: noun, tags: [landscape], en: [nature]}
+  - {lemma: forêt, pos: noun, tags: [landscape], en: [forest]}
+  - {lemma: bois, pos: noun, tags: [landscape], en: [wood, woods]}
+  - {lemma: arbre, pos: noun, tags: [landscape], en: [tree]}
+  - {lemma: fleur, pos: noun, tags: [landscape], en: [flower]}
+  - {lemma: herbe, pos: noun, tags: [landscape], en: [grass, herb]}
+  - {lemma: feuille, pos: noun, tags: [landscape], en: [leaf, sheet]}
+  - {lemma: rivière, pos: noun, tags: [landscape], en: [river]}
+  - {lemma: fleuve, pos: noun, tags: [landscape], en: [river]}
+  - {lemma: lac, pos: noun, tags: [landscape], en: [lake]}
+  - {lemma: île, pos: noun, tags: [landscape], en: [island]}
+  - {lemma: côte, pos: noun, tags: [landscape], en: [coast, rib, slope]}
+  - {lemma: vague, pos: noun, tags: [landscape], en: [wave]}
+  - {lemma: sable, pos: noun, tags: [landscape], en: [sand]}
+  - {lemma: pierre, pos: noun, tags: [landscape], en: [stone]}
+  - {lemma: rocher, pos: noun, tags: [landscape], en: [rock]}
+  - {lemma: colline, pos: noun, tags: [landscape], en: [hill]}
+  - {lemma: vallée, pos: noun, tags: [landscape], en: [valley]}
+  - {lemma: sommet, pos: noun, tags: [landscape], en: [summit, top, peak]}
+  - {lemma: champ, pos: noun, tags: [landscape], en: [field]}
+  - {lemma: ferme, pos: noun, tags: [landscape], en: [farm]}
+  - {lemma: paysage, pos: noun, tags: [landscape], en: [landscape, scenery]}
+  - {lemma: terre, pos: noun, tags: [landscape], en: [earth, land, ground]}
+  - {lemma: air, pos: noun, tags: [landscape], en: [air, look, tune]}
+  - {lemma: plante, pos: noun, tags: [landscape], en: [plant]}
+  - {lemma: planter, pos: verb, tags: [landscape], en: [to plant]}
+  - {lemma: grimper, pos: verb, tags: [landscape], en: [to climb]}
+  - {lemma: nager, pos: verb, tags: [landscape], en: [to swim]}
+  - {lemma: profond, pos: adj, tags: [landscape], en: [deep]}
+  - {lemma: haut, pos: adj, tags: [landscape], en: [high, tall]}
+  - {lemma: bas, pos: adj, tags: [landscape], en: [low]}
+  # ------------------------------------------------------------------ loisirs: leisure
+  - {lemma: loisir, pos: noun, tags: [leisure], en: [leisure, hobby]}
+  - {lemma: sport, pos: noun, tags: [leisure], en: [sport]}
+  - {lemma: football, pos: noun, tags: [leisure], en: [football, soccer]}
+  - {lemma: match, pos: noun, tags: [leisure], en: [match, game]}
+  - {lemma: équipe, pos: noun, tags: [leisure], en: [team]}
+  - {lemma: joueur, pos: noun, tags: [leisure], en: [player]}
+  - {lemma: ballon, pos: noun, tags: [leisure], en: [ball, balloon]}
+  - {lemma: balle, pos: noun, tags: [leisure], en: [ball, bullet]}
+  - {lemma: course, pos: noun, tags: [leisure], en: [race, run]}
+  - {lemma: natation, pos: noun, tags: [leisure], en: [swimming]}
+  - {lemma: piscine, pos: noun, tags: [leisure], en: [swimming pool]}
+  - {lemma: tennis, pos: noun, tags: [leisure], en: [tennis]}
+  - {lemma: ski, pos: noun, tags: [leisure], en: [skiing, ski]}
+  - {lemma: randonnée, pos: noun, tags: [leisure], en: [hike, hiking]}
+  - {lemma: promenade, pos: noun, tags: [leisure], en: [walk, stroll]}
+  - {lemma: fête, pos: noun, tags: [leisure], en: [party, celebration, holiday]}
+  - {lemma: échecs, pos: noun, tags: [leisure], en: [chess]}
+  - {lemma: guitare, pos: noun, tags: [leisure], en: [guitar]}
+  - {lemma: piano, pos: noun, tags: [leisure], en: [piano]}
+  - {lemma: chanson, pos: noun, tags: [leisure], en: [song]}
+  - {lemma: danser, pos: verb, tags: [leisure], en: [to dance]}
+  - {lemma: chanter, pos: verb, tags: [leisure], en: [to sing]}
+  - {lemma: entraîner, pos: verb, tags: [leisure], en: [to train, to coach, to lead to]}
+  - {lemma: pêcher, pos: verb, tags: [leisure], en: [to fish]}
+  - {lemma: camping, pos: noun, tags: [leisure], en: [camping, campsite]}
+  - {lemma: passionné, pos: adj, tags: [leisure], en: [passionate, keen]}
+  - {lemma: vélo, pos: noun, tags: [leisure], en: [bike, cycling]}
+  - {lemma: jeu, pos: noun, tags: [leisure], en: [game]}
+  # ------------------------------------------------------------------ loisirs: culture
+  - {lemma: culture, pos: noun, tags: [culture], en: [culture]}
+  - {lemma: art, pos: noun, tags: [culture], en: [art]}
+  - {lemma: artiste, pos: noun, tags: [culture], en: [artist]}
+  - {lemma: peinture, pos: noun, tags: [culture], en: [painting, paint]}
+  - {lemma: peintre, pos: noun, tags: [culture], en: [painter]}
+  - {lemma: tableau, pos: noun, tags: [culture], en: [painting, picture]}
+  - {lemma: musique, pos: noun, tags: [culture], en: [music]}
+  - {lemma: musicien, pos: noun, tags: [culture], en: [musician]}
+  - {lemma: concert, pos: noun, tags: [culture], en: [concert]}
+  - {lemma: film, pos: noun, tags: [culture], en: [film, movie]}
+  - {lemma: acteur, pos: noun, tags: [culture], en: [actor]}
+  - {lemma: actrice, pos: noun, tags: [culture], en: [actress]}
+  - {lemma: théâtre, pos: noun, tags: [culture], en: [theatre, theater]}
+  - {lemma: spectacle, pos: noun, tags: [culture], en: [show, performance]}
+  - {lemma: exposition, pos: noun, tags: [culture], en: [exhibition]}
+  - {lemma: sculpture, pos: noun, tags: [culture], en: [sculpture]}
+  - {lemma: danse, pos: noun, tags: [culture], en: [dance, dancing]}
+  - {lemma: chanteur, pos: noun, tags: [culture], en: [singer]}
+  - {lemma: chanteuse, pos: noun, tags: [culture], en: [singer (female)]}
+  - {lemma: public, pos: noun, tags: [culture], en: [audience, public]}
+  - {lemma: scène, pos: noun, tags: [culture], en: [stage, scene]}
+  - {lemma: œuvre, pos: noun, tags: [culture], en: [work (of art)]}
+  - {lemma: célèbre, pos: adj, tags: [culture], en: [famous]}
+  - {lemma: connu, pos: adj, tags: [culture], en: [well-known, known]}
+  - {lemma: peindre, pos: verb, tags: [culture], en: [to paint]}
+  - {lemma: dessiner, pos: verb, tags: [culture], en: [to draw]}
+  - {lemma: applaudir, pos: verb, tags: [culture], en: [to applaud, to clap]}
+  # ------------------------------------------------------------------ loisirs: media
+  - {lemma: nouvelle, pos: noun, tags: [media], en: [news, piece of news, short story]}
+  - {lemma: information, pos: noun, tags: [media], en: [information, news]}
+  - {lemma: article, pos: noun, tags: [media], en: [article]}
+  - {lemma: journaliste, pos: noun, tags: [media], en: [journalist]}
+  - {lemma: presse, pos: noun, tags: [media], en: [press]}
+  - {lemma: radio, pos: noun, tags: [media], en: [radio]}
+  - {lemma: émission, pos: noun, tags: [media], en: [programme, broadcast]}
+  - {lemma: chaîne, pos: noun, tags: [media], en: [channel, chain]}
+  - {lemma: magazine, pos: noun, tags: [media], en: [magazine]}
+  - {lemma: revue, pos: noun, tags: [media], en: [magazine, review]}
+  - {lemma: publicité, pos: noun, tags: [media], en: [advertising, advertisement]}
+  - {lemma: titre, pos: noun, tags: [media], en: [title, headline]}
+  - {lemma: interview, pos: noun, tags: [media], en: [interview]}
+  - {lemma: reportage, pos: noun, tags: [media], en: [report, documentary]}
+  - {lemma: événement, pos: noun, tags: [media], en: [event]}
+  - {lemma: annonce, pos: noun, tags: [media], en: [announcement, advert]}
+  - {lemma: message, pos: noun, tags: [media], en: [message]}
+  - {lemma: écran, pos: noun, tags: [media], en: [screen]}
+  - {lemma: actualité, pos: noun, tags: [media], en: [news, current events]}
+  - {lemma: lecteur, pos: noun, tags: [media], en: [reader, player]}
+  - {lemma: spectateur, pos: noun, tags: [media], en: [spectator, viewer]}
+  - {lemma: diffuser, pos: verb, tags: [media], en: [to broadcast, to spread]}
+  - {lemma: informer, pos: verb, tags: [media], en: [to inform]}
+  - {lemma: critiquer, pos: verb, tags: [media], en: [to criticize]}
+  - {lemma: récent, pos: adj, tags: [media], en: [recent]}
+  - {lemma: officiel, pos: adj, tags: [media], en: [official]}
+  # ------------------------------------------------------------------ services: directions
+  - {lemma: carrefour, pos: noun, tags: [directions], en: [crossroads, junction]}
+  - {lemma: rond-point, pos: noun, tags: [directions], en: [roundabout]}
+  - {lemma: trottoir, pos: noun, tags: [directions], en: [pavement, sidewalk]}
+  - {lemma: arrêt, pos: noun, tags: [directions], en: [stop]}
+  - {lemma: station, pos: noun, tags: [directions], en: [station, stop]}
+  - {lemma: ligne, pos: noun, tags: [directions], en: [line]}
+  - {lemma: quai, pos: noun, tags: [directions], en: [platform, quay]}
+  - {lemma: autoroute, pos: noun, tags: [directions], en: [motorway, highway]}
+  - {lemma: parking, pos: noun, tags: [directions], en: [car park, parking lot]}
+  - {lemma: embouteillage, pos: noun, tags: [directions], en: [traffic jam]}
+  - {lemma: circulation, pos: noun, tags: [directions], en: [traffic, circulation]}
+  - {lemma: direction, pos: noun, tags: [directions], en: [direction, management]}
+  - {lemma: nord, pos: noun, tags: [directions], en: [north]}
+  - {lemma: sud, pos: noun, tags: [directions], en: [south]}
+  - {lemma: est, pos: noun, tags: [directions], en: [east]}
+  - {lemma: ouest, pos: noun, tags: [directions], en: [west]}
+  - {lemma: kilomètre, pos: noun, tags: [directions], en: [kilometre, kilometer]}
+  - {lemma: mètre, pos: noun, tags: [directions], en: [metre, meter]}
+  - {lemma: traverser, pos: verb, tags: [directions], en: [to cross, to go through]}
+  - {lemma: tourner, pos: verb, tags: [directions], en: [to turn]}
+  - {lemma: suivre, pos: verb, tags: [directions], en: [to follow]}
+  - {lemma: garer, pos: verb, tags: [directions], en: [to park]}
+  - {lemma: perdu, pos: adj, tags: [directions], en: [lost]}
+  - {lemma: proche, pos: adj, tags: [directions], en: [near, close]}
+  - {lemma: lointain, pos: adj, tags: [directions], en: [distant, far-off]}
+  - {lemma: au bout de, pos: prep, tags: [directions], en: [at the end of], variants: ["au bout d'"]}
+  - {lemma: le long de, pos: prep, tags: [directions], en: [along], variants: ["le long d'"]}
+  # ------------------------------------------------------------------ services: services
+  - {lemma: service, pos: noun, tags: [services], en: [service, favour]}
+  - {lemma: compte, pos: noun, tags: [services], en: [account]}
+  - {lemma: guichet, pos: noun, tags: [services], en: [counter, ticket office]}
+  - {lemma: formulaire, pos: noun, tags: [services], en: [form]}
+  - {lemma: dossier, pos: noun, tags: [services], en: [file, folder, record]}
+  - {lemma: document, pos: noun, tags: [services], en: [document]}
+  - {lemma: adresse, pos: noun, tags: [services], en: [address]}
+  - {lemma: colis, pos: noun, tags: [services], en: [parcel, package]}
+  - {lemma: timbre, pos: noun, tags: [services], en: [stamp]}
+  - {lemma: enveloppe, pos: noun, tags: [services], en: [envelope]}
+  - {lemma: courrier, pos: noun, tags: [services], en: [mail, post]}
+  - {lemma: facteur, pos: noun, tags: [services], en: [postman, factor]}
+  - {lemma: commissariat, pos: noun, tags: [services], en: [police station]}
+  - {lemma: policier, pos: noun, tags: [services], en: [police officer]}
+  - {lemma: pompier, pos: noun, tags: [services], en: [firefighter]}
+  - {lemma: avocat, pos: noun, tags: [services], en: [lawyer, avocado]}
+  - {lemma: plainte, pos: noun, tags: [services], en: [complaint]}
+  - {lemma: vol, pos: noun, tags: [services], en: [theft, flight]}
+  - {lemma: voleur, pos: noun, tags: [services], en: [thief]}
+  - {lemma: assurance, pos: noun, tags: [services], en: [insurance, assurance]}
+  - {lemma: réparer, pos: verb, tags: [services], en: [to repair, to fix]}
+  - {lemma: remplir, pos: verb, tags: [services], en: [to fill, to fill in]}
+  - {lemma: signer, pos: verb, tags: [services], en: [to sign]}
+  - {lemma: réserver, pos: verb, tags: [services], en: [to book, to reserve]}
+  - {lemma: annuler, pos: verb, tags: [services], en: [to cancel]}
+  - {lemma: déposer, pos: verb, tags: [services], en: [to drop off, to deposit, to put down]}
+  - {lemma: retirer, pos: verb, tags: [services], en: [to withdraw, to take off]}
+  - {lemma: louer, pos: verb, tags: [services], en: [to rent, to praise]}
+  # ------------------------------------------------------------------ travail: careers
+  - {lemma: carrière, pos: noun, tags: [careers], en: [career]}
+  - {lemma: poste, pos: noun, tags: [careers], en: [position, post, job]}
+  - {lemma: candidat, pos: noun, tags: [careers], en: [candidate, applicant]}
+  - {lemma: entretien, pos: noun, tags: [careers], en: [interview, maintenance]}
+  - {lemma: diplôme, pos: noun, tags: [careers], en: [degree, diploma]}
+  - {lemma: formation, pos: noun, tags: [careers], en: [training, education]}
+  - {lemma: stage, pos: noun, tags: [careers], en: [internship, course, placement]}
+  - {lemma: contrat, pos: noun, tags: [careers], en: [contract]}
+  - {lemma: chômage, pos: noun, tags: [careers], en: [unemployment]}
+  - {lemma: employé, pos: noun, tags: [careers], en: [employee]}
+  - {lemma: directeur, pos: noun, tags: [careers], en: [director, manager, head]}
+  - {lemma: ingénieur, pos: noun, tags: [careers], en: [engineer]}
+  - {lemma: ouvrier, pos: noun, tags: [careers], en: [worker, labourer]}
+  - {lemma: secrétaire, pos: noun, tags: [careers], en: [secretary]}
+  - {lemma: tâche, pos: noun, tags: [careers], en: [task, job]}
+  - {lemma: grève, pos: noun, tags: [careers], en: [strike]}
+  - {lemma: retraite, pos: noun, tags: [careers], en: [retirement, pension, retreat]}
+  - {lemma: embaucher, pos: verb, tags: [careers], en: [to hire, to take on]}
+  - {lemma: licencier, pos: verb, tags: [careers], en: [to dismiss, to lay off]}
+  - {lemma: postuler, pos: verb, tags: [careers], en: [to apply]}
+  - {lemma: diriger, pos: verb, tags: [careers], en: [to manage, to run, to lead]}
+  - {lemma: engager, pos: verb, tags: [careers], en: [to hire, to commit]}
+  - {lemma: démissionner, pos: verb, tags: [careers], en: [to resign]}
+  - {lemma: compétent, pos: adj, tags: [careers], en: [competent, capable]}
+  - {lemma: professionnel, pos: adj, tags: [careers], en: [professional]}
+  # ------------------------------------------------------------------ travail: money
+  - {lemma: crédit, pos: noun, tags: [money], en: [credit, loan]}
+  - {lemma: dette, pos: noun, tags: [money], en: [debt]}
+  - {lemma: impôt, pos: noun, tags: [money], en: [tax]}
+  - {lemma: taxe, pos: noun, tags: [money], en: [tax, duty]}
+  - {lemma: économie, pos: noun, tags: [money], en: [economy, saving]}
+  - {lemma: budget, pos: noun, tags: [money], en: [budget]}
+  - {lemma: coût, pos: noun, tags: [money], en: [cost]}
+  - {lemma: dépense, pos: noun, tags: [money], en: [expense, spending]}
+  - {lemma: revenu, pos: noun, tags: [money], en: [income, revenue]}
+  - {lemma: bénéfice, pos: noun, tags: [money], en: [profit, benefit]}
+  - {lemma: commerce, pos: noun, tags: [money], en: [trade, commerce, business]}
+  - {lemma: facture, pos: noun, tags: [money], en: [bill, invoice]}
+  - {lemma: loyer, pos: noun, tags: [money], en: [rent]}
+  - {lemma: chèque, pos: noun, tags: [money], en: [cheque, check]}
+  - {lemma: riche, pos: adj, tags: [money], en: [rich, wealthy]}
+  - {lemma: pauvre, pos: adj, tags: [money], en: [poor]}
+  - {lemma: économique, pos: adj, tags: [money], en: [economic, economical]}
+  - {lemma: emprunter, pos: verb, tags: [money], en: [to borrow]}
+  - {lemma: prêter, pos: verb, tags: [money], en: [to lend]}
+  - {lemma: économiser, pos: verb, tags: [money], en: [to save]}
+  - {lemma: investir, pos: verb, tags: [money], en: [to invest]}
+  - {lemma: valoir, pos: verb, tags: [money], en: [to be worth]}
+  # ------------------------------------------------------------------ societe: society
+  - {lemma: société, pos: noun, tags: [society], en: [society, company]}
+  - {lemma: politique, pos: noun, tags: [society], en: [politics, policy]}
+  - {lemma: gouvernement, pos: noun, tags: [society], en: [government]}
+  - {lemma: président, pos: noun, tags: [society], en: [president]}
+  - {lemma: ministre, pos: noun, tags: [society], en: [minister]}
+  - {lemma: élection, pos: noun, tags: [society], en: [election]}
+  - {lemma: voter, pos: verb, tags: [society], en: [to vote]}
+  - {lemma: parti, pos: noun, tags: [society], en: [party (political)]}
+  - {lemma: citoyen, pos: noun, tags: [society], en: [citizen]}
+  - {lemma: population, pos: noun, tags: [society], en: [population]}
+  - {lemma: peuple, pos: noun, tags: [society], en: [people, nation]}
+  - {lemma: état, pos: noun, tags: [society], en: [state, condition]}
+  - {lemma: nation, pos: noun, tags: [society], en: [nation]}
+  - {lemma: justice, pos: noun, tags: [society], en: [justice]}
+  - {lemma: tribunal, pos: noun, tags: [society], en: [court]}
+  - {lemma: juge, pos: noun, tags: [society], en: [judge]}
+  - {lemma: crime, pos: noun, tags: [society], en: [crime]}
+  - {lemma: prison, pos: noun, tags: [society], en: [prison, jail]}
+  - {lemma: armée, pos: noun, tags: [society], en: [army]}
+  - {lemma: soldat, pos: noun, tags: [society], en: [soldier]}
+  - {lemma: égalité, pos: noun, tags: [society], en: [equality]}
+  - {lemma: pauvreté, pos: noun, tags: [society], en: [poverty]}
+  - {lemma: violence, pos: noun, tags: [society], en: [violence]}
+  - {lemma: manifestation, pos: noun, tags: [society], en: [demonstration, protest]}
+  - {lemma: réforme, pos: noun, tags: [society], en: [reform]}
+  - {lemma: débat, pos: noun, tags: [society], en: [debate]}
+  - {lemma: opinion, pos: noun, tags: [society], en: [opinion]}
+  - {lemma: public, pos: adj, tags: [society], en: [public]}
+  - {lemma: social, pos: adj, tags: [society], en: [social]}
+  - {lemma: politique, pos: adj, tags: [society], en: [political]}
+  - {lemma: national, pos: adj, tags: [society], en: [national]}
+  - {lemma: international, pos: adj, tags: [society], en: [international]}
+  - {lemma: protéger, pos: verb, tags: [society], en: [to protect]}
+  - {lemma: défendre, pos: verb, tags: [society], en: [to defend]}
+  # ------------------------------------------------------------------ societe: environment
+  - {lemma: environnement, pos: noun, tags: [environment], en: [environment]}
+  - {lemma: planète, pos: noun, tags: [environment], en: [planet]}
+  - {lemma: climat, pos: noun, tags: [environment], en: [climate]}
+  - {lemma: pollution, pos: noun, tags: [environment], en: [pollution]}
+  - {lemma: déchet, pos: noun, tags: [environment], en: [waste, rubbish]}
+  - {lemma: poubelle, pos: noun, tags: [environment], en: [bin, dustbin]}
+  - {lemma: recyclage, pos: noun, tags: [environment], en: [recycling]}
+  - {lemma: recycler, pos: verb, tags: [environment], en: [to recycle]}
+  - {lemma: énergie, pos: noun, tags: [environment], en: [energy]}
+  - {lemma: électricité, pos: noun, tags: [environment], en: [electricity]}
+  - {lemma: pétrole, pos: noun, tags: [environment], en: [oil, petroleum]}
+  - {lemma: essence, pos: noun, tags: [environment], en: [petrol, gasoline, essence]}
+  - {lemma: espèce, pos: noun, tags: [environment], en: [species, kind]}
+  - {lemma: ressource, pos: noun, tags: [environment], en: [resource]}
+  - {lemma: réchauffement, pos: noun, tags: [environment], en: [warming]}
+  - {lemma: sécheresse, pos: noun, tags: [environment], en: [drought]}
+  - {lemma: inondation, pos: noun, tags: [environment], en: [flood]}
+  - {lemma: catastrophe, pos: noun, tags: [environment], en: [disaster, catastrophe]}
+  - {lemma: génération, pos: noun, tags: [environment], en: [generation]}
+  - {lemma: menacer, pos: verb, tags: [environment], en: [to threaten]}
+  - {lemma: polluer, pos: verb, tags: [environment], en: [to pollute]}
+  - {lemma: réduire, pos: verb, tags: [environment], en: [to reduce]}
+  - {lemma: consommer, pos: verb, tags: [environment], en: [to consume, to use]}
+  - {lemma: disparaître, pos: verb, tags: [environment], en: [to disappear]}
+  - {lemma: sauver, pos: verb, tags: [environment], en: [to save, to rescue]}
+  - {lemma: naturel, pos: adj, tags: [environment], en: [natural]}
+  - {lemma: durable, pos: adj, tags: [environment], en: [sustainable, durable]}
+  - {lemma: écologique, pos: adj, tags: [environment], en: [ecological, eco-friendly]}
+  # ------------------------------------------------------------------ sciences: technology
+  - {lemma: technologie, pos: noun, tags: [technology], en: [technology]}
+  - {lemma: portable, pos: noun, tags: [technology], en: [mobile phone, laptop]}
+  - {lemma: clavier, pos: noun, tags: [technology], en: [keyboard]}
+  - {lemma: internet, pos: noun, tags: [technology], en: [internet]}
+  - {lemma: site, pos: noun, tags: [technology], en: [site, website]}
+  - {lemma: réseau, pos: noun, tags: [technology], en: [network]}
+  - {lemma: logiciel, pos: noun, tags: [technology], en: [software]}
+  - {lemma: fichier, pos: noun, tags: [technology], en: [file]}
+  - {lemma: mot de passe, pos: noun, tags: [technology], en: [password]}
+  - {lemma: courriel, pos: noun, tags: [technology], en: [email]}
+  - {lemma: e-mail, pos: noun, tags: [technology], en: [email]}
+  - {lemma: application, pos: noun, tags: [technology], en: [app, application]}
+  - {lemma: appareil, pos: noun, tags: [technology], en: [device, appliance, camera]}
+  - {lemma: machine, pos: noun, tags: [technology], en: [machine]}
+  - {lemma: robot, pos: noun, tags: [technology], en: [robot]}
+  - {lemma: batterie, pos: noun, tags: [technology], en: [battery]}
+  - {lemma: télécharger, pos: verb, tags: [technology], en: [to download]}
+  - {lemma: cliquer, pos: verb, tags: [technology], en: [to click]}
+  - {lemma: brancher, pos: verb, tags: [technology], en: [to plug in, to connect]}
+  - {lemma: allumer, pos: verb, tags: [technology], en: [to switch on, to light]}
+  - {lemma: éteindre, pos: verb, tags: [technology], en: [to switch off, to put out]}
+  - {lemma: enregistrer, pos: verb, tags: [technology], en: [to save, to record]}
+  - {lemma: effacer, pos: verb, tags: [technology], en: [to delete, to erase]}
+  - {lemma: imprimer, pos: verb, tags: [technology], en: [to print]}
+  - {lemma: numérique, pos: adj, tags: [technology], en: [digital]}
+  - {lemma: électronique, pos: adj, tags: [technology], en: [electronic]}
+  - {lemma: moderne, pos: adj, tags: [technology], en: [modern]}
+  - {lemma: en ligne, pos: adv, tags: [technology], en: [online]}
+  # ------------------------------------------------------------------ sciences: science
+  - {lemma: science, pos: noun, tags: [science], en: [science]}
+  - {lemma: scientifique, pos: noun, tags: [science], en: [scientist]}
+  - {lemma: chercheur, pos: noun, tags: [science], en: [researcher]}
+  - {lemma: recherche, pos: noun, tags: [science], en: [research, search]}
+  - {lemma: découverte, pos: noun, tags: [science], en: [discovery]}
+  - {lemma: invention, pos: noun, tags: [science], en: [invention]}
+  - {lemma: laboratoire, pos: noun, tags: [science], en: [laboratory]}
+  - {lemma: théorie, pos: noun, tags: [science], en: [theory]}
+  - {lemma: étude, pos: noun, tags: [science], en: [study]}
+  - {lemma: analyse, pos: noun, tags: [science], en: [analysis]}
+  - {lemma: méthode, pos: noun, tags: [science], en: [method]}
+  - {lemma: chiffre, pos: noun, tags: [science], en: [figure, number, digit]}
+  - {lemma: calcul, pos: noun, tags: [science], en: [calculation, sum]}
+  - {lemma: mathématiques, pos: noun, tags: [science], en: [mathematics]}
+  - {lemma: physique, pos: noun, tags: [science], en: [physics]}
+  - {lemma: chimie, pos: noun, tags: [science], en: [chemistry]}
+  - {lemma: biologie, pos: noun, tags: [science], en: [biology]}
+  - {lemma: médecine, pos: noun, tags: [science], en: [medicine]}
+  - {lemma: espace, pos: noun, tags: [science], en: [space]}
+  - {lemma: univers, pos: noun, tags: [science], en: [universe]}
+  - {lemma: cerveau, pos: noun, tags: [science], en: [brain]}
+  - {lemma: cellule, pos: noun, tags: [science], en: [cell]}
+  - {lemma: progrès, pos: noun, tags: [science], en: [progress]}
+  - {lemma: mesurer, pos: verb, tags: [science], en: [to measure]}
+  - {lemma: calculer, pos: verb, tags: [science], en: [to calculate]}
+  - {lemma: démontrer, pos: verb, tags: [science], en: [to demonstrate, to prove]}
+  - {lemma: observer, pos: verb, tags: [science], en: [to observe, to watch]}
+  - {lemma: scientifique, pos: adj, tags: [science], en: [scientific]}
+  - {lemma: exact, pos: adj, tags: [science], en: [exact, correct, accurate]}
+  # ------------------------------------------------------------------ lecture: reading
+  - {lemma: roman, pos: noun, tags: [reading], en: [novel]}
+  - {lemma: conte, pos: noun, tags: [reading], en: [tale, story]}
+  - {lemma: poème, pos: noun, tags: [reading], en: [poem]}
+  - {lemma: poésie, pos: noun, tags: [reading], en: [poetry]}
+  - {lemma: auteur, pos: noun, tags: [reading], en: [author, writer]}
+  - {lemma: écrivain, pos: noun, tags: [reading], en: [writer]}
+  - {lemma: poète, pos: noun, tags: [reading], en: [poet]}
+  - {lemma: personnage, pos: noun, tags: [reading], en: [character]}
+  - {lemma: héros, pos: noun, tags: [reading], en: [hero]}
+  - {lemma: héroïne, pos: noun, tags: [reading], en: [heroine]}
+  - {lemma: chapitre, pos: noun, tags: [reading], en: [chapter]}
+  - {lemma: récit, pos: noun, tags: [reading], en: [story, account, narrative]}
+  - {lemma: bibliothèque, pos: noun, tags: [reading], en: [library, bookcase]}
+  - {lemma: librairie, pos: noun, tags: [reading], en: [bookshop]}
+  - {lemma: littérature, pos: noun, tags: [reading], en: [literature]}
+  - {lemma: phrase, pos: noun, tags: [reading], en: [sentence, phrase]}
+  - {lemma: fée, pos: noun, tags: [reading], en: [fairy]}
+  - {lemma: roi, pos: noun, tags: [reading], en: [king]}
+  - {lemma: reine, pos: noun, tags: [reading], en: [queen]}
+  - {lemma: prince, pos: noun, tags: [reading], en: [prince]}
+  - {lemma: princesse, pos: noun, tags: [reading], en: [princess]}
+  - {lemma: sorcière, pos: noun, tags: [reading], en: [witch]}
+  - {lemma: il était une fois, pos: phrase, tags: [reading], en: [once upon a time]}
+  - {lemma: décrire, pos: verb, tags: [reading], en: [to describe]}
+  - {lemma: murmurer, pos: verb, tags: [reading], en: [to whisper, to murmur]}
+  - {lemma: crier, pos: verb, tags: [reading], en: [to shout, to scream]}
+  - {lemma: soupirer, pos: verb, tags: [reading], en: [to sigh]}
+  - {lemma: frapper, pos: verb, tags: [reading], en: [to knock, to hit, to strike]}
+  - {lemma: mystérieux, pos: adj, tags: [reading], en: [mysterious]}
+  - {lemma: magique, pos: adj, tags: [reading], en: [magic, magical]}
+  - {lemma: château, pos: noun, tags: [reading], en: [castle]}
+  # ------------------------------------------------------------------ lecture: history
+  - {lemma: siècle, pos: noun, tags: [history], en: [century]}
+  - {lemma: époque, pos: noun, tags: [history], en: [era, time, period]}
+  - {lemma: empire, pos: noun, tags: [history], en: [empire]}
+  - {lemma: empereur, pos: noun, tags: [history], en: [emperor]}
+  - {lemma: révolution, pos: noun, tags: [history], en: [revolution]}
+  - {lemma: république, pos: noun, tags: [history], en: [republic]}
+  - {lemma: bataille, pos: noun, tags: [history], en: [battle]}
+  - {lemma: victoire, pos: noun, tags: [history], en: [victory]}
+  - {lemma: défaite, pos: noun, tags: [history], en: [defeat]}
+  - {lemma: ennemi, pos: noun, tags: [history], en: [enemy]}
+  - {lemma: colonie, pos: noun, tags: [history], en: [colony]}
+  - {lemma: indépendance, pos: noun, tags: [history], en: [independence]}
+  - {lemma: traité, pos: noun, tags: [history], en: [treaty]}
+  - {lemma: monument, pos: noun, tags: [history], en: [monument]}
+  - {lemma: ruine, pos: noun, tags: [history], en: [ruin]}
+  - {lemma: ancêtre, pos: noun, tags: [history], en: [ancestor]}
+  - {lemma: régner, pos: verb, tags: [history], en: [to reign, to rule]}
+  - {lemma: conquérir, pos: verb, tags: [history], en: [to conquer]}
+  - {lemma: battre, pos: verb, tags: [history], en: [to beat, to defeat]}
+  - {lemma: envahir, pos: verb, tags: [history], en: [to invade]}
+  - {lemma: libérer, pos: verb, tags: [history], en: [to free, to liberate]}
+  - {lemma: historique, pos: adj, tags: [history], en: [historical, historic]}
+  - {lemma: royal, pos: adj, tags: [history], en: [royal]}
+  - {lemma: médiéval, pos: adj, tags: [history], en: [medieval]}
+  - {lemma: moyen âge, pos: noun, tags: [history], en: [Middle Ages]}
+  - {lemma: histoire, pos: noun, tags: [history], en: [history, story]}
+  # ------------------------------------------------------------------ possessive plural forms
+  # ------------------------------------------------------------------ u8 people and relationships
+  - {lemma: adulte, pos: noun, tags: [people2], en: [adult, grown-up]}
+  - {lemma: adolescent, pos: noun, tags: [people2], en: [teenager, adolescent]}
+  - {lemma: jeunesse, pos: noun, tags: [people2], en: [youth]}
+  - {lemma: vieillesse, pos: noun, tags: [people2], en: [old age]}
+  - {lemma: couple, pos: noun, tags: [people2], en: [couple]}
+  - {lemma: époux, pos: noun, tags: [people2], en: [husband, spouse]}
+  - {lemma: épouse, pos: noun, tags: [people2], en: [wife, spouse]}
+  - {lemma: fiancé, pos: noun, tags: [people2], en: [fiancé]}
+  - {lemma: invité, pos: noun, tags: [people2], en: [guest]}
+  - {lemma: hôte, pos: noun, tags: [people2], en: [host, guest]}
+  - {lemma: inconnu, pos: noun, tags: [people2], en: [stranger, unknown person]}
+  - {lemma: foule, pos: noun, tags: [people2], en: [crowd]}
+  - {lemma: groupe, pos: noun, tags: [people2], en: [group, band]}
+  - {lemma: membre, pos: noun, tags: [people2], en: [member]}
+  - {lemma: habitant, pos: noun, tags: [people2], en: [inhabitant, resident]}
+  - {lemma: propriétaire, pos: noun, tags: [people2], en: [owner, landlord]}
+  - {lemma: maître, pos: noun, tags: [people2], en: [master, teacher]}
+  - {lemma: maîtresse, pos: noun, tags: [people2], en: [teacher (female), mistress]}
+  - {lemma: compagnon, pos: noun, tags: [people2], en: [companion, partner]}
+  - {lemma: camarade, pos: noun, tags: [people2], en: [classmate, friend, comrade]}
+  - {lemma: amitié, pos: noun, tags: [people2], en: [friendship]}
+  - {lemma: rencontre, pos: noun, tags: [people2], en: [meeting, encounter]}
+  - {lemma: conversation, pos: noun, tags: [people2], en: [conversation]}
+  - {lemma: invitation, pos: noun, tags: [people2], en: [invitation]}
+  - {lemma: dispute, pos: noun, tags: [people2], en: [argument, quarrel]}
+  - {lemma: naissance, pos: noun, tags: [people2], en: [birth]}
+  - {lemma: jumeau, pos: noun, tags: [people2], en: [twin]}
+  - {lemma: gamin, pos: noun, tags: [people2], en: [kid]}
+  - {lemma: veuve, pos: noun, tags: [people2], en: [widow]}
+  - {lemma: célibataire, pos: adj, tags: [people2], en: [single, unmarried]}
+  - {lemma: divorcé, pos: adj, tags: [people2], en: [divorced]}
+  - {lemma: vivant, pos: adj, tags: [people2], en: [alive, living, lively]}
+  - {lemma: inviter, pos: verb, tags: [people2], en: [to invite]}
+  - {lemma: remercier, pos: verb, tags: [people2], en: [to thank]}
+  # ------------------------------------------------------------------ u13 more verbs
+  - {lemma: offrir, pos: verb, tags: [verbs3], en: [to offer, to give (as a present)]}
+  - {lemma: partager, pos: verb, tags: [verbs3], en: [to share]}
+  - {lemma: jeter, pos: verb, tags: [verbs3], en: [to throw, to throw away]}
+  - {lemma: lancer, pos: verb, tags: [verbs3], en: [to throw, to launch]}
+  - {lemma: attraper, pos: verb, tags: [verbs3], en: [to catch]}
+  - {lemma: toucher, pos: verb, tags: [verbs3], en: [to touch]}
+  - {lemma: tirer, pos: verb, tags: [verbs3], en: [to pull, to shoot]}
+  - {lemma: pousser, pos: verb, tags: [verbs3], en: [to push, to grow]}
+  - {lemma: poser, pos: verb, tags: [verbs3], en: [to put, to put down, to ask (a question)]}
+  - {lemma: ranger, pos: verb, tags: [verbs3], en: [to tidy, to put away]}
+  - {lemma: nettoyer, pos: verb, tags: [verbs3], en: [to clean]}
+  - {lemma: bouger, pos: verb, tags: [verbs3], en: [to move]}
+  - {lemma: sauter, pos: verb, tags: [verbs3], en: [to jump, to skip]}
+  - {lemma: apporter, pos: verb, tags: [verbs3], en: [to bring]}
+  - {lemma: emmener, pos: verb, tags: [verbs3], en: [to take (someone somewhere)]}
+  - {lemma: amener, pos: verb, tags: [verbs3], en: [to bring (someone)]}
+  - {lemma: emporter, pos: verb, tags: [verbs3], en: [to take away, to take along]}
+  - {lemma: rejoindre, pos: verb, tags: [verbs3], en: [to join, to meet up with]}
+  - {lemma: retrouver, pos: verb, tags: [verbs3], en: [to find again, to meet]}
+  - {lemma: reprendre, pos: verb, tags: [verbs3], en: [to take back, to resume]}
+  - {lemma: remettre, pos: verb, tags: [verbs3], en: [to put back, to hand over, to postpone]}
+  - {lemma: rappeler, pos: verb, tags: [verbs3], en: [to call back, to remind]}
+  - {lemma: recommencer, pos: verb, tags: [verbs3], en: [to start again]}
+  - {lemma: profiter, pos: verb, tags: [verbs3], en: [to enjoy, to make the most of]}
+  - {lemma: plaire, pos: verb, tags: [verbs3], en: [to please, to be liked]}
+  - {lemma: oser, pos: verb, tags: [verbs3], en: [to dare]}
+  - {lemma: mériter, pos: verb, tags: [verbs3], en: [to deserve]}
+  - {lemma: risquer, pos: verb, tags: [verbs3], en: [to risk]}
+  - {lemma: vérifier, pos: verb, tags: [verbs3], en: [to check]}
+  - {lemma: deviner, pos: verb, tags: [verbs3], en: [to guess]}
+  - {lemma: ignorer, pos: verb, tags: [verbs3], en: [to not know, to ignore]}
+  - {lemma: exister, pos: verb, tags: [verbs3], en: [to exist]}
+  - {lemma: créer, pos: verb, tags: [verbs3], en: [to create]}
+  - {lemma: couvrir, pos: verb, tags: [verbs3], en: [to cover]}
+  - {lemma: supporter, pos: verb, tags: [verbs3], en: [to stand, to bear, to support]}
+  - {lemma: tenter, pos: verb, tags: [verbs3], en: [to try, to tempt]}
+  - {lemma: sonner, pos: verb, tags: [verbs3], en: [to ring]}
+  - {lemma: noter, pos: verb, tags: [verbs3], en: [to note, to write down]}
+  # ------------------------------------------------------------------ u16 describing people and things
+  - {lemma: agréable, pos: adj, tags: [adjectives2], en: [pleasant, nice]}
+  - {lemma: bruyant, pos: adj, tags: [adjectives2], en: [noisy, loud]}
+  - {lemma: complet, pos: adj, tags: [adjectives2], en: [complete, full]}
+  - {lemma: compliqué, pos: adj, tags: [adjectives2], en: [complicated]}
+  - {lemma: simple, pos: adj, tags: [adjectives2], en: [simple, easy]}
+  - {lemma: correct, pos: adj, tags: [adjectives2], en: [correct, right, decent]}
+  - {lemma: dangereux, pos: adj, tags: [adjectives2], en: [dangerous]}
+  - {lemma: efficace, pos: adj, tags: [adjectives2], en: [effective, efficient]}
+  - {lemma: énorme, pos: adj, tags: [adjectives2], en: [huge, enormous]}
+  - {lemma: entier, pos: adj, tags: [adjectives2], en: [whole, entire]}
+  - {lemma: épais, pos: adj, tags: [adjectives2], en: [thick]}
+  - {lemma: étroit, pos: adj, tags: [adjectives2], en: [narrow, tight]}
+  - {lemma: extraordinaire, pos: adj, tags: [adjectives2], en: [extraordinary, amazing]}
+  - {lemma: faible, pos: adj, tags: [adjectives2], en: [weak, faint]}
+  - {lemma: fragile, pos: adj, tags: [adjectives2], en: [fragile, delicate]}
+  - {lemma: habituel, pos: adj, tags: [adjectives2], en: [usual]}
+  - {lemma: immense, pos: adj, tags: [adjectives2], en: [huge, immense]}
+  - {lemma: utile, pos: adj, tags: [adjectives2], en: [useful]}
+  - {lemma: inutile, pos: adj, tags: [adjectives2], en: [useless, pointless]}
+  - {lemma: joyeux, pos: adj, tags: [adjectives2], en: [joyful, merry, happy]}
+  - {lemma: léger, pos: adj, tags: [adjectives2], en: [light, slight]}
+  - {lemma: lourd, pos: adj, tags: [adjectives2], en: [heavy]}
+  - {lemma: magnifique, pos: adj, tags: [adjectives2], en: [magnificent, wonderful]}
+  - {lemma: merveilleux, pos: adj, tags: [adjectives2], en: [wonderful, marvellous]}
+  - {lemma: mignon, pos: adj, tags: [adjectives2], en: [cute, sweet]}
+  - {lemma: moyen, pos: adj, tags: [adjectives2], en: [average, medium]}
+  - {lemma: nombreux, pos: adj, tags: [adjectives2], en: [many, numerous]}
+  - {lemma: ordinaire, pos: adj, tags: [adjectives2], en: [ordinary, usual]}
+  - {lemma: pratique, pos: adj, tags: [adjectives2], en: [practical, handy]}
+  - {lemma: précis, pos: adj, tags: [adjectives2], en: [precise, exact]}
+  - {lemma: principal, pos: adj, tags: [adjectives2], en: [main, principal]}
+  - {lemma: privé, pos: adj, tags: [adjectives2], en: [private]}
+  - {lemma: prudent, pos: adj, tags: [adjectives2], en: [careful, cautious]}
+  - {lemma: puissant, pos: adj, tags: [adjectives2], en: [powerful]}
+  - {lemma: rare, pos: adj, tags: [adjectives2], en: [rare]}
+  - {lemma: réel, pos: adj, tags: [adjectives2], en: [real]}
+  - {lemma: ridicule, pos: adj, tags: [adjectives2], en: [ridiculous]}
+  - {lemma: rond, pos: adj, tags: [adjectives2], en: [round]}
+  - {lemma: sensible, pos: adj, tags: [adjectives2], en: [sensitive]}
+  - {lemma: solide, pos: adj, tags: [adjectives2], en: [solid, strong, sturdy]}
+  - {lemma: tendre, pos: adj, tags: [adjectives2], en: [tender, soft]}
+  - {lemma: unique, pos: adj, tags: [adjectives2], en: [unique, only]}
+  # ------------------------------------------------------------------ u17 more verbs
+  - {lemma: agir, pos: verb, tags: [verbs4], en: [to act]}
+  - {lemma: convaincre, pos: verb, tags: [verbs4], en: [to convince]}
+  - {lemma: élever, pos: verb, tags: [verbs4], en: [to raise, to bring up]}
+  - {lemma: résoudre, pos: verb, tags: [verbs4], en: [to solve, to resolve]}
+  - {lemma: révéler, pos: verb, tags: [verbs4], en: [to reveal]}
+  - {lemma: saisir, pos: verb, tags: [verbs4], en: [to seize, to grab, to grasp]}
+  - {lemma: serrer, pos: verb, tags: [verbs4], en: [to squeeze, to tighten, to shake (hands)]}
+  - {lemma: soulever, pos: verb, tags: [verbs4], en: [to lift, to raise]}
+  - {lemma: supposer, pos: verb, tags: [verbs4], en: [to suppose, to assume]}
+  - {lemma: surprendre, pos: verb, tags: [verbs4], en: [to surprise, to catch]}
+  - {lemma: mener, pos: verb, tags: [verbs4], en: [to lead]}
+  - {lemma: lutter, pos: verb, tags: [verbs4], en: [to fight, to struggle]}
+  - {lemma: fuir, pos: verb, tags: [verbs4], en: [to flee, to run away, to leak]}
+  - {lemma: échapper, pos: verb, tags: [verbs4], en: [to escape]}
+  - {lemma: glisser, pos: verb, tags: [verbs4], en: [to slip, to slide]}
+  - {lemma: peser, pos: verb, tags: [verbs4], en: [to weigh]}
+  - {lemma: prier, pos: verb, tags: [verbs4], en: [to pray, to beg]}
+  - {lemma: punir, pos: verb, tags: [verbs4], en: [to punish]}
+  - {lemma: obéir, pos: verb, tags: [verbs4], en: [to obey]}
+  - {lemma: renoncer, pos: verb, tags: [verbs4], en: [to give up, to renounce]}
+  - {lemma: remplacer, pos: verb, tags: [verbs4], en: [to replace]}
+  - {lemma: réunir, pos: verb, tags: [verbs4], en: [to bring together, to gather]}
+  - {lemma: retenir, pos: verb, tags: [verbs4], en: [to hold back, to remember, to keep]}
+  - {lemma: poursuivre, pos: verb, tags: [verbs4], en: [to pursue, to continue, to chase]}
+  - {lemma: dépasser, pos: verb, tags: [verbs4], en: [to exceed, to overtake]}
+  - {lemma: déménager, pos: verb, tags: [verbs4], en: [to move (house)]}
+  - {lemma: habituer, pos: verb, tags: [verbs4], en: [to get used to (s'habituer)]}
+  - {lemma: débarrasser, pos: verb, tags: [verbs4], en: [to clear, to get rid of (se débarrasser)]}
+  - {lemma: enfermer, pos: verb, tags: [verbs4], en: [to lock up, to shut in]}
+  - {lemma: entourer, pos: verb, tags: [verbs4], en: [to surround]}
+  - {lemma: étendre, pos: verb, tags: [verbs4], en: [to spread, to stretch, to hang out]}
+  - {lemma: joindre, pos: verb, tags: [verbs4], en: [to join, to reach, to attach]}
+  - {lemma: viser, pos: verb, tags: [verbs4], en: [to aim]}
+  - {lemma: éclairer, pos: verb, tags: [verbs4], en: [to light up, to enlighten]}
+  - {lemma: rouler, pos: verb, tags: [verbs4], en: [to roll, to drive]}
+  - {lemma: fixer, pos: verb, tags: [verbs4], en: [to fix, to set, to stare at]}
+  # ------------------------------------------------------------------ topic maison: around the house
+  - {lemma: objet, pos: noun, tags: [household], en: [object, thing]}
+  - {lemma: miroir, pos: noun, tags: [household], en: [mirror]}
+  - {lemma: savon, pos: noun, tags: [household], en: [soap]}
+  - {lemma: serviette, pos: noun, tags: [household], en: [towel, napkin, briefcase]}
+  - {lemma: brosse, pos: noun, tags: [household], en: [brush]}
+  - {lemma: rideau, pos: noun, tags: [household], en: [curtain]}
+  - {lemma: meuble, pos: noun, tags: [household], en: [piece of furniture]}
+  - {lemma: armoire, pos: noun, tags: [household], en: [wardrobe, cupboard]}
+  - {lemma: tiroir, pos: noun, tags: [household], en: [drawer]}
+  - {lemma: étagère, pos: noun, tags: [household], en: [shelf]}
+  - {lemma: fauteuil, pos: noun, tags: [household], en: [armchair]}
+  - {lemma: oreiller, pos: noun, tags: [household], en: [pillow]}
+  - {lemma: couverture, pos: noun, tags: [household], en: [blanket, cover]}
+  - {lemma: drap, pos: noun, tags: [household], en: [sheet]}
+  - {lemma: horloge, pos: noun, tags: [household], en: [clock]}
+  - {lemma: réveil, pos: noun, tags: [household], en: [alarm clock, waking up]}
+  - {lemma: chauffage, pos: noun, tags: [household], en: [heating]}
+  - {lemma: bougie, pos: noun, tags: [household], en: [candle]}
+  - {lemma: vase, pos: noun, tags: [household], en: [vase]}
+  - {lemma: outil, pos: noun, tags: [household], en: [tool]}
+  - {lemma: marteau, pos: noun, tags: [household], en: [hammer]}
+  - {lemma: ciseaux, pos: noun, tags: [household], en: [scissors]}
+  - {lemma: corde, pos: noun, tags: [household], en: [rope, string]}
+  - {lemma: carton, pos: noun, tags: [household], en: [cardboard, cardboard box]}
+  - {lemma: plastique, pos: noun, tags: [household], en: [plastic]}
+  - {lemma: sol, pos: noun, tags: [household], en: [floor, ground, soil]}
+  - {lemma: plafond, pos: noun, tags: [household], en: [ceiling]}
+  - {lemma: cave, pos: noun, tags: [household], en: [cellar]}
+  - {lemma: grenier, pos: noun, tags: [household], en: [attic, loft]}
+  - {lemma: garage, pos: noun, tags: [household], en: [garage]}
+  - {lemma: balcon, pos: noun, tags: [household], en: [balcony]}
+  - {lemma: douche, pos: noun, tags: [household], en: [shower]}
+  - {lemma: toilettes, pos: noun, tags: [household], en: [toilet]}
+  - {lemma: lessive, pos: noun, tags: [housework], en: [washing, laundry, detergent]}
+  - {lemma: vaisselle, pos: noun, tags: [housework], en: [dishes, crockery]}
+  - {lemma: poussière, pos: noun, tags: [housework], en: [dust]}
+  - {lemma: aspirateur, pos: noun, tags: [housework], en: [vacuum cleaner]}
+  - {lemma: balai, pos: noun, tags: [housework], en: [broom]}
+  - {lemma: seau, pos: noun, tags: [housework], en: [bucket]}
+  - {lemma: déménagement, pos: noun, tags: [housework], en: [move, moving house]}
+  - {lemma: travaux, pos: noun, tags: [housework], en: [works, repairs, building work]}
+  - {lemma: bricolage, pos: noun, tags: [housework], en: [DIY, odd jobs]}
+  - {lemma: repasser, pos: verb, tags: [housework], en: [to iron, to come back]}
+  - {lemma: balayer, pos: verb, tags: [housework], en: [to sweep]}
+  - {lemma: essuyer, pos: verb, tags: [housework], en: [to wipe, to dry]}
+  - {lemma: plier, pos: verb, tags: [housework], en: [to fold]}
+  - {lemma: arroser, pos: verb, tags: [housework], en: [to water]}
+  - {lemma: décorer, pos: verb, tags: [housework], en: [to decorate]}
+  - {lemma: installer, pos: verb, tags: [housework], en: [to install, to set up]}
+  - {lemma: accrocher, pos: verb, tags: [housework], en: [to hang, to hook]}
+  - {lemma: remplir, pos: verb, tags: [housework], en: [to fill]}
+  - {lemma: vider, pos: verb, tags: [housework], en: [to empty]}
+  - {lemma: frotter, pos: verb, tags: [housework], en: [to rub, to scrub]}
+  - {lemma: sécher, pos: verb, tags: [housework], en: [to dry]}
+  - {lemma: propre, pos: adj, tags: [housework], en: [clean]}
+  - {lemma: sale, pos: adj, tags: [housework], en: [dirty]}
+  - {lemma: rangé, pos: adj, tags: [housework], en: [tidy]}
+  - {lemma: confortable, pos: adj, tags: [housework], en: [comfortable]}
+  - {lemma: cassé, pos: adj, tags: [housework], en: [broken]}
+  # ------------------------------------------------------------------ additions (pack 1.0 review)
+  - {lemma: minuit, pos: noun, tags: [time], en: [midnight]}
+  - {lemma: journée, pos: noun, tags: [time], en: [day, daytime]}
+  - {lemma: matinée, pos: noun, tags: [time], en: [morning]}
+  - {lemma: horaire, pos: noun, tags: [time], en: [timetable, schedule]}
+  - {lemma: calendrier, pos: noun, tags: [time], en: [calendar]}
+  - {lemma: avant-hier, pos: adv, tags: [time], en: [the day before yesterday]}
+  - {lemma: après-demain, pos: adv, tags: [time], en: [the day after tomorrow]}
+  - {lemma: jardinage, pos: noun, tags: [household], en: [gardening]}
+  - {lemma: belle-mère, pos: noun, tags: [family], en: [mother-in-law, stepmother]}
+  - {lemma: beau-père, pos: noun, tags: [family], en: [father-in-law, stepfather]}
+  - {lemma: petit-fils, pos: noun, tags: [family], en: [grandson]}
+  - {lemma: petite-fille, pos: noun, tags: [family], en: [granddaughter]}
+  - {lemma: épouser, pos: verb, tags: [family], en: [to marry]}
+  - {lemma: divorcer, pos: verb, tags: [family], en: [to divorce]}
+  - {lemma: carafe, pos: noun, tags: [food], en: [jug, carafe]}
+  - {lemma: croissant, pos: noun, tags: [food], en: [croissant]}
+  - {lemma: baguette, pos: noun, tags: [food], en: [baguette, stick]}
+  - {lemma: steak, pos: noun, tags: [food], en: [steak]}
+  - {lemma: frite, pos: noun, tags: [food], en: [chip, French fry]}
+  - {lemma: omelette, pos: noun, tags: [food], en: [omelette]}
+  - {lemma: pizza, pos: noun, tags: [food], en: [pizza]}
+  - {lemma: boisson, pos: noun, tags: [food], en: [drink, beverage]}
+  - {lemma: dizaine, pos: noun, tags: [numbers], en: [about ten]}
+  - {lemma: douzaine, pos: noun, tags: [numbers], en: [dozen]}
+  - {lemma: centaine, pos: noun, tags: [numbers], en: [about a hundred]}
+  - {lemma: troisième, pos: adj, tags: [numbers], en: [third]}
+  - {lemma: bagage, pos: noun, tags: [travel], en: [luggage, bag]}
+  - {lemma: réservation, pos: noun, tags: [travel], en: [booking, reservation]}
+  - {lemma: frontière, pos: noun, tags: [travel], en: [border]}
+  - {lemma: étranger, pos: adj, tags: [travel], en: [foreign]}
+  - {lemma: vacancier, pos: noun, tags: [travel], en: [holidaymaker]}
+  - {lemma: guide, pos: noun, tags: [travel], en: [guide, guidebook]}
+  - {lemma: tour, pos: noun, tags: [city], en: [tower, turn, tour]}
+  - {lemma: fontaine, pos: noun, tags: [city], en: [fountain]}
+  - {lemma: avenue, pos: noun, tags: [city], en: [avenue]}
+  - {lemma: boulevard, pos: noun, tags: [city], en: [boulevard]}
+  - {lemma: gare routière, pos: noun, tags: [city], en: [bus station]}
+  - {lemma: piéton, pos: noun, tags: [city], en: [pedestrian]}
+  - {lemma: bruit, pos: noun, tags: [city], en: [noise]}
+  - {lemma: lycée, pos: noun, tags: [work], en: [secondary school, high school]}
+  - {lemma: collège, pos: noun, tags: [work], en: [secondary school (11-15), college]}
+  - {lemma: note, pos: noun, tags: [work], en: [mark, grade, note]}
+  - {lemma: dictionnaire, pos: noun, tags: [work], en: [dictionary]}
+  - {lemma: copier, pos: verb, tags: [work], en: [to copy]}
+  - {lemma: corriger, pos: verb, tags: [work], en: [to correct, to mark]}
+  - {lemma: chaleureux, pos: adj, tags: [adjectives2], en: [warm, friendly]}
+  - {lemma: étonnant, pos: adj, tags: [adjectives2], en: [surprising, amazing]}
+  - {lemma: inquiétant, pos: adj, tags: [adjectives2], en: [worrying]}
+  - {lemma: ennuyeux, pos: adj, tags: [adjectives2], en: [boring, annoying]}
+  - {lemma: passionnant, pos: adj, tags: [adjectives2], en: [exciting, fascinating]}
+  - {lemma: amusant, pos: adj, tags: [adjectives2], en: [funny, amusing]}
+  - {lemma: fatigant, pos: adj, tags: [adjectives2], en: [tiring]}
+  - {lemma: indispensable, pos: adj, tags: [adjectives2], en: [essential, indispensable]}
+  - {lemma: actuel, pos: adj, tags: [abstract2], en: [current, present]}
+  - {lemma: actuellement, pos: adv, tags: [abstract2], en: [currently, at present]}
+  - {lemma: éventuellement, pos: adv, tags: [abstract2], en: [possibly, if need be]}
+  - {lemma: forcément, pos: adv, tags: [abstract2], en: [necessarily, inevitably]}
+  - {lemma: autrement, pos: adv, tags: [abstract2], en: [otherwise, differently]}
+  - {lemma: complètement, pos: adv, tags: [abstract2], en: [completely]}
+  - {lemma: absolument, pos: adv, tags: [abstract2], en: [absolutely]}
+  - {lemma: largement, pos: adv, tags: [abstract2], en: [widely, easily, largely]}
+  - {lemma: sérieusement, pos: adv, tags: [abstract2], en: [seriously]}
+  - {lemma: simplement, pos: adv, tags: [abstract2], en: [simply]}
+  - {lemma: tranquillement, pos: adv, tags: [abstract2], en: [quietly, calmly]}
+  - {lemma: lentement, pos: adv, tags: [adverbs], en: [slowly]}
+  - {lemma: doucement, pos: adv, tags: [adverbs], en: [gently, softly, slowly]}
+  - {lemma: rapidement, pos: adv, tags: [adverbs], en: [quickly, rapidly]}
+  - {lemma: heureusement, pos: adv, tags: [adverbs], en: [fortunately, luckily]}
+  - {lemma: malheureusement, pos: adv, tags: [adverbs], en: [unfortunately]}
+  - {lemma: dedans, pos: adv, tags: [adverbs], en: [inside, in it]}
+  - {lemma: autour, pos: adv, tags: [adverbs], en: [around]}
+  - {lemma: dessus, pos: adv, tags: [adverbs], en: [on top, on it]}
+  - {lemma: dessous, pos: adv, tags: [adverbs], en: [underneath, under it]}
+  - {lemma: auprès de, pos: prep, tags: [prepositions], en: [with, next to, to]}
+  - {lemma: parmi, pos: prep, tags: [prepositions], en: [among, amongst]}
+  - {lemma: hors de, pos: prep, tags: [prepositions], en: [out of, outside]}
+  - {lemma: au lieu de, pos: prep, tags: [prepositions], en: [instead of]}
+  - {lemma: lors de, pos: prep, tags: [prepositions], en: [during, at the time of]}
+  - {lemma: dès, pos: prep, tags: [prepositions], en: [from, as early as]}
+  - {lemma: souhait, pos: noun, tags: [ideas], en: [wish]}
+  - {lemma: désir, pos: noun, tags: [ideas], en: [desire, wish]}
+  - {lemma: intention, pos: noun, tags: [ideas], en: [intention]}
+  - {lemma: impression, pos: noun, tags: [ideas], en: [impression, feeling, printing]}
+  - {lemma: croyance, pos: noun, tags: [ideas], en: [belief]}
+  - {lemma: argument, pos: noun, tags: [opinions], en: [argument]}
+  - {lemma: critique, pos: noun, tags: [opinions], en: [criticism, review, critic]}
+  - {lemma: préciser, pos: verb, tags: [opinions], en: [to specify, to clarify]}
+  - {lemma: insister, pos: verb, tags: [opinions], en: [to insist]}
+  - {lemma: hésiter, pos: verb, tags: [opinions], en: [to hesitate]}
+  - {lemma: absurde, pos: adj, tags: [opinions], en: [absurd]}
+  - {lemma: évidemment, pos: adv, tags: [opinions], en: [obviously, of course]}
+  - {lemma: franchement, pos: adv, tags: [opinions], en: [frankly, honestly]}
+  - {lemma: chuchoter, pos: verb, tags: [verbs3], en: [to whisper]}
+  - {lemma: appuyer, pos: verb, tags: [verbs3], en: [to press, to lean]}
+  - {lemma: arracher, pos: verb, tags: [verbs3], en: [to pull out, to tear off]}
+  - {lemma: bâtir, pos: verb, tags: [verbs4], en: [to build]}
+  - {lemma: grossir, pos: verb, tags: [verbs4], en: [to put on weight, to grow]}
+  - {lemma: maigrir, pos: verb, tags: [verbs4], en: [to lose weight]}
+  - {lemma: rougir, pos: verb, tags: [verbs4], en: [to blush, to go red]}
+  - {lemma: vieillir, pos: verb, tags: [verbs4], en: [to grow old, to age]}
+  - {lemma: rajeunir, pos: verb, tags: [verbs4], en: [to look younger, to rejuvenate]}
+  - {lemma: ralentir, pos: verb, tags: [verbs4], en: [to slow down]}
+  - {lemma: avertir, pos: verb, tags: [verbs4], en: [to warn]}
+  - {lemma: fournir, pos: verb, tags: [verbs4], en: [to supply, to provide]}
+  - {lemma: garantir, pos: verb, tags: [verbs4], en: [to guarantee]}
+  - {lemma: d'une part, pos: adv, tags: [connectors], en: [on the one hand]}
+  - {lemma: d'autre part, pos: adv, tags: [connectors], en: [on the other hand]}
+  - {lemma: ainsi que, pos: conj, tags: [connectors], en: [as well as, just as], variants: ["ainsi qu'"]}
+  - {lemma: étant donné que, pos: conj, tags: [connectors], en: [given that, since], variants: ["étant donné qu'"]}
+  - {lemma: du moment que, pos: conj, tags: [connectors], en: [as long as, since], variants: ["du moment qu'"]}
+  - {lemma: peine, pos: noun, tags: [abstract2], en: [trouble, sorrow, penalty]}
+  - {lemma: honneur, pos: noun, tags: [abstract2], en: [honour, honor]}
+  - {lemma: malheur, pos: noun, tags: [abstract2], en: [misfortune, unhappiness]}
+  - {lemma: mystère, pos: noun, tags: [abstract2], en: [mystery]}
+  - {lemma: secret, pos: noun, tags: [abstract2], en: [secret]}
+  - {lemma: silence, pos: noun, tags: [abstract2], en: [silence]}
+  - {lemma: attention, pos: noun, tags: [expressions], en: [attention, care]}
+  - {lemma: à cause de ça, pos: adv, tags: [expressions], en: [because of that]}
+  - {lemma: n'importe comment, pos: adv, tags: [expressions], en: [any old how, carelessly]}
+  - {lemma: ça suffit, pos: phrase, tags: [expressions], en: ["that's enough"]}
+  - {lemma: tant que ça, pos: adv, tags: [expressions], en: [that much]}
+  - {lemma: et alors, pos: phrase, tags: [expressions], en: [so what, and then]}
+  - {lemma: pas mal, pos: adv, tags: [expressions], en: [not bad, quite a lot]}
+  - {lemma: talon, pos: noun, tags: [body], en: [heel]}
+  - {lemma: poignet, pos: noun, tags: [body], en: [wrist]}
+  - {lemma: coude, pos: noun, tags: [body], en: [elbow]}
+  - {lemma: cil, pos: noun, tags: [body], en: [eyelash]}
+  - {lemma: sourcil, pos: noun, tags: [body], en: [eyebrow]}
+  - {lemma: joue, pos: noun, tags: [body], en: [cheek]}
+  - {lemma: menton, pos: noun, tags: [body], en: [chin]}
+  - {lemma: pharmacien, pos: noun, tags: [health], en: [pharmacist, chemist]}
+  - {lemma: vaccin, pos: noun, tags: [health], en: [vaccine]}
+  - {lemma: allergie, pos: noun, tags: [health], en: [allergy]}
+  - {lemma: opération, pos: noun, tags: [health], en: [operation]}
+  - {lemma: chirurgien, pos: noun, tags: [health], en: [surgeon]}
+  - {lemma: pansement, pos: noun, tags: [health], en: [bandage, dressing, plaster]}
+  - {lemma: épice, pos: noun, tags: [cooking], en: [spice]}
+  - {lemma: rôtir, pos: verb, tags: [cooking], en: [to roast]}
+  - {lemma: éplucher, pos: verb, tags: [cooking], en: [to peel]}
+  - {lemma: sac à main, pos: noun, tags: [clothes], en: [handbag]}
+  - {lemma: maillot de bain, pos: noun, tags: [clothes], en: [swimsuit]}
+  - {lemma: blouson, pos: noun, tags: [clothes], en: [jacket]}
+  - {lemma: sandale, pos: noun, tags: [clothes], en: [sandal]}
+  - {lemma: collier, pos: noun, tags: [clothes], en: [necklace, collar]}
+  - {lemma: boucle d'oreille, pos: noun, tags: [clothes], en: [earring]}
+  - {lemma: marque, pos: noun, tags: [shopping], en: [brand, mark]}
+  - {lemma: rayon, pos: noun, tags: [shopping], en: [department, shelf, ray]}
+  - {lemma: liste, pos: noun, tags: [shopping], en: [list]}
+  - {lemma: panier, pos: noun, tags: [shopping], en: [basket]}
+  - {lemma: chariot, pos: noun, tags: [shopping], en: [trolley, cart]}
+  - {lemma: espèces, pos: noun, tags: [shopping], en: [cash]}
+  - {lemma: orgueil, pos: noun, tags: [character], en: [pride]}
+  - {lemma: humour, pos: noun, tags: [character], en: [humour, humor]}
+  - {lemma: modeste, pos: adj, tags: [character], en: [modest]}
+  - {lemma: ambitieux, pos: adj, tags: [character], en: [ambitious]}
+  - {lemma: naïf, pos: adj, tags: [character], en: [naive]}
+  - {lemma: angoisse, pos: noun, tags: [feelings], en: [anxiety, anguish]}
+  - {lemma: soulagement, pos: noun, tags: [feelings], en: [relief]}
+  - {lemma: soulagé, pos: adj, tags: [feelings], en: [relieved]}
+  - {lemma: énervé, pos: adj, tags: [feelings], en: [annoyed, irritated]}
+  - {lemma: épuisé, pos: adj, tags: [feelings], en: [exhausted]}
+  - {lemma: éclair, pos: noun, tags: [weather], en: [lightning, flash]}
+  - {lemma: tonnerre, pos: noun, tags: [weather], en: [thunder]}
+  - {lemma: arc-en-ciel, pos: noun, tags: [weather], en: [rainbow]}
+  - {lemma: averse, pos: noun, tags: [weather], en: [shower, downpour]}
+  - {lemma: requin, pos: noun, tags: [animals], en: [shark]}
+  - {lemma: dauphin, pos: noun, tags: [animals], en: [dolphin]}
+  - {lemma: hibou, pos: noun, tags: [animals], en: [owl]}
+  - {lemma: fourmi, pos: noun, tags: [animals], en: [ant]}
+  - {lemma: escargot, pos: noun, tags: [animals], en: [snail]}
+  - {lemma: volcan, pos: noun, tags: [landscape], en: [volcano]}
+  - {lemma: désert, pos: noun, tags: [landscape], en: [desert]}
+  - {lemma: grotte, pos: noun, tags: [landscape], en: [cave]}
+  - {lemma: cascade, pos: noun, tags: [landscape], en: [waterfall]}
+  - {lemma: plaine, pos: noun, tags: [landscape], en: [plain]}
+  - {lemma: marée, pos: noun, tags: [landscape], en: [tide]}
+  - {lemma: course à pied, pos: noun, tags: [leisure], en: [running]}
+  - {lemma: gagnant, pos: noun, tags: [leisure], en: [winner]}
+  - {lemma: stade, pos: noun, tags: [leisure], en: [stadium]}
+  - {lemma: roman policier, pos: noun, tags: [culture], en: [detective novel]}
+  - {lemma: opéra, pos: noun, tags: [culture], en: [opera]}
+  - {lemma: orchestre, pos: noun, tags: [culture], en: [orchestra]}
+  - {lemma: réalisateur, pos: noun, tags: [culture], en: [film director]}
+  - {lemma: tournage, pos: noun, tags: [culture], en: [shooting, filming]}
+  - {lemma: abonnement, pos: noun, tags: [media], en: [subscription]}
+  - {lemma: rédacteur, pos: noun, tags: [media], en: [editor]}
+  - {lemma: rubrique, pos: noun, tags: [media], en: [column, section]}
+  - {lemma: chômeur, pos: noun, tags: [careers], en: [unemployed person]}
+  - {lemma: syndicat, pos: noun, tags: [careers], en: [trade union]}
+  - {lemma: augmentation, pos: noun, tags: [careers], en: [rise, increase]}
+  - {lemma: promotion, pos: noun, tags: [careers], en: [promotion, special offer]}
+  - {lemma: épargne, pos: noun, tags: [money], en: [savings]}
+  - {lemma: retraité, pos: noun, tags: [money], en: [pensioner, retired person]}
+  - {lemma: richesse, pos: noun, tags: [money], en: [wealth, riches]}
+  - {lemma: député, pos: noun, tags: [society], en: [member of parliament]}
+  - {lemma: maire, pos: noun, tags: [society], en: [mayor]}
+  - {lemma: immigration, pos: noun, tags: [society], en: [immigration]}
+  - {lemma: solaire, pos: adj, tags: [environment], en: [solar]}
+  - {lemma: éolienne, pos: noun, tags: [environment], en: [wind turbine]}
+  - {lemma: carbone, pos: noun, tags: [environment], en: [carbon]}
+  - {lemma: protection, pos: noun, tags: [environment], en: [protection]}
+  - {lemma: imprimante, pos: noun, tags: [technology], en: [printer]}
+  - {lemma: tablette, pos: noun, tags: [technology], en: [tablet, bar]}
+  - {lemma: données, pos: noun, tags: [technology], en: [data]}
+  - {lemma: virus, pos: noun, tags: [science], en: [virus]}
+  - {lemma: microscope, pos: noun, tags: [science], en: [microscope]}
+  - {lemma: conte de fées, pos: noun, tags: [reading], en: [fairy tale]}
+  - {lemma: dragon, pos: noun, tags: [reading], en: [dragon]}
+  - {lemma: chevalier, pos: noun, tags: [reading], en: [knight]}
+  - {lemma: géant, pos: noun, tags: [reading], en: [giant]}
+  - {lemma: noblesse, pos: noun, tags: [history], en: [nobility]}
+  - {lemma: seigneur, pos: noun, tags: [history], en: [lord]}
+  - {lemma: paysan, pos: noun, tags: [history], en: [peasant, farmer]}
+  - {lemma: lavabo, pos: noun, tags: [household], en: [washbasin, sink]}
+  - {lemma: évier, pos: noun, tags: [household], en: [kitchen sink]}
+  - {lemma: baignoire, pos: noun, tags: [household], en: [bath, bathtub]}
+  - {lemma: or, pos: noun, tags: [money], en: [gold]}
+  - {lemma: bref, pos: adj, tags: [adjectives2], en: [brief, short]}

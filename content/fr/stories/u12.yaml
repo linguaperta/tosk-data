@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u12 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u12-soeurs
+  unit: u12
+  title: {fr: "Deux sœurs", en: "Two sisters"}
+  sentences:
+    - {fr: "Claire et Sophie sont sœurs, mais elles sont très différentes.", en: "Claire and Sophie are sisters, but they are very different."}
+    - {fr: "Claire est plus grande que Sophie.", en: "Claire is taller than Sophie."}
+    - {fr: "Sophie est plus jeune, mais elle travaille autant que sa sœur.", en: "Sophie is younger, but she works as much as her sister."}
+    - {fr: "Claire aime les livres dont tout le monde parle.", en: "Claire likes the books everyone talks about."}
+    - {fr: "Sophie préfère les films qu'elle regarde avec ses amis.", en: "Sophie prefers the films she watches with her friends."}
+    - {fr: "Claire est la plus calme de la famille.", en: "Claire is the calmest in the family."}
+    - {fr: "Pour leur mère, ce sont les meilleures filles du monde !", en: "For their mother, they are the best daughters in the world!"}
+  questions:
+    - q: {en: "Who is taller?"}
+      options: [{en: "Claire"}, {en: "Sophie"}, {en: "Their mother"}]
+      answer: 0
+    - q: {en: "What does Sophie prefer?"}
+      options: [{en: "Films with her friends"}, {en: "Books"}, {en: "Sport"}]
+      answer: 0
+    - q: {en: "What does their mother think?"}
+      options: [{en: "They are the best daughters in the world"}, {en: "Claire is the best"}, {en: "They are too different"}]
+      answer: 0
+
+- id: u12-lyon
+  unit: u12
+  title: {fr: "Lyon ou Paris ?", en: "Lyon or Paris?"}
+  sentences:
+    - {fr: "J'habite à Lyon, une ville que j'aime beaucoup.", en: "I live in Lyon, a city I really like."}
+    - {fr: "Lyon est moins grande que Paris, mais elle est très belle.", en: "Lyon is smaller than Paris, but it is very beautiful."}
+    - {fr: "La vie y est moins chère.", en: "Life there is cheaper."}
+    - {fr: "C'est la ville où je suis né.", en: "It's the city where I was born."}
+    - {fr: "Paris a plus de musées et plus de touristes.", en: "Paris has more museums and more tourists."}
+    - {fr: "Le problème de Paris, c'est le métro, qui est souvent plein.", en: "The problem with Paris is the underground, which is often full."}
+    - {fr: "Pour moi, Lyon est la meilleure ville de France !", en: "For me, Lyon is the best city in France!"}
+  questions:
+    - q: {en: "Which city is smaller?"}
+      options: [{en: "Lyon"}, {en: "Paris"}, {en: "They are the same size"}]
+      answer: 0
+    - q: {en: "Where was the narrator born?"}
+      options: [{en: "In Lyon"}, {en: "In Paris"}, {en: "In a village"}]
+      answer: 0
+    - q: {en: "What is the problem with Paris?"}
+      options: [{en: "The underground is often full"}, {en: "It is too small"}, {en: "There are no museums"}]
+      answer: 0

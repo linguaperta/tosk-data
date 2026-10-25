@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u9 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u9-matin
+  unit: u9
+  title: {fr: "Un matin difficile", en: "A difficult morning"}
+  sentences:
+    - {fr: "Ce matin, Paul ne s'est pas réveillé à l'heure.", en: "This morning Paul didn't wake up on time."}
+    - {fr: "Il s'est levé à huit heures.", en: "He got up at eight o'clock."}
+    - {fr: "Il s'est lavé très vite et il s'est habillé.", en: "He washed very quickly and got dressed."}
+    - {fr: "Il n'a pas eu le temps de manger.", en: "He didn't have time to eat."}
+    - {fr: "Il s'est dépêché pour prendre le bus.", en: "He hurried to catch the bus."}
+    - {fr: "Au bureau, le patron lui a dit : « Vous êtes en retard, comme d'habitude ! »", en: "At the office the boss said to him: \"You're late, as usual!\""}
+    - {fr: "Paul est allé à son bureau sans dire un mot.", en: "Paul went to his desk without saying a word."}
+  questions:
+    - q: {en: "When did Paul get up?"}
+      options: [{en: "At eight"}, {en: "At six"}, {en: "At noon"}]
+      answer: 0
+    - q: {en: "Did Paul eat breakfast?"}
+      options: [{en: "No, he didn't have time"}, {en: "Yes, at home"}, {en: "Yes, on the bus"}]
+      answer: 0
+    - q: {en: "What did the boss say?"}
+      options: [{en: "That he was late, as usual"}, {en: "That he was early"}, {en: "That he could go home"}]
+      answer: 0
+
+- id: u9-soiree
+  unit: u9
+  title: {fr: "Une belle soirée", en: "A lovely evening"}
+  sentences:
+    - {fr: "Samedi, Léa et ses amis se sont promenés en ville.", en: "On Saturday Léa and her friends went for a walk in town."}
+    - {fr: "Le soir, ils ont mangé chez Camille.", en: "In the evening they ate at Camille's."}
+    - {fr: "Ils se sont beaucoup amusés.", en: "They had a lot of fun."}
+    - {fr: "Ils se sont couchés très tard.", en: "They went to bed very late."}
+    - {fr: "Dimanche, Léa s'est reposée à la maison.", en: "On Sunday Léa rested at home."}
+    - {fr: "Elle se souvient encore de cette soirée.", en: "She still remembers that evening."}
+    - {fr: "Maintenant, ils se voient chaque samedi.", en: "Now they see each other every Saturday."}
+  questions:
+    - q: {en: "Where did they eat on Saturday evening?"}
+      options: [{en: "At Camille's"}, {en: "In a restaurant"}, {en: "At Léa's"}]
+      answer: 0
+    - q: {en: "What did Léa do on Sunday?"}
+      options: [{en: "She rested at home"}, {en: "She went to work"}, {en: "She went for a walk"}]
+      answer: 0
+    - q: {en: "How often do the friends meet now?"}
+      options: [{en: "Every Saturday"}, {en: "Every day"}, {en: "Once a month"}]
+      answer: 0

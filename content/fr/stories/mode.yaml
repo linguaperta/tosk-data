@@ -1,0 +1,22 @@
+# Graded mini-stories for the topic mode (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: mode-robe
+  unit: mode-u1
+  title: {fr: "La robe bleue", en: "The blue dress"}
+  sentences:
+    - {fr: "Samedi, Sophie va en ville avec sa sœur.", en: "On Saturday Sophie goes into town with her sister."}
+    - {fr: "Elle cherche une robe pour le mariage de sa cousine.", en: "She is looking for a dress for her cousin's wedding."}
+    - {fr: "Dans un magasin, elle trouve une jolie robe bleue.", en: "In a shop she finds a pretty blue dress."}
+    - {fr: "Mais la robe est trop petite.", en: "But the dress is too small."}
+    - {fr: "La vendeuse lui donne une autre taille.", en: "The shop assistant gives her another size."}
+    - {fr: "Le prix est de cent euros : c'est cher !", en: "The price is a hundred euros: it's expensive!"}
+    - {fr: "Sophie paie à la caisse et elle est très contente.", en: "Sophie pays at the till and she is very happy."}
+  questions:
+    - q: {en: "Why does Sophie need a dress?"}
+      options: [{en: "For her cousin's wedding"}, {en: "For work"}, {en: "For a party"}]
+      answer: 0
+    - q: {en: "What is the problem with the first dress?"}
+      options: [{en: "It is too small"}, {en: "It is too expensive"}, {en: "It is the wrong colour"}]
+      answer: 0
+    - q: {en: "How much is the dress?"}
+      options: [{en: "A hundred euros"}, {en: "Ten euros"}, {en: "Fifty euros"}]
+      answer: 0

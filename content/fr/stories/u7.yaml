@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u7 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u7-bretagne
+  unit: u7
+  title: {fr: "Les vacances de Claire", en: "Claire's holiday"}
+  sentences:
+    - {fr: "L'été dernier, Claire est partie en Bretagne.", en: "Last summer, Claire went to Brittany."}
+    - {fr: "Elle a pris le train avec sa sœur.", en: "She took the train with her sister."}
+    - {fr: "Elles sont arrivées le soir dans un petit village.", en: "They arrived in a small village in the evening."}
+    - {fr: "Le matin, elles ont visité le village.", en: "In the morning they visited the village."}
+    - {fr: "Elles ont mangé du poisson dans un restaurant près de la mer.", en: "They ate fish in a restaurant near the sea."}
+    - {fr: "Claire a écrit une lettre à ses parents.", en: "Claire wrote a letter to her parents."}
+    - {fr: "Elles sont rentrées à Paris après une semaine.", en: "They went back to Paris after a week."}
+  questions:
+    - q: {en: "Who did Claire travel with?"}
+      options: [{en: "Her sister"}, {en: "Her parents"}, {en: "A friend"}]
+      answer: 0
+    - q: {en: "What did they eat?"}
+      options: [{en: "Fish"}, {en: "Meat"}, {en: "Pizza"}]
+      answer: 0
+    - q: {en: "How long did they stay?"}
+      options: [{en: "A week"}, {en: "A month"}, {en: "Two days"}]
+      answer: 0
+
+- id: u7-chien
+  unit: u7
+  title: {fr: "Le chien perdu", en: "The lost dog"}
+  sentences:
+    - {fr: "Hier, le chien de Hugo est sorti de la maison.", en: "Yesterday Hugo's dog got out of the house."}
+    - {fr: "Hugo l'a cherché partout.", en: "Hugo looked for him everywhere."}
+    - {fr: "Il a demandé aux voisins : « Vous avez vu le chien ? »", en: "He asked the neighbours: \"Have you seen the dog?\""}
+    - {fr: "Une dame a répondu : « Oui, je l'ai vu près du parc. »", en: "A lady answered: \"Yes, I saw him near the park.\""}
+    - {fr: "Hugo est allé au parc.", en: "Hugo went to the park."}
+    - {fr: "Il a trouvé le chien devant la boulangerie !", en: "He found the dog in front of the bakery!"}
+    - {fr: "Le chien a mangé un gâteau et il n'a pas voulu partir.", en: "The dog had eaten a cake and he didn't want to leave."}
+  questions:
+    - q: {en: "Where did the lady see the dog?"}
+      options: [{en: "Near the park"}, {en: "At the station"}, {en: "In the garden"}]
+      answer: 0
+    - q: {en: "Where did Hugo find the dog?"}
+      options: [{en: "In front of the bakery"}, {en: "In the park"}, {en: "At home"}]
+      answer: 0
+    - q: {en: "What did the dog eat?"}
+      options: [{en: "A cake"}, {en: "Bread"}, {en: "Meat"}]
+      answer: 0

@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u17 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u17-pont
+  unit: u17
+  title: {fr: "Le vieux pont", en: "The old bridge"}
+  sentences:
+    - {fr: "Le premier pont a été construit en 1850.", en: "The first bridge was built in 1850."}
+    - {fr: "Il a été détruit pendant la guerre.", en: "It was destroyed during the war."}
+    - {fr: "Après la guerre, un nouveau pont a été construit.", en: "After the war, a new bridge was built."}
+    - {fr: "En marchant sur le pont, on voit toute la ville.", en: "Walking across the bridge, you can see the whole town."}
+    - {fr: "Les touristes prennent des photos tout en parlant.", en: "The tourists take photos while they talk."}
+    - {fr: "La ville a annoncé que le pont serait fermé l'année prochaine.", en: "The town announced that the bridge would be closed next year."}
+    - {fr: "Personne ne sait quand il sera ouvert.", en: "Nobody knows when it will be open."}
+  questions:
+    - q: {en: "What happened to the first bridge?"}
+      options: [{en: "It was destroyed during the war"}, {en: "It was sold"}, {en: "It was closed"}]
+      answer: 0
+    - q: {en: "What can you see from the bridge?"}
+      options: [{en: "The whole town"}, {en: "The sea"}, {en: "The mountains"}]
+      answer: 0
+    - q: {en: "What did the town announce?"}
+      options: [{en: "The bridge would be closed next year"}, {en: "A new bridge would be built"}, {en: "The bridge was open"}]
+      answer: 0
+
+- id: u17-nouvelle
+  unit: u17
+  title: {fr: "La bonne nouvelle", en: "The good news"}
+  sentences:
+    - {fr: "Ce matin, Tom m'a dit qu'il avait trouvé un nouveau travail.", en: "This morning Tom told me he had found a new job."}
+    - {fr: "Il m'a expliqué qu'il commencerait le mois prochain.", en: "He explained that he would start next month."}
+    - {fr: "Il a été choisi par une grande entreprise.", en: "He was chosen by a big company."}
+    - {fr: "En l'écoutant, j'étais très content pour lui.", en: "Listening to him, I was very happy for him."}
+    - {fr: "Il a ajouté qu'il devrait déménager à Lille.", en: "He added that he would have to move to Lille."}
+    - {fr: "Je lui ai demandé s'il était content.", en: "I asked him if he was happy."}
+    - {fr: "Il a répondu qu'il était triste de quitter ses amis.", en: "He answered that he was sad to leave his friends."}
+  questions:
+    - q: {en: "What news did Tom have?"}
+      options: [{en: "He had found a new job"}, {en: "He was getting married"}, {en: "He had lost his job"}]
+      answer: 0
+    - q: {en: "Where will Tom have to move?"}
+      options: [{en: "To Lille"}, {en: "To Paris"}, {en: "To Lyon"}]
+      answer: 0
+    - q: {en: "Why is Tom a little sad?"}
+      options: [{en: "He has to leave his friends"}, {en: "He doesn't like the job"}, {en: "The company is small"}]
+      answer: 0

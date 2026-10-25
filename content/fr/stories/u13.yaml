@@ -1,0 +1,44 @@
+# Graded mini-stories for unit u13 (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: u13-restaurant
+  unit: u13
+  title: {fr: "Une table pour deux", en: "A table for two"}
+  sentences:
+    - {fr: "« Bonsoir, je voudrais une table pour deux, s'il vous plaît. »", en: "\"Good evening, I'd like a table for two, please.\""}
+    - {fr: "« Vous préféreriez une table près de la fenêtre ? »", en: "\"Would you prefer a table by the window?\""}
+    - {fr: "« Oui, ce serait parfait. »", en: "\"Yes, that would be perfect.\""}
+    - {fr: "« Qu'est-ce que vous voudriez boire ? »", en: "\"What would you like to drink?\""}
+    - {fr: "« J'aimerais un verre de vin rouge. »", en: "\"I'd like a glass of red wine.\""}
+    - {fr: "« Pourriez-vous nous apporter de l'eau aussi ? »", en: "\"Could you bring us some water too?\""}
+    - {fr: "« Oui, tout de suite, madame. »", en: "\"Yes, right away, madam.\""}
+  questions:
+    - q: {en: "Where would they like to sit?"}
+      options: [{en: "By the window"}, {en: "Outside"}, {en: "Near the kitchen"}]
+      answer: 0
+    - q: {en: "What would the woman like to drink?"}
+      options: [{en: "A glass of red wine"}, {en: "A beer"}, {en: "A coffee"}]
+      answer: 0
+    - q: {en: "What else do they ask for?"}
+      options: [{en: "Water"}, {en: "Bread"}, {en: "The bill"}]
+      answer: 0
+
+- id: u13-conseil
+  unit: u13
+  title: {fr: "Un conseil d'ami", en: "A friend's advice"}
+  sentences:
+    - {fr: "Thomas veut quitter son travail.", en: "Thomas wants to leave his job."}
+    - {fr: "Il en parle à son ami Nicolas.", en: "He talks to his friend Nicolas about it."}
+    - {fr: "« Moi, je réfléchirais encore », dit Nicolas.", en: "\"I would think about it some more,\" says Nicolas."}
+    - {fr: "« Tu devrais parler à ton patron. »", en: "\"You should talk to your boss.\""}
+    - {fr: "« Il pourrait peut-être te proposer un autre projet. »", en: "\"Maybe he could offer you another project.\""}
+    - {fr: "Mais Thomas n'est pas d'accord : « Je préférerais partir. »", en: "But Thomas doesn't agree: \"I'd rather leave.\""}
+    - {fr: "« Ce serait dommage, tu aimes ce travail ! »", en: "\"It would be a shame, you like this job!\""}
+  questions:
+    - q: {en: "What does Thomas want to do?"}
+      options: [{en: "Leave his job"}, {en: "Start a project"}, {en: "Talk to his boss"}]
+      answer: 0
+    - q: {en: "What does Nicolas advise?"}
+      options: [{en: "To talk to his boss"}, {en: "To leave at once"}, {en: "To find another job"}]
+      answer: 0
+    - q: {en: "Does Thomas agree with Nicolas?"}
+      options: [{en: "No, he'd rather leave"}, {en: "Yes, completely"}, {en: "He doesn't answer"}]
+      answer: 0

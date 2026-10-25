@@ -1,0 +1,44 @@
+# Graded mini-stories for the topic sante (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: sante-lucas
+  unit: sante-u1
+  title: {fr: "Lucas est malade", en: "Lucas is ill"}
+  sentences:
+    - {fr: "Ce matin, Lucas est malade.", en: "This morning Lucas is ill."}
+    - {fr: "Il a très chaud et ses yeux sont rouges.", en: "He is very hot and his eyes are red."}
+    - {fr: "Sa mère regarde sa gorge et ses oreilles.", en: "His mother looks at his throat and his ears."}
+    - {fr: "Ses jambes et ses bras sont fatigués.", en: "His legs and arms are tired."}
+    - {fr: "Le médecin arrive et il écoute son cœur.", en: "The doctor arrives and listens to his heart."}
+    - {fr: "« Ce n'est rien », dit le médecin.", en: "\"It's nothing,\" says the doctor."}
+    - {fr: "Lucas reste dans son lit avec son chat.", en: "Lucas stays in bed with his cat."}
+  questions:
+    - q: {en: "What colour are Lucas's eyes?"}
+      options: [{en: "Red"}, {en: "Blue"}, {en: "Green"}]
+      answer: 0
+    - q: {en: "What does the doctor listen to?"}
+      options: [{en: "His heart"}, {en: "His voice"}, {en: "His mother"}]
+      answer: 0
+    - q: {en: "Where does Lucas stay?"}
+      options: [{en: "In bed"}, {en: "At school"}, {en: "In the garden"}]
+      answer: 0
+
+- id: sante-docteur
+  unit: sante-u2
+  title: {fr: "Chez le médecin", en: "At the doctor's"}
+  sentences:
+    - {fr: "Depuis trois jours, Claire a de la fièvre.", en: "Claire has had a temperature for three days."}
+    - {fr: "Elle tousse et elle ne se sent pas bien.", en: "She is coughing and she doesn't feel well."}
+    - {fr: "Elle a pris rendez-vous chez le médecin.", en: "She made an appointment with the doctor."}
+    - {fr: "« C'est une grippe, ce n'est pas grave », dit le médecin.", en: "\"It's flu, it's not serious,\" says the doctor."}
+    - {fr: "Il lui donne une ordonnance pour des médicaments.", en: "He gives her a prescription for some medicine."}
+    - {fr: "« Il faut vous reposer et boire beaucoup d'eau. »", en: "\"You must rest and drink plenty of water.\""}
+    - {fr: "Une semaine après, Claire va mieux.", en: "A week later Claire is better."}
+  questions:
+    - q: {en: "What does Claire have?"}
+      options: [{en: "Flu"}, {en: "A broken leg"}, {en: "Toothache"}]
+      answer: 0
+    - q: {en: "What does the doctor give her?"}
+      options: [{en: "A prescription"}, {en: "An injection"}, {en: "Nothing"}]
+      answer: 0
+    - q: {en: "When is she better?"}
+      options: [{en: "A week later"}, {en: "The next day"}, {en: "After a month"}]
+      answer: 0

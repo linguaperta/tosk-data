@@ -1,0 +1,22 @@
+# Graded mini-stories for the topic lecture (pipeline/pipeline/stories.py). Written by Claude (claude-gen).
+- id: lecture-princesse
+  unit: lecture-u1
+  title: {fr: "La princesse et la sorcière", en: "The princess and the witch"}
+  sentences:
+    - {fr: "Il était une fois une princesse qui vivait dans un château.", en: "Once upon a time there was a princess who lived in a castle."}
+    - {fr: "Un jour, une vieille femme frappa à la porte.", en: "One day an old woman knocked at the door."}
+    - {fr: "C'était une sorcière, mais personne ne le savait.", en: "She was a witch, but nobody knew it."}
+    - {fr: "Elle donna une pomme rouge à la princesse.", en: "She gave a red apple to the princess."}
+    - {fr: "La princesse la mangea et tomba dans un long sommeil.", en: "The princess ate it and fell into a long sleep."}
+    - {fr: "Le roi cria et pleura pendant des jours.", en: "The king shouted and wept for days."}
+    - {fr: "Enfin, un prince arriva et la réveilla.", en: "At last a prince arrived and woke her up."}
+  questions:
+    - q: {en: "Who knocked at the door?"}
+      options: [{en: "An old woman"}, {en: "A prince"}, {en: "The king"}]
+      answer: 0
+    - q: {en: "What did the witch give the princess?"}
+      options: [{en: "A red apple"}, {en: "A cake"}, {en: "A letter"}]
+      answer: 0
+    - q: {en: "Who woke the princess up?"}
+      options: [{en: "A prince"}, {en: "The king"}, {en: "The witch"}]
+      answer: 0
